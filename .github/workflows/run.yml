@@ -1,7 +1,7 @@
 name: Manual Run
 
 on:
-  workflow_dispatch: # 手動実行を有効にする設定
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,3 +21,11 @@ jobs:
 
       - name: Run scripts
         run: node Run.js
+
+      - name: Save results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *.csv
+          git commit -m "Update news data" || exit 0
+          git push
