@@ -25,6 +25,18 @@ const YAHOO_CAT_MAP = {
 const OUTPUT_FILE = 'news.csv';
 
 /**
+ * 日本語の日付文字列をDateオブジェクトに変換する
+ * @param {string} infoStr - "2026年1月17日 ロイタービジネス" のような形式
+ */
+function parseDateFromInfo(infoStr) {
+  const match = infoStr.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+  if (match) {
+    return new Date(parseInt(match[1]), parseInt(match[2]) - 1, parseInt(match[3]));
+  }
+  return null; // 日付がない場合（ヤフー等）
+}
+
+/**
  * ロイター形式の抽出（2カラム化：見出し, 日付＋ラベル）
  */
 function extractFromReuters(lines, label) {
@@ -47,7 +59,6 @@ function extractFromReuters(lines, label) {
       const cleanDate = dateMatch ? dateMatch[0] : dateRaw;
 
       if (headline && !headline.includes('値上がり') && !headline.includes('値下がり') && headline.length > 5) {
-        // 日付とラベルを一つの「情報」カラムにまとめる
         results.push({ headline, info: `${cleanDate} ${label}`.trim() });
       }
     }
@@ -83,7 +94,6 @@ function extractFromBloomberg(lines, label) {
         }
       }
       if (headline && headline.length > 5) {
-        // 日付とラベルを一つの「情報」カラムにまとめる
         results.push({ headline, info: `${cleanDate} ${label}`.trim() });
       }
     }
@@ -92,7 +102,7 @@ function extractFromBloomberg(lines, label) {
 }
 
 /**
- * ヤフー形式の抽出（2カラム化：見出し, ラベルのみ）
+ * ヤフー形式の抽出
  */
 function extractFromYahoo(lines) {
   const results = [];
@@ -109,7 +119,7 @@ function extractFromYahoo(lines) {
           if (headline && headline.length > 2 && headline !== 'もっと見る') {
             results.push({
               headline: headline,
-              info: catLabel // 日付カラムを削除し、ここに「ヤフースポーツ」等を入れる
+              info: catLabel // 日付が含まれないため、フィルタリング対象外（常に保持）
             });
           }
         }
@@ -142,18 +152,35 @@ function main() {
     allExtractedData = allExtractedData.concat(fileData);
   }
 
-  if (allExtractedData.length === 0) return;
+  // --- 日付によるフィルタリング追加 ---
+  const now = new Date();
+  const thresholdDate = new Date();
+  thresholdDate.setDate(now.getDate() - 3);
+  thresholdDate.setHours(0, 0, 0, 0); // 3日前の0時0分0秒に設定
 
-  // 2カラム形式で保存（BOM付きUTF-8）
+  const filteredData = allExtractedData.filter(item => {
+    const itemDate = parseDateFromInfo(item.info);
+    // 日付情報がない場合（ヤフー等）は、最新とみなして残す
+    if (!itemDate) return true;
+    // 3日前（0時）以降のデータのみ保持
+    return itemDate >= thresholdDate;
+  });
+  // ---------------------------------
+
+  if (filteredData.length === 0) {
+    console.log("フィルタリング後のニュースが0件です。");
+    return;
+  }
+
   let csvContent = '\uFEFF"見出し","情報"\n';
-  allExtractedData.forEach(item => {
+  filteredData.forEach(item => {
     const h = item.headline.replace(/"/g, '""');
     const i = item.info.replace(/"/g, '""');
     csvContent += `"${h}","${i}"\n`;
   });
 
   fs.writeFileSync(OUTPUT_FILE, csvContent, 'utf8');
-  console.log(`完了: ${allExtractedData.length} 件を ${OUTPUT_FILE} に2カラム形式で保存しました。`);
+  console.log(`完了: ${filteredData.length} 件（全 ${allExtractedData.length} 件中）を ${OUTPUT_FILE} に保存しました。`);
 }
 
 main();
