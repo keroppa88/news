@@ -8,7 +8,7 @@ const fs = require('fs');
 (async () => {
   const url = 'https://jp.reuters.com/markets/'; 
 
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   // ページを開く（軽めの待機設定）
@@ -36,4 +36,5 @@ const fs = require('fs');
   console.log('saved:', filename);
 
   await browser.close();
+
 })();
