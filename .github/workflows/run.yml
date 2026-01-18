@@ -16,16 +16,21 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install playwright
+          npm install playwright @google/generative-ai
           npx playwright install --with-deps chromium
 
       - name: Run scripts
         run: node Run.js
 
+      - name: Run Gemini Analysis
+        run: node summarize.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Save results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add *.csv
-          git commit -m "Update news data" || exit 0
+          git add news.csv summary.txt
+          git commit -m "Update news and summary" || exit 0
           git push
