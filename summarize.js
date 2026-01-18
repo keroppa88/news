@@ -8,7 +8,7 @@ async function run() {
   const csvData = fs.readFileSync('news.csv', 'utf8');
 
   const prompt = `
-    以下のニュースリスト（CSV形式）を読み取り、重要ニュースを3つ厳選して、
+    以下のニュースリスト（CSV形式）を読み取り、重要ニュース10個を厳選して、
     【見出し】・理由・注目点 の形式でまとめてください。
     
     リスト：
