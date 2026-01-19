@@ -11,20 +11,32 @@ try {
     let htmlBody = "";
 
     lines.forEach(line => {
+        // 不要な記号や【見出し】表記を完全に除去
         let cleanLine = line.replace(/\*\*/g, '').replace(/【見出し】/g, '').trim();
         
-        // 理由・注目点（「・」で始まる行）以外を見出しと判定
         if (!cleanLine.startsWith('・')) {
-            let bgColor = "#eee"; // デフォルト
-            if (cleanLine.includes('ロイター')) bgColor = "#d1f0ff"; // 薄い水色
+            // 見出し行の背景色判定
+            let bgColor = "transparent"; // デフォルトは透明（白）
+            if (cleanLine.includes('ロイター')) bgColor = "#d1f0ff";    // 薄い水色
             if (cleanLine.includes('ブルームバーグ')) bgColor = "#d1ffd6"; // 薄い緑
-            if (cleanLine.includes('ヤフー')) bgColor = "#ffffd1"; // 薄い黄色
+            if (cleanLine.includes('ヤフー')) bgColor = "#ffffd1";      // 薄い黄色
 
-            // 見出し行のスタイル適用
-            htmlBody += `<div style="background-color: ${bgColor}; font-weight: bold; margin-top: 2px;">${cleanLine}</div>`;
+            // 「)」の位置を探して、そこまでだけに色を付ける
+            const bracketIndex = cleanLine.indexOf(')');
+            if (bracketIndex !== -1 && bgColor !== "transparent") {
+                const sourcePart = cleanLine.substring(0, bracketIndex + 1);
+                const restPart = cleanLine.substring(bracketIndex + 1);
+                
+                htmlBody += `<div style="margin-top: 4px; font-weight: bold; background-color: #fff;">` +
+                            `<span style="background-color: ${bgColor}; padding: 0 2px;">${sourcePart}</span>` +
+                            `${restPart}</div>`;
+            } else {
+                // 背景指定がない媒体、または「)」がない場合は背景色なし（白）で表示
+                htmlBody += `<div style="margin-top: 4px; font-weight: bold; background-color: #fff;">${cleanLine}</div>`;
+            }
         } else {
-            // 詳細行
-            htmlBody += `<div style="margin-left: 5px;">${cleanLine}</div>`;
+            // 理由・注目点の行（背景は常に白）
+            htmlBody += `<div style="margin-left: 8px; color: #333; background-color: #fff;">${cleanLine}</div>`;
         }
     });
 
@@ -34,34 +46,35 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>News Summary</title>
     <style>
         body {
             font-family: sans-serif;
-            font-size: 11px;      /* さらに小さく */
-            line-height: 1.2;     /* 行間を極限まで詰める */
+            font-size: 11px;
+            line-height: 1.25;
             color: #000;
             margin: 0;
-            padding: 2px;         /* 画面端の余白を最小限に */
-            background-color: #fff;
+            padding: 2px;
+            background-color: #fff; /* 全体の背景を白に固定 */
         }
-        .date-header {
+        .update-time {
             font-size: 9px;
-            color: #666;
+            color: #888;
             text-align: right;
-            margin: 0;
+            margin-bottom: 2px;
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
-    <div class="date-header">${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}</div>
+    <div class="update-time">${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })} 更新</div>
     ${htmlBody}
 </body>
 </html>
 `;
 
     fs.writeFileSync(outputPath, html);
-    console.log('Successfully generated compact color-coded index.html');
+    console.log('Successfully generated index.html (White background except source tags)');
 } catch (error) {
     console.error('Error:', error.message);
     process.exit(1);
