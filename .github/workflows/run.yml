@@ -3,6 +3,12 @@ name: Manual Run
 on:
   workflow_dispatch:
 
+# GitHub Pages へのデプロイとリポジトリへのコミットに必要な権限
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,10 +33,23 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      # --- 追加ステップ: web/format.js を実行して index.html を作成 ---
+      - name: Generate Web Page
+        run: node web/format.js
+
+      # --- 追加ステップ: GitHub Pages へデプロイ ---
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ # index.html がある場所（ルート）を指定
+          publish_branch: gh-pages
+
+      # --- 既存の保存ステップ（index.html も保存対象に追加） ---
       - name: Save results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add news.csv summary.txt
-          git commit -m "Update news and summary" || exit 0
+          git add news.csv summary.txt index.html
+          git commit -m "Update news, summary and web page" || exit 0
           git push
