@@ -1,7 +1,10 @@
-name: Manual Run
+name: Daily News Update
 
 on:
   workflow_dispatch:
+  schedule:
+    # 22:30 UTC = 07:30 JST (日本時間 朝7時30分)
+    - cron: '30 22 * * *'
 
 permissions:
   contents: write
@@ -41,7 +44,7 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add news.csv summary.txt index.html
-          git commit -m "Update news, summary and web page" || exit 0
+          git commit -m "Automated update: news, summary and web page" || exit 0
           git push
 
       # --- 最後に GitHub Pages へデプロイする ---
