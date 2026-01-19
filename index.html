@@ -4,100 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Summary</title>
+    <title>News</title>
     <style>
-        /* 全体の設定：余白をゼロにし、字を小さく統一 */
         body {
             font-family: sans-serif;
-            font-size: 12px;      /* 字を小さく */
-            line-height: 1.3;     /* 行間を詰め気味に */
+            font-size: 11px;      /* さらに小さく */
+            line-height: 1.2;     /* 行間を極限まで詰める */
             color: #000;
-            margin: 0;            /* 外側余白をゼロに */
-            padding: 5px;         /* 内側に最小限の余白 */
+            margin: 0;
+            padding: 2px;         /* 画面端の余白を最小限に */
             background-color: #fff;
         }
-        /* 更新日時 */
-        .date {
-            font-size: 10px;
+        .date-header {
+            font-size: 9px;
             color: #666;
             text-align: right;
-            margin: 0;
-        }
-        /* タイトル見出し：目立たせすぎずコンパクトに */
-        h1 {
-            font-size: 12px;
-            margin: 0 0 5px 0;
-            padding: 2px 5px;
-            background: #eee;
-            border-bottom: 1px solid #ccc;
-        }
-        /* 本文：マークダウンの崩れを気にせず表示 */
-        .content {
-            white-space: pre-wrap;
             margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="date">2026/1/19 18:57:24 更新</div>
-    <h1>重要ニュース要約</h1>
-    <div class="content">はい、承知いたしました。以下に指定された形式でニュースをまとめます。
-
-重要ニュース
-
-*   【ＩＭＦ、日本の26年成長率予測を0.7％に小幅上方修正】（ロイタービジネス 2026年1月19日）
-    *   理由：日本の経済状況を評価する上で重要な指標であり、今後の経済政策に影響を与える可能性があるため。
-    *   注目点：上方修正の背景にある要因（世界経済の回復、政策効果など）と、その持続性。
-*   【中国出生率、1949年以来で最低－総人口も60年の大飢饉以降で最も減少】（ブルームバーグ 2026年1月19日）
-    *   理由：中国の人口動態の変化は、経済成長、社会保障、国際関係に大きな影響を与えるため。
-    *   注目点：少子高齢化の加速が、中国経済にどのような影響を与えるか。また、政府がどのような対策を講じるか。
-*   【ＥＣＢカザークス氏､｢ロシアと戦争状態｣と認識－金融システムの備え必要】（ブルームバーグ 2026年1月19日）
-    *   理由：地政学的リスクの高まりが、金融市場に大きな影響を与える可能性があるため。
-    *   注目点：ECBが具体的にどのような対策を講じるか。また、他の国の中央銀行はどのように対応するか。
-*   【高市首相、2月8日投開票の日程で総選挙実施を表明－消費減税を検討】（ブルームバーグ 2026年1月19日）
-    *   理由：政治の方向性が大きく変わる可能性があり、経済、社会、外交に影響を与えるため。
-    *   注目点：消費減税を含む政策の実現可能性と、選挙結果が今後の政局に与える影響。
-*   【中国軍のドローン、台湾の領空に初めて入る－軍事的威圧強める】（ブルームバーグ 2026年1月19日）
-    *   理由：地政学的緊張の高まりが、国際関係と安全保障に影響を与えるため。
-    *   注目点：中国の軍事的行動がエスカレートするか。また、国際社会がどのように対応するか。
-*    【「前代未聞」の半導体メモリー不足、エヌビディアのサプライヤー警鐘】（ブルームバーグ 2026年1月19日）
-     *  理由：半導体不足はあらゆる産業に影響を与え、経済全体に影響を与える可能性があるため。
-     *  注目点：半導体不足がいつ解消されるか、どの程度の期間影響が続くか。
-*   【新発10年債利回り2.24％に上昇、27年ぶり高水準更新】（ロイタービジネス 2026年1月19日）
-    *   理由：金利上昇は、企業の資金調達コストや個人の住宅ローン金利に影響を与えるため。
-    *   注目点：今後の金利動向と、金融市場への影響。
-*   【スペイン南部の高速列車脱線・衝突事故－少なくとも39人が死亡】（ブルームバーグ 2026年1月19日）
-    *   理由：人命に関わる重大な事故であり、社会に大きな影響を与えるため。
-    *   注目点：事故原因の究明と、今後の安全対策。
-*   【テスラ、中国製ＥＶのカナダ輸出再開で優位　100％関税撤廃が追い風】（ロイタービジネス 2026年1月19日）
-    *   理由：国際貿易の動向と、企業の競争力に影響を与えるため。
-    *   注目点：関税撤廃が、テスラの業績にどのような影響を与えるか。また、他の自動車メーカーはどのように対応するか。
-*   【蘭半導体製造装置大手ＡＳＭ、四半期受注額が予想超え　中国回復】（ロイタービジネス 2026年1月19日）
-    *   理由：半導体市場の動向と、世界経済に影響を与えるため。
-    *   注目点：中国経済の回復が、半導体市場にどのような影響を与えるか。また、他の半導体メーカーはどのように対応するか。
-
-国内ニュース
-
-*   【首相が衆院解散を表明 2/8投開票】（ヤフー国内 2026年1月19日）
-*   【柏崎刈羽 20日の再稼働延期を発表】（ヤフー国内 2026年1月19日）
-*   【サウナ安全状況調査へ 厚労省通知】（ヤフー国内 2026年1月19日）
-*   【11月第3次産業活動指数0.2％低下、「持ち直し」判断維持＝経産省】（ロイタービジネス 2026年1月19日）
-*   【物価予想、5年後「上がる」は83％　高水準続く＝12月日銀アンケート】（ロイタービジネス 2026年1月19日）
-
-海外ニュース
-
-*   【グリーンランドに欧州部隊 影響は】（ヤフー国際 2026年1月19日）
-*   【EU主要国 追加関税表明の米非難】（ヤフー国際 2026年1月19日）
-*   【スペインで脱線事故 20人超死亡か】（ヤフー国際 2026年1月19日）
-*   【米大統領 JPモルガンを提訴の意向】（ヤフー国際 2026年1月19日）
-*   【中国 25年のGDPは前年比5.0%増】（ヤフー国際 2026年1月19日）
-
-その他ニュース
-
-*   【ドムドムバーガー「逆張り」戦略】（ヤフー経済 2026年1月19日）
-*   【日本アカデミー賞「国宝」が席巻】（ヤフーエンタメ 2026年1月19日）
-*   【AI講座シニア人気 声弾ませる人も】（ヤフーIT 2026年1月19日）
-
-以上です。</div>
+    <div class="date-header">2026/1/19 19:09:24</div>
+    <div style="background-color: #eee; font-weight: bold; margin-top: 2px;">## 重要ニュース（10個）</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   中国出生率、1949年以来で最低－総人口も60年の大飢饉以降で最も減少 (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 中国の人口減少は、経済、社会保障、地政学的な影響が非常に大きく、世界経済全体にも波及する可能性があるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の中国の政策転換、少子化対策、高齢者福祉、移民政策などが注目される。</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   高市首相、2月8日投開票の日程で総選挙実施を表明－消費減税を検討 (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 日本の政治・経済の方向性を左右する重要なイベントであり、消費減税の議論は国民生活に直結するため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 選挙結果、各党の政策、消費減税の具体的な内容、財源確保策などが注目される。</div><div style="background-color: #d1f0ff; font-weight: bold; margin-top: 2px;">*   ＩＭＦ、日本の26年成長率予測を0.7％に小幅上方修正 (ロイタービジネス) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 日本経済の現状と今後の見通しを示す重要な指標であり、金融政策や財政政策に影響を与える可能性があるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の経済成長の持続性、インフレ動向、構造改革の進捗などが注目される。</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   ヘッジファンドが円売り拡大、2015年以来の増加幅－衆院解散巡る思惑 (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 為替市場に大きな影響を与え、日本経済の動向を左右する可能性があるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の為替レートの変動、日銀の金融政策、海外投資家の動向などが注目される。</div><div style="background-color: #d1f0ff; font-weight: bold; margin-top: 2px;">*   新発10年債利回り2.24％に上昇、27年ぶり高水準更新 (ロイタービジネス) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 金利上昇は企業や個人の資金調達コストに影響を与え、経済全体に波及するため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の金利動向、日銀の金融政策、住宅ローン金利、企業業績などが注目される。</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   スペイン南部の高速列車脱線・衝突事故－少なくとも39人が死亡 (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 人命に関わる重大な事故であり、安全対策の見直しや交通インフラの安全性への意識を高める必要があるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 事故原因の究明、再発防止策、鉄道安全基準などが注目される。</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   中国軍のドローン、台湾の領空に初めて入る－軍事的威圧強める (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 台湾海峡の緊張を高め、国際関係に大きな影響を与える可能性があるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の中国の軍事行動、台湾の防衛体制、米国の関与などが注目される。</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   ＥＣＢカザークス氏､｢ロシアと戦争状態｣と認識－金融システムの備え必要 (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 地政学的リスクの高まりを示唆し、金融市場や経済に影響を与える可能性があるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後のロシアの動向、ウクライナ情勢、エネルギー価格、金融市場の変動などが注目される。</div><div style="background-color: #d1f0ff; font-weight: bold; margin-top: 2px;">*   トランプ氏、プーチン氏を「平和評議会」に招待＝ロシア大統領府 (ロイター経済) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 米国とロシアの関係に大きな変化をもたらす可能性があり、国際情勢に影響を与えるため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の米ロ関係、国際的な外交交渉、地政学的リスクなどが注目される。</div><div style="background-color: #d1ffd6; font-weight: bold; margin-top: 2px;">*   米マイクロン、台湾の半導体製造拠点を買収へ－18億ドル (ブルームバーグ) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   理由: 半導体産業の構造変化を示す出来事であり、サプライチェーンや地政学的な影響が大きいため。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">*   注目点: 今後の半導体市場の動向、台湾の半導体産業、地政学的リスクなどが注目される。</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">## 国内ニュース（5個）</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   首相が衆院解散を表明 2/8投開票 (ヤフー国内) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   解散表明 首相「私も進退かける」 (ヤフー国内) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   日本海側 21日から警報級大雪恐れ (ヤフー国内) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   柏崎刈羽 20日の再稼働延期を発表 (ヤフー国内) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   サウナ安全状況調査へ 厚労省通知 (ヤフー国内) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">## 海外ニュース（5個）</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   グリーンランドに欧州部隊 影響は (ヤフー国際) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   EU主要国 追加関税表明の米非難 (ヤフー国際) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   スペインで脱線事故 20人超死亡か (ヤフー国際) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   中国人口4年連続減 出生数は最低 (ヤフー国際) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   米大統領 JPモルガンを提訴の意向 (ヤフー国際) 2026/01/19</div><div style="background-color: #eee; font-weight: bold; margin-top: 2px;">## その他ニュース（4個）</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   EV販売「軽」で強化 自動車各社 (ヤフー経済) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   日本アカデミー賞「国宝」が席巻 (ヤフーエンタメ) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   カブスとマイナー契約 常松が会見 (ヤフースポーツ) 2026/01/19</div><div style="background-color: #ffffd1; font-weight: bold; margin-top: 2px;">*   AI講座シニア人気 声弾ませる人も (ヤフーIT) 2026/01/19</div>
 </body>
 </html>
