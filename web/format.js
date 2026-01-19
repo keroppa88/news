@@ -11,25 +11,29 @@ try {
     let htmlBody = "";
 
     lines.forEach(line => {
-        // 不要な記号を削除（# や *）
-        let cleanLine = line.replace(/[#*]/g, '').trim();
+        let cleanLine = line.trim();
         
-        if (!cleanLine.startsWith('・')) {
-            // 媒体を判定して色を決定
+        // 箇条書き（* で始まる行）の処理
+        if (cleanLine.startsWith('*')) {
+            htmlBody += `<div style="margin-left: 10px; color: #333; background-color: #fff; margin-bottom: 8px;">${cleanLine}</div>`;
+        } 
+        // 見出し行（【 】を含む行）の処理
+        else if (cleanLine.includes('【')) {
             let bgColor = "#eee"; 
             if (cleanLine.includes('ロイター')) bgColor = "#d1f0ff";    // 薄い水色
             else if (cleanLine.includes('ブルームバーグ')) bgColor = "#d1ffd6"; // 薄い緑
             else if (cleanLine.includes('ヤフー')) bgColor = "#ffffd1";      // 薄い黄色
 
-            // 【 】で囲まれた部分を色付けし、それ以外（媒体名など）はそのまま表示
+            // 【 】の部分だけ背景色を付け、フォントサイズを1.2倍にする
             let styledLine = cleanLine.replace(/【(.*?)】/g, (match) => {
-                return `<span style="background-color: ${bgColor}; padding: 0 2px;">${match}</span>`;
+                return `<span style="background-color: ${bgColor}; font-size: 1.2em; padding: 0 2px;">${match}</span>`;
             });
 
-            htmlBody += `<div style="margin-top: 5px; font-weight: bold; background-color: #fff;">${styledLine}</div>`;
-        } else {
-            // 理由・注目点の行（白背景）
-            htmlBody += `<div style="margin-left: 10px; color: #333; background-color: #fff;">${cleanLine}</div>`;
+            htmlBody += `<div style="margin-top: 10px; font-weight: bold; background-color: #fff;">${styledLine}</div>`;
+        }
+        else {
+            // それ以外の行
+            htmlBody += `<div style="background-color: #fff;">${cleanLine}</div>`;
         }
     });
 
@@ -44,7 +48,7 @@ try {
         body {
             font-family: sans-serif;
             font-size: 11px;
-            line-height: 1.3;
+            line-height: 1.4;
             color: #000;
             margin: 0;
             padding: 5px;
@@ -66,7 +70,7 @@ try {
 `;
 
     fs.writeFileSync(outputPath, html);
-    console.log('Success: Colors applied only to 【Headlines】.');
+    console.log('Success: Updated HTML with 1.2x headlines and preserved "*" markers.');
 } catch (error) {
     console.error('Error:', error.message);
     process.exit(1);
