@@ -1,32 +1,32 @@
-[2026/1/25 22:45:37] === 実行プロセス開始 ===
-[2026/1/25 22:45:37] 8 個のスクリプトを順番に実行します。
-[2026/1/25 22:45:37] 開始: news_b.js
-[2026/1/25 22:45:42] 完了: news_b.js (5.19秒)
-[2026/1/25 22:45:42]   出力: saved: news_b.csv
-[2026/1/25 22:45:42] 5秒待機中...
-[2026/1/25 22:45:47] 開始: news_r_buisiness.js
-[2026/1/25 22:45:52] 完了: news_r_buisiness.js (4.58秒)
-[2026/1/25 22:45:52]   出力: saved: news_r_buisiness.csv
-[2026/1/25 22:45:52] 5秒待機中...
-[2026/1/25 22:45:57] 開始: news_r_keizai.js
-[2026/1/25 22:46:01] 完了: news_r_keizai.js (4.68秒)
-[2026/1/25 22:46:01]   出力: saved: news_r_keizai.csv
-[2026/1/25 22:46:01] 5秒待機中...
-[2026/1/25 22:46:06] 開始: news_r_markets.js
-[2026/1/25 22:46:11] 完了: news_r_markets.js (4.73秒)
-[2026/1/25 22:46:11]   出力: saved: news_r_markets.csv
-[2026/1/25 22:46:11] 5秒待機中...
-[2026/1/25 22:46:16] 開始: news_r_opinion.js
-[2026/1/25 22:46:21] 完了: news_r_opinion.js (4.42秒)
-[2026/1/25 22:46:21]   出力: saved: news_r_opinion.csv
-[2026/1/25 22:46:21] 5秒待機中...
-[2026/1/25 22:46:26] 開始: news_y.js
-[2026/1/25 22:46:31] 完了: news_y.js (5.29秒)
-[2026/1/25 22:46:31]   出力: saved: news_y.csv
-[2026/1/25 22:46:31] 5秒待機中...
-[2026/1/25 22:46:36] 開始: summarize.js
-[2026/1/25 22:46:36] 失敗: summarize.js (コード:1, 0.27秒)
-[2026/1/25 22:46:36]   エラー: /home/runner/work/news/news/node_modules/@google/generative-ai/dist/index.js:434
+[2026/1/26 22:48:36] === 実行プロセス開始 ===
+[2026/1/26 22:48:36] 8 個のスクリプトを順番に実行します。
+[2026/1/26 22:48:36] 開始: news_b.js
+[2026/1/26 22:48:40] 完了: news_b.js (4.90秒)
+[2026/1/26 22:48:40]   出力: saved: news_b.csv
+[2026/1/26 22:48:40] 5秒待機中...
+[2026/1/26 22:48:45] 開始: news_r_buisiness.js
+[2026/1/26 22:48:50] 完了: news_r_buisiness.js (5.00秒)
+[2026/1/26 22:48:50]   出力: saved: news_r_buisiness.csv
+[2026/1/26 22:48:50] 5秒待機中...
+[2026/1/26 22:48:55] 開始: news_r_keizai.js
+[2026/1/26 22:49:00] 完了: news_r_keizai.js (4.19秒)
+[2026/1/26 22:49:00]   出力: saved: news_r_keizai.csv
+[2026/1/26 22:49:00] 5秒待機中...
+[2026/1/26 22:49:05] 開始: news_r_markets.js
+[2026/1/26 22:49:09] 完了: news_r_markets.js (4.57秒)
+[2026/1/26 22:49:09]   出力: saved: news_r_markets.csv
+[2026/1/26 22:49:09] 5秒待機中...
+[2026/1/26 22:49:14] 開始: news_r_opinion.js
+[2026/1/26 22:49:19] 完了: news_r_opinion.js (4.46秒)
+[2026/1/26 22:49:19]   出力: saved: news_r_opinion.csv
+[2026/1/26 22:49:19] 5秒待機中...
+[2026/1/26 22:49:24] 開始: news_y.js
+[2026/1/26 22:49:29] 完了: news_y.js (5.64秒)
+[2026/1/26 22:49:29]   出力: saved: news_y.csv
+[2026/1/26 22:49:29] 5秒待機中...
+[2026/1/26 22:49:34] 開始: summarize.js
+[2026/1/26 22:49:35] 失敗: summarize.js (コード:1, 0.23秒)
+[2026/1/26 22:49:35]   エラー: /home/runner/work/news/news/node_modules/@google/generative-ai/dist/index.js:434
     throw new GoogleGenerativeAIFetchError(`Error fetching from ${url.toString()}: [${response.status} ${response.statusText}] ${message}`, response.status, response.statusText, errorDetails);
           ^
 
@@ -54,14 +54,14 @@ GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from ht
 }
 
 Node.js v20.20.0
-[2026/1/25 22:46:36] 5秒待機中...
-[2026/1/25 22:46:41] 開始: z_get.js
-[2026/1/25 22:46:41] 完了: z_get.js (0.03秒)
-[2026/1/25 22:46:41]   出力: 処理中: news_r_buisiness.csv...
+[2026/1/26 22:49:35] 5秒待機中...
+[2026/1/26 22:49:40] 開始: z_get.js
+[2026/1/26 22:49:40] 完了: z_get.js (0.03秒)
+[2026/1/26 22:49:40]   出力: 処理中: news_r_buisiness.csv...
 処理中: news_b.csv...
 処理中: news_r_keizai.csv...
 処理中: news_r_opinion.csv...
 処理中: news_r_markets.csv...
 処理中: news_y.csv...
 完了: 116 件（全 139 件中）を news.csv に保存しました。
-[2026/1/25 22:46:41] === すべてのスクリプトの実行を終了しました ===
+[2026/1/26 22:49:40] === すべてのスクリプトの実行を終了しました ===
