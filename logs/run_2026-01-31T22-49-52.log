@@ -1,0 +1,67 @@
+[2026/1/31 22:49:52] === 実行プロセス開始 ===
+[2026/1/31 22:49:52] 8 個のスクリプトを順番に実行します。
+[2026/1/31 22:49:52] 開始: news_b.js
+[2026/1/31 22:49:56] 完了: news_b.js (3.88秒)
+[2026/1/31 22:49:56]   出力: saved: news_b.csv
+[2026/1/31 22:49:56] 5秒待機中...
+[2026/1/31 22:50:01] 開始: news_r_buisiness.js
+[2026/1/31 22:50:06] 完了: news_r_buisiness.js (4.79秒)
+[2026/1/31 22:50:06]   出力: saved: news_r_buisiness.csv
+[2026/1/31 22:50:06] 5秒待機中...
+[2026/1/31 22:50:11] 開始: news_r_keizai.js
+[2026/1/31 22:50:16] 完了: news_r_keizai.js (4.79秒)
+[2026/1/31 22:50:16]   出力: saved: news_r_keizai.csv
+[2026/1/31 22:50:16] 5秒待機中...
+[2026/1/31 22:50:21] 開始: news_r_markets.js
+[2026/1/31 22:50:26] 完了: news_r_markets.js (4.79秒)
+[2026/1/31 22:50:26]   出力: saved: news_r_markets.csv
+[2026/1/31 22:50:26] 5秒待機中...
+[2026/1/31 22:50:31] 開始: news_r_opinion.js
+[2026/1/31 22:50:35] 完了: news_r_opinion.js (4.38秒)
+[2026/1/31 22:50:35]   出力: saved: news_r_opinion.csv
+[2026/1/31 22:50:35] 5秒待機中...
+[2026/1/31 22:50:40] 開始: news_y.js
+[2026/1/31 22:50:46] 完了: news_y.js (5.93秒)
+[2026/1/31 22:50:46]   出力: saved: news_y.csv
+[2026/1/31 22:50:46] 5秒待機中...
+[2026/1/31 22:50:51] 開始: summarize.js
+[2026/1/31 22:50:51] 失敗: summarize.js (コード:1, 0.30秒)
+[2026/1/31 22:50:51]   エラー: /home/runner/work/news/news/node_modules/@google/generative-ai/dist/index.js:434
+    throw new GoogleGenerativeAIFetchError(`Error fetching from ${url.toString()}: [${response.status} ${response.statusText}] ${message}`, response.status, response.statusText, errorDetails);
+          ^
+
+GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+    at handleResponseNotOk (/home/runner/work/news/news/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/runner/work/news/news/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/runner/work/news/news/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async run (/home/runner/work/news/news/summarize.js:36:18) {
+  status: 400,
+  statusText: 'Bad Request',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.ErrorInfo',
+      reason: 'API_KEY_INVALID',
+      domain: 'googleapis.com',
+      metadata: { service: 'generativelanguage.googleapis.com' }
+    },
+    {
+      '@type': 'type.googleapis.com/google.rpc.LocalizedMessage',
+      locale: 'en-US',
+      message: 'API key not valid. Please pass a valid API key.'
+    }
+  ]
+}
+
+Node.js v20.20.0
+[2026/1/31 22:50:51] 5秒待機中...
+[2026/1/31 22:50:56] 開始: z_get.js
+[2026/1/31 22:50:56] 完了: z_get.js (0.03秒)
+[2026/1/31 22:50:56]   出力: 処理中: news_r_buisiness.csv...
+処理中: news_b.csv...
+処理中: news_r_keizai.csv...
+処理中: news_r_opinion.csv...
+処理中: news_r_markets.csv...
+処理中: news_y.csv...
+完了: 120 件（全 138 件中）を news.csv に保存しました。
+[2026/1/31 22:50:56] === すべてのスクリプトの実行を終了しました ===
