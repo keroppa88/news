@@ -8,7 +8,7 @@ const fs = require('fs');
 (async () => {
   let browser;
   try {
-    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTahc8hURMwm-nBLnZBrShbo1L_OE-qsFVV5gtPfw_17Utc4THMjqXXqzToG9AHr0Ppb5F3qsIjoC9a/pubhtml?gid=925571841&single=true&urp=gmail_link';
+    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTzjYx-aE9S3YkL-dTC96PJXBCBqF3we9cE6Kgbv4-CyYolWmuq6BGodxI6vjYez1GjXOLgy5ouM2Ww/pubhtml?gid=0&single=true';
 
     browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
