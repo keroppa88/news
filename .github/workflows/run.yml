@@ -30,6 +30,13 @@ jobs:
       - name: Run news scrapers
         run: node Run.js
 
+      - name: Debug - list generated CSV files
+        run: |
+          echo "=== Generated CSV files ==="
+          ls -la *.csv 2>/dev/null || echo "No CSV files found"
+          echo "=== Log files ==="
+          cat logs/*.log 2>/dev/null || echo "No log files"
+
       - name: Merge CSVs into news.csv
         run: node z_get.js
 
