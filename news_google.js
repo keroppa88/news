@@ -1,45 +1,35 @@
-// ●グーグルスプレッドシート
-// npm i playwright
+// ●Googleスプレッドシート（公開）をCSVで直取り
+// Node 18+ 想定（fetchが使える）
+// それ以前なら node-fetch を入れてください
 
-const { chromium } = require('playwright');
 const fs = require('fs');
 
-//●サイトアドレス
 (async () => {
-  let browser;
   try {
-    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTzjYx-aE9S3YkL-dTC96PJXBCBqF3we9cE6Kgbv4-CyYolWmuq6BGodxI6vjYez1GjXOLgy5ouM2Ww/pubhtml?gid=0&single=true';
+    // 元の pubhtml URL
+    const pubhtml =
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vTzjYx-aE9S3YkL-dTC96PJXBCBqF3we9cE6Kgbv4-CyYolWmuq6BGodxI6vjYez1GjXOLgy5ouM2Ww/pubhtml?gid=0&single=true';
 
-    browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
+    // pubhtml -> pub にして output=csv を付与
+    const csvUrl = pubhtml
+      .replace('/pubhtml', '/pub')
+      .replace(/[?&]output=[^&]*/g, '') + '&output=csv';
 
-    // ページを開く（軽めの待機設定）
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    const res = await fetch(csvUrl, {
+      headers: { 'user-agent': 'Mozilla/5.0' },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
 
-    // 数秒だけ待つ（描画・JS実行待機）
-    await page.waitForTimeout(3000); // ← 必要に応じて秒数調整
+    const csv = await res.text();
 
-    // ページ全体の表示テキストを取得
-    const text = await page.innerText('body');
+    // ●ファイルネーム
+    const filename = 'news_google.csv';
 
-    // CSV保存（行ごと）●ファイルネーム
-    const d = new Date();
-    const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
-    const filename = `news_google.csv`;
-
-    // 改行ごとに1行として書き込む
-    const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
-    let csvContent = '\uFEFF'; // BOM
-    for (const line of lines) {
-      csvContent += `"${line.replace(/"/g, '""')}"\n`;
-    }
-
-    fs.writeFileSync(filename, csvContent, 'utf8');
+    // BOM付きで保存（Excel対策）
+    fs.writeFileSync(filename, '\uFEFF' + csv, 'utf8');
     console.log('saved:', filename);
   } catch (err) {
     console.error(`ERROR in news_google: ${err.message}`);
     process.exit(1);
-  } finally {
-    if (browser) await browser.close();
   }
 })();
