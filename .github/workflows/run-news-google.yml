@@ -1,0 +1,52 @@
+name: Run news_google.js
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * *' # JST 06:00
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-google-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install playwright
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run script
+        run: node news_google.js
+
+      - name: Commit and push CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news_google.csv
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update news_google.csv"
+            git push
+          fi
+
+      - name: Upload CSV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-google-csv
+          path: news_google.csv
+          if-no-files-found: error
