@@ -8,7 +8,10 @@ const FILE_MAP = {
   'news_r_keizai.csv': 'ロイター経済',
   'news_r_opinion.csv': 'ロイターオピニオン',
   'news_r_markets.csv': 'ロイター市場',
-  'news_y.csv': 'ヤフーニュース'
+  'news_bbc.csv': 'BBC'
+  'news_google.csv': '国内etc'
+  'news_nytimes.csv': 'NYタイムス'
+  'news_wsj.csv': 'WSJ'
 };
 
 // ヤフーニュースの詳細カテゴリ名
@@ -184,3 +187,4 @@ function main() {
 }
 
 main();
+
