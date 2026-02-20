@@ -1,4 +1,4 @@
-// ●ロイター国内
+// ●ブルームバーグ
 // npm i playwright
 
 const { chromium } = require('playwright');
@@ -43,3 +43,4 @@ const fs = require('fs');
     if (browser) await browser.close();
   }
 })();
+
