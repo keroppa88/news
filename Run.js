@@ -66,7 +66,7 @@ async function main() {
 
   // 直下の .js を取得（Run.js自身は除外）
   const files = fs.readdirSync(BASE_DIR)
-    .filter(f => f.endsWith('.js') && f !== 'Run.js')
+    .filter(f => f.startsWith('news_') && f.endsWith('.js'))
     .sort() // 名前順（大文字優先）
     .map(f => path.join(BASE_DIR, f));
 
