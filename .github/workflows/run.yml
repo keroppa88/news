@@ -27,8 +27,11 @@ jobs:
           npm install playwright @google/generative-ai
           npx playwright install --with-deps chromium
 
-      - name: Run scripts
+      - name: Run news scrapers
         run: node Run.js
+
+      - name: Merge CSVs into news.csv
+        run: node z_get.js
 
       - name: Run Gemini Analysis
         run: node summarize.js
