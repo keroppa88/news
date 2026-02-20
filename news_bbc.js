@@ -1,4 +1,4 @@
-// ●ロイター国内
+// ●BBC
 // npm i playwright
 
 const { chromium } = require('playwright');
