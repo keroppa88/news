@@ -22,31 +22,43 @@ function isBlockedPage(text) {
 }
 
 async function launchBrowser() {
-  const launchArgs = [
+  const baseArgs = [
     '--disable-blink-features=AutomationControlled',
     '--no-sandbox',
     '--disable-setuid-sandbox',
     '--disable-dev-shm-usage',
   ];
 
-  // まずシステムの Google Chrome を試す（TLS フィンガープリントが本物で検出されにくい）
+  // ★ headless: false（実ブラウザモード）が最も検出されにくい
+  //   --start-minimized でウィンドウを最小化して起動
+
+  // 1) Google Chrome（実ブラウザモード）
   try {
     const browser = await chromium.launch({
       channel: 'chrome',
-      headless: true,
-      args: launchArgs,
+      headless: false,
+      args: [...baseArgs, '--start-minimized'],
     });
-    console.log('INFO: Google Chrome を使用');
+    console.log('INFO: Google Chrome（実ブラウザモード）を使用');
     return browser;
-  } catch (_) {
-    // Chrome 未インストールの場合は Chromium にフォールバック
-  }
+  } catch (_) {}
 
+  // 2) Chromium（実ブラウザモード）
+  try {
+    const browser = await chromium.launch({
+      headless: false,
+      args: [...baseArgs, '--start-minimized'],
+    });
+    console.log('INFO: Chromium（実ブラウザモード）を使用');
+    return browser;
+  } catch (_) {}
+
+  // 3) 最終フォールバック: headless（検出される可能性あり）
   const browser = await chromium.launch({
     headless: true,
-    args: launchArgs,
+    args: baseArgs,
   });
-  console.log('INFO: Chromium を使用');
+  console.log('WARN: headless モードで起動（ボット検出される可能性あり）');
   return browser;
 }
 
@@ -69,18 +81,13 @@ async function launchBrowser() {
 
     // ボット検出回避スクリプト
     await context.addInitScript(() => {
-      // navigator.webdriver を隠す
       Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-
-      // chrome オブジェクトを偽装
       window.chrome = {
         runtime: {},
         loadTimes: function () {},
         csi: function () {},
         app: { isInstalled: false },
       };
-
-      // plugins を偽装
       Object.defineProperty(navigator, 'plugins', {
         get: () => [
           { name: 'Chrome PDF Plugin', filename: 'internal-pdf-viewer' },
@@ -91,13 +98,9 @@ async function launchBrowser() {
           { name: 'Native Client', filename: 'internal-nacl-plugin' },
         ],
       });
-
-      // languages を偽装
       Object.defineProperty(navigator, 'languages', {
         get: () => ['ja', 'en-US', 'en'],
       });
-
-      // permissions.query を偽装
       const origQuery = navigator.permissions.query.bind(
         navigator.permissions
       );
@@ -109,21 +112,27 @@ async function launchBrowser() {
 
     const page = await context.newPage();
 
-    // 最大2回試行（初回 + リトライ1回）
+    // 最大2回試行
     let bodyText = '';
     for (let attempt = 0; attempt < 2; attempt++) {
       if (attempt === 0) {
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.goto(url, {
+          waitUntil: 'domcontentloaded',
+          timeout: 60000,
+        });
       } else {
-        console.warn('WARN: ボット検出ページが表示されました。リトライします...');
+        console.warn('WARN: ボット検出。リトライします...');
         await page.waitForTimeout(2000);
-        await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.reload({
+          waitUntil: 'domcontentloaded',
+          timeout: 60000,
+        });
       }
       await page
         .waitForLoadState('networkidle', { timeout: 30000 })
         .catch(() => {});
 
-      // 同意ポップアップがある場合は閉じる
+      // 同意ポップアップを閉じる
       for (const selector of [
         'button:has-text("Accept")',
         'button:has-text("I Agree")',
@@ -140,18 +149,11 @@ async function launchBrowser() {
       await page.waitForTimeout(3000);
       bodyText = await page.innerText('body');
 
-      if (!isBlockedPage(bodyText)) break; // 成功
+      if (!isBlockedPage(bodyText)) break;
     }
 
-    // 最終チェック: まだブロックされていたらエラー
     if (isBlockedPage(bodyText)) {
-      throw new Error(
-        'ボット検出によりアクセスがブロックされました。\n' +
-          '対策: システムに Google Chrome をインストールして再実行してください。\n' +
-          '  Windows: https://www.google.com/chrome/\n' +
-          '  Mac: brew install --cask google-chrome\n' +
-          '  Linux: sudo apt install google-chrome-stable'
-      );
+      throw new Error('ボット検出によりアクセスがブロックされました');
     }
 
     // 見出し・本文候補を優先取得
@@ -165,7 +167,7 @@ async function launchBrowser() {
       .map((line) => line.trim())
       .filter((line) => line.length > 0);
 
-    // 見出し抽出が空の場合は body 取得にフォールバック
+    // 見出し抽出が空の場合は body にフォールバック
     if (lines.length < 10) {
       lines = bodyText
         .split(/\r?\n/)
