@@ -8,10 +8,10 @@ const SOURCES = [
   { fileName: 'news_b.csv', title: '●●ブルームバーグ●●' },
   { fileName: 'news_bbc.csv', title: '●●BBC●●' },
   { fileName: 'news_google.csv', title: '●●国内etc●●' },
-  { fileName: 'news_nytimes.csv', title: '●●NYタイムス●●' },
+  { fileName: 'news_nytimes.csv', title: '●●NYタイムズ●●' },
   { fileName: 'news_wsj.csv', title: '●●WSJ●●' },
   { fileName: 'news_y.csv', title: '●●ヤフー●●' },
-  { fileName: 'news_ai.csv', title: '●●AI●●' }
+  { fileName: 'news_ai.csv', title: '●●AI関連●●' }
 ];
 
 const OUTPUT_FILE = 'news.csv';
