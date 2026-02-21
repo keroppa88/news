@@ -10,7 +10,7 @@ const SOURCES = [
   { fileName: 'news_google.csv', title: '●●国内etc●●' },
   { fileName: 'news_nytimes.csv', title: '●●NYタイムス●●' },
   { fileName: 'news_wsj.csv', title: '●●WSJ●●' },
-  { fileName: 'news_y.csv', title: '●●ヤフー●●' }
+  { fileName: 'news_y.csv', title: '●●ヤフー●●' },
   { fileName: 'news_ai.csv', title: '●●AI●●' }
 ];
 
