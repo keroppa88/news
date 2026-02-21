@@ -4,20 +4,58 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 
+// ボット検出ページの判定キーワード（2つ以上マッチでブロックと判定）
+const BLOCK_MARKERS = [
+  'unusual activity',
+  'not a robot',
+  'Block reference ID',
+  'Why did this happen?',
+  'Please make sure your browser supports JavaScript and cookies',
+];
+
+function isBlockedPage(text) {
+  let hits = 0;
+  for (const kw of BLOCK_MARKERS) {
+    if (text.includes(kw)) hits++;
+  }
+  return hits >= 2;
+}
+
+async function launchBrowser() {
+  const launchArgs = [
+    '--disable-blink-features=AutomationControlled',
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+  ];
+
+  // まずシステムの Google Chrome を試す（TLS フィンガープリントが本物で検出されにくい）
+  try {
+    const browser = await chromium.launch({
+      channel: 'chrome',
+      headless: true,
+      args: launchArgs,
+    });
+    console.log('INFO: Google Chrome を使用');
+    return browser;
+  } catch (_) {
+    // Chrome 未インストールの場合は Chromium にフォールバック
+  }
+
+  const browser = await chromium.launch({
+    headless: true,
+    args: launchArgs,
+  });
+  console.log('INFO: Chromium を使用');
+  return browser;
+}
+
 (async () => {
   let browser;
   try {
     const url = 'https://www.bloomberg.com/jp/latest';
 
-    browser = await chromium.launch({
-      headless: true,
-      args: [
-        '--disable-blink-features=AutomationControlled',
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-      ],
-    });
+    browser = await launchBrowser();
     const context = await browser.newContext({
       locale: 'ja-JP',
       userAgent:
@@ -71,44 +109,52 @@ const fs = require('fs');
 
     const page = await context.newPage();
 
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page
-      .waitForLoadState('networkidle', { timeout: 30000 })
-      .catch(() => {});
-
-    // 同意ポップアップがある場合は閉じる
-    const consentSelectors = [
-      'button:has-text("Accept")',
-      'button:has-text("I Agree")',
-      'button:has-text("同意")',
-      '#onetrust-accept-btn-handler',
-    ];
-    for (const selector of consentSelectors) {
-      const button = page.locator(selector).first();
-      if (await button.count()) {
-        await button.click({ timeout: 1500 }).catch(() => {});
-        break;
+    // 最大2回試行（初回 + リトライ1回）
+    let bodyText = '';
+    for (let attempt = 0; attempt < 2; attempt++) {
+      if (attempt === 0) {
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      } else {
+        console.warn('WARN: ボット検出ページが表示されました。リトライします...');
+        await page.waitForTimeout(2000);
+        await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
       }
-    }
-
-    await page.waitForTimeout(3000);
-
-    // ボット検出ページかチェック
-    const checkText = await page.innerText('body');
-    if (
-      checkText.includes('unusual activity') ||
-      checkText.includes('not a robot')
-    ) {
-      console.warn('WARN: ボット検出ページが表示されました。リトライします...');
-      // ページリロードで再試行
-      await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
       await page
         .waitForLoadState('networkidle', { timeout: 30000 })
         .catch(() => {});
+
+      // 同意ポップアップがある場合は閉じる
+      for (const selector of [
+        'button:has-text("Accept")',
+        'button:has-text("I Agree")',
+        'button:has-text("同意")',
+        '#onetrust-accept-btn-handler',
+      ]) {
+        const button = page.locator(selector).first();
+        if (await button.count()) {
+          await button.click({ timeout: 1500 }).catch(() => {});
+          break;
+        }
+      }
+
       await page.waitForTimeout(3000);
+      bodyText = await page.innerText('body');
+
+      if (!isBlockedPage(bodyText)) break; // 成功
     }
 
-    // ブルームバーグは body 全文の取得が空になるケースがあるため、見出し・本文候補を優先取得
+    // 最終チェック: まだブロックされていたらエラー
+    if (isBlockedPage(bodyText)) {
+      throw new Error(
+        'ボット検出によりアクセスがブロックされました。\n' +
+          '対策: システムに Google Chrome をインストールして再実行してください。\n' +
+          '  Windows: https://www.google.com/chrome/\n' +
+          '  Mac: brew install --cask google-chrome\n' +
+          '  Linux: sudo apt install google-chrome-stable'
+      );
+    }
+
+    // 見出し・本文候補を優先取得
     const candidates = await page
       .locator(
         'main h1, main h2, main h3, article h1, article h2, article h3, main p, article p, li'
@@ -121,28 +167,14 @@ const fs = require('fs');
 
     // 見出し抽出が空の場合は body 取得にフォールバック
     if (lines.length < 10) {
-      const bodyText = await page.evaluate(() => {
-        const body = document.querySelector('body');
-        return body ? body.innerText : '';
-      });
       lines = bodyText
         .split(/\r?\n/)
         .map((line) => line.trim())
         .filter((line) => line.length > 0);
     }
 
-    // ボット検出コンテンツを除外
-    lines = lines.filter(
-      (line) =>
-        !line.includes('unusual activity') &&
-        !line.includes('not a robot') &&
-        !line.includes('Block reference ID')
-    );
-
     if (!lines.length) {
-      throw new Error(
-        'ページ本文の取得結果が空です（ボット検出でブロックされた可能性があります）'
-      );
+      throw new Error('ページ本文の取得結果が空です');
     }
 
     const filename = 'news_b.csv';
