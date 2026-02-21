@@ -37,9 +37,10 @@ const fs = require('fs');
     fs.writeFileSync(filename, csvContent, 'utf8');
     console.log('saved:', filename);
   } catch (err) {
-    console.error(`ERROR in news_bbc: ${err.message}`);
+    console.error(`ERROR in news_b: ${err.message}`);
     process.exit(1);
   } finally {
     if (browser) await browser.close();
   }
 })();
+
