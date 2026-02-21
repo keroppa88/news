@@ -139,12 +139,12 @@ async function run() {
   // warehouse フォルダに年月日時刻のファイル名で保存
   const warehouseDir = path.join(__dirname, 'warehouse');
   if (!fs.existsSync(warehouseDir)) fs.mkdirSync(warehouseDir, { recursive: true });
-  const now = new Date();
-  const ts = now.getFullYear().toString()
-    + String(now.getMonth() + 1).padStart(2, '0')
-    + String(now.getDate()).padStart(2, '0')
-    + String(now.getHours()).padStart(2, '0')
-    + String(now.getMinutes()).padStart(2, '0');
+  const now = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  const ts = now.getUTCFullYear().toString()
+    + String(now.getUTCMonth() + 1).padStart(2, '0')
+    + String(now.getUTCDate()).padStart(2, '0')
+    + String(now.getUTCHours()).padStart(2, '0')
+    + String(now.getUTCMinutes()).padStart(2, '0');
   fs.writeFileSync(path.join(warehouseDir, `${ts}.text`), summaryText);
 }
 
