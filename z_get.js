@@ -11,6 +11,7 @@ const SOURCES = [
   { fileName: 'news_nytimes.csv', title: '●●NYタイムス●●' },
   { fileName: 'news_wsj.csv', title: '●●WSJ●●' },
   { fileName: 'news_y.csv', title: '●●ヤフー●●' }
+  { fileName: 'news_ai.csv', title: '●●AI●●' }
 ];
 
 const OUTPUT_FILE = 'news.csv';
