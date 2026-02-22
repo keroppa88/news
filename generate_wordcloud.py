@@ -1,5 +1,6 @@
 import re
 from collections import Counter
+from datetime import datetime
 from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
 import os
@@ -134,8 +135,14 @@ wc = WordCloud(
  
 wc.generate_from_frequencies(word_freq)
  
-# Save as JPEG in warehouse folder
+# Save as JPEG at top level
+top_level_path = "wordcloud.jpg"
+wc.to_file(top_level_path)
+print(f"Word cloud saved to {top_level_path}")
+
+# Save as JPEG in warehouse folder with date-based filename
 os.makedirs("warehouse", exist_ok=True)
-output_path = os.path.join("warehouse", "wordcloud.jpg")
-wc.to_file(output_path)
-print(f"Word cloud saved to {output_path}")
+date_filename = datetime.now().strftime("%Y%m%d") + ".jpg"
+warehouse_path = os.path.join("warehouse", date_filename)
+wc.to_file(warehouse_path)
+print(f"Word cloud saved to {warehouse_path}")
