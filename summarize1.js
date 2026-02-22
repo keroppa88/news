@@ -8,7 +8,10 @@ async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   const csvData = fs.readFileSync('news.csv', 'utf8');
 
+  const today = new Date().toISOString().split('T')[0]; // UTC基準の当日日付
+
   const prompt = `
+    当日の日付は${today}（UTC基準）です。
     news.csvを読んで文字の羅列から記事の見出しを抽出して羅列する。英語は日本語に翻訳する。
     手順1、文字の羅列から「媒体・分野ごとの区切り」、「記事の見出し」と「年月日に関わる情報」のみを抽出する。これをAとする。
     手順2、Aのにある記事見出し情報を「記事の見出し」＋「媒体・分野」＋「年月日」の形で1行ごとにまとめる。
