@@ -1,589 +1,238 @@
-```python
-import re
-from datetime import datetime, timedelta
-import pytz
+以下に記事の見出しを抽出・整理した結果を示します。
 
-def extract_news(data, current_date_utc):
-    """
-    ニュース記事の見出しを抽出し、指定された形式で整理します。
+**●●ロイタービジネス●●**
 
-    Args:
-        data (str): ニュース記事データの文字列。
-        current_date_utc (datetime): 基準となる現在の日付（UTC）。
+*   エヌビディアやソフト大手の決算、ＡＩ相場の次の試金石に＝今週の米株式市場(ロイタービジネス)2026/02/22
+*   トランプ関税違憲判決、米エネ企業のコスト軽減　取引は当面不変か(ロイタービジネス)2026/02/21
+*   新関税が1対1の置き換えなら影響軽微＝米セントルイス連銀総裁(ロイタービジネス)2026/02/20
+*   ＮＹ市場サマリー（20日）株反発、ドル下落　利回り上昇(ロイタービジネス)2026/02/20
+*   米国株式市場＝反発、大型株けん引　トランプ関税違法判決に安ど感(ロイタービジネス)2026/02/20
+*   ＮＹ外為市場＝ドル下落、最高裁がトランプ関税に違法判決(ロイタービジネス)2026/02/20
+*   米財務長官、「低採用・低解雇」脱却を楽観視　労働需要回復に期待(ロイタービジネス)2026/02/20
+*   米ＧＤＰ「かなり堅調」、インフレに懸念＝アトランタ連銀総裁(ロイタービジネス)2026/02/20
+*   ＦＲＢ政策「適切な位置」、インフレ鈍化を予想＝ダラス連銀総裁(ロイタービジネス)2026/02/20
+*   米新築住宅販売、12月は1.7％減　建設中在庫は約4年半ぶり低水準(ロイタービジネス)2026/02/20
+*   米総合ＰＭＩ、2月は52.3に低下　昨年4月以来の低水準(ロイタービジネス)2026/02/20
+*   米ＧＤＰ1.4％増に急減速、25年第4四半期速報値　政府閉鎖が影響(ロイタービジネス)2026/02/20
+*   米コアＰＣＥ価格指数、12月は前月比0.4％上昇　前年比ともに伸び加速(ロイタービジネス)2026/02/20
+*   トランプ政権、石炭火力発電所の有害大気汚染物質規制を緩和へ(ロイタービジネス)2026/02/20
+*   トランプ緊急関税、最高裁が違法判決なら1750億ドル超返還へ(ロイタービジネス)2026/02/20
+*   金価格が上昇、米イラン緊張と欧州債券利回り低下で(ロイタービジネス)2026/02/20
+*   トランプ氏関係者、ロシア企業とアラスカガス開発で合意＝ＮＹＴ(ロイタービジネス)2026/02/20
+*   アングロ・アメリカン、昨年の赤字37億ドル　デビアス減損響く(ロイタービジネス)2026/02/20
+*   ユーロ圏総合ＰＭＩ、2月速報51.9に上昇　製造業が拡大に転じる(ロイタービジネス)2026/02/20
+*   仏総合ＰＭＩ、2月速報49.9　需要が低迷(ロイタービジネス)2026/02/20
 
-    Returns:
-        str: 整理されたニュース記事の見出しを媒体・分野ごとにまとめた文字列。
-    """
-    # 日本時間（UTC+9）の現在時刻
-    current_date_jst = current_date_utc.astimezone(pytz.timezone('Asia/Tokyo'))
-    current_date_str_jst = current_date_jst.strftime('%Y-%m-%d')
+**●●ロイター経済●●**
 
-    output = ""
+*   エヌビディアやソフト大手の決算、ＡＩ相場の次の試金石に＝今週の米株式市場(ロイター経済)2026/02/22
+*   焦点：「氷雪経済」の成功例追え、中国がサービス投資にテコ入れ(ロイター経済)2026/02/21
+*   焦点：米中間選挙へ、民主党がキリスト教保守層にもアピール　移民取り締まりへの不満背景(ロイター経済)2026/02/21
+*   トランプ米大統領、代替関税率を10％から15％に引き上げと投稿(ロイター経済)2026/02/22
+*   コラム：世界最大の温室効果ガス排出国の中国、クリーン発電が化石燃料を逆転(ロイター経済)2026/02/21
+*   コラム：米最高裁の違法判断、通商権限巡り議会の優位性を再確認(ロイター経済)2026/02/21
+*   米ＵＳＴＲ、新たな３０１条調査開始へ　主要国の大半が対象(ロイター経済)2026/02/21
+*   コラム：米最高裁の違法判断、通商権限巡り議会の優位性を再確認(ロイター経済)2026/02/21
+*   アングル：米相互関税に違憲判決、世界経済の先行き依然不透明(ロイター経済)2026/02/21
+*   最高裁の関税判決、トランプ大統領の影響力を低下させた＝米財務長官(ロイター経済)2026/02/20
+*   新関税が1対1の置き換えなら影響軽微＝米セントルイス連銀総裁(ロイター経済)2026/02/20
+*   米議会、イラン攻撃権限巡り来週採決も　トランプ氏は攻撃検討か(ロイター経済)2026/02/20
+*   今年の関税収入、違法判断受けても見通し変わらず　代替手段利用＝米財務長官(ロイター経済)2026/02/20
+*   米国株式市場＝反発、大型株けん引　トランプ関税違法判決に安ど感(ロイター経済)2026/02/20
+*   ＮＹ外為市場＝ドル下落、最高裁がトランプ関税に違法判決(ロイター経済)2026/02/20
+*   米財務長官、「低採用・低解雇」脱却を楽観視　労働需要回復に期待(ロイター経済)2026/02/20
+*   米ＧＤＰ「かなり堅調」、インフレに懸念＝アトランタ連銀総裁(ロイター経済)2026/02/20
+*   トランプ関税違法判決、ＥＵは関税削減主張　英は優遇継続に期待(ロイター経済)2026/02/20
+*   トランプ氏、ＧＤＰ公表前に低迷を示唆　政府閉鎖で民主党を非難(ロイター経済)2026/02/20
+*   ＦＲＢ政策「適切な位置」、インフレ鈍化を予想＝ダラス連銀総裁(ロイター経済)2026/02/20
 
-    # ●●ロイタービジネス●●
-    output += "●●ロイタービジネス●●　日本時間（UTC+9）\n"
-    reuter_business_headlines = []
-    for match in re.finditer(r'"(.*?)"\s*"category"\s*"\s*·\s*(.*?)\s*UTC\s*·\s*(\d+)\s*時間前"', data):
-        headline = match.group(1)
-        hours_ago = int(match.group(3))
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        reuter_business_headlines.append(f"{headline}(ロイタービジネス){article_date}")
+**●●ロイターオピニオン●●**
 
-    for match in re.finditer(r'"(.*?)"\s*"(\d{4}年\d{1,2}月\d{1,2}日)"', data):
-        headline = match.group(1)
-        date_str = match.group(2).replace('年', '/').replace('月', '/').replace('日', '')
-        date_obj = datetime.strptime(date_str, '%Y/%m/%d')
-        date_utc = date_obj.replace(tzinfo=pytz.timezone('Asia/Tokyo')).astimezone(pytz.utc)
-        days_diff = (current_date_utc - date_utc).days
-        if days_diff <= 2:
-            article_date = date_obj.strftime('%Y/%m/%d')
-            reuter_business_headlines.append(f"{headline}(ロイタービジネス){article_date}")
-    # 直近の記事から順に並べ替え、重複を削除
-    reuter_business_headlines = list(dict.fromkeys(reuter_business_headlines))
-    reuter_business_headlines = reuter_business_headlines[:40]
-    output += "\n".join(reuter_business_headlines) + "\n" if reuter_business_headlines else "\n"
+*   コラム：世界最大の温室効果ガス排出国の中国、クリーン発電が化石燃料を逆転(ロイターオピニオン)2026/02/21
+*   コラム：米アルミ産業、ビッグテックとの電力争奪戦で劣勢　工場閉鎖続く(ロイターオピニオン)2026/02/20
+*   コラム：欧州再軍備のジレンマ、防衛大手の独占が招く高コストと軍備不足(ロイターオピニオン)2026/02/17
+*   コラム：アクティビストとの和解、長期的には代償大きく(ロイターオピニオン)2026/02/18
+*   コラム：ドル安より米国債を警戒せよ、市場が過小評価する財政リスク(ロイターオピニオン)2026/02/17
+*   コラム：上値余地は限定的か、通貨先物の取組状況から円高を読む＝佐々木融氏(ロイターオピニオン)2026/02/17
+*   コラム：ロシア、石油減産ついに不可避か　西側制裁が奏功へ(ロイターオピニオン)2026/02/17
+*   コラム：衆院選後に進んだ円高、持続性を探る4つのポイント＝植野大作氏(ロイターオピニオン)2026/02/16
+*   コラム：高市発言受け「ポジティブ修正」、衆院選後のドル／円相場を読む＝尾河眞樹氏(ロイターオピニオン)2026/02/16
+*   コラム：圧勝の高市自民党、日本トリプル高となるための条件＝高島修氏(ロイターオピニオン)2026/02/13
+*   コラム：高市自民党大勝、市場の反応をどう読むか＝熊野英生氏(ロイターオピニオン)2026/02/12
+*   コラム：消費減税と日銀の金融政策、求められる「物価の基調」の再定義＝井上哲也氏(ロイターオピニオン)2026/02/12
+*   コラム：債券市場は先進国の財政悪化が圧力に、当面逆風継続か(ロイターオピニオン)2026/02/12
+*   コラム：ユーロと人民元の「野心」、基軸通貨ドル安を加速(ロイターオピニオン)2026/02/12
+*   コラム：広がる子どものＳＮＳ禁止案、ビッグテック企業の広告収入減か(ロイターオピニオン)2026/02/12
+*   コラム：衆院選後の「サナエノミクス」、日銀金融政策への影響は＝門間一夫氏(ロイターオピニオン)2026/02/10
+*   コラム： 「移民ネットゼロ」経済、高齢化社会では危険な側面(ロイターオピニオン)2026/02/09
+*   衆院選、自民単独で3分の2確保：識者はこうみる(ロイターオピニオン)2026/02/08
+*   コラム：支持揺らぐ英王室、膨らむコストの「化粧直し」で反発回避へ(ロイターオピニオン)2026/02/06
+*   コラム：ユーチューブは敵か味方か、放送業界の新たな覇権巡る攻防(ロイターオピニオン)2026/02/06
 
-    # ●●ロイター経済●●
-    output += "●●ロイター経済●●　日本時間（UTC+9）\n"
-    reuter_economic_headlines = []
-    for match in re.finditer(r'"(.*?)"\s*"category"\s*"\s*·\s*(.*?)\s*UTC\s*·\s*(\d+)\s*時間前更新"', data):
-        headline = match.group(1)
-        hours_ago = int(match.group(3))
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        reuter_economic_headlines.append(f"{headline}(ロイター経済){article_date}")
-    for match in re.finditer(r'焦点：(.*?)\s*(\d+)\s*時間前', data):
-        headline = "焦点：" + match.group(1)
-        hours_ago = int(match.group(2))
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        reuter_economic_headlines.append(f"{headline}(ロイター経済){article_date}")
-    for match in re.finditer(r'"(.*?)"\s*"category"\s*"(.*?)\s*(\d{4}年\d{1,2}月\d{1,2}日)"', data):
-        headline = match.group(1)
-        date_str = match.group(3).replace('年', '/').replace('月', '/').replace('日', '')
-        date_obj = datetime.strptime(date_str, '%Y/%m/%d')
-        date_utc = date_obj.replace(tzinfo=pytz.timezone('Asia/Tokyo')).astimezone(pytz.utc)
-        days_diff = (current_date_utc - date_utc).days
-        if days_diff <= 2:
-            article_date = date_obj.strftime('%Y/%m/%d')
-            reuter_economic_headlines.append(f"{headline}(ロイター経済){article_date}")
+**●●ロイター市場●●**
 
-    reuter_economic_headlines = list(dict.fromkeys(reuter_economic_headlines))
-    reuter_economic_headlines = reuter_economic_headlines[:40]
-    output += "\n".join(reuter_economic_headlines) + "\n" if reuter_economic_headlines else "\n"
+*   エヌビディアやソフト大手の決算、ＡＩ相場の次の試金石に＝今週の米株式市場(ロイター市場)2026/02/22
+*   コラム：米最高裁の違法判断、通商権限巡り議会の優位性を再確認(ロイター市場)2026/02/21
+*   焦点：ＡＩが10万人以上の雇用に影響か、米映画業界でリスキリング活況(ロイター市場)2026/02/21
+*   アングロ・アメリカン、昨年の赤字37億ドル　デビアス減損響く(ロイター市場)2026/02/20
+*   食品大手ダノン、25年売上高が予想上回る　26年に自信(ロイター市場)2026/02/20
+*   パイロット、発行済み株式の5.68％・106億円上限に自社株買い(ロイター市場)2026/02/20
+*   英アストン・マーチン、Ｆ１命名権を売却　予想以上の赤字に(ロイター市場)2026/02/20
+*   トランプ氏「恥ずべき判決」　自らの関税政策を違憲とした最高裁判事を激しく非難(ロイター市場)2026/02/21
+*   日経平均は3日ぶり反落、連休前の手じまい売り(ロイター市場)2026/02/20
+*   午前の日経平均は反落、一時800円近く下落　連休控え利益確定売り(ロイター市場)2026/02/20
+*   日経平均は反落で寄り付く、米株安が重し　ハイテク株軟調(ロイター市場)2026/02/20
+*   ＮＹ市場サマリー（20日）株反発、ドル下落　利回り上昇(ロイター市場)2026/02/20
+*   ＮＹ外為市場＝ドル下落、最高裁がトランプ関税に違法判決(ロイター市場)2026/02/20
+*   英総合ＰＭＩ、2月速報53.9に上昇　雇用は大幅減(ロイター市場)2026/02/20
+*   エヌビディアやソフト大手の決算、ＡＩ相場の次の試金石に＝今週の米株式市場(ロイター市場)2026/02/22
+*   ＮＹ市場サマリー（20日）株反発、ドル下落　利回り上昇(ロイター市場)2026/02/20
+*   米コアＰＣＥ価格指数、12月は前月比0.4％上昇　前年比ともに伸び加速(ロイター市場)2026/02/20
+*   焦点：「氷雪経済」の成功例追え、中国がサービス投資にテコ入れ(ロイター市場)2026/02/20
+*   新関税が1対1の置き換えなら影響軽微＝米セントルイス連銀総裁(ロイター市場)2026/02/20
+*   ＮＹ市場サマリー（20日）株反発、ドル下落　利回り上昇(ロイター市場)2026/02/20
 
-    # ●●ロイターオピニオン●●
-    output += "●●ロイターオピニオン●●　日本時間（UTC+9）\n"
-    reuter_opinion_headlines = []
-    for match in re.finditer(r'コラム：(.*?)\s*オピニオン\s*category\s*·\s*(\d{4}年\d{1,2}月\d{1,2}日)', data):
-        headline = "コラム：" + match.group(1)
-        date_str = match.group(2).replace('年', '/').replace('月', '/').replace('日', '')
-        date_obj = datetime.strptime(date_str, '%Y/%m/%d')
-        date_utc = date_obj.replace(tzinfo=pytz.timezone('Asia/Tokyo')).astimezone(pytz.utc)
-        days_diff = (current_date_utc - date_utc).days
-        if days_diff <= 2:
-            article_date = date_obj.strftime('%Y/%m/%d')
-            reuter_opinion_headlines.append(f"{headline}(ロイターオピニオン){article_date}")
-    for match in re.finditer(r'衆院選、(.*?)\s*識者はこうみる', data):
-        headline = "衆院選、" + match.group(1) + "：識者はこうみる"
-        article_date = (datetime.strptime("2026/02/08", '%Y/%m/%d')).strftime('%Y/%m/%d')
-        reuter_opinion_headlines.append(f"{headline}(ロイターオピニオン){article_date}")
+**●●ブルームバーグ●●**
 
-    reuter_opinion_headlines = list(dict.fromkeys(reuter_opinion_headlines))
-    reuter_opinion_headlines = reuter_opinion_headlines[:40]
-    output += "\n".join(reuter_opinion_headlines) + "\n" if reuter_opinion_headlines else "\n"
-    
-    # ●●ロイター市場●●
-    output += "●●ロイター市場●●　日本時間（UTC+9）\n"
-    reuter_market_headlines = []
+*   【焦点】ドイツ景気回復は本物か－23日発表のIfo指数などがヒントに(ブルームバーグ)2026/02/22
+*   トランプ関税の大半は米経済が負担、物価押し上げも－ECBパネッタ氏(ブルームバーグ)2026/02/22
+*   ソニーGによる資産買収、多様な資金調達手段が鍵－十時CEO(ブルームバーグ)2026/02/22
+*   日本は飛躍の準備整う、守りから「新たな自信」へ転換－アポロCEO(ブルームバーグ)2026/02/22
+*   トランプ氏の交渉力に打撃、最高裁の関税違法判断で切り札に陰り(ブルームバーグ)2026/02/22
+*   米最高裁の関税違法判決に各国は慎重な反応－米政権の次の一手を注視(ブルームバーグ)2026/02/22
+*   米経済統計、スタグフレーション的なリスクを意識－市場関係者の見方(ブルームバーグ)2026/02/22
+*   トランプ関税の払い戻しは「究極の企業助成」－ベッセント米財務長官(ブルームバーグ)2026/02/22
+*   ユーロ圏PMIが予想上回る、製造業も業況拡大－ドイツが回復(ブルームバーグ)2026/02/22
+*   米経済の問題は私たちアッパーミドルクラス、ビリオネアではない(ブルームバーグ)2026/02/22
+*   トランプ氏、世界一律関税の15%への引き上げを表明－従来10%(ブルームバーグ)2026/02/22
+*   映画製作者に対するNetflixの影響力、米が調査－ワーナー買収審査で(ブルームバーグ)2026/02/22
+*   高市首相、投資拡大で成長のスイッチ「押しまくる」－施政方針演説(ブルームバーグ)2026/02/22
+*   米新築住宅販売、昨年末にかけて持ち直す－販促やローン金利低下で(ブルームバーグ)2026/02/22
+*   トランプ氏、関税措置に代替手段を用いると表明－最高裁の判断を受け(ブルームバーグ)2026/02/22
+*   ノバルティス、インド子会社の過半数株式売却で合意－約250億円(ブルームバーグ)2026/02/22
+*   次はサイバーセキュリティー株にAI脅威論、Claude新機能に反応(ブルームバーグ)2026/02/22
+*   米消費者マインド指数、予想下回る伸び－株高は景況感押し上げず(ブルームバーグ)2026/02/22
+*   トランプ関税無効判断、金融市場はドル・国債売りで反応－株は上昇(ブルームバーグ)2026/02/22
+*   OpenAI、30年に売上高2800億ドル突破と予想－関係者(ブルームバーグ)2026/02/22
+*   【欧州市況】株が高値更新、米最高裁が関税無効の判断－高級品急騰(ブルームバーグ)2026/02/22
+*   原油、6カ月ぶり高値－米イランで緊張高まり供給に不安(ブルームバーグ)2026/02/22
+*   日本の対米投資案件、ドルの調達需要高める可能性－バークレイズ(ブルームバーグ)2026/02/22
+*   日米の5兆円ガス発電事業、オハイオ州では寝耳に水－詳細見えず(ブルームバーグ)2026/02/22
+*   日本の猫ブーム、社会の変化映し出す－経済効果3兆円(ブルームバーグ)2026/02/22
+*   米GDPは10－12月期に1.4%増、伸びは予想下回る－個人消費2.4%増(ブルームバーグ)2026/02/22
+*   ダリオ氏のファミリーオフィス、米国株に5億ドル超投資－昨年末時点(ブルームバーグ)2026/02/22
+*   AIを使いこなす能力、今やVCの職務要件－面接プロセス見直しも(ブルームバーグ)2026/02/21
+*   トランプ関税に最高裁が無効判断、市場への影響は－ウォール街の見方(ブルームバーグ)2026/02/22
+*   【米国市況】トランプ関税無効で株反発、国債とドル下落－原油高値圏(ブルームバーグ)2026/02/20
+*   ブルー・アウル苦境、プライベートクレジット投資の「強み」に疑問符(ブルームバーグ)2026/02/20
+*   家賃値上がりが全国に広がる兆し、民営家賃は約28年ぶりの高い伸び(ブルームバーグ)2026/02/20
+*   米テック株アンダーウエート戦略、2026年は好調(ブルームバーグ)2026/02/20
+*   米貿易赤字は12月に拡大、2025年通年では統計史上有数の大きさ(ブルームバーグ)2026/02/20
+*   トランプ氏の対イラン攻撃示唆、核合意迫る戦略が裏目に出る恐れ(ブルームバーグ)2026/02/20
+*   米最高裁、トランプ関税の効力認めず－大統領権限を逸脱と判断(ブルームバーグ)2026/02/20
+*   トランプ関税1700億ドル還付の行方なお混沌、長期の法廷闘争に発展も(ブルームバーグ)2026/02/20
+*   米ストラテジー、優先株活用でビットコイン約1.7億ドル分を追加購入(ブルームバーグ)2026/02/18
+*   英シュローダー、長期英国債にシフト－利下げで上昇見込む(ブルームバーグ)2026/02/19
+*   ブルー・アウル、プライベートクレジット融資債権約14億ドル売却(ブルームバーグ)2026/02/19
 
-    for match in re.finditer(r'"(.*?)"\s*"category"\s*"\s*·\s*(.*?)\s*UTC\s*·\s*(\d+)\s*時間前更新"', data):
-        headline = match.group(1)
-        hours_ago = int(match.group(3))
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        reuter_market_headlines.append(f"{headline}(ロイター市場){article_date}")
-    
-    for match in re.finditer(r'"(.*?)"\s*"category"\s*"(.*?)\s*(\d{4}年\d{1,2}月\d{1,2}日)"', data):
-        headline = match.group(1)
-        date_str = match.group(3).replace('年', '/').replace('月', '/').replace('日', '')
-        date_obj = datetime.strptime(date_str, '%Y/%m/%d')
-        date_utc = date_obj.replace(tzinfo=pytz.timezone('Asia/Tokyo')).astimezone(pytz.utc)
-        days_diff = (current_date_utc - date_utc).days
-        if days_diff <= 2:
-            article_date = date_obj.strftime('%Y/%m/%d')
-            reuter_market_headlines.append(f"{headline}(ロイター市場){article_date}")
-    reuter_market_headlines = list(dict.fromkeys(reuter_market_headlines))
-    reuter_market_headlines = reuter_market_headlines[:40]
-    output += "\n".join(reuter_market_headlines) + "\n" if reuter_market_headlines else "\n"
+**●●BBC●●**
 
-    # ●●ブルームバーグ●●
-    output += "●●ブルームバーグ●●　日本時間（UTC+9）\n"
-    bloomberg_headlines = []
-    for match in re.finditer(r'【(.*?)】(.*?)(\d+)\s*日前', data):
-        prefix = match.group(1)
-        headline = f"【{prefix}】{match.group(2)}"
-        days_ago = int(match.group(3))
-        article_date = (current_date_jst - timedelta(days=days_ago)).strftime('%Y/%m/%d')
-        if days_ago <= 2:
-             bloomberg_headlines.append(f"{headline}(ブルームバーグ){article_date}")
-    for match in re.finditer(r'(.*?)(昨日)', data):
-        headline = match.group(1)
-        article_date = (current_date_jst - timedelta(days=1)).strftime('%Y/%m/%d')
-        bloomberg_headlines.append(f"{headline}(ブルームバーグ){article_date}")
-    for match in re.finditer(r'(.*?)(\d+)\s*時間前', data):
-        headline = match.group(1)
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        bloomberg_headlines.append(f"{headline}(ブルームバーグ){article_date}")
+*   Pakistan launches deadly strikes on Afghanistan(BBC)2026/02/22
+*   Trump says he will increase his new global tariffs to 15%(BBC)2026/02/22
+*   Iran students stage first large anti-government protests since deadly crackdown(BBC)2026/02/22
+*   From Venezuela to immigration crackdown, Project 2025 provided Trump's roadmap(BBC)2026/02/22
+*   More than 1,500 Venezuelan political prisoners apply for amnesty(BBC)2026/02/22
+*   Canada wins gold in men's curling final(BBC)2026/02/22
+*   Once mocked for being tacky, this Korean music genre is making a comeback(BBC)2026/02/22
+*   Killing of nationalist student leaves French far left in deep trouble as elections loom(BBC)2026/02/21
+*   We thought UK's Gen Z had started going to church in droves. But the truth is more complicated(BBC)2026/02/22
+*   Government 'inflamed tension' over Maccabi fan ban, say UK MPs(BBC)2026/02/22
+*   How football is helping girls fight against forced marriage(BBC)2026/02/22
+*   Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal(BBC)2026/02/21
+*   Viral monkey Punch rejected by mother given stuffed orangutan(BBC)2026/02/21
 
-    bloomberg_headlines = list(dict.fromkeys(bloomberg_headlines))
-    bloomberg_headlines = bloomberg_headlines[:40]
-    output += "\n".join(bloomberg_headlines) + "\n" if bloomberg_headlines else "\n"
+**●●国内etc●●**
 
-    # ●●BBC●●
-    output += "●●BBC●●　UTC\n"
-    bbc_headlines = []
-    for match in re.finditer(r'(.*?)"\s*(\d+)\s*hrs ago', data):
-        headline = match.group(1)
-        hours_ago = int(match.group(2))
-        article_date = current_date_utc.strftime('%Y/%m/%d')
-        bbc_headlines.append(f"{headline}(BBC){article_date}")
+*   衆議院選挙、中国系400アカウントが「反高市工作」 AIで巧妙に(日経1)2026/02/22
+*   カプセルトイ店社長を書類送検 盗撮動画２０００本、自社店舗でも―警視(時事1)2026/02/22
+*   ついに100兆円突破の日銀ETF 個人の株式投資のヒントも(日経2)2026/02/22
+*   スピードスケートの未来に危機感 清水宏保さん、競技普及に思い〔ミラノ(時事2)2026/02/22
+*   エヌビディア決算がAI相場を左右 今週の市場・予定(日経3)2026/02/22
+*   スピードスケートの未来に危機感 清水宏保さん、競技普及に思い〔ミラノ(時事3)2026/02/22
+*   ミラノで輝いた日本勢 最多メダルは20年前のトリノ惨敗が出発点(日経4)2026/02/22
+*   トランプ離れが加速 関税訴訟・解説(時事4)2026/02/22
+*   トランプ氏、新関税の税率「15%に」 発動前に引き上げ表明(日経5)2026/02/22
+*   野党、消費税「国民会議」に反発 参加メンバー、与党選別と疑問視(時事5)2026/02/22
+*   トランプ経済、1年目の通信簿 米経済学者らに聞く［映像あり］(日経6)2026/02/22
+*   貿易合意順守、全ての国に呼び掛け 最高裁判決で―米財務長官(時事6)2026/02/22
+*   トランプ関税の違憲判決「徴税分の返還は当然」 自民党の小野寺氏(日経7)2026/02/22
+*   世界一律関税１５％に引き上げ トランプ氏、「即時」主張(時事7)2026/02/22
+*   野村HD･伊藤忠が事業承継ファンド 中小の社長候補の株式取得を支援(日経8)2026/02/22
+*   政務官「毅然と対応」 「竹島の日」で記念式典―島根県(時事8)2026/02/22
+*   「組織のイヌ」からネコになれ AI時代こそ脱･指示待ち(日経9)2026/02/22
+*   日本は８位 ２勝７敗で敗退―カーリング女子〔ミラノ・コルティナ五輪〕(時事9)2026/02/22
+*   定年廃止のYKK、「青銀共創」のすすめ 世代間協業で組織に活力(日経10)2026/02/22
+*   韓国、「竹島の日」に抗議 例年並み対応に安堵も(時事10)2026/02/22
+*   高市内閣の支持率上昇し61% 毎日(yahoo1)2026/02/22
+*   K字型経済で格差 賃金上昇実現は(yahoo経済1)2026/02/22
+*   パキスタンがアフガン東部で爆撃(yahoo2)2026/02/22
+*   ワーキングケアラー増 経済損失も(yahoo経済1)2026/02/22
+*   「日本型チップ」じわり浸透?(yahoo3)2026/02/22
+*   万博の来場者増 背景に裏方の奔走(yahoo経済4)2026/02/22
+*   遊びで石を打ちつけ火花 枯草火災(yahoo4)2026/02/22
+*   デイサービス旅行 介助者付き人気(yahoo経済5)2026/02/22
+*   ラーメンが300円 72歳店主の思い(yahoo5)2026/02/22
+*   パキスタンがアフガン東部で爆撃(yahoo国際1)2026/02/22
+*   なにわ藤原マラソン完走 翌日舞台(yahoo芸能1)2026/02/22
+*   新たな関税15%に トランプ氏表明(yahoo国際2)2026/02/22
+*   りくりゅう再現 キンタローに反響(yahoo芸能2)2026/02/22
+*   米の全世界関税15%表明 時期不明(yahoo国際3)2026/02/22
+*   犬猫10匹と暮らす 小野真弓の今(yahoo芸能3)2026/02/22
+*   「トランプ関税」なお世界に影(yahoo国際4)2026/02/22
+*   26年芸能界 出産や誕生報告相次ぐ(yahoo芸能4)2026/02/22
+*   ウ国民疲弊 広がる領土譲歩容認論(yahoo国際5)2026/02/22
+*   トリンドル玲奈 第1子出産を発表(yahoo芸能5)2026/02/22
+*   【大阪マラソン】車椅子で救護室へ運ばれた吉田響「会話ができていない(yahooスポーツ1)2026/02/22
+*   フィギュア実演解説、「混ぜるな危険」コンビが『サンジャポ』で大暴れ(yahooスポーツ2)2026/02/22
+*   中井亜美の人気が爆上がり…「完全に日本代表のアイドル」 エキシビ衣(yahooスポーツ3)2026/02/22
+*   「アミーゴ最強」中井亜美 エキシビでも“伝説ポーズ”！「赤も似合う(yahooスポーツ4)2026/02/22
+*   日本ハム・新庄監督が苦言「あれがアウトにできないようじゃ、野球やっ(yahooスポーツ5)2026/02/22
 
-    bbc_headlines = list(dict.fromkeys(bbc_headlines))
-    bbc_headlines = bbc_headlines[:40]
-    output += "\n".join(bbc_headlines) + "\n" if bbc_headlines else "\n"
+**●●NYタイムズ●●**
 
-    # ●●国内etc●●
-    output += "●●国内etc●●　日本時間（UTC+9）\n"
-    domestic_headlines = []
-    for match in re.finditer(r',日経(\d+),(.*?),時事', data):
-        headline = match.group(2)
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        domestic_headlines.append(f"{headline}(日経){article_date}")
-    for match in re.finditer(r'時事(\d+),(.*?)―警視', data):
-        headline = match.group(2) + "―警視"
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        domestic_headlines.append(f"{headline}(時事){article_date}")
-
-    domestic_headlines = list(dict.fromkeys(domestic_headlines))
-    domestic_headlines = domestic_headlines[:40]
-    output += "\n".join(domestic_headlines) + "\n" if domestic_headlines else "\n"
-
-    # ●●NYタイムズ●●
-    output += "●●NYタイムズ●●　UTC\n"
-    ny_times_headlines = []
-    for match in re.finditer(r'"(.*?)"\s*(\d+)\s*MIN READ"', data):
-        headline = match.group(1)
-        article_date = current_date_utc.strftime('%Y/%m/%d')
-        ny_times_headlines.append(f"{headline}(NYタイムズ){article_date}")
-
-    ny_times_headlines = list(dict.fromkeys(ny_times_headlines))
-    ny_times_headlines = ny_times_headlines[:40]
-    output += "\n".join(ny_times_headlines) + "\n" if ny_times_headlines else "\n"
-
-    # ●●WSJ●●
-    output += "●●WSJ●●　日本時間（UTC+9）\n"
-    wsj_headlines = []
-    for match in re.finditer(r'"(.*?)"\s*読了\s*(\d+)\s*分"', data):
-        headline = match.group(1)
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        wsj_headlines.append(f"{headline}(WSJ){article_date}")
-
-    wsj_headlines = list(dict.fromkeys(wsj_headlines))
-    wsj_headlines = wsj_headlines[:40]
-    output += "\n".join(wsj_headlines) + "\n" if wsj_headlines else "\n"
-
-    # ●●ヤフー●●
-    output += "●●ヤフー●●　日本時間（UTC+9）\n"
-    yahoo_headlines = []
-    for category in ["国内", "国際", "経済", "エンタメ", "スポーツ", "IT", "科学", "地域"]:
-        for match in re.finditer(f'"{category}"\s*"(.*?)"\s*もっと見る', data):
-            headlines = match.group(1).split('"')
-            for headline in headlines:
-                headline = headline.strip()
-                if headline:
-                    article_date = current_date_jst.strftime('%Y/%m/%d')
-                    yahoo_headlines.append(f"{headline}(yahoo){article_date}")
-
-    yahoo_headlines = list(dict.fromkeys(yahoo_headlines))
-    yahoo_headlines = yahoo_headlines[:40]
-    output += "\n".join(yahoo_headlines) + "\n" if yahoo_headlines else "\n"
-
-    # ●●AI●●
-    output += "●●AI●●　日本時間（UTC+9）\n"
-    ai_headlines = []
-    for match in re.finditer(r'"(.*?)"\s*(\d+)\s*時間前', data):
-        headline = match.group(1)
-        article_date = current_date_jst.strftime('%Y/%m/%d')
-        ai_headlines.append(f"{headline}(AI){article_date}")
-    for match in re.finditer(r'"(.*?)"\s*(\d+)\s*日前', data):
-        headline = match.group(1)
-        days_ago = int(match.group(2))
-        if days_ago <= 2:
-            article_date = (current_date_jst - timedelta(days=days_ago)).strftime('%Y/%m/%d')
-            ai_headlines.append(f"{headline}(AI){article_date}")
-    for match in re.finditer(r'"(.*?)"\s*昨日', data):
-        headline = match.group(1)
-        article_date = (current_date_jst - timedelta(days=1)).strftime('%Y/%m/%d')
-        ai_headlines.append(f"{headline}(AI){article_date}")
-
-    ai_headlines = list(dict.fromkeys(ai_headlines))
-    ai_headlines = ai_headlines[:40]
-    output += "\n".join(ai_headlines) + "\n" if ai_headlines else "\n"
-
-    return output
-
-# テストデータの読み込みと実行
-test_data = """
-﻿●●ロイタービジネス●●
-
-"主要コンテンツに飛ぶ"
-"ワールド"
-"マーケット"
-"経済"
-"ビジネス"
-"オピニオン"
-"さらに見る"
-"ビジネス"
-"テクノロジー"
-"AIの進化と社会"
-"自動車産業の未来"
-"SDGsとビジネス"
-"金融・Ｍ＆Ａ"
-"エヌビディアやソフト大手の決算、ＡＩ相場の次の試金石に＝今週の米株式市場"
-"マーケット"
-"category"
-" · 2026年2月22日 · 午前 1:12 UTC · 9時間前"
-"２３日から始まる週の米株式市場は、人工知能（ＡＩ）関連の懸念で揺れる中、半導体大手エヌビディアの決算が最大の焦点となる。米連邦最高裁がトランプ大統領の広範な関税措置を違法と判断したことも、市場の不透明要因としてくすぶる。"
-"category"
-"トランプ関税違憲判決、米エネ企業のコスト軽減　取引は当面不変か"
-"2026年2月21日"
-"category"
-"新関税が1対1の置き換えなら影響軽微＝米セントルイス連銀総裁"
-"2026年2月20日"
-"category"
-"ＮＹ市場サマリー（20日）株反発、ドル下落　利回り上昇"
-"2026年2月20日"
-"category"
-"米国株式市場＝反発、大型株けん引　トランプ関税違法判決に安ど感"
-"2026年2月20日"
-"category"
-"ＮＹ外為市場＝ドル下落、最高裁がトランプ関税に違法判決"
-"2026年2月20日"
-"category"
-"米財務長官、「低採用・低解雇」脱却を楽観視　労働需要回復に期待"
-"2026年2月20日"
-"category"
-"米ＧＤＰ「かなり堅調」、インフレに懸念＝アトランタ連銀総裁"
-"2026年2月20日"
-"category"
-"ＦＲＢ政策「適切な位置」、インフレ鈍化を予想＝ダラス連銀総裁"
-"2026年2月20日"
-"category"
-"米新築住宅販売、12月は1.7％減　建設中在庫は約4年半ぶり低水準"
-"2026年2月20日"
-"category"
-"米総合ＰＭＩ、2月は52.3に低下　昨年4月以来の低水準"
-"2026年2月20日"
-"category"
-"米ＧＤＰ1.4％増に急減速、25年第4四半期速報値　政府閉鎖が影響"
-"2026年2月20日"
-"category"
-"米コアＰＣＥ価格指数、12月は前月比0.4％上昇　前年比ともに伸び加速"
-"2026年2月20日"
-"category"
-"トランプ政権、石炭火力発電所の有害大気汚染物質規制を緩和へ"
-"2026年2月20日"
-"category"
-"トランプ緊急関税、最高裁が違法判決なら1750億ドル超返還へ"
-"2026年2月20日"
-"category"
-"金価格が上昇、米イラン緊張と欧州債券利回り低下で"
-"2026年2月20日"
-"category"
-"トランプ氏関係者、ロシア企業とアラスカガス開発で合意＝ＮＹＴ"
-"2026年2月20日"
-"マーケット"
-"category"
-"アングロ・アメリカン、昨年の赤字37億ドル　デビアス減損響く"
-"2026年2月20日"
-"category"
-"ユーロ圏総合ＰＭＩ、2月速報51.9に上昇　製造業が拡大に転じる"
-"2026年2月20日"
-"category"
-"仏総合ＰＭＩ、2月速報49.9　需要が低迷"
-"2026年2月20日"
-"記事をもっと見る"
-"スポンサードコンテンツ"
-"Site Index"
-"最新"
-"ホーム"
-"アーカイブ"
-"サイトマップ"
-"ブラウズ"
-"ワールド"
-"マーケット"
-"経済"
-"ビジネス"
-"オピニオン"
-"ライフ"
-"スポーツ"
-"メディア"
-"ビデオ"
-"写真"
-"ロイターについて"
-"ロイターについて"
-", opens new tab"
-"採用情報"
-", opens new tab"
-"ロイター・ニュース・エージェンシー"
-", opens new tab"
-"ブランド・ガイドライン"
-", opens new tab"
-"リーダーシップチーム"
-", opens new tab"
-"最新情報を入手"
-"ニュースメール"
-", opens new tab"
-"信頼されるメディアとして"
-"ロイターは、トムソン・ロイターのニュース・メディア部門で、毎日世界各地の数十億人にリーチする世界最大級の国際マルチメディア通信社です。デスクトップ端末、世界の報道メディア、業界イベント、そしてダイレクトにビジネス、金融、国内・国際ニュースをプロフェッショナルにお届けします。"
-"ロイターをフォロー"
-"広告掲載について"
-", opens new tab"
-"広告掲載ポリシー"
-"クッキー"
-", opens new tab"
-"ロイター利用規約（英語）"
-"個人情報保護方針"
-", opens new tab"
-"著作権"
-", opens new tab"
-"ウェブアクセシビリティ（英語）"
-", opens new tab"
-"お問い合わせ先"
-"フィードバック"
-", opens new tab"
-"掲載の情報は15分以上の遅れで表示しています。詳しくはこちらをご確認ください。"
-"© 2026 Reuters. All rights reserved"
-"Notice of Your Privacy Choices"
-"We, together with our service providers, advertising partners, and IAB partners, use cookies and other tracking technologies to:"
-"provide and secure our services"
-"remember your preferences and improve your online experience"
-"measure and analyze our traffic"
-"support personalized ads and content, ad and content measurement, audience research, and services development."
-"By continuing to use our services, you acknowledge this use of cookies and other tracking technologies, which may include storing and accessing information on your device and processing your browsing data."
-"You can opt out of any Sharing or Sale of your personal information, as well as any Profiling or Targeted Advertising, and manage the above activities for this website at any time by clicking the Manage Cookies & Your Privacy Choices link here or the equivalent link in our footer. For more information, please see our "
-"Close"
-"Cookie Statement  Privacy statement"
-"Feedback"
-
-●●ロイター経済●●
-
-"主要コンテンツに飛ぶ"
-"ワールド"
-"マーケット"
-"経済"
-"ビジネス"
-"オピニオン"
-"さらに見る"
-"経済"
-"米ＦＲＢ特集"
-"日銀特集"
-"政局の行方"
-"企業・産業"
-"マクロスコープ"
-"エヌビディアやソフト大手の決算、ＡＩ相場の次の試金石に＝今週の米株式市場"
-"マーケット"
-"category"
-" · 午前 1:16 UTC · 9時間前更新"
-"　２３日から始まる週の米株式市場は、人工知能（ＡＩ）関連の懸念で揺れる中、半導体大手エヌビディアの決算が最大の焦点となる。米連邦最高裁がトランプ大統領の広範な関税措置を違法と判断したことも、市場の不透明要因としてくすぶる。写真はニューヨーク証券取引所で働くトレーダー。２０２５年１０月撮影（２０２５年　ロイター/Jeenah Moon）"
-"２３日から始まる週の米株式市場は、人工知能（ＡＩ）関連の懸念で揺れる中、半導体大手エヌビディアの決算が最大の焦点となる。米連邦最高裁がトランプ大統領の広範な関税措置を違法と判断したことも、市場の不透明要因としてくすぶる。"
-"焦点：「氷雪経済」の成功例追え、中国がサービス投資にテコ入れ"
-"11時間前"
-"ワールド"
-"category"
-"焦点：米中間選挙へ、民主党がキリスト教保守層にもアピール　移民取り締まりへの不満背景"
-"11時間前"
-"ワールド"
-"category"
-"トランプ米大統領、代替関税率を10％から15％に引き上げと投稿"
-"8時間前"
-"オピニオン"
-"category"
-"コラム：世界最大の温室効果ガス排出国の中国、クリーン発電が化石燃料を逆転"
-"2026年2月21日"
-"オピニオン"
-"category"
-"コラム：米最高裁の違法判断、通商権限巡り議会の優位性を再確認"
-"2026年2月21日"
-"ワールド"
-"category"
-"米ＵＳＴＲ、新たな３０１条調査開始へ　主要国の大半が対象"
-"2026年2月21日"
-"外国為替フォーラム"
-"Breakingviews"
-"category"
-"コラム：米最高裁の違法判断、通商権限巡り議会の優位性を再確認"
-"2026年2月21日"
-"外国為替フォーラム"
-"category"
-"コラム：上値余地は限定的か、通貨先物の取組状況から円高を読む＝佐々木融氏"
-"2026年2月17日"
-"外国為替フォーラム"
-"category"
-"コラム：衆院選後に進んだ円高、持続性を探る4つのポイント＝植野大作氏"
-"2026年2月16日"
-"外国為替フォーラム"
-"category"
-"コラム：高市発言受け「ポジティブ修正」、衆院選後のドル／円相場を読む＝尾河眞樹氏"
-"2026年2月16日"
-"外国為替フォーラム"
-"category"
-"コラム：圧勝の高市自民党、日本トリプル高となるための条件＝高島修氏"
-"2026年2月13日"
-"外国為替フォーラム"
-"category"
-"コラム：高市自民党大勝、市場の反応をどう読むか＝熊野英生氏"
-"2026年2月12日"
-"関連記事"
-"ワールド"
-"category"
-"アングル：米相互関税に違憲判決、世界経済の先行き依然不透明"
-"2026年2月21日"
-"category"
-"最高裁の関税判決、トランプ大統領の影響力を低下させた＝米財務長官"
-"2026年2月20日"
-"category"
-"新関税が1対1の置き換えなら影響軽微＝米セントルイス連銀総裁"
-"2026年2月20日"
-"ワールド"
-"category"
-"米議会、イラン攻撃権限巡り来週採決も　トランプ氏は攻撃検討か"
-"2026年2月20日"
-"category"
-"今年の関税収入、違法判断受けても見通し変わらず　代替手段利用＝米財務長官"
-"2026年2月20日"
-"category"
-"米国株式市場＝反発、大型株けん引　トランプ関税違法判決に安ど感"
-"2026年2月20日"
-"category"
-"ＮＹ外為市場＝ドル下落、最高裁がトランプ関税に違法判決"
-"2026年2月20日"
-"category"
-"米財務長官、「低採用・低解雇」脱却を楽観視　労働需要回復に期待"
-"2026年2月20日"
-"category"
-"米ＧＤＰ「かなり堅調」、インフレに懸念＝アトランタ連銀総裁"
-"2026年2月20日"
-"ワールド"
-"category"
-"トランプ関税違法判決、ＥＵは関税削減主張　英は優遇継続に期待"
-"2026年2月20日"
-"category"
-"トランプ氏、ＧＤＰ公表前に低迷を示唆　政府閉鎖で民主党を非難"
-"2026年2月20日"
-"category"
-"ＦＲＢ政策「適切な位置」、インフレ鈍化を予想＝ダラス連銀総裁"
-"2026年2月20日"
-"記事をもっと見る"
-"スポンサードコンテンツ"
-"Site Index"
-"最新"
-"ホーム"
-"アーカイブ"
-"サイトマップ"
-"ブラウズ"
-"ワールド"
-"マーケット"
-"経済"
-"ビジネス"
-"オピニオン"
-"ライフ"
-"スポーツ"
-"メディア"
-"ビデオ"
-"写真"
-"ロイターについて"
-"ロイターについて"
-", opens new tab"
-"採用情報"
-", opens new tab"
-"ロイター・ニュース・エージェンシー"
-", opens new tab"
-"ブランド・ガイドライン"
-", opens new tab"
-"リーダーシップチーム"
-", opens new tab"
-"最新情報を入手"
-"ニュースメール"
-", opens new tab"
-"信頼されるメディアとして"
-"ロイターは、トムソン・ロイターのニュース・メディア部門で、毎日世界各地の数十億人にリーチする世界最大級の国際マルチメディア通信社です。デスクトップ端末、世界の報道メディア、業界イベント、そしてダイレクトにビジネス、金融、国内・国際ニュースをプロフェッショナルにお届けします。"
-"ロイターをフォロー"
-"広告掲載について"
-", opens new tab"
-"広告掲載ポリシー"
-"クッキー"
-", opens new tab"
-"ロイター利用規約（英語）"
-"個人情報保護方針"
-", opens new tab"
-"著作権"
-", opens new tab"
-"ウェブアクセシビリティ（英語）"
-", opens new tab"
-"お問い合わせ先"
-"フィードバック"
-", opens new tab"
-"掲載の情報は15分以上の遅れで表示しています。詳しくはこちらをご確認ください。"
-"© 2026 Reuters. All rights reserved"
-"Notice of Your Privacy Choices"
-"We, together with our service providers, advertising partners, and IAB partners, use cookies and other tracking technologies to:"
-"provide and secure our services"
-"remember your preferences and improve your online experience"
-"measure and analyze our traffic"
-"support personalized ads and content, ad and content measurement, audience research, and services development."
-"By continuing to use our services, you acknowledge this use of cookies and other tracking technologies, which may include storing and accessing information on your device and processing your browsing data."
-"You can opt out of any Sharing or Sale of your personal information, as well as any Profiling or Targeted Advertising, and manage the above activities for this website at any time by clicking the Manage Cookies & Your Privacy Choices link here or the equivalent link in our footer. For more information, please see our "
-"Close"
-"Cookie Statement  Privacy statement"
-"Feedback"
-
-●●ロイターオピニオン●●
-
-"主要コンテンツに飛ぶ"
-"ワールド"
-"マーケット"
-"経済"
-"ビジネス"
-"オピニオン"
-"さらに見る"
-"オピニオン"
-"外国為替フォーラム"
-"Breakingviews"
-"コラム：世界最大の温室効果ガス排出国の中国、クリーン発電が化石燃料を逆転"
-"オピニオン"
-"category"
-" · 2026年2月21日"
-"世界最大の温室効果ガス排出国である中国の２０２５年の再生可能エネルギーなどのクリーンエネルギーによる発電能力は、初めて化石燃料発電を逆転した。これは中国の極めて重要なエネルギー源の転換となる。 グローバル・エネルギー・モニター（ＧＥＭ）のデータによると、２５年時点で中国の稼働中のクリーンエネルギー発電能力は１４９４ギガワット（ＧＷ）に達し、石炭や天然ガスなどの化石燃料による発電能力の１４２０ＧＷを上回った。"
-"オピニオン"
-"category"
-"コラム：米アルミ産業、ビッグテックとの電力争奪戦で劣勢　工場閉鎖続く"
-"2026年2月20日"
-"マーケット"
-"category"
-"コラム：欧州再軍備のジレンマ、防衛大手の独占が招く高コストと軍備不足"
-"2026年2月17日"
-"Breakingviews"
-"category"
-"コラム：アクティビストとの和解、長期的には代償大きく"
-"2026年2月18日"
-"オピニオン"
-"category"
-"コラム：ドル安より米国債を警戒せよ、市場が過小評価する財政リスク"
-"2026年2月17日"
-"外国為替フォーラム"
-"category"
-"コラム：上値余地は限定的か、通貨先物の取組状況から円高を読む＝佐々木融氏"
-"2026年2月17日"
-"オピニオン"
-"category"
-"コラム：ロシア、石油減産ついに不可避か　西側制裁が奏功へ"
-"2026年2月17日"
+*   Major Winter Storm Takes Aim at the East Coast(NYタイムズ)2026/02/22
+*   On Final Day of Olympics, Women Compete in Freeski Halfpipe Final(NYタイムズ)2026/02/22
+*   The Ex-Taxi Driver at the Center of Russia’s Shadow War(NYタイムズ)2026/02/22
+*   The A.I. Evangelists on a Mission to Shake Up Japan(NYタイムズ)2026/02/22
+*   They Killed Their Abusers. Should They Spend Their Lives in Prison?(NYタイムズ)2026/02/22
+*   Dad, You’re (Not) Embarrassing Me at This Concert(NYタイムズ)2026/02/22
+*   From Epstein’s Chief Accuser, a Memoir Both Sad and Devastating(NYタイムズ)2026/02/22
+*   Two Stunning Picture Books That Treat Tantrums With Tenderness(NYタイムズ)2026/02/22
+*   Ukraine Has Passed a Point of No Return(NYタイムズ)2026/02/22
+*   Is Waking Up to Pee Normal?(NYタイムズ)2026/02/22
+*   6 Things E.R. Doctors Wish You’d Avoid(NYタイムズ)2026/02/22
+*   I Relocated for My Wife, and Now I’m Miserable. What Should I Do?(NYタイムズ)2026/02/22
+*   7 Ways to Improve Your Heart Health(NYタイムズ)2026/02/22
+*   U.S. Skier Responds After Trump Called Him ‘a Real Loser’(NYタイムズ)2026/02/22
+*   Guillermo del Toro on the Oscar-Nominated ‘Frankenstein’(NYタイムズ)2026/02/22
+*   Jay Shetty’s Four Big Questions About Life(NYタイムズ)2026/02/22
+*   Do You Back Into a Parking Spot or Back Out?(NYタイムズ)2026/02/22
+*   ‘A Cocked Pistol Aimed at Iran’(NYタイムズ)2026/02/22
+*   The Best Meatloaf With Over 2,500 Ratings(NYタイムズ)2026/02/22
+*   Five-Star Creamy Chicken Stew(NYタイムズ)2026/02/22
+*   The Trick That Finally Ended My Decades of Insomnia(NYタイムズ)2026/02/22
+*   I Test Bras for a Living. This Is the Only One I Actually Wear(NYタイムズ)2026/02/22
+*   Despite a Supreme Court Rebuke (and Data), Trump Is Still Betting on Tariffs(NYタイムズ)2026/02/22
+*   Trump Looks Ahead to Summit With China’s Xi, but Tariffs and Taiwan Loom(NYタイムズ)2026/02/22
+*   They Did Deals With Trump to Get Lower Tariffs. Now They Are Stuck(NYタイムズ)2026/02/22
+*   Shutdown at D.H.S. Extends to Cyber Agency, Adding to Setbacks(NYタイムズ)2026/02/22
+*   Inside Iran’s Preparations for War and Plans for Survival(NYタイムズ)2026/02/22
+*   How the Times Weather Team Tracks Big Storms: More Data, Less Hype(NYタイムズ)2026/02/22
+*   Some Readers Thought Those Little Olympians Were A.I. Here’s How We Made Them(NYタイムズ)2026/02/22
+*   After Battling on Ice and Snow, Athletes Face a New Test: Post-Olympics Blues(NYタイムズ)2026/02/22
+*   New York Nurses’ Strike Ends After 6 Weeks as Last Holdouts Approve Deal(NYタイムズ)2026/02/22
+*   The Queen Stuck by Andrew. King Charles Is Pulling Away(NYタイムズ)2026/02/22
+*   Problem With Artemis Rocket Will Delay NASA’s Moon Mission(NYタイムズ)2026/02/22
+*   Tom Noonan, Actor Renowned for Onscreen Menace, Dies at 74(NYタイムズ)2026/02/22
+*   Should I Tell My Housekeeper, ‘I’m Here for You’?(NYタイムズ)2026/02/22
+*   At Least 15 Have Died on Tahoe-Area Slopes This Year(NYタイムズ)2
