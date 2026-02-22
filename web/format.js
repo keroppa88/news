@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputPath = path.join(__dirname, '../summary.txt');
+const inputPath = path.join(__dirname, '../summary2.txt');
 const outputPath = path.join(__dirname, '../index.html');
 
 try {
