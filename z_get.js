@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const SOURCES = [
-  { fileName: 'news_r_buisiness.csv', title: '●●ロイタービジネス●●' },
+  { fileName: 'news_r.csv', title: '●●ロイター●●' },
   { fileName: 'news_r_keizai.csv', title: '●●ロイター経済●●' },
   { fileName: 'news_r_opinion.csv', title: '●●ロイターオピニオン●●' },
   { fileName: 'news_r_markets.csv', title: '●●ロイター市場●●' },
