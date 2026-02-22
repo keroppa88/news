@@ -1,0 +1,2 @@
+janome>=0.5.0
+wordcloud>=1.9.3
