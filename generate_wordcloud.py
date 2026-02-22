@@ -3,6 +3,7 @@ from collections import Counter
 from datetime import datetime
 from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
+from PIL import Image, ImageDraw, ImageFont
 import os
  
 # Read summary1.txt
@@ -137,12 +138,26 @@ wc.generate_from_frequencies(word_freq)
  
 # Save as JPEG at top level
 top_level_path = "wordcloud.jpg"
-wc.to_file(top_level_path)
+img = wc.to_image()
+draw = ImageDraw.Draw(img)
+date_text = datetime.now().strftime("%Y/%m/%d")
+try:
+    date_font = ImageFont.truetype(font_path, 16)
+except (OSError, IOError):
+    date_font = ImageFont.load_default()
+bbox = draw.textbbox((0, 0), date_text, font=date_font)
+text_w = bbox[2] - bbox[0]
+text_h = bbox[3] - bbox[1]
+margin = 8
+x = img.width - text_w - margin
+y = img.height - text_h - margin
+draw.text((x, y), date_text, fill="gray", font=date_font)
+img.save(top_level_path, "JPEG")
 print(f"Word cloud saved to {top_level_path}")
 
 # Save as JPEG in warehouse folder with date-based filename
 os.makedirs("warehouse", exist_ok=True)
 date_filename = datetime.now().strftime("%Y%m%d") + ".jpg"
 warehouse_path = os.path.join("warehouse", date_filename)
-wc.to_file(warehouse_path)
+img.save(warehouse_path, "JPEG")
 print(f"Word cloud saved to {warehouse_path}")
