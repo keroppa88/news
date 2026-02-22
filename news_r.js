@@ -25,7 +25,7 @@ const fs = require('fs');
     // CSV保存（行ごと）●ファイルネーム
     const d = new Date();
     const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
-    const filename = `news_r_opinion.csv`;
+    const filename = `news_r.csv`;
 
     // 改行ごとに1行として書き込む
     const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
@@ -37,10 +37,11 @@ const fs = require('fs');
     fs.writeFileSync(filename, csvContent, 'utf8');
     console.log('saved:', filename);
   } catch (err) {
-    console.error(`ERROR in news_r_opinion: ${err.message}`);
+    console.error(`ERROR in news_r: ${err.message}`);
     process.exit(1);
   } finally {
     if (browser) await browser.close();
   }
 })();
+
 
