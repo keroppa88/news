@@ -7,7 +7,7 @@ const fs = require('fs');
 (async () => {
   let browser;
   try {
-    const url = 'https://jp.wsj.com/';
+    const url = 'https://jp.wsj.com/news/whats-news';
 
     browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
