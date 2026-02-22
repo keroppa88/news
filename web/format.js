@@ -29,11 +29,30 @@ try {
                 return `<span style="background-color: ${bgColor}; font-size: 1.2em; padding: 0 2px;">${match}</span>`;
             });
 
-            htmlBody += `<div style="margin-top: 10px; font-weight: bold; background-color: #fff;">${styledLine}</div>`;
+            // 見出し部分のみ太字にする（日付は除外）
+            const headlineMatch = styledLine.match(/^(\d+[\.\．]\s*)(.*?)(\s+\d{4}\/\d{2}\/\d{2})$/);
+            if (headlineMatch) {
+                htmlBody += `<div style="margin-top: 10px; background-color: #fff;">${headlineMatch[1]}<b>${headlineMatch[2]}</b>${headlineMatch[3]}</div>`;
+            } else {
+                htmlBody += `<div style="margin-top: 10px; font-weight: bold; background-color: #fff;">${styledLine}</div>`;
+            }
         }
         else {
-            // それ以外の行
-            htmlBody += `<div style="background-color: #fff;">${cleanLine}</div>`;
+            // 番号付きニュース項目の見出しを太字にする（年月日と媒体名は除外）
+            // パターン1: 番号. 見出し（媒体名）日付
+            const mediaMatch = cleanLine.match(/^(\d+[\.\．]\s*)(.*)([\(（][^）\)]*?[\)）]\s*\d{4}\/\d{2}\/\d{2})$/);
+            if (mediaMatch) {
+                htmlBody += `<div style="background-color: #fff;">${mediaMatch[1]}<b>${mediaMatch[2]}</b>${mediaMatch[3]}</div>`;
+            } else {
+                // パターン2: 番号. 見出し 日付
+                const dateMatch = cleanLine.match(/^(\d+[\.\．]\s*)(.*?)(\s+\d{4}\/\d{2}\/\d{2})$/);
+                if (dateMatch) {
+                    htmlBody += `<div style="background-color: #fff;">${dateMatch[1]}<b>${dateMatch[2]}</b>${dateMatch[3]}</div>`;
+                } else {
+                    // セクションヘッダー、コメント等
+                    htmlBody += `<div style="background-color: #fff;">${cleanLine}</div>`;
+                }
+            }
         }
     });
 
