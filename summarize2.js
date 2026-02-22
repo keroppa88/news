@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-  const csvData = fs.readFileSync('summarize1.txt', 'utf8');
+  const csvData = fs.readFileSync('summary1.txt', 'utf8');
 
   const prompt = `
     1. 以下のニュースリストを読んで、以下のように分類編集提示をする。
