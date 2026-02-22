@@ -50,6 +50,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Generate Word Cloud
+        run: python3 generate_wordcloud.py
+
       - name: Generate Web Page
         run: node web/format.js
 
