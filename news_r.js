@@ -8,7 +8,7 @@ const fs = require('fs');
 (async () => {
   let browser;
   try {
-    const url = 'https://jp.reuters.com/opinion/';
+    const url = 'https://jp.reuters.com/';
 
     browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
@@ -43,3 +43,4 @@ const fs = require('fs');
     if (browser) await browser.close();
   }
 })();
+
