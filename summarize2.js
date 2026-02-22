@@ -6,11 +6,10 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-  const csvData = fs.readFileSync('news.csv', 'utf8');
+  const csvData = fs.readFileSync('summarize1.txt', 'utf8');
 
   const prompt = `
-    以下のニュースリスト（CSV形式）を読み取り、英語は日本語に翻訳して使用する。
-    1、●●　●●で囲んだ媒体ごとに見出し記事を抽出する。媒体はyahoo、ロイター、時事、日経、BBC、ブルームバーグ、WSJ、NYタイムス
+    1. 以下のニュースリストを読んで、以下のように分類編集提示をする。
     2、各媒体の見出し記事を総合的に勘案（各媒体の扱いの大きさ、関連記事の多さなど）して、重要ニュースを10個厳選する。
     3、「重要ニュース」を10個を厳選して【見出し】（媒体名）yyyy/mm/dd を記述する。
     重要ニュースは複数媒体が報じるはずなので、報じた媒体を媒体名として、で区切って羅列する。3社以上は「等」と入れたうえで省略する。
@@ -134,7 +133,7 @@ async function run() {
 
   const result = await model.generateContent(prompt);
   const summaryText = result.response.text();
-  fs.writeFileSync('summary.txt', summaryText);
+  fs.writeFileSync('summary2.txt', summaryText);
 
   // warehouse フォルダに年月日時刻のファイル名で保存
   const warehouseDir = path.join(__dirname, 'warehouse');
