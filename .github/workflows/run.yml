@@ -72,7 +72,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt index.html warehouse/
+          git add *.csv summary1.txt summary2.txt index.html wordcloud.jpg warehouse/
           git commit -m "Automated update: news, summary and web page" || exit 0
           git push
 

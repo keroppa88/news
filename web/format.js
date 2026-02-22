@@ -64,6 +64,7 @@ try {
 </head>
 <body>
     <div class="update-time">${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })} 更新</div>
+    <div style="margin-bottom: 10px;"><img src="wordcloud.jpg" alt="Word Cloud" style="max-width: 100%; height: auto;"></div>
     ${htmlBody}
 </body>
 </html>
