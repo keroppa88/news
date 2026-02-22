@@ -22,5 +22,6 @@ async function run() {
   const result = await model.generateContent(prompt);
   const summaryText = result.response.text();
   fs.writeFileSync('summary1.txt', summaryText);
-)
+}
+
 run();
