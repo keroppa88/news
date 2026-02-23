@@ -25,10 +25,8 @@ text = re.sub(r"UTC\+9", "", text)
 compound_words = [
     # Examples (uncomment or add your own):
     # "日本銀行",
-    # "岸田首相",
     # "人工知能",
     # "生成AI",
-    # "欧州中央銀行",
 ]
 
 # Replace compound words with placeholders before tokenization
@@ -59,9 +57,9 @@ stop_words = {
     "to", "in", "for", "and", "of", "on", "at", "by", "is", "it", "an", "as","開始","主要",
     "or", "if", "no", "so", "up", "do", "my", "me", "he", "we", "us",
     "be", "go", "am", "To", "In", "For", "And", "Of", "On", "At", "By",
-    "Is", "It", "An", "As", "Or", "If", "No", "So", "Up", "Do",
+    "Is", "It", "An", "As", "Or", "If", "No", "So", "Up", "Do","時事",
     "追える","可能","解説","代替","述べる","安全","引き上げ","全国","以来","確認","フォロー","取り締まり",
-    "大半", 
+    "大半","続く","最大","背景","日経","ロイター","BBC","NYタイムズ","yahoo","ブルームバーグ","WSJ",
 }
 
 for token in tokenizer.tokenize(text):
