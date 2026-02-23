@@ -43,6 +43,7 @@ stop_words = {
     "be", "go", "am", "To", "In", "For", "And", "Of", "On", "At", "By",
     "Is", "It", "An", "As", "Or", "If", "No", "So", "Up", "Do",
     "追える","可能","解説","代替","述べる","安全","引き上げ","全国","以来","確認","フォロー","取り締まり",
+    "大半", 
 }
  
 for token in tokenizer.tokenize(text):
