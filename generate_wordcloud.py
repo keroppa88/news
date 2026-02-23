@@ -5,11 +5,11 @@ from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
 from PIL import Image, ImageDraw, ImageFont
 import os
- 
+
 # Read summary1.txt
 with open("summary1.txt", "r", encoding="utf-8") as f:
     text = f.read()
- 
+
 # Remove source tags like (ロイター), (BBC), dates, section headers, bullets
 text = re.sub(r"\([^)]*\)", "", text)
 text = re.sub(r"（[^）]*）", "", text)
@@ -19,11 +19,29 @@ text = re.sub(r"[*＊]", "", text)
 text = re.sub(r"最大記事数\d+まで", "", text)
 text = re.sub(r"日本時間", "", text)
 text = re.sub(r"UTC\+9", "", text)
- 
+
+# Compound words: these multi-word expressions will not be split by the tokenizer.
+# Add entries here to keep them as a single unit in the word cloud.
+compound_words = [
+    # Examples (uncomment or add your own):
+    # "日本銀行",
+    # "岸田首相",
+    # "人工知能",
+    # "生成AI",
+    # "欧州中央銀行",
+]
+
+# Replace compound words with placeholders before tokenization
+compound_placeholders = {}
+for i, cw in enumerate(compound_words):
+    placeholder = f"COMPOUND{i:04d}"
+    compound_placeholders[placeholder] = cw
+    text = text.replace(cw, placeholder)
+
 # Tokenize with Janome
 tokenizer = Tokenizer()
 words = []
- 
+
 # Filter for meaningful parts of speech
 target_pos = ["名詞", "動詞", "形容詞"]
 stop_words = {
@@ -45,12 +63,17 @@ stop_words = {
     "追える","可能","解説","代替","述べる","安全","引き上げ","全国","以来","確認","フォロー","取り締まり",
     "大半", 
 }
- 
+
 for token in tokenizer.tokenize(text):
     pos = token.part_of_speech.split(",")[0]
     sub_pos = token.part_of_speech.split(",")[1] if len(token.part_of_speech.split(",")) > 1 else ""
     base = token.base_form if token.base_form != "*" else token.surface
- 
+
+    # Restore compound word from placeholder
+    if base in compound_placeholders:
+        words.append(compound_placeholders[base])
+        continue
+
     # Skip non-target parts of speech
     if pos not in target_pos:
         continue
@@ -74,9 +97,9 @@ for token in tokenizer.tokenize(text):
         "where", "does", "going", "final", "good", "well", "once", "here",
     }:
         continue
- 
+
     words.append(base)
- 
+
 # Also extract English words (4+ chars) for BBC/NYT articles
 english_words = re.findall(r"[A-Za-z]{4,}", text)
 english_stop = {
@@ -112,16 +135,16 @@ common_english_stop = {
 for w in english_words:
     if w.lower() not in common_english_stop and len(w) >= 4:
         words.append(w)
- 
+
 # Count word frequencies
 word_freq = Counter(words)
- 
+
 if not word_freq:
     print("No words found!")
     exit(1)
- 
+
 print(f"Top 30 words: {word_freq.most_common(30)}")
- 
+
 # Generate word cloud
 font_path = "/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf"
 wc = WordCloud(
@@ -135,9 +158,9 @@ wc = WordCloud(
     colormap="tab20",
     prefer_horizontal=0.7,
 )
- 
+
 wc.generate_from_frequencies(word_freq)
- 
+
 # Save as JPEG at top level
 top_level_path = "wordcloud.jpg"
 img = wc.to_image()
