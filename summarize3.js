@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-  const summaryData = fs.readFileSync('summary1.txt', 'utf8');
+  const csvData = fs.readFileSync('summary1.txt', 'utf8');
 
   const prompt = `
     あなたはニュース分析の専門家です。以下のニュースリストを分析して、ワードクラウド用のキーワードと重要度スコアを抽出してください。
