@@ -26,7 +26,7 @@ function main() {
       continue;
     }
 
-    const raw = fs.readFileSync(source.fileName, 'utf8').trim();
+    const raw = fs.readFileSync(source.fileName, 'utf8').trim().replace(/[【】]/g, '');
     blocks.push(source.title);
     blocks.push(raw);
   }
