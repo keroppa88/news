@@ -1,147 +1,38 @@
-import re
-from collections import Counter
+import sys
 from datetime import datetime
-from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-# Read summary1.txt
-with open("summary1.txt", "r", encoding="utf-8") as f:
-    text = f.read()
-
-# Remove source tags like (ロイター), (BBC), dates, section headers, bullets
-text = re.sub(r"\([^)]*\)", "", text)
-text = re.sub(r"（[^）]*）", "", text)
-text = re.sub(r"\d{4}/\d{2}/\d{2}", "", text)
-text = re.sub(r"●+[^●]*●+", "", text)
-text = re.sub(r"[*＊]", "", text)
-text = re.sub(r"最大記事数\d+まで", "", text)
-text = re.sub(r"日本時間", "", text)
-text = re.sub(r"UTC\+9", "", text)
-
-# Compound words: these multi-word expressions will not be split by the tokenizer.
-# Add entries here to keep them as a single unit in the word cloud.
-compound_words = [
-    # Examples (uncomment or add your own):
-    # "日本銀行",
-    # "人工知能",
-    # "生成AI",
-]
-
-# Replace compound words with placeholders before tokenization
-compound_placeholders = {}
-for i, cw in enumerate(compound_words):
-    placeholder = f"COMPOUND{i:04d}"
-    compound_placeholders[placeholder] = cw
-    text = text.replace(cw, placeholder)
-
-# Tokenize with Janome
-tokenizer = Tokenizer()
-words = []
-
-# Filter for meaningful parts of speech
-target_pos = ["名詞", "動詞", "形容詞"]
-stop_words = {
-    "する", "いる", "ある", "なる", "れる", "られる", "こと", "もの", "ため",
-    "よう", "さん", "それ", "これ", "あれ", "どれ", "ここ", "そこ", "あそこ",
-    "の", "に", "は", "を", "が", "で", "と", "も", "や", "へ", "から", "まで",
-    "より", "など", "か", "だ", "です", "ます", "た", "て", "て", "い",
-    "記事", "セクション", "設定", "リスト", "以下", "指定", "手順", "形式",
-    "抽出", "整理", "結果", "示す", "各", "数", "氏", "1", "2", "3", "4", "5",
-    "年", "月", "日", "10", "15", "20", "25", "万", "兆", "円", "人",
-    "記事リスト", "セクションの設定",
-    "UTC", "焦点", "コラム", "アングル", "マクロスコープ",
-    "的", "化", "性", "率", "額", "等", "前", "後", "上", "下", "中", "間","予想","投稿","語る","伸び",
-    "今", "新た", "巡る", "受け", "向け", "できる", "思う", "見る","判断","限定","自社","今週","相互","表明",
-    "to", "in", "for", "and", "of", "on", "at", "by", "is", "it", "an", "as","開始","主要",
-    "or", "if", "no", "so", "up", "do", "my", "me", "he", "we", "us",
-    "be", "go", "am", "To", "In", "For", "And", "Of", "On", "At", "By",
-    "Is", "It", "An", "As", "Or", "If", "No", "So", "Up", "Do","時事",
-    "追える","可能","解説","代替","述べる","安全","引き上げ","全国","以来","確認","フォロー","取り締まり",
-    "大半","続く","最大","背景","日経","ロイター","BBC","NYタイムズ","yahoo","ブルームバーグ","WSJ",
-}
-
-for token in tokenizer.tokenize(text):
-    pos = token.part_of_speech.split(",")[0]
-    sub_pos = token.part_of_speech.split(",")[1] if len(token.part_of_speech.split(",")) > 1 else ""
-    base = token.base_form if token.base_form != "*" else token.surface
-
-    # Restore compound word from placeholder
-    if base in compound_placeholders:
-        words.append(compound_placeholders[base])
-        continue
-
-    # Skip non-target parts of speech
-    if pos not in target_pos:
-        continue
-    # Skip auxiliary verbs and particles
-    if sub_pos in ["非自立", "接尾", "代名詞", "数"]:
-        continue
-    # Skip single character words and stop words
-    if len(base) <= 1 or base in stop_words:
-        continue
-    # Skip common English stop words that Janome may produce
-    if re.match(r'^[A-Za-z]+$', base) and base.lower() in {
-        "the", "and", "for", "are", "but", "not", "you", "all", "can", "her",
-        "was", "one", "our", "out", "has", "had", "his", "how", "its", "may",
-        "new", "now", "say", "she", "too", "use", "than", "that", "them",
-        "then", "they", "this", "from", "have", "been", "with", "will", "more",
-        "over", "such", "what", "when", "who", "why", "said", "each", "make",
-        "like", "long", "look", "many", "some", "time", "very", "your", "into",
-        "year", "also", "back", "most", "only", "come", "just", "know", "take",
-        "about", "after", "being", "could", "first", "their", "there", "these",
-        "those", "would", "other", "which", "should", "right", "still", "think",
-        "where", "does", "going", "final", "good", "well", "once", "here",
-    }:
-        continue
-
-    words.append(base)
-
-# Also extract English words (4+ chars) for BBC/NYT articles
-english_words = re.findall(r"[A-Za-z]{4,}", text)
-english_stop = {
-    "the", "and", "for", "are", "but", "not", "you", "all", "can", "her",
-    "was", "one", "our", "out", "has", "had", "his", "how", "its", "may",
-    "new", "now", "say", "she", "too", "use", "BBC", "NYT", "WSJ", "UTC",
-    "than", "that", "them", "then", "they", "this", "from", "have", "been",
-    "with", "will", "more", "over", "such", "what", "when", "who", "why",
-    "said", "each", "make", "like", "long", "look", "many", "some",
-    "time", "very", "your", "into", "year", "also", "back", "most",
-    "only", "come", "just", "know", "take", "people", "about", "after",
-    "being", "could", "first", "their", "there", "these", "those", "would",
-    "other", "which", "should", "right", "still", "think", "where",
-    "does", "going", "Final", "Right", "Good", "well", "How", "The",
-    "They", "You", "Can", "Not", "His", "Her", "Its",
-}
-common_english_stop = {
-    "the", "and", "for", "are", "but", "not", "you", "all", "can", "her",
-    "was", "one", "our", "out", "has", "had", "his", "how", "its", "may",
-    "new", "now", "say", "she", "too", "use", "than", "that", "them",
-    "then", "they", "this", "from", "have", "been", "with", "will", "more",
-    "over", "such", "what", "when", "who", "why", "said", "each", "make",
-    "like", "long", "look", "many", "some", "time", "very", "your", "into",
-    "year", "also", "back", "most", "only", "come", "just", "know", "take",
-    "people", "about", "after", "being", "could", "first", "their", "there",
-    "these", "those", "would", "other", "which", "should", "right", "still",
-    "think", "where", "does", "going", "final", "good", "well", "once",
-    "mocked", "being", "both", "deadly", "deep", "five", "gets", "here",
-    "large", "left", "made", "more", "much", "need", "over", "real",
-    "took", "took", "whether", "while", "before", "between", "during",
-    "under", "again", "further", "same", "down", "days", "since", "away",
-}
-for w in english_words:
-    if w.lower() not in common_english_stop and len(w) >= 4:
-        words.append(w)
-
-# Count word frequencies
-word_freq = Counter(words)
+# Read summary3.txt (tab-separated: keyword\tscore)
+word_freq = {}
+try:
+    with open("summary3.txt", "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split("\t")
+            if len(parts) == 2:
+                keyword = parts[0].strip()
+                try:
+                    score = int(parts[1].strip())
+                    if keyword and score > 0:
+                        word_freq[keyword] = score
+                except ValueError:
+                    continue
+except FileNotFoundError:
+    print("summary3.txt not found. Run summarize3.js first.")
+    sys.exit(1)
 
 if not word_freq:
-    print("No words found!")
-    exit(1)
+    print("No words found in summary3.txt!")
+    sys.exit(1)
 
-print(f"Top 30 words: {word_freq.most_common(30)}")
+# Show top keywords
+sorted_words = sorted(word_freq.items(), key=lambda x: x[1], reverse=True)
+print(f"Total keywords: {len(sorted_words)}")
+print(f"Top 30 words: {sorted_words[:30]}")
 
 # Generate word cloud
 font_path = "/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf"
