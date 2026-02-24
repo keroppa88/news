@@ -45,7 +45,8 @@ async function run() {
 
   const result = await model.generateContent(prompt);
   const raw = result.response.text();
-
+  fs.writeFileSync('summary3.txt', summaryText);
+  
   // Clean: remove markdown code fences if Gemini wraps output
   const cleaned = raw
     .replace(/```[a-z]*\n?/gi, '')
