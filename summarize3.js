@@ -40,13 +40,11 @@ async function run() {
     ウクライナ侵攻\t70
 
     ## ニュースリスト:
-    ${summaryData}
+    ${csvData}
   `;
 
   const result = await model.generateContent(prompt);
   const raw = result.response.text();
-  fs.writeFileSync('summary3.txt', summaryText);
-  
   // Clean: remove markdown code fences if Gemini wraps output
   const cleaned = raw
     .replace(/```[a-z]*\n?/gi, '')

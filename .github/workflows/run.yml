@@ -50,6 +50,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Run Gemini Analysis (Step 3 - Extract keywords for wordcloud)
+        run: node summarize3.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -72,7 +76,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt index.html wordcloud.jpg warehouse/
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
           git commit -m "Automated update: news, summary and web page" || exit 0
           git push
 
