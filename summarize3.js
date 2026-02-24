@@ -43,11 +43,20 @@ async function run() {
   `;
 
   const result = await model.generateContent(prompt);
-  const text = result.response.text();
-  fs.writeFileSync('summary3.txt', text);
-  console.log('summary3.txt generated successfully');
-  console.log('Preview (first 10 lines):');
-  console.log(text.split('\n').slice(0, 10).join('\n'));
+  const raw = result.response.text();
+
+  // Clean: remove markdown code fences if Gemini wraps output
+  const cleaned = raw
+    .replace(/```[a-z]*\n?/gi, '')
+    .replace(/```/g, '')
+    .trim();
+
+  fs.writeFileSync('summary3.txt', cleaned);
+
+  const lines = cleaned.split('\n').filter(l => l.trim());
+  console.log(`summary3.txt generated: ${lines.length} keywords`);
+  console.log('Top 10:');
+  lines.slice(0, 10).forEach(l => console.log(`  ${l}`));
 }
 
 run();
