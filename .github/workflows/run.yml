@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install playwright @google/generative-ai
+          npm ci
           npx playwright install --with-deps chromium
 
       - name: Run news scrapers
