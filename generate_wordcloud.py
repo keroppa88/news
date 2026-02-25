@@ -42,10 +42,10 @@ wc = WordCloud(
     height=600,
     background_color="white",
     max_words=150,
-    max_font_size=50,
-    min_font_size=8,
+    max_font_size=45,
+    min_font_size=6,
     colormap="tab20",
-    prefer_horizontal=0.85,
+    prefer_horizontal=1,
 )
 
 wc.generate_from_frequencies(word_freq)
