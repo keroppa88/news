@@ -4,6 +4,22 @@ const path = require('path');
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+async function callWithRetry(fn, maxRetries = 5) {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      return await fn();
+    } catch (e) {
+      if (e.status === 429 && i < maxRetries - 1) {
+        const wait = Math.pow(2, i + 1) * 1000; // 2s, 4s, 8s, 16s, 32s
+        console.log(`Rate limited (429). Retrying in ${wait / 1000}s... (${i + 1}/${maxRetries})`);
+        await new Promise(r => setTimeout(r, wait));
+      } else {
+        throw e;
+      }
+    }
+  }
+}
+
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   const csvData = fs.readFileSync('summary2.txt', 'utf8');
@@ -92,7 +108,7 @@ async function run() {
     ${csvData}
   `;
 
-  const result = await model.generateContent(prompt);
+  const result = await callWithRetry(() => model.generateContent(prompt));
   const summaryText = result.response.text().replace(/[【】]/g, '');
   fs.writeFileSync('summary2.txt', summaryText);
 
