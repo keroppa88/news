@@ -38,12 +38,12 @@ print(f"Top 30 words: {sorted_words[:30]}")
 font_path = "/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf"
 wc = WordCloud(
     font_path=font_path,
-    width=1000,
-    height=500,
+    width=1200,
+    height=600,
     background_color="white",
     max_words=150,
-    max_font_size=60,
-    min_font_size=6,
+    max_font_size=50,
+    min_font_size=10,
     colormap="tab20",
     prefer_horizontal=0.7,
 )
