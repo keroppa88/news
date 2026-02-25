@@ -279,6 +279,61 @@ ${englishEntries.map(e => e.line).join('\n')}`;
   }
   console.log(`[Step2.5] ${mediaFixCount}件の媒体名・日付を補完`);
 
+  // ===== Step 2.7: 要約セクションの記事行で（媒体名）年月日が欠けていれば、媒体セクションから照合して補完 =====
+  const SUMMARY_CATS = ['重要ニュース', '経済ニュース', '国内ニュース', '海外ニュース', 'その他ニュース'];
+
+  // 媒体セクションの全記事を収集（見出し → 媒体名＋日付）
+  const mediaArticleIndex = [];
+  for (const sec of s2Sections) {
+    const mediaTag = CAT_MEDIA_TAG[sec.name];
+    if (!mediaTag) continue;
+    for (const line of sec.lines) {
+      if (!/^\d+\.\s/.test(line)) continue;
+      const headline = line.replace(/^\d+\.\s*/, '').replace(/[（(][^)）]*[)）]/g, '').replace(/\d{4}\/\d{2}\/\d{2}/g, '').trim();
+      const dateMatch = line.match(/\d{4}\/\d{2}\/\d{2}/);
+      const mediaMatch = line.match(/（([^）]+)）/);
+      mediaArticleIndex.push({
+        headline,
+        media: mediaMatch ? mediaMatch[1] : mediaTag,
+        date: dateMatch ? dateMatch[0] : getYesterdayDate(),
+      });
+    }
+  }
+
+  let summaryFixCount = 0;
+  for (const sec of s2Sections) {
+    if (!SUMMARY_CATS.includes(sec.name)) continue;
+    for (let i = 0; i < sec.lines.length; i++) {
+      if (!/^\d+\.\s/.test(sec.lines[i])) continue;
+      const hasMedia = /（[^）]+）/.test(sec.lines[i]);
+      const hasDate = /\d{4}\/\d{2}\/\d{2}/.test(sec.lines[i]);
+      if (hasMedia && hasDate) continue;
+
+      // 見出し部分を抽出して媒体セクションから照合
+      const headline = sec.lines[i].replace(/^\d+\.\s*/, '').replace(/[（(][^)）]*[)）]/g, '').replace(/\d{4}\/\d{2}\/\d{2}/g, '').trim();
+      const match = mediaArticleIndex.find(a =>
+        a.headline === headline || a.headline.includes(headline) || headline.includes(a.headline)
+      );
+
+      if (match) {
+        let fixed = sec.lines[i].trimEnd();
+        if (!hasMedia && !hasDate) {
+          fixed = fixed + `（${match.media}）${match.date}`;
+        } else if (!hasMedia) {
+          fixed = fixed.replace(/(\d{4}\/\d{2}\/\d{2})/, `（${match.media}）$1`);
+        } else if (!hasDate) {
+          fixed = fixed.replace(/(（[^）]+）)\s*$/, `$1${match.date}`);
+        }
+        if (fixed !== sec.lines[i]) {
+          console.log(`  要約補完: ${fixed.substring(0, 70)}...`);
+          sec.lines[i] = fixed;
+          summaryFixCount++;
+        }
+      }
+    }
+  }
+  console.log(`[Step2.7] ${summaryFixCount}件の要約セクション記事を補完`);
+
   // ===== Step 3: 記事数不足カテゴリーをsummary1から充当 =====
   for (const sec of s2Sections) {
     const minCount = MIN_ARTICLES[sec.name];
