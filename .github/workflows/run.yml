@@ -44,6 +44,9 @@ jobs:
       - name: Merge CSVs into news.csv
         run: node z_get.js
 
+      - name: Pre-filter news.csv (remove noise)
+        run: node summarize0.js
+
       - name: Run Gemini Analysis (Step 1 - Extract headlines)
         run: node summarize1.js
         env:
@@ -59,7 +62,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Run Gemini Analysis (Step 1 - Extract headlines)
+      - name: Run Gemini Analysis (Step 4 - Fix formatting and supplement)
         run: node summarize4.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
