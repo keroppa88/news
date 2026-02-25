@@ -6,8 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-  const csvData = fs.readFileSync('news.csv', 'utf8');
-
+  const csvData = fs.readFileSync('summary0.txt', 'utf8');  
   const today = new Date().toISOString().split('T')[0]; // UTC基準の当日日付
 
   const prompt = `
