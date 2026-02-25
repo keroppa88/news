@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: daily-news-update
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -83,6 +87,7 @@ jobs:
           git config --global user.name "GitHub Action"
           git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
           git commit -m "Automated update: news, summary and web page" || exit 0
+          git pull --rebase origin main
           git push
 
       # --- 最後に GitHub Pages へデプロイする ---
