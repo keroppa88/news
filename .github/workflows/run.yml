@@ -55,6 +55,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Run Gemini Analysis (Step 1 - Extract headlines)
+        run: node summarize4.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
