@@ -85,6 +85,11 @@ function shouldRemove(s, originalLine) {
   if (/^https?:\/\//.test(s)) return true;
   if (/^[\w-]+\.[\w-]+\.\w+$/.test(s) && !s.includes(' ')) return true;
 
+  // --- 数字を含まない短い行（ナビ・メニュー項目） ---
+  // 8文字以下が安全圏（Yahoo見出しは9文字～、WSJ"中国の対日貿易戦争"=9文字）
+  // 時刻表現（昨日・今日等）は除外
+  if (s.length <= 8 && !/\d/.test(s) && !/^(昨日|今日|一昨日)$/.test(s)) return true;
+
   // --- 記事本文（150文字超）：見出しではなく要約文。CSV形式行は除外 ---
   if (s.length > 150 && !originalLine.includes(',,')) return true;
 
