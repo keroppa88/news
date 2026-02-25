@@ -40,11 +40,6 @@ jobs:
       - name: Merge CSVs into news.csv
         run: node z_get.js
 
-      - name: Run Gemini Analysis (Step 0 - Clean noise)
-        run: node summarize0.js
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
       - name: Run Gemini Analysis (Step 1 - Extract headlines)
         run: node summarize1.js
         env:
@@ -81,7 +76,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary0.txt summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
           git commit -m "Automated update: news, summary and web page" || exit 0
           git push
 
