@@ -21,7 +21,7 @@ async function callWithRetry(fn, maxRetries = 5) {
   }
 }
 
-// --- 英文検出：日本語文字が3文字未満 かつ 英単語が3語以上ある行 ---
+// --- 英文検出：日本語がほぼ無く英単語が含まれる行 ---
 function needsTranslation(line) {
   if (!line.trim() || line.startsWith('●')) return false;
 
@@ -33,17 +33,23 @@ function needsTranslation(line) {
     .replace(/^\*\s*/, '')
     .trim();
 
-  if (cleaned.length < 10) return false;
+  if (cleaned.length < 5) return false;
 
   // 日本語文字（ひらがな・カタカナ・漢字）が3文字以上あれば日本語見出し
   const japaneseChars = (cleaned.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
   if (japaneseChars >= 3) return false;
 
-  // 2文字以上の英単語が3語以上あり、平均語長が3超なら英文と判定
+  // 2文字以上の英単語を抽出
   const asciiWords = cleaned.replace(/[^a-zA-Z\s]/g, '').trim().split(/\s+/).filter(w => w.length >= 2);
-  if (asciiWords.length < 3) return false;
+  if (asciiWords.length === 0) return false;
   const avgLen = asciiWords.reduce((s, w) => s + w.length, 0) / asciiWords.length;
-  return avgLen > 3;
+
+  // 日本語ゼロ → 英単語2語以上＋平均語長3超で英文と判定（"Trump Administration" 等）
+  if (japaneseChars === 0 && asciiWords.length >= 2 && avgLen > 3) return true;
+  // 日本語1-2文字 → 英単語3語以上＋平均語長3超で英文と判定
+  if (asciiWords.length >= 3 && avgLen > 3) return true;
+
+  return false;
 }
 
 // --- セクション解析（順序保持） ---
@@ -113,6 +119,54 @@ const CAT_MAP = {
   'AI関連': 'AI',
   '2ch': '2ch',
 };
+
+// --- カテゴリー名 → 記事末尾に付ける媒体タグ名 ---
+const CAT_MEDIA_TAG = {
+  'ロイター': 'ロイター',
+  'ブルームバーグ': 'ブルームバーグ',
+  'BBC': 'BBC',
+  'NYタイムズ': 'NYタイムズ',
+  'WSJ': 'WSJ',
+  '日経': '日経',
+  '時事': '時事',
+  'yahoo': 'yahoo',
+  'AI関連': 'AI',
+  '2ch': '2ch',
+};
+
+// --- 前日の日付を取得（JST基準） ---
+function getYesterdayDate() {
+  const now = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  const yesterday = new Date(now);
+  yesterday.setUTCDate(yesterday.getUTCDate() - 1);
+  const y = yesterday.getUTCFullYear();
+  const m = String(yesterday.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(yesterday.getUTCDate()).padStart(2, '0');
+  return `${y}/${m}/${d}`;
+}
+
+// --- 記事行に（媒体名）yyyy/mm/dd が欠けていれば補完 ---
+function ensureMediaAndDate(line, mediaTag) {
+  if (!/^\d+\.\s/.test(line)) return line;
+
+  const hasMedia = /（[^）]+）/.test(line);
+  const hasDate = /\d{4}\/\d{2}\/\d{2}/.test(line);
+
+  let result = line.trimEnd();
+
+  if (!hasMedia && !hasDate) {
+    // 両方なし → 末尾に追加
+    result = result + `（${mediaTag}）${getYesterdayDate()}`;
+  } else if (!hasMedia) {
+    // 日付はあるが媒体なし → 日付の直前に媒体挿入
+    result = result.replace(/(\d{4}\/\d{2}\/\d{2})/, `（${mediaTag}）$1`);
+  } else if (!hasDate) {
+    // 媒体はあるが日付なし → 媒体の直後に日付追加
+    result = result.replace(/(（[^）]+）)\s*$/, `$1${getYesterdayDate()}`);
+  }
+
+  return result;
+}
 
 // --- 各カテゴリーの最低記事数 ---
 const MIN_ARTICLES = {
@@ -195,6 +249,25 @@ ${englishEntries.map(e => e.line).join('\n')}`;
     }
   }
   console.log(`[Step2] ${fixCount}件の表記を修正`);
+
+  // ===== Step 2.5: 媒体カテゴリーの記事行に（媒体名）年月日が欠けていれば補完 =====
+  let mediaFixCount = 0;
+  for (const sec of s2Sections) {
+    const mediaTag = CAT_MEDIA_TAG[sec.name];
+    if (!mediaTag) continue; // コメント・重要ニュース等はスキップ
+
+    for (let i = 0; i < sec.lines.length; i++) {
+      if (/^\d+\.\s/.test(sec.lines[i])) {
+        const before = sec.lines[i];
+        sec.lines[i] = ensureMediaAndDate(sec.lines[i], mediaTag);
+        if (before !== sec.lines[i]) {
+          console.log(`  補完: ${sec.lines[i].substring(0, 70)}...`);
+          mediaFixCount++;
+        }
+      }
+    }
+  }
+  console.log(`[Step2.5] ${mediaFixCount}件の媒体名・日付を補完`);
 
   // ===== Step 3: 記事数不足カテゴリーをsummary1から充当 =====
   for (const sec of s2Sections) {
