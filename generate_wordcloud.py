@@ -42,8 +42,8 @@ wc = WordCloud(
     height=600,
     background_color="white",
     max_words=150,
-    max_font_size=50,
-    min_font_size=6,
+    max_font_size=40,
+    min_font_size=15,
     colormap="tab10",
     prefer_horizontal=1,
 )
