@@ -52,7 +52,7 @@ async function run() {
   `;
 
   const result = await model.generateContent(prompt);
-  const summaryText = result.response.text();
+  const summaryText = result.response.text().replace(/[【】]/g, '');
   fs.writeFileSync('summary1.txt', summaryText);
 }
 

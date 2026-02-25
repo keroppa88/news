@@ -134,7 +134,7 @@ async function run() {
   `;
 
   const result = await model.generateContent(prompt);
-  const summaryText = result.response.text();
+  const summaryText = result.response.text().replace(/[【】]/g, '');
   fs.writeFileSync('summary2.txt', summaryText);
 
   // warehouse フォルダに年月日時刻のファイル名で保存
