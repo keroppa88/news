@@ -21,7 +21,7 @@ async function callWithRetry(fn, maxRetries = 5) {
   }
 }
 
-// --- 英文検出：日本語がほぼ無く英単語が含まれる行 ---
+// --- 英文検出：英単語が含まれる行（混在行も検出） ---
 function needsTranslation(line) {
   if (!line.trim() || line.startsWith('●')) return false;
 
@@ -35,19 +35,28 @@ function needsTranslation(line) {
 
   if (cleaned.length < 5) return false;
 
-  // 日本語文字（ひらがな・カタカナ・漢字）が3文字以上あれば日本語見出し
-  const japaneseChars = (cleaned.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
-  if (japaneseChars >= 3) return false;
+  // 連続する英単語フレーズを検出（3語以上連続 = 英文フレーズ）
+  // 例: "Modi's Israel visit to test India's priorities" → マッチ
+  const englishPhraseMatch = cleaned.match(/[A-Z][a-zA-Z'']+(?:\s+[a-zA-Z'']+){2,}/g);
+  if (englishPhraseMatch) {
+    // 最長フレーズの単語数をチェック
+    const longestPhrase = englishPhraseMatch.reduce((a, b) => a.length > b.length ? a : b, '');
+    const wordCount = longestPhrase.split(/\s+/).length;
+    if (wordCount >= 3) return true;
+  }
 
   // 2文字以上の英単語を抽出
   const asciiWords = cleaned.replace(/[^a-zA-Z\s]/g, '').trim().split(/\s+/).filter(w => w.length >= 2);
   if (asciiWords.length === 0) return false;
   const avgLen = asciiWords.reduce((s, w) => s + w.length, 0) / asciiWords.length;
 
-  // 日本語ゼロ → 英単語2語以上＋平均語長3超で英文と判定（"Trump Administration" 等）
+  // 日本語文字（ひらがな・カタカナ・漢字）
+  const japaneseChars = (cleaned.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
+
+  // 日本語ゼロ → 英単語2語以上＋平均語長3超で英文と判定
   if (japaneseChars === 0 && asciiWords.length >= 2 && avgLen > 3) return true;
-  // 日本語1-2文字 → 英単語3語以上＋平均語長3超で英文と判定
-  if (asciiWords.length >= 3 && avgLen > 3) return true;
+  // 日本語があっても英単語が多い場合（混在行）
+  if (asciiWords.length >= 4 && avgLen > 3) return true;
 
   return false;
 }
@@ -217,7 +226,8 @@ async function run() {
     englishEntries.forEach(e => console.log(`  -> ${e.line.substring(0, 80)}...`));
 
     const prompt = `以下のニュース見出しを日本語に翻訳してください。
-- 各行の番号・（媒体名）・日付はそのまま残し、見出し部分のみ翻訳
+- 各行の番号・（媒体名）・日付はそのまま残し、英語の見出し部分のみ日本語に翻訳
+- 1行の中に日本語と英語が混在している場合は、英語部分のみ日本語に翻訳する
 - 日本で一般的な固有名詞（AI、BBC、FBI等）は英語のまま可
 - 翻訳結果のみを行ごとに出力。説明不要。
 
