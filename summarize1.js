@@ -6,17 +6,15 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-  const csvData = fs.readFileSync('news.csv', 'utf8');
-
+  const csvData = fs.readFileSync('summary0.txt', 'utf8');  
   const today = new Date().toISOString().split('T')[0]; // UTC基準の当日日付
 
   const prompt = `
     当日の日付は${today}（UTC基準）です。
-    以下のデータから記事の見出しを抽出・整理してください。英語の見出しはすべて自然な日本語に翻訳してください。機械的に要件を処理すればいい。
+    以下のデータから記事の見出しを抽出・整理してください。機械的に要件を処理すればいい。
     ■手順
-    1. 文字の羅列から「媒体・分野ごとの区切り（●●〇〇●●）」「記事の見出し」「年月日に関わる情報」のみを抽出する。これをAとする。
-       以下はノイズなので無視する：ナビゲーション要素、フッター・ヘッダー、【速報】、【特報】、【】、広告、著作権表示、記事本文・要約文、市場データ表、記者名、UI要素（「category」「検索」「ログイン」「SKIP TO CONTENT」「opens new tab」「Report Ad」「advertisement」「もっと見る」等）、動画・音声・ポッドキャスト、料理レシピ、ゲーム、製品レビュー等。
-    2. Aにある記事見出しを「記事の見出し」＋「媒体・分野」＋「年月日」の形で1行ごとにまとめる。
+    1. 英語の見出しは全てを日本語に翻訳する。
+    2. 記事見出しを「記事の見出し」＋「媒体・分野」＋「年月日」の形で1行ごとにまとめる。
        例：「エヌビディアやソフト大手の決算、AI相場の次の試金石に」(ロイタービジネス)2026/02/22
     3. 「〇日前」という曖昧な時系列情報は現在の日付から年月日を推測する。
        「1日前」「昨日」→当日の前日、「2日前」→当日の2日前、のように逆算する。
