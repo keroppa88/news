@@ -1,45 +1,170 @@
 ```python
 import re
-from datetime import datetime, timedelta
-import pytz
+import pandas as pd
+import io
 
-def extract_news_info(news_data, current_date_utc):
+def translate_to_japanese(text):
+    # 簡単な翻訳（辞書形式）。必要に応じて、より高度な翻訳APIを使用してください。
+    translation_dict = {
+        "WORLD": "世界",
+        "MARKET": "市場",
+        "ECONOMY": "経済",
+        "BUSINESS": "ビジネス",
+        "OPINION": "意見",
+        "LIFESTYLE": "ライフスタイル",
+        "SPORTS": "スポーツ",
+        "MEDIA": "メディア",
+        "VIDEO": "ビデオ",
+        "PHOTO": "写真",
+        "HOME": "ホーム",
+        "ARCHIVE": "アーカイブ",
+    }
+    words = text.split()
+    translated_words = [translation_dict.get(word.upper(), word) for word in words]
+    return " ".join(translated_words)
 
-    extracted_data = []
+def extract_news_data(text):
+    # 分割パターンを定義
+    split_pattern = r'(●●[^\n]+?●●)'
+    # テキストを分割
+    sections = re.split(split_pattern, text)
 
-    # 分割されたデータに対して処理を行う
-    for item in re.split(r'(●●.*?●●)', news_data):
-        item = item.strip()  # 空白を削除
-        if not item:  # 空の文字列をスキップ
-            continue
+    # 結果を格納するリスト
+    results = []
 
-        # 媒体・分野の抽出
-        match = re.match(r'(●●.*?●●)', item)
-        if match:
-            category = match.group(1)
-            continue  # カテゴリを抽出したら次のアイテムへ
-        else:
-            category = None
+    # 分割されたセクションを処理
+    for i in range(1, len(sections), 2):  # 媒体・分野ごとの区切りから開始
+        media_category = sections[i].strip()  # 媒体・分野
+        news_content = sections[i + 1].strip()  # 記事内容
 
-        # 行ごとの処理
-        lines = item.splitlines()
-        for line in lines:
-            line = line.strip()
-            if not line:
+        # 各ニュース記事をさらに分割
+        articles = re.split(r'\n(?=[^"]*(?:"[^"]*"[^"]*)*$)', news_content)  # 行ごとの分割（引用符で囲まれた部分を無視）
+        
+        for article in articles:
+            # ノイズデータ削除
+            if any(noise in article for noise in [
+                "主要コンテンツに飛ぶ", "ナビゲーション", "クリック", "広告", "市場データ", "記者", "UI要素", "もっと見る",
+                "Feedback", "値上がり", "ポジティブ", "日経平均", "ダウ平均", "英 FTSE", "S&P500種", "値下がり", "ネガティブ",
+                "マーケットトップへ", "最新ニュース", "category", "編集長のおすすめ", "日本語のビデオ", "最新のビデオ", "次に再生",
+                "解説", "カエル", "ニホンザル", "米ソフトウエア株", "米フェデックス", "トランプ新関税", "米ニューヨーク",
+                "飼い主探して", "英国のマンデルソン", "ビデオ一覧", "ミラノ・コルティナ五輪", "特集 安全保障問題", "外国為替フォーラム",
+                "Breakingviews", "外国為替", "国内マーケット", "国内", "テクノロジー", "エンタテインメント", "Site Index",
+                "最新", "ホーム", "アーカイブ", "サイトマップ", "ブラウズ", "ワールド", "マーケット", "経済", "ビジネス",
+                "オピニオン", "ライフ", "スポーツ", "メディア", "ビデオ", "写真", "ロイターについて", "採用情報",
+                "ロイター・ニュース・エージェンシー", "ブランド・ガイドライン", "リーダーシップチーム", "最新情報を入手",
+                "ニュースメール", "信頼されるメディアとして", "広告掲載について", "広告掲載ポリシー", "クッキー",
+                "ロイター利用規約（英語）", "個人情報保護方針", "著作権", "ウェブアクセシビリティ（英語）", "お問い合わせ先",
+                "フィードバック", "ターゲット広告をオプトアウト（無効化）する", "掲載の情報は15分以上の遅れで表示しています",
+                "© 2026 Reuters. All rights reserved", "英ＦＲＢ特集", "日銀特集", "政局の行方", "企業・産業", "マクロスコープ",
+                "関連記事", "スポンサードコンテンツ", "Skip to content", "ADVERTISEMENT", "Watch Live",
+                "Subscribe", "Sign In", "News", "Technology", "Health", "Culture", "Arts", "Travel",
+                "Earth", "Audio", "Video", "Live", "Documentaries", "US & Canada", "Politics", "London",
+                "Europe", "World", "MUST WATCH", "Adventures", "HEALTH AND WELLNESS", "WATCH LIST",
+                "MORE WORLD NEWS", "BUSINESS", "LIVE", "LATEST SPORT AUDIO", "SCIENCE", "ARTS ",
+                "WORLD'S TABLE", "DISCOVER MORE FROM THE BBC", "In History", "Download the BBC app",
+                "Health Fix", "Register for a BBC account", "Sign up for the Essential List", "Weather",
+                "BBC Shop", "BritBox", "BBC in other languages", "Follow BBC on:", "Terms of Use",
+                "Subscription Terms", "About the BBC", "Privacy Policy", "Cookies", "Accessibility Help",
+                "Contact the BBC", "Advertise with us", "Do not share or sell my info", "BBC.com Help & FAQs",
+                "Content Index", "Set Preferred Source", "Copyright 2026 BBC. All rights reserved",
+                "The BBC is not responsible for the content of external sites. Read about our approach to external linking.",
+                "CNN.co.jp", "上司に関するニュース", "株 • AIに関するニュース", "かぶたん", "QUICK Money World",
+                "マネクリ", "EE Times Japan", "ケータイ Watch", "読売新聞オンライン", "京都大学", "Reuters",
+                "ビジネス+IT", "AV Watch", "Google Cloud", "さくらインターネット", "ntt-west.co.jp", "日経クロストレンド",
+                "PR TIMES", "TECHBLITZ", "Yahoo!ニュース", "日本経済新聞", "agrinews.co.jp", "株式会社ラック",
+                "AIsmiley", "LOGISTICS TODAY", "Tapple, Inc.", "医療AIニュース｜The Medical AI Times",
+                "gihyo.jp", "Amazon Web Services (AWS)", "LOGISTICS TODAY", "マネクリ", "Business Insider Japan",
+                "パナソニックニュースルームグローバル", "株式会社いえらぶGROUP", "AIsmiley", "WIRED.jp", "株式会社いえらぶGROUP",
+                "Tapple, Inc.", "株式会社いえらぶGROUP", "Yahoo!ニュース", "山陽新聞", "Vietnam.vn", "AIsmiley",
+                "株式会社いえらぶGROUP", "PR TIMES", "Newsroom Global", "2NN ニュース", "Google WEB",
+                "Bing WEB", "Twitter", "5ch スレッド", "日経 株価", "wikipedia", "スペースアルク 英和・和英",
+                "ASCII デジタル", "YouTube", "ニコニコ動画", "Amazon.co.jp", "ヨドバシ.com", "楽天",
+                "Yahoo! ショッピング", "ヤフオク！", "メルカリ", "ホームニュース速報芸スポ東アジアビジネス政治国際科学ローカル萌えアイドル痛い",
+                "新着ニュース昨日のニュース過去の祭級ニュース", "ログイン", ">", "★ニュース速報＋", "★芸能･スポーツ速報＋", "★東アジアニュース速報＋",
+                "★科学ニュース＋", "★政治ニュース＋", "★ローカルニュース＋", "★国際ニュース＋", "★ビジネスニュース＋",
+                "★萌えニュース＋", "2ちゃんねるニュース速報＋ナビ", "このサイトは5ちゃんねる(旧2ちゃんねる)のニュース速報＋系掲示板の書き込みを自動解析し、人気の高いニュース及び最新のニュースをリアルタイムで提供しています。",
+                "2NN現在閲覧者数 4127人/10min", "注目ニュース", "YOMIURI ONLINE [読売新聞]", "ホットキーワード", "新着ニュース",
+                "最新1000スレッド", "5ちゃんねる(旧2ちゃんねる)ニュース速報＋系掲示板の情報をそれぞれ1分～10分間隔で自動取得・解析更新しています。",
+                "何かありましたらメールへ。", "開発・運営：中島竜馬 ", "▲ このページのトップへ", "2NN.JP Since 2004","Bloomberg.com",
+                "ニュース","検索オプション","ヘルプ","設定","ログイン","ホーム","おすすめ","フォロー中","日本","世界","ローカル","ビジネス",
+                "科学＆テクノロジー","エンタメ","スポーツ","上司に関するニュース","FNNプライムオンライン","Yahoo!ニュース","au Webポータル","Yahoo!ニュース","株 • AIに関するニュース","かぶたん",
+                "QUICK Money World","マネクリ","EE Times Japan","ケータイ Watch","読売新聞オンライン","京都大学","Reuters","ビジネス+IT","Yahoo!ニュース","QUICK Money World",
+                "PR TIMES","Yahoo!ニュース","読売新聞オンライン"
+            ]):
                 continue
 
-            # 除外リストに含まれる文字列をスキップ
-            if any(keyword in line for keyword in [
-                "主要コンテンツに飛ぶ", "Report Ad", "ワールド", "マーケット", "経済", "ビジネス", "オピニオン", "さらに見る", "Feedback",
-                "値上がり", "ポジティブ", "日経平均", "58,583.12", "+2.20%", "ダウ平均", "49,376.47", "+0.41%", "英 FTSE", "10,801.85", "+1.14%",
-                "S&P500種", "6,930.22", "+0.58%", "値下がり", "ネガティブ", "JPYUSD=X", "0.01", "-0.35%", "マーケットトップへ", "最新ニュース", "category",
-                "編集長のおすすめ", "日本語のビデオ", "最新のビデオ", "次に再生", "解説：", "カエルの着ぐるみ集団", "ニホンザルの赤ちゃん", "米ソフトウエア株", "米フェデックス",
-                "トランプ新関税", "米ニューヨーク", "飼い主探して", "英国のマンデルソン", "ビデオ一覧", "ミラノ・コルティナ五輪", "スポーツ", "category",
-                "スポーツ", "特集 安全保障問題", "category", "オピニオン", "外国為替フォーラム", "Breakingviews", "外国為替", "国内マーケット", "国内",
-                "テクノロジー", "エンタテインメント", "Site Index", "最新", "ホーム", "アーカイブ", "サイトマップ", "ブラウズ", "ライフ", "メディア",
-                "ビデオ", "写真", "ロイターについて", "採用情報", "ロイター・ニュース・エージェンシー", "ブランド・ガイドライン", "リーダーシップチーム", "最新情報を入手",
-                "ニュースメール", "信頼されるメディアとして", "ロイターは、", "ロイターをフォロー", "広告掲載について", "広告掲載ポリシー", "クッキー", "ロイター利用規約", "個人情報保護方針",
-                "著作権", "ウェブアクセシビリティ", "お問い合わせ先", "フィードバック", "クッキーの管理", "掲載の情報は", "© 2026 Reuters", "All rights reserved",
-                "advertisement", "米ＦＲＢ特集", "日銀特集", "政局の行方", "企業・産業", "マクロスコープ", "関連記事", "スポンサードコンテンツ", "sponsored", "ニュース",
-                "検索オプション", "ヘルプ", "設定", "ログイン", "おすすめ", "フォロー中", "日本", "世界", "ローカル", "ビジネス", "科学＆テクノロジー", "エンタメ",
-                "スポーツ", "Bloomberg.com", "もっと見る", "記者/ライター:", "Yahoo!ニュース", "Yahoo!ファイナンス", "
+            # 見出しを抽出（最初の行と仮定）
+            headline = article.split('\n')[0].strip()
+
+            # 年月日に関わる情報を抽出
+            date_info = re.findall(r'\d{4}年\d{1,2}月\d{1,2}日|\d{1,2}日前|\d{1,2}時間前|\d{1,2}分前|昨日|今日|明日|([A-Za-z]+\.?)?\s*\d{1,2},\s*\d{4}|[午前|午後] \d{1,2}:\d{2} UTC', article)  # 修正点：UTCのパターンを追加
+            date_info = [d.strip() for d in date_info]
+            date_info = list(filter(None, date_info))  # 空文字列を削除
+
+            # 英字を日本語に翻訳
+            headline = translate_to_japanese(headline)
+            media_category = translate_to_japanese(media_category)
+
+            # 結果を格納
+            results.append({
+                '媒体・分野': media_category,
+                '記事の見出し': headline,
+                '年月日に関わる情報': date_info
+            })
+    
+    return results
+
+# 使用例
+csv_file_path = "news.csv"  # CSVファイルのパス
+with open(csv_file_path, 'r', encoding='utf-8') as file:
+    news_text = file.read()
+
+extracted_data = extract_news_data(news_text)
+
+# DataFrameを作成し、日本語で列名を指定
+df = pd.DataFrame(extracted_data)
+
+# DataFrameをExcelファイルとして保存
+excel_file_path = "extracted_news_data.xlsx"
+df.to_excel(excel_file_path, index=False)
+
+print(f"抽出されたデータは、Excelファイル '{excel_file_path}' に保存されました。")
+```
+
+**コードの説明：**
+
+1.  **翻訳関数 (translate\_to\_japanese):**
+    *   英単語を簡単な辞書に基づいて日本語に翻訳します。必要に応じて、より高度な翻訳API（Google Translate APIなど）を使用してください。
+2.  **データ抽出関数 (extract\_news\_data):**
+    *   **媒体・分野での分割:**　指定されたパターンでテキストを分割します。
+    *   **記事ごとの分割:** 抽出された記事内容を、改行コードに基づいて分割します。ただし、引用符で囲まれた部分は無視します。
+    *   **ノイズデータの削除:** 記事内容にノイズデータが含まれている場合、その記事をスキップします。
+    *   **記事の見出し抽出:** 分割された各記事から、最初の行を見出しとして抽出します。
+    *   **年月日に関わる情報抽出:** 正規表現を使用して、日付、時間、経過時間（例：\~日前）に関連する情報を抽出します。
+    *   **英語を日本語に翻訳:** 見出しと媒体・分野情報を翻訳関数に通します。
+    *   **結果の格納:** 抽出された情報を辞書に格納し、結果リストに追加します。
+3.  **メイン処理:**
+    *   CSVファイルを読み込み、その内容を `news_text` に格納します。
+    *   `extract_news_data` 関数を呼び出し、抽出されたデータを `extracted_data` に格納します。
+    *   抽出されたデータをpandas DataFrameに変換し、Excelファイルとして保存します。
+
+**使用方法：**
+
+1.  上記のPythonコードを保存します（例：`news_extractor.py`）。
+2.  `news.csv` ファイルと同じディレクトリに `news_extractor.py` を配置します。
+3.  ターミナルまたはコマンドプロンプトで、`python news_extractor.py` を実行します。
+4.  抽出されたデータを含む `extracted_news_data.xlsx` ファイルが同じディレクトリに作成されます。
+
+**その他：**
+
+*   より正確な翻訳が必要な場合は、Google Translate APIなどの翻訳サービスを使用してください。
+*   正規表現は、日付や時間の形式に合わせて調整してください。
+*   ノイズデータは、必要に応じてリストに追加してください。
+*   大規模なデータを処理する場合は、メモリ使用量を最適化するために、チャンクでファイルを読み込むことを検討してください。
+*   抽出するデータの構造が複雑な場合は、Beautiful Soupなどのライブラリを使用してHTMLを解析することを検討してください。
+*   データフレームをxlsx形式で保存するために、`openpyxl` ライブラリをインストールする必要がある場合があります。`pip install openpyxl` でインストールできます。
+*   出力するデータの形式（Excel、CSV、JSONなど）は、必要に応じて変更してください。
+*   `encoding='utf-8'` を指定してファイルを読み込むことで、文字コードの問題を回避します。
+*   `ExcelWriter` オブジェクトを使用して、複数のシートにデータを書き込むことができます。
+
+このコードは、提供されたテキストに基づいて、必要な情報を抽出し、整形して出力するように設計されています。必要に応じて、このコードを調整してください。
