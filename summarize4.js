@@ -4,13 +4,14 @@ const path = require('path');
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// --- リトライ（429対策） ---
 async function callWithRetry(fn, maxRetries = 5) {
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn();
     } catch (e) {
       if (e.status === 429 && i < maxRetries - 1) {
-        const wait = Math.pow(2, i + 1) * 1000; // 2s, 4s, 8s, 16s, 32s
+        const wait = Math.pow(2, i + 1) * 1000;
         console.log(`Rate limited (429). Retrying in ${wait / 1000}s... (${i + 1}/${maxRetries})`);
         await new Promise(r => setTimeout(r, wait));
       } else {
@@ -20,99 +21,259 @@ async function callWithRetry(fn, maxRetries = 5) {
   }
 }
 
+// --- 英文検出：日本語文字が3文字未満 かつ 英単語が3語以上ある行 ---
+function needsTranslation(line) {
+  if (!line.trim() || line.startsWith('●')) return false;
+
+  // メタ情報を除去（媒体名・日付・番号）
+  const cleaned = line
+    .replace(/[（(][^)）]*[)）]/g, '')
+    .replace(/\d{4}\/\d{2}\/\d{2}/g, '')
+    .replace(/^\d+\.\s*/, '')
+    .replace(/^\*\s*/, '')
+    .trim();
+
+  if (cleaned.length < 10) return false;
+
+  // 日本語文字（ひらがな・カタカナ・漢字）が3文字以上あれば日本語見出し
+  const japaneseChars = (cleaned.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
+  if (japaneseChars >= 3) return false;
+
+  // 2文字以上の英単語が3語以上あり、平均語長が3超なら英文と判定
+  const asciiWords = cleaned.replace(/[^a-zA-Z\s]/g, '').trim().split(/\s+/).filter(w => w.length >= 2);
+  if (asciiWords.length < 3) return false;
+  const avgLen = asciiWords.reduce((s, w) => s + w.length, 0) / asciiWords.length;
+  return avgLen > 3;
+}
+
+// --- セクション解析（順序保持） ---
+function parseOrderedSections(text, markerRegex) {
+  const lines = text.split('\n');
+  const sections = [];
+  let current = null;
+
+  for (const line of lines) {
+    const m = line.match(markerRegex);
+    if (m) {
+      current = { name: m[1].trim(), header: line, lines: [] };
+      sections.push(current);
+    } else if (current) {
+      current.lines.push(line);
+    }
+    // セクション開始前の行は無視（summary2ではありえない）
+  }
+  return sections;
+}
+
+// --- 表記フォーマット修正 ---
+function fixArticleLine(line) {
+  let f = line;
+
+  // 半角カッコ→全角カッコ（媒体名部分）
+  f = f.replace(/\(([^)]+)\)(?=\s*\d{4}\/)/g, '（$1）');
+
+  // 日付（yyyy/mm/dd）が媒体カッコより前にある場合→入れ替え
+  f = f.replace(
+    /(\d{4}\/\d{2}\/\d{2})\s*（([^）]+)）/,
+    '（$2）$1'
+  );
+
+  // 日付の後ろに「等」が残っている場合→カッコ内に移動
+  f = f.replace(
+    /（([^）]+)）(\d{4}\/\d{2}\/\d{2})\s*等\s*$/,
+    (_, media, date) => `（${media}等）${date}`
+  );
+
+  // 日付の後ろに余計な文字がある場合→除去
+  f = f.replace(/(\d{4}\/\d{2}\/\d{2})\s+[^\d\s].+$/, '$1');
+
+  // 媒体4社以上→先頭3社＋等に集約
+  f = f.replace(/（([^）]+)）/, (match, inner) => {
+    const hasEtc = inner.endsWith('等');
+    const names = inner.replace(/等$/, '').split('、').map(m => m.trim()).filter(m => m);
+    if (names.length > 3) {
+      return `（${names.slice(0, 3).join('、')}等）`;
+    }
+    return match;
+  });
+
+  return f;
+}
+
+// --- summary2カテゴリー → summary1カテゴリーの対応表 ---
+const CAT_MAP = {
+  'ロイター': 'ロイター',
+  'ブルームバーグ': 'ブルームバーグ',
+  'BBC': 'BBC',
+  'NYタイムズ': 'NYタイムズ',
+  'WSJ': 'WSJ',
+  '日経': '日経',
+  '時事': '時事',
+  'yahoo': 'yahoo',
+  'AI関連': 'AI',
+  '2ch': '2ch',
+};
+
+// --- 各カテゴリーの最低記事数 ---
+const MIN_ARTICLES = {
+  '重要ニュース': 10,
+  '経済ニュース': 10,
+  '国内ニュース': 5,
+  '海外ニュース': 5,
+  'その他ニュース': 5,
+  'ロイター': 5,
+  'ブルームバーグ': 5,
+  'BBC': 5,
+  'NYタイムズ': 5,
+  'WSJ': 5,
+  '日経': 5,
+  '時事': 5,
+  'yahoo': 5,
+  'AI関連': 5,
+  '2ch': 5,
+};
+
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-  const csvData = fs.readFileSync('summary2.txt', 'utf8');
+  const summary2 = fs.readFileSync('summary2.txt', 'utf8');
+  const summary1 = fs.readFileSync('summary1.txt', 'utf8');
 
-  const prompt = `
-    # ニュースまとめ情報を最終チェックします。要件は2点のみです。それ以外のことはしないように。
-    
-    ## 要件1
-    1、入力文書はニュース見出し、媒体、時系列をカテゴリー別に分けたもの。これら中には英文が混じっている可能性がある。これを解決する。
-    2，英文は日本語訳にする。英文がある場合は前工程での処理ミスなので、必ずこの翻訳処理をする。日本で一般的な固有名詞は英語のままでよい。
-    3，英文が混じっている場合に日本語訳にする。これ以外の部分については、そのまま出力する。
-    ## 要件2
-    1、前工程での処理ミスにより、媒体名が（）の外に記述されている場合がある。この場合は媒体名を（）の中に並列して記す。（ロイター、日経、WSJ等）。3媒体以上の場合は等を付けて、それ以降を省略する。
-    2、前工程での処理ミスにより、「記事見出し」（媒体）年月日　の並び順が崩れている場合がある。その場合は修正する。
+  // セクション解析
+  const s2Sections = parseOrderedSections(summary2, /^●([^●]+)●$/);
+  const s1Sections = parseOrderedSections(summary1, /^●●([^●]+)●●$/);
 
-    ## 表記例
-    ダメな表記例：Don't break up NewJeans and I'll forgo $18m payout, says ex-K-pop boss（BBC）2026/02/25
-    ダメな表記例：トランプ大統領、関税を15％に引き上げ(ロイター、WSJ、日経、NYタイムズ) 2026/02/26
-    ダメな表記例：トランプ大統領、関税を15％に引き上げ(ロイター、日経) 2026/02/26 等
-    ダメな表記例：トランプ大統領、関税を15％に引き上げ2026/02/24
-    正しい表記例：トランプ大統領、関税を15％に引き上げ(ロイター、WSJ、日経等) 2026/02/26
-    
-    ## 最終チェック
-    成果物のみを示すこと。私信や報告は一切不要。「はい、承知いたしました。以下にニュースリストを分析し、厳選したニュースとまとめを提示します。」「上記リストを翻訳しました。」等という文言は不要。提示してはならない。
-    媒体名と年月日がない記事見出しは絶対にない。媒体名は必ず（）に入る。年月日の後ろに文字は絶対にこない。
-    英文は絶対にない。日本語訳を必ずすること。
+  // summary1のカテゴリー別記事を辞書化
+  const s1Map = {};
+  for (const sec of s1Sections) {
+    s1Map[sec.name] = sec.lines.filter(l => /^\*\s/.test(l));
+  }
 
-    ## 表記法則、構成
-    ※「はい、承知いたしました。以下にニュースリストを分析し、厳選したニュースとまとめを提示します。」この文言は不要！削除すること。提示してはならない。
-    ※以下のカテゴリー配置や順番を壊してはならない。余計なものを足したり、カテゴリーを減らすのは厳禁。
-    
-    ●コメント(Gemini)●
-    国内では○○、海外では●●●、○○が話題となりました。 ～省略～国内株式市場では●●●が〇しました。
-  
-    ●重要ニュース●
-    1. 記事見出し（ロイター、ブルームバーグ、BBC等）2026/02/20
-    ～省略～10個のニュースを選択
-   10. 記事見出し（日経、NYタイムス、BBC）2026/02/20
+  // ===== Step 1: 英文行の検出・翻訳 =====
+  const englishEntries = [];
+  for (let si = 0; si < s2Sections.length; si++) {
+    for (let li = 0; li < s2Sections[si].lines.length; li++) {
+      if (needsTranslation(s2Sections[si].lines[li])) {
+        englishEntries.push({ si, li, line: s2Sections[si].lines[li] });
+      }
+    }
+  }
 
-    ●経済ニュース●
-    1.記事見出し（ブルームバーグ、BBC）2026/02/20
-    ～省略～10個のニュースを選択
-   10. 記事見出し（日経、NYタイムス、BBC）2026/02/20
-    ●国内ニュース●
-    ～省略～5個のニュースを選択
-    ●海外ニュース●
-    ～省略～5個のニュースを選択
-    ●その他ニュース●
-    ～省略～5個のニュースを選択
-    
-    ●ロイター●
-    1.記事見出し（ロイター）2026/02/20
-    ～省略～5個のニュースを選択
-    ●ブルームバーグ●
-    1.記事見出し（ブルームバーグ）2026/02/20
-    ～省略～5個のニュースを選択
-    ●BBC●
-    1.記事見出し（BBC）2026/02/20
-    ～省略～5個のニュースを選択
-    ●NYタイムズ●
-    1.記事見出し（NYタイムズ）2026/02/20
-    ～省略～5個のニュースを選択
-    ●WSJ●
-    1.記事見出し（wsj）2026/02/20
-    ～省略～5個のニュースを選択
-    ●日経●
-    1.記事見出し（日経）2026/02/20
-    ～省略～5個のニュースを選択
-    ●時事●
-    1.記事見出し（時事）2026/02/20
-    ～省略～5個のニュースを選択
-    ●yahoo●
-    1.記事見出し（yahoo）2026/02/20
-    ～省略～5個のニュースを選択
-    ●AI関連●
-    1.記事見出し（AI）2026/02/20
-    ～省略～5個のニュースを選択
-    ●2ch●
-    1.記事見出し（2ch）2026/02/20
-    ～省略～5個のニュースを選択
+  if (englishEntries.length > 0) {
+    console.log(`[Step1] ${englishEntries.length}件の英文行を翻訳します...`);
+    englishEntries.forEach(e => console.log(`  -> ${e.line.substring(0, 80)}...`));
 
-    ## 読者のことを考えて編集をする。あなたの思い込みを反映してはならない。読者は日本人なので日本語で全ての記事見出しを提示する。見やすくするために要件に則って表記構成せねばならない。以上。
+    const prompt = `以下のニュース見出しを日本語に翻訳してください。
+- 各行の番号・（媒体名）・日付はそのまま残し、見出し部分のみ翻訳
+- 日本で一般的な固有名詞（AI、BBC、FBI等）は英語のまま可
+- 翻訳結果のみを行ごとに出力。説明不要。
 
-  
-    リスト：
-    ${csvData}
-  `;
+${englishEntries.map(e => e.line).join('\n')}`;
 
-  const result = await callWithRetry(() => model.generateContent(prompt));
-  const summaryText = result.response.text().replace(/[【】]/g, '');
-  fs.writeFileSync('summary2.txt', summaryText);
+    const result = await callWithRetry(() => model.generateContent(prompt));
+    const translated = result.response.text().trim().split('\n');
 
-  // warehouse フォルダに年月日時刻のファイル名で保存
+    for (let i = 0; i < englishEntries.length; i++) {
+      if (translated[i] && translated[i].trim()) {
+        const { si, li } = englishEntries[i];
+        s2Sections[si].lines[li] = translated[i].trim();
+        console.log(`  翻訳: ${translated[i].trim().substring(0, 60)}...`);
+      }
+    }
+  } else {
+    console.log('[Step1] 英文行なし');
+  }
+
+  // ===== Step 2: 表記フォーマット修正 =====
+  let fixCount = 0;
+  for (const sec of s2Sections) {
+    for (let i = 0; i < sec.lines.length; i++) {
+      if (/^\d+\.\s/.test(sec.lines[i])) {
+        const before = sec.lines[i];
+        sec.lines[i] = fixArticleLine(sec.lines[i]);
+        if (before !== sec.lines[i]) fixCount++;
+      }
+    }
+  }
+  console.log(`[Step2] ${fixCount}件の表記を修正`);
+
+  // ===== Step 3: 記事数不足カテゴリーをsummary1から充当 =====
+  for (const sec of s2Sections) {
+    const minCount = MIN_ARTICLES[sec.name];
+    if (!minCount) continue;
+
+    const articleLines = sec.lines.filter(l => /^\d+\.\s/.test(l));
+    const currentCount = articleLines.length;
+    if (currentCount >= minCount) continue;
+
+    // summary1の対応カテゴリーを探す
+    const s1CatName = CAT_MAP[sec.name];
+    if (!s1CatName || !s1Map[s1CatName]) {
+      if (currentCount < minCount) {
+        console.log(`[Step3] ${sec.name}: ${currentCount}/${minCount}件 (summary1に対応カテゴリーなし)`);
+      }
+      continue;
+    }
+
+    const s1Articles = s1Map[s1CatName];
+    const needed = minCount - currentCount;
+
+    // 既存記事の見出しを抽出（重複チェック用）
+    const existingHeadlines = articleLines.map(l =>
+      l.replace(/^\d+\.\s*/, '').replace(/[（(][^)）]*[)）]/g, '').replace(/\d{4}\/\d{2}\/\d{2}/g, '').trim()
+    );
+
+    // 末尾の空行を一旦除去
+    while (sec.lines.length > 0 && sec.lines[sec.lines.length - 1].trim() === '') {
+      sec.lines.pop();
+    }
+
+    let added = 0;
+    for (const s1Art of s1Articles) {
+      if (added >= needed) break;
+
+      // 途中で切れている行はスキップ
+      if (!/\d{4}\/\d{2}\/\d{2}/.test(s1Art)) continue;
+
+      const s1Headline = s1Art
+        .replace(/^\*\s*/, '')
+        .replace(/[（(][^)）]*[)）]/g, '')
+        .replace(/\d{4}\/\d{2}\/\d{2}/g, '')
+        .trim();
+
+      // 重複チェック
+      const isDup = existingHeadlines.some(h =>
+        h === s1Headline || h.includes(s1Headline) || s1Headline.includes(h)
+      );
+      if (isDup) continue;
+
+      const num = currentCount + added + 1;
+      let formatted = s1Art
+        .replace(/^\*\s*/, `${num}. `)
+        .replace(/\(/g, '（')
+        .replace(/\)/g, '）');
+      formatted = fixArticleLine(formatted);
+
+      sec.lines.push(formatted);
+      existingHeadlines.push(s1Headline);
+      added++;
+    }
+
+    if (added > 0) {
+      console.log(`[Step3] ${sec.name}: ${currentCount}→${currentCount + added}件 (+${added} from summary1)`);
+    } else if (currentCount < minCount) {
+      console.log(`[Step3] ${sec.name}: ${currentCount}/${minCount}件 (summary1にも追加候補なし)`);
+    }
+  }
+
+  // ===== 再構築・保存 =====
+  const output = s2Sections.map(sec => {
+    const body = sec.lines.join('\n').trimEnd();
+    return sec.header + '\n' + body;
+  }).join('\n\n').replace(/[【】]/g, '');
+
+  fs.writeFileSync('summary2.txt', output);
+
+  // warehouse保存
   const warehouseDir = path.join(__dirname, 'warehouse');
   if (!fs.existsSync(warehouseDir)) fs.mkdirSync(warehouseDir, { recursive: true });
   const now = new Date(Date.now() + 9 * 60 * 60 * 1000);
@@ -121,7 +282,9 @@ async function run() {
     + String(now.getUTCDate()).padStart(2, '0')
     + String(now.getUTCHours()).padStart(2, '0')
     + String(now.getUTCMinutes()).padStart(2, '0');
-  fs.writeFileSync(path.join(warehouseDir, `${ts}.text`), summaryText);
+  fs.writeFileSync(path.join(warehouseDir, `${ts}.text`), output);
+
+  console.log('[完了] summary2.txt を更新しました');
 }
 
 run();
