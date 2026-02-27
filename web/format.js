@@ -111,10 +111,12 @@ try {
             margin-bottom: 5px;
         }
         .container {
-            width: 960px;
+            max-width: 960px;
+            width: 100%;
         }
         .container img {
-            width: 960px;
+            max-width: 960px;
+            width: 100%;
             height: auto;
         }
         .category {
@@ -128,14 +130,6 @@ try {
         }
         .news-item {
             margin-bottom: 2px;
-        }
-        @media screen and (max-width: 959px) {
-            .container {
-                width: 100%;
-            }
-            .container img {
-                width: 100%;
-            }
         }
     </style>
 </head>
