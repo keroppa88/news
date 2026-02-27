@@ -90,6 +90,9 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>News Summary</title>
     <style>
         body {
@@ -139,7 +142,7 @@ try {
 <body>
     <div class="container">
         <div class="update-time">${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })} 更新</div>
-        <div style="margin-bottom: 10px;"><img src="wordcloud.jpg" alt="Word Cloud"></div>
+        <div style="margin-bottom: 10px;"><img src="wordcloud.jpg?t=${Date.now()}" alt="Word Cloud"></div>
         ${htmlBody}
     </div>
 </body>
