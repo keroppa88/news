@@ -144,6 +144,7 @@ try {
         <div class="update-time">${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })} 更新</div>
         <div style="margin-bottom: 10px;"><img src="wordcloud.jpg?t=${Date.now()}" alt="Word Cloud"></div>
         ${htmlBody}
+        <div style="color: #999; font-size: 9px; margin-top: 10px;">更新：毎朝8時頃　内容：見出し情報を取得してAIが抽出編集ランク付け。</div>
     </div>
 </body>
 </html>
