@@ -30,6 +30,23 @@ function main() {
 
   fs.writeFileSync('news.csv', result.join('\n'));
   console.log(`[summarize0] ${lines.length}行 → ${result.length}行 (${removed}行除去)`);
+
+  // news.csv を news1.csv と news2.csv に分割する
+  // ●●NYタイムズ●● の手前までを news1.csv、以降を news2.csv に出力する
+  const cleanLines = result;
+  const splitIndex = cleanLines.findIndex(line => line.trim() === '●●NYタイムズ●●');
+
+  if (splitIndex === -1) {
+    console.log('[summarize0] ●●NYタイムズ●● マーカーが見つかりませんでした。分割をスキップします。');
+    return;
+  }
+
+  const news1Lines = cleanLines.slice(0, splitIndex);
+  const news2Lines = cleanLines.slice(splitIndex);
+
+  fs.writeFileSync('news1.csv', news1Lines.join('\n'));
+  fs.writeFileSync('news2.csv', news2Lines.join('\n'));
+  console.log(`[summarize0] news1.csv: ${news1Lines.length}行, news2.csv: ${news2Lines.length}行`);
 }
 
 function shouldRemove(s, originalLine) {
