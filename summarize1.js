@@ -5,7 +5,7 @@ const path = require('path');
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 async function run() {
-  const csvData = fs.readFileSync('news.csv', 'utf8');
+  const csvData = fs.readFileSync('news1.csv', 'utf8');
 
   const today = new Date().toISOString().split('T')[0]; // UTC基準の当日日付
 
