@@ -45,7 +45,7 @@ async function run() {
   `;
 
   const result = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-4.1-mini",
     messages: [{ role: "user", content: prompt }],
   });
   const raw = result.choices[0].message.content;

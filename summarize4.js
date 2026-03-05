@@ -223,7 +223,7 @@ async function run() {
 ${englishEntries.map(e => e.line).join('\n')}`;
 
     const result = await callWithRetry(() => openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-4.1-mini",
       messages: [{ role: "user", content: prompt }],
     }));
     const translated = result.choices[0].message.content.trim().split('\n');
