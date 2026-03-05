@@ -1,8 +1,8 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const OpenAI = require("openai");
 const fs = require('fs');
 const path = require('path');
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // --- リトライ（429対策） ---
 async function callWithRetry(fn, maxRetries = 5) {
@@ -188,7 +188,6 @@ const MIN_ARTICLES = {
 };
 
 async function run() {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   const summary2 = fs.readFileSync('summary2.txt', 'utf8');
   const summary1 = fs.readFileSync('summary1.txt', 'utf8');
 
@@ -223,8 +222,11 @@ async function run() {
 
 ${englishEntries.map(e => e.line).join('\n')}`;
 
-    const result = await callWithRetry(() => model.generateContent(prompt));
-    const translated = result.response.text().trim().split('\n');
+    const result = await callWithRetry(() => openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+    }));
+    const translated = result.choices[0].message.content.trim().split('\n');
 
     for (let i = 0; i < englishEntries.length; i++) {
       if (translated[i] && translated[i].trim()) {
