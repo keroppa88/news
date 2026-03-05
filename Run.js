@@ -86,6 +86,27 @@ async function main() {
     }
   }
 
+  // summarize スクリプトを順番に実行
+  const summarizeFiles = [
+    'summarize0.js',
+    'summarize1.js',
+    'summarize1.5.js',
+    'summarize2.js',
+    'summarize3.js',
+    'summarize4.js',
+  ].map(f => path.join(BASE_DIR, f)).filter(f => fs.existsSync(f));
+
+  if (summarizeFiles.length > 0) {
+    log(`${summarizeFiles.length} 個のsummarizeスクリプトを順番に実行します。`);
+    for (let i = 0; i < summarizeFiles.length; i++) {
+      await runScript(summarizeFiles[i]);
+      if (i < summarizeFiles.length - 1 && INTERVAL_MS > 0) {
+        log(`${INTERVAL_MS / 1000}秒待機中...`);
+        await sleep(INTERVAL_MS);
+      }
+    }
+  }
+
   log('=== すべてのスクリプトの実行を終了しました ===');
 }
 
