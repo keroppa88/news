@@ -1,0 +1,4 @@
+news.csvをsummarize0.jsがゴミ除去整理してnews1.csvとnews2.csvに分割
+summarize1.jsがnews1.csvを読んでsummary1.txtに出力
+summarize1.5.jsはnews2.csvを読んでsummary1.txtに出力を追記
+summary1.txtを
