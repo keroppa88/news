@@ -1,11 +1,12 @@
-const OpenAI = require("openai");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs');
 const path = require('path');
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
-  const csvData = fs.readFileSync('news1.csv', 'utf8');
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const csvData = fs.readFileSync('news.csv', 'utf8');
 
   const today = new Date().toISOString().split('T')[0]; // UTC基準の当日日付
 
@@ -23,17 +24,25 @@ async function run() {
     5. 「〇時間前」「〇分前」の記事は当日の記事として扱う。
     6. 「記事の見出し」＋「媒体・分野」＋「年月日」の形にまとめられない不明瞭な情報は削除する。
     7. 下記に示した●●で囲まれた媒体・分野ごとに記事を並べる。同一媒体内の重複は1つにまとめる。
-    8. 全ての媒体・分野セクション（ロイター、ブルームバーグ、BBC、日経、時事）を必ず出力すること。途中で出力を打ち切らないこと。
+    8. 全ての媒体・分野セクション（ロイター、ブルームバーグ、BBC、NYダイムズ、WSJ、日経、時事、yahoo、AI、2ch）を必ず出力すること。途中で出力を打ち切らないこと。
+    9，●●2ch●●のニュースを省略しないこと。2chカテゴリーのニュースの媒体は(2ch)とする。
     10. 各セクションの時刻設定と最大記事本数、注意事項を提示する。並び順も以下の記述に従う。以下の例にある/以降は注意、要件。
-
+    
     ●●ロイター●●　/日本時間（UTC+9） 「ロイター、ロイタービジネス、ロイター経済、ロイター市場」の記事を統合。 40本以上の記事は提示しない。
     ●●ブルームバーグ●●　/日本時間（UTC+9） 上から順に25本の記事を提示する。25本以上の記事は提示しない。
     ●●BBC●●　/UTC 上から順に25本の記事を提示する。25本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。
+    ●●NYタイムズ●●　/UTC上から順に25本の記事を提示する。25本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。
+    ●●WSJ●●　/日本時間（UTC+9） 上から順に20本の記事を提示する。20本以上の記事は提示しない。
     ●●日経●●　/●●国内etc●●から抽出　日本時間（UTC+9） 上から順に10本の記事を提示する。10本以上の記事は提示しない。
     ●●時事●●　/●●国内etc●●から抽出　日本時間（UTC+9） 上から順に10本の記事を提示する。10本以上の記事は提示しない。
-
-
+    ●●yahoo●●　/日本時間（UTC+9） ●●国内etc●●から抽出　上から順に20本の記事を提示する。20本以上の記事は提示しない。
+    ●●AI●●　/日本時間（UTC+9） 上から順に10本の記事を提示する。10本以上の記事は提示しない。
+    ●●2ch●●　/日本時間（UTC+9） 上から順に20本の記事を提示する。20本以上の記事は提示しない。
+    
     ■補足
+    - 国内etcセクションはCSV形式（カンマ区切り）で「日経1」「時事1」「yahoo1」等のラベルの後に続く文字列が見出し。
+    - ヤフーセクション（●●ヤフー●●）はYahoo!ニュースのトピックス一覧。「国内」「国際」「経済」「エンタメ」「スポーツ」「IT」「科学」「地域」等のカテゴリ別に短い見出しが並ぶ。各トピック名が見出し。年月日は当日を用いる。媒体が不明の場合は「yahoo」とする。「もっと見る」「トピックス一覧」等のナビ要素は無視する。「あなたにおすすめ」以降の記事も含め、記事見出しと判断できるものは全て抽出すること。
+    - AI関連セクション（●●AI●●）はGoogleニュースのAI関連記事。「〇時間前」「〇日前」「昨日」等の時間情報から日付を推測する。「もっと見る」「検索オプション」等のナビ要素は無視する。
     - 各媒体内は日付の新しい順に並べる。
     - 読者個人を教化するような自己啓発的な論説は排除。事実ベース、社会の未来像、金融市場・経済の先行きに関する報道を重視。
     - 【】この記号は使わない。この記号が混じった文章は、【】のみを削除する。
@@ -41,16 +50,13 @@ async function run() {
     ■最終確認
     かなりの確率で要件を守った出力ができていないはずです。もう一度、要件を守れているか確認、修正をしてください。
     とくにニュース見出し記事の不足、見出し記事・媒体・年月日の並び破綻ミスが多いです。要確認、修正。
-
+ 
     リスト：
     ${csvData}
   `;
 
-  const result = await openai.chat.completions.create({
-    model: "gpt-4.1-mini",
-    messages: [{ role: "user", content: prompt }],
-  });
-  const summaryText = result.choices[0].message.content.replace(/[【】]/g, '');
+  const result = await model.generateContent(prompt);
+  const summaryText = result.response.text().replace(/[【】]/g, '');
   fs.writeFileSync('summary1.txt', summaryText);
 }
 

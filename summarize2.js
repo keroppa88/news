@@ -1,10 +1,11 @@
-const OpenAI = require("openai");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs');
 const path = require('path');
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function run() {
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   const csvData = fs.readFileSync('summary1.txt', 'utf8');
 
   const prompt = `
@@ -27,10 +28,10 @@ async function run() {
     ## 表記法則
     ※「はい、承知いたしました。以下にニュースリストを分析し、厳選したニュースとまとめを提示します。」この文言は不要！削除すること。提示してはならない。
     ※以下の表記例、カテゴリーの配置、種類を守ること。カテゴリーの順番を変えたり減らしたりするのは厳禁。
-
-    ●コメント(ChatGPT)●
+   
+    ●コメント(Gemini)●
     国内では○○、海外では●●●、○○が話題となりました。 ～省略～国内株式市場では●●●が〇しました。
-
+  
     ●重要ニュース●
     1. 記事見出し（ロイター、ブルームバーグ、BBC等）2026/02/20
     ～省略～10個のニュースを選択
@@ -46,7 +47,7 @@ async function run() {
     ～省略～5個のニュースを選択
     ●その他ニュース●
     ～省略～5個のニュースを選択
-
+    
     ●ロイター●
     1.記事見出し（ロイター）2026/02/20
     ～省略～5個のニュースを選択
@@ -77,16 +78,13 @@ async function run() {
     ●2ch●
     1.記事見出し（2ch）2026/02/20
     ～省略～5個のニュースを選択
-
+  
     リスト：
     ${csvData}
   `;
 
-  const result = await openai.chat.completions.create({
-    model: "gpt-4.1-mini",
-    messages: [{ role: "user", content: prompt }],
-  });
-  const summaryText = result.choices[0].message.content.replace(/[【】]/g, '');
+  const result = await model.generateContent(prompt);
+  const summaryText = result.response.text().replace(/[【】]/g, '');
   fs.writeFileSync('summary2.txt', summaryText);
 
   // warehouse フォルダに年月日時刻のファイル名で保存
