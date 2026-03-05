@@ -47,25 +47,25 @@ jobs:
       - name: Pre-filter news.csv (remove noise)
         run: node summarize0.js
 
-      - name: Run Gemini Analysis (Step 1 - Extract headlines)
+      - name: Run OpenAI Analysis (Step 1 - Extract headlines)
         run: node summarize1.js
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: Run Gemini Analysis (Step 2 - Classify and summarize)
+      - name: Run OpenAI Analysis (Step 2 - Classify and summarize)
         run: node summarize2.js
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: Run Gemini Analysis (Step 3 - Extract keywords for wordcloud)
+      - name: Run OpenAI Analysis (Step 3 - Extract keywords for wordcloud)
         run: node summarize3.js
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: Run Gemini Analysis (Step 4 - Fix formatting and supplement)
+      - name: Run OpenAI Analysis (Step 4 - Fix formatting and supplement)
         run: node summarize4.js
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
       - name: Setup Python
         uses: actions/setup-python@v5

@@ -1,11 +1,10 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const OpenAI = require("openai");
 const fs = require('fs');
 const path = require('path');
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 async function run() {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   const csvData = fs.readFileSync('summary1.txt', 'utf8');
 
   const prompt = `
@@ -45,9 +44,12 @@ async function run() {
     ${csvData}
   `;
 
-  const result = await model.generateContent(prompt);
-  const raw = result.response.text();
-  // Clean: remove markdown code fences if Gemini wraps output
+  const result = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [{ role: "user", content: prompt }],
+  });
+  const raw = result.choices[0].message.content;
+  // Clean: remove markdown code fences if output is wrapped
   const cleaned = raw
     .replace(/```[a-z]*\n?/gi, '')
     .replace(/```/g, '')
