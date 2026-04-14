@@ -55,6 +55,16 @@ async function run() {
 
   fs.writeFileSync('summary3.txt', cleaned);
 
+  // Archive to warehouse with date-based filename (e.g. 20260410weight.txt)
+  const today = new Date();
+  const dateStr = today.getFullYear().toString()
+    + String(today.getMonth() + 1).padStart(2, '0')
+    + String(today.getDate()).padStart(2, '0');
+  const warehousePath = path.join('warehouse', `${dateStr}weight.txt`);
+  fs.mkdirSync('warehouse', { recursive: true });
+  fs.writeFileSync(warehousePath, cleaned);
+  console.log(`Archived to ${warehousePath}`);
+
   const lines = cleaned.split('\n').filter(l => l.trim());
   console.log(`summary3.txt generated: ${lines.length} keywords`);
   console.log('Top 10:');
