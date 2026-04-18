@@ -6,6 +6,9 @@ on:
     # 22:30 UTC = 07:30 JST (日本時間 朝7時30分)
     - cron: '30 22 * * *'
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
   pages: write
