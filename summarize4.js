@@ -188,7 +188,7 @@ const MIN_ARTICLES = {
 };
 
 async function run() {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
   const summary2 = fs.readFileSync('summary2.txt', 'utf8');
   const summary1 = fs.readFileSync('summary1.txt', 'utf8');
 
