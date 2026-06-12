@@ -1,224 +1,172 @@
-## 記事見出し一覧
-
-**●●ロイター●●**
-*   スペースX、IPO価格を1株135ドルに設定－史上最大規模(Bloomberg) 2026/06/12
-*   米株反発、半導体銘柄に買い戻し－原油相場は不安定な値動き(Bloomberg) 2026/06/12
-*   ECBは追加引き締めが必要となる公算大、インフレ抑制へ－IMFリポート 2026/06/12
-*   ECBが利上げ決定－中銀預金金利2.25%に（Bloomberg） 2026/06/12
-*   ヒーリー英国防相が辞任、予算巡り財務省と対立－政権にさらなる打撃(Bloomberg) 2026/06/12
-*   米新規失業保険申請、2月以来の高水準－夏季休暇や祝日を反映か 2026/06/12
-*   高市首相、7月の原油調達は前年並みに－28年3月まで安定供給可能(Bloomberg) 2026/06/12
-*   米アポロ、ソフト投資案件をAIリスクで選別-12〜14分野に区分し評価（TBS CROSS DIG with Bloomberg） 2026/06/12
-*   米国市況株・国債が下落、中東情勢緊迫で原油高－テック株に売り(Bloomberg) 2026/06/12
-*   ヒーリー英国防相が辞任、予算巡り財務省と対立－政権にさらなる打撃 2026/06/12
-*   米国株は下落して開始、中東緊張を意識－穏やかなCPIで一定の安心感 2026/06/12
-*   サッカーW杯、米代表強化にヘッジファンド界が「愛国心」マネー拠出（TBS CROSS DIG with Bloomberg） 2026/06/12
-*   ミレニアム、クレジット投資ファンドのマイコーに8億ドル配分 2026/06/12
-*   ソフトバンクG、OpenAI株担保の60億ドル融資計画の協議停滞－関係者 2026/06/12
-*   シンガポール少子化対策、出産促進から方針転換－過去最低の出生率で 2026/06/12
-*   台湾、中国向けAI半導体輸出規制の強化検討－米国との足並み合わせ 2026/06/12
-*   米家計純資産、1－3月の伸び1年ぶり低水準－株安響く、不動産は上昇（Bloomberg） 2026/06/12
-*   欧州中銀、2年9カ月ぶり利上げの公算－イラン開戦後では主要中銀で初(Bloomberg) 2026/06/12
-*   中国がEUとのハイレベル会合を突然キャンセル、理由示さず－FT紙(Bloomberg) 2026/06/12
-*   ECB、中銀預金金利2.25%に引き上げ－インフレリスクの拡大を懸念(Bloomberg) 2026/06/12
-*   スペースX熱狂でAI株離れ、個人投資家の資金シフト鮮明-IPOにらみ（TBS CROSS DIG with Bloomberg） 2026/06/12
-*   NTTグローバルデータセンター、米事業資金10億ドル調達を検討－関係者（Bloomberg） 2026/06/12
-*   トランプ氏、米軍は今夜イラン攻撃へ－「遠くない将来」カーグ島掌握も（Bloomberg） 2026/06/12
-*   任天堂株が大幅安、キラータイトル欠く新作発表に期待外れとの見方 2026/06/12
-*   米PPIは3年半ぶりの大幅な伸び、前年比6.5%上昇－インフレ圧力強まる 2026/06/12
-
-**●●ブルームバーグ●●**
-*   スペースXのIPO、個人投資家からの需要は700億ドル超－関係者 2026/06/12
-*   米スターバックスが日本事業の売却など検討、5000億円規模も－関係者 2026/06/12
-*   米株反発、半導体銘柄に買い戻し－原油相場は不安定な値動き 2026/06/12
-*   アリババとJDが株価下落、中国当局がEC販促を問題視－虚偽広告を指摘 2026/06/12
-*   スペースX、IPO価格を1株135ドルに設定－史上最大規模 2026/06/12
-*   アップル次期iOS、折り畳み式iPhone巡るヒント満載－開発加速を示唆 2026/06/12
-*   欧州中銀、2年9カ月ぶり利上げの公算－イラン開戦後では主要中銀で初 2026/06/12
-*   史上最も高額なW杯、ファンと開催都市に重いコスト 2026/06/12
-*   フジクラ社長、業績計画に｢下振れない｣と強調－AI向け製品で値上げも 2026/06/12
-*   スペースXのIPO、募集の4倍を超える需要集める－関係者 2026/06/12
-*   AI関連銘柄にさらに上昇余地、来年も投資拡大を予想－ゴールドマン 2026/06/12
-*   今月の日銀利上げほぼ確実、最速で10月に追加利上げも－早川元理事 2026/06/12
-*   アドビCFOが退任へ、CEOに続き経営陣の交代発表相次ぐ－時間外で株安 2026/06/12
-*   プライベートクレジット懸念、ブラックロック幹部らが一蹴 2026/06/12
-*   プライベートクレジット格付け、リスク過小評価の可能性－米研究 2026/06/12
-*   タクシー配車GOのIPOに海外勢から20倍の需要、日本株に関心－関係者 2026/06/12
-*   原油下げ拡大、WTI3%近く下落－イランとの合意近いとトランプ氏主張 2026/06/12
-*   イラン、対イスラエル軍事作戦終了を宣言－トランプ氏が双方に要求後 2026/06/12
-*   ECBが利上げ決定－中銀預金金利2.25%に 2026/06/12
-*   ECBは追加引き締めが必要となる公算大、インフレ抑制へ-IMFリポート（TBS CROSS DIG with Bloomberg） 2026/06/12
-*   米株反発、半導体銘柄に買い戻し－原油相場は不安定な値動き 2026/06/12
-*   メタ、マナスとの提携解消に着手－当局の求めに応じ事業やデータ分離(Bloomberg) 2026/06/12
-*   ECBは追加引き締めが必要となる公算大、インフレ抑制へ－IMFリポート 2026/06/12
-*   ECBが利上げ決定－中銀預金金利2.25%に（Bloomberg） 2026/06/12
-*   中国、47兆円投じAIデータセンター建設計画－今後5年間で全国に 2026/06/12
+以下は、ご提示いただいたリストを、指示に基づいてチェック・修正した結果です。
 
 **●●BBC●●**
-*   Trump says deal to end Iran war is close after calling off strikes 2026/06/12
-*   Why the economics makes this the craziest world cup ever 2026/06/12
-*   Elon Musk's SpaceX raises $75bn ahead of record stock market debut 2026/06/12
-*   World Cup kicks off in Mexico with Shakira, dancing, and protests 2026/06/12
-*   El Niño under way and threatens weather extremes, scientists say 2026/06/12
-*   Three red cards - are referees getting tough at this World Cup? 2026/06/12
-*   Cheering for the 'home team' during the World Cup gets complicated for Canadians 2026/06/12
-*   Everything to know about the US men's team at the 2026 World Cup 2026/06/12
-*   Everything to know about Canada's men's team at the 2026 World Cup 2026/06/12
-*   India's 'blue gold' starts a new drinks industry 2026/06/12
-*   More than 50 Iranian military bases damaged in US strikes since start of war, satellite images show 2026/06/12
-*   Police investigate '8647' written in grass on US national mall 2026/06/12
-*   Pope Leo visits Canary Islands to highlight perilous journeys of migrants 2026/06/12
-*   Thai court sentences two men to death over Bangkok shrine bombing 2026/06/12
-*   Three Indian sailors killed in US strike on oil tanker 2026/06/12
-*   Three ships attacked by the US in three days: What we know 2026/06/12
-*   Armed forces minister quits after Healey exit as defence funding row deepens 2026/06/12
-*   Thousands march in Pakistan-administered Kashmir as clashes kill at least 15 2026/06/12
-*   BBC tours UFC arena at White House 2026/06/12
-*   What we learned from Bill Gates' deposition on Epstein 2026/06/12
-*   Fireworks illuminate Barcelona's Sagrada Família during Pope visit 2026/06/12
-*   Historic US-Canada border library gets new Quebec-only entrance 2026/06/12
-*   US President Trump: 'I love the inflation' 2026/06/12
-*   'People can change': Scandal-hit Platner on Maine primary win 2026/06/12
-*   How a knife attack sparked a night of violence in Belfast 2026/06/12
-*   Watch: Residents flee as cars and houses burn in Belfast 2026/06/12
-*   The world's five safest countries for 2026 2026/06/12
-*   Seven ways to trick yourself into eating better 2026/06/12
-*   Opening of long awaited US-Canada bridge delayed 2026/06/12
-*   Toronto police officer killed in raid linked to US consulate shooting 2026/06/12
-*   Trump names new spy chief after pushback over previous pick 2026/06/12
-*   Air testing confirms 'no hazard exists' at Pentagon after lockdown incident 2026/06/12
-*   Air India crash families' year-long battle to identify remains of victims 2026/06/12
-*   Why does the US have Iran's Kharg Island in its sights? 2026/06/12
-*   Nigeria evacuates citizens from South Africa as anti-migrant sentiment rises 2026/06/12
-*   Deadly Sudan drone strike targets funeral procession 2026/06/12
-*   My friends always want to split the bill equally, how do I say no? 2026/06/12
-*   Ryanair investigated over charging parents to sit with children 2026/06/12
-*   Why does your World Cup pint cost so much this time round? 2026/06/12
-*   Who can buy shares in Elon Musk's SpaceX? 2026/06/12
-*   Social media on trial: Four important cases to watch 2026/06/12
-*   Could humanoid robots be heading for the battlefield? 2026/06/12
-*   The gamers taking on the industry to stop it switching off games 2026/06/12
-*   The game-changing tech transforming the World Cup 2026/06/12
-*   EXCLUSIVE: Why Wayne Rooney Thinks Scotland Can Make History 2026/06/12
-*   No assurances Stokes to stay as captain, says Rob Key 2026/06/12
-*   World Cup 2026: South Africa’s captain and Mexico’s ‘curse’ 2026/06/12
-*   Prem play-offs: DOR special 2026/06/12
-*   World Cup 2026 Preview 2026/06/12
-*   Lionesses bound for play-offs as WSL braces for summer transfer shake up! 2026/06/12
-*   World Cup 2026: which of USA, Canada and Mexico will perform best? 2026/06/12
-*   Memories of Mexico '86 2026/06/12
-*   Key considers imposing alcohol ban on England team 2026/06/12
-*   Fatigue? The World Cup players who have had toughest seasons 2026/06/12
-*   Real Madrid bring back Mourinho on three-year deal 2026/06/12
-*   Bangladesh claim first ODI series win over Australia 2026/06/12
-*   What blindside divorce tells us about modern love 2026/06/12
-*   A rare few can fend off HIV. Could scientists find a cure through them? 2026/06/12
-*   The people who are addicted to daydreaming 2026/06/12
-*   Brain freeze reveals a lot about your health 2026/06/12
-*   Weekly quiz: Which Sesame Street character got in trouble with New Yorkers? 2026/06/12
-*   Dani Dyer returns to Strictly a year after pulling out with broken ankle 2026/06/12
-*   Olivia Rodrigo sings about heartbreak but she's already chosen her wedding song 2026/06/12
-*   Anger over Epstein and Andrew fuels festival of 'female anarchy' 2026/06/12
-*   Queer Eye's chef on his favourite meals from around the world 2026/06/12
-*   Holiday divers are helping save sharks in Japan 2026/06/12
-*   Why travellers are exploring Europe after dark 2026/06/12
-*   Five new rules to travel smarter this summer 2026/06/12
-*   The stadium with the world's largest screen built for sports 2026/06/12
-*   The woman 'who beat Disney by a decade' 2026/06/12
-*   10 of the best books of 2026 so far 2026/06/12
-*   Whistler Mother is a US icon - here's why the artist would've hated its success 2026/06/12
-*   'I was told I had months to live. Now I've been born again' 2026/06/12
-*   Inside the Bond villain lair where astronomers live 2026/06/12
-*   'The deep sea will come to me': The diver photographing creatures of the deep 2026/06/12
-*   This trafficked pangolin was destined for a grisly end. Now he's back in the wild 2026/06/12
-*   No males exist in this fish species. How has it survived for 100,000 years? 2026/06/12
-*   The rare casket that reveals Ancient Rome's extreme wealth 2026/06/12
-*   The dangerous trade that shaped an English port 2026/06/12
-*   A mother tiger on a fierce hunt to feed her cubs 2026/06/12
-*   Inside the hidden world of rhino romance 2026/06/12
-*   10 winning pictures from the World Food Photography Awards 2026 2026/06/12
-*   Why Sri Lankans hand out free food to strangers on the side of the road 2026/06/12
-*   The prized Chinese green tea that can cost $8,800 per kilogram 2026/06/12
-*   Which country can claim steak? 2026/06/12
+
+*   トランプ氏、イラン空爆中止後に停戦合意は近いと発言 2026/06/12
+*   史上最も異例なワールドカップとなる経済的要因 2026/06/12
+*   イーロン・マスク氏のスペースX、記録的な株式公開を前に750億ドルの資金調達 2026/06/12
+*   ワールドカップ、メキシコでシャキーラ、ダンス、そして抗議とともに開幕 2026/06/12
+*   エルニーニョ現象が発生し、異常気象の脅威をもたらすと科学者らが指摘 2026/06/12
+*   3度のレッドカード、今ワールドカップで審判は厳しくなっているのか？ 2026/06/12
+*   カナダ人にとってワールドカップでの「ホームチーム」への応援は複雑になる 2026/06/12
+*   2026年ワールドカップにおける米国男子代表について知っておくべきことすべて 2026/06/12
+*   2026年ワールドカップにおけるカナダ男子代表について知っておくべきことすべて 2026/06/12
+*   インドの「ブルーゴールド」が新たな飲料産業を始める 2026/06/12
+*   米国の攻撃により、戦争開始以来50以上のイラン軍事基地が損壊、衛星画像が示す 2026/06/12
+*   警察、米国のナショナルモールで草に書かれた「8647」を捜査 2026/06/12
+*   ローマ教皇レオ、カナリア諸島を訪問し、移民の危険な旅を強調 2026/06/12
+*   タイ裁判所、バンコクの寺院爆破事件で2人の男に死刑判決 2026/06/12
+*   米国の攻撃で3人のインド人船員が死亡 2026/06/12
+*   3日間で3隻の船が米国の攻撃を受ける：我々が知っていること 2026/06/12
+*   ヒーリー氏辞任後、武装部隊大臣も辞任、国防費を巡る論争が深まる 2026/06/12
+*   衝突で少なくとも15人が死亡、パキスタン占領下のカシミールで数千人が行進 2026/06/12
+*   BBC、ホワイトハウスのUFCアリーナを視察 2026/06/12
+*   ビル・ゲイツ氏の証言から学んだこと 2026/06/12
+*   ローマ教皇訪問中、バルセロナのサグラダ・ファミリアを花火が照らす 2026/06/12
+*   歴史的な米加国境の図書館に、ケベック州のみの新たな入り口 2026/06/12
+*   トランプ米大統領：「インフレは好きだ」 2026/06/12
+*   「人は変われる」：スキャンダルに見舞われたプラトナー氏、メイン州予備選で勝利 2026/06/12
+*   ナイフ攻撃がベルファストでの一夜の暴力の発端となった経緯 2026/06/12
+*   監視カメラ映像：ベルファストで車や家が燃える中、住民が避難 2026/06/12
+*   2026年、世界で最も安全な国5選 2026/06/12
+*   食生活を改善するための7つの方法 2026/06/12
+*   長らく待たれていた米加橋の開通が遅延 2026/06/12
+*   トロント警察官、米領事館銃撃事件に関連した捜査で死亡 2026/06/12
+*   トランプ氏、前任者の選出に対する反発を受け、新たな情報長官を指名 2026/06/12
+*   封鎖事件後、ペンタゴンで「危険は存在しない」と空調検査で確認 2026/06/12
+*   エア・インディア墜落事故遺族、犠牲者の遺体特定に1年間の闘い 2026/06/12
+*   なぜ米国はイランのカーグ島を標的にしているのか？ 2026/06/12
+*   反移民感情の高まりを受け、ナイジェリアが南アフリカから市民を避難 2026/06/12
+*   スーダンでのドローン攻撃、葬列を標的に 2026/06/12
+*   友人がいつも割り勘にしたいのですが、どう断ればいいですか？ 2026/06/12
+*   ライアンエアー、子供と座るために親に課金した疑いで調査中 2026/06/12
+*   今回のワールドカップで、あなたのパイントのビールはなぜそんなに高いのですか？ 2026/06/12
+*   イーロン・マスク氏のスペースXの株式を購入できるのは誰ですか？ 2026/06/12
+*   裁判にかけられるソーシャルメディア：注目すべき4つの重要な訴訟 2026/06/12
+*   人間型ロボットは戦場に向かう可能性があるのか？ 2026/06/12
+*   ゲーム業界を「オフ」にするのをやめさせるために戦うゲーマーたち 2026/06/12
+*   ワールドカップを変革するゲームチェンジング技術 2026/06/12
+*   ウェイン・ルーニー、スコットランドが歴史を作れると考える理由 2026/06/12
+*   ストークスがキャプテンに留まる保証はない、とロブ・キーは語る 2026/06/12
+*   ワールドカップ2026：南アフリカのキャプテンとメキシコの「呪い」 2026/06/12
+*   プレミアイーグルス：DOR特別版 2026/06/12
+*   ワールドカップ2026プレビュー 2026/06/12
+*   ライオネセス、プレーオフへ、WSLは夏の移籍市場の激変に備える！ 2026/06/12
+*   ワールドカップ2026：米国、カナダ、メキシコのうちどれが最も活躍するか？ 2026/06/12
+*   メキシコ'86の思い出 2026/06/12
+*   キー、イングランド代表へのアルコール禁止を検討 2026/06/12
+*   疲労？最も過酷なシーズンを過ごしたワールドカップ選手たち 2026/06/12
+*   レアル・マドリード、モウリーニョを3年契約で復帰させる 2026/06/12
+*   バングラデシュ、オーストラリアに対する初のODIシリーズ勝利を主張 2026/06/12
+*   ブラインドサイド離婚が現代の愛について教えてくれること 2026/06/12
+*   HIVを撃退できるごく一部の人々。科学者は彼らを通して治療法を見つけられるか？ 2026/06/12
+*   白昼夢に中毒になっている人々 2026/06/12
+*   脳の凍結があなたの健康について多くのことを明らかにします 2026/06/12
+*   今週のクイズ：どのセサミストリートのキャラクターがニューヨーク市民に叱られたか？ 2026/06/12
+*   ダニ・ダイヤー、足首骨折で棄権してから1年後に「ストリクトリー」に復帰 2026/06/12
+*   オリビア・ロドリゴは失恋について歌うが、すでにウェディングソングを選んでいる 2026/06/12
+*   エプスタインとアンドリューへの怒りが「女性アナキズム」の祭典を煽る 2026/06/12
+*   『Queer Eye』のシェフが、世界中の彼の好きな料理について語る 2026/06/12
+*   ホリデーダイバーたちが日本のサメを救うのを助けている 2026/06/12
+*   旅行者が夜にヨーロッパを探索する理由 2026/06/12
+*   この夏、より賢く旅行するための5つの方法 2026/06/12
+*   スポーツのために建てられた世界最大のスクリーンを持つスタジアム 2026/06/12
+*   「ディズニーを10年先取りした」女性 2026/06/12
+*   2026年上半期のベストブック10冊 2026/06/12
+*   ウィスラー・マザーはアメリカのアイコン - なぜこのアーティストがその成功を憎んだのか 2026/06/12
+*   「数ヶ月しか生きられないと言われた。今、私は生まれ変わった」 2026/06/12
+*   天文学者が住むボンド・ヴィランの隠れ家の中 2026/06/12
+*   「深海が私のもとへ来る」：深海の生き物を撮影するダイバー 2026/06/12
+*   密輸されたセンザンコウは悲惨な最期を迎えるはずだった。今、彼は野生に戻っている 2026/06/12
+*   この魚の種にはオスが存在しない。10万年間生き延びたのはなぜか？ 2026/06/12
+*   古代ローマの極端な富を明らかにする珍しい石棺 2026/06/12
+*   イングランドの港を形成した危険な貿易 2026/06/12
+*   母トラ、子を養うための激しい狩り 2026/06/12
+*   サイのロマンスの隠された世界の中 2026/06/12
+*   ワールドフードフォトグラフィーアワード2026の10の受賞作品 2026/06/12
+*   なぜスリランカ人は道端で旅行者に無料の食べ物を提供するのか 2026/06/12
+*   1キログラムあたり8,800ドルもする高価な中国緑茶 2026/06/12
+*   ステーキを自国のものであると主張できる国はどこか？ 2026/06/12
 
 **●●NYタイムズ●●**
-*   SpaceX Sets Milestone With World’s Largest I.P.O., Furthering Musk’s Power 2026/06/12
-*   Trump Picks New Intelligence Chief After Revolt Over Pulte 2026/06/12
-*   Justice Dept. Pursues Fraud Claims as Trump Pushes to Undermine Elections 2026/06/12
-*   Mexico Defeats South Africa in World Cup Opener 2026/06/12
-*   The U.S. Signed Up for the World Cup. Its 11 Host Cities Are Paying for It. 2026/06/12
-*   Trump Again Claims Iran Deal Is Close After Retracting Threat of Strikes 2026/06/12
-*   After Senate Loss, Cornyn Predicts ‘Miserable’ Final Two Years for Trump 2026/06/12
-*   Conor McGregor’s Comeback: A Tale of Banned Drugs and a Famous Doctor 2026/06/12
-*   ‘Vegas’ on the South Lawn: Trump Unveils the U.F.C. ‘Claw’ 2026/06/12
-*   One Win From an N.B.A. Title, the Knicks Look Like a Team of Destiny 2026/06/12
-*   NOAA Officially Declares El Niño Is Here and Flashing Danger Signs 2026/06/12
-*   Tornadoes Are Reported in Illinois as Storms Sweep the Midwest 2026/06/12
-*   Scientists Measure 68 Quadrillion Underground Miles of Fungi 2026/06/12
-*   The Guy Who Knows What Marcus Rashford and Travis Kelce Want to Wear 2026/06/12
-*   27 Barbecue Side Dishes That Will Steal the Show 2026/06/12
-*   My Father Abused My Sister When We Were Kids. Should I Tell My Half Siblings? 2026/06/12
-*   Do Women Really Need a Menopause Workout? 2026/06/12
-*   How to File a Travel Insurance Claim 2026/06/12
-*   He Spent $558 Million. What a Waste. 2026/06/12
-*   ‘All Men Are Created Equal’? Not Everyone Agrees. 2026/06/12
-*   In Her First In-Depth Interviews Since the Epstein Files, Kathy Ruemmler Exposed an Unsettling Truth 2026/06/12
-*   Better Sex, Better Hair, Better Sleep: ‘Humanmaxxing’ Is Here 2026/06/12
-*   The Terrible Man Theory of History 2026/06/12
-*   The A.I. Bubble Is Coming for Your Retirement Account 2026/06/12
-*   Is There Nothing Voters Won’t Forgive? 2026/06/12
-*   The Bipartisan Hatred of All Things Feminine 2026/06/12
-*   18-Year-Old Hiker Dies in Extreme Heat at Grand Canyon National Park 2026/06/12
-*   A.I. Chatbot Helps a $100 Thrift Store Painting Sell for Over $250,000 2026/06/12
-*   Nearly Everyone, Everywhere, Veers Left When Walking 2026/06/12
-*   This Restaurant Stopped Charging for Food. And Profits Are Up. 2026/06/12
-*   Judge Punishes 4 Lawyers After Catching Both Sides Using A.I. in Lawsuit 2026/06/12
-*   White House Suggests Americans Struggling to Pay Medical Bills Get Loans 2026/06/12
-*   Stanley Cup Finals: Golden Knights and Hurricanes Meet in a Pivotal Game 5 2026/06/12
-*   Body of 5-Year-Old Girl Swept Away at California Beach Is Recovered 2026/06/12
-*   Recent Landslides in Indonesia Devastated Rare Orangutans, Study Finds 2026/06/12
-*   Children’s Lemonade Stand Is Robbed in Broad Daylight in Boston 2026/06/12
-*   Alan Hale, Sky Watcher Who Created a Comet Sensation, Dies at 68 2026/06/12
-*   Workers at Washington Paper Mill Died of Chemical Burns 2026/06/12
-*   Boston Symphony, in Crisis Over Conductor’s Dismissal, Concedes Mistakes 2026/06/12
-*   U.S. Blocks Deal by Florida Company to Supply Fuel to Cuba 2026/06/12
-*   Cleve Moler, Who Unlocked the Power of Computing for Millions, Dies at 86 2026/06/12
-*   6 Common Medications That May Lower Your Dementia Risk 2026/06/12
-*   Is There a Least Bad Alcohol? 2026/06/12
-*   How Healthy Is Sweet Corn? 2026/06/12
-*   Chin Hair, Laundry, Your Opinion: Women in Menopause Don’t Care 2026/06/12
-*   A Simple Trick for Better Parties 2026/06/12
-*   Broadway Shows Closing Soon: ‘Becky Shaw,’ ‘Giant’ and More 2026/06/12
-*   Ruth Ozeki Was a Little Too Young to Read Norman Mailer 2026/06/12
-*   In the Fastest-Warming City in the U.S., These Artists See Hope 2026/06/12
-*   A New Hotel From Lake Como’s Grande Dame 2026/06/12
-*   The Homophobic Chant Looming Over World Cup Co-Host Mexico 2026/06/12
-*   Diana Ross Once Took a Penalty at the World Cup. It Did Not Go Well. 2026/06/12
-*   After an N.B.A Player’s Death, a Common Herbal Supplement Is Under Scrutiny 2026/06/12
-*   Can Friendship Power a World Cup Run? U.S. Soccer Is Counting on It. 2026/06/12
-*   Golf Club Revokes Phil Mickelson’s Membership Over Alleged Misconduct 2026/06/12
-*   17-Year-Old American Track Phenom Outruns Olympic Champion 2026/06/12
-*   Play Connections: Sports Edition 2026/06/12
-*   A Summer Book Recommendation Bonanza 2026/06/12
-*   Inside the Knicks’ Historic Comeback to Take Game 4 2026/06/12
-*   Scott Pelley on the Bari Weiss Era and His Last Days at ‘60 Minutes’ 2026/06/12
-*   Does the World Still Misunderstand M.I.A.? 2026/06/12
-*   From Serial: ‘The Idiot’ 2026/06/12
-*   Better Sex, Better Hair, Better Sleep: ‘Humanmaxxing’ Is Here 2026/06/12
-*   You Barely Need a Recipe for This Weeknight Dinner. That’s What Makes It Timeless. 2026/06/12
-*   Von Diaz’s Arroz Con Pollo 2026/06/12
-*   One-Ingredient Banana Ice Cream 2026/06/12
-*   Ranch Water 2026/06/12
-*   Lemon Ricotta Cake 2026/06/12
-*   4-Ingredient Seed Crackers 2026/06/12
-*   We Found Them: The Best Hot Dogs 2026/06/12
-*   These Are Basically the Only Pants I’ll Wear This Summer 2026/06/12
-*   I Forget I’m Wearing This Sports Bra 2026/06/12
-*   The Miracle A.C. From TikTok Is Not an Air Conditioner at All 2026/06/12
-*   It’s Not Just You: The iPhone Keyboard Is Glitchy 2026/06/12
-*   Golf Shorts That Look Nothing Like Athletic Shorts 2026/06/12
+
+*   スペースX、史上最大のIPOでマイルストーン達成、マスク氏の権力拡大 2026/06/12
+*   トランプ氏、プルテ氏への反発後、新たな情報長官を指名 2026/06/12
+*   司法省、トランプ氏が選挙を弱体化させようとする中、詐欺の主張を追求 2026/06/12
+*   メキシコ、ワールドカップ開幕戦で南アフリカに勝利 2026/06/12
+*   米国はワールドカップに登録した。その11の開催都市が費用を負担している。 2026/06/12
+*   トランプ氏、攻撃の脅迫を撤回後、再びイランとの取引は近いと主張 2026/06/12
+*   上院での敗北後、コーニン氏はトランプ氏にとって「悲惨な」最後の2年間を予測 2026/06/12
+*   コナー・マクレガーのカムバック：禁止薬物と有名な医師の物語 2026/06/12
+*   「ベガス」がサウスローンに：トランプ氏、UFCの「クロー」を発表 2026/06/12
+*   NBAタイトルまであと1勝、ニックスは運命のチームのように見える 2026/06/12
+*   NOAA、エルニーニョ現象が発生し、危険信号を発していることを正式に宣言 2026/06/12
+*   中西部の嵐の中、イリノイ州で竜巻が報告される 2026/06/12
+*   科学者、地下68京マイルの菌類を測定 2026/06/12
+*   マーカス・ラッシュフォードとトラビス・ケルシーが何を着用したいかを知っている男 2026/06/12
+*   ショーを盗む27のバーベキューサイドディッシュ 2026/06/12
+*   父が子供の頃、姉を虐待しました。異母兄弟に伝えるべきか？ 2026/06/12
+*   女性は本当に閉経ワークアウトを必要とするのか？ 2026/06/12
+*   旅行保険請求の方法 2026/06/12
+*   彼は5億5800万ドルを費やした。なんて無駄だ。 2026/06/12
+*   「すべての人々は平等に創られている」？全員が同意するわけではない。 2026/06/12
+*   エプスタイン事件ファイル以来、初の詳細なインタビューで、キャシー・リュムラーは不穏な真実を暴露 2026/06/12
+*   より良いセックス、より良い髪、より良い睡眠：「ヒューマンマクシング」が登場 2026/06/12
+*   歴史のひどい男理論 2026/06/12
+*   AIバブルがあなたの退職金口座を襲う 2026/06/12
+*   有権者は何も許さないのか？ 2026/06/12
+*   超党派の女性嫌悪 2026/06/12
+*   グランドキャニオン国立公園で、18歳のハイカーが極度の暑さで死亡 2026/06/12
+*   AIチャットボットが100ドルの古着絵画を25万ドル以上に売るのを助ける 2026/06/12
+*   ほぼ全員が、どこでも歩くときに左に逸れる 2026/06/12
+*   このレストランは食品の料金をやめた。そして利益は増加した。 2026/06/12
+*   訴訟で両側がAIを使用したのを発見した裁判官、4人の弁護士を罰する 2026/06/12
+*   ホワイトハウス、医療費の支払いに苦労するアメリカ人にローンを組むよう示唆 2026/06/12
+*   スタンレーカップ・ファイナル：ゴールデンナイツとハリケーンズが重要な第5戦で対戦 2026/06/12
+*   カリフォルニア州のビーチで流された5歳少女の遺体が回収される 2026/06/12
+*   インドネシアでの最近の地滑りが希少なオランウータンを壊滅させた、と研究で判明 2026/06/12
+*   ボストンで、子供たちのレモネードスタンドが白昼堂々強盗される 2026/06/12
+*   彗星のセンセーションを作り出した空の観測者、アラン・ヘイル氏、68歳で死去 2026/06/12
+*   ワシントン製紙工場の作業員が化学火傷で死亡 2026/06/12
+*   ボストン交響楽団、指揮者の解任を巡る危機で、過ちを認める 2026/06/12
+*   米国、フロリダ企業によるキューバへの燃料供給契約を阻止 2026/06/12
+*   何百万もの人々にコンピューティングの力を解き放ったクレブ・モーラー氏、86歳で死去 2026/06/12
+*   認知症リスクを低減する可能性のある6つの一般的な薬剤 2026/06/12
+*   最も悪くないアルコールは存在するか？ 2026/06/12
+*   スイートコーンはどのくらい健康的か？ 2026/06/12
+*   顎の毛、洗濯、あなたの意見：閉経期の女性は気にしない 2026/06/12
+*   より良いパーティーのための簡単なトリック 2026/06/12
+*   まもなく閉幕するブロードウェイショー：「ベッキー・ショー」、「ジャイアント」など 2026/06/12
+*   ルース・オゼキはノーマン・メイラーを読むには少し若すぎた 2026/06/12
+*   米国で最も急速に温暖化している都市で、これらのアーティストは希望を見出す 2026/06/12
+*   コモ湖のグランダムによる新しいホテル 2026/06/12
+*   ワールドカップ共催国メキシコを悩ませる同性愛嫌悪のチャント 2026/06/12
+*   ダイアナ・ロスはかつてワールドカップでPKを蹴った。うまくいかなかった。 2026/06/12
+*   NBA選手の死後、一般的なハーブサプリメントが調査対象に 2026/06/12
+*   友情はワールドカップのランを推進できるか？米国サッカーはそれに頼っている。 2026/06/12
+*   ゴルフ場、フィリップ・ミケルソンの会員資格を不正行為の疑いで剥奪 2026/06/12
+*   17歳の米国トラック界のスター、オリンピックチャンピオンを凌ぐ 2026/06/12
+*   プレイコネクションズ：スポーツエディション 2026/06/12
+*   夏のブックレコメンド大豊作 2026/06/12
+*   ニックスの歴史的な第4戦勝利の裏側 2026/06/12
+*   スコット・ペリー、「60ミニッツ」での最後の数日間とバー・ワイス時代について 2026/06/12
+*   世界はまだM.I.A.を誤解しているのか？ 2026/06/12
+*   Serialから：「愚か者」 2026/06/12
+*   より良いセックス、より良い髪、より良い睡眠：「ヒューマンマクシング」が登場 2026/06/12
+*   レシピはほとんど必要ないこの平日のディナー。それが時を超えた理由だ。 2026/06/12
+*   フォン・ディアスのアルロス・コン・ポヨ 2026/06/12
+*   バナナアイスクリーム（材料1つ） 2026/06/12
+*   ランチウォーター 2026/06/12
+*   レモンリコッタケーキ 2026/06/12
+*   4つの材料で作るシードクラッカー 2026/06/12
+*   これらはほぼ私がこの夏履く唯一のパンツだ 2026/06/12
+*   このスポーツブラを着ていることを忘れる 2026/06/12
+*   TikTokのミラクルACは、実際にはエアコンではない 2026/06/12
+*   あなただけではない：iPhoneキーボードはバグっている 2026/06/12
+*   アスレチックショーツとは全く似ていないゴルフショーツ 2026/06/12
 
 **●●WSJ●●**
+
 *   米、ベネズエラ産原油の対キューバ販売で制限緩和 2026/06/12
 *   米国家情報長官への内部告発、政権が機密情報の開示拒否 2026/06/12
 *   ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」 2026/06/12
@@ -241,6 +189,7 @@
 *   トランプ政権、銀行に市民権情報の収集義務づけを検討 2026/06/12
 
 **●●日経●●**
+
 *   トランプ政権、日本マネーで原発建設 商務長官「日米で小型炉主導」 2026/06/12
 *   世界の中銀、利上げシフト 中東混乱、インフレ抑止 2026/06/12
 *   スペースXきょう上場へ、異例ずくめ 巨大IPOトリオの先陣 2026/06/12
@@ -253,8 +202,8 @@
 *   日銀、総裁不在で利上げへ 決定会合は内田副総裁が会見 2026/06/12
 
 **●●時事●●**
+
 *   フジモリ氏、超僅差で逆転 開票率９８％、ペルー大統領選 2026/06/12
-*   元侍従長「典範手直し必要」 女性皇族巡り、１５年前自著で 2026/06/12
 *   元侍従長「典範手直し必要」 女性皇族巡り、１５年前自著で 2026/06/12
 *   遠藤航がサッカーＷ杯欠場 日本代表主将 2026/06/12
 *   公取委、マンション修繕工事で談合認定 三十数社に課徴金１６億円命令へ 2026/06/12
@@ -265,14 +214,13 @@
 *   中道、首相秘書の国会招致要求 「中傷動画」巡り 2026/06/12
 
 **●●yahoo●●**
+
 *   イラン側 米合意は最終決定至らず 2026/06/12
 *   資金洗浄疑い 国際共同捜査で逮捕 2026/06/12
 *   コンゴのエボラ熱 15～44歳が中心 2026/06/12
 *   困窮者に消費期限切れパン 市提供 2026/06/12
 *   梅雨期「耳カビ」注意 強烈かゆみ 2026/06/12
-*   イラン側 米合意は最終決定至らず 2026/06/12
 *   米 イラン協議受け攻撃中止と表明 2026/06/12
-*   コンゴのエボラ熱 15～44歳が中心 2026/06/12
 *   ミャンマーで米大使館員が死亡 2026/06/12
 *   河野洋平氏死去 韓国首相が追悼 2026/06/12
 *   マンション修繕談合 排除命令へ 2026/06/12
@@ -307,7 +255,6 @@
 *   アウトカメラで若者自撮り 理由は 2026/06/12
 *   OpenAIがIPO申請 企業価値136兆円 2026/06/12
 *   Apple 次世代のSiri AI提供へ 2026/06/12
-*   梅雨期「耳カビ」注意 強烈かゆみ 2026/06/12
 *   海岸に弱ったイルカ 水族館に搬送 2026/06/12
 *   ナフサ不足 死活問題とケア児の母 2026/06/12
 *   ゲノム編集ベビーの懸念点 解説 2026/06/12
@@ -317,7 +264,6 @@
 *   ただの風邪と思い受診 急性白血病 2026/06/12
 *   17歳殺害疑い 復縁断られたと供述 2026/06/12
 *   車立ち往生で男性保護 数分後列車 2026/06/12
-*   困窮者に消費期限切れパン 市提供 2026/06/12
 *   江別暴行死「狂ってる」遺族怒り 2026/06/12
 *   神戸市で初めて「クマ」出没確認 2026/06/12
 *   クマが街中走り大混乱 宇都宮ルポ 2026/06/12
@@ -364,10 +310,10 @@
 *   驚愕ベッカム夫妻、資産が“英国王”超え！ビジネス好調も悩みの種が…息子との確執が“暴露合戦”へと発展！？ 2026/06/12
 *   「高市首相は玉木代表に“不信感”」も…　国民民主党の連立入りに現実味　「連合の拒否反応は薄れつつある」 2026/06/12
 *   《自家用車で「連れまわし」…》千葉・公立中教諭が自校の女子生徒へのわいせつ行為で懲戒免職、担当者が明かした“卑劣な手口”「キスや抱擁をされる被害に遭った」 2026/06/12
-*   「なんであれが入る？」　大谷“片手13号”に衝撃…完全に泳いだのに「訳わからん天才か？」 2026/06/12
 *   『目をそむけたくなる非人道的暴行』数十回以上顔面打撃…集団暴行後に金品奪って買い物やラーメン満喫…当時18歳の男に""懲役20年""求刑「人をころして友人と遊びに行き楽しかったですか」遺族が怒りの問いかけ 2026/06/12
 
 **●●AI●●**
+
 *   「作詞が人間、作曲はAI」にも著作権 JASRACが方針を公表 [AIの時代] 2026/06/12
 *   AI関連銘柄にさらに上昇余地、来年も投資拡大を予想－ゴールドマン 2026/06/12
 *   BeRealはNG、なのにAI議事録はスルー…… 日本企業が目を背ける情報漏えい対策の限界（ITmedia ビジネスオンライン） 2026/06/12
@@ -377,14 +323,13 @@
 *   韓国SKが日本にAIデータセンター NVIDIAと連携、自社半導体を活用 2026/06/12
 *   AIの主戦場はCPUへ、自律型エージェント台頭で市場再編 台湾で半導体大手が語った次世代の演算展望 2026/06/12
 *   オープンAI、大幅値下げ検討 アンソロピックとの顧客争奪戦を見据え 2026/06/12
-*   オープンＡＩが大幅値下げ検討、アンソロピックと顧客争奪戦＝報道(ロイター) 2026/06/12
 *   ソフトバンク、オープンAI株を担保にした融資が叶わず。孫正義の錬金術に債権者が突きつけた現実 2026/06/12
 *   米国民、ＡＩデータセンター急増に警戒感＝ロイター／イプソス調査 2026/06/12
 *   AI時代におけるナレッジ活用の重要性とAI-Ready Data 2026/06/12
 *   鉄筋の加工・組立作業に「フィジカルAI」を導入 2026/06/12
 *   AIなど軍民両用技術、日英がスタートアップ支援基金 両首脳合意へ 2026/06/12
 *   破滅か救世主か AI開発競争に潜む「技術終末論」 2026/06/12
-*   堀場製作所、半導体向けの新工場を稼働 AI需要で生産能力3倍に [京都府] [AIの時代] 2026/06/12
+*   堀場製作所、半導体向けの新工場を稼働 AI需要で生産能力3倍に [AIの時代] 2026/06/12
 *   「AIでどん底に突き落とされた」米マイクロソフト現役エンジニア・牛尾剛が〈生産性10倍〉に大逆転できた理由 2026/06/12
 *   AIエージェントによる知の民主化--高解像度化と構造設計 2026/06/12
 *   アンソロピックの新モデルは「長時間働くAI」。Claude Fable 5が示す企業エージェントの次段階 2026/06/12
@@ -399,7 +344,6 @@
 *   教職員の生成AI活用で手引 業務効率化へ好事例紹介 文科省（時事通信） 2026/06/12
 *   なぜ今ローカルAIなのか--クラウドAIでは解決できない課題と新たな選択肢 2026/06/12
 *   海外との会議や商談に、多機能なリアルタイムAI翻訳で言葉の壁を超えるIPEVOの「Vurbo.AI」をテックウインドが販売 2026/06/12
-*   オープンＡＩが大幅値下げ検討、アンソロピックと顧客争奪戦＝報道 2026/06/12
 *   EYジャパン会長兼CEO・貴田守亮さん（5）AIと歩む企業の姿追求 2026/06/12
 *   前場に注目すべき3つのポイント～半導体やAI関連株への買いが強まる～(フィスコ) 2026/06/12
 *   デル、HPE好決算の裏で…AIサーバ特需に潜む「売れても安心できない理由」とは ｜Seizo Trend 2026/06/12
@@ -408,7 +352,6 @@
 *   AIチップ搭載のゲーミングWi-Fi 7ルーター「ROG Rapture GT-BE19000AI」がASUSから、実売約13.5万円 2026/06/12
 *   AI技術の投資対効果を明確に示せる企業は6%に留まる、豪アトラシアンが調査 2026/06/12
 *   AI用いた新技術の土壌分析 八農など3者連携で実証着手 長野県（長野日報） 2026/06/12
-*   「AIが答えをくれる時代に」小児科医が語る子どもに身につけさせたい「2つの土台」と「生きる力」 2026/06/12
 *   メルカリがAIと人事の責任者を1人に、「越境」を前提 AIが壊す3つの常識 2026/06/12
 *   CFOの62%が「効果限定的」と認めるAI投資、突破企業との差を生む3つの構造：『ビジネス2.0』の視点 2026/06/12
 *   AI需要への期待は続くも、投資の継続性が新たなポイントに(トウシル) 2026/06/12
@@ -416,7 +359,6 @@
 *   グーグル、検索に続き「AIも制覇」へ…企業の「AI支出削減」の瞬間を待っていた 2026/06/12
 *   ［新連載］イビデン、5000億円投資の裏にNVIDIAの「先払い」 AIインフラ270兆円経済圏 2026/06/12
 *   「AI値上げ」が続く中、Googleは値下げ攻勢へ 2026/06/12
-*   オープンＡＩ、コーデックス拡充に向けてオナを買収＝米国株個別(株探ニュース) 2026/06/12
 *   「x86では処理し切れない」 ArmとMeta、AIインフラ向け「CPU」を開発（＠IT） 2026/06/12
 *   日本とマレーシアのAI協力――AIを社会課題解決と産業育成に生かす #エキスパートトピ（佐藤仁） - エキスパート 2026/06/12
 *   AnthropicとOpenAIの“AIサイバー防御サービス戦争”が開けたパンドラの箱、システムセキュリティに降って湧いた「4つの大問題」とは？ 2026/06/12
@@ -431,7 +373,6 @@
 *   清水建設、鉄筋工事にフィジカルAI導入へ 海外スタートアップに出資 2026/06/12
 *   米サイタイムのヴァシストCEO「ルネサスの事業買収でAI向け拡大」 2026/06/12
 *   個人情報保護法改正案、参院審議へ ＡＩ開発に特例、病歴など提供に同意不要 2026/06/12
-*   オープンＡＩ、来年中に上場か ＣＥＯが社員に書簡＝報道 2026/06/11
 *   日本株は大幅高へ、和平合意進展に期待－AIや景気敏感など広く買い(Bloomberg) 2026/06/12
 *   米アンソロピック、「一般向けには強力過ぎる」AIツールを一般公開 2026/06/11
 *   ジェネシスクラウド、コンタクトセンターのAIエージェント活用を訴求 2026/06/12
@@ -440,7 +381,6 @@
 *   人事図書館「経営人事AIプロフェッショナル講座」第２期内容を大幅にアップデート 2026/06/12
 *   東大生が「口下手」に、医学部受験生も「AI依存」… 生成AIの普及が教育現場に与えている「深刻過ぎる影響」 （デイリー新潮） 2026/06/12
 *   米国医療機関が迫られるAIサプライチェーンリスク管理とSBOMからAIBOMへの進化：海外医療技術トレンド（132）（1/4 ページ） 2026/06/12
-*   オープンＡＩが大幅値下げ検討、アンソロピックと顧客争奪戦＝報道（ロイター） 2026/06/12
 *   「すべてに最強AIモデルが必要なわけではない」。マイクロソフトのナデラCEO、社内のトークンマックシング抑制へ 2026/06/12
 *   堀場製作所、半導体向けの新工場を稼働 AI需要で生産能力3倍に（朝日新聞） 2026/06/12
 *   ペットを手のひらサイズに「ちょこんとフィギュア」 AIと3Dプリンター活用経済トレンド（共同通信） 2026/06/12
@@ -473,6 +413,7 @@
 *   MERCY／マーシー　AI裁判 2026/06/12
 
 **●●2ch●●**
+
 *   速報サッカー日本代表、主将・遠藤航の代表離脱を発表… W杯欠場が決定「森保監督が決断」 町野を追加招集、後任の主将は板倉★5 2026/06/12
 *   生活保護受給者に消費期限が1日過ぎたパン 仙台市、認識の上で提供 「受け取った日にパンを食べたら、数時間後に腹痛や下痢の症状が」 2026/06/12
 *   「地方のイオンモールにいそうな服装が嫌い」投稿が炎上「パーカーおじさん」なぜ他人の格好を“採点”したくなるのか 2026/06/12
@@ -485,9 +426,6 @@
 *   高市首相はもう詰んでいる…""国会答弁でのウソ""で露呈した「中傷動画疑惑」よりも深刻な問題 ★8 2026/06/12
 *   25年の死者数、最少2547人 外国人運転事故増加、交通白書 2026/06/12
 *   交流戦悪夢の全敗、セ・リーグに厳しい意見が続出「情けない」「これはセカンドリーグ」…差は歴然30勝53敗4分け 2026/06/12
-*   速報サッカー日本代表、主将・遠藤航の代表離脱を発表… W杯欠場が決定「森保監督が決断」 町野を追加招集、後任の主将は板倉★5 2026/06/12
-*   交流戦悪夢の全敗、セ・リーグに厳しい意見が続出「情けない」「これはセカンドリーグ」…差は歴然30勝53敗4分け 2026/06/12
-*   サッカー遠藤航が日本代表を引退「今回の活動をもって」離脱発表直後にSNSで報告、仲間へエールも/全文 2026/06/12
 *   サッカーW杯開幕戦、大荒れのレッドカード3枚 10人対9人に…開催国メキシコが2-0完勝 2026/06/12
 *   音楽「ドブネズミみたいに美しくなりたい」はなぜあんなにも刺さったのか…ブルーハーツが具現化した若者特有の衝動 ★2 2026/06/12
 *   なぜ日本人は英語がヘタなのか…「TOEIC900点が当たり前」の韓国を見てわかった外国語習得に最も必要な要素 ショーン川上 2026/06/12
@@ -507,7 +445,6 @@
 *   欧州ECBが利上げ、エネ価格高騰に対応 インフレ見通し上方修正 2026/06/12
 *   公式第1話～第12話「ロケットガール」期間限定本編配信 2026/06/12
 *   宮﨑駿演出回特別放送MX12026年6月16日(火) 19:30～19:57 ルパン三世 PART2 #145「死の翼アルバトロス」 2026/06/12
-*   宮﨑駿演出回特別放送MX12026年6月16日(火) 19:30～19:57 ルパン三世 PART2 #145「死の翼アルバトロス」 2026/06/12
 *   25年の死者数、最少2547人 外国人運転事故増加、交通白書 2026/06/12
 *   65歳以上「収入得るため仕事したい」は39% 他国より多く 高齢社会白書 2026/06/12
 *   「近所付き合いなし」17% 65歳以上、他国より高割合 2026/06/12
@@ -519,9 +456,6 @@
 *   サッカーW杯「日本に超非常事態!」韓国メディアが急転直下の“遠藤離脱→代表引退”に衝撃「特大の痛手だ」 2026/06/12
 *   なぜ日本人は英語がヘタなのか…「TOEIC900点が当たり前」の韓国を見てわかった外国語習得に最も必要な要素 ショーン川上 2026/06/12
 *   愛子さま人気、皇族数確保策の世論に影響 女性天皇望む声も多く 2026/06/12
-*   速報サッカー日本代表、主将・遠藤航の代表離脱を発表… W杯欠場が決定「森保監督が決断」 町野を追加招集、後任の主将は板倉★4 2026/06/12
-*   速報サッカー日本代表、主将・遠藤航の代表離脱を発表… W杯欠場が決定「森保監督が決断」 町野を追加招集、後任の主将は板倉★3 2026/06/12
-*   速報サッカー日本代表、主将・遠藤航の代表離脱を発表… W杯欠場が決定「森保監督が決断」 町野を追加招集、後任の主将は板倉★2 2026/06/12
 *   速報サッカー日本代表、主将・遠藤航の代表離脱を発表… W杯欠場が決定「森保監督が決断」 町野修斗を追加招集、後任の主将は板倉 2026/06/12
 *   インド外務省、米軍がタンカー攻撃と断定… 2026/06/12
 *   兵庫県・斎藤知事 会見での「人〇しやないか!」発言を刑事告訴、当該・菅野完記者は“出禁”に ★2 2026/06/12
