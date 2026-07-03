@@ -26,6 +26,45 @@ function stripAiSection(text) {
   return out.join('\n');
 }
 
+// 類似キーワードの集約グループを決める語幹。
+// 先頭の英数字語（AI、FRB、EU等）、なければ先頭2文字（イラン→イラ、トランプ→トラ）
+function stemOf(word) {
+  const ascii = word.match(/^[A-Za-z0-9&．.]+/);
+  if (ascii) return ascii[0].toUpperCase();
+  return word.slice(0, 2);
+}
+
+const MAX_PER_STEM = 4; // 同じ語幹のキーワードは上位4個まで
+
+// 類似キーワードを集約する。
+// 1) 片方がもう片方を含む場合（AIチップ⊂AIチップメーカー等）は高スコア側に統合
+// 2) 同じ語幹（AI○○等）はスコア上位4個までに制限し、派生語の羅列が上位を占めるのを防ぐ
+function aggregate(entries) {
+  const sorted = [...entries].sort((a, b) => b.score - a.score);
+
+  // 包含関係の統合: スコア順に見て、採用済み語と包含関係にあれば捨てる。
+  // ただし短い側が4文字未満（AI、円等）の場合は別トピックとみなして統合しない
+  const merged = [];
+  for (const e of sorted) {
+    const dup = merged.some(m => {
+      const shorter = m.word.length <= e.word.length ? m.word : e.word;
+      const longer = m.word.length <= e.word.length ? e.word : m.word;
+      return shorter.length >= 4 && longer.includes(shorter);
+    });
+    if (!dup) merged.push(e);
+  }
+
+  // 語幹ごとの上限
+  const stemCount = {};
+  const result = [];
+  for (const e of merged) {
+    const stem = stemOf(e.word);
+    stemCount[stem] = (stemCount[stem] || 0) + 1;
+    if (stemCount[stem] <= MAX_PER_STEM) result.push(e);
+  }
+  return result;
+}
+
 // 出力を検証・洗浄する。壊れた行や暴走の繰り返しを落とし、有効な「キーワード\tスコア」だけ返す
 function sanitize(raw) {
   const lines = raw
@@ -48,8 +87,7 @@ function sanitize(raw) {
     entries.push({ word, score });
     if (entries.length >= MAX_KEYWORDS) break;
   }
-  entries.sort((a, b) => b.score - a.score);
-  return entries;
+  return aggregate(entries);
 }
 
 async function generate(model, csvData) {
@@ -141,4 +179,4 @@ async function run() {
 
 if (require.main === module) run();
 
-module.exports = { stripAiSection, sanitize };
+module.exports = { stripAiSection, sanitize, aggregate };
