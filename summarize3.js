@@ -8,6 +8,24 @@ const MIN_KEYWORDS = 60;
 const MAX_KEYWORDS = 100;
 const MAX_RETRIES = 3;
 
+// ●AI●（AI専門メディア）セクションを入力から除去する。
+// AIニュースだらけでワードクラウドが埋まるのを防ぐ。他セクションのAI記事は集計対象のまま。
+// ヘッダー表記ゆれ（●AI関連●、**●●AI●●**、### ●●AI関連●● 等）に対応
+function stripAiSection(text) {
+  const headerRe = /^(?:#+\s*)?\*{0,2}●+\s*(.+?)\s*●+\*{0,2}\s*$/;
+  const out = [];
+  let skipping = false;
+  for (const line of text.split('\n')) {
+    const m = line.trim().match(headerRe);
+    if (m) {
+      const name = m[1].trim();
+      skipping = (name === 'AI' || name === 'AI関連');
+    }
+    if (!skipping) out.push(line);
+  }
+  return out.join('\n');
+}
+
 // 出力を検証・洗浄する。壊れた行や暴走の繰り返しを落とし、有効な「キーワード\tスコア」だけ返す
 function sanitize(raw) {
   const lines = raw
@@ -88,7 +106,7 @@ async function run() {
       maxOutputTokens: 4096, // 60〜80行のTSVには十分。暴走時の課金上限を兼ねる
     },
   });
-  const csvData = fs.readFileSync('summary15.txt', 'utf8');
+  const csvData = stripAiSection(fs.readFileSync('summary15.txt', 'utf8'));
 
   let entries = [];
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
@@ -121,4 +139,6 @@ async function run() {
   entries.slice(0, 10).forEach(e => console.log(`  ${e.word}\t${e.score}`));
 }
 
-run();
+if (require.main === module) run();
+
+module.exports = { stripAiSection, sanitize };
