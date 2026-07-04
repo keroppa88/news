@@ -3,10 +3,13 @@ const fs = require('fs');
 
 const KEYWORDS = ['キオクシア', '日経平均', 'フジクラ', 'NISA', '追証', 'オルカン', '高市'];
 const OUTPUT_FILE = 'ヤフーリアルタイム.csv';
-const CSV_HEADER = '﻿日付,キーワード,取得テキスト\n';
+const CSV_HEADER = '﻿保存日時,キーワード,取得テキスト\n';
 
-function jstDateString() {
-  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().split('T')[0];
+function jstDateTimeString() {
+  const d = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  const date = d.toISOString().split('T')[0];
+  const time = d.toISOString().split('T')[1].slice(0, 8);
+  return `${date} ${time}`;
 }
 
 (async () => {
@@ -17,7 +20,7 @@ function jstDateString() {
     }
 
     browser = await chromium.launch({ headless: true });
-    const date = jstDateString();
+    const datetime = jstDateTimeString();
 
     for (const keyword of KEYWORDS) {
       let page;
@@ -37,7 +40,7 @@ function jstDateString() {
 
         const text = await page.innerText('body');
         const escaped = text.replace(/"/g, '""');
-        fs.appendFileSync(OUTPUT_FILE, `"${date}","${keyword}","${escaped}"\n`, 'utf8');
+        fs.appendFileSync(OUTPUT_FILE, `"${datetime}","${keyword}","${escaped}"\n`, 'utf8');
         console.log(`saved: ${keyword}`);
       } catch (err) {
         console.error(`ERROR (${keyword}): ${err.message}`);
