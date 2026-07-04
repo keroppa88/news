@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 
-const KEYWORDS = ['キオクシア', '日経平均', 'フジクラ', 'NISA', '追証', 'オルカン', '高市'];
+const KEYWORDS = ['キオクシア', '日経平均', 'フジクラ', 'NISA', '追証', 'オルカン', '高市', '弥助'];
 const OUTPUT_FILE = 'ヤフーリアルタイム.csv';
 const CSV_HEADER = '﻿保存日時,キーワード,取得テキスト\n';
 
