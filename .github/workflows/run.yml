@@ -37,6 +37,10 @@ jobs:
       - name: Run news scrapers
         run: node Run.js
 
+      - name: Run Yahoo Realtime scraper
+        run: node yahoo_realtime.js
+        continue-on-error: true
+
       - name: Debug - list generated CSV files
         run: |
           echo "=== Generated CSV files ==="
