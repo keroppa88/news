@@ -56,6 +56,11 @@ function shouldRemove(s, originalLine) {
   if (/\/The New York Times$/.test(s)) return true;
   if (/for (The New York Times|WSJ)$/.test(s)) return true;
   if (/^\|\s*Photographs by\b/.test(s)) return true;
+  if (/^Photos?(\s+illustration)?:\s/i.test(s)) return true;
+  if (/^Illustration:\s/i.test(s)) return true;
+
+  // --- AXIOS「Go deeper (2 min. read)」リンク ---
+  if (/^Go deeper\b/i.test(s)) return true;
 
   // --- 読了時間 ---
   if (/^読了\s*\d+\s*分$/.test(s)) return true;
