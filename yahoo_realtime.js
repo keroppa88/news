@@ -12,7 +12,13 @@ function jstDateTimeString() {
 }
 
 function csvCell(str) {
-  return `"${str.replace(/"/g, '""')}"`;
+  return `"${String(str).replace(/"/g, '""')}"`;
+}
+
+// ページテキストから「N件のポスト」の最初の数値を抽出
+function extractCount(text) {
+  const m = text.match(/([\d,]+)件のポスト/);
+  return m ? m[1].replace(/,/g, '') : '';
 }
 
 (async () => {
@@ -35,7 +41,7 @@ function csvCell(str) {
 
     for (const keyword of KEYWORDS) {
       let page;
-      let text = '';
+      let count = '';
       try {
         const url = `https://search.yahoo.co.jp/realtime/search?p=${encodeURIComponent(keyword)}&aq=-1&ei=UTF-8&ifr=tl_sc&chart=1`;
         page = await browser.newPage();
@@ -50,15 +56,16 @@ function csvCell(str) {
           console.log(`24時間ボタン未検出 (${keyword})`);
         }
 
-        text = await page.innerText('body');
-        console.log(`ok: ${keyword}`);
+        const text = await page.innerText('body');
+        count = extractCount(text);
+        console.log(`ok: ${keyword} → ${count}件`);
       } catch (err) {
         console.error(`ERROR (${keyword}): ${err.message}`);
       } finally {
         if (page) await page.close();
       }
 
-      cells.push(csvCell(text));
+      cells.push(csvCell(count));
       await new Promise(r => setTimeout(r, 2000));
     }
 
