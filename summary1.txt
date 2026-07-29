@@ -1,590 +1,632 @@
-## 2026年7月28日（UTC）のニュースヘッドライン
+## 2026年7月29日(UTC) ニュース記事見出し
 
-### ●●ロイター●●
-日本時間（UTC+9）
+**●●ロイター●●**
+* 日本市場、AI投資負担や中東情勢悪化懸念で株・債券安へ－円は膠着（Bloomberg）2026/07/29
+* この夏の主役は「ちいかわ」、オデュッセイア待たせる－日本発ブーム世界へ（Bloomberg）2026/07/29
+* トヨタの御曹司38歳が本体復帰－創業家経営の行方占う一手、豊田大輔氏の人物像とは（Bloomberg）2026/07/29
+* 円は対ドルで163円台半ば、米利上げ見送りでドル売り－債券は下落へ（Bloomberg）2026/07/29
+* マイクロソフト、クラウド事業好調－Azure増収率は市場予想上回る（Bloomberg）2026/07/29
+* 米国市況株下落、ナスダック100調整入り－ドル下げて163円台半ば（Bloomberg）2026/07/29
+* 日銀会合注目点:最新見通しと総裁会見で利上げペース探る-政策維持へ（Bloomberg）2026/07/29
+* ウォール街、AI勝ち組・負け組を選別－デフォルト保証コストが急上昇（Bloomberg）2026/07/29
+* FOMCは金利据え置き､物価安定実現を改めて表明－利上げ求め3人が反対（Bloomberg）2026/07/29
+* ドナウ川水位が記録的低下、欧州熱波でわずか24センチ－観光船も座礁（Bloomberg）2026/07/29
+* スポーツ動画のDAZN、ニックスやヤンキースの試合配信へ－米事業拡大（Bloomberg）2026/07/29
+* イオンモール熊本の爆発で3人が死亡、地震の被害徐々に明らかに（Bloomberg）2026/07/29
+* ソフトバンクG傘下アームの売上高見通し､市場期待満たせず－株価下落（Bloomberg）2026/07/29
+* 中国ムーンショットAI、資金調達で評価額350億ドルに－引き合い強く（Bloomberg）2026/07/29
+* エルメス株、一時3年ぶり安値－中国低迷が皮革製品の売上高を圧迫（Bloomberg）2026/07/29
+* スタンダードチャータード、10億ドルの自社株買い－利益が予想上回る（Bloomberg）2026/07/29
+* ポルシェ、「911」重視が奏功－中国低迷でも攻めの戦略で業績好調（Bloomberg）2026/07/29
+* ロンドンの人口、コロナ期除き約50年ぶり減少－物価高で住みづらく（Bloomberg）2026/07/29
+* 韓国、レバETF投資規制を強化へ－株急落受け7月31日発効策に追加（Bloomberg）2026/07/29
+* イオンモール爆発、原因はガスの可能性高い－イオン社長が熊本で会見（Bloomberg）2026/07/29
+* ブレント原油、一時90ドル突破－トランプ氏がイランを再攻撃へと発言（Bloomberg）2026/07/29
+* 韓国株が一時13%急落、個人投資家の売り殺到－楽観論から恐怖に一転（Bloomberg）2026/07/29
+* 韓国総人口が3年連続で増加、在留外国人増が超高齢社会下支え（Bloomberg）2026/07/29
+* SKハイニックス株の相互転換とは－ADRのプレミアムは縮小するのか（Bloomberg）2026/07/29
+* UBS、新たな自社株買い約4900億円－4～6月の業績好調（Bloomberg）2026/07/29
+* 野村HDの4ー6月純利益は1456億円－市場予想上回る（Bloomberg）2026/07/29
+* 原油上昇、ブレントが一時90ドル突破－トランプ氏がイラン再攻撃警告（Bloomberg）2026/07/29
+* 米政府、ヒト型ロボットと電力変換器を規制－中国製を事実上排除（Bloomberg）2026/07/29
+* ブレーキ減速でなくアクセル調整―「中立金利」で理解する日銀利上げ（Bloomberg）2026/07/29
+* SKハイニックス株の異常約定、永久先物で98億円強制決済の衝撃（Bloomberg）2026/07/29
+* GPIFが国内債アクティブファンド採用、5年ぶり－金利変動に備え厚く（Bloomberg）2026/07/29
+* 熊本地震、イオンモール爆発で2人死亡－日本製紙工場では2人心肺停止（Bloomberg）2026/07/28
+* SKハイニックス、AI過剰投資への懸念強まる－株価は過去最大の下げ（Bloomberg）2026/07/28
+* 中国、過剰生産批判への反論強化－欧米との貿易摩擦激化に備え（Bloomberg）2026/07/29
+* 米ソフトウエア会社が今年最大の借り換えへ、投資家心理占う試金石に（Bloomberg）2026/07/29
+* キオクシアHD、復活劇の先に再び試練－AI半導体競争が迫る巨額投資の判断（Bloomberg）2026/07/28
+* 米国経済は10－12月期に正念場、FOMC据え置き予想－ホイットニー氏（Bloomberg）2026/07/29
+* フォード、今年2度目の利益見通し引き上げ－高採算SUVの需要堅調（Bloomberg）2026/07/29
+* アップル時価総額、一時5兆ドル突破－エヌビディアに続き史上2社目（Bloomberg）2026/07/28
+* オランダ半導体NXP、堅調な売上高見通しにも市場の反応鈍く（Bloomberg）2026/07/29
+* 韓国株が続落、KOSPIは一時5.6%安－SKハイニックス株の売却広がる（Bloomberg）2026/07/29
+* 中国がフーシ派と接触、タンカー安全航行の保証求める－ロイター（Bloomberg）2026/07/29
+* 危機前夜を連想－プライベートクレジットとデータセンターに金融工学の落とし穴（Bloomberg）2026/07/28
+* シタデル・セキュリティーズの米利上げ予想、市場の警戒感高める（Bloomberg）2026/07/28
+* 26年度の最低賃金目安は1176円、前年度比55円増－6年ぶり伸び鈍化（Bloomberg）2026/07/29
+* 米最大送電網、データセンターへの送電停止を警告－電力需給逼迫で（Bloomberg）2026/07/27
+* 円は対ドルで163円台後半、中東警戒後退しFOMC待ち－債券は上昇へ（Bloomberg）2026/07/28
+* 日本市況株式が失速、AI・半導体株の一角に売り－長期金利は低下（Bloomberg）2026/07/29
+* AI起債ラッシュに異変、需要鈍化が鮮明に－ブーム警戒でコストも上昇（Bloomberg）2026/07/28
+* イランとオマーン、ホルムズ海峡の航行再開を目指し協議（Bloomberg）2026/07/27
+* AI覇権狙う中国の「六張網」とは？ 630兆円のインフラ国家事業を解説（Bloomberg）2026/07/29
+* LVMHのファッション部門、2年ぶり増収も低い伸び－イラン戦争が重し（Bloomberg）2026/07/27
+* ゴールドマン証、AI株の成長ストーリーは健在－国内決算で反発余地（Bloomberg）2026/07/28
+* プライベートクレジット商品、なぜ高リスクでも高格付けか－ウォール街の最新錬金術（Bloomberg）2026/07/27
+* 半導体株安が加速、ナスダック100指数は調整局面入りへ（Bloomberg）2026/07/28
+* 日経平均4%超安、巨額投資や中国勢参入への懸念でAI・半導体関連売り（Bloomberg）2026/07/27
+* イランが報復休止、米軍の攻撃停止受け－軍報道官が国営テレビに語る（Bloomberg）2026/07/26
+* 米利上げリスクを市場は過大評価、FOMC据え置きならドル下落へ－TD（Bloomberg）2026/07/28
+* 中国Z世代が将来に希望持てず、経済に閉塞感－心の安らぎは歴代王朝（Bloomberg）2026/07/27
+* イラン、タンカー3隻を攻撃・阻止－ヨルダンの米軍基地にもミサイル（Bloomberg）2026/07/29
+* アップル、新「Siri AI」端末投入へ－出遅れたスマートホームで反撃（Bloomberg）2026/07/28
+* ブラックロック、2兆円規模社債上昇－ジャンク債並み高利回りに買い（Bloomberg）2026/07/27
+* 米投資ファンドKPS､日本進出で5人程度採用へ―来春に東京オフィス開設（Bloomberg）2026/07/27
+* 片山財務相、必要に応じて措置を取るということは日米同じ－為替対応（Bloomberg）2026/07/27
+* S&P500種上昇、半導体株の売りは加速－原油一段安、ドル163円台後半（Bloomberg）2026/07/28
+* 高市首相、インフレ対応が落とし穴に－有権者は政策の優先順位に疑問（Bloomberg）2026/07/27
+* 米株、危機時並みの値動きがニューノーマルに－水面下で警戒シグナル（Bloomberg）2026/07/27
+* エヌビディアCEO、オープン型AIの重要性訴え－ムーンショット台頭で（Bloomberg）2026/07/28
+* 円相場、日米金利差の縮小が支えになる－インベスコのレヴィット氏（Bloomberg）2026/07/27
+* 韓国株急落、取引停止相次ぐ－半導体銘柄売りが市場全体に波及（Bloomberg）2026/07/28
+* 三菱UFJ証HD､金利上昇時のポジション運営で収益化-1Q純利益2.9倍（Bloomberg）2026/07/28
+* 中国DeepSeek創業者のヘッジファンド、CXMT上場で多額の利益（Bloomberg）2026/07/28
+* NZから豪州へ移住止まらず、賃金格差で頭脳流出－医療や建設分野で人材不足の懸念（Bloomberg）2026/07/27
+* 中国政府系企業、DUV露光装置の製造開始－ジ・インフォメーション（Bloomberg）2026/07/27
+* スペースX株、IPO価格を2割下回る－時価総額ピークから1.2兆ドル消失（Bloomberg）2026/07/28
+* 米とサウジ、イラン支援の武器関連施設を攻撃（Bloomberg）2026/07/29
+* トランプ大統領、戦闘の再燃避けたい考え強調－イランに合意促す（Bloomberg）2026/07/28
+* 米利下げ開始を的中させた金融大手、米10年債利回りが目下の最大論点（Bloomberg）2026/07/27
+* マレーシア沖でイラン産原油滞留、中国製油所の稼働低下が響く（Bloomberg）2026/07/28
+* 中国半導体CXMTの上場、地方政府の成功例に－安徽省のAI投資が結実（Bloomberg）2026/07/28
+* 米軍、イランによるミサイル奇襲攻撃を迎撃－数日ぶりに戦闘が再燃（Bloomberg）2026/07/28
+* BMW、ドイツで数千人を対象に希望退職募集－全世界で8000人削減へ(Bloomberg)2026/07/29
+* S&P500種に「大きな上昇余地」、独自指標が買いシグナル－JPモルガン（Bloomberg）2026/07/27
+* 欧州サッカー連盟､W杯ボイコット検討－FIFAの外部資本受け入れに反発（Bloomberg）2026/07/28
+* エヌビディアCEO､｢ジャパンAI｣の幕開けを予告－神田の居酒屋も訪問（Bloomberg）2026/07/15
 
-*   キオクシアHD、復活劇の先に再び試練－AI半導体競争が迫る巨額投資の判断(Bloomberg)2026/07/28
-*   シタデル・セキュリティーズの米利上げ予想、市場の警戒感高める(Bloomberg)2026/07/28
-*   ゴールドマン証、AI株の成長ストーリーは健在－国内決算で反発余地(Bloomberg)2026/07/28
-*   欧州サッカー連盟､W杯ボイコット検討－FIFAの外部資本受け入れに反発(TBS CROSS DIG with Bloomberg)2026/07/28
-*   S&P500種上昇、半導体株の売りは加速－原油一段安、ドル163円台後半(Bloomberg)2026/07/28
-*   AI開発にスピード制限を、OpenAIとアンソロピックの社員が請願書(TBS CROSS DIG with Bloomberg)2026/07/28
-*   ゴールドマン、グロース・エクイティ部門共同責任者に2人昇格(Bloomberg)2026/07/28
-*   米政策金利に連動の先物、ポジション膨らむ－市場の不透明感を反映(Bloomberg)2026/07/28
-*   エヌビディアCEO、オープン型AIの重要性訴え－ムーンショット台頭で(Bloomberg)2026/07/28
-*   トランプ氏、対イラン強硬姿勢緩める－ネタニヤフ氏を迎え外交模索(Bloomberg)2026/07/28
-*   ボーイング、予想以上にキャッシュ改善－新大統領専用機で再び費用(TBS CROSS DIG with Bloomberg)2026/07/28
-*   アップル時価総額、一時5兆ドル突破－エヌビディアに続き史上2社目(Bloomberg)2026/07/28
-*   サウジ石油施設に無人機攻撃相次ぐ－イラクの親イラン民兵が連日攻撃(Bloomberg)2026/07/28
-*   OPECプラス、9月の増産後に生産枠の引き上げ停止へ－関係者(Bloomberg)2026/07/28
-*   アップル、新「Siri AI」端末投入へ－出遅れたスマートホームで反撃(Bloomberg)2026/07/28
-*   欧州株は堅調、ASML続落もユニリーバ好決算が打ち消す(Bloomberg)2026/07/28
-*   ペトロチャイナ、LNGカナダ株の一部売却検討－第2期計画の資金確保へ(Bloomberg)2026/07/28
-*   半導体株安加速、ナスダック100指数は調整局面目前－AI投資に懐疑論(Bloomberg)2026/07/28
-*   アマゾンの中東データセンター、イランの攻撃で被災－衛星画像で確認(Bloomberg)2026/07/28
-*   メルセデス、乗用車利益率が予想上回る－中国不振でもコスト削減寄与(Bloomberg)2026/07/28
-*   メタとブラックロック、テキサス州にデータセンター建設－2028年稼働(Bloomberg)2026/07/28
-*   EU、ロシア支援の1600社余りに制裁科す計画－対象企業数は5割増へ(Bloomberg)2026/07/28
-*   トランプ大統領、戦闘の再燃避けたい考え強調－イランに合意促す(Bloomberg)2026/07/28
-*   豪、「世界初」のデータセンター規制巡り協議－17兆円規模の計画対象(Bloomberg)2026/07/28
-*   ゴールドマンなどが一般向けプライベートファンド、41万円で投資可能(Bloomberg)2026/07/28
-*   韓国株急落、取引停止相次ぐ－半導体銘柄売りが市場全体に波及(Bloomberg)2026/07/28
-*   キオクシアHD株に値動き増幅のリスク、米国から「レバETF」の波迫る(Bloomberg)2026/07/26
-*   アンソロピックCEO、オープン型AI全面規制に反対－安全性試験を提唱(Bloomberg)2026/07/27
-*   スペースX株、IPO価格を2割下回る－時価総額ピークから1.2兆ドル消失(Bloomberg)2026/07/28
-*   中国DeepSeek創業者のヘッジファンド、CXMT上場で多額の利益(Bloomberg)2026/07/28
-*   三菱UFJ証HD､金利上昇時のポジション運営で収益化-1Q純利益2.9倍(Bloomberg)2026/07/28
-*   AIブーム警戒のピムコ、メガディールを慎重に選別－リスク軽減を優先(Bloomberg)2026/07/27
-*   赤沢経産相、対米投資第2弾で外国銀融資検討－外貨調達円滑化へ(Bloomberg)2026/07/27
-*   中国、豚肉価格押し上げ策が奏功－需要低迷で市況回復なお緩やか(Bloomberg)2026/07/27
-*   マレーシア沖でイラン産原油滞留、中国製油所の稼働低下が響く(Bloomberg)2026/07/28
-*   円相場、日米金利差の縮小が支えになる－インベスコのレヴィット氏(Bloomberg)2026/07/27
-*   「AIの冬」に身構える投資家、設備投資に関する暗黙の了解が崩壊(Bloomberg)2026/07/26
-*   米税関、中国系工場を抜き打ち検査－対ベトナム追加関税へ懸念強まる(Bloomberg)2026/07/27
-*   片山財務相、必要に応じて措置を取るということは日米同じ－為替対応(Bloomberg)2026/07/27
-*   インドの「ゴキブリ人民党」とは？ 若者の怒りがモディ政権揺さぶる(Bloomberg)2026/07/28
-*   LVMHのファッション部門、2年ぶり増収も低い伸び－イラン戦争が重し(Bloomberg)2026/07/28
-*   ゴールドマン、シティ出身の北谷氏採用－日本の社債引き受け強化へ(Bloomberg)2026/07/27
-*   中間管理職は本当に必要か－AI時代に進化できる上司、変われない上司の違いとは(Bloomberg)2026/07/26
-*   中国半導体CXMTの上場、地方政府の成功例に－安徽省のAI投資が結実(Bloomberg)2026/07/28
-*   高市首相、インフレ対応が落とし穴に－有権者は政策の優先順位に疑問(Bloomberg)2026/07/28
-*   日本国債に投資妙味、日銀の積極利上げ観測を疑問視－アジムット(Bloomberg)2026/07/27
-*   米で発見のソフト脆弱性、昨年の2倍のペースで増加－AIの能力向上で(Bloomberg)2026/07/27
-*   大和証グループ、中国事業再編で元クレディ･スイス幹部採用－関係者(Bloomberg)2026/07/27
-*   プライベートクレジット商品、なぜ高リスクでも高格付けか－ウォール街の最新錬金術(Bloomberg)2026/07/28
-*   日本市場、AI収益性疑念で株式下落へ－中銀会合控え円は安値もみ合い(Bloomberg)2026/07/27
-*   CATL株が急伸、自社株買い計画と上期の好決算を好感(Bloomberg)2026/07/27
-*   SKハイニックス急落、時価総額93兆円消失－AIメモリーブームに慎重論(Bloomberg)2026/07/28
-*   イランとオマーン、ホルムズ海峡の航行再開を目指し協議(Bloomberg)2026/07/27
-*   ブレント原油一時90ドル割れ、米イラン攻撃一時停止で供給懸念和らぐ(Bloomberg)2026/07/26
-*   アップルのスマートグラス、プライバシー保護でメタが残した不信に挑む－Power On(Bloomberg)2026/07/26
-*   エヌビディア、サツキバー氏のAI新興企業に50億ドル出資へ－関係者(Bloomberg)2026/07/27
-*   エヌビディア、新たにAI関連投資7500億ドル超－「循環的」と懸念の声(Bloomberg)2026/07/27
-*   ブラックロック、2兆円規模社債上昇－ジャンク債並み高利回りに買い(Bloomberg)2026/07/27
-*   米最大送電網、データセンターへの送電停止を警告－電力需給逼迫で(Bloomberg)2026/07/27
-*   GPIF理事長､運用は「加入者利益のみ」追求－国内投資強化巡り(Bloomberg)2026/07/27
-*   NZから豪州へ移住止まらず、賃金格差で頭脳流出－医療や建設分野で人材不足の懸念(Bloomberg)2026/07/27
-*   中国Z世代が将来に希望持てず、経済に閉塞感－心の安らぎは歴代王朝(Bloomberg)2026/07/27
-*   中国政府系企業、DUV露光装置の製造開始－ジ・インフォメーション(Bloomberg)2026/07/27
-*   中国半導体メモリー大手CXMT、27日に上海上場－株価は大幅高との観測(Bloomberg)2026/07/26
-*   CXMT会長、従業員にボーナス50億ドル超－テック人材定着狙う(Bloomberg)2026/07/27
-*   米株、危機時並みの値動きがニューノーマルに－水面下で警戒シグナル(Bloomberg)2026/07/27
-*   高市首相、金融調整は「日銀がやるべきこと、手段も委ねられている」(Bloomberg)2026/07/26
-*   中国半導体CXMT、上海市場に27日上場－初日に時価総額でトップ浮上も(Bloomberg)2026/07/26
-*   欧州株高、ASMLだけで上昇分の4分の1－少数銘柄への集中鮮明(Bloomberg)2026/07/26
-*   クアルコム、2桁台の値上げ計画－テック業界に波及する公算大(Bloomberg)2026/07/26
-*   米人気50銘柄に新たな取引ツール登場、CMEが単一株先物を27日開始(Bloomberg)2026/07/26
-*   スイス中銀、2027年末までゼロ金利維持へ－その後利上げの公算(Bloomberg)2026/07/27
-*   ソフトバンクGへの6.5兆円融資、21社が新たに参加－OPENAI投資資金(Bloomberg)2026/07/27
-*   シンガポール通貨庁、追加引き締め－エネルギー価格高止まり想定(Bloomberg)2026/07/26
-*   米ビザが2600人削減へ、全社員の7%相当－競争激化受け効率化推進(Bloomberg)2026/07/28
-*   米イラン戦争でフーシ派が戦線開く､紅海で商船攻撃－原油100ドル迫る(Bloomberg)2026/07/23
-*   フランス・スペイン山火事は一服も、4度目の熱波で警戒続く(Bloomberg)2026/07/27
-*   ムーンショット、エヌビディアの「ブラックウェル」追加調達へ－報道(Bloomberg)2026/07/28
-*   DeepSeekが資金調達見合わせ、創業者発言巡る投稿の拡散後－関係者(Bloomberg)2026/07/25
-*   イランが報復休止、米軍の攻撃停止受け－軍報道官が国営テレビに語る(Bloomberg)2026/07/26
-*   焦点FRBと日銀、英中銀が政策決定へ－原油100ドルの警戒感に注目(Bloomberg)2026/07/26
+**●●ブルームバーグ●●**
+* 円は対ドルで163円台半ば、米利上げ見送りでドル売り－債券は下落へ2026/07/29
+* マイクロソフト、クラウド事業好調－Azure増収率は市場予想上回る2026/07/29
+* 米国市況株下落、ナスダック100調整入り－ドル下げて163円台半ば2026/07/29
+* 日銀会合注目点:最新見通しと総裁会見で利上げペース探る-政策維持へ2026/07/29
+* ウォール街、AI勝ち組・負け組を選別－デフォルト保証コストが急上昇2026/07/29
+* FOMCは金利据え置き､物価安定実現を改めて表明－利上げ求め3人が反対2026/07/29
+* ドナウ川水位が記録的低下、欧州熱波でわずか24センチ－観光船も座礁2026/07/29
+* スポーツ動画のDAZN、ニックスやヤンキースの試合配信へ－米事業拡大2026/07/29
+* イオンモール熊本の爆発で3人が死亡、地震の被害徐々に明らかに2026/07/29
+* ソフトバンクG傘下アームの売上高見通し､市場期待満たせず－株価下落2026/07/29
+* 中国ムーンショットAI、資金調達で評価額350億ドルに－引き合い強く2026/07/29
+* エルメス株、一時3年ぶり安値－中国低迷が皮革製品の売上高を圧迫2026/07/29
+* スタンダードチャータード、10億ドルの自社株買い－利益が予想上回る2026/07/29
+* ポルシェ、「911」重視が奏功－中国低迷でも攻めの戦略で業績好調2026/07/29
+* ロンドンの人口、コロナ期除き約50年ぶり減少－物価高で住みづらく2026/07/29
+* 韓国、レバETF投資規制を強化へ－株急落受け7月31日発効策に追加2026/07/29
+* イオンモール爆発、原因はガスの可能性高い－イオン社長が熊本で会見2026/07/29
+* ブレント原油、一時90ドル突破－トランプ氏がイランを再攻撃へと発言2026/07/29
+* 韓国株が一時13%急落、個人投資家の売り殺到－楽観論から恐怖に一転2026/07/29
+* 韓国総人口が3年連続で増加、在留外国人増が超高齢社会下支え2026/07/29
+* SKハイニックス株の相互転換とは－ADRのプレミアムは縮小するのか2026/07/29
+* UBS、新たな自社株買い約4900億円－4～6月の業績好調2026/07/29
+* 野村HDの4ー6月純利益は1456億円－市場予想上回る2026/07/29
+* 原油上昇、ブレントが一時90ドル突破－トランプ氏がイラン再攻撃警告2026/07/29
+* 米政府、ヒト型ロボットと電力変換器を規制－中国製を事実上排除2026/07/29
 
-### ●●ブルームバーグ●●
-日本時間（UTC+9）
+**●●BBC●●**
+* Four women accuse Jared Leto of criminal sexual conduct (4人の女性がジャレッド・レトーを犯罪的な性的不正行為で告発)2026/07/29
+* Anthony Fauci refuses to answer questions during tense US Senate hearing about Covid origins (アンソニー・ファウチ氏、コロナ起源に関する緊迫した米上院公聴会で質問に答えず)2026/07/29
+* Saudi Arabia's dilemma as it tries to stay out of US-Iran war (サウジアラビア、米イラン戦争への不介入を試みる中でのジレンマ)2026/07/29
+* Two firefighters die in Crete as wildfires threaten parts of southern Europe (クレタ島で消防士2名死亡、山火事が南欧の一部を脅かす)2026/07/29
+* Zendaya on working with Tom Holland in Spider-Man: ‘When you’re best friends it’s easy’ (ゼンデイヤ、スパイダーマンでトム・ホランドと共演：「親友なら簡単」)2026/07/29
+* Worth $5m? Visitors react to renovated Washington horse statues (500万ドルの価値？ 改装されたワシントンの馬の彫像に訪問者の反応)2026/07/29
+* Red Cross declares crisis over blood supply shortage in US for second time its history (赤十字、米国で史上2度目の血液供給不足危機を宣言)2026/07/29
+* Tom Holland's Spider-Man needs to evolve - or quit (トム・ホランド演じるスパイダーマンは進化するか、引退するか)2026/07/29
+* The iPhone's hidden fix for motion sickness (iPhoneの隠し設定で乗り物酔いを解消)2026/07/29
+* The criminal allegations against Jared Leto (ジャレッド・レトーに対する犯罪的告発)2026/07/29
+* Fighting between the US and Iran flares up again (米イラン間の戦闘が再び激化)2026/07/29
+* Could a conspiracy theorist change the MAGA view on Ukraine? (陰謀論者がウクライナに対するMAGA派の認識を変えられるか？)2026/07/29
+* Sweden's summer shutdown (スウェーデンの夏のシャットダウン)2026/07/29
+* Sierra Leone: The cocaine trail (シエラレオネ：コカインの道)2026/07/29
+* Gayton McKenzie, South African minister: Immigration unrest (ゲイトン・マッケンジー、南アフリカ大臣：移民の混乱)2026/07/29
+* Founders: Leah Solivan on building and selling TaskRabbit (創業者：リア・ソリヴァン、TaskRabbitの構築と売却について)2026/07/29
+* The Kenyans taking on multinational chemical companies (多国籍化学企業に立ち向かうケニア人たち)2026/07/29
+* Follow the money: The antidote economy (お金を追え：解毒経済)2026/07/29
+* Americanswers… on 5 Live! Is Donald Trump serious about running for a third term? (アメリカンズワーズ… 5 Liveで！ ドナルド・トランプは3期目の出馬に真剣か？)2026/07/29
+* 'It's our home, it's our forest': BBC speaks to locals fighting France wildfire (「私たちの家、私たちの森だ」：BBC、フランスの山火事と戦う地元住民に聞く)2026/07/29
+* Pictures show scale of drought across England as rivers dry up (イングランド全土の干ばつの規模を示す写真、川が干上がる)2026/07/29
+* Inquiry finds MoD Afghan data breach was foreseeable failure (情報省アフガニスタンでのデータ漏洩は予見可能な失敗であったと調査が判明)2026/07/29
+* Some tech shares are plunging - what does that mean for the AI revolution? (一部のテクノロジー株が急落 - AI革命にとってそれは何を意味するか？)2026/07/29
+* The Chinese robot army transforming the UK's retail industry (英国の小売業界を変革する中国のロボット軍)2026/07/29
+* My 10-day headache was terminal brain cancer (10日間の頭痛は末期脳腫瘍だった)2026/07/29
+* Salman Rushdie attacker convicted of terror offenses (サルマン・ラシュディ氏襲撃犯、テロ行為で有罪)2026/07/29
+* Oscar-winning songwriter Glen Hansard killed in crash (オスカー受賞ソングライター、グレン・ハンサードが事故で死亡)2026/07/29
+* Why smash-hit tradwife satire Yesteryear is 2026's most divisive book (なぜ大ヒットした「トラッドワイフ」風刺『イエスタイヤー』が2026年最も物議を醸す本なのか)2026/07/29
+* Booker Prize longlist: See the 13 'dynamite' novels up for this year's prestigious award (ブッカー賞長編リスト：今年の権威ある賞にノミネートされた13の「ダイナマイト」小説を見る)2026/07/29
+* 10 of the best books of 2026 so far (2026年上半期のベストブック10選)2026/07/29
+* A look at Trump's $22bn plans to makeover Dulles Airport near Washington (ワシントン近郊のダレス空港を220億ドルかけて再開発するトランプ氏の計画を見る)2026/07/29
+* Japan in a ‘race against time’ to rescue people trapped beneath rubble after quake (日本、地震後の瓦礫の下に閉じ込められた人々を救助するため「時間との戦い」)2026/07/29
+* Trump delivers eulogy honouring Lindsey Graham (トランプ氏、リンゼー・グラハム上院議員を偲ぶ追悼演説)2026/07/29
+* The moment Tuesday's powerful earthquake hit Japan (火曜日に発生した日本の強力な地震の瞬間)2026/07/29
+* Bystander video shows teen lifeguard's dramatic ocean rescue (通行人のビデオが10代ライフガードの劇的な海での救助を示す)2026/07/29
+* Why is Ukraine rolling out the red carpet for a US far-right influencer? (なぜウクライナは米国の極右インフルエンサーに歓迎の意を示すのか？)2026/07/29
+* Drone footage shows Wisconsin tornado damage (ドローン映像がウィスコンシン州の竜巻被害を示す)2026/07/29
+* What you need to know if you're travelling to France or Spain (フランスやスペインへの旅行で知っておくべきこと)2026/07/29
+* Here's what to eat to keep your bones strong (骨を強く保つために食べるべきもの)2026/07/29
+* 10 of the best TV shows to watch this August (8月に見るべき最高のテレビ番組10選)2026/07/29
+* 'No magic wand' to tackle high prices, Fed boss says as US interest rates held ('魔法の杖'はない、高物価に対処するために、FRB議長が米金利据え置きを巡り発言)2026/07/29
+* 'Blood everywhere' - Lindsay Clancy's ex-husband recounts day of children's deaths ('血まみれ' - リンゼイ・クランシーの元夫、子供たちの死の日の出来事を語る)2026/07/29
+* Trump's new spy chief Jay Clayton confirmed by US Senate (トランプ氏の新たな諜報機関トップ、ジェイ・クレイトン氏が米上院で承認)2026/07/29
+* 'A lover of life': Seattle pays tribute to food festival shooting victims ('人生を愛する者'：シアトル、フードフェスティバルの銃乱射事件被害者に追悼)2026/07/29
+* India's CJP protests: Why tech alone won't stop exam paper leaks (インドのCJP抗議：なぜテクノロジーだけでは試験用紙の漏洩を防げないのか)2026/07/29
+* Public inquiry into Creeslough explosion could be set up, say families (クレイスロー爆発に関する公開調査が設置される可能性、家族らが述べる)2026/07/29
+* Two Americans convicted of murdering Canadian couple in Dominica (ドミニカでカナダ人夫婦を殺害した米国人2名有罪)2026/07/29
+* Saudi Arabia joins US in strikes on Iran-backed militias in Iraq (サウジアラビア、イラクでイラン系民兵への米軍による攻撃に加わる)2026/07/29
+* UK interest rates expected to be held again by Bank of England (英国の金利、イングランド銀行によって再び据え置かれる見込み)2026/07/29
+* What happens here has a big impact on your money (ここで起こることがあなたの経済に大きな影響を与える)2026/07/29
+* Trump administration bans new Chinese humanoid robots (トランプ政権、新たな中国製ヒト型ロボットを禁止)2026/07/29
+* 'Don't wait until you want revenge': Why prenups are on the rise ('復讐したいと思うまで待つな'：なぜ婚前契約が増加しているのか)2026/07/29
+* OpenAI says its rogue AI tried to hack other companies (OpenAI、不正なAIが他社をハッキングしようとしたと発表)2026/07/29
+* How period trackers share your private details (月経追跡アプリがあなたの個人情報をどのように共有するか)2026/07/29
+* Chip stocks slide in US and Asia as AI jitters rattle investors (AIへの不安が投資家を動揺させ、半導体株が米・アジアで急落)2026/07/29
+* Some people's chats with Claude AI found to be publicly available online (Claude AIとの一部のチャットがオンラインで公開されていることが判明)2026/07/29
+* Fifa opens disciplinary proceedings against Argentina (FIFA、アルゼンチンに対する懲戒手続きを開始)2026/07/29
+* Fleming expected to be named England Test coach (イングランド・テスト代表コーチにフレミング氏が就任見込み)2026/07/29
+* Why finger-clicking 'scandal' has gripped sporting world - Agnew (なぜ指クリック「スキャンダル」がスポーツ界を席巻したのか - アグニュー)2026/07/29
+* 'Change is inevitable' - Liverpool CEO on FSG, Iraola and consortium talks ('変化は避けられない' - リバプールのCEO、FSG、イラオラ、コンソーシアムとの交渉について)2026/07/29
+* Sewage, rat pee and toxic algae: How safe is wild swimming for your health? (下水、ネズミの尿、有毒藻類：野生水泳はあなたの健康にどれほど安全か？)2026/07/29
+* South Korea is becoming a medical tourism hotspot (韓国が医療ツーリズムのホットスポットになりつつある)2026/07/29
+* The dangers of heavy menstrual bleeding (重い月経出血の危険性)2026/07/29
+* The shark that lives for 400 years – and what it can teach us about longevity (400年生きるサメ – そしてそれが長寿について私たちに何を教えられるか)2026/07/29
+* Family fun at the Fleadh: All you need to know ahead of the festival (フレイドでの家族の楽しみ：フェスティバルに先立って知っておくべきことすべて)2026/07/29
+* Peppa Pig owners win copyright battle against 'impostor' Wolfoo (ペッパピッグの所有者、「偽物」のウォルフォーに対する著作権訴訟で勝訴)2026/07/29
+* Busy library reopens with a buzz after revamp (改修後、活気あふれる図書館が再オープン)2026/07/29
+* Theatre appeals for missing troll hands and mask (演劇、失われたトロルの手とマスクを訴える)2026/07/29
+* Mauritania: A rare glimpse at one of the world's least-visited nations (モーリタニア：世界で最も訪問者数の少ない国の一つを珍しく垣間見る)2026/07/29
+* How to not embarrass yourself in a British pub (イギリスのパブで恥をかかない方法)2026/07/29
+* The world's most liveable cities in 2026 (2026年、世界で最も住みやすい都市)2026/07/29
+* Slowjamastan: The new 'nation' hiding in the US (スロージャマスタン：米国に隠された新しい「国家」)2026/07/29
+* Words that reveal if you are an extrovert or an introvert (あなたが外向型か内向型かを示す言葉)2026/07/29
+* Hyperbole is now a 'mega' part of the English language, but why did it happen? (誇張は今や英語の「メガ」な一部だが、なぜそうなったのか？)2026/07/29
+* Inside eight of the best fashion designers' homes (最高のファッションデザイナー8人の自宅を覗く)2026/07/29
+* 'The male nude is still a taboo' ('男性のヌードは依然としてタブーである')2026/07/29
+* What this Frida Kahlo painting tells us about her most intimate vulnerabilities (このフリーダ・カーロの絵画が彼女の最も親密な脆弱性について私たちに何を語るか)2026/07/29
+* The spotted lanternfly is ravaging the eastern US. Pet dogs are coming to the rescue (斑点テングスケバが米東部を荒廃させている。ペットの犬が救助に来る)2026/07/29
+* We got married during a typhoon - the pictures went viral (台風の最中に結婚した – 写真がバイラルになった)2026/07/29
+* The far-reaching impacts of wildfire smoke - and how to protect yourself (山火事の煙の広範な影響 – そして自身を守る方法)2026/07/29
+* Greece's prison island was sealed off. Now it's a sanctuary for seals (ギリシャの刑務所島が封鎖された。今ではアザラシの聖域となっている)2026/07/29
+* How Mary, Queen of Scots plotted to seize the throne (スコットランド女王メアリーはどのように王位を奪取しようと陰謀を企てたか)2026/07/29
+* The Italian mountains home to the world's finest marble (世界最高級の大理石の産地であるイタリアの山々)2026/07/29
+* How emojis became the world's universal language (絵文字が世界の普遍的な言語になった方法)2026/07/29
+* The final battle of India's warrior queen, Lakshmibai (インドの戦士女王ラクシュミーバーイーの最後の戦い)2026/07/29
+* How tacos became Norway's national comfort food (タコスがノルウェーの国民的コンフォートフードになった方法)2026/07/29
+* These fruit-filled buns are Poland's summer obsession (これらのフルーツが詰まったパンはポーランドの夏の流行)2026/07/29
+* Is the World Cup ranch dressing craze real or hype? (ワールドカップのランチドレッシングブームは本物か、それとも誇大広告か？)2026/07/29
+* 10 winning pictures from the World Food Photography Awards 2026 (2026年世界食料写真賞の受賞写真10点)2026/07/29
 
-*   キオクシアHD、復活劇の先に再び試練－AI半導体競争が迫る巨額投資の判断(2時間前)
-*   シタデル・セキュリティーズの米利上げ予想、市場の警戒感高める(1時間前)
-*   ゴールドマン証、AI株の成長ストーリーは健在－国内決算で反発余地(2時間前)
-*   欧州サッカー連盟､W杯ボイコット検討－FIFAの外部資本受け入れに反発(2時間前)
-*   S&P500種上昇、半導体株の売りは加速－原油一段安、ドル163円台後半(6時間前)
-*   AI開発にスピード制限を、OpenAIとアンソロピックの社員が請願書(4時間前)
-*   ゴールドマン、グロース・エクイティ部門共同責任者に2人昇格(6時間前)
-*   米政策金利に連動の先物、ポジション膨らむ－市場の不透明感を反映(51分前)
-*   エヌビディアCEO、オープン型AIの重要性訴え－ムーンショット台頭で(1時間前)
-*   トランプ氏、対イラン強硬姿勢緩める－ネタニヤフ氏を迎え外交模索(3時間前)
-*   ボーイング、予想以上にキャッシュ改善－新大統領専用機で再び費用(6時間前)
-*   アップル時価総額、一時5兆ドル突破－エヌビディアに続き史上2社目(5時間前)
-*   サウジ石油施設に無人機攻撃相次ぐ－イラクの親イラン民兵が連日攻撃(37分前)
-*   OPECプラス、9月の増産後に生産枠の引き上げ停止へ－関係者(9時間前)
-*   アップル、新「Siri AI」端末投入へ－出遅れたスマートホームで反撃(8時間前)
-*   首都圏家賃マップ 街の高級化で東西に新序列、1135 駅データを大解剖(2日前)
-*   欧州株は堅調、ASML続落もユニリーバ好決算が打ち消す(14時間前)
-*   ペトロチャイナ、LNGカナダ株の一部売却検討－第2期計画の資金確保へ(14時間前)
-*   半導体株安加速、ナスダック100指数は調整局面目前－AI投資に懐疑論(9時間前)
-*   アマゾンの中東データセンター、イランの攻撃で被災－衛星画像で確認(11時間前)
-*   メルセデス、乗用車利益率が予想上回る－中国不振でもコスト削減寄与(14時間前)
-*   メタとブラックロック、テキサス州にデータセンター建設－2028年稼働(11時間前)
-*   EU、ロシア支援の1600社余りに制裁科す計画－対象企業数は5割増へ(8時間前)
-*   トランプ大統領、戦闘の再燃避けたい考え強調－イランに合意促す(7時間前)
-*   豪、「世界初」のデータセンター規制巡り協議－17兆円規模の計画対象(18時間前)
+**●●NYタイムズ●●**
+* More Countries Are Pulled Into Mideast Conflict With Spate of Attacks (一連の攻撃で中東紛争にさらに多くの国が巻き込まれる)2026/07/29
+* Trump Encounters a More Determined Iran as War Widens (戦争が拡大する中、トランプ氏はより決意を固めたイランに直面)2026/07/29
+* Saudi Arabia Makes Reluctant Entry Into U.S.-Iran War (サウジアラビア、米イラン戦争に不本意ながら参戦)2026/07/29
+* Two Ships Hit in Apparent Drone Strike at Egyptian Port (エジプトの港でドローン攻撃と思われる攻撃を受け、船舶2隻が被弾)2026/07/29
+* Blanche Vote in Doubt as Senators Express Skepticism Over I.R.S. Provision (上院議員らがIRS条項に懐疑的な見方を示す中、ブランシュ氏の投票が危ぶまれる)2026/07/29
+* With Blanche Nomination at Stake, Payouts to Trump Allies Continue (ブランシュ氏の指名がかかった中、トランプ氏の同盟者への支払いが続く)2026/07/29
+* Trump Unveils $22.5 Billion Redesign of Dulles Airport (トランプ氏、ダレス空港の225億ドル規模の再設計を発表)2026/07/29
+* Lawyer Who Represented Trump Is Appointed U.S. Attorney in Manhattan (トランプ氏の弁護人を務めた弁護士がマンハッタンの米国検事に任命される)2026/07/29
+* Fauci Invokes Fifth Amendment Nearly 100 Times in Bitter Senate Hearing (ファウチ氏、激しい上院公聴会でほぼ100回、憲法修正第5条を行使)2026/07/29
+* A Motorcycle Tour of Route 66 (ルート66のバイクツアー)2026/07/29
+* Mamdani Calls for Netanyahu’s Arrest (マムダニ氏、ネタニヤフ首相の逮捕を要求)2026/07/29
+* Can This Man Stop the Mamdani Agenda? (この男はマムダニ氏のアジェンダを止められるか？)2026/07/29
+* New York’s Rollout of Its Second-Home Tax Is Confusing Some Residents (ニューヨーク市、セカンドホーム税の導入が一部住民を困惑させている)2026/07/29
+* Why Republicans Aren’t Funding a Key Senate Race Yet (共和党がまだ重要な上院選挙区に資金提供していない理由)2026/07/29
+* Obama Makes One of His First Midterm Endorsements With a Basketball Video (オバマ氏、バスケットボールビデオで初の期日前投票推薦の一つを行う)2026/07/29
+* Trump Has Made Billions in Office. Will His Party Pay Politically? (トランプ氏は在任中に数十億ドルを稼いできた。彼の党は政治的に代償を払うことになるか？)2026/07/29
+* Trying to Make a Buck Off a Data Center, One 6-Pack at a Time (データセンターから一儲けしようとする、一度に6パックずつ)2026/07/29
+* Fed Holds Rates Steady but Three Officials Back Increase (FRB、金利を据え置くが、3人の当局者が利上げを支持)2026/07/29
+* Trump Administration Is Repurposing Federal Land for A.I. Data Centers (トランプ政権、AIデータセンターのために連邦土地を再利用)2026/07/29
+* Meta’s Profit Falls 14% as A.I. Spending Continues (メタ、AI支出の継続で利益が14%減少)2026/07/29
+* Microsoft Increases Spending on A.I. as Profit Jumps 31% (マイクロソフト、利益が31%急増する中、AIへの支出を増加)2026/07/29
+* Salman Rushdie’s Attacker Is Found Guilty of Aiding a Foreign Terror Group (サルマン・ラシュディ氏襲撃犯、外国テロ組織幇助で有罪)2026/07/29
+* Feeling ‘Positive Vibes Only’ in a War-Ravaged Nation (戦争で荒廃した国で「ポジティブなバイブスだけ」を感じる)2026/07/29
+* Making ‘The Odyssey’ (『オデッセイ』を作る)2026/07/29
+* Matt Damon’s Biceps in That ‘Odyssey’ Fight Scene? They Aren’t His. (『オデッセイ』のあの格闘シーンのマッド・デイモンの上腕二頭筋？ あれは彼のじゃない)2026/07/29
+* The Internet Suddenly Loves Emeril, Years After His TV Stardom (インターネットが突然エメリルを愛し始めた、彼のテレビでのスターダムから数年後)2026/07/29
+* Tiny Love Stories: ‘Women Undulating Underwater’ (小さな愛の物語：「水中をうねる女性たち」)2026/07/29
+* The Good List: 6 Things to Bring Joy to Your Day (グッドリスト：あなたの1日に喜びをもたらす6つのこと)2026/07/29
+* Is It OK to Eat the Same Things Every Day? (毎日同じものを食べるのは大丈夫？)2026/07/29
+* ‘The Odyssey’ Isn’t a Fashion Movie. But It Has One Great Outfit. (『オデッセイ』はファッション映画ではない。しかし、素晴らしい衣装が一つある)2026/07/29
+* What Our Epstein Outrage Has Obscured (私たちのエプスタインへの激怒が隠してきたこと)2026/07/29
+* What We Really Learned From the Fauci Hearing (ファウチ氏の公聴会から本当に学んだこと)2026/07/29
+* Over 100 Degrees in Paris. Flames Near Bordeaux. France Can’t Go On Like This. (パリで100度超え。ボルドー近郊で炎。フランスはこのままではいられない)2026/07/29
+* Why Do We Tolerate Elon Musk’s Racist Commentary? (なぜ私たちはイーロン・マスクの差別的なコメントを容認するのか？)2026/07/29
+* The Silicon Valley Health Trend Making Doctors Nervous (シリコンバレーの健康トレンド、医師を不安にさせる)2026/07/29
+* Who Does JD Vance Think He Is? (JDバンスは自分を何者だと思っているのか？)2026/07/29
+* A Blunt Warning for Israel (イスラエルへの率直な警告)2026/07/29
+* ‘You Aren’t Going to Like What Comes After America’ ('アメリカの後に来るものは気に入らないだろう')2026/07/29
+* Trump Will End Subsidies for Medicare Drug Premiums (トランプ氏はメディケア薬価補助金を廃止する)2026/07/29
+* Couple Stalked by eBay Settle for $56 Million (eBayにストーキングされたカップル、5600万ドルで和解)2026/07/29
+* Stream These 5 Movies Before They Leave Netflix in August (8月にNetflixから削除される前にこれらの映画5本をストリーミング)2026/07/29
+* Booker Prize Nominees Include Novels by Marlon James and Elizabeth Strout (ブッカー賞候補にマーロン・ジェームズとエリザベス・ストラウトの小説が含まれる)2026/07/29
+* In Ohio, Toxic Wastewater Is Bubbling Up Out of the Ground (オハイオ州では、有毒な廃水が地面から湧き上がっている)2026/07/29
+* Teenage Lifeguard Fights Intense Waves to Bring Boy to Safety (10代ライフガード、激しい波と戦い少年を安全な場所へ)2026/07/29
+* Record Numbers of Public Document Requests Are in Limbo or Unfulfilled (公文書リクエストの記録的な数が保留中または未処理)2026/07/29
+* Project Sunrise, a 22-Hour Nonstop Flight, Is Coming. What Will It Be Like? (22時間のノンストップフライト「プロジェクト・サンライズ」がやってくる。それはどのようなものになるか？)2026/07/29
+* 10 Women Accuse Jared Leto of Sexual Misconduct in BBC Report (BBCの報道で、10人の女性がジャレッド・レトーを性的不正行為で告発)2026/07/29
+* Work Halted at Another Office Conversion in Midtown Manhattan (ミッドタウン・マンハッタンの別のオフィスコンバージョンで作業が中断)2026/07/29
+* N.F.L. Assistant Coach’s Wife Out of I.C.U. After She Was Shot at Home (NFLアシスタントコーチの妻、自宅で銃撃された後、ICUから退室)2026/07/29
+* Runner Sets 10,000-Meter Personal Best Wearing One Shoe For Most of the Race (ランナー、レースの大部分を片足で10000メートル自己ベストを記録)2026/07/29
+* FIFA Investigates Argentina Over Falklands Banner and World Cup Brawl (FIFA、フォークランド諸島旗とワールドカップ乱闘でアルゼンチンを調査)2026/07/29
+* A Canadian Town Will No Longer Reek of Fish Sauce (カナダの町はもう魚醤の匂いがしなくなる)2026/07/29
+* Glen Hansard, Frontman of Irish Band the Frames, Dies at 56 (アイルランドのバンド「ザ・フレームス」のフロントマン、グレン・ハンサード氏、56歳で死去)2026/07/29
+* Could This ‘Red Flag’ Be the Secret to a Happy Relationship? (この「レッドフラッグ」が幸せな関係の秘訣になるだろうか？)2026/07/29
+* ‘Japanese Walking’ Is a Fitness Trend Worth Trying (「ジャパニーズウォーキング」は試す価値のあるフィットネストレンド)2026/07/29
+* Are You Hydrated? Take Our Quiz and Find Out (あなたは水分補給されていますか？ クイズに答えて確認しましょう)2026/07/29
+* I Left a Plastic Water Bottle in a Hot Car. Is It Safe to Drink? (暑い車にプラスチック水筒を置き忘れた。飲むのは安全か？)2026/07/29
+* Is the Bread in Europe Better for You? (ヨーロッパのパンはあなたにとってより良いか？)2026/07/29
+* An Artist Uses Plants as Her Muse (あるアーティストが植物をミューズとして使う)2026/07/29
+* This Appalachian Memoir Is No Elegy. That’s a Good Thing. (このアパラチアの回顧録は哀歌ではない。それは良いことだ)2026/07/29
+* His Response to Her Email Took 3 Years (and Their Wedding) (彼の彼女へのメールへの返信は3年かかった（そして彼らの結婚式も）)2026/07/29
+* Arthur Avoids a Bistro Trap. But Does It Thrill? (アーサーはビストロの罠を避ける。しかし、それはスリルがあるか？)2026/07/29
+* An Olympic Legend Changed His Name. It Caused a Family Feud. (オリンピックのレジェンドが名前を変えた。それは家族間の対立を引き起こした)2026/07/29
+* The Bill Belichick Era at North Carolina Has Reached a Crisis Point (ノースカロライナ州におけるビル・ベリチック時代の危機的状況)2026/07/29
+* Ohio State and Notre Dame Added Jersey Patches. Your Favorite School Will, Too. (オハイオ州立大学とノートルダム大学がジャージパッチを追加。あなたの好きな学校もそうなるだろう)2026/07/29
+* An Elusive Squirrel Captivated the Crowd at the Tigers-Orioles Game ( elusive squirrel がタイガース対オリオールズ戦の観客を魅了した)2026/07/29
+* Mike McCarthy Came Home to Pittsburgh, His Family and a Grief He Can’t Escape (マイク・マッカーシーはピッツバーグ、家族、そして逃れられない悲しみのもとへ帰ってきた)2026/07/29
+* Luka Doncic Said to Have Offered to Fly Lakers Teammates to Slovenia (ルカ・ドンチッチ、レイカーズのチームメイトをスロベニアに飛ばすことを申し出たとされる)2026/07/29
+* Play Connections: Sports Edition (コネクションズをプレイ：スポーツ版)2026/07/29
+* Let’s Talk About the Best Books of the Year (So Far) (今年（これまでのところ）のベストブックについて話しましょう)2026/07/29
+* Modern Love Podcast: Is Polyamory Right for Me? (モダン・ラブ・ポッドキャスト：ポリアモリーは私に合っていますか？)2026/07/29
+* Crackup at the Heritage Foundation (ヘリテージ財団での大騒動)2026/07/29
+* Why Do Some Memories Survive Dementia? (なぜ一部の記憶は認知症を生き残るのか？)2026/07/29
+* The Democratic Party Needs Change (民主党は変化を必要としている)2026/07/29
+* How ‘The Odyssey’ Outsmarts Itself (『オデッセイ』はいかにして自己を出し抜くか)2026/07/29
+* How to Make the Best Roasted Eggplant of Your Life (人生最高の焼きナスを作る方法)2026/07/29
+* A One-Pot Salmon and Rice Dish You’ll Turn to Again and Again (繰り返し作りたくなる、ワンポットのサーモンと米の料理)2026/07/29
+* No-Bake Chocolate Mousse Bars (ノーベイク・チョコレートムースバー)2026/07/29
+* Fresh Corn and Black Bean Salad With Corn Chips (コーンチップス添えフレッシュコーンと黒豆サラダ)2026/07/29
+* Tandoori Chicken (タンドリーチキン)2026/07/29
+* One-Ingredient Banana Ice Cream (バナナ1種で作るアイスクリーム)2026/07/29
+* It’s Time to Give Up the Nonstick Pan as We Know It (私たちが知っているノンスティックパンを手放す時が来た)2026/07/29
+* This $12 T-Shirt Is the Best I’ve Ever Worn (この12ドルのTシャツは私が今まで着た中で最高のもの)2026/07/29
+* What’s So Bad About DEET? (DEETの何がそんなに悪いのか？)2026/07/29
+* 5 Tips to Master a New Language (新しい言語をマスターするための5つのヒント)2026/07/29
+* Please Stop Mixing Baking Soda and Vinegar to Make Cleaning Paste (掃除用ペーストを作るために重曹と酢を混ぜるのをやめてください)2026/07/29
+* The Light Switches That Changed My Life (私の人生を変えた照明スイッチ)2026/07/29
 
-### ●●BBC●●
-UTC
+**●●WSJ●●**
+* 米、ベネズエラ産原油の対キューバ販売で制限緩和2026/07/29
+* 米国家情報長官への内部告発、政権が機密情報の開示拒否2026/07/29
+* ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」2026/07/29
+* トランプ氏、経済好転を称賛　国民の実感に反し2026/07/29
+* アップルが米国製半導体を製造へ　その内幕2026/07/29
+* トランプ氏の一般教書演説、6つのポイント2026/07/29
+* トランプ氏、「関税が所得税収を実質的に代替へ」　一般教書演説2026/07/29
+* 中国の対日貿易戦争2026/07/29
+* アンソロピック、安全に対する姿勢を後退　方針緩和へ2026/07/29
+* ロシア勝利は必然ではない、5年目迎えたウクライナ戦争2026/07/29
+* ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪2026/07/29
+* AIに仕事を奪われる？ それより深刻な事態とは2026/07/29
+* 中国の対米貿易戦争に好機、トランプ関税無効で2026/07/29
+* パラマウント、ワーナー買収提案引き上げ　1株31ドル2026/07/29
+* 米AI新興企業、小規模維持が最大の武器2026/07/29
+* AIの脅威、米商業用不動産業界にも試練2026/07/29
+* 米株揺らす「AI脅威シナリオ」、4つのポイント2026/07/29
+* なぜオプション投資家が予測市場に集まるのか2026/07/29
+* イランで反体制派と政権支持派が衝突、緊張高まる2026/07/29
+* トランプ政権、銀行に市民権情報の収集義務づけを検討2026/07/29
 
-*   Japan earthquake searches continue overnight, with people missing in collapsed mall and factory (8 hrs ago)
-*   Lindsey Graham remembered by Trump as 'giant of the US Senate' at funeral (2 hrs ago)
-*   Zelensky and Netanyahu meet Trump as wars in Ukraine and Iran drag on (3 hrs ago)
-*   Bystander video shows teen lifeguard's dramatic ocean rescue (2 hrs ago)
-*   Ghana mourns its tallest man - a 'generous and popular giant' (5 hrs ago)
-*   Uefa and PM criticise Infantino World Cup plan (8 hrs ago)
-*   Wildfires in south-west France flare up as region braces for new 40C heatwave (7 hrs ago)
-*   'A lover of life' - Seattle pays tribute to food festival shooting victims (19 mins ago)
-*   On the front line of Ecuador's drugs war, police fight gangs, guns and corruption (19 hrs ago)
-*   Pop star Madison Beer and NFL player Justin Herbert announce engagement (2 hrs ago)
-*   Mysterious deaths of 14 elephants in Kenya prompts urgent inquiry (7 hrs ago)
-*   I turned down Love Island and won silver at the Commonwealth Games (1 hr ago)
-*   Booker Prize longlist: See the 13 'dynamite' novels up for this year's prestigious award (11 hrs ago)
-*   Why is Ukraine rolling out the red carpet for a US far-right influencer?
-*   What you need to know if you're travelling to France or Spain
-*   Confronting gang members at the heart of Ecuador's drug battle
-*   BBC outside court as judge rules singer D4vd will face murder trial
-*   North America wildfires burn millions of acres in western US and Canada
-*   How a bridge became a symbol of US-Canada tensions
-*   Why are thousands of mosquitoes being released in Washington DC?
-*   US police officers free owl tangled in football net
-*   Why attachment theory is everywhere right now and how it can help you
-*   Here's what to eat to keep your bones strong
-*   Watch: Trump delivers eulogy honouring Lindsey Graham
-*   'A narcissist' - victim's family blasts Kohberger for challenging Idaho murder conviction
-*   Drone footage shows Wisconsin tornado damage
-*   US singer D4vd to go on trial for murder in death of 14-year-old
-*   Iran launches 'attempted surprise attack' on US forces in Middle East
-*   How Mexican drug cartels have outsourced meth labs to Nigeria
-*   Why Wimbledon is serving Indian ice cream and Bollywood beats
-*   10-year-old girl dies days after collision in which mother was killed
-*   'Don't wait until you want revenge' - why prenups are on the rise
-*   The impact wildfires in France and Spain may have on your travel plans
-*   What you wear can help you get a job - here's how
-*   Chip stocks slide in US and Asia as AI jitters rattle investors
-*   How period trackers share your private details
-*   Warning shot or publicity stunt - how worried should we be about the OpenAI hack?
-*   How emojis became the world's universal language
-*   China's Moonshot AI stole from Anthropic, Trump tech adviser says
+**●●AXIOS●●**
+*   （AXIOSからの抽出可能な記事見出しがありませんでした。）
 
-### ●●NYタイムズ●●
-UTC
+**●●日経●●**
+* 熊本地震、企業に痛手 ソニーなど半導体の生産停止2026/07/30
+* FRBが金利据え置き、3人が利上げ主張し反対 議長「必要なら行動」2026/07/30
+* 日本人1億2000万人割れ 42年ぶり2026/07/30
+* 最高益のSK、株価は下落 「AI需要の波」不安材料2026/07/30
+* 「防災拠点」モール爆発 イオン、141自治体と協定2026/07/30
+* カルビー白黒ポテチの誤算、消えた「おいしそう」 色が映す購買心理2026/07/30
+* 中国、4割でシェア拡大 車載電池やデジタル端末2026/07/30
+* NYダウ1153ドル安、関税ショック以来の下落 30年金利19年ぶり2026/07/30
+* アイシン熊本被災でトヨタ・日産が生産停止 10年越し対策も及ばず2026/07/30
+* 検証・高市内閣の支持率（中）支持に年齢差「若高老低」 20代以下と70歳以上で最大30ポイント 重要政策でも二分化2026/07/30
 
-*   ICE Arrests Surge at Airports, Opening New Front in Deportation Drive (Tuesday, July 28, 2026)
-*   U.S. Citizen Faces Felony Charge After Erasing His Phone at Airport Customs (Tuesday, July 28, 2026)
-*   Senate Confirms Jay Clayton to Lead U.S. Intelligence Community (Tuesday, July 28, 2026)
-*   Behind Closed Doors, Trump Huddles With Netanyahu and Zelensky (Tuesday, July 28, 2026)
-*   Acting Spy Chief Spends Final Hours in Job Boasting of Mass Firings (Tuesday, July 28, 2026)
-*   Administration Will End Subsidies for Medicare Drug Premiums (Tuesday, July 28, 2026)
-*   Trump Asks Supreme Court to Overturn $83.3 Million Award in Carroll Defamation Case (Tuesday, July 28, 2026)
-*   Airport ICE arrests surge, an earthquake rocks Japan, Ukraine and Israel’s leaders visit D.C. (Tuesday, July 28, 2026)
-*   Iran Considered Retaliatory Attack on Ukrainian Seaport (Tuesday, July 28, 2026)
-*   Iran Publicly Hangs 2 Protesters, Rights Groups Say (Tuesday, July 28, 2026)
-*   Houthis Claim Strike on Another Saudi Oil Tanker (Tuesday, July 28, 2026)
-*   At Graham’s Funeral Service, a Glimpse Into Power in Trump’s Washington (Tuesday, July 28, 2026)
-*   Senators Reach Deal on Graham’s Russia Sanctions Bill (Tuesday, July 28, 2026)
-*   With Graham’s Death, Senate Loses Its ‘Trump Whisperer’ (Tuesday, July 28, 2026)
-*   Together, Graham and Netanyahu Denounced the International Criminal Court (Tuesday, July 28, 2026)
-*   9 Things Experts Wish You’d Do in Midlife to Increase Longevity (Tuesday, July 28, 2026)
-*   Mark Zuckerberg Blasts Centralization of A.I. Power (Tuesday, July 28, 2026)
-*   What Is Open-Weights A.I.? (Tuesday, July 28, 2026)
-*   How A.I. Books Sneak Their Way Into Stores (Tuesday, July 28, 2026)
-*   What’s Going on With Mitch McConnell? Kentucky’s Governor Has Questions. (Tuesday, July 28, 2026)
-*   Noncitizen Voter Error Puts an Ambitious Democrat in the Hot Seat (Tuesday, July 28, 2026)
-*   Domestic Abuse Allegations Rock an Ohio House Race (Tuesday, July 28, 2026)
-*   Democrats Reshaped Their 2028 Primary Calendar. Here’s Who It Helps. (Tuesday, July 28, 2026)
-*   Investigation of School Jeffrey Epstein Helped Finds Abuses Went Beyond Him (Tuesday, July 28, 2026)
-*   Japan Mounts Rescues in Buildings That Collapsed After Strong Earthquake (Tuesday, July 28, 2026)
-*   What to Know About the Kumamoto Earthquake in Japan (Tuesday, July 28, 2026)
-*   I Learned to Predict Storms by Paying Attention to My Body (Tuesday, July 28, 2026)
-*   Aide Who Had Affair With Newsom 20 Years Ago Details Her Experience (Tuesday, July 28, 2026)
-*   A Blunt Warning for Israel (Tuesday, July 28, 2026)
-*   An Alaskan Pilot. A Six-Pack of Beer. An Important Supreme Court Precedent. (Tuesday, July 28, 2026)
-*   ‘You Aren’t Going to Like What Comes After America’ (Tuesday, July 28, 2026)
-*   Who Does JD Vance Think He Is? (Tuesday, July 28, 2026)
-*   Lilly Yokoi, Acrobat Who Dazzled on a Golden Bicycle, Dies at 96 (Tuesday, July 28, 2026)
-*   St. Paul Police Chief Filed Harassment Complaint Against the Mayor (Tuesday, July 28, 2026)
-*   When It Comes to Cyclospora, the Internet Is Leaping to Conclusions (Tuesday, July 28, 2026)
-*   Ross Douthat, a Times Opinion Columnist, Joins ‘60 Minutes’ as a Correspondent (Tuesday, July 28, 2026)
+**●●時事●●**
+* 死亡１２人、心肺停止６人 イオンと日本製紙工場で死者８人―８７００人2026/07/30
+* 自衛隊４６００人態勢に 現地へクーラー３００台―熊本震度７2026/07/30
+* 自衛隊４６００人態勢に 現地へクーラー３００台―熊本震度７2026/07/30
+* 国家公務員の月給・ボーナス増額へ ５年連続、民間の賃上げ反映―人事院2026/07/30
+* 特捜検事不祥事「あり得ない話」 非難の声相次ぐ―法務・検察幹部ら2026/07/30
+* 八代市、北東に８７センチ動く 地殻変動、国土地理院が観測―熊本震度７2026/07/30
+* ロシア、北方領土に「ゾルゲ」島2026/07/30
+* ３人死亡、「深くおわび」 当日３０００人利用、客全員避難―爆発巡りイ2026/07/30
+* トヨタ九州、工場再停止 半導体関連各社、被害確認急ぐ―熊本震度７2026/07/30
+* 専門家「懸念された地震」 １６年の断層帯、南西に延長部―熊本震度７2026/07/30
 
-### ●●WSJ●●
-日本時間（UTC+9）
+**●●yahoo●●**
+* 「推し」がいると、なぜ元気になる？　推し活と社会のいい関係2026/07/29
+* 猛暑日続出 関東は天気急変の恐れ2026/07/29
+* 12人死亡6人心肺停止 熊本県発表2026/07/29
+* 令和8年熊本地震 最新情報まとめ2026/07/29
+* 熊本県内3万戸超で停電 断水も2026/07/29
+* 避難所は冷房ある教室活用を 通知2026/07/29
+* 週末の熊本は40℃迫る酷暑か 警戒2026/07/29
+* 日本人人口1.2億人割れ 42年ぶり2026/07/29
+* 食品消費税4月から1% 首相指示へ2026/07/29
+* 熊本地震受け 各国首脳らコメント2026/07/29
+* 熊本地震 海外メディアが一斉速報2026/07/29
+* トランプ氏 イランに報復を予告2026/07/29
+* 米イスラエル首脳 作戦巡り隙間風2026/07/29
+* 米軍 イランのミサイル攻撃を迎撃2026/07/29
+* 米大統領 ウ大統領らとの会談良好2026/07/29
+* ペルー大統領 ケイコ氏が就任2026/07/29
+* 露 北方領土の島「ゾルゲ」命名へ2026/07/29
+* イオン爆発 なぜ地震の1時間半後2026/07/29
+* イオン社長「爆発想定しきれず」2026/07/29
+* 九州新幹線 被害の全容つかめず2026/07/29
+* 熊本で地震 46の医療機関が被災2026/07/29
+* 熊本地震 問われた「企業防災」2026/07/29
+* 熊本で「通れた道」トヨタが公開2026/07/29
+* 米FRB 政策金利の据え置きを決定2026/07/29
+* NHK会長 受信料の値上げ検討せず2026/07/29
+* 後藤拓実が結婚 相方も知らず絶句2026/07/29
+* 四千頭身・後藤拓実が結婚発表2026/07/29
+* 熊本地震 芸能イベント相次ぎ中止2026/07/29
+* NHK 地震報道でドラマ相次ぎ休止2026/07/29
+* YOSHIKI 地震受け1000万円を寄付2026/07/29
+* 黒柳徹子 板東さんの声が今も耳に2026/07/29
+* 板東英二さん死去 クイズ番組人気2026/07/29
+* 舟山久美子 シンガポール移住報告2026/07/29
+* 上原氏 ピッチクロック導入に見解2026/07/29
+* 4強入り 髙橋藍「苦しかった」2026/07/29
+* バレー男子準決勝進出 中国に勝利2026/07/29
+* 岡本和真が大暴れ 1試合3安打2026/07/29
+* FIFA W杯運営担う子会社設立計画2026/07/29
+* 新庄氏が伝説の「本盗」再現 歓声2026/07/29
+* 佐藤輝明 HRダービー初優勝逃す2026/07/29
+* 中日・大野 阪神ユニで球場入り2026/07/29
+* アップル 米国で「リース」を開始2026/07/29
+* 生保協会 3万7千人分情報漏えいか2026/07/29
+* ネトフリ 英で視聴メディア1位に2026/07/29
+* 災害時のSNSデマ投稿 見極め方は2026/07/29
+* 00000JAPAN 利用時の注意点2026/07/29
+* 電池や通信 スマホの災害時の対策2026/07/29
+* 地震 デマや真偽不明の情報拡散2026/07/29
+* Apple時価総額 世界首位返り咲き2026/07/29
+* 熱中症に注意 避難生活のポイント2026/07/29
+* イオン爆発 マッハ超える衝撃波か2026/07/29
+* 熊本で地震 最大84cmの地殻変動2026/07/29
+* 震度7は熊本地震割れ残りか 識者2026/07/29
+* 停電時や避難所 体を冷やすには2026/07/29
+* 山火事や台風 世界で異常気象なぜ2026/07/29
+* 夏の紅葉? 沖縄の山が赤く染まる2026/07/29
+* 東野圭吾さん死去 大腸がんとは2026/07/29
+* 熊本地震3日目の朝 続く救出活動2026/07/29
+* イオン熊本で妻不明 案ずる夫と子2026/07/29
+* イオンモール爆発事故 死者5人に2026/07/29
+* がれきから「助けて」緊迫の救助2026/07/29
+* 潰れた1階から「ここー」弟を救出2026/07/29
+* 地震後 自民福岡県議らパーティー2026/07/29
+* 建て替えたばかり 八代市庁舎損傷2026/07/29
+* 自転車の中学生転倒 車衝突し死亡2026/07/29
+* 日本が準決勝進出　中国に逆転勝ち―バレーボール男子2026/07/30
+* 大谷翔平の1位に不満の声「あり得ない」「なぜ」　米国ファンから辛辣な声、新たな論争勃発（Full-Count）2026/07/30
+* 「櫻坂４６」松田里奈、木曜レギュラー「ＴＨＥ　ＴＩＭＥ，」を休む…安住紳一郎アナが「理由」を発表2026/07/30
+* 台風13号は「猛烈な」勢力に発達　日本列島に影響のおそれ2026/07/30
+* 米軍がイラン空爆か2026/07/30
+* 大谷翔平が「MLB史上初」の珍記録　先頭打者弾含む3安打3打点、1敬遠の活躍も…チームは敗戦「1955年以来、唯一だ」（CoCoKARAnext）2026/07/30
+* トランプ大統領「次は我々が反撃する番だ」 米軍への攻撃受けイランへの報復を表明（テレビ朝日系（ANN））2026/07/30
+* 生まれたては「正岡子規に似てる」と言われた息子→1年後……　まさかの“現在の姿”に「人生何度目？」「イケメン確定」2026/07/30
+* 犯罪ジャーナリスト・小川泰平氏、8月5日手術へ「直腸がんステージ3」報告「30年以上、風邪ひかず…ショック」2026/07/30
+* 〈懲役30年求刑〉「55回殴った」「ストレス発散だった」…江別・男子大学生集団暴行死、17歳少年が法廷で明かした“凄惨な犯行心理”2026/07/30
+* 「二の腕を隠してくれます」　無印良品の“2990円ワンピース”が大好評　「とろけるような着心地」「暑い夏に最適なワンピース」「3色とも購入しました」2026/07/30
+* 「麻央さんにそっくり」「すっかり大人に」「かわいい～」...市川團十郎、長女の15歳の誕生日を祝福（J-CASTニュース）2026/07/30
+* 散歩中、ベンチで休憩したら……「すげぇ」ベッタリくっついてきた“驚きの生物”が100万再生「ぐぅわぁッッッ」「やばいよ…」2026/07/30
+* 厚生年金・国民年金60歳代〜80歳代のリアルな受給事情《1歳刻みの平均月額》年金にもある「額面と手取り」2026/07/30
+* 「無理、無理、無理、払えない…」〈年金月15万円〉68歳おひとり様女性、修繕積立金「1戸あたり500万円不足」に絶句（THE GOLD ONLINE（ゴールドオンライン））2026/07/30
+* なぜゲンキーだけ客数が増えたのか　ドラッグストア『勝ち組』と『苦戦組』を分けた意外な理由2026/07/30
+* 「ズッキーニがあったらやってみて！」メイン食材１つ！切って和えるだけ！火を使わない！超簡単レシピ2026/07/30
+* 12年前に脳梗塞患った62歳女性タレント　「鳥」を好きになり人生豊かに　終活で洗濯機処分し手洗い生活徹子の部屋2026/07/30
+* 《妻・趣里は「ショックです」報道》三山凌輝の月額8000円FC会員は嘆き節「いまだ更新ストップ」「ファンを“信者”と呼んだ。無頓着な性格なのかも」（NEWSポストセブン）2026/07/30
+* 地震熊本県内で震度4 熊本県熊本地方を震源とする最大震度4の地震が発生 津波の心配なし（熊本ニュース KAB ONLINE）2026/07/30
+* 抜群スタイルで話題！２９歳女優　競泳水着にネットくぎ付け「とても綺麗」「めっちゃ可愛い」と反響の武田玲奈2026/07/30
+* 大学教授｢熱中症にもヒートショックにも効く｣…""血管を強くする""スーパーで買える果物3種（プレジデントオンライン）2026/07/30
+* 通勤中、自転車で「左側通行」を守らず右側を走ったら注意されました。「逆走」扱いと認識されて、反則金の対象になるのでしょうか？（ファイナンシャルフィールド）2026/07/30
+* 「おいおい、Bリーグすげえな」　NBAから大物加入の一報にバスケファン騒然「うわぁぁぁぁぁ！」（THE ANSWER）2026/07/30
+* 中東の紛争激化でも金が下落、なぜなのか？ その裏で中国は「歴史的な大勝負」に出る（Forbes JAPAN）2026/07/30
+* 呆れるほど「仕事ができない人」の特徴・ワースト1（ダイヤモンド・オンライン）2026/07/30
+* 水谷豊＆伊藤蘭、娘婿・三山凌輝の不倫疑惑に我慢の限界か　強まる“離婚するしかない”という思い　「趣里さんもいよいよ覚悟を決めた…」の知人証言も（週刊女性PRIME）2026/07/30
+* 登山家・野口健の長女・野口絵子、しなやか美ボディ披露　真っ赤なドレス姿で息をのむ美しさ…デジタル写真集で新たな魅力2026/07/30
+* 四国「左下ぐるり高速」延伸に向けて一歩前進！ “高知道の先の区間”でトンネル貫通2026/07/30
+* 『キングダム 魂の決戦』一番ハマり役だった俳優は？（1） 「こんな声も出せるの？」完璧な演技で株を上げた男2026/07/30
+* 速報大坂なおみ 第1セット先取！初戦の2回戦で世界67位と対戦＜女子テニス＞（tennis365.net）2026/07/30
+* 「叩かれながらも支援してるの凄い」へずまりゅう市議が熊本現地入り、被害状況を伝える姿に「やめてほしい」「フットワークの軽さ尊敬する」さまざまな声（西スポWEB OTTO!）2026/07/30
+* セリア考えた人すごい！買ってから毎日のスキンケアに欠かせない！100均（akaneko715）2026/07/30
+* なぎ倒された商品、泣き叫ぶ子ども…『コストコ熊本御船倉庫店』本社が明かした被害状況（週刊女性PRIME）2026/07/30
+* 5兆円かけて大都市を作るはずが､人も車もいない…インドネシア""新首都""が｢ピカピカの廃墟｣と化したワケ（プレジデントオンライン）2026/07/30
+* 美女レポーターが大爆笑…鈴木誠也が「大好き」　米国ファンを虜にした“8文字”「本当に面白い」（Full-Count）2026/07/30
+* 京都・祇園祭で“2000円”だった着物→帰って、タグを見たら……「ほんまに?????」　“驚きの光景”に「良い買い物されましたね～」2026/07/30
+* “松井秀喜監督案”を退け「井口資仁氏」侍ジャパン監督就任　決め手は佐々木朗希との“ストーリー”2026/07/30
+* 下の世話もしたのよ!?…認知症の母を介護した65歳姉が「遺産分割」の場で豹変。〈仕送り月5万円〉を続けた62歳弟が絶句したワケ弁護士が解説（THE GOLD ONLINE（ゴールドオンライン））2026/07/30
+* 一発アウト1秒でも早く「クビにしないといけない管理職」の特徴・ワースト1（ダイヤモンド・オンライン）2026/07/30
+* 64歳・税理士がテレビゲームきっかけで始めた筋トレでコンテスト優勝　「運動を始めるのに遅すぎることはない」（FITNESS LOVE）2026/07/30
+* 福岡県議“カツアゲ疑惑”「日本で一番悪い男」蔵内議長の地元で進む“ドン包囲網”　辞職でも圧し掛かる“総事業費200億円”負の遺産とは2026/07/30
+* 熊本地震3日目の朝 続く救出活動2026/07/29
+* 猛暑日続出 関東は天気急変の恐れ2026/07/29
+* 熊本地震受け 各国首脳らコメント2026/07/29
+* イオン熊本で妻不明 案ずる夫と子2026/07/29
+* イオン爆発 なぜ地震の1時間半後2026/07/29
+* 潰れた1階から「ここー」弟を救出2026/07/29
+* 上原氏 ピッチクロック導入に見解2026/07/29
+* 4強入り 髙橋藍「苦しかった」2026/07/29
+* イオンモールで働く妻から「そっちは大丈夫？」…その後途絶えた音信、捜索見守る男性「覚悟しておいた方が」と声絞り出す（読売新聞オンライン）2026/07/30
+* 「どんだけ可愛いねん！」バレーボール女子24歳の“お知らせ”にファン歓喜「健康美人の見本」「関西でもイベントしてほしい」（CoCoKARAnext）2026/07/30
+* 冒頭全文イオン吉田昭夫社長「死亡した方が、なぜ1時間館内にいたか我々としては認識しておりません」会見で避難状況を説明（TBS NEWS DIG Powered by JNN）2026/07/29
+* 「そんなに見せて大丈夫？」電撃婚から半年〝大胆！白チューブトップ〟の長澤まさみに「激ヤセしたように感じる」「夫婦仲は？」雑誌登場に注目集まる（西スポWEB OTTO!）2026/07/29
+* 坂上忍、妻の“トンズラ”で絶望的な状況に　27匹を日昼夜ワンオペも……「あまりに大変すぎて忘れちゃいました」「明日はどうなることやら」（ねとらぼ）2026/07/29
+* “金銭授受疑惑”で揺れる福岡県議会 自民会長が政治資金パーティー開催 震度7熊本地震発生も予定通り福岡発（FNNプライムオンライン）2026/07/29
+* 声詰まらせ「爆発、想定しきれず」　一時避難完了も、悔しさにじませ　イオン社長・熊本震度7（時事通信）2026/07/29
+* 岩屋毅前外相が高市政権への苦言連発　国旗損壊罪、副首都法、皇室典範改正、消費減税、対中外交…「右へならえの自民党では国を誤る」（OBS大分放送）2026/07/29
 
-*   米、ベネズエラ産原油の対キューバ販売で制限緩和(26 分前)
-*   米国家情報長官への内部告発、政権が機密情報の開示拒否(1 時間前)
-*   ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」(4 時間前)
-*   トランプ氏、経済好転を称賛　国民の実感に反し
-*   アップルが米国製半導体を製造へ　その内幕
-*   トランプ氏の一般教書演説、6つのポイント
-*   トランプ氏、「関税が所得税収を実質的に代替へ」　一般教書演説(By WSJ Staff)
-*   中国の対日貿易戦争
-*   アンソロピック、安全に対する姿勢を後退　方針緩和へ
-*   ロシア勝利は必然ではない、5年目迎えたウクライナ戦争
-*   ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪
-*   AIに仕事を奪われる？ それより深刻な事態とは(Matthew Call)
-*   中国の対米貿易戦争に好機、トランプ関税無効で
-*   パラマウント、ワーナー買収提案引き上げ　1株31ドル
-*   米AI新興企業、小規模維持が最大の武器
-*   AIの脅威、米商業用不動産業界にも試練
-*   米株揺らす「AI脅威シナリオ」、4つのポイント
-*   なぜオプション投資家が予測市場に集まるのか
-*   イランで反体制派と政権支持派が衝突、緊張高まる
-*   トランプ政権、銀行に市民権情報の収集義務づけを検討
+**●●AI●●**
+* 速報オープンAI、別の企業にもサイバー攻撃（47NEWS）2026/07/29
+* OpenAIのAI暴走､他社アカウント乗っ取りも サイバー攻撃足場に2026/07/29
+* OpenAIサム・アルトマン「AIのシンギュラリティはすでに到来した」発言は正しいのか（Yahoo!ニュース）2026/07/29
+* アンソロピックなどAI開発大手幹部ら、AI開発の減速を要請 米政府に公開書簡2026/07/29
+* 7月30日開催「AI×採用カンファレンス 2026 summer」、overflow代表 鈴木裕斗がクロージングセッションに登壇2026/07/30
+* 英アーム、7－9月売上高見通しは予想上回る ＡＩ向け半導体需要好調2026/07/30
+* 決算:Microsoft、4〜6月3割増益 AIクラウド4年ぶりの増収率2026/07/29
+* アップル株がエヌビディアを再逆転した理由、AI投資は収益化の第2ステージへ（forbesjapan.com）2026/07/29
+* 調整色強まる半導体株、「AIバブル崩壊」は本当か？台湾・韓国データが示す相場の真実（Yahoo!ニュース/ビジネス＋IT）2026/07/29
+* Gemini Spark、Proプランで利用可能に 24時間働く「AIパートナー」（Impress Watch）2026/07/29
+* 「Google AI Pro」がさらにお得に、YouTube Premium Liteに加えてAIエージェント「Gemini Spark」も追加、価格は据え置き2,900円／5TBのストレージも変わらずセット（Impress Watch）2026/07/29
+* GoogleがパーソナルAIエージェント「Gemini Spark」を日本のProユーザーに提供開始（Yahoo!ニュース/Web担当者Forum）2026/07/29
+* 熊本地震 SNSで偽の救助要請 生成AIで作った偽動画も 注意を2026/07/29
+* 農水省の“クソダサ”ポスター話題 「AIよりよっぽど良い」の声も 担当者に狙いを聞いた2026/06/30
+* 特許庁におけるAI活用の基本方針「JPO AIビジョン」を策定しました2026/07/27
+* AIエージェント時代のブランド設計とは？ 博報堂の「ブランドに“生きた人格”を宿す」実装最前線2026/07/30
+* NY株式：NYダウは1153.18ドル安、AI過剰投資やインフレ加速を警戒(Yahoo!ファイナンス/フィスコ)2026/07/29
+* 北林 康弘：生成ＡＩ時代の水危機に、デジタルでどう挑むか2026/07/29
+* 自信を持ってAI駆動型のトランスフォーメーションを加速2026/07/29
+* シャドーAIのリスク高まる2026/07/29
+* 「AI駆動型開発が日本のIT環境を本当に変える」--Cognition AI Japanの正井社長（ZDNET Japan）2026/07/29
+* ガバメントAI 源内の公式ロゴをリリースしました2026/07/29
+* メタ、決算受け時間外で８％安 ＡＩ投資回収に疑問広げる内容＝米国株個別2026/07/29
+* KDDIと Google AI Futures Fund、国内スタートアップ向けの協調支援プログラムを開始（KDDI ニュースルーム）2026/07/27
+* 米メタ、ＡＩ投資拡大でフリーキャッシュフロー9割減 株価5％安2026/07/29
+* ガレージ・スタートアップからAI搭載の精度まで2026/07/29
+* 明日の戦略－AI関連への売りは止まらず、あすはアドバンテストの決算反応に要注目(Yahoo!ファイナンス/トレーダーズ・ウェブ)2026/07/29
+* オープンAI開発中のAIが別企業のシステムにも侵入したこと明らかに 「ハギングフェイス」への攻撃拠点として利用（Yahoo!ニュース）2026/07/29
+* オープンＡＩの暴走エージェント、別企業のシステムにも不正侵入2026/07/29
+* 高額投資でもAIが定着しない 4社に3社が抱える「信頼の欠如」（Yahoo!ニュース/TechTargetジャパン）2026/07/30
+* 「中国製AIを世界の公共財にする」と宣言、習近平が仕掛ける「価格破壊」の勝算(Yahoo!ファイナンス/ダイヤモンド・オンライン)2026/07/29
+* サム・アルトマン氏がAI開発減速を検討──安全懸念が背景（Yahoo!ニュース/ビジネス＋IT）2026/07/29
+* 「中国製AIを世界の公共財にする」と宣言、習近平が仕掛ける「価格破壊」の勝算（Yahoo!ニュース/ダイヤモンド・オンライン）2026/07/29
+* 生成AIを活用した新マーケティング手法「DNAマーケティング」を開発 - News（ニュース） - 電通ウェブサイト2026/07/27
+* ジャイール・ボウソナーロ氏側、AI動画の使用を許可していないと主張（Yahoo!ニュース/MEGABRASIL）2026/07/29
+* 三菱電機名古屋製作所 「フィジカルAI」実証開始 加工条件の自動調整など2026/07/29
+* 米国株式市場は大幅下落、AI過剰投資やインフレ加速を警戒／海外市場動向(Yahoo!ファイナンス/フィスコ)2026/07/30
+* 調整色強まる半導体株、「AIバブル崩壊」は本当か？台湾・韓国データが示す相場の真実2026/07/29
+* 米メタ、ＡＩ投資拡大でフリーキャッシュフロー9割減 株価5％安（Yahoo!ニュース/ロイター）2026/07/29
+* イタリアでAIと核戦争に関する国際会議 創価学会が共催（seikyoonline.com）2026/07/29
+* 疲弊する新卒採用の現場 「生成AIの書いた作文」を読まされる担当者（日経BOOKプラス）2026/07/29
+* 韓国にさらなる追い打ちか、中国「ムーンショットAI」企業価値が350億ドルに2026/07/30
+* AI時代の開発を切り拓くテックカンファレンス「STORES Tech Conf 2026 ""World 2""」を8月31日（月）に開催（Yahoo!ニュース/スマホライフPLUS）2026/07/29
+* MIXI、AIと共創する次世代エンジニア育成に向けた2026年度新卒技術研修資料を公開2026/07/27
+* 「AI環境における人材とマネジメントに関する定量調査」を発表！正規雇用者の生成AI利用率は54.3％、半年で12.4pt増加（Yahoo!ニュース）2026/07/29
+* 中国新素材メーカー、PODフィルム量産拡大へ AI向け放熱市場を開拓（36Kr Japan）2026/07/30
+* 米国でAI失業は広がっている？ 労働市場への影響は限定的と考える理由 米国野村證券・雨宮愛知2026/07/29
+* 韓国・AI人材が2029年までに58万人不足…通信3社が育成を加速（Yahoo!ニュース/KOREA WAVE）2026/07/29
+* 金融領域のAI活用一段 カギは業界特化の「3つのレイヤー」2026/07/29
+* オープンAI“開発中のAI”が別企業にサイバー攻撃（2026年7月28日掲載）｜日テレNEWS NNN2026/07/29
+* 自動運転、AI丸投げに「ちょっと待ったー！」 E2Eが急ブレーキ？2026/07/29
+* ＡＩが半導体に追い風、想定超えた キオクシア再建を主導 ベインキャピタル・杉本勇次日本代表2026/07/29
+* KubernetesはAIを動かすプラットフォームに。横浜でKubeCon＋CloudNativeCon Japan 2026が開幕（Publickey）2026/07/29
+* メタの売上高見通しさえず、AI投資への懸念強まる－株価下落（Yahoo!ニュース/Bloomberg）2026/07/29
+* EVの悪夢再び？ 熱狂の中国AI・ヒト型ロボット開発に迫る危険すぎる“過当競争”2026/07/29
+* ジェンセン・フアン氏、AIによる雇用破壊を懸念する悲観論者たちは「まったく逆」だと語る（Business Insider Japan）2026/07/30
+* オンデバイスAIを実現可能にするUFS 5.0対応組み込み式フラッシュメモリ製品の出荷について（KIOXIA Corporation）2026/07/29
+* 54%の学生が「選考方法で辞退」。AI面接や動画選考に揺れる就活生のリアル令和の就活（Business Insider Japan）2026/07/29
+* オープンＡＩ、自律型エージェントの暴走を1週間後まで把握せず2026/07/26
+* Excelを原稿用紙にする日本に苦言 「AIを雑用ツールにしてはいけない」次なるAI時代に逆転するための条件（Yahoo!ニュース）2026/07/29
+* 災害時のフェイク画像どう見抜く 文字化けは？大きさは？まず疑って [AIの時代]2026/07/29
+* 「ソフトバンク・東北大学 AI for Disaster Science共創研究所」を設立2026/07/27
+* 「楽天GORA」、AIゴルフスイング解析機能を拡充（楽天グループ株式会社）2026/07/29
+* 中国ムーンショットAI、資金調達で評価額350億ドルに－引き合い強く（Bloomberg）2026/07/29
+* Workiva、リスクの高い報告業務を推進すべく、専用AIエージェントとインテリジェンス・レイヤーをリリース（Business Wire）2026/07/29
+* AI「制御不能」の脅威 法規制 開発停止の声も 試験中にサイバー攻撃2026/07/29
+* アマゾンがＡＩ戦略見直し、主力モデルの大半縮小へ＝報道2026/07/28
+* 米メタ、ＡＩ投資拡大でフリーキャッシュフロー9割減 株価5％安（ニューズウィーク日本版）2026/07/29
+* 熊本地震でAIフェイク氾濫 注意 災害報道に新たな課題 令技術向上で「本物」と見分けつかぬ時代に（Yahoo!ニュース/スポニチアネックス）2026/07/29
+* Excelを原稿用紙にする日本に苦言 ｢AIを雑用ツールにしてはいけない｣次なるAI時代に逆転するための条件（東洋経済オンライン）2026/07/29
+* 〔決算〕アドバンテスト、業績予想を上方修正＝AI半導体急増でテスター好調☆差替(Yahoo!ファイナンス/時事通信)2026/07/29
+* ラジオもポッドキャストもオーディオブックも——AIが音声メディアを塗り替える（forbesjapan.com）2026/07/30
+* 独自調査検索エンジン・AI・SNSをどう使い分けている？商品購入時の検索行動を311人に調査2026/07/30
+* エクサウィザーズ、AI時代のセキュリティサービスを提供する新会社「ExaSecurity」を設立 ～AIシステムを守り、AIでセキュリティを強化する2つの事業を展開～（株式会社エクサウィザーズ）2026/07/29
+* 韓国陸軍、化学・生物・放射能戦対応の「AI参謀」開発へ…新興Newtype Industriesとコラボ（AFPBB News）2026/07/29
+* AIと考案 絶品バーガーで人気店に2026/07/27
+* フロンティアAI時代におけるセキュリティ戦略再構築の視点：『ビジネス2.0』の視点2026/07/29
+* メタＣＥＯ、中国製ＡＩ規制に反対 「競争優位につながらず」＝ＦＴ2026/07/29
+* ソラコムの玉川社長、IoT通信の需要「フィジカルAI向けで高まる」2026/07/29
+* AI使った声の無断利用、国が方向性 ガンダム声優「訴訟は難しい」 [AIの時代]2026/07/26
+* AIバブル最大のリスクはOpenAIの破綻である（Yahoo!ニュース/ダイヤモンド・オンライン）2026/07/28
+* AIエージェントが「お金を動かす」時代へ。ビジネスオーナーが今すぐ設定すべき3つのルール（forbesjapan.com）2026/07/30
+* 会話を成果へ：エンタープライズAIが直面するラストマイルの壁（forbesjapan.com）2026/07/30
+* 最高益のSK、株価は下落 「AI需要の波」不安材料 長期供給契約で払拭へ2026/07/29
+* 韓国・AI人材が2029年までに58万人不足…通信3社が育成を加速（AFPBB News）2026/07/29
+* 年収2000万円でも窓際族が急増 やる気のある人を生かすAI時代の再配置（日経ビジネス電子版）2026/07/29
+* 株式明日の戦略－AI関連への売りは止まらず、あすはアドバンテストの決算反応に要注目(Yahoo!ファイナンス/トレーダーズ・ウェブ)2026/07/30
+* “全社員に高度なAIスキルは不要” GUGAが説く「生成AIリテラシー」の育て方2026/07/29
+* 米、中国製ヒト型ロボットなど新モデル禁輸 国内ＡＩインフラ保護へ2026/07/28
+* ネットが切れてもAIは止まらない。HP製PCに楽天のハイブリッドAIが搭載2026/07/29
+* 世界初公開メルセデス・ベンツ新型GLA誕生。生成AI実装と800V急速充電でクラスを超えたプレミアムSUVへ（LE VOLANT WEB）2026/07/30
+* 特集台本作りを通して生成ＡＩとの向き合い方を学んだ創作劇…八千代松陰2026/07/29
+* 探究型の幼児教育広がる AI時代に「考える力」育成、興味を起点に2026/07/30
+* 完全自律型 AI Agent が変える SaaS の世界 | Amazon Web Services ブログ（Amazon Web Services (AWS)）2026/07/26
+* やっぱり｢フィジカルAI｣は日本の""救世主""になる2026/07/28
+* 仕事を""任せられる""AIって？ Codexは仕事の風景をどう変えたのか——Codex超入門 vol.1（STUDY HACKER）2026/07/29
+* オープンAI、テスト中の人工知能がモーダルラボを攻撃 ハギングフェイスに続く外部被害2026/07/29
+* FRB議長「設備投資ブームがAIインフラの価格を押し上げている」(Yahoo!ファイナンス/トレーダーズ・ウェブ)2026/07/30
+* 富士通、金融機関向けに専有型AIプラットフォームの開発を開始（Fujitsu Global）2026/07/27
+* 三井不動産、熊本にフィジカルAI開発拠点 日台で次世代半導体技術2026/07/26
+* 生成 AI の価格交渉 ～ Gartner が明かすベンダーのリスク転嫁構造と対抗手段（ScanNetSecurity）2026/07/30
+* 英アーム、7－9月売上高見通しは予想上回る ＡＩ向け半導体需要好調(Yahoo!ファイナンス/ロイター)2026/07/30
+* 中国AI「自立化」が直面する皮肉な現実2026/07/29
+* MERCY/マーシー　AI裁判2026/07/29
 
-### ●●AXIOS●●
-UTC
-（AXIOSはセキュリティチェックのため、コンテンツが表示されませんでした。）
-
-### ●●日経●●
-日本時間（UTC+9）
-
-*   セブン銀、銀行機能を小売り向け外販 参入容易に(2026/07/29付)
-*   政府、備蓄米買い戻しへ 昨年放出分、来月末にも判断(2026/07/29付)
-*   最低賃金の目安1176円 全国平均4.9%増の55円上げ(2026/07/29付)
-*   マンション修繕工事談合疑い、東海に波及 公取委28社立ち入り(2026/07/29付)
-*   ASML株急落、中国が半導体DUV露光装置国産化 報道で競争力に懸念(2026/07/29 5:03)
-*   信金中金、稚内信金に200億円支援 金利高、債券含み損膨張(2026/07/29付)
-*   熊本地震、爆発のイオンモールで3人死亡 不明者の捜索続く［映像あり］(2026/07/29 6:11)
-*   熊本で震度7 イオンモール爆発、10人安否不明 日本製紙工場で2人心肺停止(2026/07/29付)
-*   日本製紙の煙突倒壊、2人心肺停止9人閉じ込め ホンダは稼働停止(2026/07/28 17:28)
-*   生保解約、金利上昇で拍車 返戻金1～5月4割増、最高ペース(2026/07/29付)
-
-### ●●時事●●
-日本時間（UTC+9）
-
-*   死亡２人、安否不明者の捜索続く イオンモールと日本製紙工場―３６市町(2026/07/29)
-*   熊本で震度７ ２人心肺停止、計１８人安否不明―工場や商業施設崩落、救(2026/07/29)
-*   熊本で震度７ ２人心肺停止、計１８人安否不明―工場や商業施設崩落、救(2026/07/29)
-*   イオンモールで爆発 日本製紙、工場の煙突倒壊―トヨタ・ホンダ、工場停(2026/07/29)
-*   国家公務員の時短勤務拡大 働き方改革でプラン―政府(2026/07/29)
-*   米、フランス国連大使の発言中に退席 人権高等弁務官再任巡り―国連安保(2026/07/29)
-*   国家公務員の月給・ボーナス増額へ ５年連続、民間の賃上げ反映―人事院(2026/07/29)
-*   外壁はがれ、柱むき出し 住民「爆弾落ちたかと」―２階崩落のイオン・熊(2026/07/29)
-*   中国、半導体製造装置の国産開始か 米ＩＴメディア報道、市場は動揺(2026/07/29)
-*   台湾総統、熊本地震「支援の準備」 メディアは速報(2026/07/29)
-
-### ●●Yahoo!●●
-日本時間（UTC+9）
-
-*   AI開発にスピード制限を、OpenAIとアンソロピックの社員が請願書(TBS CROSS DIG with Bloomberg)2026/07/28
-*   シタデル・セキュリティーズの米利上げ予想、市場の警戒感高める(Bloomberg)2026/07/28
-*   米国市況S&P500種上昇、半導体株は売り加速－ドル163円台後半(Bloomberg)2026/07/28
-*   AI起債ラッシュに異変、需要鈍化が鮮明に-ブーム警戒でコストも上昇(TBS CROSS DIG with Bloomberg)2026/07/28
-*   米で発見のソフト脆弱性、昨年の2倍のペースで増加－AIの能力向上で(Bloomberg)2026/07/27
-*   ペトロチャイナ、LNGカナダ株の一部売却検討－第2期計画の資金確保へ(Bloomberg)2026/07/28
-*   欧州サッカー連盟、W杯ボイコット検討-FIFAの外部資本受け入れに反発(TBS CROSS DIG with Bloomberg)2026/07/28
-*   日本市場、AI収益性疑念で株式下落へ－中銀会合控え円は安値もみ合い(Bloomberg)2026/07/27
-*   CATL株が急伸、自社株買い計画と上期の好決算を好感(Bloomberg)2026/07/27
-*   イランとオマーン、ホルムズ海峡の航行再開を目指し協議(Bloomberg)2026/07/27
-*   エヌビディア、サツキバー氏のAI新興企業に50億ドル出資へ－関係者(Bloomberg)2026/07/27
-*   今朝の5本仕事を始める前に読んでおきたい厳選ニュース(Bloomberg)2026/07/27
-*   エヌビディア、新たにAI関連投資7500億ドル超－「循環的」と懸念の声(Bloomberg)2026/07/27
-*   ブラックロック、2兆円規模社債上昇－ジャンク債並み高利回りに買い(Bloomberg)2026/07/27
-*   米最大送電網、データセンターへの送電停止を警告－電力需給逼迫で(Bloomberg)2026/07/27
-*   GPIF理事長､運用は「加入者利益のみ」追求－国内投資強化巡り(Bloomberg)2026/07/27
-*   NZから豪州へ移住止まらず、賃金格差で頭脳流出－医療や建設分野で人材不足の懸念(Bloomberg)2026/07/27
-*   中国Z世代が将来に希望持てず、経済に閉塞感－心の安らぎは歴代王朝(Bloomberg)2026/07/27
-*   熊本県熊本地方で地震、マグニチュード7.1と推定－気象庁(Bloomberg)2026/07/28
-*   中国政府系企業、DUV露光装置の製造開始－ジ・インフォメーション(Bloomberg)2026/07/27
-*   中国半導体メモリー大手CXMT、27日に上海上場－株価は大幅高との観測(Bloomberg)2026/07/26
-*   CXMT会長、従業員にボーナス50億ドル超－テック人材定着狙う(Bloomberg)2026/07/27
-*   米株、危機時並みの値動きがニューノーマルに－水面下で警戒シグナル(Bloomberg)2026/07/27
-*   高市首相、金融調整は「日銀がやるべきこと、手段も委ねられている」(Bloomberg)2026/07/26
-*   中国半導体CXMT、上海市場に27日上場－初日に時価総額でトップ浮上も(Bloomberg)2026/07/26
-*   英銀バークレイズ、米銀型の報酬体系に移行-業績連動比率引き上げ(TBS CROSS DIG with Bloomberg)2026/07/28
-*   欧州株高、ASMLだけで上昇分の4分の1－少数銘柄への集中鮮明(Bloomberg)2026/07/26
-*   クアルコム、2桁台の値上げ計画－テック業界に波及する公算大(Bloomberg)2026/07/26
-*   米人気50銘柄に新たな取引ツール登場、CMEが単一株先物を27日開始(Bloomberg)2026/07/26
-*   スイス中銀、2027年末までゼロ金利維持へ－その後利上げの公算(Bloomberg)2026/07/27
-*   ソフトバンクGへの6.5兆円融資、21社が新たに参加－OPENAI投資資金(Bloomberg)2026/07/27
-*   シンガポール通貨庁、追加引き締め－エネルギー価格高止まり想定(Bloomberg)2026/07/26
-*   ボーイング、予想以上にキャッシュ改善-新大統領専用機で再び費用(TBS CROSS DIG with Bloomberg)2026/07/28
-*   米ビザが2600人削減へ、全社員の7%相当－競争激化受け効率化推進(Bloomberg)2026/07/28
-*   米イラン戦争でフーシ派が戦線開く､紅海で商船攻撃－原油100ドル迫る(Bloomberg)2026/07/23
-*   フランス・スペイン山火事は一服も、4度目の熱波で警戒続く(Bloomberg)2026/07/27
-*   ムーンショット、エヌビディアの「ブラックウェル」追加調達へ－報道(Bloomberg)2026/07/28
-*   DeepSeekが資金調達見合わせ、創業者発言巡る投稿の拡散後－関係者(Bloomberg)2026/07/25
-*   イランが報復休止、米軍の攻撃停止受け－軍報道官が国営テレビに語る(Bloomberg)2026/07/26
-*   OPECプラス、9月の増産後に生産枠の引き上げ停止へ－関係者(Bloomberg)2026/07/28
-*   焦点FRBと日銀、英中銀が政策決定へ－原油100ドルの警戒感に注目(Bloomberg)2026/07/26
-*   イオン爆発 死亡の2人は20代女性(7/29(水) 7:00)
-*   熊本厳しい暑さ 熱中症と地震警戒(7/29(水) 7:59)
-*   熊本で地震 最大84cmの地殻変動(7/29(水) 8:27)
-*   地震 避難者は36市町村で4700人超(7/29(水) 8:15)
-*   地震で政府 プッシュ型支援展開へ(7/29(水) 6:00)
-*   熊本地震 海外メディアが一斉速報(7/29(水) 7:53)
-*   熊本震度7から一夜 現地のX投稿(7/29(水) 7:05)
-*   映像 イオン爆発時のドラレコ(7/29(水) 8:00)
-*   米大統領 決裂なら再びイラン攻撃(7/29(水) 7:50)
-*   トランプ氏 FRBに利下げを要求(7/29(水) 8:07)
-*   国連で仏発言中 米代表団が退席(7/29(水) 7:17)
-*   「大イスラエル主義」加速の背景(7/29(水) 7:06)
-*   刃物で女性3人が襲われる パリ(7/29(水) 8:12)
-*   仏の山火事 消防士足りず住民消火(7/29(水) 6:30)
-*   米の「麻薬船」攻撃 効果限定的か(7/29(水) 6:15)
-*   地震影響 鉄道やフライト情報(7/29(水) 7:00)
-*   九州の交通網やライフライン 影響(7/29(水) 7:10)
-*   鉄道各社見合わせ 帰宅困難者続出(7/29(水) 6:00)
-*   電気ガス停止 安全優先でどう対応(7/29(水) 7:15)
-*   BYDが日本で軽EV 実質100万円台(7/29(水) 5:20)
-*   相次ぐ夫の転勤 追い詰められた妻(7/29(水) 7:30)
-*   4玉まで同一価格 うどん店の戦略(7/29(水) 7:50)
-*   藤原竜也「顔レタス」担当者思い(7/29(水) 8:00)
-*   黒柳徹子 板東さんの声が今も耳に(7/29(水) 5:00)
-*   板東英二さん死去 クイズ番組人気(7/29(水) 6:12)
-*   舟山久美子 シンガポール移住報告(7/29(水) 6:00)
-*   NiziU・RIO活動休止 当面8人体制(7/29(水) 5:57)
-*   カラテカ矢部原作映画に櫻井翔ら(7/29(水) 6:40)
-*   映画ちいかわ「怖さ」演出に磨き(7/29(水) 7:06)
-*   NiziU・RIO 当面活動休止を発表(7/29(水) 6:40)
-*   東野圭吾さん死去 主演俳優ら追悼(7/29(水) 5:00)
-*   村上宗隆 故郷の地震「心苦しい」(7/29(水) 6:30)
-*   夏の甲子園 49代表校が出そろう(7/29(水) 6:30)
-*   西武が印出身投手と育成契約 なぜ(7/29(水) 7:00)
-*   板東英二さん死去 SNSの反応(7/29(水) 6:00)
-*   板東英二さん死去 86歳(7/29(水) 6:00)
-*   板東さん死去 甲子園で数々の記録(7/29(水) 5:57)
-*   履正社16得点で圧倒V 7戦66得点(7/29(水) 6:30)
-*   高木美帆氏に国民栄誉賞 正式決定(7/29(水) 6:15)
-*   電池や通信 スマホの災害時の対策(7/29(水) 7:17)
-*   地震 デマや真偽不明の情報拡散(7/29(水) 6:02)
-*   災害時 SNS上でのデマなどに注意(7/29(水) 8:12)
-*   Apple時価総額 世界首位返り咲き(7/29(水) 5:00)
-*   子のSNS利用に年齢制限 議論へ(7/29(水) 7:17)
-*   「セクストーション」相談が急増(7/29(水) 6:30)
-*   静岡県の偽サイト発見 今年4件目(7/29(水) 7:00)
-*   「生成AIは友人」増 活用か依存か(7/29(水) 7:05)
-*   真夏の避難生活 気をつけること(7/29(水) 8:00)
-*   震度7は熊本地震割れ残りか 識者(7/29(水) 7:05)
-*   山火事や台風 世界で異常気象なぜ(7/29(水) 8:30)
-*   夏の紅葉? 沖縄の山が赤く染まる(7/29(水) 7:00)
-*   東野圭吾さん死去 大腸がんとは(7/29(水) 5:20)
-*   夏の快眠 秘訣は「脳を冷やす」(7/29(水) 7:30)
-*   半年で70kg減量 体はボロボロに(7/29(水) 7:50)
-*   イオン爆発 死亡の2人は20代女性(7/29(水) 8:07)
-*   映像 イオン爆発時のドラレコ(7/29(水) 8:27)
-*   イオンモール ガス漏れの可能性(7/29(水) 7:53)
-*   イオン崩落 駐車場にいた記者ルポ(7/29(水) 8:00)
-*   日本製紙八代 2人心肺停止9人不明(7/29(水) 7:05)
-*   熊本県17市町村で約14万戸断水(7/29(水) 7:06)
-*   〈習近平に特大ブーメラン〉「中国人客お断り」「中国に好感持てない72%」韓国で噴き出した反中感情…中国人旅行者が直面した「政治的摩擦」の正体(7/29(水) 7:00)
-*   定年までに老後資金「2000万円」を貯めました。夫は「同じ銀行でも普通預金と定期預金に分けておけば十分じゃない？」と言いますが、本当に預金は全額保護されるのでしょうか？(ファイナンシャルフィールド)2026/07/29
-*   台風情報台風13号「ドルフィン」最大瞬間風速85m/s“猛烈な勢力”へ　日本に直撃か…今後の進路は?(気象庁)2026/07/29
-*   性的暴行…終電を逃した女子高生と性交　宿泊施設で　体を押さえつけた男逮捕、暴行で負傷させた疑い　親に連絡できない生徒、駅付近にいた…「自宅へ送る」と声かけた男は会社員19歳　生徒と母が警察に相談し発覚(7/29(水) 7:05)
-*   「先生とエッチなことをした」裁判で明かされた児童相談所職員が保護女児と不同意性交に至った“理由”(7/29(水) 8:00)
-*   「見た途端、息苦しくなった…」フィギュアレジェンド　キム・ヨナさんの“激変”最新ショットが話題　二の腕もあらわなドレス姿「圧倒的な美しさ」(CoCoKARAnext)2026/07/29
-*   《独自》水原一平、“大学詐称”はおろか高校も卒業していなかった…！　高校はHPの「卒業者紹介」欄から削除…深まる「大谷翔平とエンゼルスはなぜ気づかなかったのか」の謎(NEWSポストセブン)2026/07/29
-*   英語ペラペラでスゴい…海外育ちの意外すぎる日本人俳優（4）サンフランシスコ生まれの長身イケメンは？(7/29(水) 7:50)
-*   「太った痩せたと言う記事にウンザリ」梅宮アンナ〝顔ぱんぱん〟→ほっそり近影公開、治療の歩みに「どんなアンナちゃんも私は好き」(西スポWEB OTTO!)2026/07/29
-*   地震熊本県内で震度3 熊本県熊本地方を震源とする最大震度3の地震が発生 津波の心配なし(熊本ニュース KAB ONLINE)2026/07/29
-*   イランが米軍基地に弾道ミサイル発射か(7/29(水) 7:53)
-*   「ゴーヤとポン酢があったらやってみて！」簡単に味が決まる！白いごはんと相性ばっちり！がっつりレシピ(7/29(水) 8:00)
-*   『Tokyo middle 30』深川麻衣“薫子”、同棲4年目に妊娠検査薬で陽性判定も…第2話あらすじ(7/29(水) 7:06)
-*   大谷翔平、「1番・DH」で後半戦初アーチなるか　10試合ぶり23号に期待…スタメン発表(Full-Count)2026/07/29
-*   サッカー日本代表・堂安律の美人妻・明松美玖、美しい純白の着物姿でお宮参りへ　「美しすぎる」「綺麗です」(J-CASTニュース)2026/07/29
-*   「帰り寄れたら寄って」と義母から連絡→渡されたものは……　泣きたくなる光景に「涙出ました」「優しいお義母さん」(7/29(水) 8:15)
-*   歳の差婚46歳妻、12歳下夫との入浴映像が話題「こんなきれいな46歳なかなかいない」「人生勝ち組」(7/29(水) 7:40)
-*   番組終了に大きな衝撃…若者に大人気、SNSでも話題なのになぜ？　「有吉の壁」が突きつけた「地上波テレビの限界」(7/29(水) 6:02)
-*   郡山駅で列車にはねられ男性死亡　東北線、南福島駅付近でも(7/29(水) 8:12)
-*   朝の「トースト」にのせるだけ。腸の“菌のリレー”を助ける組み合わせ2選｜管理栄養士が解説(ヨガジャーナルオンライン)2026/07/29
-*   《国民に見てもらう公務を》悠仁さま　“可能な限りお話ししたい”水面下で見せられていた積極性…広島県ご訪問前の“覚醒」(7/29(水) 6:00)
-*   高校野球春夏連続出場は11校　センバツベスト4が地方大会で敗退　険しい戦いを勝ち抜いた夏の甲子園出場49校一覧(日テレNEWS NNN)2026/07/29
-*   気づいたら｢習近平の手足｣になっていた…世界中で逮捕者が続出している｢中国スパイ｣の狡猾すぎる勧誘手口(プレジデントオンライン)2026/07/29
-*   1000万円を超えたのは…「平均年収が高い職業」ランキング…5位は歯科医師、4位は大学教授、ではトップ3は？(東洋経済オンライン)2026/07/29
-*   マクドナルド「190円の新商品」を食べた正直な感想(7/29(水) 7:17)
-*   バレー男子NL決勝Rが29日から開催　史上初の予選“12戦全勝”の日本は開催国・中国と激突　(日テレNEWS NNN)2026/07/29
-*   「実家サイコー！」〈月収35万円〉32歳・独身男性が天国から一転…「俺の人生、終わった」と絶望させた母の〈衝撃宣告〉(THE GOLD ONLINE（ゴールドオンライン）)2026/07/29
-*   セリアシンプルなデザインに一目ぼれ…使用感も抜群だった100均(akaneko715)2026/07/29
-*   米半導体株安でストップ安、キオクシア▲18%下落の44,550円。何が株価下落の背景か(7/29(水) 6:31)
-*   「フジに白旗を上げさせた」父の逮捕→20年後に“仇討ち”…投資家・野村絢（38）が恐れられる理由「彼女は父親よりも…」(7/29(水) 6:00)
-*   「まるで“持ち歩けるエアコン”」　無印良品の690円ミストが手放せない　「一気にシャキーンなる」「両方買いました」レビュー(7/29(水) 7:15)
-*   「桐山照史似」男性と結婚のフジ小室瑛莉子アナ、高い好感度のワケ　“非アイドルアナ”の局内評判(7/29(水) 5:30)
-*   歯科医療事務の39歳がボディコンテストに挑戦し優勝！宅トレからジムトレに変えて理想の身体を目指す(FITNESS LOVE)2026/07/29
-*   「相当な量切ってないですか?」『夜ふかし』多田さん、上下の顎骨を切る大整形2週間後の姿に驚きの声(7/29(水) 7:06)
-*   シンガポールから帰国の中田敦彦、批判の声に反応「私なりにできることを」　YouTubeで熱弁「日本の現状、いや惨状を…」(7/29(水) 6:40)
-*   300万円弱でこの性能はおかしい…発表4日で受注停止のスズキ・ジムニーノマド、圧倒的実力と「意外な弱点」(ダイヤモンド・オンライン)2026/07/29
-*   板東英二さんが帰らぬ人に　「ふしぎ発見！」メンバー悲痛　草野仁「良き戦友を失って只々残念」黒柳徹子「『お母さん』という声が、今でも耳に」(7/29(水) 5:00)
-*   NHK新会長は政治部出身「支持率の高い自民党に巻き込まれるのでは？」元NHKアナ有働由美子が井上樹彦会長本人にズバり訊いた(7/29(水) 6:12)
-*   高校野球""園田ツインズ""が快進撃を支えた箕面学園、聖地へあと一歩届かず…大阪大会で双子とも打率３割超　母・美子さん「そろってグラウンドにいる姿を見るだけで幸せ」見た目も性格も正反対の二人(7/29(水) 6:00)
-*   感じのいい人が「すみません」の代わりに使う「魔法の言葉」とは？(ダイヤモンド・オンライン)2026/07/29
-*   日本ハム前半戦　“陰のMVP”　阪神→日本ハム移籍左腕にファン感謝　圧巻の1.32「本当にファイターズに来てくれてありがとう」(CoCoKARAnext)2026/07/29
-*   10年間で1億円の給与を返上した小池都知事　次なる目標は「慎太郎超え」　「石原氏の在職期間を超えるまで続けるつもりでしょう」(7/29(水) 5:57)
-*   トピックス（主要）
-    *   イオン爆発 死亡の2人は20代女性
-    *   熊本厳しい暑さ 熱中症と地震警戒
-    *   熊本で地震 最大84cmの地殻変動
-    *   地震 避難者は36市町村で4700人超
-    *   地震で政府 プッシュ型支援展開へ
-    *   熊本地震 海外メディアが一斉速報
-    *   熊本震度7から一夜 現地のX投稿
-    *   映像 イオン爆発時のドラレコ
-*   アクセスランキング
-    *   新体操”国体1位”の人気アイドル、180度の開脚でグラビア！＝リアル浅倉南で話題に(イーファイト7/29(水)1:23)
-    *   崩落のイオンモール熊本、２０代女性２人が死亡(読売新聞オンライン7/29(水)5:41)
-    *   「別人みたい…」土屋太鳳と授かり婚から3年〝雰囲気ガラリ〟片寄涼太に「あれ?こんな感じだった!?」「柔らかいお顔も好き」の声(西スポWEB OTTO!7/28(火)23:20)
-    *   イオンモール熊本で死亡の2人は20代女性(共同通信7/29(水)5:58)
-    *   台風情報台風13号（ドルフィン）は31日以降「猛烈な勢力」に発達へ　8月上旬に日本列島に接近か（29日午前3時現在）雨風シミュレーション29日〜8日(tbc東北放送7/29(水)4:54)
-*   ヤフコメランキング
-    *   速報イオンモール熊本「多くの安否不明者がいるとみられる」(RKK熊本放送7/28(火)19:51)
-    *   うじきつよしが投稿「自民党に投票した皆さんへ」(日刊スポーツ7/28(火)16:36)
-    *   カープの「ゾンビたばこ」調査に矢野雅哉が”曖昧回答”…ついに「鯉の天皇」松田オーナーが激怒した！(FRIDAY7/29(水)7:00)
-
-### ●●AI●●
-日本時間（UTC+9）
-
-*   KDDIの新AIサービス「Buffmee」は既存サービスとどう違う？ 権利保護の仕組みや将来構想など(ケータイ Watch)2026/07/28
-*   AI時代の国家公務員のあり方検討へ有識者会議 政府(19 時間前)
-*   速報オープンAI、別の企業にもサイバー攻撃(1 時間前)
-*   オープンＡＩ攻撃２社目 外部企業に被害、報道(22 分前)
-*   オープンＡＩの暴走エージェント、別の企業にも不正侵入(56 分前)
-*   AI起債ラッシュに異変、需要鈍化が鮮明に-ブーム警戒でコストも上昇(TBS CROSS DIG with Bloomberg)2026/07/28
-*   Metaが「Threads」のDMで「Meta AI」と1対1の対話ができる新機能を提供開始(Web担当者Forum)2026/07/28
-*   AI新世紀：皆がコード書ける時代…プログラミング学ぶ意味は 開発者の見解(2 時間前)
-*   「すし職人をAI開発の輪に入れろ」──オードリー・タンに聞く、米中AI競争で日本が勝つ道(昨日)
-*   「AIは国家なり」 存亡かかる自前技術、米中2強の背中追うインド(3 時間前)
-*   やっぱり｢フィジカルAI｣は日本の""救世主""になる(14 時間前)
-*   ジョブズ氏の「熱核戦争」再び、アップル対オープンAI訴訟にみる「ポストスマホ」の覇権争い(2 時間前)
-*   特許庁におけるAI活用の基本方針「JPO AIビジョン」を策定しました(2 日前)
-*   グーグル傘下ディープマインド「最先端AIの評価機関、米国主導で立ち上げよ」(3 時間前)
-*   株価下落加速装置「デレバレッジ」継続で“AI祭りの後始末”には時間が必要？安易な逆張りを避け、需給の悪さに震える日々と無縁の銘柄を発掘しよう(ダイヤモンド・オンライン)2026/07/28
-*   米、中国製ヒト型ロボットなど新モデル禁輸 国内ＡＩインフラ保護へ(2 時間前)
-*   本日の材料と銘柄中国が米AI半導体を猛追(フィスコ)2026/07/28
-*   中国AIはなぜ安いのか DeepSeek創業者の流出発言が示す一つの答え(12 分前)
-*   VoCを学びに成長し続けるAIコンタクトセンターが一段上のCXを導く(2 時間前)
-*   Skild AI: Pioneering Omni-Bodied Intelligence Through Simulation(4 時間前)
-*   Craif、バイオAI領域における国内最大級のカンファレンス「バイオAIサミット2026」第2弾登壇者発表(30 分前)
-*   Sakana AI、「Fable 5」越えを達成した「Fugu-Ultra」v1.1を発表／「Claude Code」互換エンドポイントも実装(14 時間前)
-*   エヌビディア、サイバー防衛巡り「オープン型AI」連合を主導 | WSJ PickUp(ダイヤモンド・オンライン)2026/07/28
-*   「事業変革推進室長」として生成AIで新規事業を企画する(3 時間前)
-*   AIバブル最大のリスクはOpenAIの破綻である(ダイヤモンド・オンライン)2026/07/28
-*   ＡＩ投資懸念、主要信用リスクに 米イラン交戦も＝フィッチ(7 時間前)
-*   AI雇用破壊論に逆行、米大手企業が採用再開(ダイヤモンド・オンライン)2026/07/28
-*   最も安全なLLMは何だ？ AIガードレール突破検証で判明(＠IT)2026/07/28
-*   アマゾンがＡＩ戦略見直し、主力モデルの大半縮小へ＝報道(50 分前)
-*   オープンＡＩの暴走エージェント、別の企業にも不正侵入(ロイター)2026/07/28
-*   米ハイテク従業員、ＡＩ開発ペース調整へ政府に国際協力要請(6 分前)
-*   AI画像詐欺の被害額、2027年は6.5兆円規模か--国際規格での対応強化へ(ZDNET Japan)2026/07/28
-*   「AIではなく、人間が作った」が売りになるかもしれない…アンチAI派のためのサービスも登場(Business Insider Japan)2026/07/28
-*   AI開発にスピード制限を、OpenAIとアンソロピックの社員が請願書(TBS CROSS DIG with Bloomberg)2026/07/28
-*   レゾナックCFO、AI追い風の半導体材料「需要鈍化の兆しなし」(3 時間前)
-*   MIXI、AIと共創する次世代エンジニア育成に向けた2026年度新卒技術研修資料を公開(昨日)
-*   宇都宮短大付属高で生成AIの勉強会 「学校教育にも必要な時代」(3 時間前)
-*   AIがもたらす有害なハードウェア問題--エッフェル塔250基分の廃棄物(ZDNET Japan)2026/07/28
-*   AI「グロック」新モデル発表へ＝マスク氏、8月7日に―スペースX株急伸(時事通信)2026/07/28
-*   「AIの暴走」ではない、オープンAI のモデルが不正侵入した理由(MITテクノロジーレビュー)2026/07/28
-*   「困ったらググる」から「AIに聞く」へ LIXILがFAQを「AIの一次情報データベース」に作り替える理由(ITmedia ビジネスオンライン)2026/07/28
-*   「中国製AI排除」に異論 NVIDIAフアンCEO「脅威はゼロ」(36Kr Japan)2026/07/28
-*   米国株式市場はまちまち、消費関連好調もAI投資に懸念広がる（28日）(フィスコ)2026/07/28
-*   オープンＡＩ、自律型エージェントの暴走を1週間後まで把握せず(2 日前)
-*   AI時代で電機業界の採用が変わる…文系・理系より重視される能力とは？(ダイヤモンド・オンライン)2026/07/28
-*   アマゾンがＡＩ戦略見直し、主力モデルの大半縮小へ＝報道(ロイター)2026/07/28
-*   静岡県長泉町、AIオンデマンド交通の本格運行を開始｜新・公民連携最前線｜PPPまちづくり(9 分前)
-*   楽天グループがAI時代を切り開くビジネスイベントを開催 今年で7回目、累計84万人が参加(1 時間前)
-*   三菱商事、AIで磨く「攻めの法務」 契約・投資の盲点を洗い出す(3 時間前)
-*   AIと考案 絶品バーガーで人気店に(昨日)
-*   日立がAI駆動開発を加速、生産性3割向上へ モダナイ需要の取り込み強化(3 時間前)
-*   「夏休みの宿題」を生成AIに頼ると痛い目に！ その理由と先生が見抜く「AI文章」のクセ(30 分前)
-*   中国が米AI半導体を猛追 「総力戦」の内幕(ダイヤモンド・オンライン)2026/07/28
-*   28日の米国市場ダイジェスト：米国株式市場はまちまち、消費関連好調もAI投資に懸念広がる(フィスコ)2026/07/28
-*   もしも通信が消えたら AI依存社会の輪郭、変化した前提(3 時間前)
-*   身体機能担うAI紹介 茨城県共同事業体 水戸でイベント ロボット実演 中小企業の導入推進(茨城新聞クロスアイ)2026/07/28
-*   「ソフトバンク・東北大学 AI for Disaster Science共創研究所」を設立(昨日)
-*   拡散言語モデルがICMLで盛況、Sakana AIは推論時スケーリング手法を考案(3 時間前)
-*   「iOS 26」の「Siri」と「iOS 27」の「Siri AI」を車内で比較してみた--圧勝したのは？(ZDNET Japan)2026/07/28
-*   AIがレシピ考案の絶品バーガー 「調理経験なし」でも人気店に 前職はトラック運転手(テレビ朝日系（ANN）)2026/07/26
-*   キオクシアHD、復活劇の先に再び試練－AI半導体競争が迫る巨額投資の判断(2 時間前)
-*   セキュリティーからエッジAIまで、「仲介」機能を生かして拡大するCDN(3 時間前)
-*   高市政権の目玉投資枠「バーティカルAI」、戦略推進へ19領域で施策具体化(2 時間前)
-*   アップルがエヌビディアを抜き時価総額で世界首位に AI関連株の急落が追い風(Business Insider Japan)2026/07/28
-*   アニメ声優たちを襲う“生成AIという驚異”…詐欺にも悪用される“声の権利侵害”の証明が難しい理由(デイリー新潮)2026/07/28
-*   7月30日開催「AI×採用カンファレンス 2026 summer」、overflow代表 鈴木裕斗がオープニングセッションに登壇(29 分前)
-*   米、中国製ヒト型ロボットなど新モデル禁輸 国内ＡＩインフラ保護へ(ロイター)2026/07/28
-*   「ＡＩ時代の公務員」考える…有識者会議 来月初会合(3 時間前)
-*   ゴールドマン証、AI株の成長ストーリーは健在－国内決算で反発余地(Bloomberg)2026/07/28
-*   メタ、巨大AI施設の2.3兆円投資を簿外に 米ブラックロックと新会社(3 時間前)
-*   初のサイバー防御特化のAI発表 組み合わせで「ミュトス」超えも 米MS(時事通信)2026/07/28
-*   AI使った声の無断利用、国が方向性 ガンダム声優「訴訟は難しい」[AIの時代](2 日前)
-*   「軍事機密もAI学習に」韓国軍が全軍共通の国防AI基盤を構築へ…24億円規模の事業公募(AFPBB News)2026/07/28
-*   富士通、金融機関向けに専有型AIプラットフォームの開発を開始(Fujitsu Global)2026/07/28
-*   ＡＩ投資懸念、主要信用リスクに 米イラン交戦も＝フィッチ(ロイター)2026/07/28
-*   いま日本各地で始まっている「自動運転バスとAIオンデマンドバス」のスゴイ実験「バス無し地帯」もこれで不安解消(マネー現代)2026/07/28
-*   自治体のAI本格活用 総務省後押し(3 日前)
-*   エヌビディアCEO、オープン型AIの重要性訴え－ムーンショット台頭で(Bloomberg)2026/07/28
-*   巨額AI投資、恩恵はどの国に 米国でインフレ圧力・韓国は成長4倍(4 時間前)
-*   ＡＩキャラが図書館案内 音声・字幕表示 ６言語対応 塩尻市立図書館本館(3 時間前)
-*   生成AI需要でハードディスクメディア増産、レゾナックが150億円追加投資：工場ニュース(1 時間前)
-*   「AIツルハシ銘柄」に売り アジアで半導体株安、日経平均2566円下げ(12 時間前)
-*   Exaforce、業界初となる音声対応モバイルAI SOCアプリ「ExaGo」 を提供開始(Business Wire)2026/07/28
-*   「衰退産業」がAIで激変…土木業界で始まる「図面照査10倍効率化」の衝撃(ビジネスジャーナル)2026/07/28
-*   8/26(水)開催『Digital Commerce Frontier 2026 AI×EC Day』に登壇(30 分前)
-*   ゴールドマン証、AI株の成長ストーリーは健在－国内決算で反発余地(2 時間前)
-*   LINEヤフー舛田上級執行役員、AI時代へ「まず利用体験を向上」(3 時間前)
-*   エヌビディアCEO、オープン型AIの重要性訴え－ムーンショット台頭で(1 時間前)
-*   オープンＡＩ、別の企業にもサイバー攻撃(1 時間前)
-*   AI戦争、ミッションは「秒」争う時代に およばぬ人間の判断(2 日前)
-*   アジア半導体株が急落、ＡＩ投資と中国勢との競争を警戒(15 時間前)
-*   旅券画像、AIへの隠れた攻撃指示 トレンドマイクロ調査(3 時間前)
-*   当日駆け込み歓迎AI活用によるCX改善から、15年連続増収の裏側まで。EC成長のノウハウを本日午後、イッキ見しませんか？(ネットショップ担当者フォーラム)2026/07/28
-*   Google Cloud、AIが自律的にコードの脆弱性検出からサンドボックス内でのリスク検証、修正までを自動実行。「CodeMender」プレビュー公開(Publickey)2026/07/28
-*   ドコモFG、今秋までに金融AI試験版を開始 投資運用を助言し、若年層取り込み狙う(産経新聞)2026/07/28
-*   メタが脱炭素協定を離脱、AI電力不足で天然ガス火力を推進(1 時間前)
-*   英バークレイズ純利益36%増、4~6月 AI期待で株取引活発に(4 時間前)
-*   日経平均は大幅反落、一時6万2000円割れ ＡＩ・半導体株が下げ主導(16 時間前)
-*   “AI時代の国家公務員人材改革プラン”発表 時短勤務拡大など検討へ(TBS NEWS DIG Powered by JNN)2026/07/28
-*   台湾当局、NVIDIA従業員を逮捕 AIサーバー不正輸出巡り(10 時間前)
-*   三井不動産、熊本にフィジカルAI開発拠点 日台で次世代半導体技術(2 日前)
-*   オープンAI攻撃2社目 外部企業に被害、報道(22 分前)
-*   このニュース提供元をフォロー(医療AIニュース｜The Medical AI Times)
-*   MERCY/マーシー　AI裁判(C3.ai)
-*   科学＆テクノロジー
-
-### ●●2ch●●
-日本時間（UTC+9）
-
-*   速報イオンモール熊本の爆発 飲食店の保管用ガスが損傷、漏れたガスが原因の可能性 複数の政権幹部が指摘 ★3(2026年7月29日)
-*   米コメ民間在庫量が過去最大に「コメ余り」価格下落の流れさらに加速か 専門家「すでに非常事態。国が積極的に介入するべき」★2(2026年7月29日)
-*   速報イオンモール熊本の爆発 飲食店の保管用ガスが損傷、漏れたガスが原因の可能性 複数の政権幹部が指摘 ★3 (2026年7月29日)
-*   米コメ民間在庫量が過去最大に「コメ余り」価格下落の流れさらに加速か 専門家「すでに非常事態。国が積極的に介入するべき」★2 (2026年7月29日)
-*   速報イオンモール熊本で避難後、複数の人が戻る(2026年7月29日)
-*   速報イオンモール熊本「多くの安否不明者がいるとみられる」熊本県の関係者 ★19 (2026年7月29日)
-*   軽EVBYD「ラッコ」実質199万円 装備充実、補助金は日本車優位(2026年7月29日)
-*   中国、半導体製造装置の国産開始か 米ITメディア報道、市場は動揺 ★2 (2026年7月29日)
-*   震度7の揺れ、阪神大震災以来8回観測 うち3回は熊本県内(2026年7月29日)
-*   イオンモールで夜通し続いた救助活動 「会いに行く」涙見せる人も (2026年7月29日)
-*   令和8年熊本地震爆発のイオンモール熊本で女性3人死亡 日本製紙八代工場で2人心肺停止 31の医療施設で停電や断水 (2026年7月29日)
-*   国会決議は関係ない? 吉村洋文氏が「知事選・住民投票ダブル」意欲表明 「反省ない」人たちに任せる不安 (2026年7月29日)
-*   芸能うじきつよし「自民党に投票した皆さんへ」 以前の投稿を引用「数十年かけて『弱く貧乏な国』にした政党、張本人なのに…」★3 (2026年7月29日)
-*   芸能横浜流星「BL作品興味ない」「多様性分からない」発言巡りFCが注意喚起「特定の作品や思想を否定などする意図はない」★5 (2026年7月29日)
-*   シンガポールから帰国のオリラジ中田「戻ってくるんじゃねぇよ!」の声に「この日本の現状、いや惨状を皆さんにお伝えしたい」 (2026年7月29日)
-*   「あまりにも無策だ」森保監督のW杯ブラジル戦での衝撃内幕が明らかになりファンの批判が再燃…半年限定続投は正しかったのか?★2 (2026年7月29日)
-*   サッカーブライトン三笘薫 開幕戦欠場濃厚か 地元メディア報道 (2026年7月29日)
-*   熊本で震度7の地震 韓国でも700件の揺れ報告 釜山などで最大震度3観測 ★2 (2026年7月29日)
-*   熊本で震度7の地震 韓国でも700件の揺れ報告 釜山などで最大震度3観測 ★2 (2026年7月29日)
-*   聯合ニュースユネスコ韓国大使 日本に強制労働の歴史説明を再度促す (2026年7月29日)
-*   沖縄の平和団体に忍び寄る“紅い包囲網” 「反基地運動と連帯」と好感を抱かせ手駒として取り込み…中国共産党の対日工作実態 (2026年7月29日)
-*   サムスン、自社スマホに中国CXMT製メモリーの採用を検討-中国メディア (2026年7月29日)
-*   中央日報野良犬の母犬を焼き殺し、子犬も殺害…中共の小学生による動物虐待に世界が憤慨 (2026年7月29日)
-*   AI中国製高性能AI「Kimi-K3」が予定通りオープンモデル化される (2026年7月29日)
-*   「なぜヌートリアは岡山県に多い?」広い干拓地、ため池、水田、温暖な気候…かつては「毛皮」として利用するため飼育場も (2026年7月29日)
-*   バイオタウリンが「老化細胞」を除去 大正製薬が研究成果を発表 (2026年7月29日)
-*   株キオクシアHD株、最高値から1カ月弱で半値-時価総額30兆円消失 (2026年7月29日)
-*   AIGoogle、無料AI「Gemma 4」を大幅強化。処理最大70%高速化やツール呼び出し改善 (2026年7月29日)
-*   カボベルデDFがW杯最優秀ゴールに選出 衝撃弾に母は気絶 前田大然はノミネートも受賞逃す (2026年7月29日)
-*   「人生における宝物」ジム・キャリー 自宅で死去した「マスク」監督を追悼 死因は明らかにされず (2026年7月29日)
-*   立憲杉尾秀哉参議院議員、「令和8年熊本地震」に関し投稿 (2026年7月29日)
-*   社民・ラサール氏、リベラル結集を模索 高市1強に危機感 (2026年7月29日)
-*   宮根誠司 福岡県政の権力闘争に驚き「福岡県三国志ですよ」「キングダムみたい」 (2026年7月29日)
-*   静岡聖隷クリストファーが2年連続V 高部の球速は150キロ 田中監督は就任1年目での快挙 夏の甲子園 静岡大会 (2026年7月29日)
-*   タイムきららMAX連載頭の中がピンクな少女たちのちょっとエッチな修道院4コマ「桃色カンパネラ」1巻 (2026年7月29日)
-*   「キン肉マン」65歳ゆでたまご嶋田隆司の緊急事態に騒然「テリーマンの腕みたいになってる」 (2026年7月29日)
-*   ★国際ニュース＋ 07/28 22:26「人生における宝物」ジム・キャリー 自宅で死去した「マスク」監督を追悼 死因は明らかにされず(yorozoonews.jp Posted by 朝一から閉店までφ ★ 2NNのURL)
-*   ★ニュース速報＋ 08:24 32res □速報イオンモール熊本で避難後、複数の人が戻る
-*   ★ニュース速報＋ 08:24 9res □国会決議は関係ない? 吉村洋文氏が「知事選・住民投票ダブル」意欲表明 「反省ない」人たちに任せる不安
-*   ★東アジアニュース速報＋ 08:20 2res □サムスン、自社スマホに中国CXMT製メモリーの採用を検討-中国メディア
-*   ★ニュース速報＋ 08:19 21res □令和8年熊本地震爆発のイオンモール熊本で女性3人死亡 日本製紙八代工場で2人心肺停止 31の医療施設で停電や断水
-*   ★ニュース速報＋ 08:15 6res □近鉄脱線、原因は何だったのか 専門家が注目する「線形」と「車両」
-*   ★ニュース速報＋ 08:12 125res □速報イオンモール熊本「多くの安否不明者がいるとみられる」熊本県の関係者 ★19
-*   ★芸能･スポーツ速報＋ 08:11 52res □芸能うじきつよし「自民党に投票した皆さんへ」 以前の投稿を引用「数十年かけて『弱く貧乏な国』にした政党、張本人なのに…」★3
-*   ★ニュース速報＋ 08:08 31res □生保解約膨らむ、返戻金は半期最高ペース マネーは高利回り求め投信へ
-*   ★東アジアニュース速報＋ 08:04 11res □沖縄の平和団体に忍び寄る“紅い包囲網” 「反基地運動と連帯」と好感を抱かせ手駒として取り込み…中国共産党の対日工作実態
-*   ★芸能･スポーツ速報＋ 08:00 4res □大学駅伝「スピード軍団」中大が2年生コンビで加速、復調気配の駒大は「夏に仕切り直し」
-*   速報イオンモール熊本「かなりの死者が出ている」熊本県警 ★18
-*   速報イオンモール熊本の爆発 飲食店の保管用ガスが損傷、漏れたガスが原因の可能性 複数の政権幹部が指摘 ★2
-*   米コメ民間在庫量が過去最大に「コメ余り」価格下落の流れさらに加速か 専門家「すでに非常事態。国が積極的に介入するべき」
-*   速報イオンモール熊本「かなりの死者が出ている」熊本県警 ★17
-*   速報イオンモール熊本「かなりの死者が出ている」熊本県警 ★16
-*   速報イオンモール熊本「かなりの死者が出ている」熊本県警 ★15
-*   速報イオンモール熊本の爆発 飲食店の保管用ガスが損傷、漏れたガスが原因の可能性 複数の政権幹部が指摘
-*   速報イオンモール熊本「かなりの死者が出ている」熊本県警 ★14
-*   中国、半導体製造装置の国産開始か 米ITメディア報道、市場は動揺
-*   速報イオンモール熊本「かなりの死者が出ている」熊本県警 ★13
+**●●2ch●●**
+* 熊本震度7イオン社長、声詰まらせ「爆発、想定しきれず」 一時避難完了も、悔しさにじませ ★2（Yahoo!ニュース）2026/07/30
+* 妻と3人の子供がいることを隠し、中学生の少女と性交繰り返し2度妊娠･出産させた26歳男に懲役6年の判決2026/07/30
+* 妻と3人の子供がいることを隠し、中学生の少女と性交繰り返し2度妊娠･出産させた26歳男に懲役6年の判決2026/07/30
+* 仕入れ値5倍「続けられない」 動画で訴えたコーヒー店主の苦悩2026/07/30
+* 小泉防衛大臣 熊本地震の被災地へクーラー300台輸送2026/07/30
+* TSMC熊本、通常生産戻れず 工場の装置調整に時間2026/07/30
+* 高市首相「悲願」の消費税減税は見切り発車 財源も税収減も事業者への影響も対策先送りに与野党モヤモヤ2026/07/30
+* 軽EVBYD「ラッコ」実質199万円 装備充実、補助金は日本車優位 ★32026/07/30
+* 米株価NYダウ1153ドル安、関税ショック以来の下落 30年金利19年ぶり高さ2026/07/30
+* 「想定外の爆発だった」イオン社長が謝罪 今なお3人が安否不明2026/07/30
+* 熊本地震イオンモール熊本で不明の妻の「少しでも近くに」 現場で案ずる夫と子2026/07/30
+* サッカー三笘薫、結婚式フォトを削除 妻はアカウント削除 「まさか…ないよな?」と心配の声… 不穏な動きの中で残された夫婦の姿2026/07/30
+* サッカー三笘薫、結婚式フォトを削除 妻はアカウント削除 「まさか…ないよな?」と心配の声… 不穏な動きの中で残された夫婦の姿2026/07/30
+* 女優・星野真里、『24時間テレビ』酷暑マラソンに心配の声 100人の応援ランナーにも万全体勢… 警備面の心配も2026/07/30
+* 野球オールスター第1戦 関東地区での平均世帯視聴率 7・0%(平均個人視聴率4・1%) ★22026/07/30
+* 格闘技桜庭和志連載#33 とにかく滑った秋山成勲選手の体 抗議文提出でノーコンテストになったけど…2026/07/30
+* サッカー鹿島・濃野公人 MLS・DCユナイテッド完全移籍にネットでは疑問の声「代表は厳しくなった」2026/07/30
+* 岩屋前外相が高市政権への苦言連発 国旗損壊罪、皇室典範改正、対中外交…「右へならえの自民党では国を誤る」2026/07/30
+* 岩屋前外相が高市政権への苦言連発 国旗損壊罪、皇室典範改正、対中外交…「右へならえの自民党では国を誤る」2026/07/30
+* ポラメ韓国初の国産戦闘機「KF21」 開発完了=9月に配備へ2026/07/30
+* 聯合ニュース慰安婦被害者遺族 韓日合意に基づく財団への訴訟で敗訴=韓国地裁2026/07/30
+* 日本人の人口が42年ぶりに1億2000万人を割る 減少幅は過去最大 外国人は過去最多2026/07/30
+* 産経新聞北方領土の島「ゾルゲ」に ロシア、ソ連の伝説的スパイから命名 近く正式決定2026/07/30
+* 「ペプシコーラ」まさかの“ボディウォッシュ”が海外向けに発売決定。からだを洗うとペプシの香りが漂う新商品に2026/07/30
+* 株キオクシアHD株、最高値から1カ月弱で半値-時価総額30兆円消失2026/07/30
+* 日本基督教団と在日大韓基督教会が平和メッセージ 「今こそ、断固として戦争に反対」2026/07/30
+* 社民・ラサール氏、リベラル結集を模索 高市1強に危機感2026/07/30
+* 令和8年熊本地震2016年の熊本地震の“割れ残り”部分が割れた可能性2026/07/30
+* バイオタウリンが「老化細胞」を除去 大正製薬が研究成果を発表2026/07/30
+* 大坂なおみ「本当に特別」…“お兄さん”錦織圭との初ペアで全米OP混合ダブルス大躍進に期待大2026/07/30
+* 第2次世界大戦「ノルマンディー上陸作戦」の地、世界遺産に登録決定2026/07/30
+* 令和8年熊本地震銀座のアンテナ店に大行列 異例の入場制限 “買って支援”続々「大変ありがたい」2026/07/30
+* 訃報友近の母、友近千鶴さん死去 占い師、ラジオパーソナリティーとして活躍 「しゃべくり」など地上波出演も2026/07/30
+* 『境界線上のホライゾン』『クロスアンジュ 天使と竜の輪舞』が無料配信。YouTubeのサンライズチャンネルにて歴代の名作が毎日観られる2026/07/30
+* 機動警察パトレイバー YouTubeでのアニメ配信中止を発表「地震を想起させるシーンがあるため」2026/07/30
+* 機動警察パトレイバー YouTubeでのアニメ配信中止を発表「地震を想起させるシーンがあるため」2026/07/30
+* 熊本城跡の石垣崩落40か所、国重文の壁など八つの建造物損傷 八代の国名勝「松浜軒」長塀以外全壊2026/07/30
+* 中国、米発表の人型ロボット輸入禁止に反発 「必要な措置講じる」2026/07/30
+* 奈良市議へずまりゅう氏、熊本地震被災地で支援 給水支援に「素晴らしい行動力」と称賛の声相次ぐ2026/07/30
+* 日本人の人口が42年ぶりに1億2000万人を割る 減少幅は過去最大 外国人は過去最多2026/07/30
+* 熊本地震イオンモール熊本で不明の妻の「少しでも近くに」 現場で案ずる夫と子2026/07/30
+* サッカー三笘薫、結婚式フォトを削除 妻はアカウント削除 「まさか…ないよな?」と心配の声… 不穏な動きの中で残された夫婦の姿2026/07/30
+* 米株価NYダウ1153ドル安、関税ショック以来の下落 30年金利19年ぶり高さ2026/07/30
+* イオンモールで働く妻から「そっちは大丈夫?」 途絶えた音信、捜索見守る男性「覚悟しておいた方が」2026/07/30
+* 岩屋前外相が高市政権への苦言連発 国旗損壊罪、皇室典範改正、対中外交…「右へならえの自民党では国を誤る」2026/07/30
+* 女優・星野真里、『24時間テレビ』酷暑マラソンに心配の声 100人の応援ランナーにも万全体勢… 警備面の心配も2026/07/30
+* ひろゆき氏と泉房穂参院議員が「新党」結成 🤝2027統一地方選挙で都内11区長選などに候補者擁立へ★22026/07/30
+* イオンモール熊本地震発生時、館内には四千数百人 従業員らがトイレなど死角を確認しながら約30分で全て避難 ★22026/07/30
+* ひろゆき氏と泉房穂参院議員が「新党」結成 2027統一地方選挙で都内11区長選などに候補者擁立へ2026/07/30
+* 熊本震度7イオン社長、声詰まらせ「爆発、想定しきれず」 一時避難完了も、悔しさにじませ2026/07/30
+* イオン爆発LPガスタンク破損せず、漏えいなら配管に問題も=イオン爆発で経産省★42026/07/30
+* イオンモール熊本地震発生時、館内には四千数百人 従業員らがトイレなど死角を確認しながら約30分で全て避難2026/07/30
+* 熊本震度5弱 2026年7月29日22時19分 ごろ2026/07/29
+* 弱者男性/氷河期世代不遇なのに、ケアされてない自分たち 「曖昧な弱者」という問題提起2026/07/30
+* 熊本地震 イオンモール爆発事故の死者5人に 新たに女性2人の死亡を確認2026/07/30
