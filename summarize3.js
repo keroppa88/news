@@ -8,7 +8,7 @@ const MIN_KEYWORDS = 60;
 const MAX_KEYWORDS = 100;
 const MAX_RETRIES = 3;
 
-// ●AI●（AI専門メディア）セクションを入力から除去する。
+// ●AI●（AI専門メディア）セクションを入力から除去をする。
 // AIニュースだらけでワードクラウドが埋まるのを防ぐ。他セクションのAI記事は集計対象のまま。
 // ヘッダー表記ゆれ（●AI関連●、**●●AI●●**、### ●●AI関連●● 等）に対応
 function stripAiSection(text) {
