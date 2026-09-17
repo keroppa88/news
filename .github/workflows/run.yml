@@ -94,6 +94,9 @@ jobs:
       - name: Generate Web Page
         run: node web/format.js
 
+      - name: Add newspaper navigation
+        run: node web/add_navigation.js
+
       # --- 先にリポジトリへ保存する ---
       - name: Save results
         run: |
@@ -109,6 +112,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
+          cp print.html newspaper.html _site/
           cp wordcloud.jpg _site/ 2>/dev/null || true
 
       - name: Upload Pages artifact
