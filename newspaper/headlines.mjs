@@ -27,13 +27,14 @@ export function validateOutput(data,headlines){
   return data;
 }
 export function makeEdition(output,headlines,meta={}){
+  const knownEvidence=new Set(headlines.map(h=>h.id));
   const usedEvidence=new Set();
   const normalized={...output};
   for(const section of ['important','sports','other']){
     if(!Array.isArray(output?.[section]))continue;
     normalized[section]=output[section].map(article=>{
       if(!Array.isArray(article?.sourceIds))return article;
-      const sourceIds=article.sourceIds.filter(id=>{if(usedEvidence.has(id))return false;usedEvidence.add(id);return true});
+      const sourceIds=article.sourceIds.filter(id=>{if(!knownEvidence.has(id)||usedEvidence.has(id))return false;usedEvidence.add(id);return true});
       return {...article,sourceIds};
     });
   }
