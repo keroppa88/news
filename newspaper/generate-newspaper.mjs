@@ -19,7 +19,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
   try{
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current})}]}],generationConfig:{temperature:0.2,maxOutputTokens:8192,responseMimeType:'application/json'}})
+      body:JSON.stringify({systemInstruction:{parts:[{text:prompt}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,responseMimeType:'application/json'}})
     });
     if(!response.ok){const error=new Error(`Gemini HTTP ${response.status}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
