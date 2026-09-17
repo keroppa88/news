@@ -2,6 +2,17 @@ name: Daily News Update
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/run.yml'
+      - 'web/add_navigation.js'
+      - 'newspaper/**'
+      - 'newspaper.html'
+      - 'newspaper.css'
+      - 'app.js'
+      - 'config.json'
+      - 'assets/**'
   schedule:
     # 22:30 UTC = 07:30 JST (日本時間 朝7時30分)
     - cron: '30 22 * * *'
@@ -97,12 +108,20 @@ jobs:
       - name: Add newspaper navigation
         run: node web/add_navigation.js
 
+      - name: Generate newspaper edition
+        run: node newspaper/generate-newspaper.mjs
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWSPAPER_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}
+
       # --- 先にリポジトリへ保存する ---
       - name: Save results
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
+          if [ -f newspaper.json ]; then git add newspaper.json; fi
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
           git push
@@ -111,9 +130,10 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
-          cp index.html _site/
-          cp print.html newspaper.html _site/
+          cp index.html newspaper.html newspaper.css app.js config.json _site/
           cp wordcloud.jpg _site/ 2>/dev/null || true
+          cp -R assets _site/
+          if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
