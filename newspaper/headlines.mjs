@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 export function parseHeadlines(text){
   const found=new Map();
   for(const line of text.split(/\r?\n/)){
-    const m=line.match(/^\s*\*\s+(.+?)\s*[（(]([^（）()]+)[）)]\s*(\d{4}\/\d{1,2}\/\d{1,2})\s*$/);
+    const m=line.match(/^\s*[-*]\s+(.+?)\s*[（(]([^（）()]+)[）)]\s*(\d{4}\/\d{1,2}\/\d{1,2})\s*$/);
     if(!m)continue;
     const title=m[1].trim().replace(/\s+/g,' '),media=m[2].trim(),date=m[3].split('/').map((x,i)=>i?x.padStart(2,'0'):x).join('-');
     if(title.length<4||/提供されていない|記事なし/.test(title))continue;
