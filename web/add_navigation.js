@@ -1,15 +1,13 @@
-// Run after web/format.js: preserve the original page and add one newspaper-view button.
+// Run after web/format.js: add compact view switches at the top-left.
 const fs = require('fs');
 const path = require('path');
 const filename = path.join(__dirname, '..', 'index.html');
 let html = fs.readFileSync(filename, 'utf8');
-const nav = `<div class="newspaper-navigation"><a href="newspaper.html">新聞風</a></div>`;
-const css = `<style id="newspaper-navigation-style">.newspaper-navigation{display:flex;justify-content:flex-end;margin:4px 0 10px}.newspaper-navigation a{display:inline-block;padding:7px 18px;border:1px solid #172b41;border-radius:3px;color:#172b41;background:#fff;font:700 13px sans-serif;text-decoration:none}.newspaper-navigation a:hover,.newspaper-navigation a:focus-visible{background:#eef1f3}</style>`;
+const nav = `<nav class="newspaper-navigation" aria-label="表示切り替え"><a href="newspaper.html">新聞風</a><a href="print.html">紙新聞風</a></nav>`;
+const css = `<style id="newspaper-navigation-style">.newspaper-navigation{display:flex;justify-content:flex-start;gap:4px;margin:3px 4px 5px}.newspaper-navigation a{display:inline-block;padding:3px 7px;border:1px solid #777;border-radius:2px;color:#222;background:#fff;font:11px sans-serif;text-decoration:none;line-height:1.25}.newspaper-navigation a:hover,.newspaper-navigation a:focus-visible{background:#eef1f3}</style>`;
 if (!html.includes('class="newspaper-navigation"')) {
-  const imageBlock = /(<div\s+style="margin-bottom:\s*10px;"\s*>\s*<img\b[^>]*>\s*<\/div>)/i;
-  if (!imageBlock.test(html)) throw new Error('Wordcloud image block not found; newspaper button was not inserted.');
-  html = html.replace(imageBlock, '$1\n        ' + nav);
+  html = html.replace(/(<body[^>]*>)/i, '$1\n    ' + nav);
   html = html.replace('</head>', css + '\n</head>');
   fs.writeFileSync(filename, html);
 }
-console.log('Newspaper button added below the wordcloud.');
+console.log('Newspaper view buttons added at the top-left.');

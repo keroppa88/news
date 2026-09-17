@@ -130,7 +130,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
-          cp index.html newspaper.html newspaper.css app.js config.json _site/
+          cp index.html newspaper.html print.html newspaper.css app.js config.json _site/
           cp wordcloud.jpg _site/ 2>/dev/null || true
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
