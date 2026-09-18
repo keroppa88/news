@@ -4,8 +4,20 @@
   "storyTitle": "3メガバンク、日銀利上げで純利益3000億円押し上げも「稼ぎすぎ批判」",
   "mode": "satire",
   "image": "daily-visual.png",
-  "caption": "銀行の「稼ぎすぎ」に批判の声",
-  "generatedAt": "2026-09-18T06:44:32.655Z",
+  "caption": "日銀利上げで銀行は潤うが、国民生活は？",
+  "generatedAt": "2026-09-18T08:41:25.746Z",
   "model": "gemini-2.5-flash-image",
-  "styleVersion": "golden-v4"
+  "styleVersion": "words-v5",
+  "allowedWords": [
+    "銀行",
+    "利上げ"
+  ],
+  "review": {
+    "texts": [],
+    "hasMalformedText": false,
+    "approved": true,
+    "model": "gemini-2.5-flash",
+    "allowedWords": []
+  },
+  "attempts": 3
 }
