@@ -41,16 +41,22 @@ test('generator accepts concise print bodies; overlong output preserves the exis
       globalThis.setTimeout=(callback)=>{callback();return 0};
       globalThis.fetch=async (_url,options)=>{
         const request=JSON.parse(options.body);
+        if(request.generationConfig.responseSchema.properties.title)return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({title:'フェルスタッペン、レースで圧倒'})}]}}]})};
         if(request.generationConfig.responseSchema.properties.important.items.properties.sourceIds.items.enum.length!==15)throw Error('Missing evidence enum');
         return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify(${JSON.stringify(data)})}]}}]})};
       };
       await import(${JSON.stringify(pathToFileURL(resolve('newspaper/generate-newspaper.mjs')).href)});
     `],{encoding:'utf8',env:{...process.env,GEMINI_API_KEY:'test-only',NEWSPAPER_INPUT:input,NEWSPAPER_OUTPUT:output}});
     const success=run();assert.equal(success.status,0,success.stderr);
-    const saved=await readFile(output,'utf8');
+    let saved=await readFile(output,'utf8');
     assert.equal(JSON.parse(saved).important.length,13);
     assert.equal(JSON.parse(saved).important[0].printBody.oneLine,data.important[0].summary);
     assert.equal(JSON.parse(saved).important[0].sources[0].id,sources[0].id);
+    data.sports[0].title='マックス・フェルスタッペン、ゴーカートレースで100人を圧倒';
+    const edited=run();assert.equal(edited.status,0,edited.stderr);
+    saved=await readFile(output,'utf8');
+    assert.equal(JSON.parse(saved).sports[0].title,'フェルスタッペン、レースで圧倒');
+    assert.equal(JSON.parse(saved).sports[0].sources[0].id,sources[13].id);
     data.important[0].printBody.oneLine='長'.repeat(281);
     const failure=run();assert.notEqual(failure.status,0);assert.match(failure.stderr,/20–280/);
     assert.equal(await readFile(output,'utf8'),saved);

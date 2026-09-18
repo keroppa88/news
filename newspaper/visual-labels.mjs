@@ -3,7 +3,7 @@
 export const conceptLabels = [
   ['内閣','CABINET'],['政府','GOVERNMENT'],['国会','PARLIAMENT'],
   ['選挙','ELECTION'],['政治資金','POLITICAL FUNDS'],['裏金','SLUSH FUNDS'],
-  ['税','TAX'],['予算','BUDGET'],['債務','DEBT'],['関税','TARIFFS'],
+  ['関税','TARIFFS'],['税','TAX'],['予算','BUDGET'],['債務','DEBT'],
   ['銀行','BANKS'],['金利','INTEREST RATES'],['利上げ','RATE HIKE'],
   ['利下げ','RATE CUT'],['物価','PRICES'],['インフレ','INFLATION'],
   ['賃金','WAGES'],['雇用','JOBS'],['株価','STOCKS'],['市場','MARKETS'],
