@@ -36,7 +36,7 @@ test('generator accepts concise print bodies; overlong output preserves the exis
     await writeFile(input,headlines.map((h,i)=>`- 根拠となる記事見出し${i}（媒体）2026/9/18`).join('\n'));
     const sources=parseHeadlines(await readFile(input,'utf8'));
     const data=edition();
-    [...data.important,...data.sports,...data.other].forEach((a,i)=>{a.sourceIds=[sources[i].id];a.printBody={oneLine:a.summary,twoLines:a.summary,shortfallReason:''}});
+    [...data.important,...data.sports,...data.other].forEach((a,i)=>{a.sourceIds=[`E${i+1}`];a.printBody={oneLine:a.summary,twoLines:a.summary,shortfallReason:''}});
     const run=()=>spawnSync(process.execPath,['--input-type=module','-e',`
       globalThis.setTimeout=(callback)=>{callback();return 0};
       globalThis.fetch=async (_url,options)=>{
@@ -50,6 +50,7 @@ test('generator accepts concise print bodies; overlong output preserves the exis
     const saved=await readFile(output,'utf8');
     assert.equal(JSON.parse(saved).important.length,13);
     assert.equal(JSON.parse(saved).important[0].printBody.oneLine,data.important[0].summary);
+    assert.equal(JSON.parse(saved).important[0].sources[0].id,sources[0].id);
     data.important[0].printBody.oneLine='長'.repeat(281);
     const failure=run();assert.notEqual(failure.status,0);assert.match(failure.stderr,/20–280/);
     assert.equal(await readFile(output,'utf8'),saved);

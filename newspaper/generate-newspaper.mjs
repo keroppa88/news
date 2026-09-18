@@ -12,7 +12,10 @@ if(!/^[a-zA-Z0-9.-]+$/.test(model))throw Error('Invalid model ID');
 const headlines=parseHeadlines(await readFile(input,'utf8'));
 const date=headlines.map(h=>h.date).sort().at(-1);
 const cutoff=new Date(`${date}T00:00:00Z`).getTime()-86400000;
-const current=headlines.filter(h=>new Date(`${h.date}T00:00:00Z`).getTime()>=cutoff);
+const original=headlines.filter(h=>new Date(`${h.date}T00:00:00Z`).getTime()>=cutoff);
+// Short request-local IDs reduce copying mistakes and structured-schema complexity.
+const current=original.map((h,index)=>({...h,id:`E${index+1}`}));
+const originalById=new Map(current.map((h,index)=>[h.id,original[index]]));
 if(current.length<12)throw Error('Insufficient source headlines; the previous edition is preserved.');
 const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
@@ -34,13 +37,14 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
       body:JSON.stringify({systemInstruction:{parts:[{text:prompt}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current,correction})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,responseMimeType:'application/json',responseSchema}})
     });
-    if(!response.ok){const error=new Error(`Gemini HTTP ${response.status}`);error.retryable=response.status===429||response.status>=500;throw error}
+    if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
     const candidate=result.candidates?.[0];
     if(candidate?.finishReason!=='STOP')throw Error(`Incomplete output: ${candidate?.finishReason||'no candidate'}`);
     const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
     const parsed=JSON.parse(text);if(parsed.error)throw Error(`Editorial generation declined: ${parsed.reason}`);
     const edition=makeEdition(parsed,current,{date,editorLabel:model});
+    for(const section of ['important','sports','other'])for(const article of edition[section])article.sources=article.sources.map(source=>originalById.get(source.id));
     for(const section of ['important','sports','other']){
       for(let i=0;i<edition[section].length;i++){
         if(section==='important'&&i>=11)continue;
