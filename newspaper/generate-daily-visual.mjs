@@ -8,7 +8,7 @@ const imageModel=process.env.DAILY_VISUAL_MODEL||'gemini-2.5-flash-image';
 const edition=JSON.parse(await readFile('newspaper.json','utf8'));
 try{
   const existing=JSON.parse(await readFile('daily-visual.json','utf8'));
-  if(existing.date===edition.date&&existing.image&&existing.styleVersion==='print-v3'){
+  if(existing.date===edition.date&&existing.image&&existing.styleVersion==='golden-v4'){
     await access(existing.image);
     console.log(JSON.stringify({date:edition.date,skipped:true,reason:'already generated today',image:existing.image}));
     process.exit(0);
@@ -70,11 +70,11 @@ const mode=selection.mode==='fictional-photo'?'fictional-photo':'satire';
 const style=mode==='satire'
   ? `明治期の日本の新聞風刺画。ジョルジュ・ビゴーを思わせる鋭い観察とペン線、白黒線画、明瞭なクロスハッチング、余白を生かした一場面、誇張された象徴表現。主役となる人物は1〜3人まで。群衆、小人物の羅列、細かな背景、小さな小道具を避ける。家庭用プリンターでA4印刷しても判別できる太めの輪郭、大きな表情、大きな象徴物を使う。現代的なカラー、写真表現、吹き出し、ロゴ、透かしは使わない。文字に頼らず人物、物体、表情、構図だけで意味を伝える。`
   : `昭和後期（1970年代末から1980年代）の新聞に掲載された架空の報道写真。完全な白黒写真だが黒一色ではなく豊かなグレー階調、銀塩フィルムの粒子、やや柔らかな焦点、高感度フィルムらしい粗さ、自然な報道写真の構図。中心人物は1人、必要でも3人以内。群衆や細かな背景を避け、中景または寄りの構図で、A4印刷時にも主題と表情が判別できる明瞭な明暗差をつける。カラー、セピア、文字、ロゴ、透かしは使わない。実在写真の複製にはせず、人物や場面は架空として構成する。`;
-const imagePrompt=`${style}\n横長16:9。紙面では約120mm×46mmで掲載する前提。題材は次のニュース。\n見出し: ${story.title}\n要約: ${story.summary}\n場面の構想: ${String(selection.concept||story.title).slice(0,160)}\n重要: 画像内には漢字、仮名、アルファベット、数字、記号、文章、見出し、看板、ラベルを一切描かない。紙面の日本語は画像外で組版する。`;
+const imagePrompt=`${style}\n紙面上の最終表示は横99mm×縦61.11mm（縦横比1.62:1）で固定する。生成画像の中央に縦横比1.62:1の安全領域を想定し、人物の顔、手、主要な象徴物をその内側に収め、左右端はトリミングされても意味が失われない構図にする。題材は次のニュース。\n見出し: ${story.title}\n要約: ${story.summary}\n場面の構想: ${String(selection.concept||story.title).slice(0,160)}\n重要: 画像内には漢字、仮名、アルファベット、数字、記号、文章、見出し、看板、ラベルを一切描かない。紙面の日本語は画像外で組版する。`;
 
 const imageResponse=await generate(imageModel,{
   contents:[{parts:[{text:imagePrompt}]}],
-  generationConfig:{responseModalities:['TEXT','IMAGE'],imageConfig:{aspectRatio:'16:9'}}
+  generationConfig:{responseModalities:['TEXT','IMAGE'],imageConfig:{aspectRatio:'3:2'}}
 });
 const parts=imageResponse.candidates?.[0]?.content?.parts||[];
 const imagePart=parts.find(p=>p.inlineData?.data||p.inline_data?.data);
@@ -92,6 +92,6 @@ await writeFile('daily-visual.json',JSON.stringify({
   caption:String(selection.caption||story.title).slice(0,80),
   generatedAt:new Date().toISOString(),
   model:imageModel,
-  styleVersion:'print-v3'
+  styleVersion:'golden-v4'
 },null,2)+'\n');
 console.log(JSON.stringify({date:edition.date,story:story.title,mode,image:imagePath,model:imageModel}));
