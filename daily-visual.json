@@ -1,30 +1,28 @@
 {
   "date": "2026-09-18",
-  "storyId": "1741321086f78cc5",
-  "storyTitle": "高市改造内閣が本格始動、裏金議員10人が副大臣・政務官に起用",
+  "storyId": "cab3a67d53531d28",
+  "storyTitle": "日銀、政策金利を1.25%に引き上げ",
   "mode": "satire",
   "image": "daily-visual.png",
   "caption": "",
-  "generatedAt": "2026-09-18T11:01:02.563Z",
+  "generatedAt": "2026-09-18T16:22:06.356Z",
   "model": "gemini-2.5-flash-image",
-  "styleVersion": "english-v6",
+  "styleVersion": "english-v7",
   "allowedWords": [
-    "TAKAYCHI CABINET",
-    "CORRUPT POLITICIANS",
-    "STATE MINISTER"
+    "BANKS",
+    "RATE HIKE"
   ],
   "review": {
     "texts": [
-      "TAKAYCHI CABINET",
-      "STATE MINISTER"
+      "RATE HIKE",
+      "BANKS"
     ],
     "hasMalformedText": false,
     "approved": true,
     "model": "gemini-2.5-flash",
     "allowedWords": [
-      "TAKAYCHI CABINET",
-      "CORRUPT POLITICIANS",
-      "STATE MINISTER"
+      "BANKS",
+      "RATE HIKE"
     ]
   },
   "attempts": 1
