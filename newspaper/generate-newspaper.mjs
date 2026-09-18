@@ -18,7 +18,7 @@ const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
  title:{type:'STRING'},summary:{type:'STRING'},category:{type:'STRING'},
- sourceIds:{type:'ARRAY',items:{type:'STRING'}},
+ sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',enum:current.map(h=>h.id)}},
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds']};
 const responseSchema={type:'OBJECT',properties:{
@@ -47,16 +47,15 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
         const article=parsed[section][i], target=edition[section][i];
         const top=section==='important'&&i===0;
         const two=section==='important'&&[1,2,6,7].includes(i);
-        const ranges=top?[[240,280],[100,130]]:two?[[180,220],[120,160]]:[[110,140],[70,100]];
+        const limits=top?[280,130]:two?[220,160]:[140,100];
         const maxTitle=top?48:two?44:28;
         const invalid=message=>{const e=new Error(section+'['+i+']: '+message);e.retryable=true;throw e};
         if([...target.title].length>maxTitle)invalid('title exceeds '+maxTitle+' characters');
         const body=article.printBody;
         if(!body||typeof body!=='object')invalid('printBody is required');
         for(const [key,index] of [['oneLine',0],['twoLines',1]]){
-          const text=body[key], [min,max]=ranges[index];
+          const text=body[key], max=limits[index];
           if(typeof text!=='string'||[...text].length<20||[...text].length>max)invalid(key+' must contain 20–'+max+' characters');
-          if([...text].length<min&&!(typeof body.shortfallReason==='string'&&body.shortfallReason.trim()))invalid(key+' must contain '+min+'–'+max+' characters; explain insufficient evidence only if necessary');
         }
         target.printBody={oneLine:body.oneLine,twoLines:body.twoLines,shortfallReason:body.shortfallReason||''};
       }

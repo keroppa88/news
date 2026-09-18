@@ -27,11 +27,11 @@
 紙新聞用の組版（必須）：
 各記事に printBody: {oneLine:"本文",twoLines:"本文",shortfallReason:""} を追加する。
 同じ事実に基づき、見出し1行用・2行用の本文をそれぞれ完結した文章で生成する。文字数は句読点も1文字として数える。
-配置別の本文文字数：
-- important先頭（トップ）：oneLine 240〜280字、twoLines 100〜130字。
-- importantの2・3・7・8番目（2分割）：oneLine 180〜220字、twoLines 120〜160字。
-- importantの4〜6・9〜11番目、sports、other（3分割）：oneLine 110〜140字、twoLines 70〜100字。
+配置別の本文文字数（20字以上、上限内で簡潔に。長くする必要はない）：
+- important先頭（トップ）：oneLine 最大280字、twoLines 最大130字。
+- importantの2・3・7・8番目（2分割）：oneLine 最大220字、twoLines 最大160字。
+- importantの4〜6・9〜11番目、sports、other（3分割）：oneLine 最大140字、twoLines 最大100字。
 - importantの12・13番目は見出しのみなのでprintBody不要。
 titleはトップ最大48字、2分割最大44字、3分割最大28字。最大2行に収めるため優先して短くする。
-本文は入力見出しから得られる事実だけで組み立てる。反復・一般論・架空の背景による水増しは禁止。材料不足で下限に届かない場合のみshortfallReasonに不足理由を記し、短い事実本文を返す。上限は必ず守る。下限は目安とし、材料が少ない場合は短い本文を優先する。
+本文は入力見出しから得られる事実だけで組み立てる。反復・一般論・架空の背景による水増しは禁止。短い事実本文を優先し、上限は必ず守る。shortfallReasonは空文字でよい。twoLinesはoneLineより長くしない。
 summaryは従来どおりWeb用。printBodyは別に作成する。

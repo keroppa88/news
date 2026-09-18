@@ -23,25 +23,27 @@ export function validateOutput(data,headlines){
   const known=new Map(headlines.map(h=>[h.id,h])),seen=new Set(),refs=new Set();
   for(const [section,min,max] of [['important',13,13],['sports',1,3],['other',1,3]]){
     if(!Array.isArray(data[section])||data[section].length<min||data[section].length>max)throw Error(`${section}: expected ${min}–${max} stories`);
-    for(const a of data[section]){
+    for(const [index,a] of data[section].entries()){
       if(typeof a.title!=='string'||a.title.length<5||a.title.length>80||typeof a.summary!=='string'||a.summary.length<20||a.summary.length>400||typeof a.category!=='string'||a.category.length>20)throw Error('Invalid story text');
       if(seen.has(a.title))throw Error('Duplicate story');seen.add(a.title);
-      if(!Array.isArray(a.sourceIds)||!a.sourceIds.length||a.sourceIds.some(id=>!known.has(id)))throw Error('Unknown or missing evidence ID');
+      const location=`${section}[${index}] (${a.title})`;
+      if(!Array.isArray(a.sourceIds)||!a.sourceIds.length)throw Error(`${location}: sourceIds must contain at least one input id`);
+      const unknown=a.sourceIds.filter(id=>!known.has(id));
+      if(unknown.length)throw Error(`${location}: unknown evidence IDs ${JSON.stringify(unknown)}; copy exact ids from the supplied headlines`);
       if(new Set(a.sourceIds).size!==a.sourceIds.length)throw Error('Duplicate evidence');
-      for(const id of a.sourceIds){if(refs.has(id))throw Error('A headline was reused across topics');refs.add(id)}
+      for(const id of a.sourceIds){if(refs.has(id))throw Error(`${location}: evidence ID ${id} was reused across topics; merge duplicate topics or select a different supported story`);refs.add(id)}
     }
   }
   return data;
 }
 export function makeEdition(output,headlines,meta={}){
-  const knownEvidence=new Set(headlines.map(h=>h.id));
-  const usedEvidence=new Set();
   const normalized={...output};
   for(const section of ['important','sports','other']){
     if(!Array.isArray(output?.[section]))continue;
     normalized[section]=output[section].map(article=>{
       if(!Array.isArray(article?.sourceIds))return article;
-      const sourceIds=article.sourceIds.filter(id=>{if(!knownEvidence.has(id)||usedEvidence.has(id))return false;usedEvidence.add(id);return true});
+      // Only remove duplicates within an article. Never silently discard evidence.
+      const sourceIds=[...new Set(article.sourceIds)];
       return {...article,sourceIds};
     });
   }

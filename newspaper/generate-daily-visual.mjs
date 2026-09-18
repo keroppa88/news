@@ -1,4 +1,5 @@
 import {access,readFile,writeFile} from 'node:fs/promises';
+import {conceptLabels,selectVerifiedLabels} from './visual-labels.mjs';
 
 const apiKey=process.env.GEMINI_API_KEY;
 if(!apiKey)throw new Error('GEMINI_API_KEY is required');
@@ -8,12 +9,14 @@ const imageModel=process.env.DAILY_VISUAL_MODEL||'gemini-2.5-flash-image';
 const edition=JSON.parse(await readFile('newspaper.json','utf8'));
 try{
   const existing=JSON.parse(await readFile('daily-visual.json','utf8'));
-  if(existing.date===edition.date&&existing.image&&existing.styleVersion==='english-v6'){
+  if(existing.date===edition.date&&existing.image&&existing.styleVersion==='english-v7'){
     await access(existing.image);
     console.log(JSON.stringify({date:edition.date,skipped:true,reason:'already generated today',image:existing.image}));
     process.exit(0);
   }
 }catch{}
+// Any subsequent generation/API failure must not leave an obsolete image published.
+await writeFile('daily-visual.json',JSON.stringify({date:edition.date,image:null,status:'pending',styleVersion:'english-v7'},null,2)+'\n');
 const stories=[
   ...edition.important.map((story,index)=>({key:`important:${index}`,section:'important',...story})),
   ...edition.sports.map((story,index)=>({key:`sports:${index}`,section:'sports',...story})),
@@ -50,6 +53,7 @@ const selectionPrompt=`次の本日のニュースから、新聞のビジュア
 - 単なる有名人の肖像より、当日の重要性と画面としての強さを優先。
 - 見出しにない事実を追加しない。
 - labelsには原文に登場する概念と自然な英訳を最大3組指定する。sourceは原文通りの語、englishは米国人が理解する短い英語ラベル（大文字）。日本語を画像に描かない。conceptは米国人読者向けの場面構想を英語で記述。
+- ラベルは次の確認済み概念辞書から選ぶ。人名のローマ字化や独自の英訳は使わない。該当しなければlabelsは空配列でよい。辞書: ${JSON.stringify(conceptLabels)}
 
 JSONだけを返す:
 {"storyKey":"important:0","mode":"satire または fictional-photo","concept":"Scene for American readers, in English","labels":[{"source":"銀行","english":"BANKS"},{"source":"利上げ","english":"RATE HIKE"}]}
@@ -69,10 +73,7 @@ if(!story)throw new Error(`Unknown selected story: ${selection.storyKey}`);
 const mode=selection.mode==='fictional-photo'?'fictional-photo':'satire';
 
 const sourceText=story.title+'\n'+story.summary;
-const allowedWords=[...new Set((Array.isArray(selection.labels)?selection.labels:[])
-  .filter(label=>label&&typeof label.source==='string'&&label.source.length>=2&&sourceText.includes(label.source)&&
-    typeof label.english==='string'&&/^[A-Z][A-Z -]{1,23}$/.test(label.english))
-  .map(label=>label.english))].slice(0,3);
+const allowedWords=selectVerifiedLabels(selection.labels,sourceText);
 const reviewModel=process.env.DAILY_VISUAL_REVIEW_MODEL||'gemini-2.5-flash';
 const style=mode==='satire'
   ? `明治期の日本の新聞風刺画。ジョルジュ・ビゴーを思わせる鋭い観察とペン線、白黒線画、明瞭なクロスハッチング、余白を生かした一場面、誇張された象徴表現。主役となる人物は1〜3人まで。群衆、小人物の羅列、細かな背景、小さな小道具を避ける。家庭用プリンターでA4印刷しても判別できる太めの輪郭、大きな表情、大きな象徴物を使う。現代的なカラー、写真表現、吹き出し、ロゴ、透かしは使わない。人物、物体、表情、構図を主体にし、指定語だけを必要最小限に添える。`
@@ -82,6 +83,7 @@ const imagePrompt=`This illustration is for an American audience. All visible te
 let inline,review,attempts=0;
 for(let attempt=1;attempt<=3;attempt++){
   attempts=attempt;
+  try{
   // Final attempt falls back to text-free art; never publish an unchecked candidate.
   const attemptWords=attempt===3?[]:allowedWords;
   const instruction=attempt===3
@@ -112,11 +114,12 @@ for(let attempt=1;attempt<=3;attempt++){
     inspected.texts.every(word=>typeof word==='string'&&attemptWords.includes(word));
   console.log(JSON.stringify({attempt,allowedWords:attemptWords,review:inspected,accepted:!!valid}));
   if(valid){inline=candidate;review={...inspected,model:reviewModel,allowedWords:attemptWords};break}
+  }catch(error){console.error(`Visual attempt ${attempt}: ${error.message}`)}
 }
 if(!inline){
   // Hide today's rejected/previous unverified image; do not silently keep publishing it.
   await writeFile('daily-visual.json',JSON.stringify({
-    date:edition.date,image:null,status:'rejected',styleVersion:'english-v6',
+    date:edition.date,image:null,status:'rejected',styleVersion:'english-v7',
     reason:'Image text validation failed',attempts
   },null,2)+'\n');
   console.error('No visual passed text validation; image withheld.');
@@ -134,7 +137,7 @@ await writeFile('daily-visual.json',JSON.stringify({
   caption:'',
   generatedAt:new Date().toISOString(),
   model:imageModel,
-  styleVersion:'english-v6',
-  allowedWords,review,attempts
+  styleVersion:'english-v7',
+  allowedWords:review.allowedWords,review,attempts
 },null,2)+'\n');
 console.log(JSON.stringify({date:edition.date,story:story.title,mode,image:imagePath,model:imageModel}));
