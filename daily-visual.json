@@ -1,10 +1,11 @@
 {
   "date": "2026-09-18",
-  "storyId": "acb74fa1464ea791",
-  "storyTitle": "日銀、1.25%へ利上げ決定 2人が反対票、物価上振れリスク抑制",
+  "storyId": "344133f61427c495",
+  "storyTitle": "日本、インフレ抑制のため31年ぶり大幅利上げ 金利は1.25%に",
   "mode": "satire",
   "image": "daily-visual.png",
-  "caption": "利上げでも円安進む？ 日銀の思惑と現実",
-  "generatedAt": "2026-09-18T06:00:11.056Z",
-  "model": "gemini-2.5-flash-image"
+  "caption": "インフレ抑制へ、31年ぶりの利上げ",
+  "generatedAt": "2026-09-18T06:20:47.265Z",
+  "model": "gemini-2.5-flash-image",
+  "styleVersion": "textless-v2"
 }
