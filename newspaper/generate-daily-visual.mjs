@@ -20,6 +20,20 @@ async function generate(model,body){
   return response.json();
 }
 
+function parseFirstJsonObject(text){
+  const start=text.indexOf('{');
+  if(start<0)throw new Error('Visual selection returned no JSON object');
+  let depth=0,inString=false,escaped=false;
+  for(let i=start;i<text.length;i++){
+    const char=text[i];
+    if(inString){if(escaped)escaped=false;else if(char==='\\')escaped=true;else if(char==='"')inString=false;continue}
+    if(char==='"'){inString=true;continue}
+    if(char==='{')depth++;
+    if(char==='}'&&--depth===0)return JSON.parse(text.slice(start,i+1));
+  }
+  throw new Error('Visual selection returned incomplete JSON');
+}
+
 const selectionPrompt=`次の本日のニュースから、新聞のビジュアル欄に載せる題材を1件だけ選んでください。
 
 選択ルール:
@@ -40,7 +54,7 @@ const selectionResponse=await generate(selectionModel,{
 });
 const selectionText=selectionResponse.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('').trim();
 if(!selectionText)throw new Error('Visual selection returned no text');
-const selection=JSON.parse(selectionText.replace(/^```json\s*|\s*```$/g,''));
+const selection=parseFirstJsonObject(selectionText);
 const story=stories.find(item=>item.key===selection.storyKey);
 if(!story)throw new Error(`Unknown selected story: ${selection.storyKey}`);
 const mode=selection.mode==='fictional-photo'?'fictional-photo':'satire';
