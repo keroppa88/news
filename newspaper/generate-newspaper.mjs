@@ -20,7 +20,7 @@ if(current.length<12)throw Error('Insufficient source headlines; the previous ed
 const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
- title:{type:'STRING'},summary:{type:'STRING'},category:{type:'STRING'},
+ title:{type:'STRING',description:'簡潔な日本語見出し。18〜26文字を目安に短く。'},summary:{type:'STRING'},category:{type:'STRING'},
  sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',enum:current.map(h=>h.id)}},
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds']};
@@ -36,7 +36,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
   try{
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current,previousOutput,correction})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,responseMimeType:'application/json',responseSchema}})
+      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current,previousOutput})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,responseMimeType:'application/json',responseSchema}})
     });
     if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
@@ -57,7 +57,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
         const limits=top?[280,130]:two?[220,160]:[140,100];
         const maxTitle=top?48:two||headlineOnly?44:28;
         const invalid=message=>errors.push(section+'['+i+']: '+message);
-        if([...String(article.title||'')].length>maxTitle)invalid('title exceeds '+maxTitle+' characters');
+        if([...String(article.title||'')].length>maxTitle)invalid('title exceeds '+maxTitle+' characters (actual: '+[...String(article.title||'')].length+'); shorten this title: '+article.title);
         if(headlineOnly)continue;
         const body=article.printBody;
         if(!body||typeof body!=='object'){invalid('printBody is required');continue}
