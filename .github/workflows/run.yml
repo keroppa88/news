@@ -34,6 +34,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Sync latest main before generation
+        run: git pull --ff-only origin main
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
