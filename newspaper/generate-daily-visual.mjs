@@ -77,7 +77,7 @@ const reviewModel=process.env.DAILY_VISUAL_REVIEW_MODEL||'gemini-2.5-flash';
 const style=mode==='satire'
   ? `明治期の日本の新聞風刺画。ジョルジュ・ビゴーを思わせる鋭い観察とペン線、白黒線画、明瞭なクロスハッチング、余白を生かした一場面、誇張された象徴表現。主役となる人物は1〜3人まで。群衆、小人物の羅列、細かな背景、小さな小道具を避ける。家庭用プリンターでA4印刷しても判別できる太めの輪郭、大きな表情、大きな象徴物を使う。現代的なカラー、写真表現、吹き出し、ロゴ、透かしは使わない。人物、物体、表情、構図を主体にし、指定語だけを必要最小限に添える。`
   : `昭和後期（1970年代末から1980年代）の新聞に掲載された架空の報道写真。完全な白黒写真だが黒一色ではなく豊かなグレー階調、銀塩フィルムの粒子、やや柔らかな焦点、高感度フィルムらしい粗さ、自然な報道写真の構図。中心人物は1人、必要でも3人以内。群衆や細かな背景を避け、中景または寄りの構図で、A4印刷時にも主題と表情が判別できる明瞭な明暗差をつける。カラー、セピア、ロゴ、透かしは使わない。実在写真の複製にはせず、人物や場面は架空として構成する。`;
-const imagePrompt=`This illustration is for an American audience. All visible text must be English only. No Japanese or CJK characters. No explanatory caption.\n${style}\n紙面上の最終表示は横99mm×縦61.11mm（横縦比1.62:1）で固定する。生成画像の中央に縦横比1.62:1の安全領域を想定し、人物の顔、手、主要な象徴物をその内側に収め、上下端はトリミングされても意味が失われない構図にする。題材は次のニュース。\n見出し: ${story.title}\n要約: ${story.summary}\n場面の構想: ${String(selection.concept||story.title).slice(0,160)}\n重要: 画像内で使用可能な語は次のリストだけ: ${JSON.stringify(allowedWords)}。文字は任意。使う場合は指定語を一字も変えず、米国人向けの自然な英語ラベルとして、読みやすい大文字の欧文活字で大きく明瞭に描く。日本語・漢字・仮名は絶対に描かない。各語1回まで、最大3箇所。リスト外の文字、数字、通貨記号、擬似文字、署名は禁止。看板、袋、紙幣、背景にも適用。空リストなら完全に文字なし。`;
+const imagePrompt=`This illustration is for an American audience. All visible text must be English only. No Japanese or CJK characters. No explanatory caption.\n${style}\n紙面上の最終表示は横99mm×縦61.11mm（横縦比1.62:1）で固定する。生成画像の中央に縦横比1.62:1の安全領域を想定し、人物の顔、手、主要な象徴物をその内側に収め、上下端はトリミングされても意味が失われない構図にする。題材は次のニュース。\n見出し: ${story.title}\n要約: ${story.summary}\n場面の構想: ${String(selection.concept||story.title).slice(0,160)}\n重要: 画像内で使用可能な語は次のリストだけ: ${JSON.stringify(allowedWords)}。文字は任意。使う場合は指定語を一字も変えず、米国人向けの自然な英語ラベルとして、読みやすい大文字の欧文活字で大きく明瞭に描く。日本語・漢字・仮名は絶対に描かない。必要な箇所では同じ指定語の繰り返しを許可。リスト外の文字、数字、通貨記号、擬似文字、署名は禁止。看板、袋、紙幣、背景にも適用。空リストなら完全に文字なし。`;
 
 let inline,review,attempts=0;
 for(let attempt=1;attempt<=3;attempt++){
@@ -102,14 +102,13 @@ for(let attempt=1;attempt<=3;attempt++){
         '。許可語への推測補正は禁止。実際に見える綴りをそのまま返す。不明瞭な字や擬似文字はhasMalformedText=true。許可語以外の文字、数字、通貨記号、署名は禁止。文字なしは合格。JSONのみ: {"texts":["実際に読める語"],"hasMalformedText":false,"approved":true}'},
       {inlineData:{mimeType,data:candidate.data}}
     ]}],
-    generationConfig:{responseMimeType:'application/json',temperature:0,maxOutputTokens:1000}
+    generationConfig:{responseMimeType:'application/json',temperature:0,maxOutputTokens:4096,thinkingConfig:{thinkingBudget:0}}
   });
   const checkText=check.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';
   let inspected;
   try{inspected=parseFirstJsonObject(checkText)}catch{inspected=null}
   const valid=inspected&&inspected.approved===true&&inspected.hasMalformedText===false&&
-    Array.isArray(inspected.texts)&&inspected.texts.length<=3&&
-    new Set(inspected.texts).size===inspected.texts.length&&
+    Array.isArray(inspected.texts)&&inspected.texts.length<=12&&
     inspected.texts.every(word=>typeof word==='string'&&attemptWords.includes(word));
   console.log(JSON.stringify({attempt,allowedWords:attemptWords,review:inspected,accepted:!!valid}));
   if(valid){inline=candidate;review={...inspected,model:reviewModel,allowedWords:attemptWords};break}
