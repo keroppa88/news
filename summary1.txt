@@ -1,150 +1,177 @@
-以下は、提供されたデータから抽出・整理した記事の見出しです。
+## 記事見出し
 
 **●●ロイター●●**
-日本時間（UTC+9）
-40本以上の記事は提示しない。
+
+*   **日本時間（UTC+9）**
+    *   **40本以上の記事は提示しない**
 
 **●●ブルームバーグ●●**
-日本時間（UTC+9）
-上から順に25本の記事を提示する。25本以上の記事は提示しない。
+
+*   **日本時間（UTC+9）**
+    *   **上から順に25本の記事を提示する。25本以上の記事は提示しない。**
 
 **●●BBC●●**
-UTC
-上から順に25本の記事を提示する。25本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。
-*   UN experts say grounds to believe US committed war crimes in Iran strikes (国連専門家、米国がイラン攻撃で戦争犯罪を犯したと信じる根拠があると発言) 2026-09-18
-*   Canadians dream of Europe as Carney floats longshot plan for living and working in EU (カーニー氏がEUでの生活・就労の可能性を浮上させる中、カナダ人は欧州を夢見る) 2026-09-18
-*   War may be coming. Is the UK psychologically ready? (戦争が迫っているかもしれない。英国は心理的に準備ができているか？) 2026-09-18
-*   Charles 'sounded giddily elated' after Diana died, Earl Spencer claims (スペンサー伯爵、ダイアナ妃死去後、チャールズ皇太子は「有頂天で高揚していた」と主張) 2026-09-18
-*   Why US plan to sell F-35 warplanes to Saudi Arabia is controversial (米国がF-35戦闘機をサウジアラビアに売却する計画がなぜ物議を醸しているのか) 2026-09-18
-*   New wild cat species discovered - with only one known living member (新種の野生ネコ発見 - 生存する個体は1匹のみ) 2026-09-18
-*   Twenty women had breasts removed needlessly, says NHS trust (NHS信託、20人の女性が不必要に乳房切除を受けたと発表) 2026-09-18
-*   Tailgate parties, marching bands... and Ted Lasso? Wembley hosts US college game (テールゲートパーティー、マーチングバンド…そしてテッド・ラッソ？ ウェンブリーで米大学ゲーム開催) 2026-09-18
-*   New York has a food waste problem. South Korea has already solved it (ニューヨークには食品廃棄問題がある。韓国はすでに解決した) 2026-09-18
-*   Ed Sheeran, Macklemore, and the politics of staying silent (エド・シーラン、マックルモア、そして沈黙を貫く政治) 2026-09-18
-*   Did the US carry out war crimes in Iran? (米国はイランで戦争犯罪を犯したか？) 2026-09-18
-*   The discovery of the San José shipwreck (サン・ホセ号難破船の発見) 2026-09-18
-*   How to leave this Earth (この地球から離れる方法) 2026-09-18
-*   Mirjana Spoljaric, president of the ICRC: The rules of war are being ignored (ICRC総裁、ミルヤナ・スポラリック氏：「戦争のルールは無視されている」) 2026-09-18
-*   Taking Stock: Can Big Tech rivals be trusted to develop safe AI? (テイク・ストック：大手IT企業ライバルは安全なAI開発を信頼できるか？) 2026-09-18
-*   US fans with Ed Sheeran tickets are left torn by Macklemore controversy (エド・シーランのチケットを持つ米ファン、マックルモアの論争で引き裂かれる) 2026-09-18
-*   Allen stars as Bills open new stadium in style (アレン、ビルズの新スタジアムでの開幕戦を華麗に飾る) 2026-09-18
-*   'Complete despair': Afghan female medical students fear being sent home from Pakistan (「完全な絶望」：アフガニスタンの女子医学生、パキスタンからの送還を恐れる) 2026-09-18
-*   Judge orders Trump to give 30 days' notice before any 'demolition' at Kennedy Center (裁判官、ケネディ・センターでの「解体」前に30日前の通知をトランプ氏に命じる) 2026-09-18
-*   'This is our company': Nigerians show off oil wealth after share-buying frenzy (「これは我々の会社だ」：株式購入熱狂後、ナイジェリア人が石油富を誇示) 2026-09-18
-*   Zara Larsson criticises White House for using her song in deportation video (ザラ・ラーソン、ホワイトハウスが国外追放ビデオに彼女の曲を使用したことを批判) 2026-09-18
-*   This Olympic river has 500 crocodiles in it - but that's not the main concern (このオリンピック川には500匹のワニがいる - しかしそれが主な懸念ではない) 2026-09-18
-*   Hyrox athlete apologises for continuing race after soiling herself (Hyrox選手、自身が汚してしまった後もレースを続行したことを謝罪) 2026-09-18
-*   Penitent sinner or fiery saint? 10 paintings of Mary Magdalene (悔い改める罪人か、燃える聖人か？マグダラのマリアの10の絵画) 2026-09-18
-*   Scrimshaw: The controversial art form on the brink of extinction (スクリムショウ：絶滅寸前の物議を醸す芸術形式) 2026-09-18
+
+*   **UTC**
+    *   **上から順に25本の記事を提示する。25本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。**
+    *   フィリピンの学校で銃乱射事件、3人死亡8人負傷 (10分前)
+    *   カーニー氏がEUでの生活・就労計画を浮上させる中、カナダ人は欧州への移住を夢見る (9時間前)
+    *   戦争が迫るかもしれない。英国は心理的に準備ができているか？ (11時間前)
+    *   スペンサー伯爵の新刊によると、チャールズ皇太子はダイアナ妃の死後、「浮かれきっていた」と述べている (5時間前)
+    *   パキスタンでのモスク襲撃で少なくとも16人死亡 (10分前)
+    *   このオリンピック川には500匹のワニがいるが、それが主な懸念ではない (11時間前)
+    *   日本、物価上昇抑制のため31年ぶりの高金利へ (4時間前)
+    *   10月の注目テレビ番組10選 (日付不明)
+    *   「深海からの不気味な声」：世界がクジラの歌を発見した瞬間 (日付不明)
+    *   エド・シーラン、マックルモア、そして沈黙の政治 (27分)
+    *   イランでの米軍による攻撃は戦争犯罪だったのか？ (28分)
+    *   サン・ホセ号沈没船の発見 (11分)
+    *   地球を離れる方法 (27分)
+    *   赤十字国際委員会（ICRC）会長、ミルヤナ・スポラリッチ氏：戦争のルールは無視されている (27分)
+    *   ビッグテック企業は安全なAI開発を信頼できるか？ (23分)
+    *   世界を形作ったアイデア、人々、発見を探る (3分)
+    *   インドのコールセンター産業の誕生 (11分)
+    *   Xboxに未来はあるか？ (18分)
+    *   悪い歯は子供たちが救急外来に行く最大の理由か？ (28分)
+    *   アイルランドでの悲惨なナイトクラブ火災 (11分)
+    *   新シルクロードからの物語：「偽りの友」 (26分)
+    *   エキサイティングなイングランド、T20シリーズでスリランカに勝利 (45分)
+    *   ヴェルスタッペン、100人のレーサーを軽々と打ち破る (28分)
+    *   マンチェスター・ユナイテッドの最新の悪夢とサンダーランドの欧州での輝き (30分)
+    *   USテニス：ベン・シェルトンの世代は男子グランドスラムの栄光を掴めるか？ (22分)
+    *   マグヌス・マッカラー：「KPに挑戦してもらいたい」 (56分)
+    *   マンチェスター・ダービーのVAR論争とセルティックのオールドファーム支配 (52分)
+    *   素晴らしいボクスとアメリカでのシックス・ネーションズ？ (54分)
+    *   アーセナル、勝ち点を落とす、バロンドール候補、新たな生殖補助医療支援基金 (49分)
+    *   イングランドについて何を学んだか？ (27分)
+    *   PLレビュー：マンチェスター・シティが物議を醸したダービーを制す (41分)
+    *   アイルランドでの悲惨なナイトクラブ火災 (11分)
+    *   *（注：記載された情報には、日付が明記されていないものや、「〇時間前」「〇分前」といった情報から推測する必要があるものが多く含まれていました。上記は当日の日付（2026-09-18）から逆算し、3日以内と判断されるものを抽出・整理したものです。ただし、一部、具体性のない時間情報のため、正確な日付特定が困難なものもあります。）*
 
 **●●NYタイムズ●●**
-UTC
-上から順に25本の記事を提示する。25本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。
+
+*   **UTC**
+    *   **上から順に25本の記事を提示する。25本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。**
+    *   **（※提供されたデータにNYタイムズの記事見出しが含まれていませんでした。）**
 
 **●●WSJ●●**
-日本時間（UTC+9）
-上から順に20本の記事を提示する。20本以上の記事は提示しない。
-*   米、ベネズエラ産原油の対キューバ販売で制限緩和 (US eases restrictions on Venezuelan oil sales to Cuba) 2026-09-18
-*   米国家情報長官への内部告発、政権が機密情報の開示拒否 (Intelligence whistleblower against national intelligence director, administration refuses to disclose classified information) 2026-09-18
-*   ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」 (Individual investors shaken by Blue Owl issue, pros say "don't panic") 2026-09-18
-*   トランプ氏、経済好転を称賛　国民の実感に反し (Trump praises economic upturn, contrary to public's perception) 2026-09-18
-*   アップルが米国製半導体を製造へ　その内幕 (Apple to manufacture US-made semiconductors - Inside story) 2026-09-18
-*   トランプ氏の一般教書演説、6つのポイント (Trump's State of the Union address, 6 key points) 2026-09-18
-*   トランプ氏、「関税が所得税収を実質的に代替へ」　一般教書演説 (Trump: "Tariffs will effectively replace income tax revenue" State of the Union address) 2026-09-18
-*   中国の対日貿易戦争 (China's trade war with Japan) 2026-09-18
-*   アンソロピック、安全に対する姿勢を後退　方針緩和へ (Anthropic retreats on safety stance, softens policy) 2026-09-18
-*   ロシア勝利は必然ではない、5年目迎えたウクライナ戦争 (Russian victory is not inevitable, Ukraine war enters its fifth year) 2026-09-18
-*   ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (Bill Gates apologizes over relationship with former Epstein associate) 2026-09-18
-*   AIに仕事を奪われる？ それより深刻な事態とは (Will AI take our jobs? Something more serious is at stake) 2026-09-18
-*   中国の対米貿易戦争に好機、トランプ関税無効で (Opportunity for China in trade war with US as Trump tariffs are invalidated) 2026-09-18
-*   パラマウント、ワーナー買収提案引き上げ　1株31ドル (Paramount raises Warner acquisition offer to $31 per share) 2026-09-18
-*   米AI新興企業、小規模維持が最大の武器 (US AI startups' biggest weapon is maintaining small scale) 2026-09-18
-*   AIの脅威、米商業用不動産業界にも試練 (AI threat, a challenge for the US commercial real estate industry) 2026-09-18
-*   米株揺らす「AI脅威シナリオ」、4つのポイント (4 points on the "AI threat scenario" shaking US stocks) 2026-09-18
-*   なぜオプション投資家が予測市場に集まるのか (Why option investors flock to prediction markets) 2026-09-18
-*   イランで反体制派と政権支持派が衝突、緊張高まる (Protesters and regime supporters clash in Iran, tensions rise) 2026-09-18
-*   トランプ政権、銀行に市民権情報の収集義務づけを検討 (Trump administration considers requiring banks to collect citizenship information) 2026-09-18
+
+*   **日本時間（UTC+9）**
+    *   **上から順に20本の記事を提示する。20本以上の記事は提示しない。**
+    *   米国、ベネズエラ産原油の対キューバ販売で制限緩和 (26分前)
+    *   米国家情報長官への内部告発、政権が機密情報の開示拒否 (1時間前)
+    *   ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」 (4時間前)
+    *   アップルが米国製半導体を製造へ その内幕 (日付不明)
+    *   トランプ氏の一般教書演説、6つのポイント (日付不明)
+    *   トランプ氏、「関税が所得税収を実質的に代替へ」 一般教書演説 (日付不明)
+    *   中国の対日貿易戦争 (日付不明)
+    *   アンソロピック、安全に対する姿勢を後退 方針緩和へ (日付不明)
+    *   ロシア勝利は必然ではない、5年目迎えたウクライナ戦争 (日付不明)
+    *   ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (日付不明)
+    *   AIに仕事を奪われる？ それより深刻な事態とは (日付不明)
+    *   中国の対米貿易戦争に好機、トランプ関税無効で (日付不明)
+    *   パラマウント、ワーナー買収提案引き上げ 1株31ドル (日付不明)
+    *   米AI新興企業、小規模維持が最大の武器 (日付不明)
+    *   AIの脅威、米商業用不動産業界にも試練 (日付不明)
+    *   米株揺らす「AI脅威シナリオ」、4つのポイント (日付不明)
+    *   なぜオプション投資家が予測市場に集まるのか (日付不明)
+    *   イランで反体制派と政権支持派が衝突、緊張高まる (日付不明)
+    *   トランプ政権、銀行に市民権情報の収集義務づけを検討 (日付不明)
+    *   ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (日付不明 - 重複)
+    *   AIクロードに「魂」吹き込む哲学者 どのような人物か (日付不明)
+    *   アンソロピックのAI「クロード」、知識労働への応用広がる (日付不明)
+    *   アンソロピック、安全に対する姿勢を後退 方針緩和へ (日付不明 - 重複)
+    *   バイナンス通じ10億ドルがイラン関連組織へ 調査担当者は解雇 (日付不明)
+    *   **（※提供されたデータには、日付が明記されていないものが多く含まれていました。上記は、26分前、1時間前、4時間前といった直近の情報を優先し、それ以降は順不同で記載しています。）**
 
 **●●AXIOS●●**
-UTC
-上から順に20本の記事を提示する。20本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。
+
+*   **UTC**
+    *   **上から順に20本の記事を提示する。20本以上の記事は提示しない。記事が多いので規定量以上を表示しないように注意。日本語に翻訳する。**
+    *   **（※提供されたデータにAXIOSの記事見出しが含まれていませんでした。）**
 
 **●●日経●●**
-●●国内etc●●から抽出　日本時間（UTC+9）
-上から順に10本の記事を提示する。10本以上の記事は提示しない。
-*   日銀1.25%への利上げ決定、物価上振れリスク抑制 2人が反対票 (BOJ decides to raise interest rates to 1.25%, suppressing upside inflation risks, 2 voted against) 2026-09-18
-*   日銀利上げで住宅ローン金利上昇、変動と固定の差は過去最大 対応策は (Housing loan interest rates rise due to BOJ rate hike, gap between variable and fixed rates at record high, countermeasures?) 2026-09-18
-*   日銀の植田総裁、連続・大幅利上げの可能性「排除せず」 (BOJ Governor Ueda: "Does not rule out" possibility of consecutive, large rate hikes) 2026-09-18
-*   円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (Yen falls, temporarily to 157s. BOJ rate hike decision but "against" 2 votes lead to selling) 2026-09-18
-*   カレンダーアプリ、退職した同僚がのぞき見か 問われた顧客情報の管理 (Calendar app, former colleague might have peeked? Customer information management questioned) 2026-09-18
-*   日銀、次の利上げはいつ？ データで占う金融政策 (When will the BOJ's next rate hike be? Financial policy predicted by data) 2026-09-18
-*   iPhone18Pro発売、価格高騰で中古シフト 機能よりコスパ重視 (iPhone 18 Pro released, shift to used due to soaring prices, focus on cost-performance over features) 2026-09-18
-*   トヨタ、ロボット40万台を工場に 28年から従業員と協働 (Toyota to deploy 400,000 robots in factories, collaborating with employees from 2028) 2026-09-18
-*   コメ店頭価格、2年ぶり5キロ3000円割れ 記録的余剰で下げ止まらず (Retail rice prices fall below 3,000 yen for 5kg for the first time in 2 years, record surplus prevents decline) 2026-09-18
-*   日銀、次の利上げはいつ？ データで占う金融政策 (When will the BOJ's next rate hike be? Financial policy predicted by data) 2026-09-18
+
+*   **●●国内etc●●から抽出　日本時間（UTC+9）**
+    *   **上から順に10本の記事を提示する。10本以上の記事は提示しない。**
+    *   日銀の植田総裁、連続・大幅利上げの可能性「排除せず」 (2026/9/18)
+    *   日銀利上げで住宅ローン金利上昇、変動と固定の差は過去最大 対応策は (2026/9/18)
+    *   日銀1.25%への利上げ決定、物価上振れリスク抑制 2人が反対票 (2026/9/18)
+    *   コメ店頭価格、2年ぶり5キロ3000円割れ 記録的余剰で下げ止まらず (2026/9/18)
+    *   円下落、一時158円台 日銀利上げ決定も「反対」2票で売り (2026/9/18)
+    *   日経平均、終値882円高 日銀利上げ「逆風にならず」 (2026/9/18)
+    *   iPhone18Pro発売、価格高騰で中古シフト 機能よりコスパ重視 (2026/9/18)
+    *   カレンダーアプリ、退職した同僚がのぞき見か 問われた顧客情報の管理 (2026/9/18)
+    *   日米欧「半世紀ぶり」同時利上げ 中銀悩ますインフレ・政治・AI (2026/9/18)
+    *   面接相手は「AI」だった…暗躍する北朝鮮ハッカー集団 100カ国で被害 (2026/9/18)
 
 **●●時事●●**
-●●国内etc●●から抽出　日本時間（UTC+9）
-上から順に10本の記事を提示する。10本以上の記事は提示しない。
-*   高市改造内閣、本格始動 副大臣・政務官決定へ (Takaichi Cabinet undergoes reform, starts in earnest, Vice Ministers and Parliamentary Secretaries to be decided) 2026-09-18
-*   渡辺孝一衆院議員が死去 自民、北海道ブロック欠員へ (House of Representatives member Koichi Watanabe dies, Liberal Democratic Party to have vacancy in Hokkaido bloc) 2026-09-18
-*   渡辺孝一衆院議員が死去 自民、北海道ブロック欠員へ (House of Representatives member Koichi Watanabe dies, Liberal Democratic Party to have vacancy in Hokkaido bloc) 2026-09-18
-*   第２次高市改造内閣が発足 「決断と実行」主要閣僚留任―裏金議員起用、 (Second Takaichi reform cabinet inaugurated, key ministers retained for "decision and execution" - appointment of lawmakers involved in slush funds,) 2026-09-18
-*   内閣支持４４％、最低更新 「裏金」登用に７割反対―時事世論調査 (Cabinet approval rating 44%, hits record low. 70% oppose "slush fund" appointees - Jiji opinion poll) 2026-09-18
-*   トレカ販売「誇大広告」 サイト運営５社を提訴―東京地裁 (Trading card sales "exaggerated advertising," 5 website operators sued - Tokyo District Court) 2026-09-18
-*   遺書でパワハラ訴え、第三者委設置 １９歳社員転落死「徹底究明」―四電 (Power harassment claimed in suicide note, third-party committee established. 19-year-old employee's fatal fall "thorough investigation" - Shikoku Electric Power) 2026-09-18
-*   日銀、１．２５％に利上げ 決定会合、物価高でペース加速―３カ月ぶり、 (BOJ raises rates to 1.25%. Policy meeting, pace accelerates due to rising prices - first in 3 months) 2026-09-18
-*   閣僚席次、ナンバー２に細野氏 内閣改造 (Cabinet ranking, Hosono appointed number two. Cabinet reshuffle) 2026-09-18
-*   日米首脳、来週ＮＹで会談 対中認識の共有狙う (Japan-US leaders to meet in NY next week, aiming to share views on China) 2026-09-18
 
-**●●Yahoo!●●**
-日本時間（UTC+9） ●●国内etc●●から抽出
-上から順に20本の記事を提示する。20本以上の記事は提示しない。
-*   台風 関東は20-21日大雨など恐れ (Typhoon, Kanto region fears heavy rain on 20th-21st) 2026-09-18
-*   日銀総裁 会見で利上げペース言及 (BOJ Governor mentions pace of rate hikes at press conference) 2026-09-18
-*   利上げ決定後 一時1ドル157円台 (After rate hike decision, briefly at 1 dollar 157 yen) 2026-09-18
-*   副大臣に今井絵理子氏ら 名簿発表 (Eriko Imai and others appointed Vice Ministers, list announced) 2026-09-18
-*   核ごみ調査 常陸大宮市が判断保留 (Nuclear waste survey, Hitachomiya City suspends decision) 2026-09-18
-*   ガソリン補助金が拡大 代償は (Gasoline subsidies expand, what is the cost?) 2026-09-18
-*   成宮寛貴 俳優から距離置いた8年 (Hiroki Narimiya, 8 years distanced from acting) 2026-09-18
-*   B&ZAI本高 国際論文誌の賞を受賞 (B&ZAI Hontaka receives award from international journal) 2026-09-18
-*   三浦翔平 9月末でバーニング退所 (Shohei Miura leaves Burning at end of September) 2026-09-18
-*   しんちゃんほぼ登場なし回 放送へ (Episode with almost no appearance of Shin-chan to be broadcast) 2026-09-18
-*   上戸彩 ソフトバンク3連覇を祝福 (Aya Ueto celebrates SoftBank's third consecutive championship) 2026-09-18
-*   ド軍祝勝会で日本人が“失態”→一斉ヤジ「出ていけ！」 指揮官の挨拶 (Japanese person makes "mistake" at Dodgers celebration → immediate jeers "Get out!" Manager's greeting) 2026-09-18
-*   大谷翔平へ…フリーマンが送った“胸熱メッセ” 祝勝会中にファン感涙 (To Shohei Ohtani... Freeman's "heartwarming message" Fans in tears during celebration) 2026-09-18
-*   フィギュア中井亜美 ミラノ五輪後に〝燃え尽き症候群〟「銅メダル (Ami Nakai, figure skater, "burnout syndrome" after Milan Olympics "Bronze medal) 2026-09-18
-*   和田毅氏 優勝したソフトバンクのMVP候補に30歳右腕も指名「1年 (Takeshi Wada, veteran pitcher, also named MVP candidate for winning SoftBank, a 30-year-old right-hander, "one year) 2026-09-18
-*   ずぶ濡れワトソンさん「ワオ」絶叫 勝利の美酒でドジャース専属リポー (Soaked Watson screams "Wow!" Dedicated reporter for Dodgers with the sweet taste of victory) 2026-09-18
-*   米大統領 習氏訪米で異例の厚遇へ (US President to give unprecedented treatment to Xi Jinping during visit to US) 2026-09-18
-*   ジャガイモ輸入解禁加速を 米要請 (US requests acceleration of potato import ban lift) 2026-09-18
-*   北サイバー攻撃 世界で17億円被害 (North Korean cyberattacks cause 1.7 billion yen damage worldwide) 2026-09-18
-*   中国 8月の若者失業率は最悪水準 (China's youth unemployment rate in August at worst level) 2026-09-18
+*   **●●国内etc●●から抽出　日本時間（UTC+9）**
+    *   **上から順に10本の記事を提示する。10本以上の記事は提示しない。**
+    *   副大臣・政務官に裏金議員１０人 維新５人起用、高市改造内閣が本格始動 (2026/9/18)
+    *   トレカ販売「誇大広告」 サイト運営５社を提訴―東京地裁 (2026/9/18)
+    *   トレカ販売「誇大広告」 サイト運営５社を提訴―東京地裁 (2026/9/18 - 重複)
+    *   第２次高市改造内閣が発足 「決断と実行」主要閣僚留任―裏金議員起用 (2026/9/18)
+    *   渡辺孝一衆院議員が死去 自民、北海道ブロック欠員へ (2026/9/18)
+    *   スタバ、定番商品値上げ ドリンク４～３５円 (2026/9/18)
+    *   内閣支持４４％、最低更新 「裏金」登用に７割反対―時事世論調査 (2026/9/18)
+    *   閣僚席次、ナンバー２に細野氏 内閣改造 (2026/9/18)
+    *   日銀、１．２５％に利上げ 決定会合、物価高でペース加速―３カ月ぶり (2026/9/18)
+    *   遺書でパワハラ訴え、第三者委設置 １９歳社員転落死「徹底究明」―四電 (2026/9/18)
+
+**●●yahoo●●**
+
+*   **日本時間（UTC+9）　●●国内etc●●から抽出**
+    *   **上から順に20本の記事を提示する。20本以上の記事は提示しない。**
+    *   茨城・神栖市長 当選無効巡り上告 (2026/9/18)
+    *   日銀総裁 会見で利上げペース言及 (2026/9/18)
+    *   北サイバー攻撃 世界で17億円被害 (2026/9/18)
+    *   ヘルメットさせず子死亡 親の後悔 (2026/9/18)
+    *   スタバ ラテなどの定番商品値上げ (2026/9/18)
+    *   米大統領 習氏訪米で異例の厚遇へ (2026/9/18)
+    *   ジャガイモ輸入解禁加速を 米要請 (2026/9/18)
+    *   女性の殺害相次ぐ南ア 9人目遺体 (2026/9/18)
+    *   中国 8月の若者失業率は最悪水準 (2026/9/18)
+    *   利上げ決定後 一時1ドル157円台 (2026/9/18)
+    *   日銀 政策金利を1.25%に引き上げ (2026/9/18)
+    *   日銀利上げ 金利との付き合い方は (2026/9/18)
+    *   INI・佐野雄大 活動休止を発表 (2026/9/18)
+    *   映画踊る 山本高広と織田裕二共演 (2026/9/18)
+    *   成宮寛貴 俳優から距離置いた8年 (2026/9/18)
+    *   B&ZAI本高 国際論文誌の賞を受賞 (2026/9/18)
+    *   三浦翔平 9月末でバーニング退所 (2026/9/18)
+    *   しんちゃんほぼ登場なし回 放送へ (2026/9/18)
+    *   上戸彩 ソフトバンク3連覇を祝福 (2026/9/18)
+    *   神木隆之介&菅田将暉 auCMコラボ (2026/9/18)
 
 **●●AI●●**
-日本時間（UTC+9）
-上から順に10本の記事を提示する。10本以上の記事は提示しない。
+
+*   **日本時間（UTC+9）**
+    *   **上から順に10本の記事を提示する。10本以上の記事は提示しない。**
+    *   **（※提供されたデータにAI関連の記事見出しが含まれていませんでした。）**
 
 **●●2ch●●**
-日本時間（UTC+9）
-上から順に20本の記事を提示する。20本以上の記事は提示しない。
-*   副大臣に今井絵理子氏ら 政務官に生稲晃子氏、森下千里氏ら 第2次高市改造内閣 官房長官が名簿を発表全員掲載 (Eriko Imai and others appointed Vice Ministers, Akiko Ina and Chisato Morishita appointed Parliamentary Secretaries, Second Takaichi Reform Cabinet, Chief Cabinet Secretary announces full list) (2ch) 2026-09-18
-*   漫画家・桂正和、衝撃の「お尻」画集発売へ えなこ、伊瀬茉莉也、伊織もえ…「実在するモデルを題材に描いた作品も多数」 (Manga artist Kazumasa Oda to release shocking "buttocks" art book featuring Enako, Mariya Ise, Moe Iori... "Many works drawn based on real models") (2ch) 2026-09-18
-*   サッカー日本代表vsブラジル代表 テレビ朝日系列での生中継が決定!…W杯のリベンジ目指し11月14日 激突 (Japan National Football Team vs Brazil National Team to be broadcast live on TV Asahi network! ... Clash on November 14th aiming for World Cup revenge) (2ch) 2026-09-18
-*   「有名キャバ嬢は、メジャーリーガーよりすごい」薬物所持で逮捕のヤマトリノ、仰天自論に視聴者呆れ ("Famous cabaret girls are more amazing than major league baseball players," viewers stunned by outrageous theory of Yamatorino, arrested for drug possession) (2ch) 2026-09-18
-*   「利上げしなければ外交問題」政府漏らす本音 米国が埋めた外堀 (Government leaks true feelings: "Diplomatic problem if no rate hike" Outer moat filled by US) (2ch) 2026-09-18
-*   為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (Yen falls in forex, temporarily to 157s. BOJ rate hike decision but "against" 2 votes lead to selling) (2ch) 2026-09-18
-*   4月1日「浜松駅に『のぞみ』停車」とウソの投稿 生成AIで新聞紙面を加工したか 会社員の男性を書類送検…静岡 (False post on April 1st: "Nozomi stops at Hamamatsu Station" Newspaper pages possibly altered with generative AI, company employee referred to authorities... Shizuoka) (2ch) 2026-09-18
-*   植田日銀総裁会見連続・大幅利上げの可能性「排除せず」 (Governor Ueda at BOJ press conference: "Does not rule out" possibility of consecutive, large rate hikes) (2ch) 2026-09-18
-*   「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業 ("Harimaya Honten," Japan's No. 1 cracker shop, to close at end of March 2027) (2ch) 2026-09-18
-*   奈良山下知事、「中国のスパイ」“虚偽動画”で動画チャンネル共同運営者を告訴 県警が書類送検 (Nara Governor Yamashita, suing co-operator of video channel for "Chinese spy" "fake video," prefectural police refer to authorities) (2ch) 2026-09-18
-*   国内スマホ市場Android端末が54%に伸長 値上げでiPhone離れか ★5 (Domestic smartphone market sees Android devices grow to 54%, is it iPhone departure due to price increases? ★5) (2ch) 2026-09-18
-*   本大林組の37歳女性現場監督、職人の信頼を得て年収1000万円超に (37-year-old female site supervisor at Obayashi Corporation gains trust of craftsmen, earns over 10 million yen annually) (2ch) 2026-09-18
-*   沖縄知事当選の古謝氏 家族関係先に爆破予告 県警も把握し調べる (Okinawa Governor-elect Kosha, bomb threat targeting family relations, prefectural police are aware and investigating) (2ch) 2026-09-18
-*   K-POP、Kドラマの次は“Kアニメ” 韓国で124万人動員『愛のハチュピン』日本上陸 2027年3月公開 (Next after K-POP and K-dramas is "K-anime," 'Love Hatchpin' mobilizes 1.24 million in Korea, lands in Japan, opens March 2027) (2ch) 2026-09-18
-*   中国産も“宇治抹茶”名乗り販売 貴州省の「抹茶の町」取材、火鍋にテーマパークまで (Chinese products also claim to be "Uji Matcha" and sell, reporting from "Matcha Town" in Guizhou Province, from hot pot to theme parks) (2ch) 2026-09-18
-*   ブルームバーグ韓国大統領、対米投資協議で「眠れない夜」過ごす-中東派兵は否定 (Bloomberg: South Korean President has "sleepless nights" during investment talks with US - denies Middle East deployment) (2ch) 2026-09-18
-*   中国の新幹線で、スマホ注文のホカホカ弁当に驚き!中国人「ご飯が冷たいのは大変失礼な行為です」 (Surprised by hot bento ordered by smartphone on China's high-speed rail! Chinese: "Cold rice is extremely impolite") (2ch) 2026-09-18
-*   アジア大会「12時間空腹だった」入国後に待ちぼうけの中国男子体操選手が苦情「我慢できなくなり別のホテルを取った」 (Asian Games: "Was hungry for 12 hours," Chinese male gymnast complains of long wait after entry, "couldn't stand it and booked another hotel") (2ch) 2026-09-18
-*   機能性食品ビフィズス菌が老化遅らせる 森永乳業、日本初の臨床試験成果を発表 (Functional food: Bifidobacteria slow aging, Morinaga Milk Industry announces Japan's first clinical trial results) (2ch) 2026-09-18
-*   考古学エジプト・ツタンカーメンの墓の奥に別の巨大な王墓が存在か 義母・ネフェルティティの王墓の可能性 (Archaeology: Could a giant royal tomb exist deeper in Tutankhamun's tomb? Possibility of stepmother Nefertiti's royal tomb) (2ch) 2026-09-18
+
+*   **日本時間（UTC+9）**
+    *   **上から順に20本の記事を提示する。20本以上の記事は提示しない。**
+    *   副大臣に今井絵理子氏ら 政務官に生稲晃子氏、森下千里氏ら 第3次高市改造内閣 官房長官が名簿を発表全員掲載 (2026/9/18)
+    *   「男のくせに」「男なんだから扉を開けたまま着替えろ」女性職員をパワハラ・セクハラで減給の懲戒処分=静岡県立病院機構 (2026/9/18)
+    *   為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (2026/9/18)
+    *   速報3メガ、普通預金金利0.5%に引き上げ (2026/9/18)
+    *   速報農水省によると、コメ5キロの平均店頭価格が2年ぶりに2000円台となった (2026/9/18)
+    *   「育休が無給」「子どもは諦めた」非正規公務員、半数近くが年収250万円未満…調査で浮かぶ厳しい現実 ★2 (2026/9/18)
+    *   日本人の「労働時間が減った」は本当か 統計では見えない“働き過ぎ”の実態 (2026/9/18)
+    *   75歳以上夫婦世帯、実収入25万円で実支出28万円…毎月2万7000円の赤字に (2026/9/18)
+    *   新米が古米より安い「逆転現象」はなぜ起きたのか カギはJAルート (2026/9/18)
+    *   コメ備蓄米買い戻し、21万トン全量確保にメド JA全農などと契約へ (2026/9/18)
+    *   「日本は完璧」のはずが… アジア大会で崩れた神話、インド誌が痛烈批判「名声揺るがしかねない」 (2026/9/18)
+    *   志らく、森本レオさん巡る紀藤弁護士の指摘に猛反論「人の心がないのか」「人の死を悼む。人間として当たり前。擁護でもなんでもない」 (2026/9/18)
+    *   「八つ墓村」新作公開 500人に聞いた「あなたにとっての金田一俳優は?」3位は稲垣吾郎 (2026/9/18)
+    *   宝塚歌劇団が「あぶない刑事」舞台化決定でネットざわつく「マジか!」「スーツ!サングラス!絶対に似合う」「楽しみすぎる」 (2026/9/18)
+    *   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4 (2026/9/18)
+    *   K-POP、Kドラマの次は“Kアニメ” 韓国で124万人動員『愛のハチュピン』日本上陸 2027年3月公開 (2026/9/18)
+    *   アジア大会ホッケー韓国戦で北朝鮮国歌流れる 韓国激怒 (2026/9/18)
+    *   ◆雑談スレ801◆ トーフのバックにスピンオン!ヤマなしオチなし意味がなし! (日付不明)
+    *   豊臣秀吉登場のアジア大会イベント 韓国側が正式に抗議 (2026/9/18)
+    *   NewsweekBRICS首脳会議の動画が証拠…?世界を駆け巡る「習近平体調不良説」は本当か (2026/9/18)
