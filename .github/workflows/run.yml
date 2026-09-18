@@ -48,13 +48,16 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Run news scrapers
+        if: github.event_name != 'push'
         run: node Run.js
 
       - name: Run Yahoo Realtime scraper
+        if: github.event_name != 'push'
         run: node yahoo_realtime.js
         continue-on-error: true
 
       - name: Debug - list generated CSV files
+        if: github.event_name != 'push'
         run: |
           echo "=== Generated CSV files ==="
           ls -la *.csv 2>/dev/null || echo "No CSV files found"
@@ -62,50 +65,61 @@ jobs:
           cat logs/*.log 2>/dev/null || echo "No log files"
 
       - name: Merge CSVs into news.csv
+        if: github.event_name != 'push'
         run: node z_get.js
 
       - name: Pre-filter news.csv (remove noise)
+        if: github.event_name != 'push'
         run: node summarize0.js
 
       - name: Run Gemini Analysis (Step 1 - Extract headlines)
+        if: github.event_name != 'push'
         run: node summarize1.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 2 - Classify and summarize)
+        if: github.event_name != 'push'
         run: node summarize15.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 3 - Classify and summarize)
+        if: github.event_name != 'push'
         run: node summarize2.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 4 - Extract keywords for wordcloud)
+        if: github.event_name != 'push'
         run: node summarize3.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 5 - Fix formatting and supplement)
+        if: github.event_name != 'push'
         run: node summarize4.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Setup Python
+        if: github.event_name != 'push'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install Python dependencies
+        if: github.event_name != 'push'
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Generate Word Cloud
+        if: github.event_name != 'push'
         run: python3 generate_wordcloud.py
 
       - name: Generate Web Page
+        if: github.event_name != 'push'
         run: node web/format.js
 
       - name: Add newspaper navigation
