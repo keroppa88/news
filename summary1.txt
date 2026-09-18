@@ -1,285 +1,519 @@
-## 2026年9月18日 ニュースヘッドライン
+以下に、ご提示いただいたデータから抽出・整理した記事見出しを媒体・分野ごとに記載します。
 
-### ●●ロイター●●
+**●●ロイター●●**
 日本時間（UTC+9）
-*  日銀1.25%への利上げ決定、物価上振れリスク抑制 2人が反対票 (2026/9/18 11:55)
-*  日銀利上げで住宅ローン金利上昇、変動と固定の差は過去最大 対応策は (2026/9/18 12:08)
-*  カレンダーアプリ、退職した同僚がのぞき見か 問われた顧客情報の管理 (2026/9/18 10:00)
-*  円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (2026/9/18 12:27)
-*  トヨタ、内製ロボ40万台を工場に 28年から従業員と協働 (2026/9/18 0:00)
-*  日経平均株価、一時1300円高 日銀利上げ「逆風にならず」 (2026/9/18 12:07)
-*  中国主導のエネルギー秩序へ 習近平氏が狙う米国「石油の世紀」の先 (2026/9/18 10:00)
-*  iPhone18 Pro発売、カメラ性能に関心 銀座の旗艦店前に行列50人 (2026/9/18 11:30)
-*  台風25号でシルバーウイークは荒天恐れ 東京・島しょ部は災害警戒 (2026/9/18 8:55)
-*  iPhone18Pro発売、価格高騰で中古シフト 機能よりコスパ重視に (2026/9/18 11:45)
 
-### ●●ブルームバーグ●●
+*   イラン軍、ホルムズ海峡の通航に再び制限へ (ロイター経済) 2026/09/18
+*   原油価格が急落、海峡「開放」受け (ロイター経済) 2026/09/18
+*   住宅購入に「残クレ」銀行及び腰 (ロイター経済) 2026/09/18
+*   イラン軍、ホルムズ海峡の通航に再び制限へ (ロイター経済) 2026/09/18
+*   公衆トイレ周辺を現場検証 遺棄場所との関連捜査―京都男児遺体・府警 (ロイター経済) 2026/09/18
+*   「学校寄った後、首絞め殺害」 父親、逮捕前の任意聴取に―京都男児遺棄 (ロイター経済) 2026/09/18
+*   「学校寄った後、首絞め殺害」 父親、逮捕前の任意聴取に―京都男児遺棄 (ロイター経済) 2026/09/18
+*   会社経営の傍ら著書も 逮捕の水口容疑者―東京・赤坂の死体遺棄事件 (ロイター経済) 2026/09/18
+*   ニュージャージー州で民主勝利 米下院補選 (ロイター経済) 2026/09/18
+*   「管理職になりたい社員」過去最低の17% パーソル総研調べ (ロイタービジネス) 2026/09/17
+*   イスラエル、停戦後もレバノン攻撃か トランプ氏の「爆撃禁止」に異議 (ロイター経済) 2026/09/18
+*   川上審判員が緊急手術 側頭部にバット直撃―プロ野球 (ロイター経済) 2026/09/18
+*   米、濃縮ウラン放棄で３兆円超 イランに提案か、戦闘終結交渉 (ロイター経済) 2026/09/18
+*   長野で震度５強や５弱 地震続発「十分注意を」―気象庁 (ロイター経済) 2026/09/18
+*   男児遺棄容疑、３７歳父親逮捕 殺害認める供述、本格捜査へ―遺体を複数 (ロイター経済) 2026/09/18
+*   3メガ悩ます「稼ぎすぎ批判」 日銀利上げで純利益3000億円押し上げ (ロイター経済) 2026/09/18
+*   川崎重工、四足歩行のAI造船ロボット開発へ 溶接技術者不足で対策 (ロイタービジネス) 2026/09/18
+*   ホルムズ海峡、複数の船舶が通過 「航行の正常化」には時間 (ロイター経済) 2026/09/18
+*   動き出す中東復興の争奪戦 伊メローニ首相名乗り、出遅れる日本 (ロイター経済) 2026/09/18
+*   すかいらーく、資さんうどん店舗4倍400店 割安店にガストなど衣替え (ロイタービジネス) 2026/09/18
+*   ホルムズ、20隻引き返す 開放宣言も通航困難か (ロイター経済) 2026/09/18
+*   長野県で強い揺れの地震相次ぐ 震度5強と震度5弱、津波の心配なし (ロイター経済) 2026/09/18
+*   「ポケモンカード」が25億円 日本のアニメトレカ、米国でバブル (ロイタービジネス) 2026/09/18
+*   社会人になったあなたへ 仕事やお金、SNSのヒントまとめ読み (ロイタービジネス) 2026/09/18
+
+**●●ブルームバーグ●●**
 日本時間（UTC+9）
-* 26分前：米、ベネズエラ産原油の対キューバ販売で制限緩和 (2026/09/18)
-* 1時間前：米国家情報長官への内部告発、政権が機密情報の開示拒否 (2026/09/18)
-* 4時間前：ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」 (2026/09/18)
-* アップルが米国製半導体を製造へ その内幕 (2026/09/18)
-* トランプ氏の一般教書演説、6つのポイント (2026/09/18)
-* トランプ氏、「関税が所得税収を実質的に代替へ」 一般教書演説 (2026/09/18)
-* 中国の対日貿易戦争 (2026/09/18)
-* アンソロピック、安全に対する姿勢を後退 方針緩和へ (2026/09/18)
-* ロシア勝利は必然ではない、5年目迎えたウクライナ戦争 (2026/09/18)
-* ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (2026/09/18)
-* AIに仕事を奪われる？ それより深刻な事態とは (2026/09/18)
-* 中国の対米貿易戦争に好機、トランプ関税無効で (2026/09/18)
-* パラマウント、ワーナー買収提案引き上げ 1株31ドル (2026/09/18)
-* 米AI新興企業、小規模維持が最大の武器 (2026/09/18)
-* AIの脅威、米商業用不動産業界にも試練 (2026/09/18)
-* 米株揺らす「AI脅威シナリオ」、4つのポイント (2026/09/18)
-* なぜオプション投資家が予測市場に集まるのか (2026/09/18)
-* イランで反体制派と政権支持派が衝突、緊張高まる (2026/09/18)
-* トランプ政権、銀行に市民権情報の収集義務づけを検討 (2026/09/18)
-* ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (2026/09/18)
-* AIクロードに「魂」吹き込む哲学者 どのような人物か (2026/09/18)
-* アンソロピックのAI「クロード」、知識労働への応用広がる (2026/09/18)
-* アンソロピック、安全に対する姿勢を後退 方針緩和へ (2026/09/18)
-* バイナンス通じ10億ドルがイラン関連組織へ 調査担当者は解雇 (2026/09/18)
 
-### ●●BBC●●
+*   （データなし）
+
+**●●BBC●●**
 UTC
-* UN experts say grounds to believe US committed war crimes in Iran strikes (国連専門家、イランへの米国の攻撃で戦争犯罪の疑いありとの見解示す) (10時間前)
-* Warm words on Canada's EU 'associate membership' but no guarantees (カナダのEU「準加盟」に前向きな言葉、しかし保証はない) (13時間前)
-* Canadians dream of Europe as Carney floats longshot plan for living and working in EU (カーニー氏がEUでの居住・就労の長期計画を提示、カナダ人は欧州を夢見る) (5時間前)
-* Charles 'sounded giddily elated' after Diana died, Earl Spencer claims (チャールズ国王はダイアナ妃死去後、熱狂的に喜んでいたとスペンサー伯爵が主張) (5分前)
-* Why US plan to sell F-35 warplanes to Saudi Arabia is controversial (米国がサウジアラビアにF-35戦闘機を売却する計画がなぜ物議を醸しているのか) (5時間前)
-* This Olympic river has 500 crocodiles in it - but that's not the main concern (このオリンピック川には500匹のワニがいるが、それが主な懸念ではない) (7時間前)
-* Japan raises interest rate to new 31-year high to curb rising prices (日本、物価上昇抑制のため31年ぶり高水準へ金利引き上げ) (3時間前)
-* New York has a food waste problem. South Korea has already solved it (ニューヨークには食品廃棄問題がある。韓国はすでに解決した) (記事日時不明)
-* The secret life and incredible talents of outrageous US showman Liberace (型破りな米国のショーマン、リベラーチェの秘密の生活と信じられない才能) (記事日時不明)
-* 'This is our company': Nigerians show off oil wealth after share-buying frenzy (「これが我々の会社だ」：ナイジェリア人、株式購入熱狂後に石油富を披露) (7時間前)
-* US fans with Ed Sheeran tickets are left 'torn' by Macklemore controversy (エド・シーランのチケットを持つ米国のファンは、マックルモアの論争に「引き裂かれている」) (6時間前)
-* Judge orders Trump to give 30 days' notice before any 'demolition' at Kennedy Center (裁判官、ケネディ・センターでの「解体」前にトランプ氏に30日前の通知を命じる) (6時間前)
-* India's hospital boom is improving access but pricing millions out of critical care (インドの病院ブームはアクセスを改善しているが、数百万人が重症治療を受けられなくなっている) (7時間前)
-* In a border city stadium, US NFL fans sing Canada anthem with gusto (国境の街のスタジアムで、米国のNFLファンがカナダ国歌を元気に歌う) (5時間前)
-* 'Complete despair': Afghan female medical students fear being sent home from Pakistan (「完全な絶望」：アフガニスタンの女子医学生、パキスタンからの送還を恐れる) (7時間前)
-* War may be coming. Is the UK psychologically ready? (戦争が迫っているかもしれない。英国は心理的に準備ができているか？) (7時間前)
-* Hyrox athlete apologises for continuing race after soiling herself (Hyrox選手、汚してしまった後もレースを続行したことを謝罪) (15時間前)
-* The extreme engineering of aircraft windows (航空機窓の極限のエンジニアリング) (記事日時不明)
-* We have hybrid cars, now hybrid planes are coming (ハイブリッド車はあった、今度はハイブリッド飛行機が登場) (記事日時不明)
-* Why more US planes are getting stuck on the tarmac (なぜ米国の飛行機が滑走路で立ち往生することが増えているのか) (記事日時不明)
-* 'A better opportunity': Canadians on a closer alliance with Europe (「より良い機会」：カナダ人、欧州とのより緊密な同盟について) (記事日時不明)
-* I feel like I'm in a good place - Isak (良い場所にいると感じる - イサク) (記事日時不明)
-* US military fighter jet crashes during training exercise (米軍戦闘機、訓練中に墜落) (記事日時不明)
-* Ed Sheeran's tour in 'damage control mode' after Macklemore backlash (エド・シーランのツアー、マックルモアの反発を受けて「ダメージコントロールモード」に) (記事日時不明)
-* Can humpback whales experience grief? (ザトウクジラは悲しみを感じることができるか？) (記事日時不明)
-* Finding the location of the Saudi fighter jet shot down over Yemen (イエメン上空で撃墜されたサウジアラビア戦闘機の位置特定) (記事日時不明)
-* The notorious axe murders of Lizzie Borden's parents still haunt, 134 years on (リジー・ボーデンの両親の悪名高い斧殺人事件、134年経ってもなお人々を悩ませる) (記事日時不明)
-* Why scarlet macaw parents starve the chick that hatches last (なぜコンゴウインコの両親は最後に孵化した雛を飢えさせるのか) (記事日時不明)
-* Zara Larsson criticises White House for using her song in deportation video (ザラ・ラーソン、ホワイトハウスが彼女の曲を国外追放ビデオで使用したことを批判) (記事日時不明)
-* White House withdraws Trump's ICE nominee as Republican senator objects (共和党上院議員の反対により、ホワイトハウスがトランプ氏のICE候補を取り下げる) (記事日時不明)
-* Five missing women feared dead after images and videos found in Philadelphia home (フィラデルフィアの家で見つかった画像とビデオの後、5人の行方不明女性が死亡したと懸念) (記事日時不明)
-* Lena Dunham announces birth of first baby via surrogacy (レナ・ダナム、代理出産により第一子誕生を発表) (記事日時不明)
-* Swimmer missing after suspected shark attack off Australian west coast (オーストラリア西海岸沖でサメに襲われた疑い、競泳選手が行方不明) (記事日時不明)
-* Nigerian police probe 37 deaths in custody of suspected illegal miners (ナイジェリア警察、不法採掘者の容疑者37名の拘留中の死亡を捜査) (記事日時不明)
-* UK's 'dismal' Eurovision song choices to be examined by MPs (英国の「惨めな」ユーロビジョン楽曲選択、議員が調査へ) (記事日時不明)
-* British woman rescued in Malawi shootout that left four suspected kidnappers dead (マラウイでの銃撃戦で救出された英国人女性、容疑者4人の誘拐犯死亡) (記事日時不明)
-* Early Bowie music available to stream for first time (初期のボウイの音楽、初めてストリーミング可能に) (記事日時不明)
-* The virtual worlds where robots are trained (ロボットが訓練される仮想世界) (記事日時不明)
-* India faces 100% tariff threat over Russian oil after US House vote (インド、米下院投票後、ロシア産石油に対する100％関税の脅威に直面) (記事日時不明)
-* OpenAI reveals six more safety issues and unveils plan to disclose incidents (OpenAI、さらに6つの安全上の問題を発表し、インシデント開示計画を公開) (記事日時不明)
-* King Charles warns of 'existential danger' of AI falling into wrong hands (チャールズ国王、AIが誤った手に渡ることの「存亡の危機」を警告) (記事日時不明)
-* GTA 6 soundtrack reveal revives digital release debate (GTA 6のサウンドトラック公開、デジタルリリース論争を再燃) (記事日時不明)
-* EU announces plan to restrict social media access for under-15s (EU、15歳未満のソーシャルメディアアクセスを制限する計画を発表) (記事日時不明)
-* Why are there concerns AI could threaten humanity, and how real are they? (AIが人類を脅かす懸念があるのはなぜか、そしてそれはどれほど現実的なのか？) (記事日時不明)
-* Explosive England seal T20 series against Sri Lanka (イングランド、スリランカに対してT20シリーズを劇的に制覇) (45分前)
-* Chequered Flag Extra: Verstappen vs 100 Go-Karts (チェッカーフラッグ・エクストラ：フェルスタッペン対100台のゴーカート) (28分前)
-* Prem Players Special: Fin Smith, LRZ, JVP & more! (プレミアリーグ選手スペシャル：フィン・スミス、LRZ、JVPなど！) (1時間13分前)
-* Manchester United’s latest nightmare & Sunderland shine in Europe – 5 Live reaction (マンチェスター・ユナイテッドの最新悪夢とサンダーランドの欧州での輝き – 5ライブ反応) (30分前)
-* View from the Boundary - Count Binface aka Jon Harvey. (バウンダリーからの視点 - カウント・ビンフェイス aka ジョン・ハーベイ。) (36分前)
-* US tennis: Can Ben Shelton's generation claim men's Grand Slam glory? (米国テニス：ベン・シェルトンの世代は男子グランドスラムの栄光を掴めるか？) (22分前)
-* McCullum – I want to be challenged by KP. (マカラム – KPに挑戦されたい。) (56分前)
-* MNC: Manchester derby VAR controversy & Rangers dominate Old Firm (MNC：マンチェスターダービーVAR論争とレンジャーズのオールドファーム支配) (52分前)
-* Brilliant Boks and Six Nations Stateside? (素晴らしいボクスとシックス・ネイションズのアメリカ遠征？) (54分前)
-* Arsenal drop points, Ballon d'Or nominations & new fertility support funds (アーセナル勝ち点落とす、バロンドール候補＆新たな不妊治療支援基金) (49分前)
-* What have we learnt about England? (イングランドについて何を学んだか？) (27分前)
-* PL Review: Manchester City win controversial derby (プレミアリーグレビュー：マンチェスター・シティ、物議を醸すダービーを制す) (41分前)
-* 'Just the beginning' - Samba, 17, steals Man City show (「始まりに過ぎない」 - 17歳のサンバ、マンチェスター・シティのショーを盗む) (記事日時不明)
-* The big questions for Tuchel's first England squad since World Cup (W杯以降、テュヘルにとってイングランド代表初選考における大きな疑問) (記事日時不明)
-* Leaden, stale, disheartening - where do Celtic & O'Neill go from here? (重苦しく、陳腐で、落胆させる - セルティックとオニールはこれからどこへ向かうのか？) (記事日時不明)
-* How the race they said women couldn't run took centre stage (女性は走れないと言われたレースが、なぜ中心的な役割を担うようになったのか) (記事日時不明)
-* I gave up eating sugar. This is what I learned (砂糖を食べるのをやめた。これが私が学んだこと) (記事日時不明)
-* Here's how to catch up on sleep, the right way (正しい方法で睡眠不足を解消する方法はこちら) (記事日時不明)
-* The 30-second habits to lift your mood and relieve stress (気分を高め、ストレスを軽減する30秒の習慣) (記事日時不明)
-* We're getting mealtimes wrong - here's the best time to have dinner (食事の時間が間違っている - 夕食に最適な時間はこちら) (記事日時不明)
-* Weekly quiz: Why did women's sports stars criticise actress Sydney Sweeney? (今週のクイズ：なぜ女性スポーツスターは女優シドニー・スウィーニーを批判したのか？) (記事日時不明)
-* How much attention did you pay to what happened in the world over the past seven days? (過去7日間、世界の出来事にどれだけ注意を払ったか？) (記事日時不明)
-* Stadium owner Robert Kraft says Ed Sheeran asked him to donate $2m in aid after Macklemore backlash (スタジアムオーナー、ロバート・クラフトはエド・シーランがマックルモアの反発後に200万ドルの寄付を求めたと発言) (記事日時不明)
-* How being music's Mr Nice Guy contributed to biggest crisis of Ed Sheeran's career (音楽界のミスター・ナイスガイであることが、エド・シーランのキャリア最大の危機にどう貢献したか) (記事日時不明)
-* British-American author and critic Bonnie Greer dies aged 77 (英米の作家で評論家のボニー・グリアー、77歳で死去) (記事日時不明)
-* Scrimshaw: The controversial art form on the brink of extinction (スクリムショウ：絶滅寸前の物議を醸す芸術形式) (記事日時不明)
-* 'Aloha is more than a word we say': What locals wish visitors knew about Hawaii (「アロハは単なる言葉ではない」：地元住民が訪問者に知ってほしいハワイのこと) (記事日時不明)
-* In this corner of Prague, the beer keeps coming until you say stop (プラハのこの一角では、止めるまでビールが注がれ続ける) (記事日時不明)
-* I drove 2,500km across Madagascar to find the world's last lemurs (マダガスカルを2,500km横断して、世界最後のキツネザルを探しに行った) (記事日時不明)
-* Stunning bird photography in the 'owl capital' of Europe (ヨーロッパの「フクロウの首都」での素晴らしい鳥の写真) (記事日時不明)
-* The classic novel rescued from the reject pile (不採用の山から救出された古典小説) (記事日時不明)
-* What ancient women really thought about sex (古代の女性が性について本当に考えていたこと) (記事日時不明)
-* Why this banana was sold for $6m at an auction (なぜこのバナナがオークションで600万ドルで売れたのか) (記事日時不明)
-* The naked portrait covered up for centuries (何世紀にもわたって隠されてきた裸の肖像画) (記事日時不明)
-* 10 of the most striking ocean images of 2026 (2026年の最も印象的な海の画像10選) (記事日時不明)
-* Four out of five lakes in Turkey have dried up. What happens to the birds? (トルコの湖の5分の4が干上がった。鳥はどうなる？) (記事日時不明)
-* Why getting your hands dirty is good for you (手を汚すことがあなたにとって良い理由) (記事日時不明)
-* Two giant warming patterns are brewing in the Pacific and warping US weather (太平洋で2つの巨大な温暖化パターンが進行し、米国の天候を歪めている) (記事日時不明)
-* How fruit flies led to a discovery about our body clock (ショウジョウバエが私たちの体内時計についての発見につながった方法) (記事日時不明)
-* A chronobiologist explains how his Nobel Prize-winning research uncovered the secrets of our biological clock. (クロノバイオロジストが、ノーベル賞受賞研究がいかにして私たちの体内時計の秘密を明らかにしたかを説明する。) (記事日時不明)
-* Aboard one of Poland's iconic search-and-rescue ships (ポーランドの象徴的な捜索救助船の1隻に乗って) (記事日時不明)
-* This robot dog patrols greenhouses to protect plants (このロボット犬が温室をパトロールして植物を守る) (記事日時不明)
-* Photographing the vast wildlife of Yellowstone (イエローストーンの広大な野生生物を撮影する) (記事日時不明)
-* Why travellers are obsessed with foreign supermarkets (なぜ旅行者は海外のスーパーマーケットに夢中になるのか) (記事日時不明)
-* The five meals Andrew Zimmern will never forget (アンドリュー・ジマーンが決して忘れない5つの食事) (記事日時不明)
-* Why Estonians invite strangers into their back yards each summer (なぜエストニア人は毎夏、見知らぬ人を裏庭に招くのか) (記事日時不明)
-* 'NonnaMaxxing': Tourists are paying to travel like grandmothers ('ノンナマキシング': 旅行者が祖母のように旅をするために支払っている) (記事日時不明)
 
-### ●●NYタイムズ●●
+*   UN experts say grounds to believe US committed war crimes in Iran strikes (国連専門家、イランへの米国の攻撃で戦争犯罪を犯したと信じる根拠があると発言) 2026/09/18 (10時間前)
+*   Warm words on Canada's EU 'associate membership' but no guarantees (カナダのEU「準加盟」に関する温かい言葉、しかし保証はない) 2026/09/18 (14時間前)
+*   Canadians dream of Europe as Carney floats longshot plan for living and working in EU (カーニー氏がEUでの生活と労働に関する可能性の低い計画を提示する中、カナダ人はヨーロッパを夢見る) 2026/09/18 (5時間前)
+*   Charles 'sounded giddily elated' after Diana died, Earl Spencer claims (スペンサー伯爵、ダイアナ妃死去後、チャールズ国王は「有頂天になっていた」と主張) 2026/09/18 (22分前)
+*   Why US plan to sell F-35 warplanes to Saudi Arabia is controversial (米国がサウジアラビアにF-35戦闘機を販売する計画がなぜ論争を呼ぶのか) 2026/09/18 (5時間前)
+*   This Olympic river has 500 crocodiles in it - but that's not the main concern (このオリンピックの川には500匹のワニがいるが、それが主な懸念ではない) 2026/09/18 (7時間前)
+*   Japan raises interest rate to new 31-year high to curb rising prices (日本、上昇する物価を抑制するため31年ぶりの高水準に金利を引き上げ) 2026/09/18 (4時間前)
+*   New York has a food waste problem. South Korea has already solved it (ニューヨークには食品廃棄問題がある。韓国はすでに解決した) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The secret life and incredible talents of outrageous US showman Liberace (型破りな米国のショーマン、リベラーチェの秘密の人生と信じられない才能) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Ed Sheeran, Macklemore, and the politics of staying silent (エド・シーラン、マックルモア、そして沈黙を守ることの政治性) 2026/09/18 (27分)
+*   Did the US carry out war crimes in Iran? (米国はイランで戦争犯罪を犯したのか？) 2026/09/18 (28分)
+*   The discovery of the San José shipwreck (サン・ホセ号難破船の発見) 2026/09/18 (11分)
+*   How to leave this Earth (この地球を離れる方法) 2026/09/18 (27分)
+*   Mirjana Spoljaric, president of the ICRC: The rules of war are being ignored (ICRC総裁、ミルヤナ・スポルヤリッチ氏：戦争のルールは無視されている) 2026/09/18 (27分)
+*   Taking Stock: Can Big Tech rivals be trusted to develop safe AI? (株式市況：巨大IT企業のライバルは安全なAI開発を信頼できるか？) 2026/09/18 (23分)
+*   The birth of India's call centre industry (インドのコールセンター産業の誕生) 2026/09/18 (11分)
+*   Power Players: Does Xbox have a future? (パワープレイヤー：Xboxに未来はあるか？) 2026/09/18 (18分)
+*   Are bad teeth the number one reason kids go to A&E? (虫歯は子供たちが救急外来に行く一番の理由か？) 2026/09/18 (28分)
+*   Stardust: Ireland's deadly nightclub fire (スターダスト：アイルランドの恐ろしいナイトクラブ火災) 2026/09/18 (11分)
+*   Stories from the New Silk Road: The ‘frenemy’ (新シルクロードからの物語：「戦友であり敵」) 2026/09/18 (26分)
+*   'This is our company': Nigerians show off oil wealth after share-buying frenzy (「これは我々の会社だ」：株式購入熱狂の後、ナイジェリア人が石油富を誇示) 2026/09/18 (7時間前)
+*   US fans with Ed Sheeran tickets are left 'torn' by Macklemore controversy (エド・シーランのチケットを持つ米国のファンは、マックルモアの論争に「引き裂かれている」) 2026/09/18 (6時間前)
+*   Judge orders Trump to give 30 days' notice before any 'demolition' at Kennedy Center (裁判官、ケネディ・センターでの「解体」前に30日間の通知をトランプ氏に命じる) 2026/09/18 (6時間前)
+*   India's hospital boom is improving access but pricing millions out of critical care (インドの病院ブームはアクセスを改善しているが、数百万人が重症治療から締め出されている) 2026/09/18 (8時間前)
+*   In a border city stadium, US NFL fans sing Canada anthem with gusto (国境沿いの都市のスタジアムで、米国のNFLファンがカナダ国歌を元気よく歌う) 2026/09/18 (5時間前)
+*   'Complete despair': Afghan female medical students fear being sent home from Pakistan (「完全な絶望」：パキスタンから送還されることを恐れるアフガニスタンの女子医学生) 2026/09/18 (7時間前)
+*   War may be coming. Is the UK psychologically ready? (戦争が来るかもしれない。英国は心理的に準備ができているか？) 2026/09/18 (7時間前)
+*   Hyrox athlete apologises for continuing race after soiling herself (Hyroxアスリート、失禁したままレースを続行したことを謝罪) 2026/09/18 (16時間前)
+*   The extreme engineering of aircraft windows (航空機窓の極限のエンジニアリング) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   We have hybrid cars, now hybrid planes are coming (ハイブリッド車がある、今度はハイブリッド飛行機が登場) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why more US planes are getting stuck on the tarmac (なぜより多くの米国の飛行機が滑走路で立ち往生しているのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   See tiny organisms on show in microscopic video competition (顕微鏡ビデオコンテストで披露される小さな生物を見る) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   'A better opportunity': Canadians on a closer alliance with Europe (「より良い機会」：ヨーロッパとのより緊密な連携に関するカナダ人) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   I feel like I'm in a good place - Isak (良い場所にいる気分です - イサク) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   US military fighter jet crashes during training exercise (米軍戦闘機が訓練演習中に墜落) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Ed Sheeran's tour in 'damage control mode' after Macklemore backlash (マックルモアの反発後、エド・シーランのツアーは「ダメージコントロールモード」) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Can humpback whales experience grief? (ザトウクジラは悲しみを感じることができるか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Finding the location of the Saudi fighter jet shot down over Yemen (イエメン上空で撃墜されたサウジ戦闘機の位置特定) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The notorious axe murders of Lizzie Borden's parents still haunt, 134 years on (リジー・ボーデンの両親の悪名高い斧殺人事件は、134年後もなお人々を悩ませている) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why scarlet macaw parents starve the chick that hatches last (なぜコンゴウインコの親は最後に孵化した雛を餓死させるのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Zara Larsson criticises White House for using her song in deportation video (ザラ・ラーソン、ホワイトハウスが彼女の曲を国外追放ビデオで使用したことを批判) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   White House withdraws Trump's ICE nominee as Republican senator objects (共和党上院議員が反対し、ホワイトハウスはトランプ氏のICE候補を取り下げる) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Five missing women feared dead after images and videos found in Philadelphia home (フィラデルフィアの家で見つかった画像とビデオの後、5人の行方不明女性が死亡したと推定される) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Lena Dunham announces birth of first baby via surrogacy (レナ・ダナム、代理出産で第一子誕生を発表) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Dozens of suspected illegal miners die in Nigerian custody (ナイジェリアの拘置所で数十人の違法採掘者が死亡した疑い) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Swimmer missing after suspected shark attack off Australian west coast (オーストラリア西海岸沖でのサメ襲撃疑いでスイマーが行方不明) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   UK's 'dismal' Eurovision song choices to be examined by MPs (英国の「惨めな」ユーロビジョン楽曲選択が議員によって調査される) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   British woman rescued in Malawi shootout that left four suspected kidnappers dead (4人の誘拐犯容疑者が死亡したマラウイでの銃撃戦で、英国人女性が救出される) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Early Bowie music available to stream for first time (初期のボウイの音楽が初めてストリーミング可能に) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The virtual worlds where robots are trained (ロボットが訓練される仮想世界) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   India faces 100% tariff threat over Russian oil after US House vote (米国下院の投票後、インドはロシア石油に対する100％関税の脅威に直面) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   OpenAI reveals six more safety issues and unveils plan to disclose incidents (OpenAI、さらに6つの安全上の問題を発表し、インシデント開示計画を披露) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   King Charles warns of 'existential danger' of AI falling into wrong hands (チャールズ国王、AIが誤った手に渡る「実存的危険」を警告) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   GTA 6 soundtrack reveal revives digital release debate (GTA 6 サウンドトラック発表がデジタルリリース論争を再燃させる) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   EU announces plan to restrict social media access for under-15s (EU、15歳未満のソーシャルメディアアクセスを制限する計画を発表) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why are there concerns AI could threaten humanity, and how real are they? (AIが人類を脅かす懸念があるのはなぜか、そしてそれはどれほど現実的なのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Explosive England seal T20 series against Sri Lanka (爆発的なイングランド、スリランカに対するT20シリーズを制覇) 2026/09/18 (45分)
+*   Chequered Flag Extra: Verstappen vs 100 Go-Karts (チェッカード・フラッグ・エクストラ：フェルスタッペン対100台のゴーカート) 2026/09/18 (28分)
+*   Prem Players Special: Fin Smith, LRZ, JVP & more! (プレミアリーグ選手スペシャル：フィン・スミス、LRZ、JVPなど！) 2026/09/18 (1時間13分)
+*   Manchester United’s latest nightmare & Sunderland shine in Europe – 5 Live reaction (マンチェスター・ユナイテッドの最新の悪夢とサンダーランドのヨーロッパでの輝き – 5ライブの反応) 2026/09/18 (30分)
+*   View from the Boundary - Count Binface aka Jon Harvey. (境界線からの眺め – カウント・ビンフェイスことジョン・ハーベイ) 2026/09/18 (36分)
+*   US tennis: Can Ben Shelton's generation claim men's Grand Slam glory? (米国テニス：ベン・シェルトン世代は男子グランドスラムの栄光を掴めるか？) 2026/09/18 (22分)
+*   McCullum – I want to be challenged by KP. (マッカラー：KPに挑戦したい) 2026/09/18 (56分)
+*   MNC: Manchester derby VAR controversy & Rangers dominate Old Firm (MNC：マンチェスターダービーのVAR論争とレンジャーズのオールドファーム支配) 2026/09/18 (52分)
+*   Brilliant Boks and Six Nations Stateside? (素晴らしいボクスとシックス・ネーションズのアメリカ上陸？) 2026/09/18 (54分)
+*   Arsenal drop points, Ballon d'Or nominations & new fertility support funds (アーセナルが勝ち点を落とし、バロンドールのノミネートと新しい生殖補助医療基金) 2026/09/18 (49分)
+*   What have we learnt about England? (イングランドについて何を学んだか？) 2026/09/18 (27分)
+*   PL Review: Manchester City win controversial derby (プレミアリーグレビュー：マンチェスター・シティが論争のダービーを制す) 2026/09/18 (41分)
+*   'Just the beginning' - Samba, 17, steals Man City show (「まだ始まったばかり」 - 17歳のサンバ、マンチェスター・シティのショーを盗む) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The big questions for Tuchel's first England squad since World Cup (ワールドカップ以来のトゥヘル氏の最初のイングランド代表チームへの大きな疑問) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Leaden, stale, disheartening - where do Celtic & O'Neill go from here? (鉛のように重く、 stale、落胆させる - セルティックとオニールはこれからどうなるのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How the race they said women couldn't run took centre stage (女性が走れないと言われたレースがどのように中心舞台になったのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   I gave up eating sugar. This is what I learned (砂糖を食べるのをやめた。これが私が学んだこと) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Here's how to catch up on sleep, the right way (ここで、正しい方法で睡眠を取り戻す方法を紹介します) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The 30-second habits to lift your mood and relieve stress (気分を高め、ストレスを軽減する30秒の習慣) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   We're getting mealtimes wrong - here's the best time to have dinner (私たちは食事時間を間違えている - ここに夕食に最適な時間があります) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Weekly quiz: Why did women's sports stars criticise actress Sydney Sweeney? (週刊クイズ：なぜ女性スポーツスターは女優シドニー・スウィーニーを批判したのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How much attention did you pay to what happened in the world over the past seven days? (過去7日間、世界で起こったことにどれだけ注意を払いましたか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Stadium owner Robert Kraft says Ed Sheeran asked him to donate $2m in aid after Macklemore backlash (スタジアムオーナーのロバート・クラフト、エド・シーランがマックルモアの反発後に200万ドルの寄付を求めたと発言) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How being music's Mr Nice Guy contributed to biggest crisis of Ed Sheeran's career (音楽界のミスター・ナイスガイであることが、エド・シーランのキャリア最大の危機にどのように貢献したか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   British-American author and critic Bonnie Greer dies aged 77 (英国系米国人作家で評論家のボニー・グリアー、77歳で死去) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Scrimshaw: The controversial art form on the brink of extinction (スクリムショウ：絶滅寸前の論争的な芸術形式) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   As Moby Dick turns 175, some of the last American scrimshanders grapple with the legacy of maintaining one of the US's oldest art forms. (「白鯨」が175周年を迎える中、最後のアメリカのスクリムショー彫刻家たちは、米国で最も古い芸術形式の一つを維持することの遺産と格闘している。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   'Aloha is more than a word we say': What locals wish visitors knew about Hawaii (「アロハは私たちが言う言葉以上のものです」：地元の人々が旅行者にハワイについて知ってほしいこと) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   In this corner of Prague, the beer keeps coming until you say stop (プラハのこの一角では、止めるまでビールが出続けます) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   I drove 2,500km across Madagascar to find the world's last lemurs (世界最後のキツネザルを見つけるためにマダガスカルを2,500km横断した) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Stunning bird photography in the 'owl capital' of Europe (ヨーロッパの「フクロウの首都」での驚くべき鳥の写真) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Budapest-based wildlife photographer Manó Aliczki shares his top tips for taking amazing shots of birds. (ブダペスト在住の野生生物写真家、マノー・アリツキ氏が鳥の素晴らしい写真を撮るための秘訣を共有) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The classic novel rescued from the reject pile (却下された山から救出された古典小説) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   William Golding's novel Lord of the Flies was first published on 17 September 1954, and is now recognised as a classic. (ウィリアム・ゴールディングの小説「蝿の王」は1954年9月17日に初版発行され、現在は古典として認識されている。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   What ancient women really thought about sex (古代の女性が性について本当にどう考えていたか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why this banana was sold for $6m at an auction (なぜこのバナナがオークションで600万ドルで売れたのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The naked portrait covered up for centuries (何世紀もの間隠されてきた裸の肖像画) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   10 of the most striking ocean images of 2026 (2026年の最も印象的な海の画像10選) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Curious seals, seahorse fathers and rarely seen deep-sea life are among the most powerful images of the Ocean Photographer of the Year 2026. (好奇心旺盛なアザラシ、タツノオトシゴの父親、そしてめったに見られない深海生物が、2026年オーシャンフォトグラファー・オブ・ザ・イヤーの最も力強い画像の中に含まれている。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Four out of five lakes in Turkey have dried up. What happens to the birds?​ (トルコの湖の5分の4が干上がった。鳥はどうなるのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why getting your hands dirty is good for you (手を汚すことがあなたにとってなぜ良いのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Two giant warming patterns are brewing in the Pacific and warping US weather (太平洋で2つの巨大な温暖化パターンが醸成されており、米国の天候を歪めている) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How fruit flies led to a discovery about our body clock (ショウジョウバエが私たちの体内時計に関する発見につながった方法) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   A chronobiologist explains how his Nobel Prize-winning research uncovered the secrets of our biological clock. (クロノバイオロジストが、彼のノーベル賞受賞研究が私たちの体内時計の秘密をどのように明らかにしたかを説明する。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Aboard one of Poland's iconic search-and-rescue ships (ポーランドの象徴的な捜索救助船の一つに乗船) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   This robot dog patrols greenhouses to protect plants (このロボット犬が温室を巡回して植物を保護する) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Photographing the vast wildlife of Yellowstone (イエローストーンの広大な野生生物を撮影する) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why travellers are obsessed with foreign supermarkets (なぜ旅行者は外国のスーパーマーケットに夢中になるのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   From Tokyo egg sandwiches to Greek dairy aisles, supermarket aisles are becoming one of travel's most revealing and beloved experiences. (東京の卵サンドからギリシャの乳製品売り場まで、スーパーマーケットの通路は旅行の最も示唆に富み、愛される体験の一つになりつつある。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The five meals Andrew Zimmern will never forget (アンドリュー・ジマーンが決して忘れない5つの食事) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why Estonians invite strangers into their back yards each summer (なぜエストニア人は毎夏、見知らぬ人を裏庭に招くのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   'NonnaMaxxing': Tourists are paying to travel like grandmothers (「ノンナマキシング」：観光客は祖母のように旅をするために金を払っている) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Explosive England seal T20 series against Sri Lanka (爆発的なイングランド、スリランカに対するT20シリーズを制覇) 2026/09/18 (45分)
+*   Chequered Flag Extra: Verstappen vs 100 Go-Karts (チェッカード・フラッグ・エクストラ：フェルスタッペン対100台のゴーカート) 2026/09/18 (28分)
+*   Prem Players Special: Fin Smith, LRZ, JVP & more! (プレミアリーグ選手スペシャル：フィン・スミス、LRZ、JVPなど！) 2026/09/18 (1時間13分)
+*   Manchester United’s latest nightmare & Sunderland shine in Europe – 5 Live reaction (マンチェスター・ユナイテッドの最新の悪夢とサンダーランドのヨーロッパでの輝き – 5ライブの反応) 2026/09/18 (30分)
+*   View from the Boundary - Count Binface aka Jon Harvey. (境界線からの眺め – カウント・ビンフェイスことジョン・ハーベイ) 2026/09/18 (36分)
+*   US tennis: Can Ben Shelton's generation claim men's Grand Slam glory? (米国テニス：ベン・シェルトン世代は男子グランドスラムの栄光を掴めるか？) 2026/09/18 (22分)
+*   McCullum – I want to be challenged by KP. (マッカラー：KPに挑戦したい) 2026/09/18 (56分)
+*   MNC: Manchester derby VAR controversy & Rangers dominate Old Firm (MNC：マンチェスターダービーのVAR論争とレンジャーズのオールドファーム支配) 2026/09/18 (52分)
+*   Brilliant Boks and Six Nations Stateside? (素晴らしいボクスとシックス・ネーションズのアメリカ上陸？) 2026/09/18 (54分)
+*   Arsenal drop points, Ballon d'Or nominations & new fertility support funds (アーセナルが勝ち点を落とし、バロンドールのノミネートと新しい生殖補助医療基金) 2026/09/18 (49分)
+*   What have we learnt about England? (イングランドについて何を学んだか？) 2026/09/18 (27分)
+*   PL Review: Manchester City win controversial derby (プレミアリーグレビュー：マンチェスター・シティが論争のダービーを制す) 2026/09/18 (41分)
+*   'Just the beginning' - Samba, 17, steals Man City show (「まだ始まったばかり」 - 17歳のサンバ、マンチェスター・シティのショーを盗む) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The big questions for Tuchel's first England squad since World Cup (ワールドカップ以来のトゥヘル氏の最初のイングランド代表チームへの大きな疑問) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Leaden, stale, disheartening - where do Celtic & O'Neill go from here? (鉛のように重く、 stale、落胆させる - セルティックとオニールはこれからどうなるのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How the race they said women couldn't run took centre stage (女性が走れないと言われたレースがどのように中心舞台になったのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   I gave up eating sugar. This is what I learned (砂糖を食べるのをやめた。これが私が学んだこと) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Here's how to catch up on sleep, the right way (ここで、正しい方法で睡眠を取り戻す方法を紹介します) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The 30-second habits to lift your mood and relieve stress (気分を高め、ストレスを軽減する30秒の習慣) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   We're getting mealtimes wrong - here's the best time to have dinner (私たちは食事時間を間違えている - ここに夕食に最適な時間があります) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Weekly quiz: Why did women's sports stars criticise actress Sydney Sweeney? (週刊クイズ：なぜ女性スポーツスターは女優シドニー・スウィーニーを批判したのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How much attention did you pay to what happened in the world over the past seven days? (過去7日間、世界で起こったことにどれだけ注意を払いましたか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Stadium owner Robert Kraft says Ed Sheeran asked him to donate $2m in aid after Macklemore backlash (スタジアムオーナーのロバート・クラフト、エド・シーランがマックルモアの反発後に200万ドルの寄付を求めたと発言) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How being music's Mr Nice Guy contributed to biggest crisis of Ed Sheeran's career (音楽界のミスター・ナイスガイであることが、エド・シーランのキャリア最大の危機にどのように貢献したか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   British-American author and critic Bonnie Greer dies aged 77 (英国系米国人作家で評論家のボニー・グリアー、77歳で死去) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Scrimshaw: The controversial art form on the brink of extinction (スクリムショウ：絶滅寸前の論争的な芸術形式) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   As Moby Dick turns 175, some of the last American scrimshanders grapple with the legacy of maintaining one of the US's oldest art forms. (「白鯨」が175周年を迎える中、最後のアメリカのスクリムショー彫刻家たちは、米国で最も古い芸術形式の一つを維持することの遺産と格闘している。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   'Aloha is more than a word we say': What locals wish visitors knew about Hawaii (「アロハは私たちが言う言葉以上のものです」：地元の人々が旅行者にハワイについて知ってほしいこと) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   In this corner of Prague, the beer keeps coming until you say stop (プラハのこの一角では、止めるまでビールが出続けます) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   I drove 2,500km across Madagascar to find the world's last lemurs (世界最後のキツネザルを見つけるためにマダガスカルを2,500km横断した) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Stunning bird photography in the 'owl capital' of Europe (ヨーロッパの「フクロウの首都」での驚くべき鳥の写真) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Budapest-based wildlife photographer Manó Aliczki shares his top tips for taking amazing shots of birds. (ブダペスト在住の野生生物写真家、マノー・アリツキ氏が鳥の素晴らしい写真を撮るための秘訣を共有) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The classic novel rescued from the reject pile (却下された山から救出された古典小説) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   William Golding's novel Lord of the Flies was first published on 17 September 1954, and is now recognised as a classic. (ウィリアム・ゴールディングの小説「蝿の王」は1954年9月17日に初版発行され、現在は古典として認識されている。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   What ancient women really thought about sex (古代の女性が性について本当にどう考えていたか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why this banana was sold for $6m at an auction (なぜこのバナナがオークションで600万ドルで売れたのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The naked portrait covered up for centuries (何世紀もの間隠されてきた裸の肖像画) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   10 of the most striking ocean images of 2026 (2026年の最も印象的な海の画像10選) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Curious seals, seahorse fathers and rarely seen deep-sea life are among the most powerful images of the Ocean Photographer of the Year 2026. (好奇心旺盛なアザラシ、タツノオトシゴの父親、そしてめったに見られない深海生物が、2026年オーシャンフォトグラファー・オブ・ザ・イヤーの最も力強い画像の中に含まれている。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Four out of five lakes in Turkey have dried up. What happens to the birds?​ (トルコの湖の5分の4が干上がった。鳥はどうなるのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why getting your hands dirty is good for you (手を汚すことがあなたにとってなぜ良いのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Two giant warming patterns are brewing in the Pacific and warping US weather (太平洋で2つの巨大な温暖化パターンが醸成されており、米国の天候を歪めている) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   How fruit flies led to a discovery about our body clock (ショウジョウバエが私たちの体内時計に関する発見につながった方法) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   A chronobiologist explains how his Nobel Prize-winning research uncovered the secrets of our biological clock. (クロノバイオロジストが、彼のノーベル賞受賞研究が私たちの体内時計の秘密をどのように明らかにしたかを説明する。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Aboard one of Poland's iconic search-and-rescue ships (ポーランドの象徴的な捜索救助船の一つに乗船) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   This robot dog patrols greenhouses to protect plants (このロボット犬が温室を巡回して植物を保護する) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Photographing the vast wildlife of Yellowstone (イエローストーンの広大な野生生物を撮影する) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why travellers are obsessed with foreign supermarkets (なぜ旅行者は外国のスーパーマーケットに夢中になるのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   From Tokyo egg sandwiches to Greek dairy aisles, supermarket aisles are becoming one of travel's most revealing and beloved experiences. (東京の卵サンドからギリシャの乳製品売り場まで、スーパーマーケットの通路は旅行の最も示唆に富み、愛される体験の一つになりつつある。) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The five meals Andrew Zimmern will never forget (アンドリュー・ジマーンが決して忘れない5つの食事) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why Estonians invite strangers into their back yards each summer (なぜエストニア人は毎夏、見知らぬ人を裏庭に招くのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   'NonnaMaxxing': Tourists are paying to travel like grandmothers (「ノンナマキシング」：観光客は祖母のように旅をするために金を払っている) 2026/09/18 (日付不明、時間情報から当日と判断)
+
+**●●NYタイムズ●●**
 UTC
-* UN experts say grounds to believe US committed war crimes in Iran strikes (国連専門家、イランへの米国の攻撃で戦争犯罪の疑いありとの見解示す) (10時間前)
-* Warm words on Canada's EU 'associate membership' but no guarantees (カナダのEU「準加盟」に前向きな言葉、しかし保証はない) (13時間前)
-* Canadians dream of Europe as Carney floats longshot plan for living and working in EU (カーニー氏がEUでの居住・就労の長期計画を提示、カナダ人は欧州を夢見る) (5時間前)
-* Charles 'sounded giddily elated' after Diana died, Earl Spencer claims (チャールズ国王はダイアナ妃死去後、熱狂的に喜んでいたとスペンサー伯爵が主張) (5分前)
-* Why US plan to sell F-35 warplanes to Saudi Arabia is controversial (米国がサウジアラビアにF-35戦闘機を売却する計画がなぜ物議を醸しているのか) (5時間前)
-* This Olympic river has 500 crocodiles in it - but that's not the main concern (このオリンピック川には500匹のワニがいるが、それが主な懸念ではない) (7時間前)
-* Japan raises interest rate to new 31-year high to curb rising prices (日本、物価上昇抑制のため31年ぶり高水準へ金利引き上げ) (3時間前)
-* New York has a food waste problem. South Korea has already solved it (ニューヨークには食品廃棄問題がある。韓国はすでに解決した) (記事日時不明)
-* The secret life and incredible talents of outrageous US showman Liberace (型破りな米国のショーマン、リベラーチェの秘密の生活と信じられない才能) (記事日時不明)
-* 'This is our company': Nigerians show off oil wealth after share-buying frenzy (「これが我々の会社だ」：ナイジェリア人、株式購入熱狂後に石油富を披露) (7時間前)
-* US fans with Ed Sheeran tickets are left 'torn' by Macklemore controversy (エド・シーランのチケットを持つ米国のファンは、マックルモアの論争に「引き裂かれている」) (6時間前)
-* Judge orders Trump to give 30 days' notice before any 'demolition' at Kennedy Center (裁判官、ケネディ・センターでの「解体」前にトランプ氏に30日前の通知を命じる) (6時間前)
-* India's hospital boom is improving access but pricing millions out of critical care (インドの病院ブームはアクセスを改善しているが、数百万人が重症治療を受けられなくなっている) (7時間前)
-* In a border city stadium, US NFL fans sing Canada anthem with gusto (国境の街のスタジアムで、米国のNFLファンがカナダ国歌を元気に歌う) (5時間前)
-* 'Complete despair': Afghan female medical students fear being sent home from Pakistan (「完全な絶望」：アフガニスタンの女子医学生、パキスタンからの送還を恐れる) (7時間前)
-* War may be coming. Is the UK psychologically ready? (戦争が迫っているかもしれない。英国は心理的に準備ができているか？) (7時間前)
-* Hyrox athlete apologises for continuing race after soiling herself (Hyrox選手、汚してしまった後もレースを続行したことを謝罪) (15時間前)
-* The extreme engineering of aircraft windows (航空機窓の極限のエンジニアリング) (記事日時不明)
-* We have hybrid cars, now hybrid planes are coming (ハイブリッド車はあった、今度はハイブリッド飛行機が登場) (記事日時不明)
-* Why more US planes are getting stuck on the tarmac (なぜ米国の飛行機が滑走路で立ち往生することが増えているのか) (記事日時不明)
-* 'A better opportunity': Canadians on a closer alliance with Europe (「より良い機会」：カナダ人、欧州とのより緊密な同盟について) (記事日時不明)
-* I feel like I'm in a good place - Isak (良い場所にいると感じる - イサク) (記事日時不明)
-* US military fighter jet crashes during training exercise (米軍戦闘機、訓練中に墜落) (記事日時不明)
-* Ed Sheeran's tour in 'damage control mode' after Macklemore backlash (エド・シーランのツアー、マックルモアの反発を受けて「ダメージコントロールモード」に) (記事日時不明)
-* Can humpback whales experience grief? (ザトウクジラは悲しみを感じることができるか？) (記事日時不明)
-* Finding the location of the Saudi fighter jet shot down over Yemen (イエメン上空で撃墜されたサウジアラビア戦闘機の位置特定) (記事日時不明)
-* The notorious axe murders of Lizzie Borden's parents still haunt, 134 years on (リジー・ボーデンの両親の悪名高い斧殺人事件、134年経ってもなお人々を悩ませる) (記事日時不明)
-* Why scarlet macaw parents starve the chick that hatches last (なぜコンゴウインコの両親は最後に孵化した雛を飢えさせるのか) (記事日時不明)
-* Zara Larsson criticises White House for using her song in deportation video (ザラ・ラーソン、ホワイトハウスが彼女の曲を国外追放ビデオで使用したことを批判) (記事日時不明)
-* White House withdraws Trump's ICE nominee as Republican senator objects (共和党上院議員の反対により、ホワイトハウスがトランプ氏のICE候補を取り下げる) (記事日時不明)
-* Five missing women feared dead after images and videos found in Philadelphia home (フィラデルフィアの家で見つかった画像とビデオの後、5人の行方不明女性が死亡したと懸念) (記事日時不明)
-* Lena Dunham announces birth of first baby via surrogacy (レナ・ダナム、代理出産により第一子誕生を発表) (記事日時不明)
-* Swimmer missing after suspected shark attack off Australian west coast (オーストラリア西海岸沖でサメに襲われた疑い、競泳選手が行方不明) (記事日時不明)
-* Nigerian police probe 37 deaths in custody of suspected illegal miners (ナイジェリア警察、不法採掘者の容疑者37名の拘留中の死亡を捜査) (記事日時不明)
-* UK's 'dismal' Eurovision song choices to be examined by MPs (英国の「惨めな」ユーロビジョン楽曲選択、議員が調査へ) (記事日時不明)
-* British woman rescued in Malawi shootout that left four suspected kidnappers dead (マラウイでの銃撃戦で救出された英国人女性、容疑者4人の誘拐犯死亡) (記事日時不明)
-* Early Bowie music available to stream for first time (初期のボウイの音楽、初めてストリーミング可能に) (記事日時不明)
-* The virtual worlds where robots are trained (ロボットが訓練される仮想世界) (記事日時不明)
-* India faces 100% tariff threat over Russian oil after US House vote (インド、米下院投票後、ロシア産石油に対する100％関税の脅威に直面) (記事日時不明)
-* OpenAI reveals six more safety issues and unveils plan to disclose incidents (OpenAI、さらに6つの安全上の問題を発表し、インシデント開示計画を公開) (記事日時不明)
-* King Charles warns of 'existential danger' of AI falling into wrong hands (チャールズ国王、AIが誤った手に渡ることの「存亡の危機」を警告) (記事日時不明)
-* GTA 6 soundtrack reveal revives digital release debate (GTA 6のサウンドトラック公開、デジタルリリース論争を再燃) (記事日時不明)
-* EU announces plan to restrict social media access for under-15s (EU、15歳未満のソーシャルメディアアクセスを制限する計画を発表) (記事日時不明)
-* Why are there concerns AI could threaten humanity, and how real are they? (AIが人類を脅かす懸念があるのはなぜか、そしてそれはどれほど現実的なのか？) (記事日時不明)
 
-### ●●WSJ●●
+*   US plan to sell F-35 warplanes to Saudi Arabia is controversial (米国がサウジアラビアにF-35戦闘機を販売する計画がなぜ論争を呼ぶのか) 2026/09/18 (5時間前)
+*   This Olympic river has 500 crocodiles in it - but that's not the main concern (このオリンピックの川には500匹のワニがいるが、それが主な懸念ではない) 2026/09/18 (7時間前)
+*   Japan raises interest rate to new 31-year high to curb rising prices (日本、上昇する物価を抑制するため31年ぶりの高水準に金利を引き上げ) 2026/09/18 (4時間前)
+*   UN experts say grounds to believe US committed war crimes in Iran strikes (国連専門家、イランへの米国の攻撃で戦争犯罪を犯したと信じる根拠があると発言) 2026/09/18 (10時間前)
+*   Warm words on Canada's EU 'associate membership' but no guarantees (カナダのEU「準加盟」に関する温かい言葉、しかし保証はない) 2026/09/18 (14時間前)
+*   Canadians dream of Europe as Carney floats longshot plan for living and working in EU (カーニー氏がEUでの生活と労働に関する可能性の低い計画を提示する中、カナダ人はヨーロッパを夢見る) 2026/09/18 (5時間前)
+*   Charles 'sounded giddily elated' after Diana died, Earl Spencer claims (スペンサー伯爵、ダイアナ妃死去後、チャールズ国王は「有頂天になっていた」と主張) 2026/09/18 (22分前)
+*   New York has a food waste problem. South Korea has already solved it (ニューヨークには食品廃棄問題がある。韓国はすでに解決した) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The secret life and incredible talents of outrageous US showman Liberace (型破りな米国のショーマン、リベラーチェの秘密の人生と信じられない才能) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Ed Sheeran, Macklemore, and the politics of staying silent (エド・シーラン、マックルモア、そして沈黙を守ることの政治性) 2026/09/18 (27分)
+*   Did the US carry out war crimes in Iran? (米国はイランで戦争犯罪を犯したのか？) 2026/09/18 (28分)
+*   The discovery of the San José shipwreck (サン・ホセ号難破船の発見) 2026/09/18 (11分)
+*   How to leave this Earth (この地球を離れる方法) 2026/09/18 (27分)
+*   Mirjana Spoljaric, president of the ICRC: The rules of war are being ignored (ICRC総裁、ミルヤナ・スポルヤリッチ氏：戦争のルールは無視されている) 2026/09/18 (27分)
+*   Taking Stock: Can Big Tech rivals be trusted to develop safe AI? (株式市況：巨大IT企業のライバルは安全なAI開発を信頼できるか？) 2026/09/18 (23分)
+*   The birth of India's call centre industry (インドのコールセンター産業の誕生) 2026/09/18 (11分)
+*   Power Players: Does Xbox have a future? (パワープレイヤー：Xboxに未来はあるか？) 2026/09/18 (18分)
+*   Are bad teeth the number one reason kids go to A&E? (虫歯は子供たちが救急外来に行く一番の理由か？) 2026/09/18 (28分)
+*   Stardust: Ireland's deadly nightclub fire (スターダスト：アイルランドの恐ろしいナイトクラブ火災) 2026/09/18 (11分)
+*   Stories from the New Silk Road: The ‘frenemy’ (新シルクロードからの物語：「戦友であり敵」) 2026/09/18 (26分)
+*   'This is our company': Nigerians show off oil wealth after share-buying frenzy (「これは我々の会社だ」：株式購入熱狂の後、ナイジェリア人が石油富を誇示) 2026/09/18 (7時間前)
+*   US fans with Ed Sheeran tickets are left 'torn' by Macklemore controversy (エド・シーランのチケットを持つ米国のファンは、マックルモアの論争に「引き裂かれている」) 2026/09/18 (6時間前)
+*   Judge orders Trump to give 30 days' notice before any 'demolition' at Kennedy Center (裁判官、ケネディ・センターでの「解体」前に30日間の通知をトランプ氏に命じる) 2026/09/18 (6時間前)
+*   India's hospital boom is improving access but pricing millions out of critical care (インドの病院ブームはアクセスを改善しているが、数百万人が重症治療から締め出されている) 2026/09/18 (8時間前)
+*   In a border city stadium, US NFL fans sing Canada anthem with gusto (国境沿いの都市のスタジアムで、米国のNFLファンがカナダ国歌を元気よく歌う) 2026/09/18 (5時間前)
+*   'Complete despair': Afghan female medical students fear being sent home from Pakistan (「完全な絶望」：パキスタンから送還されることを恐れるアフガニスタンの女子医学生) 2026/09/18 (7時間前)
+*   War may be coming. Is the UK psychologically ready? (戦争が来るかもしれない。英国は心理的に準備ができているか？) 2026/09/18 (7時間前)
+*   Hyrox athlete apologises for continuing race after soiling herself (Hyroxアスリート、失禁したままレースを続行したことを謝罪) 2026/09/18 (16時間前)
+*   The extreme engineering of aircraft windows (航空機窓の極限のエンジニアリング) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   We have hybrid cars, now hybrid planes are coming (ハイブリッド車がある、今度はハイブリッド飛行機が登場) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why more US planes are getting stuck on the tarmac (なぜより多くの米国の飛行機が滑走路で立ち往生しているのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   See tiny organisms on show in microscopic video competition (顕微鏡ビデオコンテストで披露される小さな生物を見る) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   'A better opportunity': Canadians on a closer alliance with Europe (「より良い機会」：ヨーロッパとのより緊密な連携に関するカナダ人) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   I feel like I'm in a good place - Isak (良い場所にいる気分です - イサク) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   US military fighter jet crashes during training exercise (米軍戦闘機が訓練演習中に墜落) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Ed Sheeran's tour in 'damage control mode' after Macklemore backlash (マックルモアの反発後、エド・シーランのツアーは「ダメージコントロールモード」) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Can humpback whales experience grief? (ザトウクジラは悲しみを感じることができるか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Finding the location of the Saudi fighter jet shot down over Yemen (イエメン上空で撃墜されたサウジ戦闘機の位置特定) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The notorious axe murders of Lizzie Borden's parents still haunt, 134 years on (リジー・ボーデンの両親の悪名高い斧殺人事件は、134年後もなお人々を悩ませている) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why scarlet macaw parents starve the chick that hatches last (なぜコンゴウインコの親は最後に孵化した雛を餓死させるのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Zara Larsson criticises White House for using her song in deportation video (ザラ・ラーソン、ホワイトハウスが彼女の曲を国外追放ビデオで使用したことを批判) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   White House withdraws Trump's ICE nominee as Republican senator objects (共和党上院議員が反対し、ホワイトハウスはトランプ氏のICE候補を取り下げる) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Five missing women feared dead after images and videos found in Philadelphia home (フィラデルフィアの家で見つかった画像とビデオの後、5人の行方不明女性が死亡したと推定される) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Lena Dunham announces birth of first baby via surrogacy (レナ・ダナム、代理出産で第一子誕生を発表) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Dozens of suspected illegal miners die in Nigerian custody (ナイジェリアの拘置所で数十人の違法採掘者が死亡した疑い) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Swimmer missing after suspected shark attack off Australian west coast (オーストラリア西海岸沖でのサメ襲撃疑いでスイマーが行方不明) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   UK's 'dismal' Eurovision song choices to be examined by MPs (英国の「惨めな」ユーロビジョン楽曲選択が議員によって調査される) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   British woman rescued in Malawi shootout that left four suspected kidnappers dead (4人の誘拐犯容疑者が死亡したマラウイでの銃撃戦で、英国人女性が救出される) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Early Bowie music available to stream for first time (初期のボウイの音楽が初めてストリーミング可能に) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   The virtual worlds where robots are trained (ロボットが訓練される仮想世界) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   India faces 100% tariff threat over Russian oil after US House vote (米国下院の投票後、インドはロシア石油に対する100％関税の脅威に直面) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   OpenAI reveals six more safety issues and unveils plan to disclose incidents (OpenAI、さらに6つの安全上の問題を発表し、インシデント開示計画を披露) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   King Charles warns of 'existential danger' of AI falling into wrong hands (チャールズ国王、AIが誤った手に渡る「実存的危険」を警告) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   GTA 6 soundtrack reveal revives digital release debate (GTA 6 サウンドトラック発表がデジタルリリース論争を再燃させる) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   EU announces plan to restrict social media access for under-15s (EU、15歳未満のソーシャルメディアアクセスを制限する計画を発表) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   Why are there concerns AI could threaten humanity, and how real are they? (AIが人類を脅かす懸念があるのはなぜか、そしてそれはどれほど現実的なのか？) 2026/09/18 (日付不明、時間情報から当日と判断)
+
+**●●WSJ●●**
 日本時間（UTC+9）
-* 米、ベネズエラ産原油の対キューバ販売で制限緩和 (26分前)
-* 米国家情報長官への内部告発、政権が機密情報の開示拒否 (1時間前)
-* ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」 (4時間前)
-* トランプ氏、経済好転を称賛 国民の実感に反し (記事日時不明)
-* アップルが米国製半導体を製造へ その内幕 (記事日時不明)
-* トランプ氏の一般教書演説、6つのポイント (記事日時不明)
-* トランプ氏、「関税が所得税収を実質的に代替へ」 一般教書演説 (記事日時不明)
-* 中国の対日貿易戦争 (記事日時不明)
-* アンソロピック、安全に対する姿勢を後退 方針緩和へ (記事日時不明)
-* ロシア勝利は必然ではない、5年目迎えたウクライナ戦争 (記事日時不明)
-* ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (記事日時不明)
-* AIに仕事を奪われる？ それより深刻な事態とは (記事日時不明)
-* 中国の対米貿易戦争に好機、トランプ関税無効で (記事日時不明)
-* パラマウント、ワーナー買収提案引き上げ 1株31ドル (記事日時不明)
-* 米AI新興企業、小規模維持が最大の武器 (記事日時不明)
-* AIの脅威、米商業用不動産業界にも試練 (記事日時不明)
-* 米株揺らす「AI脅威シナリオ」、4つのポイント (記事日時不明)
-* なぜオプション投資家が予測市場に集まるのか (記事日時不明)
-* イランで反体制派と政権支持派が衝突、緊張高まる (記事日時不明)
-* トランプ政権、銀行に市民権情報の収集義務づけを検討 (記事日時不明)
 
-### ●●AXIOS●●
+*   米、ベネズエラ産原油の対キューバ販売で制限緩和 (米、ベネズエラ産原油の対キューバ販売で制限緩和) 2026/09/18 (26分前)
+*   米国家情報長官への内部告発、政権が機密情報の開示拒否 (米国家情報長官への内部告発、政権が機密情報の開示拒否) 2026/09/18 (1時間前)
+*   ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」 (ブルー・アウル問題で個人投資家動揺、プロは「慌てるな」) 2026/09/18 (4時間前)
+*   トランプ氏、経済好転を称賛　国民の実感に反し (トランプ氏、経済好転を称賛　国民の実感に反し) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   アップルが米国製半導体を製造へ　その内幕 (アップルが米国製半導体を製造へ　その内幕) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   トランプ氏の一般教書演説、6つのポイント (トランプ氏の一般教書演説、6つのポイント) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   トランプ氏、「関税が所得税収を実質的に代替へ」　一般教書演説 (トランプ氏、「関税が所得税収を実質的に代替へ」　一般教書演説) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   中国の対日貿易戦争 (中国の対日貿易戦争) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   アンソロピック、安全に対する姿勢を後退　方針緩和へ (アンソロピック、安全に対する姿勢を後退　方針緩和へ) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   ロシア勝利は必然ではない、5年目迎えたウクライナ戦争 (ロシア勝利は必然ではない、5年目迎えたウクライナ戦争) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪 (ビル・ゲイツ氏、エプスタイン元被告との関係巡り謝罪) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   AIに仕事を奪われる？ それより深刻な事態とは (AIに仕事を奪われる？ それより深刻な事態とは) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   中国の対米貿易戦争に好機、トランプ関税無効で (中国の対米貿易戦争に好機、トランプ関税無効で) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   パラマウント、ワーナー買収提案引き上げ　1株31ドル (パラマウント、ワーナー買収提案引き上げ　1株31ドル) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   米AI新興企業、小規模維持が最大の武器 (米AI新興企業、小規模維持が最大の武器) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   AIの脅威、米商業用不動産業界にも試練 (AIの脅威、米商業用不動産業界にも試練) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   米株揺らす「AI脅威シナリオ」、4つのポイント (米株揺らす「AI脅威シナリオ」、4つのポイント) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   なぜオプション投資家が予測市場に集まるのか (なぜオプション投資家が予測市場に集まるのか) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   イランで反体制派と政権支持派が衝突、緊張高まる (イランで反体制派と政権支持派が衝突、緊張高まる) 2026/09/18 (日付不明、時間情報から当日と判断)
+*   トランプ政権、銀行に市民権情報の収集義務づけを検討 (トランプ政権、銀行に市民権情報の収集義務づけを検討) 2026/09/18 (日付不明、時間情報から当日と判断)
+
+**●●AXIOS●●**
 UTC
-* (セキュリティ確認中、ボットではないことを確認しています。)
 
-### ●●日経●●
-日本時間（UTC+9）
-* 日銀1.25%への利上げ決定、物価上振れリスク抑制 2人が反対票 (2026/9/18 11:55)
-* 日銀利上げで住宅ローン金利上昇、変動と固定の差は過去最大 対応策は (2026/9/18 12:08)
-* カレンダーアプリ、退職した同僚がのぞき見か 問われた顧客情報の管理 (2026/9/18 10:00)
-* 円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (2026/9/18 12:27)
-* トヨタ、内製ロボ40万台を工場に 28年から従業員と協働 (2026/9/18 0:00)
-* 日経平均株価、一時1300円高 日銀利上げ「逆風にならず」 (2026/9/18 12:07)
-* 中国主導のエネルギー秩序へ 習近平氏が狙う米国「石油の世紀」の先 (2026/9/18 10:00)
-* iPhone18 Pro発売、カメラ性能に関心 銀座の旗艦店前に行列50人 (2026/9/18 11:30)
-* 台風25号でシルバーウイークは荒天恐れ 東京・島しょ部は災害警戒 (2026/9/18 8:55)
-* iPhone18Pro発売、価格高騰で中古シフト 機能よりコスパ重視に (2026/9/18 11:45)
+*   （データなし）
 
-### ●●時事●●
+**●●日経●●**
 日本時間（UTC+9）
-* 高市改造内閣、本格始動 副大臣・政務官決定へ (2026/09/18)
-* 渡辺孝一衆院議員が死去 自民、北海道ブロック欠員へ (2026/09/18)
-* 渡辺孝一衆院議員が死去 自民、北海道ブロック欠員へ (2026/09/18)
-* 習氏到着、異例の出迎えへ 首脳会談へ２３日米国入り―トランプ氏 (2026/09/18)
-* 副業詐欺グループのトップ逮捕 指示役も、全国で被害１５億円か―警視庁 (2026/09/18)
-* 内閣支持４４％、最低更新 「裏金」登用に７割反対―時事世論調査 (2026/09/18)
-* 第２次高市改造内閣が発足 「決断と実行」主要閣僚留任―裏金議員起用、 (2026/09/18)
-* 閣僚席次、ナンバー２に細野氏 内閣改造 (2026/09/18)
-* トレカ販売「誇大広告」 サイト運営５社を提訴―東京地裁 (2026/09/18)
-* 韓国大統領、「自分の至らなさ」と謝罪 支持率低下受け (2026/09/18)
 
-### ●●yahoo●●
-日本時間（UTC+9）
-* 首相 米大統領と来週会談で調整 (2026/09/18)
-* ガソリン補助金が拡大 代償は (2026/09/18)
-* 転落死 会社の回答書に遺族落胆 (2026/09/18)
-* 23年の八重洲鉄骨落下 計算ミスか (2026/09/18)
-* 無人の車が園児に衝突 5人搬送 (2026/09/18)
-* 米大統領 習氏訪米で異例の厚遇へ (2026/09/18)
-* スウェーデン政権交代へ 首相辞意 (2026/09/18)
-* 中国 8月の若者失業率は最悪水準 (2026/09/18)
-* 豪 留学のビザで子など同伴認めず (2026/09/18)
-* ヘンリー王子 帰国後初の公の場 (2026/09/18)
-* 日銀 政策金利を1.25%に引き上げ (2026/09/18)
-* 九州新幹線 52日ぶり全線運転 (2026/09/18)
-* ガソリン補助金が拡大 代償は (2026/09/18)
-* SBI 「因縁」超えライブドア買収 (2026/09/18)
-* 日産 新型スカイライン12月発表へ (2026/09/18)
-* しんちゃんほぼ登場なし回 放送へ (2026/09/18)
-* 上戸彩 ソフトバンク3連覇を祝福 (2026/09/18)
-* 神木隆之介&菅田将暉 auCMコラボ (2026/09/18)
-* イチロー氏&長澤まさみ JRA新CM (2026/09/18)
-* NHK大河の描写に2市異議 史実は (2026/09/18)
+*   3メガ悩ます「稼ぎすぎ批判」 日銀利上げで純利益3000億円押し上げ (3メガ悩ます「稼ぎすぎ批判」 日銀利上げで純利益3000億円押し上げ) 2026/09/18
+*   川崎重工、四足歩行のAI造船ロボット開発へ 溶接技術者不足で対策 (川崎重工、四足歩行のAI造船ロボット開発へ 溶接技術者不足で対策) 2026/09/18
+*   ホルムズ海峡、複数の船舶が通過 「航行の正常化」には時間 (ホルムズ海峡、複数の船舶が通過 「航行の正常化」には時間) 2026/09/18
+*   動き出す中東復興の争奪戦 伊メローニ首相名乗り、出遅れる日本 (動き出す中東復興の争奪戦 伊メローニ首相名乗り、出遅れる日本) 2026/09/18
+*   すかいらーく、資さんうどん店舗4倍400店 割安店にガストなど衣替え (すかいらーく、資さんうどん店舗4倍400店 割安店にガストなど衣替え) 2026/09/18
+*   「管理職になりたい社員」過去最低の17% パーソル総研調べ (「管理職になりたい社員」過去最低の17% パーソル総研調べ) 2026/09/17
+*   ホルムズ、20隻引き返す 開放宣言も通航困難か (ホルムズ、20隻引き返す 開放宣言も通航困難か) 2026/09/18
+*   長野県で強い揺れの地震相次ぐ 震度5強と震度5弱、津波の心配なし (長野県で強い揺れの地震相次ぐ 震度5強と震度5弱、津波の心配なし) 2026/09/18
+*   「ポケモンカード」が25億円 日本のアニメトレカ、米国でバブル (「ポケモンカード」が25億円 日本のアニメトレカ、米国でバブル) 2026/09/18
+*   社会人になったあなたへ 仕事やお金、SNSのヒントまとめ読み (社会人になったあなたへ 仕事やお金、SNSのヒントまとめ読み) 2026/09/18
 
-### ●●AI●●
+**●●時事●●**
 日本時間（UTC+9）
-* (セキュリティ確認中、ボットではないことを確認しています。)
 
-### ●●2ch●●
+*   公衆トイレ周辺を現場検証 遺棄場所との関連捜査―京都男児遺体・府警 (公衆トイレ周辺を現場検証 遺棄場所との関連捜査―京都男児遺体・府警) 2026/09/18
+*   「学校寄った後、首絞め殺害」 父親、逮捕前の任意聴取に―京都男児遺棄 (「学校寄った後、首絞め殺害」 父親、逮捕前の任意聴取に―京都男児遺棄) 2026/09/18
+*   「学校寄った後、首絞め殺害」 父親、逮捕前の任意聴取に―京都男児遺棄 (「学校寄った後、首絞め殺害」 父親、逮捕前の任意聴取に―京都男児遺棄) 2026/09/18
+*   会社経営の傍ら著書も 逮捕の水口容疑者―東京・赤坂の死体遺棄事件 (会社経営の傍ら著書も 逮捕の水口容疑者―東京・赤坂の死体遺棄事件) 2026/09/18
+*   ニュージャージー州で民主勝利 米下院補選 (ニュージャージー州で民主勝利 米下院補選) 2026/09/18
+*   イスラエル、停戦後もレバノン攻撃か トランプ氏の「爆撃禁止」に異議 (イスラエル、停戦後もレバノン攻撃か トランプ氏の「爆撃禁止」に異議) 2026/09/18
+*   川上審判員が緊急手術 側頭部にバット直撃―プロ野球 (川上審判員が緊急手術 側頭部にバット直撃―プロ野球) 2026/09/18
+*   米、濃縮ウラン放棄で３兆円超 イランに提案か、戦闘終結交渉 (米、濃縮ウラン放棄で３兆円超 イランに提案か、戦闘終結交渉) 2026/09/18
+*   長野で震度５強や５弱 地震続発「十分注意を」―気象庁 (長野で震度５強や５弱 地震続発「十分注意を」―気象庁) 2026/09/18
+*   男児遺棄容疑、３７歳父親逮捕 殺害認める供述、本格捜査へ―遺体を複数 (男児遺棄容疑、３７歳父親逮捕 殺害認める供述、本格捜査へ―遺体を複数) 2026/09/18
+
+**●●yahoo●●**
 日本時間（UTC+9）
-* 町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」 (2026/09/18 15:21)
-* 「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業 (2026/09/18)
-* 為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (2026/09/18)
-* 日銀、1.25%への利上げ決定 2人が反対票 ★2 (2026/09/18)
-* 国内スマホ市場Android端末が54%に伸長 値上げでiPhone離れか ★5 (2026/09/18)
-* 沖縄知事当選の古謝氏 家族関係先に爆破予告 県警も把握し調べる (沖縄タイムス) ★2 (2026/09/18)
-* 鈴木憲和農相が退任「本当にありがとうございました」★2 (2026/09/18)
-* 70代女性が刃物で切り付けられ軽乗用車奪われる 犯人の外国人風の男2人組が逃走中 静岡・袋井市 (2026/09/18)
-* 銅線14トン(時価約2200万円)窃盗疑い ベトナム籍5人逮捕 太陽光施設から 石川など6県警捜査 (2026/09/18)
-* 埼玉狭山白髪の上下スクール水着の男、女子中学生に立ち塞がる (2026/09/18)
-* 消費者物価指数8月1.7%上昇 エネ補助で抑制、8カ月連続2%割れ (2026/09/18)
-* 女優見上愛 もともと「照明さん」志望だった 中2で観劇し直感「将来、コレだ」演出家への夢も (2026/09/18)
-* iPhone18 Pro発売、カメラ性能に関心 銀座の旗艦店前に行列50人…先頭で待っていた男性は始発の電車で駆けつけ (2026/09/18)
-* 「今まで何だったん」堀大輔氏 配信終了後に「ショートスリーパー」表記を削除→「睡眠時間は自由」に変更でネット騒然 ★3 (2026/09/18)
-* 51歳・神田うの 年内は治療に専念へ…「お仕事以外全てお断り」病名も公表「完全に寛解するまでは…」 (2026/09/18)
-* アジア大会「12時間空腹だった」入国後に待ちぼうけの中国男子体操選手が苦情「我慢できなくなり別のホテルを取った」 (2026/09/18)
-* 中国の新幹線で、スマホ注文のホカホカ弁当に驚き!中国人「ご飯が冷たいのは大変失礼な行為です」 (2026/09/18)
-* 奈良「中国のスパイ」山下知事の虚偽動画を投稿 名誉毀損疑いで2人書類送検 (2026/09/18)
-* アジア大会名古屋空港当局、大型太極旗を認めず…「こんなことは初めて。理解しがたい」 (2026/09/18)
-* 中央日報米国・日本を抜いた…外国人10人のうち6人が韓国を訪れたい理由 (2026/09/18)
+
+*   イラン軍 海峡の通航に再び制限へ (イラン軍 海峡の通航に再び制限へ) 2026/09/18
+*   特定技能1号 上限迫る外食業不安 (特定技能1号 上限迫る外食業不安) 2026/09/18
+*   トイレ行列問題に国指針案 解決は (トイレ行列問題に国指針案 解決は) 2026/09/18
+*   住宅購入に「残クレ」銀行及び腰 (住宅購入に「残クレ」銀行及び腰) 2026/09/18
+*   大腸カメラ40代から推奨 医師解説 (大腸カメラ40代から推奨 医師解説) 2026/09/18
+*   イラン軍 海峡の通航に再び制限へ (イラン軍 海峡の通航に再び制限へ) 2026/09/18
+*   「第二の戦場」レバノンの実情 (「第二の戦場」レバノンの実情) 2026/09/18
+*   米大統領 ウラン「米に持ち帰る」 (米大統領 ウラン「米に持ち帰る」) 2026/09/18
+*   トランプ氏 Z世代支持離れに直面 (トランプ氏 Z世代支持離れに直面) 2026/09/18
+*   G7 重要鉱物の供給網強化で一致 (G7 重要鉱物の供給網強化で一致) 2026/09/18
+*   原油価格が急落 海峡「開放」受け (原油価格が急落 海峡「開放」受け) 2026/09/18
+*   イオンシネマ一般2千円に値上げへ (イオンシネマ一般2千円に値上げへ) 2026/09/18
+*   小型スーパー競争にローソン参戦 (小型スーパー競争にローソン参戦) 2026/09/18
+*   トンツカタン解散 14年の活動に幕 (トンツカタン解散 14年の活動に幕) 2026/09/18
+*   仏俳優 ナタリー・バイさん死去 (仏俳優 ナタリー・バイさん死去) 2026/09/18
+*   宮野真守が始球式 97点ですかね (宮野真守が始球式 97点ですかね) 2026/09/18
+*   きんに君 女子校入学式で生徒翻弄 (きんに君 女子校入学式で生徒翻弄) 2026/09/18
+*   酒とギャンブルに熱中 アナの挑戦 (酒とギャンブルに熱中 アナの挑戦) 2026/09/18
+*   巨人山瀬慎之助が幼なじみのヤクルト・奥川から勝ち越し適時打 プ (巨人山瀬慎之助が幼なじみのヤクルト・奥川から勝ち越し適時打 プ) 2026/09/18
+*   ソフトバンク上沢直之が７回まで無安打投球 球数は１１３球ながら (ソフトバンク上沢直之が７回まで無安打投球 球数は１１３球ながら) 2026/09/18
+*   高木美帆さん 引退して別人級ショット！ばっちりメイク「美しい」「キ (高木美帆さん 引退して別人級ショット！ばっちりメイク「美しい」「キ) 2026/09/18
+*   中日・福永にアクシデント 打球追いかけカメラマン席へ→動けずに担架 (中日・福永にアクシデント 打球追いかけカメラマン席へ→動けずに担架) 2026/09/18
+*   中日救急搬送の福永裕基、会話はできるも記憶が一部…井上監督「頭 (中日救急搬送の福永裕基、会話はできるも記憶が一部…井上監督「頭) 2026/09/18
+*   首相 米大統領と来週会談で調整 (首相 米大統領と来週会談で調整) 2026/09/18
+*   高市首相の閣僚指示書 全容が判明 (高市首相の閣僚指示書 全容が判明) 2026/09/18
+*   米中接近を懸念 試される高市外交 (米中接近を懸念 試される高市外交) 2026/09/18
+*   改造内閣 非主流派結集のリスクも (改造内閣 非主流派結集のリスクも) 2026/09/18
+*   第2次改造内閣 林芳正氏なぜ閣外 (第2次改造内閣 林芳正氏なぜ閣外) 2026/09/18
+*   細野豪志氏「宿命」 復興相に就任 (細野豪志氏「宿命」 復興相に就任) 2026/09/18
+*   台風 関東は20-21日大雨など恐れ (台風 関東は20-21日大雨など恐れ) 2026/09/18
+*   家事の男女差 解消に必要なことは (家事の男女差 解消に必要なことは) 2026/09/18
+*   米大統領 習氏訪米で異例の厚遇へ (米大統領 習氏訪米で異例の厚遇へ) 2026/09/18
+*   ジャガイモ輸入解禁加速を 米要請 (ジャガイモ輸入解禁加速を 米要請) 2026/09/18
+*   スウェーデン政権交代へ 首相辞意 (スウェーデン政権交代へ 首相辞意) 2026/09/18
+*   中国 8月の若者失業率は最悪水準 (中国 8月の若者失業率は最悪水準) 2026/09/18
+*   ヘンリー王子 帰国後初の公の場 (ヘンリー王子 帰国後初の公の場) 2026/09/18
+*   南アフリカ 正・副大統領が休養 (南アフリカ 正・副大統領が休養) 2026/09/18
+*   北朝鮮体育相が来日 閣僚8年ぶり (北朝鮮体育相が来日 閣僚8年ぶり) 2026/09/18
+*   キューバの紙幣最高額 半年で4倍 (キューバの紙幣最高額 半年で4倍) 2026/09/18
+*   中継・日銀総裁会見 利上げ決定 (中継・日銀総裁会見 利上げ決定) 2026/09/18
+*   日銀 政策金利を1.25%に引き上げ (日銀 政策金利を1.25%に引き上げ) 2026/09/18
+*   九州新幹線 52日ぶり全線運転 (九州新幹線 52日ぶり全線運転) 2026/09/18
+*   ガソリン補助金が拡大 代償は (ガソリン補助金が拡大 代償は) 2026/09/18
+*   SBI 「因縁」超えライブドア買収 (SBI 「因縁」超えライブドア買収) 2026/09/18
+*   日産 新型スカイライン12月発表へ (日産 新型スカイライン12月発表へ) 2026/09/18
+*   好調な「つるとんたん」なぜ売却 (好調な「つるとんたん」なぜ売却) 2026/09/18
+*   老舗菓子店にも倒産の波 背景は (老舗菓子店にも倒産の波 背景は) 2026/09/18
+*   三浦翔平 9月末でバーニング退所 (三浦翔平 9月末でバーニング退所) 2026/09/18
+*   しんちゃんほぼ登場なし回 放送へ (しんちゃんほぼ登場なし回 放送へ) 2026/09/18
+*   上戸彩 ソフトバンク3連覇を祝福 (上戸彩 ソフトバンク3連覇を祝福) 2026/09/18
+*   神木隆之介&菅田将暉 auCMコラボ (神木隆之介&菅田将暉 auCMコラボ) 2026/09/18
+*   イチロー氏&長澤まさみ JRA新CM (イチロー氏&長澤まさみ JRA新CM) 2026/09/18
+*   NHK大河の描写に2市異議 史実は (NHK大河の描写に2市異議 史実は) 2026/09/18
+*   トンツカタン森本 改名を発表 (トンツカタン森本 改名を発表) 2026/09/18
+*   キタニタツヤ ヨルシカの活動卒業 (キタニタツヤ ヨルシカの活動卒業) 2026/09/18
+*   麟太郎 ビザ巡りチーム合流できず (麟太郎 ビザ巡りチーム合流できず) 2026/09/18
+*   SB柳田悠岐 来季も現役続行へ (SB柳田悠岐 来季も現役続行へ) 2026/09/18
+*   中日・大島洋平40歳 現役続行へ (中日・大島洋平40歳 現役続行へ) 2026/09/18
+*   村上宗隆が32号3ラン 本拠地熱狂 (村上宗隆が32号3ラン 本拠地熱狂) 2026/09/18
+*   ウルフ氏死去 日ハムがコメント (ウルフ氏死去 日ハムがコメント) 2026/09/18
+*   ドジャース 地区5連覇を達成 (ドジャース 地区5連覇を達成) 2026/09/18
+*   ヤングなでしこ涙 北朝鮮に完敗 (ヤングなでしこ涙 北朝鮮に完敗) 2026/09/18
+*   アジア大会の宿舎 選手らから苦情 (アジア大会の宿舎 選手らから苦情) 2026/09/18
+*   Suica新キャラ投票に盛り上がり (Suica新キャラ投票に盛り上がり) 2026/09/18
+*   東京ゲームショウ大混雑 背景は (東京ゲームショウ大混雑 背景は) 2026/09/18
+*   iPhone18Pro発売 21万9800円から (iPhone18Pro発売 21万9800円から) 2026/09/18
+*   英国王 AI企業幹部らに懸念示す (英国王 AI企業幹部らに懸念示す) 2026/09/18
+*   「AI著作物」巡り裁判 識者が警鐘 (「AI著作物」巡り裁判 識者が警鐘) 2026/09/18
+*   子どものSNS制限 EUが新法提案へ (子どものSNS制限 EUが新法提案へ) 2026/09/18
+*   Gyazoに不正アクセス 情報漏えい (Gyazoに不正アクセス 情報漏えい) 2026/09/18
+*   メタが新サブスク発表 AI機能拡大 (メタが新サブスク発表 AI機能拡大) 2026/09/18
+*   早産の子 母を支えたドナーミルク (早産の子 母を支えたドナーミルク) 2026/09/18
+*   カビが一斉に繁殖 雨続く秋に注意 (カビが一斉に繁殖 雨続く秋に注意) 2026/09/18
+*   ツタンカーメン墓 奥に別の王墓か (ツタンカーメン墓 奥に別の王墓か) 2026/09/18
+*   青山通り街路樹にキクラゲ? 取材 (青山通り街路樹にキクラゲ? 取材) 2026/09/18
+*   インフルエンザ 注意報を都が発表 (インフルエンザ 注意報を都が発表) 2026/09/18
+*   米で進む子宮移植 出産し何を思う (米で進む子宮移植 出産し何を思う) 2026/09/18
+*   学校で声が出ない 不安障害の実態 (学校で声が出ない 不安障害の実態) 2026/09/18
+*   男性の「隠れ冷え性」 対策は (男性の「隠れ冷え性」 対策は) 2026/09/18
+*   ケーキ店死傷 店主らと口論か (ケーキ店死傷 店主らと口論か) 2026/09/18
+*   生活道路で死亡ひき逃げ疑い 逮捕 (生活道路で死亡ひき逃げ疑い 逮捕) 2026/09/18
+*   転落死 会社の回答書に遺族落胆 (転落死 会社の回答書に遺族落胆) 2026/09/18
+*   23年の八重洲鉄骨落下 計算ミスか (23年の八重洲鉄骨落下 計算ミスか) 2026/09/18
+*   無人の車が園児に衝突 5人搬送 (無人の車が園児に衝突 5人搬送) 2026/09/18
+*   中国企業に営業秘密流出疑い 逮捕 (中国企業に営業秘密流出疑い 逮捕) 2026/09/18
+*   大阪駅前の突起物 フェンス設置へ (大阪駅前の突起物 フェンス設置へ) 2026/09/18
+*   3億円宝くじが未換金 11月3日時効 (3億円宝くじが未換金 11月3日時効) 2026/09/18
+*   台風・大雨情報台風25号は関東に接近するおそれ　シルバーウィーク直撃…20日から21日頃にかけて関東などで警報級の大雨となる可能性23日（水）にかけての雨・風シミュレーション (台風・大雨情報台風25号は関東に接近するおそれ　シルバーウィーク直撃…20日から21日頃にかけて関東などで警報級の大雨となる可能性23日（水）にかけての雨・風シミュレーション) 2026/09/18
+*   電撃婚から２年…松岡茉優の最新姿にネット騒然「え！」「目が…」「震えてる」「すごすぎる」「やばい」 (電撃婚から２年…松岡茉優の最新姿にネット騒然「え！」「目が…」「震えてる」「すごすぎる」「やばい」) 2026/09/18
+*   王林、“インナー透け＆超ミニ水着”でヘソピがきらり…ご当地アイドル卒業後はセクシー路線を進行中 (王林、“インナー透け＆超ミニ水着”でヘソピがきらり…ご当地アイドル卒業後はセクシー路線を進行中) 2026/09/18
+*   シャンパンファイトで「クソガキ発動www」　観測された山本由伸の容赦ない行動に爆笑「こうでなきゃ」 (シャンパンファイトで「クソガキ発動www」　観測された山本由伸の容赦ない行動に爆笑「こうでなきゃ」) 2026/09/18
+*   川口春奈（31）の“激変”ビジュアルに反響　「雰囲気違ってびっくり」「“理由”に胸が締め付けられる」 (川口春奈（31）の“激変”ビジュアルに反響　「雰囲気違ってびっくり」「“理由”に胸が締め付けられる」) 2026/09/18
+*   黒柳徹子「死んじゃって…寂しいわ」タッグ組んだ名司会者を偲ぶ (黒柳徹子「死んじゃって…寂しいわ」タッグ組んだ名司会者を偲ぶ) 2026/09/18
+*   「TBSが隠蔽した」「打ち切ったほうがいい」の声も…『VIVANT』福澤監督“骨折パワハラ”報道の裏にある、思考停止の危うさ ("TBSが隠蔽した」「打ち切ったほうがいい」の声も…『VIVANT』福澤監督“骨折パワハラ”報道の裏にある、思考停止の危うさ) 2026/09/18
+*   ４４歳早逝の中村ゆりさん　長嶋一茂が沈痛　１１年前のプロデュース映画でヒロイン「カツラがとれて…今思えば抗がん剤治療をやられていたんだと」 (４４歳早逝の中村ゆりさん　長嶋一茂が沈痛　１１年前のプロデュース映画でヒロイン「カツラがとれて…今思えば抗がん剤治療をやられていたんだと」) 2026/09/18
+*   舌がんで舌の６割切除の堀ちえみ　「あまりに驚かれてしまうので、言えなかった」手術法を明かす (舌がんで舌の６割切除の堀ちえみ　「あまりに驚かれてしまうので、言えなかった」手術法を明かす) 2026/09/18
+*   「2杯飲んだ後、目が見えなくなった」…ナイジェリアで48人の命を奪った「死の酒」の正体 (「2杯飲んだ後、目が見えなくなった」…ナイジェリアで48人の命を奪った「死の酒」の正体) 2026/09/18
+*   Ｆ１角田裕毅のアストンＭ入り再浮上　アロンソ退団のプランＢでローソン、オコンと候補入り (Ｆ１角田裕毅のアストンＭ入り再浮上　アロンソ退団のプランＢでローソン、オコンと候補入り) 2026/09/18
+*   『VIVANT』視聴者が最も“くぎづけ”になった夏ドラマに　『大空港』『Tシャツが乾くまで』が続く ('VIVANT'視聴者が最も“くぎづけ”になった夏ドラマに　『大空港』『Tシャツが乾くまで』が続く) 2026/09/18
+*   出川哲朗62歳　「水が飲めない」驚きの食生活　後輩芸人らが証言「これで長生きできるはずない」 (出川哲朗62歳　「水が飲めない」驚きの食生活　後輩芸人らが証言「これで長生きできるはずない」) 2026/09/18
+*   26年前に失踪した北京の女性が山東省の農村で発見される　過去には「首に鎖をつながれた女性」も　背景は #エキスパートトピ (26年前に失踪した北京の女性が山東省の農村で発見される　過去には「首に鎖をつながれた女性」も　背景は #エキスパートトピ) 2026/09/18
+*   声優二人が退所＆引退を決意…９月いっぱいで、社長は「これからまた違う人生が…」 (声優二人が退所＆引退を決意…９月いっぱいで、社長は「これからまた違う人生が…」) 2026/09/18
+*   中村ゆりさん、坂本龍一さん　検診方法が確立している「直腸がん」で、どうして亡くなるのか？　その落とし穴とは？ (中村ゆりさん、坂本龍一さん　検診方法が確立している「直腸がん」で、どうして亡くなるのか？　その落とし穴とは？) 2026/09/18
+*   「欲しい色完売する前に買う」「3枚買いました」　ワークマンの“980円フリースベスト”が大好評　「安いのにかわいくてちゃんと暖かい」「動きやすい」 ("欲しい色完売する前に買う」「3枚買いました」　ワークマンの“980円フリースベスト”が大好評　「安いのにかわいくてちゃんと暖かい」「動きやすい」) 2026/09/18
+*   「私の大事なやなちゃん」鈴木元農相の後釜は比例復活の“裏金”議員…高市首相の“ラブコール入閣”に不安 ("私の大事なやなちゃん」鈴木元農相の後釜は比例復活の“裏金”議員…高市首相の“ラブコール入閣”に不安) 2026/09/18
+*   2019年、公園で“母にお花を渡した”4歳息子。→7年後、成長した現在の姿に…「美しいお母様」「ママさん変わらなすぎ！！」「姉弟に見えた」 (2019年、公園で“母にお花を渡した”4歳息子。→7年後、成長した現在の姿に…「美しいお母様」「ママさん変わらなすぎ！！」「姉弟に見えた」) 2026/09/18
+*   「有名キャバ嬢は、メジャーリーガーよりすごい」薬物所持で逮捕のヤマトリノ、仰天自論に視聴者呆れ ("有名キャバ嬢は、メジャーリーガーよりすごい」薬物所持で逮捕のヤマトリノ、仰天自論に視聴者呆れ) 2026/09/18
+*   「新米」激安にコメ屋の嘆き　 「高値で仕入れた去年の米」が在庫に山積みでも「値引きできない」ホントの理由 ("新米」激安にコメ屋の嘆き　 「高値で仕入れた去年の米」が在庫に山積みでも「値引きできない」ホントの理由) 2026/09/18
+*   大林組現場監督ら書類送検　5人死傷鉄骨崩落、警視庁 (大林組現場監督ら書類送検　5人死傷鉄骨崩落、警視庁) 2026/09/18
+*   夫が作ったスイカ→45日間放置し…切ってみると……まさかの中身に「えええええ！」 (夫が作ったスイカ→45日間放置し…切ってみると……まさかの中身に「えええええ！」) 2026/09/18
+*   アジア大会北朝鮮選手団が式典〝退場〟で大混乱　組織委は理由を「申し上げることができない」 (アジア大会北朝鮮選手団が式典〝退場〟で大混乱　組織委は理由を「申し上げることができない」) 2026/09/18
+*   三浦翔平が退所発表　人気俳優の所属事務所退所相次ぐ　竜星涼も「研音」退所発表したばかり (三浦翔平が退所発表　人気俳優の所属事務所退所相次ぐ　竜星涼も「研音」退所発表したばかり) 2026/09/18
+*   「自分のルーティンをしっかり守ってね」　ソフトバンク小久保裕紀監督、前田悠伍が胴上げに参加しなかった理由を説明 ("自分のルーティンをしっかり守ってね」　ソフトバンク小久保裕紀監督、前田悠伍が胴上げに参加しなかった理由を説明) 2026/09/18
+*   刺青の男性に処女を奪われる強烈な絡み、結婚を考えた相手も…実は女子御三家卒・かたせ梨乃（69）の“奔放すぎるお嬢様”人生 (刺青の男性に処女を奪われる強烈な絡み、結婚を考えた相手も…実は女子御三家卒・かたせ梨乃（69）の“奔放すぎるお嬢様”人生) 2026/09/18
+*   《28年ぶりの“復母”》三田佳子、まもなく出所する次男と同居へ　「すでに卒母しています」「もう関係ないんです」…下ろしたはずの“母親”という看板を背負う覚悟 (《28年ぶりの“復母”》三田佳子、まもなく出所する次男と同居へ　「すでに卒母しています」「もう関係ないんです」…下ろしたはずの“母親”という看板を背負う覚悟) 2026/09/18
+*   横綱・大の里から金星　高安の“上限６１本”の懸賞金の束に驚き　「めっちゃ分厚い」「懸賞金すご」「うらやましい」 (横綱・大の里から金星　高安の“上限６１本”の懸賞金の束に驚き　「めっちゃ分厚い」「懸賞金すご」「うらやましい」) 2026/09/18
+*   財布に1万3059円入っていた女性→17点の食料品をレジに通すと……　目を疑う光景に「これはすごい」「ほぼドンピシャ」 (財布に1万3059円入っていた女性→17点の食料品をレジに通すと……　目を疑う光景に「これはすごい」「ほぼドンピシャ」) 2026/09/18
+*   「途中まで気づかなかった」ネトフリドラマで“全身整形の未亡人”役演じた「大御所タレント」の“正体”にSNS騒然 ("途中まで気づかなかった」ネトフリドラマで“全身整形の未亡人”役演じた「大御所タレント」の“正体”にSNS騒然) 2026/09/18
+*   山形6歳男児行方不明「新たな映像はない」警察はドラレコ解析を進め、捜索は継続中　発生からあすで2週間も手がかりはなし（酒田市） (山形6歳男児行方不明「新たな映像はない」警察はドラレコ解析を進め、捜索は継続中　発生からあすで2週間も手がかりはなし（酒田市）) 2026/09/18
+*   次の年金支給日は10月15日年金の振込額が「8月と違う」のはなぜ？令和8年度の年金受給額と夫婦モデル世帯の受給額を解説。なかには月額「約23.7万円」受給する夫婦も！ (次の年金支給日は10月15日年金の振込額が「8月と違う」のはなぜ？令和8年度の年金受給額と夫婦モデル世帯の受給額を解説。なかには月額「約23.7万円」受給する夫婦も！) 2026/09/18
+*   大相撲で視聴者の目奪った光景「懸賞金めっちゃ分厚い」　金星で360万円超獲得「うらやましい」 (大相撲で視聴者の目奪った光景「懸賞金めっちゃ分厚い」　金星で360万円超獲得「うらやましい」) 2026/09/18
+*   パンサー・向井慧とTBS・若林アナに熱愛報道　お笑い芸人とアナウンサーの交際・結婚が好印象なワケ #エキスパートトピ (パンサー・向井慧とTBS・若林アナに熱愛報道　お笑い芸人とアナウンサーの交際・結婚が好印象なワケ #エキスパートトピ) 2026/09/18
+*   藤本美貴の夫・庄司智春「ミキちゃーん！」廊下で倒れ…緊迫の救急搬送を告白 (藤本美貴の夫・庄司智春「ミキちゃーん！」廊下で倒れ…緊迫の救急搬送を告白) 2026/09/18
+*   シングルで“子育て中”ですが、先日「元夫が亡くなった」と知りました。離婚後でも子どもは「遺族年金」を受け取れますか？ 母子でいくらもらえるのでしょうか？ 受給額・要件を確認 (シングルで“子育て中”ですが、先日「元夫が亡くなった」と知りました。離婚後でも子どもは「遺族年金」を受け取れますか？ 母子でいくらもらえるのでしょうか？ 受給額・要件を確認) 2026/09/18
+*   40歳代、50歳代、60歳代、70歳代…「平均貯蓄額」はどう変わる？貯めるチャンスは50歳代に (40歳代、50歳代、60歳代、70歳代…「平均貯蓄額」はどう変わる？貯めるチャンスは50歳代に) 2026/09/18
+*   イラン、メルツ独首相の「不適切な発言」に抗議 戦争仕掛けたのは米イスラエル側だと強調 (イラン、メルツ独首相の「不適切な発言」に抗議 戦争仕掛けたのは米イスラエル側だと強調) 2026/09/18
+*   実家がお金持ちすぎる…億万長者を親に持つ韓流スター（3）年商6億円の大企業を率いた過去を持つ、超エリート (実家がお金持ちすぎる…億万長者を親に持つ韓流スター（3）年商6億円の大企業を率いた過去を持つ、超エリート) 2026/09/18
+*   渡辺孝一衆院議員が死去　自民、北海道ブロック欠員へ (渡辺孝一衆院議員が死去　自民、北海道ブロック欠員へ) 2026/09/18
+*   小学生の男の子（8）が犠牲に…“酒気帯び運転”で正面衝突か　事故を起こした男（25）を容疑者死亡のまま書類送検　山口 (小学生の男の子（8）が犠牲に…“酒気帯び運転”で正面衝突か　事故を起こした男（25）を容疑者死亡のまま書類送検　山口) 2026/09/18
+*   中継・日銀総裁会見 利上げ決定 (中継・日銀総裁会見 利上げ決定) 2026/09/18
+*   首相 米大統領と来週会談で調整 (首相 米大統領と来週会談で調整) 2026/09/18
+*   ガソリン補助金が拡大 代償は (ガソリン補助金が拡大 代償は) 2026/09/18
+*   23年の八重洲鉄骨落下 計算ミスか (23年の八重洲鉄骨落下 計算ミスか) 2026/09/18
+*   無人の車が園児に衝突 5人搬送 (無人の車が園児に衝突 5人搬送) 2026/09/18
+*   老舗菓子店にも倒産の波 背景は (老舗菓子店にも倒産の波 背景は) 2026/09/18
+*   Suica新キャラ投票に盛り上がり (Suica新キャラ投票に盛り上がり) 2026/09/18
+
+**●●AI●●**
+日本時間（UTC+9）
+
+*   （データなし）
+
+**●●2ch●●**
+日本時間（UTC+9）
+
+*   為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り) 2026/09/18
+*   「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業 (「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業) 2026/09/18
+*   為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り (為替円下落、一時157円台 日銀利上げ決定も「反対」2票で売り) 2026/09/18
+*   「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業 (「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業) 2026/09/18
+*   国内スマホ市場Android端末が54%に伸長 値上げでiPhone離れか ★5 (国内スマホ市場Android端末が54%に伸長 値上げでiPhone離れか ★5) 2026/09/18
+*   日銀、1.25%への利上げ決定 2人が反対票 ★2 (日銀、1.25%への利上げ決定 2人が反対票 ★2) 2026/09/18
+*   次のパンデミックでワクチンを打ちますか?日本人2万人以上を調査 「必ず・おそらく接種する」53.1% ★6 (次のパンデミックでワクチンを打ちますか?日本人2万人以上を調査 「必ず・おそらく接種する」53.1% ★6) 2026/09/18
+*   鈴木憲和農相が退任「本当にありがとうございました」★2 (鈴木憲和農相が退任「本当にありがとうございました」★2) 2026/09/18
+*   沖縄知事当選の古謝氏 家族関係先に爆破予告 県警も把握し調べる (沖縄タイムス) ★2 (沖縄知事当選の古謝氏 家族関係先に爆破予告 県警も把握し調べる (沖縄タイムス) ★2) 2026/09/18
+*   川淵三郎氏、森喜朗元総理に面会…「お元気でよかった」「かなり重体とお聞きしてから」穏やかな2ショット (川淵三郎氏、森喜朗元総理に面会…「お元気でよかった」「かなり重体とお聞きしてから」穏やかな2ショット) 2026/09/18
+*   銅線14トン(時価約2200万円)窃盗疑い ベトナム籍5人逮捕 太陽光施設から 石川など6県警捜査 (銅線14トン(時価約2200万円)窃盗疑い ベトナム籍5人逮捕 太陽光施設から 石川など6県警捜査) 2026/09/18
+*   70代女性が刃物で切り付けられ軽乗用車奪われる 犯人の外国人風の男2人組が逃走中 静岡・袋井市 (70代女性が刃物で切り付けられ軽乗用車奪われる 犯人の外国人風の男2人組が逃走中 静岡・袋井市) 2026/09/18
+*   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4 (町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4) 2026/09/18
+*   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4 (町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4) 2026/09/18
+*   志らく、森本レオさん巡る紀藤弁護士の指摘に猛反論「人の心がないのか」「人の死を悼む。人間として当たり前。擁護でもなんでもない」 (志らく、森本レオさん巡る紀藤弁護士の指摘に猛反論「人の心がないのか」「人の死を悼む。人間として当たり前。擁護でもなんでもない」) 2026/09/18
+*   女優見上愛 もともと「照明さん」志望だった 中2で観劇し直感「将来、コレだ」演出家への夢も (女優見上愛 もともと「照明さん」志望だった 中2で観劇し直感「将来、コレだ」演出家への夢も) 2026/09/18
+*   「今まで何だったん」堀大輔氏 配信終了後に「ショートスリーパー」表記を削除→「睡眠時間は自由」に変更でネット騒然 ★3 (「今まで何だったん」堀大輔氏 配信終了後に「ショートスリーパー」表記を削除→「睡眠時間は自由」に変更でネット騒然 ★3) 2026/09/18
+*   アジア大会日本のコンテナ型宿舎に批判 韓国バスケットボール協会「歴代最悪」 組織委員会「不満や懸念は認識している」 (アジア大会日本のコンテナ型宿舎に批判 韓国バスケットボール協会「歴代最悪」 組織委員会「不満や懸念は認識している」) 2026/09/18
+*   アジア大会「12時間空腹だった」入国後に待ちぼうけの中国男子体操選手が苦情「我慢できなくなり別のホテルを取った」 (アジア大会「12時間空腹だった」入国後に待ちぼうけの中国男子体操選手が苦情「我慢できなくなり別のホテルを取った」) 2026/09/18
+*   アジア大会「12時間空腹だった」入国後に待ちぼうけの中国男子体操選手が苦情「我慢できなくなり別のホテルを取った」 (アジア大会「12時間空腹だった」入国後に待ちぼうけの中国男子体操選手が苦情「我慢できなくなり別のホテルを取った」) 2026/09/18
+*   中国の新幹線で、スマホ注文のホカホカ弁当に驚き!中国人「ご飯が冷たいのは大変失礼な行為です」 (中国の新幹線で、スマホ注文のホカホカ弁当に驚き!中国人「ご飯が冷たいのは大変失礼な行為です」) 2026/09/18
+*   アジア大会名古屋空港当局、大型太極旗を認めず…「こんなことは初めて。理解しがたい」 (アジア大会名古屋空港当局、大型太極旗を認めず…「こんなことは初めて。理解しがたい」) 2026/09/18
+*   中央日報米国・日本を抜いた…外国人10人のうち6人が韓国を訪れたい理由 (中央日報米国・日本を抜いた…外国人10人のうち6人が韓国を訪れたい理由) 2026/09/18
+*   豊臣秀吉登場のアジア大会イベント 韓国側が正式に抗議 (豊臣秀吉登場のアジア大会イベント 韓国側が正式に抗議) 2026/09/18
+*   ガソリンスタンドの廃業が加速 -- 「近くに給油所がない」時代へ #エキスパートトピ (ガソリンスタンドの廃業が加速 -- 「近くに給油所がない」時代へ #エキスパートトピ) 2026/09/18
+*   エネルギー「10電力体制」再編論が再燃も 浜岡原発白紙、中部電力に減損リスク (エネルギー「10電力体制」再編論が再燃も 浜岡原発白紙、中部電力に減損リスク) 2026/09/18
+*   スマホ国内スマホ市場、Android端末が54%に伸長 値上げでiPhone離れか (スマホ国内スマホ市場、Android端末が54%に伸長 値上げでiPhone離れか) 2026/09/18
+*   杉尾ひでや参議院議員「広報予算が必要ないと言うつもりは全くない。ただ…急増させる必要があるのか高市総理には説明責任がある」 (杉尾ひでや参議院議員「広報予算が必要ないと言うつもりは全くない。ただ…急増させる必要があるのか高市総理には説明責任がある」) 2026/09/18
+*   「たたかいこれから」エール交換/デニー氏、各党・議員にあいさつ/共産党は田村委員長らが応対 (「たたかいこれから」エール交換/デニー氏、各党・議員にあいさつ/共産党は田村委員長らが応対) 2026/09/18
+*   あまりにも露骨です。知事が代わった途端、褒美をとらせるように予算を増やす。この島の苦しみをもてあそぶつもりか (しんぶん赤旗) (あまりにも露骨です。知事が代わった途端、褒美をとらせるように予算を増やす。この島の苦しみをもてあそぶつもりか (しんぶん赤旗)) 2026/09/18
+*   考古学エジプト・ツタンカーメンの墓の奥に別の巨大な王墓が存在か 義母・ネフェルティティの王墓の可能性 (考古学エジプト・ツタンカーメンの墓の奥に別の巨大な王墓が存在か 義母・ネフェルティティの王墓の可能性) 2026/09/18
+*   ほんやら洞路地で遊ぶ子、ちんどん屋…京都の記憶の光景 甲斐扶佐義さんが東京外大で写真展「京都出町－道草の景色」 (ほんやら洞路地で遊ぶ子、ちんどん屋…京都の記憶の光景 甲斐扶佐義さんが東京外大で写真展「京都出町－道草の景色」) 2026/09/18
+*   岡山ナガエツルノゲイトウ早期発見を 岡山市、啓発チラシで周知へ (岡山ナガエツルノゲイトウ早期発見を 岡山市、啓発チラシで周知へ) 2026/09/18
+*   イギリス南部の村、国からの離脱を住民投票で選択 難民収容計画めぐり (イギリス南部の村、国からの離脱を住民投票で選択 難民収容計画めぐり) 2026/09/18
+*   アメリカAI脅威、超党派で訴え サンダース氏とバノン氏、政敵共闘 米首都集会「規制強化を」 (アメリカAI脅威、超党派で訴え サンダース氏とバノン氏、政敵共闘 米首都集会「規制強化を」) 2026/09/18
+*   残念系青春ラブコメ『僕は友達が少ない』アニメ15周年記念! ABEMA一挙無料配信&秋葉原でオンリーショップ開催。はがない (残念系青春ラブコメ『僕は友達が少ない』アニメ15周年記念! ABEMA一挙無料配信&秋葉原でオンリーショップ開催。はがない) 2026/09/18
+*   『薬屋のひとりごと』の作者・日向夏氏原作のマンガ『神さま学校の落ちこぼれ』がアニメ化決定! ('薬屋のひとりごと'の作者・日向夏氏原作のマンガ『神さま学校の落ちこぼれ』がアニメ化決定!) 2026/09/18
+*   「逆ギレ」の構図が透ける…沖縄県知事選で激増「選挙デマ」 本土からの濁流に地元の新聞はどう抗ったのか (東京新聞) (「逆ギレ」の構図が透ける…沖縄県知事選で激増「選挙デマ」 本土からの濁流に地元の新聞はどう抗ったのか (東京新聞)) 2026/09/18
+*   次のパンデミックでワクチンを打ちますか?日本人2万人以上を調査 「必ず・おそらく接種する」53.1% ★6 (次のパンデミックでワクチンを打ちますか?日本人2万人以上を調査 「必ず・おそらく接種する」53.1% ★6) 2026/09/18
+*   志らく、森本レオさん巡る紀藤弁護士の指摘に猛反論「人の心がないのか」「人の死を悼む。人間として当たり前。擁護でもなんでもない」 (志らく、森本レオさん巡る紀藤弁護士の指摘に猛反論「人の心がないのか」「人の死を悼む。人間として当たり前。擁護でもなんでもない」) 2026/09/18
+*   女優見上愛 もともと「照明さん」志望だった 中2で観劇し直感「将来、コレだ」演出家への夢も (女優見上愛 もともと「照明さん」志望だった 中2で観劇し直感「将来、コレだ」演出家への夢も) 2026/09/18
+*   落語六代目柳家小さんが落語協会副会長就任 (落語六代目柳家小さんが落語協会副会長就任) 2026/09/18
+*   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4 (町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」4) 2026/09/18
+*   「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業 (「日本一おかき処 播磨屋本店」が2027年3月末をもって廃業) 2026/09/18
+*   音楽音楽音楽小西康陽、キャリア初の弾き語りアルバム 音楽とあなたには感謝している (音楽音楽音楽小西康陽、キャリア初の弾き語りアルバム 音楽とあなたには感謝している) 2026/09/18
+*   51歳・神田うの 年内は治療に専念へ…「お仕事以外全てお断り」病名も公表「完全に寛解するまでは…」 (51歳・神田うの 年内は治療に専念へ…「お仕事以外全てお断り」病名も公表「完全に寛解するまでは…」) 2026/09/18
+*   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」3 (町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」3) 2026/09/18
+*   日銀、1.25%への利上げ決定 2人が反対票 (日銀、1.25%への利上げ決定 2人が反対票) 2026/09/18
+*   沖縄知事当選の古謝氏 家族関係先に爆破予告 県警も把握し調べる (沖縄タイムス) (沖縄知事当選の古謝氏 家族関係先に爆破予告 県警も把握し調べる (沖縄タイムス)) 2026/09/18
+*   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」2 (町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」2) 2026/09/18
+*   町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」 (町山智浩、具材一種類のローソン「一点突破」弁当に「日本をこんなに貧乏にした自民党を、なんで国民の皆さんは支持し続けるんですか」) 2026/09/18
+*   国内スマホ市場Android端末が54%に伸長 値上げでiPhone離れか ★4 (国内スマホ市場Android端末が54%に伸長 値上げでiPhone離れか ★4) 2026/09/18
+*   鈴木憲和農相が退任「本当にありがとうございました」 (鈴木憲和農相が退任「本当にありがとうございました」) 2026/09/18
+*   次のパンデミックでワクチンを打ちますか?日本人2万人以上を調査 「必ず・おそらく接種する」53.1% ★5 (次のパンデミックでワクチンを打ちますか?日本人2万人以上を調査 「必ず・おそらく接種する」53.1% ★5) 2026/09/18
+*   著名な米エコノミスト、日本は1.5－2%へ利上げ必要 「長期的には1ドル=130円台や120円台の水準に」 (著名な米エコノミスト、日本は1.5－2%へ利上げ必要 「長期的には1ドル=130円台や120円台の水準に」) 2026/09/18
