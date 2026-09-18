@@ -33,11 +33,11 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const edition=makeEdition(parsed,current,{date,editorLabel:model});
     for(const section of ['important','sports','other']){
       for(let i=0;i<edition[section].length;i++){
-        if(section==='important'&&i>=8)continue;
+        if(section==='important'&&i>=11)continue;
         const article=parsed[section][i], target=edition[section][i];
         const top=section==='important'&&i===0;
         const two=section==='important'&&[1,2,6,7].includes(i);
-        const ranges=top?[[360,390],[140,155]]:two?[[300,315],[210,225]]:[[190,200],[135,145]];
+        const ranges=top?[[240,280],[100,130]]:two?[[180,220],[120,160]]:[[110,140],[70,100]];
         const maxTitle=top?48:two?44:28;
         const invalid=message=>{const e=new Error(section+'['+i+']: '+message);e.retryable=true;throw e};
         if([...target.title].length>maxTitle)invalid('title exceeds '+maxTitle+' characters');
