@@ -14,7 +14,6 @@ on:
       - 'config.json'
       - 'assets/**'
   schedule:
-    # 22:30 UTC = 07:30 JST (日本時間 朝7時30分)
     - cron: '30 22 * * *'
 
 env:
@@ -69,11 +68,12 @@ jobs:
         run: node summarize1.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Run Gemini Analysis (Step 2 - Classify and summarize)
         run: node summarize15.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          
+
       - name: Run Gemini Analysis (Step 3 - Classify and summarize)
         run: node summarize2.js
         env:
@@ -115,23 +115,33 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSPAPER_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}
 
-      # --- 先にリポジトリへ保存する ---
+      - name: Generate one daily editorial visual
+        run: node newspaper/generate-daily-visual.mjs
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DAILY_VISUAL_SELECTION_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}
+          DAILY_VISUAL_MODEL: ${{ vars.DAILY_VISUAL_MODEL || 'gemini-2.5-flash-image' }}
+
       - name: Save results
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
           if [ -f newspaper.json ]; then git add newspaper.json; fi
+          if [ -f daily-visual.json ]; then git add daily-visual.json; fi
+          if [ -f daily-visual.png ]; then git add daily-visual.png; fi
+          if [ -f daily-visual.jpg ]; then git add daily-visual.jpg; fi
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
           git push
 
-      # --- GitHub Pages 用のアーティファクトを準備する ---
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
           cp index.html web-newspaper.html paper-newspaper.html newspaper.html print.html newspaper.css app.js config.json _site/
           cp wordcloud.jpg _site/ 2>/dev/null || true
+          cp daily-visual.json daily-visual.png daily-visual.jpg _site/ 2>/dev/null || true
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
 
@@ -140,7 +150,6 @@ jobs:
         with:
           path: _site
 
-  # --- GitHub Pages へデプロイする ---
   deploy:
     needs: build
     runs-on: ubuntu-latest
