@@ -2,7 +2,7 @@ const $ = s => document.querySelector(s);
 const escape = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels = {important:'重要ニュース',sports:'スポーツ',other:'その他のニュース'};
 const storage = {get(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}}};
-let edition, query = '', font = Number(storage.get('newspaper:font',15)), toastTimer, printPrepared = false;
+let edition, query = '', font = Number(storage.get('newspaper:font',15)), toastTimer;
 font = Number.isFinite(font) ? Math.min(20,Math.max(13,font)) : 15;
 function toast(message){$('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,2600)}
 function allArticles(){return edition ? Object.entries(labels).flatMap(([section])=>edition[section].map((a,i)=>({...a,section,rank:i+1}))) : []}
@@ -72,13 +72,6 @@ function openArticle(id,changeHash=true){const a=findArticle(id);if(!a)return;
 }
 function setFont(){document.documentElement.style.setProperty('--body-size',`${font}px`);$('#font-down').disabled=font<=13;$('#font-up').disabled=font>=20;storage.set('newspaper:font',font)}
 function reset(){query='';$('#search').value='';render()}
-function preparePrint(scope='all'){
-  if(!edition)return false;
-  const arts=allArticles().filter(a=>scope!=='important'||a.section==='important');
-  if(!arts.length)return false;
-  $('#print-root').innerHTML=`<div class="print-masthead"><strong>Keroppa Morning News.</strong><span>新聞風 ／ ${escape(edition.date)} 号<br>${escape(scope==='important'?'重要ニュース':'重要ニュース・スポーツ・その他')}</span></div>${Object.entries(labels).map(([s,label])=>{const list=arts.filter(a=>a.section===s);return list.length?`<section><h2>${label} ｜ ${list.length}件</h2><div class="print-articles">${list.map(a=>`<article><div class="print-label">${escape(a.category)}</div><h3>${escape(a.title)}</h3><p>${escape(a.summary)}</p><small>${escape(media(a).join(' ・ '))} ／ ${escape(a.sources[0]?.date)}</small></article>`).join('')}</div></section>`:''}).join('')}<p class="print-footer">元ページの見出しを集約した記事です。元の見出し・媒体名はオンライン版の「掲載見出し」で確認できます。<br>元サイト： https://keroppa88.github.io/news/</p>`;
-  printPrepared=true;return true;
-}
 document.addEventListener('click',async e=>{
   const open=e.target.closest('[data-open]');if(open){openArticle(open.dataset.open);return}
   const close=e.target.closest('[data-close]');if(close){$(`#${close.dataset.close}`).close();return}
@@ -89,9 +82,7 @@ $('#article-dialog').addEventListener('close',()=>{if(location.hash.startsWith('
 $('#search').addEventListener('input',e=>{query=e.target.value.trim().toLocaleLowerCase();render()});
 $('#reset-filter').onclick=reset;$('#empty-reset').onclick=reset;
 $('#font-down').onclick=()=>{font=Math.max(13,font-1);setFont()};$('#font-up').onclick=()=>{font=Math.min(20,font+1);setFont()};
-$('#refresh').onclick=refresh;$('#print-open').onclick=()=>{$('#print-dialog').showModal()};
-$('#print-now').onclick=async()=>{const scope=$('input[name="print-scope"]:checked').value;if(!preparePrint(scope)){toast('印刷する記事がありません');return}$('#print-dialog').close();await document.fonts.ready;window.print()};
-window.addEventListener('beforeprint',()=>{if(!printPrepared)preparePrint('all')});window.addEventListener('afterprint',()=>{printPrepared=false});
+$('#refresh').onclick=refresh;
 $('#to-top').onclick=()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 window.addEventListener('scroll',()=>{$('#to-top').hidden=window.scrollY<650},{passive:true});
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search').focus()}});

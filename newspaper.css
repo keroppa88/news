@@ -10,6 +10,7 @@
 
 /* Newspaper masthead and simplified reading controls */
 :root{--serif:'Yu Mincho','Hiragino Mincho ProN','Hiragino Mincho Pro',serif}
+.mode-switch{display:flex;align-items:center;gap:4px;flex-wrap:wrap}.mode-switch a{display:inline-block;padding:4px 8px;border:1px solid #9aa0a3;border-radius:2px;background:#f8f7f3;color:var(--ink);font-size:10px;line-height:1.2;text-decoration:none}.mode-switch a[aria-current=page]{background:var(--ink);border-color:var(--ink);color:#fff}.mode-switch a:hover{border-color:var(--red);color:var(--red)}.mode-switch a[aria-current=page]:hover{color:#fff}
 .brand>span{font-family:MorningMasthead,Georgia,'Times New Roman',serif;font-size:clamp(34px,4.5vw,58px);letter-spacing:-1.5px;line-height:1.08}
 .font-controls{border-left:0;padding-left:0}
 .story-title a{font:inherit;line-height:inherit;text-decoration:none}
