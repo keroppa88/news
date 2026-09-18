@@ -2,10 +2,10 @@
   "date": "2026-09-18",
   "storyId": "344133f61427c495",
   "storyTitle": "日本、インフレ抑制のため31年ぶり大幅利上げ 金利は1.25%に",
-  "mode": "satire",
+  "mode": "fictional-photo",
   "image": "daily-visual.png",
-  "caption": "インフレ抑制へ、31年ぶりの利上げ",
-  "generatedAt": "2026-09-18T06:20:47.265Z",
+  "caption": "インフレ抑制か、家計圧迫か。",
+  "generatedAt": "2026-09-18T06:26:55.368Z",
   "model": "gemini-2.5-flash-image",
-  "styleVersion": "textless-v2"
+  "styleVersion": "print-v3"
 }
