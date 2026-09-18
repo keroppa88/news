@@ -1,8 +1,31 @@
 {
   "date": "2026-09-18",
-  "image": null,
-  "status": "rejected",
+  "storyId": "1741321086f78cc5",
+  "storyTitle": "高市改造内閣が本格始動、裏金議員10人が副大臣・政務官に起用",
+  "mode": "satire",
+  "image": "daily-visual.png",
+  "caption": "",
+  "generatedAt": "2026-09-18T11:01:02.563Z",
+  "model": "gemini-2.5-flash-image",
   "styleVersion": "english-v6",
-  "reason": "Image text validation failed",
-  "attempts": 3
+  "allowedWords": [
+    "TAKAYCHI CABINET",
+    "CORRUPT POLITICIANS",
+    "STATE MINISTER"
+  ],
+  "review": {
+    "texts": [
+      "TAKAYCHI CABINET",
+      "STATE MINISTER"
+    ],
+    "hasMalformedText": false,
+    "approved": true,
+    "model": "gemini-2.5-flash",
+    "allowedWords": [
+      "TAKAYCHI CABINET",
+      "CORRUPT POLITICIANS",
+      "STATE MINISTER"
+    ]
+  },
+  "attempts": 1
 }
