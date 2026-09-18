@@ -22,3 +22,16 @@
 
 出力：JSONのみ。各配列要素のキーは title, summary, category, sourceIds。
 {"important":[{"title":"...","summary":"...","category":"...","sourceIds":["..."]}],"sports":[...],"other":[...]}
+
+
+紙新聞用の組版（必須）：
+各記事に printBody: {oneLine:"本文",twoLines:"本文",shortfallReason:""} を追加する。
+同じ事実に基づき、見出し1行用・2行用の本文をそれぞれ完結した文章で生成する。文字数は句読点も1文字として数える。
+配置別の本文文字数：
+- important先頭（トップ）：oneLine 360〜390字、twoLines 140〜155字。
+- importantの2・3・7・8番目（2分割）：oneLine 300〜315字、twoLines 210〜225字。
+- importantの4〜6番目、sports、other（3分割）：oneLine 190〜200字、twoLines 135〜145字。
+- importantの9・10番目は見出しのみなのでprintBody不要。
+titleはトップ最大48字、2分割最大44字、3分割最大28字。最大2行に収めるため優先して短くする。
+本文は入力見出しから得られる事実だけで組み立てる。反復・一般論・架空の背景による水増しは禁止。材料不足で下限に届かない場合のみshortfallReasonに不足理由を記し、短い事実本文を返す。上限は必ず守る。
+summaryは従来どおりWeb用。printBodyは別に作成する。
