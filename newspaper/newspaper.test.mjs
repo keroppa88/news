@@ -29,7 +29,7 @@ test('labels use verified concept spellings and drop unsupported names',()=>{
   assert.deepEqual(selectVerifiedLabels([{source:'高市内閣',english:'TAKAYCHI CABINET'},{source:'高市',english:'TAKAYCHI'},{source:'銀行',english:'BANCKS'}],'高市内閣と銀行'),['CABINET','BANKS']);
   assert.deepEqual(selectVerifiedLabels([{source:'銀行',english:'BANKS'}],'内閣'),[]);
 });
-test('generator accepts concise print bodies; overlong output preserves the existing edition',async()=>{
+test('generator accepts concise bodies, edits oversized text, and preserves data on editing failure',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'newspaper-test-'));
   try{
     const input=join(dir,'input.txt'),output=join(dir,'newspaper.json');
@@ -37,11 +37,14 @@ test('generator accepts concise print bodies; overlong output preserves the exis
     const sources=parseHeadlines(await readFile(input,'utf8'));
     const data=edition();
     [...data.important,...data.sports,...data.other].forEach((a,i)=>{a.sourceIds=[`E${i+1}`];a.printBody={oneLine:a.summary,twoLines:a.summary,shortfallReason:''}});
-    const run=()=>spawnSync(process.execPath,['--input-type=module','-e',`
+    const run=(failEdits=false)=>spawnSync(process.execPath,['--input-type=module','-e',`
       globalThis.setTimeout=(callback)=>{callback();return 0};
       globalThis.fetch=async (_url,options)=>{
         const request=JSON.parse(options.body);
-        if(request.generationConfig.responseSchema.properties.title)return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({title:'フェルスタッペン、レースで圧倒'})}]}}]})};
+        if(request.generationConfig.responseSchema.properties.text){
+          if(${failEdits})return {ok:false,status:500};
+          return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({text:'フェルスタッペン、レースで圧倒'})}]}}]})};
+        }
         if(request.generationConfig.responseSchema.properties.important.items.properties.sourceIds.items.enum.length!==15)throw Error('Missing evidence enum');
         return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify(${JSON.stringify(data)})}]}}]})};
       };
@@ -58,7 +61,10 @@ test('generator accepts concise print bodies; overlong output preserves the exis
     assert.equal(JSON.parse(saved).sports[0].title,'フェルスタッペン、レースで圧倒');
     assert.equal(JSON.parse(saved).sports[0].sources[0].id,sources[13].id);
     data.important[0].printBody.oneLine='長'.repeat(281);
-    const failure=run();assert.notEqual(failure.status,0);assert.match(failure.stderr,/20–280/);
+    const compacted=run();assert.equal(compacted.status,0,compacted.stderr);
+    saved=await readFile(output,'utf8');
+    assert.ok(JSON.parse(saved).important[0].printBody.oneLine.length<=280);
+    const failure=run(true);assert.notEqual(failure.status,0);assert.match(failure.stderr,/Text editing HTTP 500/);
     assert.equal(await readFile(output,'utf8'),saved);
   }finally{await rm(dir,{recursive:true,force:true})}
 });
