@@ -1,8 +1,15 @@
 import { createHash } from 'node:crypto';
 export function parseHeadlines(text){
   const found=new Map();
+  let sectionMedia='';
   for(const line of text.split(/\r?\n/)){
-    const m=line.match(/^\s*[-*]\s+(.+?)\s*[（(]([^（）()]+)[）)]\s*(\d{4}\/\d{1,2}\/\d{1,2})\s*$/);
+    const heading=line.match(/●●([^●]+)●●/);
+    if(heading){sectionMedia=heading[1].trim();continue}
+    let m=line.match(/^\s*[-*]\s+(.+?)\s*[（(]([^（）()]+)[）)]\s*(\d{4}\/\d{1,2}\/\d{1,2})\s*$/);
+    if(!m&&sectionMedia){
+      const dated=line.match(/^\s*[-*]\s+(.+?)\s*[（(](\d{4}\/\d{1,2}\/\d{1,2})[）)]\s*$/);
+      if(dated)m=[dated[0],dated[1],sectionMedia,dated[2]];
+    }
     if(!m)continue;
     const title=m[1].trim().replace(/\s+/g,' '),media=m[2].trim(),date=m[3].split('/').map((x,i)=>i?x.padStart(2,'0'):x).join('-');
     if(title.length<4||/提供されていない|記事なし/.test(title))continue;
