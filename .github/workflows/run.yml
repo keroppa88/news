@@ -7,6 +7,8 @@ on:
     paths:
       - '.github/workflows/run.yml'
       - 'web/add_navigation.js'
+      - 'web/add_market_strip.js'
+      - 'market/**'
       - 'newspaper/**'
       - 'paper-newspaper.html'
       - 'config.json'
@@ -45,9 +47,16 @@ jobs:
           npm ci
           npx playwright install --with-deps chromium
 
+      - name: Test market quote parser
+        run: node --test market/matsui.test.js
+
       - name: Run news scrapers
         if: github.event_name != 'push'
         run: node Run.js
+
+      - name: Collect Matsui market snapshot
+        run: node market/collect.js
+        continue-on-error: true
 
       - name: Run Yahoo Realtime scraper
         if: github.event_name != 'push'
@@ -123,6 +132,9 @@ jobs:
       - name: Add newspaper navigation
         run: node web/add_navigation.js
 
+      - name: Add Matsui market rows
+        run: node web/add_market_strip.js
+
       - name: Test newspaper validation
         run: node --test newspaper/newspaper.test.mjs
 
@@ -136,7 +148,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/ market.json
           if [ -f newspaper.json ]; then git add newspaper.json; fi
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
@@ -145,7 +157,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
-          cp index.html paper-newspaper.html print.html config.json _site/
+          cp index.html paper-newspaper.html print.html config.json market.json _site/
           cp wordcloud.jpg _site/ 2>/dev/null || true
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
