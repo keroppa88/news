@@ -1,0 +1,37 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {REQUIRED,keyFor,quoteDate,extractRows,extractFallback,complete,displayed}=require('./rakuten');
+const now='2026-09-19T09:00:00.000Z';
+const rows=[
+ ['日経平均株価','63,923.00','+438.90','+0.69%','2026/09/18 15:30'],
+ ['日経225先物','64,210.00','-100.00','-0.16%','09/19 06:00'],
+ ['TOPIX','4,121.00','+31.00','+0.76%','09/18 15:30'],
+ ['NYダウ','50,123.00','-100.00','-0.20%','09/18 16:00'],
+ ['S&P500','7,500.00','+10.00','+0.13%','09/18 16:00'],
+ ['NASDAQ総合指数','24,900.00','-15.00','-0.06%','09/18 16:00'],
+ ['米ドル/円','157.4500','+0.3500','+0.22%','09/19 05:00'],
+ ['WTI原油先物','92.34','-1.23','-1.31%','09/18 17:00'],
+ ['日本国債10年','2.880','+0.015','+0.52%','09/18 15:30'],
+ ['米国10年国債','4.250','-0.031','-0.72%','09/18 16:00'],
+];
+test('Rakuten table extracts all ten targeted instruments and exact columns',()=>{
+ const m=extractRows(rows,now);
+ assert.equal(REQUIRED.length,10);assert.equal(complete(m),true);
+ assert.deepEqual(m.nikkei,{value:63923,change:438.9,percent:0.69,date:'2026/09/18 15:30'});
+ assert.deepEqual(m.usdjpy,{value:157.45,change:0.35,date:'2026/09/19 05:00'});
+ assert.deepEqual(m.oil,{value:92.34,change:-1.23,date:'2026/09/18 17:00'});
+ assert.deepEqual(m.jgb10,{change:0.015,date:'2026/09/18 15:30'});
+ assert.deepEqual(m.ust10,{change:-0.031,date:'2026/09/18 16:00'});
+ assert.match(displayed(m.oil,'原油'),/原油 92\.34 -1\.23/);
+});
+test('Missing placeholders never create fabricated numbers or dates',()=>{
+ assert.equal(complete(extractRows([['NYダウ','-','-','-','-']],now)),false);
+ assert.deepEqual(extractRows([['日本国債10年','2.8','-','-','09/18 15:30']],now),{});
+});
+test('Plain text fallback and year rollover',()=>{
+ assert.equal(quoteDate('12/31 15:30','2027-01-01T06:00:00Z'),'2026/12/31 15:30');
+ const m=extractFallback('WTI原油先物\n92.34\n-1.23\n-1.31%\n09/18 17:00',now);
+ assert.equal(m.oil.value,92.34);
+ assert.equal(keyFor('米国10年国債'),'ust10');
+});
