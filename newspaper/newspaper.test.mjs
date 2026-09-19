@@ -40,7 +40,7 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
           if(${failEdits})return {ok:false,status:500};
           return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({text:'フェルスタッペン、レースで圧倒'})}]}}]})};
         }
-        if(request.generationConfig.responseSchema.properties.important.items.properties.sourceIds.items.enum.length!==18)throw Error('Missing evidence enum');
+        if(request.generationConfig.responseSchema.properties.important.items.properties.sourceIds.minItems!==1)throw Error('Missing evidence requirement');
         return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify(${JSON.stringify(data)})}]}}]})};
       };
       await import(${JSON.stringify(pathToFileURL(resolve('newspaper/generate-newspaper.mjs')).href)});

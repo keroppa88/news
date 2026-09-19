@@ -21,7 +21,7 @@ const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
  title:{type:'STRING',description:'簡潔な日本語見出し。18〜26文字を目安に短く。'},summary:{type:'STRING'},category:{type:'STRING'},
- sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',enum:current.map(h=>h.id)}},
+ sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',description:'入力headlinesに存在するidをそのままコピーする（例 E1）。'}},
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds']};
 const responseSchema={type:'OBJECT',properties:{
