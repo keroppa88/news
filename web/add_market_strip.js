@@ -12,9 +12,9 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const rows=[
  [['日経平均株価','nikkei'],['日経225指数先物','nikkeiFutures'],['TOPIX','topix']],
  [['NYダウ','dow'],['S&P500','sp500'],['NASDAQ','nasdaq']],
- [['米ドル円','usdjpy'],['原油','oil'],['日本国債10年','jgb10'],['米国10年国債','ust10']],
+ [['米ドル円','usdjpy'],['原油','oil'],['日本国債10年','jgb10'],['米国債10年','ust10']],
 ];
-const strip='<!-- MARKET_STRIP_START --><div class="market-strip" aria-label="株価指数・為替・原油・国債（数値には更新日時を併記）">'+rows.map((row,i)=>
+const strip='<!-- MARKET_STRIP_START --><div class="market-strip" aria-label="株価指数・為替・原油・国債（日付は月日表示）">'+rows.map((row,i)=>
  `<div class="market-strip-row" data-row="${i+1}">`+row.map(([label,key])=>
   `<span class="market-quote">${esc(displayed(markets[key],label))}</span>`).join('')+'</div>').join('')+'</div><!-- MARKET_STRIP_END -->';
 const css='<style id="market-strip-style">.market-strip{width:100%;font:9px/1.35 sans-serif;text-align:center;border-bottom:1px solid #222;padding:2px 0 3px}.market-strip-row{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:0;white-space:nowrap}.market-quote{display:inline-block;padding:2px 4px;border-right:1px solid #888}.market-quote:last-child{border-right:0}@media screen and (max-width:850px){.market-strip{overflow-x:auto;text-align:left}.market-strip-row{justify-content:flex-start;width:max-content;min-width:100%}.market-quote{padding:3px 5px}}@media print{.market-strip{font-size:6.5pt;overflow:visible}.market-strip-row{justify-content:center;white-space:normal}.market-quote{padding:1px 2px}}</style>';
