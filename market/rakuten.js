@@ -21,7 +21,7 @@ function keyFor(s){
  if(/(?:日経225|日経平均|nikkei225).*(?:先物|future)/.test(t)&&!/(?:mini|ミニ|マイクロ)/.test(t))return 'nikkeiFutures';
  if(/^topix(?:\(.*\))?$/.test(t)&&!t.includes('先物'))return 'topix';
  if(/^(?:nyダウ|ダウ(?:工業株)?(?:30種)?(?:平均)?|ダウ・ジョーンズ(?:工業株)?(?:平均)?)(?:\(.*\))?$/.test(t))return 'dow';
- if(/^s&p500(?:種(?:株価)?指数)?(?:\(.*\))?$/.test(t))return 'sp500';
+ if(/^s&p500(?:(?:種(?:株価)?)?指数)?(?:\(.*\))?$/.test(t))return 'sp500';
  if(/^(?:nasdaq|ナスダック)(?:総合(?:指数)?)?(?:\(.*\))?$/.test(t))return 'nasdaq';
  if(/^(?:米ドル(?:\/|・|-)?円|usd(?:\/|-)jpy|ドル\/円)(?:\(.*\))?$/.test(t))return 'usdjpy';
  if(/^(?:wti(?:原油)?(?:先物)?|原油(?:\(wti\))?|原油wti(?:先物)?|wti原油(?:先物)?)(?:\(.*\))?$/.test(t))return 'oil';
@@ -34,7 +34,7 @@ function parseRow(cells,capturedAt){
  const date=c.slice(3).map(s=>quoteDate(s,capturedAt)).find(Boolean);if(!date)return null;
  const value=numeric(c[1]),change=signedNumber(c[2]);
  const percent=c.slice(3,-1).map(s=>s.includes('%')?signedNumber(s):null).find(n=>n!==null&&n!==undefined);
- if(['jgb10','ust10'].includes(key))return change===null?null:{key,change,date};
+ if(['jgb10','ust10'].includes(key))return {key,change,date};
  if(['topix','sp500','nasdaq'].includes(key))return percent===undefined||percent===null?null:{key,percent,date};
  if(key==='nikkeiFutures')return value===null?null:{key,value,date};
  if(key==='usdjpy'||key==='oil')return value===null||change===null?null:{key,value,change,date};
@@ -57,9 +57,9 @@ function displayed(item,key){
  if(!item)return `${key} —`;const date=`（${item.date}）`;
  if(key==='日経平均株価'||key==='NYダウ')return `${key} ${num(item.value)} ${signed(item.change)} ${pct(item.percent)} ${date}`;
  if(key==='日経225指数先物')return `${key} ${num(item.value)} ${date}`;
- if(key==='米ドル円')return `${key} ${num(item.value,2,4)} ${signed(item.change,2)} ${date}`;
+ if(key==='米ドル円')return `${key} ${num(item.value,2,4)} ${signed(item.change,4)} ${date}`;
  if(key==='原油')return `${key} ${num(item.value)} ${signed(item.change)} ${date}`;
- if(key==='日本国債10年'||key==='米国10年国債')return `${key} ${signed(item.change,3)} ${date}`;
+ if(key==='日本国債10年'||key==='米国10年国債')return `${key} ${item.change===null?'—':signed(item.change,3)} ${date}`;
  return `${key} ${pct(item.percent)} ${date}`;
 }
 module.exports={URLS,REQUIRED,clean,keyFor,quoteDate,parseRow,extractRows,extractFallback,complete,displayed};
