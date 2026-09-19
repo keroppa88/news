@@ -25,7 +25,7 @@ const articleSchema={type:'OBJECT',properties:{
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds']};
 const responseSchema={type:'OBJECT',properties:{
- important:{type:'ARRAY',minItems:16,maxItems:16,items:articleSchema},
+ important:{type:'ARRAY',description:'重要ニュースを必ず16件、重要度順に返す。',items:articleSchema},
  sports:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema},
  other:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema}
 },required:['important','sports','other']};
