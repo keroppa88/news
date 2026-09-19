@@ -40,7 +40,8 @@ function parseRow(cells,capturedAt){
  }
  const value=numeric(c[1]),change=signedNumber(c[2]);
  const percent=c.slice(3,-1).map(s=>s.includes('%')?signedNumber(s):null).find(n=>n!==null&&n!==undefined);
- if(['jgb10','ust10'].includes(key))return {key,change,date};
+ // A missing daily change remains null; the published yield is still valid.
+ if(['jgb10','ust10'].includes(key))return value===null?null:{key,value,change,date};
  if(['topix','sp500','nasdaq'].includes(key))return percent===undefined||percent===null?null:{key,percent,date};
  if(key==='nikkeiFutures')return value===null?null:{key,value,date};
  if(key==='oil')return value===null||change===null?null:{key,value,change,date};
@@ -59,13 +60,15 @@ const complete=m=>REQUIRED.every(k=>m&&m[k]);
 const num=(n,min=2,max=min)=>Number(n).toLocaleString('en-US',{minimumFractionDigits:min,maximumFractionDigits:max});
 const signed=(n,d=2)=>`${n>=0?'+':''}${num(n,d)}`;
 const pct=n=>`${signed(n)}%`;
+// Keep the full source timestamp in market.json but show only MM/DD on the newspaper.
+const shortDate=date=>{const m=String(date??'').match(/(?:^|\/)\d{2}\/\d{2}/);return m?m[0].replace(/^\//,''):'';};
 function displayed(item,key){
- if(!item)return `${key} —`;const date=`（${item.date}）`;
+ if(!item)return `${key} —`;const date=`（${shortDate(item.date)}）`;
  if(key==='日経平均株価'||key==='NYダウ')return `${key} ${num(item.value)} ${signed(item.change)} ${pct(item.percent)} ${date}`;
- if(key==='日経225指数先物')return `${key} ${num(item.value)} ${date}`;
- if(key==='米ドル円')return `${key} ${num(item.value,2,4)} ${signed(item.change,4)} ${date}`;
+ if(key==='日経225指数先物')return `${key} ${num(Math.trunc(item.value),0)} ${date}`;
+ if(key==='米ドル円')return `${key} ${num(item.value,2,4)} ${date}`;
  if(key==='原油')return `${key} ${num(item.value)} ${signed(item.change)} ${date}`;
- if(key==='日本国債10年'||key==='米国10年国債')return `${key} ${item.change===null?'—':signed(item.change,3)} ${date}`;
+ if(key==='日本国債10年'||key==='米国債10年'||key==='米国10年国債')return `${key} ${item.value===null||item.value===undefined?'—':num(item.value,2)}% ${item.change===null||item.change===undefined?'—':signed(item.change,3)} ${date}`;
  return `${key} ${pct(item.percent)} ${date}`;
 }
-module.exports={URLS,REQUIRED,clean,keyFor,quoteDate,parseRow,extractRows,extractFallback,complete,displayed};
+module.exports={URLS,REQUIRED,clean,keyFor,quoteDate,parseRow,extractRows,extractFallback,complete,displayed,shortDate};
