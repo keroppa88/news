@@ -16,7 +16,7 @@ const original=headlines.filter(h=>new Date(`${h.date}T00:00:00Z`).getTime()>=cu
 // Short request-local IDs reduce copying mistakes and structured-schema complexity.
 const current=original.map((h,index)=>({...h,id:`E${index+1}`}));
 const originalById=new Map(current.map((h,index)=>[h.id,original[index]]));
-if(current.length<12)throw Error('Insufficient source headlines; the previous edition is preserved.');
+if(current.length<18)throw Error('Insufficient source headlines; the previous edition is preserved.');
 const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
@@ -25,7 +25,7 @@ const articleSchema={type:'OBJECT',properties:{
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds']};
 const responseSchema={type:'OBJECT',properties:{
- important:{type:'ARRAY',minItems:13,maxItems:13,items:articleSchema},
+ important:{type:'ARRAY',minItems:16,maxItems:16,items:articleSchema},
  sports:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema},
  other:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema}
 },required:['important','sports','other']};
@@ -65,7 +65,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     for(const section of ['important','sports','other']){
       for(let i=0;i<(parsed[section]?.length||0);i++){
         const article=parsed[section][i];
-        const headlineOnly=section==='important'&&i>=11;
+        const headlineOnly=section==='important'&&i>=14;
         const top=section==='important'&&i===0;
         const two=section==='important'&&[1,2,6,7].includes(i);
         const limits=top?[280,130]:two?[220,160]:[140,100];
@@ -91,7 +91,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     edition=makeEdition(parsed,current,{date,editorLabel:model});
     for(const section of ['important','sports','other'])for(const [index,article] of edition[section].entries()){
       article.sources=article.sources.map(source=>originalById.get(source.id));
-      if(!(section==='important'&&index>=11))article.printBody=parsed[section][index].printBody;
+      if(!(section==='important'&&index>=14))article.printBody=parsed[section][index].printBody;
     }
     await mkdir(dirname(output),{recursive:true});const temp=`${output}.tmp`;await writeFile(temp,JSON.stringify(edition,null,2)+'\n');await rename(temp,output);
     const usage=result.usageMetadata||{};

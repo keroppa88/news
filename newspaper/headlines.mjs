@@ -21,7 +21,7 @@ export function parseHeadlines(text){
 export function validateOutput(data,headlines){
   if(!data||typeof data!=='object')throw Error('JSON object required');
   const known=new Map(headlines.map(h=>[h.id,h])),seen=new Set(),refs=new Set();
-  for(const [section,min,max] of [['important',13,13],['sports',1,3],['other',1,3]]){
+  for(const [section,min,max] of [['important',16,16],['sports',1,3],['other',1,3]]){
     if(!Array.isArray(data[section])||data[section].length<min||data[section].length>max)throw Error(`${section}: expected ${min}–${max} stories`);
     for(const [index,a] of data[section].entries()){
       if(typeof a.title!=='string'||a.title.length<5||a.title.length>80||typeof a.summary!=='string'||a.summary.length<20||a.summary.length>400||typeof a.category!=='string'||a.category.length>20)throw Error('Invalid story text');
