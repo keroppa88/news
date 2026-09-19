@@ -10,7 +10,7 @@ const rows=[
  ['NYダウ','50,123.00','-100.00','-0.20%','09/18 16:00'],
  ['S&P500','7,500.00','+10.00','+0.13%','09/18 16:00'],
  ['NASDAQ総合指数','24,900.00','-15.00','-0.06%','09/18 16:00'],
- ['米ドル/円','157.4500','+0.3500','+0.22%','09/19 05:00'],
+ ['米ドル/円','157.4500','157.5300','+0.3500','+0.22%','09/19 05:00'],
  ['WTI原油先物','92.34','-1.23','-1.31%','09/18 17:00'],
  ['日本国債10年','2.880','+0.015','+0.52%','09/18 15:30'],
  ['米国10年国債','4.250','-0.031','-0.72%','09/18 16:00'],
@@ -24,6 +24,11 @@ test('Rakuten table extracts all ten targeted instruments and exact columns',()=
  assert.deepEqual(m.jgb10,{change:0.015,date:'2026/09/18 15:30'});
  assert.deepEqual(m.ust10,{change:-0.031,date:'2026/09/18 16:00'});
  assert.match(displayed(m.oil,'原油'),/原油 92\.34 -1\.23/);
+});
+test('FX columns: buy and prior-day buy change, never the sell quote',()=>{
+ const m=extractRows([['米ドル/円','156.8500','156.9300','-0.1200','-0.08%','09/19 06:00']],now);
+ assert.deepEqual(m.usdjpy,{value:156.85,change:-0.12,date:'2026/09/19 06:00'});
+ assert.equal(extractRows([['米ドル/円','156.8500','156.9300','--','--','09/19 06:00']],now).usdjpy,undefined);
 });
 test('Missing placeholders preserve dated unavailable yield changes',()=>{
  assert.equal(complete(extractRows([['NYダウ','-','-','-','-']],now)),false);
