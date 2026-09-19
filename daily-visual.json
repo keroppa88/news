@@ -1,29 +1,8 @@
 {
   "date": "2026-09-18",
-  "storyId": "cab3a67d53531d28",
-  "storyTitle": "日銀、政策金利を1.25%に引き上げ",
-  "mode": "satire",
-  "image": "daily-visual.png",
-  "caption": "",
-  "generatedAt": "2026-09-18T16:22:06.356Z",
-  "model": "gemini-2.5-flash-image",
-  "styleVersion": "english-v7",
-  "allowedWords": [
-    "BANKS",
-    "RATE HIKE"
-  ],
-  "review": {
-    "texts": [
-      "RATE HIKE",
-      "BANKS"
-    ],
-    "hasMalformedText": false,
-    "approved": true,
-    "model": "gemini-2.5-flash",
-    "allowedWords": [
-      "BANKS",
-      "RATE HIKE"
-    ]
-  },
-  "attempts": 1
+  "image": null,
+  "status": "rejected",
+  "styleVersion": "english-v8",
+  "reason": "Image text validation failed",
+  "attempts": 3
 }
