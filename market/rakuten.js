@@ -32,12 +32,18 @@ function keyFor(s){
 function parseRow(cells,capturedAt){
  const c=cells.map(clean).filter(Boolean);if(c.length<4)return null;const key=keyFor(c[0]);if(!key)return null;
  const date=c.slice(3).map(s=>quoteDate(s,capturedAt)).find(Boolean);if(!date)return null;
+ // Rakuten FX table: name | buy | sell | change (buy) | change % (buy) | updated.
+ if(key==='usdjpy'){
+  if(c.length<6)return null;
+  const value=numeric(c[1]),change=signedNumber(c[3]);
+  return value===null||change===null?null:{key,value,change,date};
+ }
  const value=numeric(c[1]),change=signedNumber(c[2]);
  const percent=c.slice(3,-1).map(s=>s.includes('%')?signedNumber(s):null).find(n=>n!==null&&n!==undefined);
  if(['jgb10','ust10'].includes(key))return {key,change,date};
  if(['topix','sp500','nasdaq'].includes(key))return percent===undefined||percent===null?null:{key,percent,date};
  if(key==='nikkeiFutures')return value===null?null:{key,value,date};
- if(key==='usdjpy'||key==='oil')return value===null||change===null?null:{key,value,change,date};
+ if(key==='oil')return value===null||change===null?null:{key,value,change,date};
  return value===null||change===null||percent===undefined||percent===null?null:{key,value,change,percent,date};
 }
 function extractRows(rows,capturedAt){const out={};for(const cells of rows){const r=parseRow(cells,capturedAt);if(r){const {key,...quote}=r;if(!out[key])out[key]=quote;}}return out;}
