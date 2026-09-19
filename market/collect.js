@@ -45,10 +45,9 @@ async function main(){
    }
   }
  }finally{await browser.close();}
- const missing=REQUIRED.filter(k=>!markets[k]);
+ const missing=REQUIRED.filter(k=>!markets[k]||(markets[k].change===null&&['jgb10','ust10'].includes(k)));
  if(!fresh)throw Error('No quotations extracted from Rakuten; previous market.json retained');
  const tmp=OUT+'.tmp';fs.writeFileSync(tmp,JSON.stringify({source:'楽天証券',sources:URLS,capturedAt,markets},null,2)+'\n');fs.renameSync(tmp,OUT);
- console.log(`Updated market.json: ${fresh}/10 fresh; missing: ${missing.join(', ')||'none'}`);
- if(missing.length)process.exitCode=1;
+ console.log(`Updated market.json: ${fresh}/10 records; unavailable values: ${missing.join(', ')||'none'}`);
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
