@@ -25,10 +25,11 @@ const articleSchema={type:'OBJECT',properties:{
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds','printBody']};
 const responseSchema={type:'OBJECT',properties:{
- important:{type:'ARRAY',minItems:16,maxItems:16,items:articleSchema},
+ important:{type:'ARRAY',minItems:8,maxItems:8,items:articleSchema},
+ lowerImportant:{type:'ARRAY',minItems:8,maxItems:8,items:articleSchema},
  sports:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema},
  other:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema}
-},required:['important','sports','other']};
+},required:['important','lowerImportant','sports','other']};
 let lastError;
 let correction="";
 let previousOutput;
@@ -58,7 +59,9 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     if(candidate?.finishReason!=='STOP')throw Error(`Incomplete output: ${candidate?.finishReason||'no candidate'}`);
     const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
     const parsed=JSON.parse(text);if(parsed.error)throw Error(`Editorial generation declined: ${parsed.reason}`);
-    previousOutput=parsed;
+    previousOutput={...parsed};
+    parsed.important=[...(parsed.important||[]),...(parsed.lowerImportant||[])];
+    delete parsed.lowerImportant;
     const errors=[];
     let edition;
     try{edition=makeEdition(parsed,current,{date,editorLabel:model})}catch(error){errors.push(error.message)}

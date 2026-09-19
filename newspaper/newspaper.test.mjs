@@ -41,7 +41,8 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
           return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({text:'フェルスタッペン、レースで圧倒'})}]}}]})};
         }
         if(request.generationConfig.responseSchema.properties.important.items.properties.sourceIds.minItems!==1)throw Error('Missing evidence requirement');
-        return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify(${JSON.stringify(data)})}]}}]})};
+        const data=${JSON.stringify(data)};
+        return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({...data,important:data.important.slice(0,8),lowerImportant:data.important.slice(8)})}]}}]})};
       };
       await import(${JSON.stringify(pathToFileURL(resolve('newspaper/generate-newspaper.mjs')).href)});
     `],{encoding:'utf8',env:{...process.env,GEMINI_API_KEY:'test-only',NEWSPAPER_INPUT:input,NEWSPAPER_OUTPUT:output}});
