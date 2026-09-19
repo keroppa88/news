@@ -25,7 +25,7 @@ export function validateOutput(data,headlines){
     if(!Array.isArray(data[section])||data[section].length<min||data[section].length>max)throw Error(`${section}: expected ${min}–${max} stories, received ${data[section]?.length??'missing'}`);
     for(const [index,a] of data[section].entries()){
       if(typeof a.title!=='string'||a.title.length<5||a.title.length>80||typeof a.summary!=='string'||a.summary.length<20||a.summary.length>400||typeof a.category!=='string'||a.category.length>20)throw Error('Invalid story text');
-      if(seen.has(a.title))throw Error('Duplicate story');seen.add(a.title);
+      if(seen.has(a.title))throw Error(`${section}[${index}]: duplicate story ${a.title}; choose a different event`);seen.add(a.title);
       const location=`${section}[${index}] (${a.title})`;
       if(!Array.isArray(a.sourceIds)||!a.sourceIds.length)throw Error(`${location}: sourceIds must contain at least one input id`);
       const unknown=a.sourceIds.filter(id=>!known.has(id));

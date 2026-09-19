@@ -27,6 +27,12 @@ const articleSchema={type:'OBJECT',properties:{
 let lastError;
 let correction="";
 let previousOutput;
+function headlineOverlap(a,b){
+  const grams=text=>{const chars=[...String(text).normalize('NFKC').replace(/[\s\p{P}\p{S}]/gu,'').toLowerCase()];return new Set(chars.slice(0,-1).map((c,i)=>c+chars[i+1]))};
+  const x=grams(a),y=grams(b);
+  if(Math.min(x.size,y.size)<4)return a===b;
+  return [...x].filter(g=>y.has(g)).length/Math.min(x.size,y.size)>=.6;
+}
 async function compactText(text,max,kind){
   const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
     method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(60000),
@@ -49,10 +55,12 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:min,maxItems:max,items:articleSchema}},required:['stories']};
     const currentTask={section,start,min,max};
     const selectedStories=Object.values(parsed).flat().map(a=>({title:a.title,summary:a.summary}));
-    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から${start+max}番目だけ。${min}〜${max}件をstories配列に返す。他の欄は返さない。selectedStoriesと同じ出来事は選ばない。紙面の番号は今回の開始番号を基準にする。`;
+    const selectedTitles=[...selectedStories.map(a=>a.title),...current.filter(h=>used.has(h.id)).map(h=>h.title)];
+    const available=current.filter(h=>!used.has(h.id)&&!selectedTitles.some(title=>headlineOverlap(h.title,title)));
+    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から${start+max}番目だけ。${min}〜${max}件をstories配列に返す。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。次の見出しの出来事は既に掲載済みのため禁止。別媒体・別表現・背景説明への言い換えも禁止。これら以外の出来事を選ぶ: ${JSON.stringify(selectedStories.map(a=>a.title))}`;
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current.filter(h=>!used.has(h.id)),currentTask,selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:8192,responseMimeType:'application/json',responseSchema}})
+      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:8192,responseMimeType:'application/json',responseSchema}})
     });
     if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
