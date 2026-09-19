@@ -10,7 +10,7 @@
     *{box-sizing:border-box}html{writing-mode:horizontal-tb}body{margin:0;background:#deddd9;color:var(--ink);font-family:var(--serif)}a{color:inherit}
     .toolbar{width:min(210mm,calc(100% - 20px));margin:8px auto;display:flex;gap:6px;justify-content:space-between;font:11px sans-serif}.toolbar div{display:flex;gap:6px}.toolbar a,.toolbar button{border:1px solid #555;background:#fff;padding:5px 9px;border-radius:2px;text-decoration:none;color:#111;cursor:pointer}.toolbar a[aria-current=page]{background:#222;color:#fff}
     .paper{width:210mm;min-height:297mm;margin:0 auto 12px;padding:5mm 6mm;background:#fff;box-shadow:0 4px 28px #0002}
-    .topline{display:flex;justify-content:flex-end;border-top:3px solid;border-bottom:1px solid;padding:.7mm 0;font:5pt sans-serif}.masthead{text-align:center;font:700 50px/1.05 Masthead,Georgia,serif;margin:1.2mm 0 .6mm}.subhead{text-align:center;border-bottom:4px double;padding-bottom:1mm;font:5pt sans-serif;letter-spacing:.18em}
+    .topline{display:flex;justify-content:flex-end;border-top:3px solid;border-bottom:1px solid;padding:.7mm 0;font:5pt sans-serif}.masthead{text-align:center;font:700 50px/1.05 Masthead,Georgia,serif;margin:1.2mm 0 0;padding-bottom:.6mm;border-bottom:1px solid}
     .tier,.articles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #777;gap:0}.tier[data-count="1"],.articles[data-count="1"]{grid-template-columns:1fr}.tier[data-count="2"],.articles[data-count="2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
     .story{min-width:0;border-right:1px solid #bbb;padding:.7mm 1.2mm .7mm 0;margin-right:1.2mm}.story:last-child{border-right:0;margin-right:0;padding-right:0}.story h3{font:700 11.8pt/1.18 var(--serif);margin:0 0 .35mm}.story h3 a{text-decoration:none}.story p{font:7pt/1.25 var(--serif);margin:0;text-align:justify;overflow-wrap:anywhere}.tier-top .story{padding:.8mm 0}.tier-top h3{font-size:22pt;line-height:1.15;margin-bottom:.6mm}.tier-top p{font-size:8pt}
     .headline-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:1px solid #777}.headline-only{min-width:0;padding:.7mm 1.2mm;border-right:1px solid #bbb;text-decoration:none;font:700 10pt/1.2 var(--serif)}.headline-only:last-child{border-right:0}
@@ -21,7 +21,7 @@
 </head>
 <body>
   <nav class="toolbar" aria-label="紙面操作"><div class="mode-switch"><a href="./">通常モード</a><a href="paper-newspaper.html" aria-current="page">紙新聞風</a></div><button type="button" onclick="window.print()">印刷 / PDF保存</button></nav>
-  <main class="paper"><div class="topline"><span id="date">読み込み中</span></div><header class="masthead">Keroppa Morning News</header><div class="subhead">紙新聞風 ／ PRINT EDITION</div><div id="content" class="loading">紙面を編集中です…</div></main>
+  <main class="paper"><div class="topline"><span id="date">読み込み中</span></div><header class="masthead">Keroppa Morning News</header><div id="content" class="loading">紙面を編集中です…</div></main>
   <script>
     const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const search=t=>'https://news.google.com/search?q='+encodeURIComponent(t)+'&hl=ja&gl=JP&ceid=JP%3Aja';

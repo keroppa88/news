@@ -24,12 +24,6 @@ const articleSchema={type:'OBJECT',properties:{
  sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',description:'入力headlinesに存在するidをそのままコピーする（例 E1）。'}},
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
 },required:['title','summary','category','sourceIds','printBody']};
-const responseSchema={type:'OBJECT',properties:{
- important:{type:'ARRAY',minItems:8,maxItems:8,items:articleSchema},
- lowerImportant:{type:'ARRAY',minItems:8,maxItems:8,items:articleSchema},
- sports:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema},
- other:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema}
-},required:['important','lowerImportant','sports','other']};
 let lastError;
 let correction="";
 let previousOutput;
@@ -49,19 +43,30 @@ async function compactText(text,max,kind){
 }
 for(let attempt=1;attempt<=maxAttempts;attempt++){
   try{
+    const parsed={important:[],sports:[],other:[]};
+    const used=new Set(),usage={promptTokenCount:0,candidatesTokenCount:0,thoughtsTokenCount:0,totalTokenCount:0};
+    for(const [section,start,min,max] of [['important',0,8,8],['important',8,8,8],['sports',0,1,3],['other',0,1,3]]){
+    const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:min,maxItems:max,items:articleSchema}},required:['stories']};
+    const currentTask={section,start,min,max};
+    const selectedStories=Object.values(parsed).flat().map(a=>({title:a.title,summary:a.summary}));
+    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から${start+max}番目だけ。${min}〜${max}件をstories配列に返す。他の欄は返さない。selectedStoriesと同じ出来事は選ばない。紙面の番号は今回の開始番号を基準にする。`;
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current,previousOutput})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,responseMimeType:'application/json',responseSchema}})
+      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:current.filter(h=>!used.has(h.id)),currentTask,selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:8192,responseMimeType:'application/json',responseSchema}})
     });
     if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
     const candidate=result.candidates?.[0];
     if(candidate?.finishReason!=='STOP')throw Error(`Incomplete output: ${candidate?.finishReason||'no candidate'}`);
     const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
-    const parsed=JSON.parse(text);if(parsed.error)throw Error(`Editorial generation declined: ${parsed.reason}`);
-    previousOutput={...parsed};
-    parsed.important=[...(parsed.important||[]),...(parsed.lowerImportant||[])];
-    delete parsed.lowerImportant;
+    const batch=JSON.parse(text);if(batch.error)throw Error(`Editorial generation declined: ${batch.reason}`);
+    if(!Array.isArray(batch.stories)||batch.stories.length<min||batch.stories.length>max)throw Error(`${section} batch: expected ${min}–${max} stories`);
+    parsed[section].push(...batch.stories);
+    for(const article of batch.stories)for(const id of article.sourceIds||[])used.add(id);
+    for(const key of Object.keys(usage))usage[key]+=result.usageMetadata?.[key]||0;
+    console.log(`Generated ${section} ${start+1}–${start+batch.stories.length}`);
+    }
+    previousOutput=parsed;
     const errors=[];
     let edition;
     try{edition=makeEdition(parsed,current,{date,editorLabel:model})}catch(error){errors.push(error.message)}
@@ -97,7 +102,6 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
       if(!(section==='important'&&index>=14))article.printBody=parsed[section][index].printBody;
     }
     await mkdir(dirname(output),{recursive:true});const temp=`${output}.tmp`;await writeFile(temp,JSON.stringify(edition,null,2)+'\n');await rename(temp,output);
-    const usage=result.usageMetadata||{};
     console.log(JSON.stringify({model,date,articles:edition.important.length+edition.sports.length+edition.other.length,inputTokens:usage.promptTokenCount,outputTokens:usage.candidatesTokenCount,thinkingTokens:usage.thoughtsTokenCount||0,totalTokens:usage.totalTokenCount}));
     lastError=null;break;
   }catch(e){lastError=e;correction="previousOutputの指摘箇所だけを修正し、他の正常な記事は保持して全記事を返す。文字数上限より10字以上短くする。検証エラー: "+e.message;console.error(`Newspaper attempt ${attempt}: ${e.message}`);if(e.retryable===false||attempt===maxAttempts)break;await new Promise(r=>setTimeout(r,3000))}

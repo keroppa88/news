@@ -40,9 +40,10 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
           if(${failEdits})return {ok:false,status:500};
           return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({text:'フェルスタッペン、レースで圧倒'})}]}}]})};
         }
-        if(request.generationConfig.responseSchema.properties.important.items.properties.sourceIds.minItems!==1)throw Error('Missing evidence requirement');
+        if(request.generationConfig.responseSchema.properties.stories.items.properties.sourceIds.minItems!==1)throw Error('Missing evidence requirement');
         const data=${JSON.stringify(data)};
-        return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({...data,important:data.important.slice(0,8),lowerImportant:data.important.slice(8)})}]}}]})};
+        const {section,start,max}=JSON.parse(request.contents[0].parts[0].text).currentTask;
+        return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({stories:data[section].slice(start,start+max)})}]}}]})};
       };
       await import(${JSON.stringify(pathToFileURL(resolve('newspaper/generate-newspaper.mjs')).href)});
     `],{encoding:'utf8',env:{...process.env,GEMINI_API_KEY:'test-only',NEWSPAPER_INPUT:input,NEWSPAPER_OUTPUT:output}});
