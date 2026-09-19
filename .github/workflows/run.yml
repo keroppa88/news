@@ -148,7 +148,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/ market.json
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html paper-newspaper.html wordcloud.jpg warehouse/ market.json
           if [ -f newspaper.json ]; then git add newspaper.json; fi
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
