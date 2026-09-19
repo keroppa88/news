@@ -23,9 +23,9 @@ const articleSchema={type:'OBJECT',properties:{
  title:{type:'STRING',description:'簡潔な日本語見出し。18〜26文字を目安に短く。'},summary:{type:'STRING'},category:{type:'STRING'},
  sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',description:'入力headlinesに存在するidをそのままコピーする（例 E1）。'}},
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
-},required:['title','summary','category','sourceIds']};
+},required:['title','summary','category','sourceIds','printBody']};
 const responseSchema={type:'OBJECT',properties:{
- important:{type:'ARRAY',description:'重要ニュースを必ず16件、重要度順に返す。',items:articleSchema},
+ important:{type:'ARRAY',minItems:16,maxItems:16,items:articleSchema},
  sports:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema},
  other:{type:'ARRAY',minItems:1,maxItems:3,items:articleSchema}
 },required:['important','sports','other']};

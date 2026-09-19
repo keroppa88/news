@@ -31,7 +31,7 @@
 - important先頭（トップ）：oneLine 最大280字、twoLines 最大130字。
 - importantの2・3・7・8番目（2分割）：oneLine 最大220字、twoLines 最大160字。
 - importantの4〜6・9〜14番目、sports、other（3分割）：oneLine 最大140字、twoLines 最大100字。
-- importantの15・16番目は見出しのみなのでprintBody不要。
+- importantの15・16番目は見出しのみ。printBodyのoneLine、twoLines、shortfallReasonは空文字でよいがキーは省略しない。
 titleはトップ最大48字、2分割最大44字、3分割最大28字。最大2行に収めるため優先して短くする。
 本文は入力見出しから得られる事実だけで組み立てる。反復・一般論・架空の背景による水増しは禁止。短い事実本文を優先し、上限は必ず守る。shortfallReasonは空文字でよい。twoLinesはoneLineより長くしない。
 summaryは記事の要約。printBodyは紙面用に別に作成する。
