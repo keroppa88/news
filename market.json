@@ -7,7 +7,7 @@
     "bond": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html",
     "exchange": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
   },
-  "capturedAt": "2026-09-19T10:18:22.048Z",
+  "capturedAt": "2026-09-19T10:23:09.515Z",
   "markets": {
     "nikkei": {
       "value": 65018.95,
@@ -61,7 +61,7 @@
     },
     "usdjpy": {
       "value": 156.85,
-      "change": 156.93,
+      "change": 0,
       "date": "2026/09/19 06:00",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
     }
