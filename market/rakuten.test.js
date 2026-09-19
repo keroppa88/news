@@ -25,13 +25,16 @@ test('Rakuten table extracts all ten targeted instruments and exact columns',()=
  assert.deepEqual(m.ust10,{change:-0.031,date:'2026/09/18 16:00'});
  assert.match(displayed(m.oil,'原油'),/原油 92\.34 -1\.23/);
 });
-test('Missing placeholders never create fabricated numbers or dates',()=>{
+test('Missing placeholders preserve dated unavailable yield changes',()=>{
  assert.equal(complete(extractRows([['NYダウ','-','-','-','-']],now)),false);
- assert.deepEqual(extractRows([['日本国債10年','2.8','-','-','09/18 15:30']],now),{});
+ const m=extractRows([['日本国債10年','2.8','--','-','09/18 15:30']],now);
+ assert.deepEqual(m.jgb10,{change:null,date:'2026/09/18 15:30'});
+ assert.match(displayed(m.jgb10,'日本国債10年'),/—.*2026\/09\/18/);
 });
-test('Plain text fallback and year rollover',()=>{
+test('Plain text fallback, S&P500指数, and year rollover',()=>{
  assert.equal(quoteDate('12/31 15:30','2027-01-01T06:00:00Z'),'2026/12/31 15:30');
  const m=extractFallback('WTI原油先物\n92.34\n-1.23\n-1.31%\n09/18 17:00',now);
  assert.equal(m.oil.value,92.34);
  assert.equal(keyFor('米国10年国債'),'ust10');
+ assert.equal(keyFor('S&P500指数'),'sp500');
 });
