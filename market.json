@@ -7,7 +7,7 @@
     "bond": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html",
     "exchange": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
   },
-  "capturedAt": "2026-09-19T10:27:08.897Z",
+  "capturedAt": "2026-09-20T00:18:59.674Z",
   "markets": {
     "nikkei": {
       "value": 65018.95,
@@ -40,7 +40,7 @@
     },
     "nikkeiFutures": {
       "value": 64900,
-      "date": "2026/09/19 06:00",
+      "date": "2026/09/19",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/future_top.html"
     },
     "oil": {
@@ -52,19 +52,19 @@
     "jgb10": {
       "value": 2.985,
       "change": 0.009,
-      "date": "2026/09/19 02:05",
+      "date": "2026/09/19",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "ust10": {
       "value": 5,
       "change": null,
-      "date": "2026/09/19 06:05",
+      "date": "2026/09/19",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "usdjpy": {
       "value": 156.85,
       "change": 0,
-      "date": "2026/09/19 06:00",
+      "date": "2026/09/19",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
     }
   }
