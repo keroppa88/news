@@ -133,7 +133,7 @@ jobs:
         run: node web/add_navigation.js
 
       - name: Add Rakuten market rows
-        run: node web/add_market_strip.js
+        run: node web/add_market_strip.js --normal-only
 
       # Commit the normal news update before starting the optional newspaper edition.
       - name: Save news and normal web page
@@ -175,6 +175,7 @@ jobs:
           cp wordcloud.jpg _site/ 2>/dev/null || true
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
+          MARKET_STRIP_ROOT=_site node web/add_market_strip.js --paper-only || echo 'Optional newspaper market rows unavailable'
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
