@@ -135,23 +135,36 @@ jobs:
       - name: Add Rakuten market rows
         run: node web/add_market_strip.js
 
-      - name: Test newspaper validation
-        run: node --test newspaper/newspaper.test.mjs
+      # Commit the normal news update before starting the optional newspaper edition.
+      - name: Save news and normal web page
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/ market.json
+          git commit -m "Automated update: news, summary and web page" || exit 0
+          git pull --rebase origin main
+          git push
 
-      - name: Generate newspaper edition
+      - name: Test optional newspaper generation
+        id: newspaper_test
+        run: node --test newspaper/newspaper.test.mjs
+        continue-on-error: true
+
+      - name: Generate optional newspaper edition
+        id: newspaper_generation
+        if: steps.newspaper_test.outcome == 'success'
         run: node newspaper/generate-newspaper.mjs
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSPAPER_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}
 
-      - name: Save results
+      - name: Save newspaper edition
+        if: steps.newspaper_generation.outcome == 'success'
+        continue-on-error: true
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt index.html paper-newspaper.html wordcloud.jpg warehouse/ market.json
-          if [ -f newspaper.json ]; then git add newspaper.json; fi
-          git commit -m "Automated update: news, summary and web page" || exit 0
+          git add newspaper.json
+          git commit -m "Automated update: newspaper edition" || exit 0
           git pull --rebase origin main
           git push
 
