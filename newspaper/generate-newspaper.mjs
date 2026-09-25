@@ -16,7 +16,7 @@ const original=headlines.filter(h=>new Date(`${h.date}T00:00:00Z`).getTime()>=cu
 // Short request-local IDs reduce copying mistakes and structured-schema complexity.
 const current=original.map((h,index)=>({...h,id:`E${index+1}`}));
 const originalById=new Map(current.map((h,index)=>[h.id,original[index]]));
-if(current.length<18)throw Error('Insufficient source headlines; the previous edition is preserved.');
+if(!current.length)throw Error('No source headlines available; the previous edition is preserved.');
 const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
@@ -52,13 +52,17 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const attemptModel=attempt===1?model:'gemini-2.5-flash';
     const parsed={important:[],sports:[],other:[]};
     const used=new Set(),usage={promptTokenCount:0,candidatesTokenCount:0,thoughtsTokenCount:0,totalTokenCount:0};
-    for(const [section,start,min,max] of [['important',0,8,8],['important',8,8,8],['sports',0,1,3],['other',0,1,3]]){
-    const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:min,maxItems:max,items:articleSchema}},required:['stories']};
-    const currentTask={section,start,min,max};
+    for(const [section,start,limit] of [['important',0,8],['important',8,8],['sports',0,3],['other',0,3]]){
     const selectedStories=Object.values(parsed).flat().map(a=>({title:a.title,summary:a.summary}));
     const selectedTitles=[...selectedStories.map(a=>a.title),...current.filter(h=>used.has(h.id)).map(h=>h.title)];
-    const available=current.filter(h=>!used.has(h.id)&&!selectedTitles.some(title=>headlineOverlap(h.title,title)));
-    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から${start+max}番目だけ。${min}〜${max}件をstories配列に返す。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。次の見出しの出来事は既に掲載済みのため禁止。別媒体・別表現・背景説明への言い換えも禁止。これら以外の出来事を選ぶ: ${JSON.stringify(selectedStories.map(a=>a.title))}`;
+    const unused=current.filter(h=>!used.has(h.id));
+    const distinct=unused.filter(h=>!selectedTitles.some(title=>headlineOverlap(h.title,title)));
+    const available=distinct.length?distinct:unused;
+    if(!available.length)continue;
+    const max=Math.min(limit,available.length),min=0;
+    const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:min,maxItems:max,items:articleSchema}},required:['stories']};
+    const currentTask={section,start,min,max};
+    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から最大${start+max}番目だけ。根拠のある異なる出来事を最大${max}件stories配列に返す。該当する出来事がなければ空配列にする。件数合わせのために同じ出来事を増やさない。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。次の見出しの出来事は既に掲載済みのため禁止。別媒体・別表現・背景説明への言い換えも禁止。これら以外の出来事を選ぶ: ${JSON.stringify(selectedStories.map(a=>a.title))}`;
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${attemptModel}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
       body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})

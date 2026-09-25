@@ -24,6 +24,13 @@ test('unknown, missing, and reused evidence retain actionable diagnostics',()=>{
     assert.throws(()=>makeEdition(data,headlines),pattern);
   }
 });
+test('an edition can contain fewer than 18 articles and empty optional sections',()=>{
+  const sources=headlines.slice(0,5);
+  const data={important:Array.from({length:5},(_,i)=>article(i)),sports:[],other:[]};
+  assert.equal(makeEdition(data,sources).important.length,5);
+  assert.deepEqual(makeEdition(data,sources).sports,[]);
+  assert.throws(()=>makeEdition({important:[],sports:[],other:[]},sources),/At least one story/);
+});
 test('generator accepts concise bodies, edits oversized text, and preserves data on editing failure',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'newspaper-test-'));
   try{
@@ -32,7 +39,7 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
     const sources=parseHeadlines(await readFile(input,'utf8'));
     const data=edition();
     [...data.important,...data.sports,...data.other].forEach((a,i)=>{a.sourceIds=[`E${i+1}`];a.printBody={oneLine:a.summary,twoLines:a.summary,shortfallReason:''}});
-    const run=(failEdits=false)=>spawnSync(process.execPath,['--input-type=module','-e',`
+    const run=(failEdits=false,sourceCount=18)=>spawnSync(process.execPath,['--input-type=module','-e',`
       globalThis.setTimeout=(callback)=>{callback();return 0};
       globalThis.fetch=async (_url,options)=>{
         const request=JSON.parse(options.body);
@@ -42,6 +49,7 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
         }
         if(request.generationConfig.responseSchema.properties.stories.items.properties.sourceIds.minItems!==1)throw Error('Missing evidence requirement');
         const data=${JSON.stringify(data)};
+        if(${sourceCount}<18){data.important=data.important.slice(0,${sourceCount});data.sports=[];data.other=[]}
         const {section,start,max}=JSON.parse(request.contents[0].parts[0].text).currentTask;
         return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({stories:data[section].slice(start,start+max)})}]}}]})};
       };
@@ -63,5 +71,11 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
     assert.ok(JSON.parse(saved).important[0].printBody.oneLine.length<=280);
     const failure=run(true);assert.notEqual(failure.status,0);assert.match(failure.stderr,/Text editing HTTP 500/);
     assert.equal(await readFile(output,'utf8'),saved);
+    await writeFile(input,headlines.slice(0,5).map((h,i)=>`- 根拠となる記事見出し${i}（媒体）2026/9/18`).join('\n'));
+    const shortEdition=run(false,5);assert.equal(shortEdition.status,0,shortEdition.stderr);
+    const shortData=JSON.parse(await readFile(output,'utf8'));
+    assert.equal(shortData.important.length,5);
+    assert.deepEqual(shortData.sports,[]);
+    assert.deepEqual(shortData.other,[]);
   }finally{await rm(dir,{recursive:true,force:true})}
 });

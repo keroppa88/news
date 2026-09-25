@@ -55,7 +55,7 @@
       const content=document.querySelector('#content');content.className='';
       content.innerHTML='<section class="front-page" aria-label="重要ニュース本文6段">'+tiers.filter(items=>items.length).map((items,row)=>'<div class="tier '+(row===0?'tier-top':'')+'" data-tier="'+(row+1)+'" data-count="'+items.length+'">'+items.map(story).join('')+'</div>').join('')+
         (headlines.length?'<div class="headline-strip" aria-label="重要ニュース見出しのみ">'+headlines.map(a=>'<a class="headline-only" href="'+search(a.title)+'" target="_blank" rel="noopener noreferrer">'+esc(a.title)+'</a>').join('')+'</div>':'')+'</section>'+
-        '<section class="supplement" aria-label="スポーツとその他">'+[['スポーツ',data.sports],['その他のニュース',data.other]].map(([title,items])=>'<div class="section"><h2>'+title+'</h2><div class="articles" data-count="'+items.length+'">'+items.map(story).join('')+'</div></div>').join('')+'</section>';
+        '<section class="supplement" aria-label="スポーツとその他">'+[['スポーツ',data.sports],['その他のニュース',data.other]].filter(([,items])=>items?.length).map(([title,items])=>'<div class="section"><h2>'+title+'</h2><div class="articles" data-count="'+items.length+'">'+items.map(story).join('')+'</div></div>').join('')+'</section>';
       await document.fonts.ready;fitPaper();
     }catch(e){const el=document.querySelector('#content');el.className='loading error';el.textContent='紙面を読み込めませんでした。時間をおいて再読込してください。'}})();
   </script>
