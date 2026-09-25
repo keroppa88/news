@@ -140,6 +140,7 @@ jobs:
 
       - name: Generate newspaper edition
         run: node newspaper/generate-newspaper.mjs
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSPAPER_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}

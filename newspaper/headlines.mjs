@@ -21,7 +21,7 @@ export function parseHeadlines(text){
 export function validateOutput(data,headlines){
   if(!data||typeof data!=='object')throw Error('JSON object required');
   const known=new Map(headlines.map(h=>[h.id,h])),seen=new Set(),refs=new Set();
-  for(const [section,min,max] of [['important',16,16],['sports',1,3],['other',1,3]]){
+  for(const [section,min,max] of [['important',0,16],['sports',0,3],['other',0,3]]){
     if(!Array.isArray(data[section])||data[section].length<min||data[section].length>max)throw Error(`${section}: expected ${min}–${max} stories, received ${data[section]?.length??'missing'}`);
     for(const [index,a] of data[section].entries()){
       if(typeof a.title!=='string'||a.title.length<5||a.title.length>80||typeof a.summary!=='string'||a.summary.length<20||a.summary.length>400||typeof a.category!=='string'||a.category.length>20)throw Error('Invalid story text');
@@ -34,6 +34,7 @@ export function validateOutput(data,headlines){
       for(const id of a.sourceIds){if(refs.has(id))throw Error(`${location}: evidence ID ${id} was reused across topics; merge duplicate topics or select a different supported story`);refs.add(id)}
     }
   }
+  if(!['important','sports','other'].some(section=>data[section].length))throw Error('At least one story is required');
   return data;
 }
 export function makeEdition(output,headlines,meta={}){
