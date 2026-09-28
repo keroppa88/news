@@ -1,0 +1,18 @@
+name = "news-timer"
+main = "index.js"
+compatibility_date = "2026-09-28"
+workers_dev = false
+preview_urls = false
+
+[observability]
+enabled = true
+
+[vars]
+# 起動を頼む先。owner/repo
+GH_REPO = "keroppa88/news"
+# 稼働確認後、GitHubのCLOUDFLARE_SCHEDULEと合わせてtrueへ切替
+SCHEDULE_ENABLED = "false"
+
+[triggers]
+# UTC 22:30 = 日本時間 7:30（毎日）。run.yml の旧cronと同じ時刻
+crons = ["30 22 * * *"]
