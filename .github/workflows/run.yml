@@ -15,6 +15,9 @@ on:
       - 'assets/**'
   schedule:
     - cron: '30 22 * * *'
+  # Cloudflare Worker（worker/）が毎日 JST 7:30 に送る合図
+  repository_dispatch:
+    types: [scheduled-news]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -30,6 +33,8 @@ concurrency:
 
 jobs:
   build:
+    # Cloudflare稼働確認後にリポジトリ変数をtrueにするとGitHubのcronだけ停止。
+    if: github.event_name != 'schedule' || vars.CLOUDFLARE_SCHEDULE != 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
