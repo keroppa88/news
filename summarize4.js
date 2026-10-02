@@ -172,6 +172,28 @@ function ensureMediaAndDate(line, mediaTag) {
   return result;
 }
 
+// --- 掲載してよい最古の日付（日本時間の前日）yyyy/mm/dd ---
+function oldestAllowedDate() {
+  const d = new Date(Date.now() + 9 * 60 * 60 * 1000 - 24 * 60 * 60 * 1000);
+  return `${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, '0')}/${String(d.getUTCDate()).padStart(2, '0')}`;
+}
+
+// --- 古い日付・見出しが空の記事行か ---
+// Geminiは取得できなかった媒体の欄に、指示文の例や古い記事を作ってしまうことがある
+function isStaleOrEmpty(line, oldest) {
+  const m = line.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})\s*$/);
+  if (m) {
+    const date = `${m[1]}/${m[2].padStart(2, '0')}/${m[3].padStart(2, '0')}`;
+    if (date < oldest) return true;
+  }
+  const headline = line
+    .replace(/^(\d+\.|\*)\s*/, '')
+    .replace(/[（(][^)）]*[)）]/g, '')
+    .replace(/\d{4}\/\d{1,2}\/\d{1,2}/g, '')
+    .trim();
+  return headline.length < 4;
+}
+
 // --- 各カテゴリーの最低記事数 ---
 const MIN_ARTICLES = {
   '重要ニュース': 10,
@@ -275,6 +297,21 @@ ${englishEntries.map(e => e.line).join('\n')}`;
     }
   }
   console.log(`[Step2.5] ${mediaFixCount}件の媒体名・日付を補完`);
+
+  // ===== Step 2.7: 古い日付・見出しが空の記事を削除して番号を振り直す =====
+  const oldest = oldestAllowedDate();
+  let staleCount = 0;
+  for (const sec of s2Sections) {
+    const before = sec.lines.length;
+    sec.lines = sec.lines.filter(l => !(/^\d+\.\s/.test(l) && isStaleOrEmpty(l, oldest)));
+    staleCount += before - sec.lines.length;
+    let n = 0;
+    sec.lines = sec.lines.map(l => /^\d+\.\s/.test(l) ? l.replace(/^\d+\./, `${++n}.`) : l);
+  }
+  for (const name of Object.keys(s1Map)) {
+    s1Map[name] = s1Map[name].filter(l => !isStaleOrEmpty(l, oldest));
+  }
+  console.log(`[Step2.7] ${oldest}より古い・見出しが空の記事を${staleCount}件削除`);
 
   // ===== Step 3: 記事数不足カテゴリーをsummary1から充当 =====
   for (const sec of s2Sections) {
