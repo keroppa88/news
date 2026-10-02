@@ -18,6 +18,22 @@ const current=original.map((h,index)=>({...h,id:`E${index+1}`}));
 const originalById=new Map(current.map((h,index)=>[h.id,original[index]]));
 if(!current.length)throw Error('No source headlines available; the previous edition is preserved.');
 const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
+// 紙新聞は通常モードの派生品：通常モード（summary2.txt）で選ばれた記事の順番を紙面の選定に使う
+const picksFile=resolve(process.env.NEWSPAPER_PICKS||'summary2.txt');
+const picks=parsePicks(await readFile(picksFile,'utf8').catch(()=>''));
+function parsePicks(text){
+  const sections={};let current=null;
+  for(const line of text.split(/\r?\n/)){
+    const heading=line.trim().match(/^●([^●]+)●$/);
+    if(heading){current=heading[1].trim();sections[current]=[];continue}
+    const item=line.match(/^\s*\d+[.．]\s*(.+?)\s*$/);
+    if(current&&item)sections[current].push(item[1]);
+  }
+  return {
+    important:[...(sections['重要ニュース']||[]),...(sections['経済ニュース']||[]),...(sections['海外ニュース']||[]),...(sections['国内ニュース']||[])],
+    others:sections['その他ニュース']||[]
+  };
+}
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
  title:{type:'STRING',description:'簡潔な日本語見出し。18〜26文字を目安に短く。'},summary:{type:'STRING'},category:{type:'STRING'},
@@ -65,7 +81,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から最大${start+max}番目だけ。根拠のある異なる出来事を最大${max}件stories配列に返す。該当する出来事がなければ空配列にする。件数合わせのために同じ出来事を増やさない。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。次の見出しの出来事は既に掲載済みのため禁止。別媒体・別表現・背景説明への言い換えも禁止。これら以外の出来事を選ぶ: ${JSON.stringify(selectedStories.map(a=>a.title))}`;
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${attemptModel}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
+      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,editorPicks:picks[section],selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
     });
     if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
