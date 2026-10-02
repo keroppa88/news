@@ -21,7 +21,7 @@ export function parseHeadlines(text){
 export function validateOutput(data,headlines){
   if(!data||typeof data!=='object')throw Error('JSON object required');
   const known=new Map(headlines.map(h=>[h.id,h])),seen=new Set(),refs=new Set();
-  for(const [section,min,max] of [['important',0,16],['sports',0,3],['other',0,3]]){
+  for(const [section,min,max] of [['important',0,20],['others',0,12]]){
     if(!Array.isArray(data[section])||data[section].length<min||data[section].length>max)throw Error(`${section}: expected ${min}–${max} stories, received ${data[section]?.length??'missing'}`);
     for(const [index,a] of data[section].entries()){
       if(typeof a.title!=='string'||a.title.length<5||a.title.length>80||typeof a.summary!=='string'||a.summary.length<20||a.summary.length>400||typeof a.category!=='string'||a.category.length>20)throw Error('Invalid story text');
@@ -34,12 +34,12 @@ export function validateOutput(data,headlines){
       for(const id of a.sourceIds){if(refs.has(id))throw Error(`${location}: evidence ID ${id} was reused across topics; merge duplicate topics or select a different supported story`);refs.add(id)}
     }
   }
-  if(!['important','sports','other'].some(section=>data[section].length))throw Error('At least one story is required');
+  if(!['important','others'].some(section=>data[section].length))throw Error('At least one story is required');
   return data;
 }
 export function makeEdition(output,headlines,meta={}){
   const normalized={...output};
-  for(const section of ['important','sports','other']){
+  for(const section of ['important','others']){
     if(!Array.isArray(output?.[section]))continue;
     normalized[section]=output[section].map(article=>{
       if(!Array.isArray(article?.sourceIds))return article;
@@ -52,5 +52,5 @@ export function makeEdition(output,headlines,meta={}){
   const known=new Map(headlines.map(h=>[h.id,h]));
   const dates=[...new Set(headlines.map(h=>h.date))].sort();
   const date=meta.date||dates.at(-1);
-  return {schemaVersion:1,date,sourceUpdatedAt:meta.sourceUpdatedAt||date,generatedAt:new Date().toISOString(),editorLabel:meta.editorLabel||'Gemini',preview:!!meta.preview,...Object.fromEntries(['important','sports','other'].map(section=>[section,normalized[section].map(a=>({id:createHash('sha256').update(`${date}|${a.title}`).digest('hex').slice(0,16),title:a.title,summary:a.summary,category:a.category,sources:a.sourceIds.map(id=>known.get(id))}))]))};
+  return {schemaVersion:1,date,sourceUpdatedAt:meta.sourceUpdatedAt||date,generatedAt:new Date().toISOString(),editorLabel:meta.editorLabel||'Gemini',preview:!!meta.preview,...Object.fromEntries(['important','others'].map(section=>[section,normalized[section].map(a=>({id:createHash('sha256').update(`${date}|${a.title}`).digest('hex').slice(0,16),title:a.title,summary:a.summary,category:a.category,sources:a.sourceIds.map(id=>known.get(id))}))]))};
 }
