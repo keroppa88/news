@@ -68,6 +68,11 @@ jobs:
         run: node yahoo_realtime.js
         continue-on-error: true
 
+      - name: Collect Yahoo comment ranking
+        if: github.event_name != 'push'
+        run: node yahoo_comment_ranking.js
+        continue-on-error: true
+
       - name: Debug - list generated CSV files
         if: github.event_name != 'push'
         run: |
@@ -145,7 +150,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/ market.json
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/ market.json ycomment.json
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
           git push
@@ -180,6 +185,7 @@ jobs:
           cp wordcloud.jpg _site/ 2>/dev/null || true
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
+          if [ -f ycomment.json ]; then cp ycomment.json _site/; fi
           MARKET_STRIP_ROOT=_site node web/add_market_strip.js --paper-only || echo 'Optional newspaper market rows unavailable'
 
       - name: Upload Pages artifact
