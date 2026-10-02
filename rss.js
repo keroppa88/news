@@ -42,38 +42,53 @@ function jst(date) {
 // options:
 //   name      ログ用の名前（例: news_r）
 //   file      保存するCSVファイル名
-//   urls      RSSアドレスの配列
+//   urls      RSSアドレスの配列。{ url, label } にすると見出しの先頭に [label] を付ける
+//   perFeed   1つのRSSから取る最大件数（既定 なし）
 //   max       保存する最大件数（既定 60）
 //   hours     この時間より古い記事は除外（既定 36）
 //   exclude   除外する見出しの正規表現
 //   keepSource true なら Googleニュースの「 - 媒体名」を残す
-async function saveRss({ name, file, urls, max = 60, hours = 36, exclude, keepSource = false }) {
+async function saveRss({ name, file, urls, max = 60, perFeed, hours = 36, exclude, keepSource = false }) {
   try {
+    const since = Date.now() - hours * 3600 * 1000;
     const items = [];
-    for (const url of urls) {
-      const res = await fetch(url, { headers: { 'User-Agent': UA } });
-      if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
-      const xml = await res.text();
-      for (const m of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
+    for (const entry of urls) {
+      const { url, label } = typeof entry === 'string' ? { url: entry } : entry;
+      let xml;
+      try {
+        const res = await fetch(url, { headers: { 'User-Agent': UA } });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        xml = await res.text();
+      } catch (err) {
+        // 1つのRSSが失敗しても他は続ける（全部失敗したら下でエラー）
+        console.error(`WARN in ${name}: ${err.message}: ${url}`);
+        continue;
+      }
+      const feedItems = [];
+      for (const m of xml.matchAll(/<item[\s>]([\s\S]*?)<\/item>/g)) {
         let title = tag(m[1], 'title');
         const source = tag(m[1], 'source');
         if (!keepSource && source && title.endsWith(` - ${source}`)) {
           title = title.slice(0, -(source.length + 3));
         }
-        const date = new Date(tag(m[1], 'pubDate'));
-        items.push({ title, date });
+        // RSS2.0 は pubDate、RSS1.0（rss.wor.jp）は dc:date
+        const date = new Date(tag(m[1], 'pubDate') || tag(m[1], 'dc:date'));
+        if (!isNaN(date) && date.getTime() < since) continue;
+        feedItems.push({ title, label, date });
       }
+      items.push(...(perFeed ? feedItems.slice(0, perFeed) : feedItems));
     }
 
-    const since = Date.now() - hours * 3600 * 1000;
     const seen = new Set();
     const lines = items
       .filter((it) => it.title && !(exclude && exclude.test(it.title)))
-      .filter((it) => isNaN(it.date) || it.date.getTime() >= since)
       .sort((a, b) => (b.date.getTime() || 0) - (a.date.getTime() || 0))
       .filter((it) => !seen.has(it.title) && seen.add(it.title))
       .slice(0, max)
-      .map((it) => (isNaN(it.date) ? it.title : `${it.title}（${jst(it.date)}）`));
+      .map((it) => {
+        const head = it.label ? `[${it.label}] ${it.title}` : it.title;
+        return isNaN(it.date) ? head : `${head}（${jst(it.date)}）`;
+      });
 
     if (!lines.length) throw new Error('RSSから見出しを取得できませんでした');
 
