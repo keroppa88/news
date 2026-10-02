@@ -223,7 +223,15 @@ async function run() {
 
   // セクション解析
   const s2Sections = parseOrderedSections(summary2, /^●([^●]+)●$/);
-  const s1Sections = parseOrderedSections(summary1, /^●●([^●]+)●●$/);
+  // summary1の見出しは「●●ロイター●●」「### ロイター」「### ●●ロイター●●」などGeminiによって表記が揺れる
+  const s1Sections = parseOrderedSections(summary1, /^(?:#{1,6}\s*(?:\*\*)?(?:●●)?|(?:\*\*)?●●)([^●*]+?)(?:●●)?(?:\*\*)?\s*$/);
+
+  // 欄名の表記揺れ（Yahoo!／yahoo、AI関連／AI など）をそろえる
+  const norm = s => s.replace(/[!！\s]/g, '').toLowerCase();
+  for (const sec of s2Sections) {
+    const key = Object.keys(MIN_ARTICLES).find(k => norm(k) === norm(sec.name));
+    if (key && key !== sec.name) { sec.name = key; sec.header = `●${key}●`; }
+  }
 
   // summary1のカテゴリー別記事を辞書化
   const s1Map = {};
@@ -313,6 +321,20 @@ ${englishEntries.map(e => e.line).join('\n')}`;
   }
   console.log(`[Step2.7] ${oldest}より古い・見出しが空の記事を${staleCount}件削除`);
 
+  // ===== Step 2.8: Geminiが省いた媒体の欄を作り直す（Step 3でsummary1から記事を補充） =====
+  const order = Object.keys(MIN_ARTICLES);
+  for (const name of order) {
+    if (!CAT_MAP[name] || s2Sections.some(sec => sec.name === name)) continue;
+    // 決められた並び順で直前にある欄の後ろに入れる
+    let at = s2Sections.length;
+    for (let k = order.indexOf(name) - 1; k >= 0; k--) {
+      const prev = s2Sections.findIndex(sec => sec.name === order[k]);
+      if (prev >= 0) { at = prev + 1; break; }
+    }
+    s2Sections.splice(at, 0, { name, header: `●${name}●`, lines: [], added: true });
+    console.log(`[Step2.8] 欠けていた欄を追加: ${name}`);
+  }
+
   // ===== Step 3: 記事数不足カテゴリーをsummary1から充当 =====
   for (const sec of s2Sections) {
     const minCount = MIN_ARTICLES[sec.name];
@@ -323,7 +345,8 @@ ${englishEntries.map(e => e.line).join('\n')}`;
     if (currentCount >= minCount) continue;
 
     // summary1の対応カテゴリーを探す
-    const s1CatName = CAT_MAP[sec.name];
+    const s1CatName = CAT_MAP[sec.name] && Object.keys(s1Map).find(k =>
+      norm(k) === norm(CAT_MAP[sec.name]) || norm(k) === norm(sec.name));
     if (!s1CatName || !s1Map[s1CatName]) {
       if (currentCount < minCount) {
         console.log(`[Step3] ${sec.name}: ${currentCount}/${minCount}件 (summary1に対応カテゴリーなし)`);
@@ -383,7 +406,7 @@ ${englishEntries.map(e => e.line).join('\n')}`;
   }
 
   // ===== 再構築・保存 =====
-  const output = s2Sections.map(sec => {
+  const output = s2Sections.filter(sec => !(sec.added && !sec.lines.some(l => /^\d+\.\s/.test(l)))).map(sec => {
     const body = sec.lines.join('\n').trimEnd();
     return sec.header + '\n' + body;
   }).join('\n\n').replace(/[【】]/g, '');
