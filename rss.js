@@ -39,18 +39,23 @@ function jst(date) {
   return `${d.getUTCMonth() + 1}/${d.getUTCDate()} ${hh}:${mm}`;
 }
 
+// 日本時間の前日0時（これより古い記事は取得しない＝前日と本日分のみ）
+function startOfYesterdayJst() {
+  const jstNow = new Date(Date.now() + 9 * 3600 * 1000);
+  return Date.UTC(jstNow.getUTCFullYear(), jstNow.getUTCMonth(), jstNow.getUTCDate() - 1) - 9 * 3600 * 1000;
+}
+
 // options:
 //   name      ログ用の名前（例: news_r）
 //   file      保存するCSVファイル名
 //   urls      RSSアドレスの配列。{ url, label } にすると見出しの先頭に [label] を付ける
 //   perFeed   1つのRSSから取る最大件数（既定 なし）
 //   max       保存する最大件数（既定 60）
-//   hours     この時間より古い記事は除外（既定 36）
 //   exclude   除外する見出しの正規表現
 //   keepSource true なら Googleニュースの「 - 媒体名」を残す
-async function saveRss({ name, file, urls, max = 60, perFeed, hours = 36, exclude, keepSource = false }) {
+async function saveRss({ name, file, urls, max = 60, perFeed, exclude, keepSource = false }) {
   try {
-    const since = Date.now() - hours * 3600 * 1000;
+    const since = startOfYesterdayJst();
     const items = [];
     for (const entry of urls) {
       const { url, label } = typeof entry === 'string' ? { url: entry } : entry;

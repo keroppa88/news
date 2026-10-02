@@ -13,5 +13,4 @@ saveRss({
     { label: '読売', url: `${BASE}/yomiuri/science.rdf` },
   ],
   perFeed: 15,
-  hours: 72, // 読売は本数が少ないため3日分
 });
