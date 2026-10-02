@@ -50,9 +50,9 @@ async function compactText(text,max,kind){
 for(let attempt=1;attempt<=maxAttempts;attempt++){
   try{
     const attemptModel=attempt===1?model:'gemini-2.5-flash';
-    const parsed={important:[],sports:[],other:[]};
+    const parsed={important:[],others:[]};
     const used=new Set(),usage={promptTokenCount:0,candidatesTokenCount:0,thoughtsTokenCount:0,totalTokenCount:0};
-    for(const [section,start,limit] of [['important',0,8],['important',8,8],['sports',0,3],['other',0,3]]){
+    for(const [section,start,limit] of [['important',0,8],['important',8,8],['important',16,4],['others',0,6],['others',6,6]]){
     const selectedStories=Object.values(parsed).flat().map(a=>({title:a.title,summary:a.summary}));
     const selectedTitles=[...selectedStories.map(a=>a.title),...current.filter(h=>used.has(h.id)).map(h=>h.title)];
     const unused=current.filter(h=>!used.has(h.id));
@@ -83,10 +83,10 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const errors=[];
     let edition;
     try{edition=makeEdition(parsed,current,{date,editorLabel:attemptModel})}catch(error){errors.push(error.message)}
-    for(const section of ['important','sports','other']){
+    for(const section of ['important','others']){
       for(let i=0;i<(parsed[section]?.length||0);i++){
         const article=parsed[section][i];
-        const headlineOnly=section==='important'&&i>=14;
+        const headlineOnly=section==='important'&&i>=14; // 15〜20番目は見出しのみ（2列×3行）
         const top=section==='important'&&i===0;
         const two=section==='important'&&[1,2,6,7].includes(i);
         const limits=top?[280,130]:two?[220,160]:[140,100];
@@ -110,12 +110,12 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     }
     if(errors.length)throw new Error(errors.join('; '));
     edition=makeEdition(parsed,current,{date,editorLabel:attemptModel});
-    for(const section of ['important','sports','other'])for(const [index,article] of edition[section].entries()){
+    for(const section of ['important','others'])for(const [index,article] of edition[section].entries()){
       article.sources=article.sources.map(source=>originalById.get(source.id));
       if(!(section==='important'&&index>=14))article.printBody=parsed[section][index].printBody;
     }
     await mkdir(dirname(output),{recursive:true});const temp=`${output}.tmp`;await writeFile(temp,JSON.stringify(edition,null,2)+'\n');await rename(temp,output);
-    console.log(JSON.stringify({model:attemptModel,date,articles:edition.important.length+edition.sports.length+edition.other.length,inputTokens:usage.promptTokenCount,outputTokens:usage.candidatesTokenCount,thinkingTokens:usage.thoughtsTokenCount||0,totalTokens:usage.totalTokenCount}));
+    console.log(JSON.stringify({model:attemptModel,date,articles:edition.important.length+edition.others.length,inputTokens:usage.promptTokenCount,outputTokens:usage.candidatesTokenCount,thinkingTokens:usage.thoughtsTokenCount||0,totalTokens:usage.totalTokenCount}));
     lastError=null;break;
   }catch(e){lastError=e;correction="previousOutputの指摘箇所だけを修正し、他の正常な記事は保持して全記事を返す。文字数上限より10字以上短くする。検証エラー: "+e.message;console.error(`Newspaper attempt ${attempt}: ${e.message}`);if(e.retryable===false||attempt===maxAttempts)break;await new Promise(r=>setTimeout(r,3000))}
 }
