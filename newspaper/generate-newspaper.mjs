@@ -74,23 +74,29 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const attemptModel=attempt===1?model:'gemini-2.5-flash';
     const parsed={important:[],others:[]};
     const used=new Set(),usage={promptTokenCount:0,candidatesTokenCount:0,thoughtsTokenCount:0,totalTokenCount:0};
-    for(const [section,start,limit] of [['important',0,8],['important',8,8],['important',16,4],['others',0,6],['others',6,6]]){
+    // 目標本数が埋まるまで、未使用の見出しで繰り返し頼む（Geminiが既出記事を返すと重複除去で減るため、回数固定にしない）
+    const targets={important:20,others:12},batchSize={important:8,others:6},done=new Set(),emptyRounds={important:0,others:0};
+    const rounds=[...Array(8).fill('important'),...Array(6).fill('others')];
+    for(const section of rounds){
+    const start=parsed[section].length;
+    if(done.has(section)||start>=targets[section])continue;
+    const limit=Math.min(batchSize[section],targets[section]-start);
     const selectedStories=Object.values(parsed).flat().map(a=>({title:a.title,summary:a.summary}));
     const selectedTitles=[...selectedStories.map(a=>a.title),...current.filter(h=>used.has(h.id)).map(h=>h.title)];
     const unused=current.filter(h=>!used.has(h.id));
     const distinct=unused.filter(h=>!selectedTitles.some(title=>headlineOverlap(h.title,title)));
     const available=distinct.length?distinct:unused;
     if(!available.length)continue;
-    const max=Math.min(limit,available.length),min=0;
+    const max=Math.min(limit+4,available.length),min=0;// 既出記事が混ざっても埋まるよう少し多めに頼み、使うのはlimit本まで
     const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:min,maxItems:max,items:articleSchema}},required:['stories']};
     const currentTask={section,start,min,max};
     // Geminiは毎回editorPicksの先頭から書き直すので、既に載せた記事（根拠の見出し・記事見出し）と重なる候補を外して渡す
     const placedTexts=[...current.filter(h=>used.has(h.id)).map(h=>h.title),...selectedStories.map(a=>a.title)];
     const remainingPicks=picks[section].filter(p=>!placedTexts.some(t=>headlineOverlap(pickKey(p),t)));
-    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から最大${start+max}番目だけ。根拠のある異なる出来事を最大${max}件stories配列に返す。該当する出来事がなければ空配列にする。件数合わせのために同じ出来事を増やさない。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。次の見出しの出来事は既に掲載済みのため禁止。別媒体・別表現・背景説明への言い換えも禁止。これら以外の出来事を選ぶ: ${JSON.stringify(selectedStories.map(a=>a.title))}`;
+    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から最大${start+max}番目だけ。根拠のある異なる出来事を最大${max}件stories配列に返す。該当する出来事がなければ空配列にする。件数合わせのために同じ出来事を増やさない。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。既に掲載した出来事を別媒体・別表現・背景説明に言い換えて再掲しない。headlinesには未掲載の見出しだけを渡しているので、その中から選ぶ。`;
     const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${attemptModel}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,editorPicks:remainingPicks,selectedStories,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
+      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,editorPicks:remainingPicks,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
     });
     if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
     const result=await response.json();
@@ -104,6 +110,7 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const placedTitles=Object.values(parsed).flat().map(a=>a.title);
     const kept=[];
     for(const article of batch.stories){
+      if(kept.length>=limit)break;
       const ids=[...new Set(article.sourceIds||[])].filter(id=>knownIds.has(id)&&!used.has(id));
       const title=String(article.title||'');
       if(!ids.length||[...placedTitles,...kept.map(a=>a.title)].includes(title)){console.log(`Skipped duplicate ${section}: ${title}`);continue}
@@ -112,6 +119,8 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     }
     batch.stories=kept;
     parsed[section].push(...batch.stories);
+    // 新しい記事が1本も増えない回が2回続いたらこの欄は打ち切る
+    if(batch.stories.length)emptyRounds[section]=0;else if(++emptyRounds[section]>=2)done.add(section);
     for(const key of Object.keys(usage))usage[key]+=result.usageMetadata?.[key]||0;
     console.log(`Generated ${section} ${start+1}–${start+batch.stories.length}`);
     }
