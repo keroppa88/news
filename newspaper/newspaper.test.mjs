@@ -14,6 +14,11 @@ const edition=()=>({important:Array.from({length:20},(_,i)=>article(i)),others:A
 test('section media and inline media are parsed',()=>{
   assert.equal(parseHeadlines('●●媒体●●\n- 根拠となる記事見出し (2026/9/18)\n- 別のニュース見出し（別媒体）2026/9/18').length,2);
 });
+test('headlines without bullets or with time-stamped dates are parsed',()=>{
+  const text='### ●●BBC●●\nキエフ橋、ドローン攻撃で再び被害（UTC 2026/10/04 19:00）\n### ●●日経・読売・産経・47・みんかぶ●●\n台風27号、北寄りに進む（産経/社会）（2026/10/04 18:29）\n### ●●ロイター●●\n記事なし';
+  const parsed=parseHeadlines(text);
+  assert.deepEqual(parsed.map(h=>[h.media,h.title,h.date]),[['BBC','キエフ橋、ドローン攻撃で再び被害','2026-10-04'],['産経/社会','台風27号、北寄りに進む','2026-10-04']]);
+});
 test('deduplicate within an article without losing its evidence',()=>{
   const data=edition();data.important[0].sourceIds.push('id0');
   assert.equal(makeEdition(data,headlines).important[0].sources.length,1);
