@@ -21,6 +21,10 @@ const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 // 紙新聞は通常モードの派生品：通常モード（summary2.txt）で選ばれた記事の順番を紙面の選定に使う
 const picksFile=resolve(process.env.NEWSPAPER_PICKS||'summary2.txt');
 const picks=parsePicks(await readFile(picksFile,'utf8').catch(()=>''));
+function uniquePicks(list){
+  const seen=new Set();
+  return list.filter(item=>{const key=item.replace(/[（(][^）)]*[）)]/g,'').replace(/\d{4}\/\d{1,2}\/\d{1,2}/g,'').trim();return !seen.has(key)&&seen.add(key)});
+}
 function parsePicks(text){
   const sections={};let current=null;
   for(const line of text.split(/\r?\n/)){
@@ -30,8 +34,9 @@ function parsePicks(text){
     if(current&&item)sections[current].push(item[1]);
   }
   return {
-    important:[...(sections['重要ニュース']||[]),...(sections['経済ニュース']||[]),...(sections['海外ニュース']||[]),...(sections['国内ニュース']||[])],
-    others:sections['その他ニュース']||[]
+    // 重要と経済などで同じ記事が重なるので、媒体名・日付を除いた見出しで重複を除く
+    important:uniquePicks([...(sections['重要ニュース']||[]),...(sections['経済ニュース']||[]),...(sections['海外ニュース']||[]),...(sections['国内ニュース']||[])]),
+    others:uniquePicks(sections['その他ニュース']||[])
   };
 }
 const maxAttempts=3;
@@ -90,8 +95,19 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
     const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
     const batch=JSON.parse(text);if(batch.error)throw Error(`Editorial generation declined: ${batch.reason}`);
     if(!Array.isArray(batch.stories)||batch.stories.length<min||batch.stories.length>max)throw Error(`${section} batch: expected ${min}–${max} stories`);
+    // 既に載せた記事と同じ見出し・同じ根拠idの記事は、紙面全体を捨てずにその記事だけ外す
+    const knownIds=new Set(current.map(h=>h.id));
+    const placedTitles=Object.values(parsed).flat().map(a=>a.title);
+    const kept=[];
+    for(const article of batch.stories){
+      const ids=[...new Set(article.sourceIds||[])].filter(id=>knownIds.has(id)&&!used.has(id));
+      const title=String(article.title||'');
+      if(!ids.length||[...placedTitles,...kept.map(a=>a.title)].includes(title)){console.log(`Skipped duplicate ${section}: ${title}`);continue}
+      article.sourceIds=ids;kept.push(article);
+      for(const id of ids)used.add(id);
+    }
+    batch.stories=kept;
     parsed[section].push(...batch.stories);
-    for(const article of batch.stories)for(const id of article.sourceIds||[])used.add(id);
     for(const key of Object.keys(usage))usage[key]+=result.usageMetadata?.[key]||0;
     console.log(`Generated ${section} ${start+1}–${start+batch.stories.length}`);
     }
