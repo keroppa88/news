@@ -45,6 +45,18 @@ function startOfYesterdayJst() {
   return Date.UTC(jstNow.getUTCFullYear(), jstNow.getUTCMonth(), jstNow.getUTCDate() - 1) - 9 * 3600 * 1000;
 }
 
+// Googleニュースは連続アクセスで一時的に 503/429 を返すことがあるので、間を空けて取り直す
+async function fetchWithRetry(url, waits = [15000, 45000]) {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (res.ok) return res.text();
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt >= waits.length) throw new Error(`HTTP ${res.status}`);
+    console.error(`retry after HTTP ${res.status} (${waits[attempt] / 1000}s): ${url}`);
+    await new Promise((r) => setTimeout(r, waits[attempt]));
+  }
+}
+
 // options:
 //   name      ログ用の名前（例: news_r）
 //   file      保存するCSVファイル名
@@ -61,9 +73,7 @@ async function saveRss({ name, file, urls, max = 60, perFeed, exclude, keepSourc
       const { url, label } = typeof entry === 'string' ? { url: entry } : entry;
       let xml;
       try {
-        const res = await fetch(url, { headers: { 'User-Agent': UA } });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        xml = await res.text();
+        xml = await fetchWithRetry(url);
       } catch (err) {
         // 1つのRSSが失敗しても他は続ける（全部失敗したら下でエラー）
         console.error(`WARN in ${name}: ${err.message}: ${url}`);

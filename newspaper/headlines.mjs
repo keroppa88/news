@@ -1,18 +1,24 @@
 import { createHash } from 'node:crypto';
 export function parseHeadlines(text){
+  // summary1.txt の書き方はGeminiの実行ごとに揺れる（行頭の「* 」「- 」の有無、日付の後置・括弧内、媒体名の有無など）ので、
+  // 「日付を含む行」を見出しとして広く拾い、媒体名が無ければ所属セクション名を使う。
   const found=new Map();
   let sectionMedia='';
-  for(const line of text.split(/\r?\n/)){
-    const heading=line.match(/●●([^●]+)●●/);
+  for(const raw of text.split(/\r?\n/)){
+    const heading=raw.match(/●●([^●]+)●●/);
     if(heading){sectionMedia=heading[1].trim();continue}
-    let m=line.match(/^\s*[-*]\s+(.+?)\s*[（(]([^（）()]+)[）)]\s*(\d{4}\/\d{1,2}\/\d{1,2})\s*$/);
-    if(!m&&sectionMedia){
-      const dated=line.match(/^\s*[-*]\s+(.+?)\s*[（(](\d{4}\/\d{1,2}\/\d{1,2})[）)]\s*$/);
-      if(dated)m=[dated[0],dated[1],sectionMedia,dated[2]];
-    }
-    if(!m)continue;
-    const title=m[1].trim().replace(/\s+/g,' '),media=m[2].trim(),date=m[3].split('/').map((x,i)=>i?x.padStart(2,'0'):x).join('-');
-    if(title.length<4||/提供されていない|記事なし/.test(title))continue;
+    if(/^\s*#/.test(raw))continue;
+    const dateMatch=raw.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+    if(!dateMatch)continue;
+    const line=raw.replace(/^\s*(?:[-*・]|\d+[.．])\s*/,'').trim();
+    const groups=[...line.matchAll(/[（(]([^（）()]*)[）)]/g)].map(m=>m[1].trim());
+    const media=groups.find(g=>g&&!/\d{4}\/\d{1,2}\/\d{1,2}/.test(g)&&!/^UTC/.test(g)&&g.length<=30)||sectionMedia;
+    let title=line;
+    // 末尾の（媒体）（日付）や裸の日付を取り除く
+    for(let i=0;i<3;i++)title=title.replace(/\s*(?:[（(][^（）()]*[）)]|\d{4}\/\d{1,2}\/\d{1,2}(?:\s+\d{1,2}:\d{2})?)\s*$/,'');
+    title=title.trim().replace(/\s+/g,' ');
+    if(!media||title.length<4||/提供されていない|記事なし/.test(title))continue;
+    const date=[dateMatch[1],dateMatch[2].padStart(2,'0'),dateMatch[3].padStart(2,'0')].join('-');
     const id=createHash('sha256').update(`${date}|${media}|${title}`).digest('hex').slice(0,16);
     if(!found.has(id))found.set(id,{id,title,media,date});
   }
