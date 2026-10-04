@@ -274,6 +274,16 @@ ${englishEntries.map(e => e.line).join('\n')}`;
     console.log('[Step1] 英文行なし');
   }
 
+  // ===== Step 1.5: 翻訳後も日本語になっていない記事行を削除 =====
+  // Geminiが架空のローマ字見出し（例: "tensasī hōritsu no ..."）を作ることがあり、翻訳もできないため
+  let latinCount = 0;
+  for (const sec of s2Sections) {
+    const before = sec.lines.length;
+    sec.lines = sec.lines.filter(l => !(/^\d+\.\s/.test(l) && needsTranslation(l)));
+    latinCount += before - sec.lines.length;
+  }
+  console.log(`[Step1.5] 日本語になっていない記事を${latinCount}件削除`);
+
   // ===== Step 2: 表記フォーマット修正 =====
   let fixCount = 0;
   for (const sec of s2Sections) {
