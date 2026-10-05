@@ -15,13 +15,16 @@ try{
  await page.evaluate(()=>refit());
  const result=await page.evaluate(()=>{
   const paper=document.querySelector('.paper').getBoundingClientRect(),grid=document.querySelector('.important-cartoon-grid'),figure=document.querySelector('.paper-cartoon'),image=figure?.querySelector('img');
-  return {height:paper.height,width:paper.width,important:document.querySelectorAll('.front-page .story,.front-page .headline-only').length,others:document.querySelectorAll('.supplement .story').length,cartoon:!!figure,title:figure?.querySelector('figcaption').textContent,grid:!!grid,imageLoaded:image?.complete&&image.naturalWidth>0,ranking:document.querySelector('.ycomment')?.children.length-1};
+  return {height:paper.height,width:paper.width,important:document.querySelectorAll('.front-page .story,.front-page .headline-only').length,others:document.querySelectorAll('.supplement .story').length,cartoon:!!figure,title:figure?.querySelector('figcaption').textContent,grid:!!grid,imageLoaded:image?.complete&&image.naturalWidth>0,figureWidth:figure?.getBoundingClientRect().width,gridWidth:grid?.getBoundingClientRect().width,captionBorders:figure?getComputedStyle(figure.querySelector('figcaption')).borderTopWidth:null,ranking:document.querySelector('.ycomment')?.children.length-1};
  });
  console.log('Paper layout:',JSON.stringify(result));
  const data=JSON.parse(await fs.readFile('newspaper.json','utf8'));
  assert.equal(result.important,Math.min(data.important.length,20));
  assert.equal(result.others,Math.max(data.others.length-3,0));
  assert.ok(result.cartoon&&result.grid&&result.title&&result.imageLoaded,'Cartoon and Japanese caption must load');
+ assert.ok(result.figureWidth/result.gridWidth<0.34,'Cartoon must use only one third of paper width');
+ assert.match(result.title,/^「.*」$/);
+ assert.equal(result.captionBorders,'0px');
  assert.ok(result.height<=1123.6,'Paper must fit one A4 page without dropping important articles');
  await page.screenshot({path:'/tmp/paper-layout.png',fullPage:true});
  const pdf=await page.pdf({preferCSSPageSize:true});
