@@ -1,0 +1,107 @@
+name: Editorial Cartoon
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cartoon.yml'
+      - 'cartoon/**'
+  workflow_run:
+    workflows: ['Daily News Update']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: editorial-cartoon
+  cancel-in-progress: false
+
+jobs:
+  cartoon:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify both news editions completed
+        run: node cartoon/check-edition.mjs
+        env:
+          NEWS_RUN_ID: ${{ github.event.workflow_run.id }}
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Test editorial cartoon pipeline
+        run: node --test cartoon/cartoon.test.mjs
+
+      - name: Select three ideas and draw the top candidate
+        id: generation
+        continue-on-error: true
+        run: node cartoon/generate.mjs
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CARTOON_TEXT_MODEL: ${{ vars.CARTOON_TEXT_MODEL || 'gpt-5-mini' }}
+          CARTOON_IMAGE_MODEL: ${{ vars.CARTOON_IMAGE_MODEL || 'gpt-image-2.5-flare' }}
+
+      - name: Add cartoon above normal edition word cloud
+        run: node cartoon/publish.mjs
+
+      - name: Save and publish cartoon
+        id: saved
+        run: |
+          if [ ! -f editorial-cartoon.json ] || [ ! -f editorial-cartoon.png ]; then exit 0; fi
+          git config user.email 'action@github.com'
+          git config user.name 'GitHub Action'
+          # Rebase assets only; insert into the latest normal HTML afterwards.
+          git add editorial-cartoon.json editorial-cartoon.png
+          if ! git diff --cached --quiet; then git commit -m 'Automated update: editorial cartoon'; fi
+          git restore index.html
+          git fetch origin main
+          git rebase origin/main
+          node cartoon/publish.mjs
+          git add index.html
+          if ! git diff --cached --quiet; then git commit -m 'Place cartoon on latest normal page'; fi
+          git push origin HEAD:main
+          echo 'ready=true' >> "$GITHUB_OUTPUT"
+
+      # GITHUB_TOKEN commits cannot be relied on to trigger a branch Pages build.
+      - name: Prepare Pages with the cartoon
+        if: steps.saved.outputs.ready == 'true'
+        run: |
+          mkdir -p _cartoon_site
+          cp index.html paper-newspaper.html print.html config.json market.json _cartoon_site/
+          cp -R assets _cartoon_site/
+          for file in wordcloud.jpg newspaper.json ycomment.json editorial-cartoon.png editorial-cartoon.json; do
+            if [ -f "$file" ]; then cp "$file" _cartoon_site/; fi
+          done
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.saved.outputs.ready == 'true'
+        with:
+          path: _cartoon_site
+
+      - name: Deploy Pages with the cartoon
+        id: deployment
+        if: steps.saved.outputs.ready == 'true'
+        uses: actions/deploy-pages@v4
+
+      - name: Report generation failure
+        if: steps.generation.outcome == 'failure'
+        run: |
+          echo 'Cartoon generation failed. Existing news and the last successful cartoon are preserved.'
+          exit 1
