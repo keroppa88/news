@@ -58,6 +58,9 @@ jobs:
           CARTOON_TEXT_MODEL: ${{ vars.CARTOON_TEXT_MODEL || 'gpt-5-mini' }}
           CARTOON_IMAGE_MODEL: ${{ vars.CARTOON_IMAGE_MODEL || 'gpt-image-2.5-flare' }}
 
+      - name: Archive cartoon by date and Japanese title
+        run: node cartoon/archive.mjs
+
       - name: Add half-width cartoon at bottom of normal edition
         run: node cartoon/publish.mjs
 
@@ -68,7 +71,7 @@ jobs:
           git config user.email 'action@github.com'
           git config user.name 'GitHub Action'
           # Rebase assets only; insert into the latest normal HTML afterwards.
-          git add editorial-cartoon.json editorial-cartoon.png
+          git add editorial-cartoon.json editorial-cartoon.png picturewarehohuse/
           if ! git diff --cached --quiet; then git commit -m 'Automated update: editorial cartoon'; fi
           git restore index.html
           git fetch origin main

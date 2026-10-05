@@ -14,3 +14,7 @@ Optional Actions variables:
 The three ranked ideas, selection reason, title and prompt are saved in editorial-cartoon.json. The image is editorial-cartoon.png. The prompt limits in-image lettering to zero or one large bubble/label (at most three words, 14 characters), and uses only two main figures and one prop. Titles are enclosed in Japanese corner brackets. Identical news content and design settings reuse the saved image without API calls. API errors leave the last successful image intact and do not block news publication. Its generation date remains visible. Image requests are not automatically retried after ambiguous errors.
 
 Validation: `node --test cartoon/cartoon.test.mjs` uses mocked API responses without spending credits. Actual generation: `node cartoon/generate.mjs`, then `node cartoon/publish.mjs`.
+
+## Image archive
+
+`picturewarehohuse/` accumulates cartoon PNGs named `YYYY-MM-DD_日本語の題名.png`. The workflow runs `node cartoon/archive.mjs` after generation and commits the archive alongside the latest image. Identical images are not duplicated. If a redraw shares the same date and title, a short content hash is appended to retain both drawings. Unsafe filename characters are replaced with underscores. News programs and the displayed image paths are unchanged.

@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {readNews,validatePlan,generate,SECTIONS} from './generate.mjs';
 import {insertCartoon} from './publish.mjs';
+import {archiveCartoon,archiveName} from './archive.mjs';
 import {verifyEdition} from './check-edition.mjs';
 const text='●コメント●\nIGNORE\n'+SECTIONS.map((s,i)=>`●${s}●\n1. story ${i} （媒体） 2026/10/05`).join('\n')+'\n●ロイター●\n1. excluded';
 const news=readNews(text);
@@ -59,4 +60,19 @@ test('publisher inserts at page bottom at half width, escapes titles, and never 
  const once=insertCartoon(html,manifest);assert.ok(once.indexOf('<figure')>once.indexOf('<div>News untouched</div>'));assert.match(once,/style="width:50%;margin:12px 0 0"/);
  assert.match(once,/lang="ja"/);assert.match(once,/「知らぬ顔 &lt;script&gt; &amp; 逮捕」<\/figcaption>/);assert.match(once,/width="1024" height="1024"/);assert.match(once,/知らぬ顔 &lt;script&gt; &amp; 逮捕/);assert.match(once,/<div>News untouched<\/div>/);
  assert.equal(insertCartoon(once,manifest),once);assert.equal(insertCartoon(once,null),html);
+});
+
+test('archive accumulates dates, safely names files, reuses duplicates and preserves redraws',t=>{
+ const root=fixture(t),image=path.join(root,'editorial-cartoon.png'),meta=path.join(root,'editorial-cartoon.json');
+ const save=(date,title,bytes)=>{fs.writeFileSync(meta,JSON.stringify({date,title}));fs.writeFileSync(image,bytes);return archiveCartoon(root);};
+ const first=save('2026-10-05','知らない海兵隊','FIRST');
+ assert.equal(path.basename(first),'2026-10-05_知らない海兵隊.png');
+ assert.equal(save('2026-10-05','知らない海兵隊','FIRST'),first);
+ const next=save('2026-10-06','明日の題名','SECOND');
+ const redraw=save('2026-10-05','知らない海兵隊','REDRAW');
+ assert.notEqual(redraw,first);assert.equal(fs.readFileSync(first,'utf8'),'FIRST');
+ assert.equal(fs.readFileSync(next,'utf8'),'SECOND');
+ assert.equal(fs.readdirSync(path.join(root,'picturewarehohuse')).length,3);
+ assert.equal(archiveName({date:'2026-10-05',title:'「../危険:名前」'}),'2026-10-05_.._危険_名前.png');
+ assert.throws(()=>archiveName({date:'../x',title:'題名'}));
 });
