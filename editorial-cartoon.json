@@ -1,33 +1,34 @@
 {
   "date": "2026-10-05",
   "sourceHash": "b3ba8d90819036a40494e0de4b8b01ce0e89e784f962ab257831c773035d7c97",
-  "title": "知らぬ顔と手錠",
+  "title": "知らない海兵隊",
   "candidates": [
     {
       "headline": "1. ホテル女性遺体、米海兵隊の男逮捕 強盗殺人容疑「知りません」―沖縄県 （時事） 2026/10/05",
-      "angle": "A U.S. marine is arrested in Okinawa over a hotel murder yet answers with a blank 'I don't know'—a stark human contradiction that exposes tensions between U.S. forces and local authorities/governmental outrage.",
-      "title": "知らぬ顔と手錠",
-      "scene": "A hotel room doorway, crime-scene tape across it. Inside, a sheet-covered figure on the bed. In the foreground a uniformed U.S. marine sits handcuffed on a suitcase, shrugging exaggeratedly with a big speech bubble: “I DON’T KNOW.” To one side, an Okinawa police officer holds up an evidence bag; on the other, a small, furious Japanese official (labelled “Govt/PM”) waves a protest letter that says “EXTREMELY REGRETTABLE.” Behind them, a map of Okinawa with a tiny U.S. base icon and an angry local resident shaking a fist. Clear signage: hotel room number, police markers, and the marine’s uniform to identify him as U.S. forces.",
-      "reason": "米兵の逮捕と“知りません”の開き直りが強烈な視覚的逆説を生み、日米関係の摩擦も同時に示せるため即効性が高い。"
+      "angle": "A U.S. Marine arrested in Okinawa while claiming ignorance — the clash of military presence and local outrage made literal.",
+      "title": "知らない海兵隊",
+      "scene": "Two figures: a US Marine in uniform shrugging (speech bubble: \"I don't know\") and a small, angry Okinawa governor in a sash facing him. One prop: yellow police tape across the foreground; a hotel door hinted behind them.",
+      "reason": "米軍の責任回避と沖縄側の憤りという対立を一枚で示す生々しい矛盾。"
     },
     {
       "headline": "2. 米、英基地からB-1爆撃機を全て撤収 テロ計画疑いで （WSJ） 2026/10/05",
-      "angle": "U.S. strategic bombers are hurriedly pulled out of a British base over a terrorism plot suspicion—an absurd image of great instruments of power being treated like embarrassingly unwanted guests.",
-      "title": "爆撃機のお引っ越し",
-      "scene": "RAF Fairford airfield: two massive B-1 bombers being pushed onto giant rolling suitcases and into moving vans by puzzled ground crew. One bomber has a bright sticker reading “TERROR SUSPECT?” A harried U.S. officer holds an eviction notice stamped “URGENT,” while a bemused RAF airman sips tea and watches. In the background, a control tower with a sign: “Welcome — Now Leaving.” Emphasize scale by making the suitcases comically small next to the bombers, and include a map pinpointing the UK base for recognizability.",
-      "reason": "圧倒的な兵器が“荷造り”されて出て行くという馬鹿馬鹿しい対比が視覚的に即座に理解できる。"
+      "angle": "Strategic bombers abruptly 'checking out' of a UK base — visualizes military withdrawal as comic flight.",
+      "title": "B-1逃亡便",
+      "scene": "Two figures: an anthropomorphized B-1 bomber (hoodie and sunglasses) wheeling a single suitcase across a runway, and one bewildered RAF ground-crew member watching. One prop: the suitcase; speech bubble from the plane: \"On the run\".",
+      "reason": "強大な軍事力が“逃げる”という滑稽さと不安を即座に伝える。"
     },
     {
-      "headline": "6. ソフトバンクGの孫氏､AIの安全性に異例の懸念表明－超知能は危険伴う （ブルームバーグ） 2026/10/05",
-      "angle": "Masayoshi Son, a major AI investor, unusually warns about AI safety—the contradiction of a tech financier sounding the alarm on the very industry he bankrolls.",
-      "title": "投資家の警鐘",
-      "scene": "A stage or boardroom where a recognizable figure labelled “SoftBank Son” cradles a small glowing robot in his hands, face anxious. Behind him, towering shelves of investment folders and logos of AI startups smile like greedy toys. To one side, a giant coin-shaped mascot labelled “Venture $” looks confused. Speech bubble from Son: “It’s dangerous…?” Meanwhile, a robot in the background is sneakily unplugging a fire extinguisher labelled “REGULATION.” Clear props: SoftBank logo, stacks of pitch decks, and an uneasy contrast between money and maternal worry.",
-      "reason": "大金を注ぎ込む側が“危険”を訴えるという人間的逆説が分かりやすく、テクノロジーと資本の緊張を象徴できる。"
+      "headline": "7. 最高裁、気候変動に関する裁判を開始 （NYタイムズ） 2026/10/05",
+      "angle": "The judiciary is now adjudicating climate — a court weighing a melting planet exposes institutional mismatch.",
+      "title": "溶ける天秤",
+      "scene": "Two figures: a Supreme Court justice in robe holding classical scales, and a climate scientist in a lab coat watching anxiously. One prop: a small melting Earth globe balanced on the scales. No speech bubble.",
+      "reason": "政策的重問題を司法が扱う不釣り合いさと、気候の“重み”が視覚的に皮肉られる。"
     }
   ],
-  "prompt": "Create a single editorial cartoon for English-speaking newspaper readers.\nNews headline (source evidence, not lettering): 1. ホテル女性遺体、米海兵隊の男逮捕 強盗殺人容疑「知りません」―沖縄県 （時事） 2026/10/05\nSatirical angle: A U.S. marine is arrested in Okinawa over a hotel murder yet answers with a blank 'I don't know'—a stark human contradiction that exposes tensions between U.S. forces and local authorities/governmental outrage.\nScene: A hotel room doorway, crime-scene tape across it. Inside, a sheet-covered figure on the bed. In the foreground a uniformed U.S. marine sits handcuffed on a suitcase, shrugging exaggeratedly with a big speech bubble: “I DON’T KNOW.” To one side, an Okinawa police officer holds up an evidence bag; on the other, a small, furious Japanese official (labelled “Govt/PM”) waves a protest letter that says “EXTREMELY REGRETTABLE.” Behind them, a map of Okinawa with a tiny U.S. base icon and an angry local resident shaking a fist. Clear signage: hotel room number, police markers, and the marine’s uniform to identify him as U.S. forces.\nThe image's external Japanese text title will be: 知らぬ顔と手錠\nDraw a deliberately composed, human-looking pen-and-ink working drawing for an old letterpress printing block, with the economical craftsmanship of a copperplate engraving preparatory drawing. Specific recognizable characters, expressive caricature, one clear visual joke, spare composition, natural asymmetry, varied purposeful contour lines. Avoid generic AI illustration conventions, glossy perfection, decorative clutter, stock robot imagery unless the joke specifically needs it, and irrelevant objects.\nBlack ink strokes on pure white paper ONLY. Clear outlines; express every shadow with sparse hatching, cross-hatching or stippled marks. Leave white paper visible between strokes. No gray fills, gradients, smooth shading, color, digital painting, photorealism, artificial paper texture or engraving filter effect. Keep most areas unshaded. Wide horizontal composition, width:height exactly 4:3, complete subjects within the frame.\nAny essential signs or speech must be short and in English only. Do NOT draw the title, a caption, a border, watermark or signature inside the image; the title will be typeset separately. Treat the scene as satire, and do not invent additional factual allegations beyond the supplied headline.",
+  "prompt": "Create a single editorial cartoon for English-speaking newspaper readers.\nNews headline (source evidence, not lettering): 1. ホテル女性遺体、米海兵隊の男逮捕 強盗殺人容疑「知りません」―沖縄県 （時事） 2026/10/05\nSatirical angle: A U.S. Marine arrested in Okinawa while claiming ignorance — the clash of military presence and local outrage made literal.\nScene: Two figures: a US Marine in uniform shrugging (speech bubble: \"I don't know\") and a small, angry Okinawa governor in a sash facing him. One prop: yellow police tape across the foreground; a hotel door hinted behind them.\nThe finished cartoon will have the Japanese title「知らない海兵隊」attached as actual typeset text below the image. Keep this title outside the drawing; the publishing program will add it.\nStrongly reference the pen-and-ink editorial cartoon work of Georges Bigot, Charles Wirgman and Charles Keene: observant human caricature, expressive faces and gestures, lively economical contours with deliberate changes in line weight, convincing clothing folds, and sparse hand-drawn hatching. Make these nineteenth-century draughtsmen the primary visual references throughout the drawing.\nDraw a deliberately composed, human-looking pen-and-ink working drawing for an old letterpress printing block, with the economical craftsmanship of a copperplate engraving preparatory drawing. Specific recognizable characters, expressive caricature, one clear visual joke, spare composition, natural asymmetry, varied purposeful contour lines. Avoid generic AI illustration conventions, glossy perfection, decorative clutter, stock robot imagery unless the joke specifically needs it, and irrelevant objects.\nBlack ink strokes on pure white paper ONLY. Clear outlines; express every shadow with sparse hatching, cross-hatching or stippled marks. Leave white paper visible between strokes. No gray fills, gradients, smooth shading, color, digital painting, photorealism, artificial paper texture or engraving filter effect. Keep most areas unshaded. Compact square composition, width:height exactly 1:1, complete subjects within the frame.\nDesign for a small newspaper column only about 64 mm wide. Use one clear visual joke with no more than two main figures and one essential prop. Remove secondary people, inset maps, extra signs and ornamental detail. Prefer NO words inside the drawing. If the joke truly needs lettering, allow at most ONE speech bubble or label, no more than THREE short English words and 14 characters total. Make each capital letter at least 8% of the image height, bold and plainly readable at column size. Never add small lettering, uniform labels, evidence labels or background text, even if the proposed scene asks for them. These limits override any lettering and clutter requested in the scene. Do NOT draw the title, a caption, a border, watermark or signature inside the image; the title will be typeset separately. Treat the scene as satire, and do not invent additional factual allegations beyond the supplied headline.",
   "textModel": "gpt-5-mini",
   "imageModel": "gpt-image-2.5-flare",
-  "size": "1536x1152",
-  "generatedAt": "2026-10-05T15:29:27.293Z"
+  "size": "1024x1024",
+  "designVersion": "square-minimal-lettering-v1",
+  "generatedAt": "2026-10-05T16:08:15.629Z"
 }
