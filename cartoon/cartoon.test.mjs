@@ -32,6 +32,8 @@ test('API sequence, Japanese title, native 4:3 and duplicate-run cache',async t=
  const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
  assert.equal(calls.length,2);assert.equal(calls[1].body.size,'1536x1152');assert.equal(calls[1].body.n,1);
  assert.equal(result.title,plan.candidates[0].title);assert.match(calls[1].body.prompt,/No gray fills/);
+ for(const name of ['Georges Bigot','Charles Wirgman','Charles Keene'])assert.ok(calls[1].body.prompt.includes(name));
+ assert.ok(calls[1].body.prompt.includes(`Japanese title「${plan.candidates[0].title}」`));
  await generate({root,env:{},fetchImpl});assert.equal(calls.length,2);
 });
 test('failed image generation preserves previous publication; absent key makes no request',async t=>{
