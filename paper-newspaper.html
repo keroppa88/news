@@ -42,7 +42,7 @@
 <div id="content" class="loading">紙面を編集中です…</div></main>
   <script>
     const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    const search=t=>'https://news.google.com/search?q='+encodeURIComponent(t)+'&hl=ja&gl=JP&ceid=JP%3Aja';
+    const search=t=>'https://www.google.com/search?q='+encodeURIComponent(t);
     const story=a=>'<article class="story"><h3><a href="'+search(a.title)+'" target="_blank" rel="noopener noreferrer">'+esc(a.title)+'</a></h3><p data-one-line="'+esc(a.printBody?.oneLine||a.summary)+'" data-two-lines="'+esc(a.printBody?.twoLines||a.summary)+'">'+esc(a.summary)+'</p></article>';
     const fitPaper=()=>{
       document.querySelectorAll('.story').forEach(article=>{
