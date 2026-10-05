@@ -47,10 +47,10 @@ test('unfinished paper edition blocks all API calls',async t=>{
  const root=fixture(t);fs.writeFileSync(path.join(root,'newspaper.json'),JSON.stringify({sourceUpdatedAt:'2026-10-04'}));
  await assert.rejects(generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl:()=>{throw Error('must not call');}}),/does not match/);
 });
-test('publisher inserts at page bottom at quarter width, escapes titles, and never duplicates',()=>{
+test('publisher inserts at page bottom at half width, escapes titles, and never duplicates',()=>{
  const html='<body><div class="container"><div class="update-time">time</div><div style="margin-bottom: 10px;"><img src="wordcloud.jpg?t=1" alt="Word Cloud"></div><div>News untouched</div></div></body>';
  const manifest={title:'知らぬ顔 <script> & 逮捕',date:'2026-10-05',sourceHash:'123'};
- const once=insertCartoon(html,manifest);assert.ok(once.indexOf('<figure')>once.indexOf('<div>News untouched</div>'));assert.match(once,/style="width:25%;margin:12px 0 0"/);
+ const once=insertCartoon(html,manifest);assert.ok(once.indexOf('<figure')>once.indexOf('<div>News untouched</div>'));assert.match(once,/style="width:50%;margin:12px 0 0"/);
  assert.match(once,/lang="ja"/);assert.match(once,/知らぬ顔 &lt;script&gt; &amp; 逮捕/);assert.match(once,/<div>News untouched<\/div>/);
  assert.equal(insertCartoon(once,manifest),once);assert.equal(insertCartoon(once,null),html);
 });

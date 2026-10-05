@@ -1,6 +1,6 @@
 # Daily editorial cartoon
 
-The separate Editorial Cartoon workflow runs after Daily News Update finishes, and verifies successful normal-page and paper-edition generation. Existing news programs and their workflow are not modified. It reads only the five summary2.txt sections from 重要ニュース through その他ニュース. GPT ranks three distinct stories; candidate 1 becomes a monochrome pen-and-ink cartoon for English-speaking readers. The drawing prompt strongly references Georges Bigot, Charles Wirgman and Charles Keene, with expressive human caricature, varied contours and sparse hatching. The PNG is 1536 × 1152 (width:height 4:3). Its Japanese title is HTML text below the image, at the bottom of the normal edition, at 25% of the content width. The paper edition does not display the cartoon.
+The separate Editorial Cartoon workflow runs after Daily News Update finishes, and verifies successful normal-page and paper-edition generation. Existing news programs and their workflow are not modified. It reads only the five summary2.txt sections from 重要ニュース through その他ニュース. GPT ranks three distinct stories; candidate 1 becomes a monochrome pen-and-ink cartoon for English-speaking readers. The drawing prompt strongly references Georges Bigot, Charles Wirgman and Charles Keene, with expressive human caricature, varied contours and sparse hatching. The PNG is 1536 × 1152 (width:height 4:3). Its Japanese title is HTML text below the image, at the bottom of the normal edition, at 50% of the content width. The paper edition does not display the cartoon.
 
 ## Enable
 

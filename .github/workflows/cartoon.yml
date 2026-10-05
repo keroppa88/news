@@ -58,7 +58,7 @@ jobs:
           CARTOON_TEXT_MODEL: ${{ vars.CARTOON_TEXT_MODEL || 'gpt-5-mini' }}
           CARTOON_IMAGE_MODEL: ${{ vars.CARTOON_IMAGE_MODEL || 'gpt-image-2.5-flare' }}
 
-      - name: Add quarter-width cartoon at bottom of normal edition
+      - name: Add half-width cartoon at bottom of normal edition
         run: node cartoon/publish.mjs
 
       - name: Save and publish cartoon
