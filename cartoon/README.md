@@ -1,6 +1,6 @@
 # Daily editorial cartoon
 
-The separate Editorial Cartoon workflow runs after Daily News Update finishes, and verifies successful normal-page and paper-edition generation. Existing news programs and their workflow are not modified. It reads only the five summary2.txt sections from 重要ニュース through その他ニュース. GPT ranks three distinct stories; candidate 1 becomes a monochrome pen-and-ink cartoon for English-speaking readers. The PNG is 1536 × 1152 (width:height 4:3). Its English title is HTML text below the image, above the normal edition's word cloud. The paper edition does not display the cartoon.
+The separate Editorial Cartoon workflow runs after Daily News Update finishes, and verifies successful normal-page and paper-edition generation. Existing news programs and their workflow are not modified. It reads only the five summary2.txt sections from 重要ニュース through その他ニュース. GPT ranks three distinct stories; candidate 1 becomes a monochrome pen-and-ink cartoon for English-speaking readers. The PNG is 1536 × 1152 (width:height 4:3). Its Japanese title is HTML text below the image, above the normal edition's word cloud. The paper edition does not display the cartoon.
 
 ## Enable
 

@@ -8,7 +8,7 @@ import {insertCartoon} from './publish.mjs';
 import {verifyEdition} from './check-edition.mjs';
 const text='●コメント●\nIGNORE\n'+SECTIONS.map((s,i)=>`●${s}●\n1. story ${i} （媒体） 2026/10/05`).join('\n')+'\n●ロイター●\n1. excluded';
 const news=readNews(text);
-const plan={candidates:news.slice(0,3).map((s,i)=>({headline:s.articles[0],angle:'A sharp irony',title:`Title ${i}`,scene:'A man feeding a monster',reason:'矛盾が明瞭'}))};
+const plan={candidates:news.slice(0,3).map((s,i)=>({headline:s.articles[0],angle:'A sharp irony',title:`風刺の題名${i}`,scene:'A man feeding a monster',reason:'矛盾が明瞭'}))};
 const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(1536,16);b.writeUInt32BE(1152,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
  const fetchImpl=async url=>({ok:true,json:async()=>url.includes('runs?')?{workflow_runs:[1,2].map(id=>({id,name:'Daily News Update',head_branch:'main',status:'completed',conclusion:'success'}))}:{jobs:[{name:'build',steps:url.includes('/2/')?['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition'].map(name=>({name,conclusion:'success'})):[]}]} });
@@ -20,13 +20,13 @@ test('only the five normal sections are used; incomplete input fails',()=>{
  assert.deepEqual(news.map(s=>s.section),SECTIONS);assert.doesNotMatch(JSON.stringify(news),/IGNORE|excluded/);
  assert.throws(()=>readNews(text.replace('●その他ニュース●','●other●')),/complete/);
 });
-test('selection rejects invented headlines, duplicate stories and non-English title',()=>{
+test('selection rejects invented headlines, duplicate stories and non-Japanese title',()=>{
  assert.deepEqual(validatePlan(plan,news),plan);
- for(const patch of [{headline:'invented'},{title:'日本語'},{headline:plan.candidates[1].headline}]){
+ for(const patch of [{headline:'invented'},{title:'English title'},{headline:plan.candidates[1].headline}]){
   const p=structuredClone(plan);Object.assign(p.candidates[0],patch);assert.throws(()=>validatePlan(p,news));
  }
 });
-test('API sequence, English title, native 4:3 and duplicate-run cache',async t=>{
+test('API sequence, Japanese title, native 4:3 and duplicate-run cache',async t=>{
  const root=fixture(t),calls=[];
  const fetchImpl=async(url,options)=>{const body=JSON.parse(options.body);calls.push({url,body});return {ok:true,json:async()=>url.endsWith('/responses')?{status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(plan)}]}]}:{data:[{b64_json:png().toString('base64')}]}};};
  const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
@@ -47,8 +47,8 @@ test('unfinished paper edition blocks all API calls',async t=>{
 });
 test('publisher inserts above word cloud, escapes titles, and never duplicates',()=>{
  const html='<div class="update-time">time</div><div style="margin-bottom: 10px;"><img src="wordcloud.jpg?t=1" alt="Word Cloud"></div><div>News untouched</div>';
- const manifest={title:'A <script> & joke',date:'2026-10-05',sourceHash:'123'};
+ const manifest={title:'知らぬ顔 <script> & 逮捕',date:'2026-10-05',sourceHash:'123'};
  const once=insertCartoon(html,manifest);assert.ok(once.indexOf('<figure')<once.indexOf('src="wordcloud'));
- assert.match(once,/A &lt;script&gt; &amp; joke/);assert.match(once,/<div>News untouched<\/div>/);
+ assert.match(once,/lang="ja"/);assert.match(once,/知らぬ顔 &lt;script&gt; &amp; 逮捕/);assert.match(once,/<div>News untouched<\/div>/);
  assert.equal(insertCartoon(once,manifest),once);assert.equal(insertCartoon(once,null),html);
 });

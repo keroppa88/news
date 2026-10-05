@@ -8,7 +8,7 @@ export function insertCartoon(html,manifest){
   if(!manifest)return html;
   const anchor=/<div[^>]*>\s*<img\s+[^>]*src="wordcloud\.jpg[^">]*"[^>]*>\s*<\/div>/;
   if(!anchor.test(html))throw Error('Word cloud insertion point not found');
-  const figure=`<!-- EDITORIAL_CARTOON_START --><figure class="editorial-cartoon" style="margin:0 0 12px" lang="en"><img src="editorial-cartoon.png?v=${encodeURIComponent(manifest.sourceHash)}" width="1536" height="1152" style="display:block;width:100%;height:auto;aspect-ratio:4/3" alt="${esc(manifest.title)}"><figcaption style="font:700 18px/1.3 Georgia,serif;text-align:center;margin-top:5px">${esc(manifest.title)}</figcaption><div style="font:10px/1.3 sans-serif;text-align:right;margin-top:3px">${esc(manifest.date)}</div></figure><!-- EDITORIAL_CARTOON_END -->\n`;
+  const figure=`<!-- EDITORIAL_CARTOON_START --><figure class="editorial-cartoon" style="margin:0 0 12px" lang="ja"><img src="editorial-cartoon.png?v=${encodeURIComponent(manifest.sourceHash)}" width="1536" height="1152" style="display:block;width:100%;height:auto;aspect-ratio:4/3" alt="${esc(manifest.title)}"><figcaption style="font:700 18px/1.3 Georgia,'Yu Mincho','Hiragino Mincho ProN',serif;text-align:center;margin-top:5px">${esc(manifest.title)}</figcaption><div style="font:10px/1.3 sans-serif;text-align:right;margin-top:3px">${esc(manifest.date)}</div></figure><!-- EDITORIAL_CARTOON_END -->\n`;
   return html.replace(anchor,match=>figure+match);
 }
 export function publish(root=ROOT){
