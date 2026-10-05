@@ -58,7 +58,7 @@ function extractFallback(text,capturedAt){
 }
 const complete=m=>REQUIRED.every(k=>m&&m[k]);
 const num=(n,min=2,max=min)=>Number(n).toLocaleString('en-US',{minimumFractionDigits:min,maximumFractionDigits:max});
-const signed=(n,d=2)=>`${n>=0?'+':''}${num(n,d)}`;
+const signed=(n,d=2)=>`${n>=0?'△':'▲'}${num(Math.abs(n),d)}`;
 const pct=n=>`${signed(n)}%`;
 // Keep the full source timestamp in market.json but show only MM/DD on the newspaper.
 const shortDate=date=>{const m=String(date??'').match(/(?:^|\/)\d{2}\/\d{2}/);return m?m[0].replace(/^\//,''):'';};

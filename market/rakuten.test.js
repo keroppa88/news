@@ -23,7 +23,7 @@ test('Rakuten table extracts all ten targeted instruments and exact columns',()=
  assert.deepEqual(m.oil,{value:92.34,change:-1.23,date:'2026/09/18 17:00'});
  assert.deepEqual(m.jgb10,{value:2.985,change:0.009,date:'2026/09/18 15:30'});
  assert.deepEqual(m.ust10,{value:5,change:-0.031,date:'2026/09/18 16:00'});
- assert.match(displayed(m.oil,'原油'),/原油 92\.34 -1\.23/);
+ assert.match(displayed(m.oil,'原油'),/原油 92\.34 ▲1\.23/);
 });
 test('FX columns: buy and prior-day buy change, never the sell quote',()=>{
  const m=extractRows([['米ドル/円','156.8500','156.9300','-0.1200','-0.08%','09/19 06:00']],now);
@@ -42,8 +42,8 @@ test('All displayed dates omit year/time; futures truncated, FX has no change',(
  assert.equal(shortDate('2026/09/18 15:30'),'09/18');
  assert.equal(displayed(m.nikkeiFutures,'日経225指数先物'),'日経225指数先物 64,210 （09/19）');
  assert.equal(displayed(m.usdjpy,'米ドル円'),'米ドル円 157.45 （09/19）');
- assert.equal(displayed(m.jgb10,'日本国債10年'),'日本国債10年 2.99% +0.009 （09/18）');
- assert.equal(displayed(m.ust10,'米国債10年'),'米国債10年 5.00% -0.031 （09/18）');
+ assert.equal(displayed(m.jgb10,'日本国債10年'),'日本国債10年 2.99% △0.009 （09/18）');
+ assert.equal(displayed(m.ust10,'米国債10年'),'米国債10年 5.00% ▲0.031 （09/18）');
  for(const [key,label] of [['nikkei','日経平均株価'],['topix','TOPIX'],['dow','NYダウ'],['sp500','S&P500'],['nasdaq','NASDAQ'],['oil','原油']]){
   const output=displayed(m[key],label);assert.doesNotMatch(output,/2026|\d{2}:\d{2}/);assert.match(output,/（09\/18）/);
  }
