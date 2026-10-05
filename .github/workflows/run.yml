@@ -160,6 +160,11 @@ jobs:
           git pull --rebase origin main
           git push
 
+      - name: Verify paper cartoon layout
+        run: |
+          if [ -f editorial-cartoon.png ]; then node newspaper/paper-layout.test.mjs; fi
+        continue-on-error: true
+
       - name: Test optional newspaper generation
         id: newspaper_test
         run: node --test newspaper/newspaper.test.mjs
@@ -191,6 +196,9 @@ jobs:
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
           if [ -f ycomment.json ]; then cp ycomment.json _site/; fi
+          for file in editorial-cartoon.png editorial-cartoon.json; do
+            if [ -f "$file" ]; then cp "$file" _site/; fi
+          done
           MARKET_STRIP_ROOT=_site node web/add_market_strip.js --paper-only || echo 'Optional newspaper market rows unavailable'
 
       - name: Upload Pages artifact
