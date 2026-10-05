@@ -145,12 +145,17 @@ jobs:
       - name: Add Rakuten market rows
         run: node web/add_market_strip.js --normal-only
 
+      # Persist paper quotes too: branch-based Pages builds publish this file from main.
+      - name: Add paper market rows
+        run: node web/add_market_strip.js --paper-only
+        continue-on-error: true
+
       # Commit the normal news update before starting the optional newspaper edition.
       - name: Save news and normal web page
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt index.html wordcloud.jpg warehouse/ market.json ycomment.json
+          git add *.csv summary1.txt summary2.txt summary3.txt index.html paper-newspaper.html wordcloud.jpg warehouse/ market.json ycomment.json
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
           git push
