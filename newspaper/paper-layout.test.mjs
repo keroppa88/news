@@ -15,7 +15,9 @@ try{
  await page.evaluate(()=>refit());
  const result=await page.evaluate(()=>{
   const paper=document.querySelector('.paper').getBoundingClientRect(),grid=document.querySelector('.important-cartoon-grid'),figure=document.querySelector('.paper-cartoon'),image=figure?.querySelector('img');
-  return {height:paper.height,width:paper.width,important:document.querySelectorAll('.front-page .story,.front-page .headline-only').length,others:document.querySelectorAll('.supplement .story').length,cartoon:!!figure,title:figure?.querySelector('figcaption').textContent,grid:!!grid,imageLoaded:image?.complete&&image.naturalWidth>0,figureWidth:figure?.getBoundingClientRect().width,gridWidth:grid?.getBoundingClientRect().width,captionBorders:figure?getComputedStyle(figure.querySelector('figcaption')).borderTopWidth:null,ranking:document.querySelector('.ycomment')?.children.length-1};
+  const rankingBox=document.querySelector('.ycomment'),padding=parseFloat(getComputedStyle(document.querySelector('.paper')).paddingBottom);
+  const limit=paper.top+297*(padding/5)-padding;
+  return {rankingGap:limit-rankingBox.getBoundingClientRect().bottom,rankingLineHeight:parseFloat(getComputedStyle(rankingBox).lineHeight),height:paper.height,width:paper.width,important:document.querySelectorAll('.front-page .story,.front-page .headline-only').length,others:document.querySelectorAll('.supplement .story').length,cartoon:!!figure,title:figure?.querySelector('figcaption').textContent,grid:!!grid,imageLoaded:image?.complete&&image.naturalWidth>0,figureWidth:figure?.getBoundingClientRect().width,gridWidth:grid?.getBoundingClientRect().width,captionBorders:figure?getComputedStyle(figure.querySelector('figcaption')).borderTopWidth:null,ranking:document.querySelector('.ycomment')?.children.length-1};
  });
  console.log('Paper layout:',JSON.stringify(result));
  const data=JSON.parse(await fs.readFile('newspaper.json','utf8'));
@@ -25,6 +27,10 @@ try{
  assert.ok(result.figureWidth/result.gridWidth<0.34,'Cartoon must use only one third of paper width');
  assert.match(result.title,/^「.*」$/);
  assert.equal(result.captionBorders,'0px');
+ const available=(JSON.parse(await fs.readFile('ycomment.json','utf8')).titles||[]).length;
+ if(result.ranking>0&&result.ranking<available){
+  assert.ok(result.rankingGap>=-1&&result.rankingGap<result.rankingLineHeight+2,'Ranking must fill remaining A4 space to within one line');
+ }
  assert.ok(result.height<=1123.6,'Paper must fit one A4 page without dropping important articles');
  await page.screenshot({path:'/tmp/paper-layout.png',fullPage:true});
  const pdf=await page.pdf({preferCSSPageSize:true});

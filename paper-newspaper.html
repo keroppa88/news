@@ -80,7 +80,7 @@
     const fillRanking=titles=>{
       const box=document.querySelector('.ycomment');if(!box||!titles?.length)return;
       const paper=document.querySelector('.paper');
-      const narrow=matchMedia('(max-width:700px)').matches;
+      const narrow=matchMedia('screen and (max-width:700px)').matches;
       box.hidden=false;box.innerHTML='<b>ヤフコメランキング</b>';
       const mm=parseFloat(getComputedStyle(paper).paddingBottom)/5;// 5mm の padding から 1mm の px を求める
       const limit=paper.getBoundingClientRect().top+297*mm-parseFloat(getComputedStyle(paper).paddingBottom);
@@ -89,10 +89,8 @@
         box.appendChild(span);
         if(narrow?i>=19:box.getBoundingClientRect().bottom>limit){span.remove();break}
       }
-      // Keep half of the ranking headlines that would fit in the remaining space.
-      const keep=Math.ceil((box.children.length-1)/2);
-      while(box.children.length>keep+1)box.lastElementChild.remove();
-      box.hidden=keep===0;
+      // Ranking quantity absorbs the space remaining above the A4 bottom margin.
+      box.hidden=box.children.length<2;
     };
     let rankingTitles=[];
     const refit=()=>{fitPaper();fillRanking(rankingTitles)};
