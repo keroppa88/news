@@ -16,7 +16,7 @@ const rows=[
 ];
 const strip='<!-- MARKET_STRIP_START --><div class="market-strip" aria-label="株価指数・為替・原油・国債（日付は月日表示）">'+rows.map((row,i)=>
  `<div class="market-strip-row" data-row="${i+1}">`+row.map(([label,key])=>
-  `<span class="market-quote">${esc(displayed(markets[key],label))}</span>`).join('')+'</div>').join('')+'</div><!-- MARKET_STRIP_END -->';
+  `<span class="market-quote"><strong>${esc(label)}</strong>${esc(displayed(markets[key],label).slice(label.length))}</span>`).join('')+'</div>').join('')+'</div><!-- MARKET_STRIP_END -->';
 const css='<style id="market-strip-style">.market-strip{width:100%;font:9px/1.35 sans-serif;text-align:center;border-bottom:1px solid #222;padding:2px 0 3px}.market-strip-row{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:0;white-space:nowrap}.market-quote{display:inline-block;padding:2px 4px;border-right:1px solid #888}.market-quote:last-child{border-right:0}@media screen and (max-width:850px){.market-strip{overflow-x:auto;text-align:left}.market-strip-row{justify-content:flex-start;width:max-content;min-width:100%}.market-quote{padding:3px 5px}}@media print{.market-strip{font-size:6.5pt;overflow:visible}.market-strip-row{justify-content:center;white-space:normal}.market-quote{padding:1px 2px}}</style>';
 const targets=[['index.html',/(<div class="update-time">[^<]*<\/div>)/],['paper-newspaper.html',/(<header class="masthead">[\s\S]*?<\/header>)/]];
 const selected=process.argv[2]==='--normal-only'?targets.slice(0,1):process.argv[2]==='--paper-only'?targets.slice(1):targets;
