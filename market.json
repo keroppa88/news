@@ -7,7 +7,7 @@
     "bond": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html",
     "exchange": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
   },
-  "capturedAt": "2026-10-05T16:07:02.502Z",
+  "capturedAt": "2026-10-05T16:19:46.905Z",
   "markets": {
     "nikkei": {
       "value": 69946.86,
@@ -22,25 +22,25 @@
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "dow": {
-      "value": 51168.84,
-      "change": -8.12,
-      "percent": -0.02,
-      "date": "2026/10/05 11:57",
+      "value": 51163.31,
+      "change": -13.65,
+      "percent": -0.03,
+      "date": "2026/10/05 12:09",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "sp500": {
-      "percent": 0.52,
-      "date": "2026/10/05 11:52",
+      "percent": 0.47,
+      "date": "2026/10/05 12:04",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nasdaq": {
-      "percent": 0.79,
-      "date": "2026/10/05 11:51",
+      "percent": 0.71,
+      "date": "2026/10/05 12:04",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nikkeiFutures": {
-      "value": 70060,
-      "date": "2026/10/06 00:51",
+      "value": 70020,
+      "date": "2026/10/06 01:04",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/future_top.html"
     },
     "oil": {
@@ -56,15 +56,15 @@
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "ust10": {
-      "value": 5.307,
-      "change": 0.03,
+      "value": 5.3,
+      "change": 0.023,
       "date": "2026/10/05",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "usdjpy": {
-      "value": 157.96,
-      "change": 0.13,
-      "date": "2026/10/06 01:00",
+      "value": 158.04,
+      "change": 0.21,
+      "date": "2026/10/06 01:20",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
     }
   }
