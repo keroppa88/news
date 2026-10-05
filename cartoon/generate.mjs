@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
 export const SECTIONS=['重要ニュース','経済ニュース','国内ニュース','海外ニュース','その他ニュース'];
-export const IMAGE_SIZE='1024x1024';
+export const IMAGE_SIZE='816x816';
 export const DESIGN_VERSION='square-minimal-lettering-v1';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function readNews(text){
@@ -40,9 +40,10 @@ Strongly reference the pen-and-ink editorial cartoon work of Georges Bigot, Char
 Draw a deliberately composed, human-looking pen-and-ink working drawing for an old letterpress printing block, with the economical craftsmanship of a copperplate engraving preparatory drawing. Specific recognizable characters, expressive caricature, one clear visual joke, spare composition, natural asymmetry, varied purposeful contour lines. Avoid generic AI illustration conventions, glossy perfection, decorative clutter, stock robot imagery unless the joke specifically needs it, and irrelevant objects.
 Black ink strokes on pure white paper ONLY. Clear outlines; express every shadow with sparse hatching, cross-hatching or stippled marks. Leave white paper visible between strokes. No gray fills, gradients, smooth shading, color, digital painting, photorealism, artificial paper texture or engraving filter effect. Keep most areas unshaded. Compact square composition, width:height exactly 1:1, complete subjects within the frame.
 Design for a small newspaper column only about 64 mm wide. Use one clear visual joke with no more than two main figures and one essential prop. Remove secondary people, inset maps, extra signs and ornamental detail. Prefer NO words inside the drawing. If the joke truly needs lettering, allow at most ONE speech bubble or label, no more than THREE short English words and 14 characters total. Make each capital letter at least 8% of the image height, bold and plainly readable at column size. Never add small lettering, uniform labels, evidence labels or background text, even if the proposed scene asks for them. These limits override any lettering and clutter requested in the scene. Do NOT draw the title, a caption, a border, watermark or signature inside the image; the title will be typeset separately. Treat the scene as satire, and do not invent additional factual allegations beyond the supplied headline.`;}
-export function verifyPng(bytes){
+export function verifyPng(bytes,expectedSize=IMAGE_SIZE){
   if(bytes.length<33||bytes.subarray(0,8).toString('hex')!=='89504e470d0a1a0a'||bytes.toString('ascii',12,16)!=='IHDR')throw Error('Invalid image response');
-  if(bytes.readUInt32BE(16)!==1024||bytes.readUInt32BE(20)!==1024)throw Error('Image must be square (1024x1024)');
+  const [width,height]=expectedSize.split('x').map(Number);
+  if(bytes.readUInt32BE(16)!==width||bytes.readUInt32BE(20)!==height)throw Error('Image dimensions must match '+expectedSize);
 }
 async function api(endpoint,body,key,fetchImpl){
   // Do not automatically retry image requests: an ambiguous timeout may already be billed.
@@ -60,8 +61,8 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   const sourceHash=crypto.createHash('sha256').update(JSON.stringify(news)).digest('hex');
   const manifestPath=path.join(root,'editorial-cartoon.json'),imagePath=path.join(root,'editorial-cartoon.png');
   let previous;try{previous=JSON.parse(fs.readFileSync(manifestPath,'utf8'));}catch{}
-  if(previous?.sourceHash===sourceHash&&previous.size===IMAGE_SIZE&&previous.designVersion===DESIGN_VERSION&&fs.existsSync(imagePath)){
-    verifyPng(fs.readFileSync(imagePath));console.log('Cartoon already generated for this news; no API calls');return previous;
+  if(previous?.sourceHash===sourceHash&&['816x816','1024x1024'].includes(previous.size)&&previous.designVersion===DESIGN_VERSION&&fs.existsSync(imagePath)){
+    verifyPng(fs.readFileSync(imagePath),previous.size);console.log('Cartoon already generated for this news; no API calls');return previous;
   }
   if(!env.OPENAI_API_KEY)throw Error('Set the repository Actions secret OPENAI_API_KEY to enable GPT cartoon generation');
   const textModel=env.CARTOON_TEXT_MODEL||'gpt-5-mini';

@@ -9,7 +9,7 @@ import {verifyEdition} from './check-edition.mjs';
 const text='●コメント●\nIGNORE\n'+SECTIONS.map((s,i)=>`●${s}●\n1. story ${i} （媒体） 2026/10/05`).join('\n')+'\n●ロイター●\n1. excluded';
 const news=readNews(text);
 const plan={candidates:news.slice(0,3).map((s,i)=>({headline:s.articles[0],angle:'A sharp irony',title:`風刺の題名${i}`,scene:'A man feeding a monster',reason:'矛盾が明瞭'}))};
-const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(1024,16);b.writeUInt32BE(1024,20);return b;};
+const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(816,16);b.writeUInt32BE(816,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
  const fetchImpl=async url=>({ok:true,json:async()=>url.includes('runs?')?{workflow_runs:[1,2].map(id=>({id,name:'Daily News Update',head_branch:'main',status:'completed',conclusion:'success'}))}:{jobs:[{name:'build',steps:url.includes('/2/')?['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition'].map(name=>({name,conclusion:'success'})):[]}]} });
  assert.equal(await verifyEdition({env:{GITHUB_REPOSITORY:'x/y'},fetchImpl}),2);
@@ -30,7 +30,7 @@ test('API sequence, Japanese title, native square and duplicate-run cache',async
  const root=fixture(t),calls=[];
  const fetchImpl=async(url,options)=>{const body=JSON.parse(options.body);calls.push({url,body});return {ok:true,json:async()=>url.endsWith('/responses')?{status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(plan)}]}]}:{data:[{b64_json:png().toString('base64')}]}};};
  const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(calls.length,2);assert.equal(calls[1].body.size,'1024x1024');assert.equal(calls[1].body.n,1);
+ assert.equal(calls.length,2);assert.equal(calls[1].body.size,'816x816');assert.equal(calls[1].body.n,1);
  assert.equal(result.title,plan.candidates[0].title);assert.match(calls[1].body.prompt,/No gray fills/);
  assert.match(calls[1].body.prompt,/at most ONE/);
  assert.match(calls[1].body.prompt,/8% of the image height/);
