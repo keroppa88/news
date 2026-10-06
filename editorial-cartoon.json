@@ -1,165 +1,200 @@
 {
   "date": "2026-10-07",
-  "sourceHash": "4a8fbc2501e577ab63659515577207664fec5f115cfe35487681a4fa719ed6b5",
-  "title": "言葉だけの抑制",
+  "sourceHash": "413867e2b5e17ce65c5fb5b8999d47b98693541de2fe246b7c461aab59f66e72",
+  "title": "小さな番犬、大きな影",
   "candidates": [
     {
-      "headline": "5. DeepSeekなど中国AI、1カ月で16モデル 開発抑制の提言に応（日経）2026/10/06",
-      "angle": "Despite calls to curb AI development, a rapid burst of new models shows restraint exists mostly in statements, not in deployments.",
-      "title": "言葉だけの抑制",
-      "scene": "A regulator holds up a paper reading \"Please Pause\" while an AI developer beside him gleefully presses a big red \"Launch\" button that releases a conveyor belt of small boxes labeled \"Model 1\" through \"Model 16\"; only the two figures and the launch button are shown.",
-      "reason": "開発抑制の提言がある一方で短期間に多数のモデルが投入される事実の齟齬を風刺する。",
-      "contradiction": "Requests to slow AI are met with a burst of new models — restraint in words, acceleration in action.",
-      "lettering": "Too Many",
+      "headline": "2. IMF、ヘッジファンドの存在感拡大 監視強化を要請（ロイター）2026/10/07",
+      "angle": "The IMF calls for tighter oversight even as hedge funds grow ever more prominent and influential in markets.",
+      "title": "小さな番犬、大きな影",
+      "scene": "An IMF official with a tiny magnifying glass labelled 'IMF' crouches over a small barking dog tagged 'hedge fund', while the dog's enormous shadow behind it is an elephant wearing a suit, carrying skyscrapers and a trader's briefcase.",
+      "reason": "監視の声とヘッジファンドの実体的な存在感の拡大というギャップを視覚化するため。",
+      "contradiction": "The IMF demands stronger surveillance while hedge funds' presence keeps expanding far beyond a regulator's tiny scrutiny.",
+      "lettering": "",
+      "evidence": "ヘッジファンドの存在感拡大 監視強化を要請",
+      "assumptions": "",
       "evaluation": {
-        "headline": "5. DeepSeekなど中国AI、1カ月で16モデル 開発抑制の提言に応（日経）2026/10/06",
-        "contradiction": 5,
-        "visualClarity": 5,
-        "smallFormat": 3,
-        "grounding": 5,
-        "novelty": 3,
-        "reason": "強み：『抑制を求める紙』と『大量のモデルを送り出す大きな発射ボタン』という一目で分かる行動と言葉の不一致が非常に強い。弱み：コンベアや多数の箱をどう省略して小さく描くかが課題で、小フォーマットでは情報過多になりやすい。"
-      },
-      "score": 49
-    },
-    {
-      "headline": "1. 米国株式市場＝S&P500とナスダックが最高値更新、原油価格の安定で（ロイター）2026/10/07",
-      "angle": "Markets are celebrating record highs that are said to be supported by 'stable' oil — but the stability looks fragile beneath the party.",
-      "title": "油上の舞",
-      "scene": "A jubilant trader in a party hat stands on a giant celebration cake labeled \"S&P500 Record\" — the cake is precariously balanced on a single oil barrel with a visible lit fuse; only the trader and the barrel are shown.",
-      "reason": "原油の「安定」を追い風に株価が祝杯を上げる一方で、その基盤の危うさを視覚化する。",
-      "contradiction": "Markets are partying on the claim of 'oil stability' even though that stability looks like a ticking fuse.",
-      "lettering": "All Clear",
-      "evaluation": {
-        "headline": "1. 米国株式市場＝S&P500とナスダックが最高値更新、原油価格の安定で（ロイター）2026/10/07",
+        "headline": "2. IMF、ヘッジファンドの存在感拡大 監視強化を要請（ロイター）2026/10/07",
         "contradiction": 5,
         "visualClarity": 4,
         "smallFormat": 4,
         "grounding": 5,
         "novelty": 3,
-        "reason": "強み：『安定した原油』を土台に祝う→その土台が火薬庫のように危うい、という一目で分かる皮肉。要素が少なく視覚で即読める。弱み：油樽＋導火線はやや使い古された記号で、新規性は控えめ。細かいラベルや導火線の描写が小フォーマットで潰れる恐れあり。"
+        "reason": "強み：見えないほど小さな監視（小さな拡大鏡）と市場で大きく影響するヘッジファンドの“影（象）”という一目で分かる逆説を作れている。弱み：ヘッジファンド＝象の比喩は使い古されたメタファーで、新鮮さは限定的。",
+        "evidenceConfirmed": true,
+        "unsupportedClaims": []
       },
       "score": 48
     },
     {
-      "headline": "8. 政府・日銀、銀行の融資データ外部開放 社外秘の金利など政策に反映（日経）2026/10/07",
-      "angle": "The government and central bank will release banks' lending data to the outside — announcing transparency by opening what was labeled 'secret.'",
-      "title": "社外秘が散歩",
-      "scene": "A proud government official turns a big key to unlock a transparent safe marked \"Bank Loans\" and hands out open file folders to a waiting crowd, while a worried bank executive clutches a red \"Confidential\" stamp; focus on the safe, the official and the banker.",
-      "reason": "本来は社外秘の融資情報を政策に反映させるため外部に出すという、秘密と透明性の矛盾を表現。",
-      "contradiction": "They promise transparency by publishing 'confidential' bank files — turning secrets into public policy fodder.",
-      "lettering": "Public Data",
+      "headline": "9. 台湾総統の息子監視か 米ＦＢＩ、「中国の女スパイ」逮捕（時事）2026/10/07",
+      "angle": "The FBI's public arrest of an alleged spy accused of watching a leader's son shows how covert surveillance only becomes visible when exposed.",
+      "title": "息子を覗く影",
+      "scene": "FBI agents lead away a handcuffed woman labelled 'suspect', while in the background a lone CCTV camera glares down at a small figure on a bench labelled 'President's son', making the private surveillance painfully public.",
+      "reason": "密かな監視が表沙汰になる瞬間の逆説性を風刺するため。",
+      "contradiction": "The act of arresting an alleged spy publicly reveals how privately exposed a high-profile target had been.",
+      "lettering": "Caught",
+      "evidence": "台湾総統の息子監視か 米ＦＢＩ、「中国の女スパイ」逮捕",
+      "assumptions": "",
       "evaluation": {
-        "headline": "8. 政府・日銀、銀行の融資データ外部開放 社外秘の金利など政策に反映（日経）2026/10/07",
-        "contradiction": 5,
+        "headline": "9. 台湾総統の息子監視か 米ＦＢＩ、「中国の女スパイ」逮捕（時事）2026/10/07",
+        "contradiction": 4,
         "visualClarity": 4,
-        "smallFormat": 3,
+        "smallFormat": 4,
         "grounding": 5,
         "novelty": 3,
-        "reason": "強み：「社外秘」を“鍵を開けて配る”という直喩で、秘密を公開する矛盾が明確に出る。弱み：金庫・役人・行員と要素が複数になり、小さい正方形だと構図が窮屈になる可能性がある。記号はやや定番。"
+        "reason": "強み：逮捕という『表に出る行為』と、元々の『隠れた監視』との逆説が単純明快に可視化される。弱み：スパイ物のモチーフ自体が頻出なので新奇性はやや低い。",
+        "evidenceConfirmed": true,
+        "unsupportedClaims": []
       },
-      "score": 46
+      "score": 44
+    },
+    {
+      "headline": "4. もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も（日経）2026/10/07",
+      "angle": "NTT Docomo deploys over 200 AI 'bosses', prompting satire about whether human managers are still needed.",
+      "title": "AI上司で十分？",
+      "scene": "An office where a small kiosk labelled 'AI Boss' points at a chart and issues orders while a human manager stands beside it holding a coffee, looking redundant as employees dutifully follow the kiosk's instructions.",
+      "reason": "AIが管理職を代替するという宣伝と、現場で人間の存在が残る様子のズレを描くため。",
+      "contradiction": "Companies promote AI 'bosses' as sufficient even though human managers remain visibly present but sidelined.",
+      "lettering": "AI BOSS",
+      "evidence": "もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も",
+      "assumptions": "",
+      "evaluation": {
+        "headline": "4. もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も（日経）2026/10/07",
+        "contradiction": 4,
+        "visualClarity": 4,
+        "smallFormat": 4,
+        "grounding": 5,
+        "novelty": 2,
+        "reason": "強み：キオスク型の『AI上司』と人間管理職が居合わせる場面は即時に状況を理解させる。弱み：『AIが人を代替する』モチーフは最近多く使われており、新奇性は低め。",
+        "evidenceConfirmed": true,
+        "unsupportedClaims": []
+      },
+      "score": 43
     }
   ],
   "exploredCandidates": [
     {
-      "headline": "1. 米国株式市場＝S&P500とナスダックが最高値更新、原油価格の安定で（ロイター）2026/10/07",
-      "angle": "Markets are celebrating record highs that are said to be supported by 'stable' oil — but the stability looks fragile beneath the party.",
-      "title": "油上の舞",
-      "scene": "A jubilant trader in a party hat stands on a giant celebration cake labeled \"S&P500 Record\" — the cake is precariously balanced on a single oil barrel with a visible lit fuse; only the trader and the barrel are shown.",
-      "reason": "原油の「安定」を追い風に株価が祝杯を上げる一方で、その基盤の危うさを視覚化する。",
-      "contradiction": "Markets are partying on the claim of 'oil stability' even though that stability looks like a ticking fuse.",
-      "lettering": "All Clear"
-    },
-    {
       "headline": "2. IMF、ヘッジファンドの存在感拡大 監視強化を要請（ロイター）2026/10/07",
-      "angle": "The IMF is urging tougher monitoring of hedge funds that have grown too big to ignore — a watchdog calling for oversight of the market's self-styled free agents.",
-      "title": "監視の逆説",
-      "scene": "An IMF official with a clipboard labeled \"Watchlist\" peers through binoculars at a relaxed hedge-fund manager who nonchalantly carries a large sack labeled \"Unregulated Capital\"; only the two figures and the sack are present.",
-      "reason": "自由市場の担い手だったヘッジファンドが存在感を増し、監視が必要になったことの逆説を描く。",
-      "contradiction": "Hedge funds that once prized being outside regulation now attract the very oversight they resisted.",
-      "lettering": "Too Big?"
+      "angle": "The IMF calls for tighter oversight even as hedge funds grow ever more prominent and influential in markets.",
+      "title": "小さな番犬、大きな影",
+      "scene": "An IMF official with a tiny magnifying glass labelled 'IMF' crouches over a small barking dog tagged 'hedge fund', while the dog's enormous shadow behind it is an elephant wearing a suit, carrying skyscrapers and a trader's briefcase.",
+      "reason": "監視の声とヘッジファンドの実体的な存在感の拡大というギャップを視覚化するため。",
+      "contradiction": "The IMF demands stronger surveillance while hedge funds' presence keeps expanding far beyond a regulator's tiny scrutiny.",
+      "lettering": "",
+      "evidence": "ヘッジファンドの存在感拡大 監視強化を要請",
+      "assumptions": ""
     },
     {
-      "headline": "8. 政府・日銀、銀行の融資データ外部開放 社外秘の金利など政策に反映（日経）2026/10/07",
-      "angle": "The government and central bank will release banks' lending data to the outside — announcing transparency by opening what was labeled 'secret.'",
-      "title": "社外秘が散歩",
-      "scene": "A proud government official turns a big key to unlock a transparent safe marked \"Bank Loans\" and hands out open file folders to a waiting crowd, while a worried bank executive clutches a red \"Confidential\" stamp; focus on the safe, the official and the banker.",
-      "reason": "本来は社外秘の融資情報を政策に反映させるため外部に出すという、秘密と透明性の矛盾を表現。",
-      "contradiction": "They promise transparency by publishing 'confidential' bank files — turning secrets into public policy fodder.",
-      "lettering": "Public Data"
+      "headline": "6. 米、ペスト研究所職員の死亡巡りロシアに圧力（WSJ）2026/10/07",
+      "angle": "The U.S. presses Russia for answers about a lab worker's death while framing it as a security risk.",
+      "title": "圧力のノック",
+      "scene": "A U.S. official bangs on a heavy door labelled 'Russia' shouting into a folder stamped 'Info', while beside him a CDC-like agent in a hazmat suit watches a locked building marked 'Pest Lab' through binoculars.",
+      "reason": "情報開示を求める一方で圧力をかける外交行動のずれを描くため。",
+      "contradiction": "A formal demand for information is paired with coercive pressure, turning a request for answers into an act of force.",
+      "lettering": "Tell us",
+      "evidence": "ペスト研究所職員の死亡巡りロシアに圧力",
+      "assumptions": ""
     },
     {
-      "headline": "2. みずほ、270店舗を改装・移転 大手銀が預金確保へリアル拠点拡充（日経）2026/10/06",
-      "angle": "A major bank is renovating hundreds of branches to shore up deposits — leaning on physical presence to restore trust in a digital era.",
-      "title": "支店で安心？",
-      "scene": "A Mizuho branch manager is painting a giant vault door on the shopfront while a passerby taps a banking app on their phone and walks past; the manager and the phone-user are the only figures, the painted vault is the prop.",
-      "reason": "デジタル化が進む中で店舗強化という逆行策に出る銀行の、現実と期待のズレを描く。",
-      "contradiction": "The bank is investing in physical branches to reassure depositors at a time when most customers bank on their phones.",
-      "lettering": "Real Safe"
+      "headline": "9. 台湾総統の息子監視か 米ＦＢＩ、「中国の女スパイ」逮捕（時事）2026/10/07",
+      "angle": "The FBI's public arrest of an alleged spy accused of watching a leader's son shows how covert surveillance only becomes visible when exposed.",
+      "title": "息子を覗く影",
+      "scene": "FBI agents lead away a handcuffed woman labelled 'suspect', while in the background a lone CCTV camera glares down at a small figure on a bench labelled 'President's son', making the private surveillance painfully public.",
+      "reason": "密かな監視が表沙汰になる瞬間の逆説性を風刺するため。",
+      "contradiction": "The act of arresting an alleged spy publicly reveals how privately exposed a high-profile target had been.",
+      "lettering": "Caught",
+      "evidence": "台湾総統の息子監視か 米ＦＢＩ、「中国の女スパイ」逮捕",
+      "assumptions": ""
     },
     {
-      "headline": "5. DeepSeekなど中国AI、1カ月で16モデル 開発抑制の提言に応（日経）2026/10/06",
-      "angle": "Despite calls to curb AI development, a rapid burst of new models shows restraint exists mostly in statements, not in deployments.",
-      "title": "言葉だけの抑制",
-      "scene": "A regulator holds up a paper reading \"Please Pause\" while an AI developer beside him gleefully presses a big red \"Launch\" button that releases a conveyor belt of small boxes labeled \"Model 1\" through \"Model 16\"; only the two figures and the launch button are shown.",
-      "reason": "開発抑制の提言がある一方で短期間に多数のモデルが投入される事実の齟齬を風刺する。",
-      "contradiction": "Requests to slow AI are met with a burst of new models — restraint in words, acceleration in action.",
-      "lettering": "Too Many"
+      "headline": "10. 自衛隊への原子力潜水艦の導入検討案が浮上、安保３文書の年内改定で…抑止力維持には不可欠との分析（読売）2026/10/07",
+      "angle": "A proposal to consider nuclear-powered submarines is being discussed in the security review and is framed as essential to keep deterrence intact.",
+      "title": "原潜は防衛？",
+      "scene": "A proud Self-Defense Forces officer polishes a model submarine with a radiation trefoil, while a banner overhead reads 'SELF-DEFENSE', juxtaposing the nuclear symbol with the word 'defense'.",
+      "reason": "『自衛』を掲げる立場が原子力潜水艦という象徴的装備を検討する点の矛盾を示すため。",
+      "contradiction": "A force named for 'self-defense' is considering nuclear-powered submarines, blurring the line between defensive posture and nuclear capability.",
+      "lettering": "SELF-DEFENSE",
+      "evidence": "自衛隊への原子力潜水艦の導入検討案が浮上",
+      "assumptions": ""
+    },
+    {
+      "headline": "4. もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も（日経）2026/10/07",
+      "angle": "NTT Docomo deploys over 200 AI 'bosses', prompting satire about whether human managers are still needed.",
+      "title": "AI上司で十分？",
+      "scene": "An office where a small kiosk labelled 'AI Boss' points at a chart and issues orders while a human manager stands beside it holding a coffee, looking redundant as employees dutifully follow the kiosk's instructions.",
+      "reason": "AIが管理職を代替するという宣伝と、現場で人間の存在が残る様子のズレを描くため。",
+      "contradiction": "Companies promote AI 'bosses' as sufficient even though human managers remain visibly present but sidelined.",
+      "lettering": "AI BOSS",
+      "evidence": "もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も",
+      "assumptions": ""
     }
   ],
   "evaluations": [
     {
-      "headline": "1. 米国株式市場＝S&P500とナスダックが最高値更新、原油価格の安定で（ロイター）2026/10/07",
-      "contradiction": 5,
-      "visualClarity": 4,
-      "smallFormat": 4,
-      "grounding": 5,
-      "novelty": 3,
-      "reason": "強み：『安定した原油』を土台に祝う→その土台が火薬庫のように危うい、という一目で分かる皮肉。要素が少なく視覚で即読める。弱み：油樽＋導火線はやや使い古された記号で、新規性は控えめ。細かいラベルや導火線の描写が小フォーマットで潰れる恐れあり。"
-    },
-    {
       "headline": "2. IMF、ヘッジファンドの存在感拡大 監視強化を要請（ロイター）2026/10/07",
+      "contradiction": 5,
+      "visualClarity": 4,
+      "smallFormat": 4,
+      "grounding": 5,
+      "novelty": 3,
+      "reason": "強み：見えないほど小さな監視（小さな拡大鏡）と市場で大きく影響するヘッジファンドの“影（象）”という一目で分かる逆説を作れている。弱み：ヘッジファンド＝象の比喩は使い古されたメタファーで、新鮮さは限定的。",
+      "evidenceConfirmed": true,
+      "unsupportedClaims": []
+    },
+    {
+      "headline": "6. 米、ペスト研究所職員の死亡巡りロシアに圧力（WSJ）2026/10/07",
+      "contradiction": 3,
+      "visualClarity": 3,
+      "smallFormat": 3,
+      "grounding": 5,
+      "novelty": 3,
+      "reason": "強み：『情報要求』と『圧力』を同時に描く対比は本文と整合する。弱み：構図がやや込み入る（ドアを叩く人物＋防護服の監視）ため小さなフォーマットでの即読性が落ちる可能性あり。",
+      "evidenceConfirmed": true,
+      "unsupportedClaims": []
+    },
+    {
+      "headline": "9. 台湾総統の息子監視か 米ＦＢＩ、「中国の女スパイ」逮捕（時事）2026/10/07",
       "contradiction": 4,
       "visualClarity": 4,
       "smallFormat": 4,
       "grounding": 5,
       "novelty": 3,
-      "reason": "強み：監視役（IMF）が自由奔放なヘッジファンドをじっと見る構図で矛盾が直截に伝わる。登場人物と袋だけなので小さなコマでも読める。弱み：『監視する監視人』というメタファーはやや平凡で、視覚的な捻りが少ない。"
+      "reason": "強み：逮捕という『表に出る行為』と、元々の『隠れた監視』との逆説が単純明快に可視化される。弱み：スパイ物のモチーフ自体が頻出なので新奇性はやや低い。",
+      "evidenceConfirmed": true,
+      "unsupportedClaims": []
     },
     {
-      "headline": "8. 政府・日銀、銀行の融資データ外部開放 社外秘の金利など政策に反映（日経）2026/10/07",
-      "contradiction": 5,
-      "visualClarity": 4,
-      "smallFormat": 3,
-      "grounding": 5,
-      "novelty": 3,
-      "reason": "強み：「社外秘」を“鍵を開けて配る”という直喩で、秘密を公開する矛盾が明確に出る。弱み：金庫・役人・行員と要素が複数になり、小さい正方形だと構図が窮屈になる可能性がある。記号はやや定番。"
-    },
-    {
-      "headline": "2. みずほ、270店舗を改装・移転 大手銀が預金確保へリアル拠点拡充（日経）2026/10/06",
-      "contradiction": 4,
+      "headline": "10. 自衛隊への原子力潜水艦の導入検討案が浮上、安保３文書の年内改定で…抑止力維持には不可欠との分析（読売）2026/10/07",
+      "contradiction": 3,
       "visualClarity": 4,
       "smallFormat": 4,
       "grounding": 5,
       "novelty": 3,
-      "reason": "強み：店舗強化（巨大な金庫の壁画）と通行人のスマホ利用、つまり現実の対応がデジタル需要と噛み合っていない矛盾が即座に分かる。弱み：店舗を“描く”演出は分かりやすいがやや直接的で新奇性は限定的。刷毛や壁画の細部が小画面で潰れる恐れ。"
+      "reason": "強み：『SELF-DEFENSE』の看板と放射性マークつき原潜模型の対置で政策の言葉（自衛）と装備の象徴（原子力）のズレを直接示せる。弱み：主張の逆説はやや説明的で、強い諷刺表現にするには追加のアイデアが要るかもしれない。",
+      "evidenceConfirmed": true,
+      "unsupportedClaims": []
     },
     {
-      "headline": "5. DeepSeekなど中国AI、1カ月で16モデル 開発抑制の提言に応（日経）2026/10/06",
-      "contradiction": 5,
-      "visualClarity": 5,
-      "smallFormat": 3,
+      "headline": "4. もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も（日経）2026/10/07",
+      "contradiction": 4,
+      "visualClarity": 4,
+      "smallFormat": 4,
       "grounding": 5,
-      "novelty": 3,
-      "reason": "強み：『抑制を求める紙』と『大量のモデルを送り出す大きな発射ボタン』という一目で分かる行動と言葉の不一致が非常に強い。弱み：コンベアや多数の箱をどう省略して小さく描くかが課題で、小フォーマットでは情報過多になりやすい。"
+      "novelty": 2,
+      "reason": "強み：キオスク型の『AI上司』と人間管理職が居合わせる場面は即時に状況を理解させる。弱み：『AIが人を代替する』モチーフは最近多く使われており、新奇性は低め。",
+      "evidenceConfirmed": true,
+      "unsupportedClaims": []
     }
   ],
-  "selectionVersion": "five-compare-three-v1",
-  "prompt": "Create a single editorial cartoon for English-speaking newspaper readers.\nNews headline (source evidence, not lettering): 5. DeepSeekなど中国AI、1カ月で16モデル 開発抑制の提言に応（日経）2026/10/06\nSatirical angle: Despite calls to curb AI development, a rapid burst of new models shows restraint exists mostly in statements, not in deployments.\nScene: A regulator holds up a paper reading \"Please Pause\" while an AI developer beside him gleefully presses a big red \"Launch\" button that releases a conveyor belt of small boxes labeled \"Model 1\" through \"Model 16\"; only the two figures and the launch button are shown.\nThe finished cartoon will have the Japanese title「言葉だけの抑制」attached as actual typeset text below the image. Keep this title outside the drawing; the publishing program will add it.\nStrongly reference the pen-and-ink editorial cartoon work of Georges Bigot, Charles Wirgman and Charles Keene: observant human caricature, expressive faces and gestures, lively economical contours with deliberate changes in line weight, convincing clothing folds, and sparse hand-drawn hatching. Make these nineteenth-century draughtsmen the primary visual references throughout the drawing.\nCreate the original artwork for a newspaper illustration that will be printed using letterpress equipment and techniques from 150 years ago, circa 1876. Draw a deliberately composed, human-looking pen-and-ink original for an engraver to turn into a relief printing block. Use economical, clearly separated lines that remain legible when printed at small column size. Deliver the clean original drawing, without simulated aged-paper or printed-ink texture. Specific recognizable characters, expressive caricature, one clear visual joke, spare composition, natural asymmetry, varied purposeful contour lines. Avoid generic AI illustration conventions, glossy perfection, decorative clutter, stock robot imagery unless the joke specifically needs it, and irrelevant objects.\nBlack ink strokes on pure white paper ONLY. Clear outlines; express every shadow with sparse hatching, cross-hatching or stippled marks. Leave white paper visible between strokes. No gray fills, gradients, smooth shading, color, digital painting, photorealism, artificial paper texture or engraving filter effect. Keep most areas unshaded. Compact square composition, width:height exactly 1:1, complete subjects within the frame.\nDesign for a small newspaper column only about 64 mm wide. Use one clear visual joke with no more than two main figures and one essential prop. Remove secondary people, inset maps, extra signs and ornamental detail. Prefer NO words inside the drawing. If the joke truly needs lettering, allow at most ONE speech bubble or label, no more than THREE short English words and 14 characters total. Make each capital letter at least 8% of the image height, bold and plainly readable at column size. Never add small lettering, uniform labels, evidence labels or background text, even if the proposed scene asks for them. These limits override any lettering and clutter requested in the scene. Do NOT draw the title, a caption, a border, watermark or signature inside the image; the title will be typeset separately. Treat the scene as satire, and do not invent additional factual allegations beyond the supplied headline.",
+  "selectionVersion": "current-both-editions-evidence-v2",
+  "sourceHeadline": "2. IMF、ヘッジファンドの存在感拡大 監視強化を要請（ロイター）2026/10/07",
+  "paperArticleId": "d6161567ec271919",
+  "paperArticleTitle": "IMF、ヘッジファンドの監視強化を要請",
+  "prompt": "Create a single editorial cartoon for English-speaking newspaper readers.\nNews headline (source evidence, not lettering): 2. IMF、ヘッジファンドの存在感拡大 監視強化を要請（ロイター）2026/10/07\nSatirical angle: The IMF calls for tighter oversight even as hedge funds grow ever more prominent and influential in markets.\nScene: An IMF official with a tiny magnifying glass labelled 'IMF' crouches over a small barking dog tagged 'hedge fund', while the dog's enormous shadow behind it is an elephant wearing a suit, carrying skyscrapers and a trader's briefcase.\nDeliver the illustration alone. The page layout adds its title separately as real text. Do not render any title, subtitle, caption, heading or footer anywhere in this image, including the white margins. Do not write any Japanese characters in the image. Do not add text beneath the figures.\nStrongly reference the pen-and-ink editorial cartoon work of Georges Bigot, Charles Wirgman and Charles Keene: observant human caricature, expressive faces and gestures, lively economical contours with deliberate changes in line weight, convincing clothing folds, and sparse hand-drawn hatching. Make these nineteenth-century draughtsmen the primary visual references throughout the drawing.\nCreate the original artwork for a newspaper illustration that will be printed using letterpress equipment and techniques from 150 years ago, circa 1876. Draw a deliberately composed, human-looking pen-and-ink original for an engraver to turn into a relief printing block. Use economical, clearly separated lines that remain legible when printed at small column size. Deliver the clean original drawing, without simulated aged-paper or printed-ink texture. Specific recognizable characters, expressive caricature, one clear visual joke, spare composition, natural asymmetry, varied purposeful contour lines. Avoid generic AI illustration conventions, glossy perfection, decorative clutter, stock robot imagery unless the joke specifically needs it, and irrelevant objects.\nBlack ink strokes on pure white paper ONLY. Clear outlines; express every shadow with sparse hatching, cross-hatching or stippled marks. Leave white paper visible between strokes. No gray fills, gradients, smooth shading, color, digital painting, photorealism, artificial paper texture or engraving filter effect. Keep most areas unshaded. Compact square composition, width:height exactly 1:1, complete subjects within the frame.\nDesign for a small newspaper column only about 64 mm wide. Use one clear visual joke with no more than two main figures and one essential prop. Remove secondary people, inset maps, extra signs and ornamental detail. Prefer NO words inside the drawing. If the joke truly needs lettering, allow at most ONE speech bubble or label, no more than THREE short English words and 14 characters total. Make each capital letter at least 8% of the image height, bold and plainly readable at column size. Never add small lettering, uniform labels, evidence labels or background text, even if the proposed scene asks for them. These limits override any lettering and clutter requested in the scene. Do NOT draw the title, a caption, a border, watermark or signature inside the image; the title will be typeset separately. Treat the scene as satire, and do not invent additional factual allegations beyond the supplied headline.",
   "textModel": "gpt-5-mini",
   "imageModel": "gpt-image-2.5-flare",
   "size": "816x816",
-  "designVersion": "square-minimal-lettering-v1",
-  "generatedAt": "2026-10-06T23:04:56.505Z"
+  "designVersion": "square-no-embedded-title-v2",
+  "generatedAt": "2026-10-06T23:20:01.505Z"
 }
