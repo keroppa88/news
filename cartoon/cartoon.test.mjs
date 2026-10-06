@@ -3,15 +3,15 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {readNews,validatePlan,generate,SECTIONS,rankCandidates} from './generate.mjs';
+import {readNews,validatePlan,generate,SECTIONS,rankCandidates,imagePrompt,DESIGN_VERSION,eligibleNews,paperStoryFor,publishedPaperStories,headlineKey} from './generate.mjs';
 import {insertCartoon} from './publish.mjs';
 import {archiveCartoon,archiveName} from './archive.mjs';
 import {verifyEdition} from './check-edition.mjs';
 const text='●コメント●\nIGNORE\n'+SECTIONS.map((s,i)=>`●${s}●\n1. story ${i} （媒体） 2026/10/05`).join('\n')+'\n●ロイター●\n1. excluded';
 const news=readNews(text);
 const plan={candidates:news.slice(0,3).map((s,i)=>({headline:s.articles[0],angle:'A sharp irony',title:`風刺の題名${i}`,scene:'A man feeding a monster',reason:'矛盾が明瞭'}))};
-const exploration={candidates:news.map((s,i)=>({...plan.candidates[i%3],headline:s.articles[0],title:`候補の題名${i}`,contradiction:'Words contradict actions',lettering:''}))};
-const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,contradiction:5-Math.min(i,2),visualClarity:4,smallFormat:4,grounding:5,novelty:4,reason:'行動の矛盾を短く描ける'}));
+const exploration={candidates:news.map((s,i)=>({...plan.candidates[i%3],headline:s.articles[0],title:`候補の題名${i}`,contradiction:'Words contradict actions',lettering:'',evidence:s.articles[0],assumptions:''}))};
+const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,contradiction:5-Math.min(i,2),visualClarity:4,smallFormat:4,grounding:5,novelty:4,reason:'行動の矛盾を短く描ける',evidenceConfirmed:true,unsupportedClaims:[]}));
 const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:{evaluations});
 const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(816,16);b.writeUInt32BE(816,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
@@ -19,7 +19,7 @@ test('completion check ignores incomplete runs and requires both edition steps',
  assert.equal(await verifyEdition({env:{GITHUB_REPOSITORY:'x/y'},fetchImpl}),2);
  await assert.rejects(verifyEdition({env:{GITHUB_REPOSITORY:'x/y',NEWS_RUN_ID:'1'},fetchImpl}),/no verified/);
 });
-function fixture(t){const root=fs.mkdtempSync(path.join(os.tmpdir(),'cartoon-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));for(const file of ['index.html','paper-newspaper.html'])fs.writeFileSync(path.join(root,file),'{}');fs.writeFileSync(path.join(root,'newspaper.json'),JSON.stringify({sourceUpdatedAt:'2026-10-05',preview:false}));fs.writeFileSync(path.join(root,'summary2.txt'),text);return root;}
+function fixture(t){const root=fs.mkdtempSync(path.join(os.tmpdir(),'cartoon-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));for(const file of ['index.html','paper-newspaper.html'])fs.writeFileSync(path.join(root,file),'<body>'+text+'</body>');fs.writeFileSync(path.join(root,'newspaper.json'),JSON.stringify({sourceUpdatedAt:'2026-10-05',preview:false,important:news.map((s,i)=>({id:'paper'+i,title:'story '+i,sources:[{title:'story '+i, date:'2026-10-05'}]})),others:[]}));fs.writeFileSync(path.join(root,'summary2.txt'),text);return root;}
 test('only the five normal sections are used; incomplete input fails',()=>{
  assert.deepEqual(news.map(s=>s.section),SECTIONS);assert.doesNotMatch(JSON.stringify(news),/IGNORE|excluded/);
  assert.throws(()=>readNews(text.replace('●その他ニュース●','●other●')),/complete/);
@@ -41,7 +41,8 @@ test('API sequence, Japanese title, native square and duplicate-run cache',async
  assert.match(calls[2].body.prompt,/at most ONE/);
  assert.match(calls[2].body.prompt,/8% of the image height/);
  for(const name of ['Georges Bigot','Charles Wirgman','Charles Keene'])assert.ok(calls[2].body.prompt.includes(name));
- assert.ok(calls[2].body.prompt.includes(`Japanese title「${exploration.candidates[0].title}」`));
+ assert.ok(!calls[2].body.prompt.includes(exploration.candidates[0].title));
+ assert.match(calls[2].body.prompt,/Do not write any Japanese characters/);
  await generate({root,env:{},fetchImpl});assert.equal(calls.length,3);
  const manifestPath=path.join(root,'editorial-cartoon.json');
  const old=JSON.parse(fs.readFileSync(manifestPath,'utf8'));old.size='1536x1152';delete old.designVersion;
@@ -102,4 +103,48 @@ test('comparison failure never requests an image or changes saved publication',a
  };
  await assert.rejects(generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl}),/HTTP 500/);
  assert.equal(calls,2);assert.equal(fs.readFileSync(path.join(root,'editorial-cartoon.json'),'utf8'),'OLD');assert.equal(fs.readFileSync(path.join(root,'editorial-cartoon.png'),'utf8'),'OLD_IMAGE');
+});
+
+
+test('drawing prompt never receives the Japanese caption and a rule correction redraws the same subject',async t=>{
+ const root=fixture(t),calls=[];
+ const fetchImpl=async(url,options)=>{const body=JSON.parse(options.body);calls.push({url,body});return {ok:true,json:async()=>url.endsWith('/responses')?{status:'completed',output:[{content:[{type:'output_text',text:responseText(body)}]}]}:{data:[{b64_json:png().toString('base64')}]}};};
+ const original=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ original.designVersion='square-minimal-lettering-v1';
+ fs.writeFileSync(path.join(root,'editorial-cartoon.json'),JSON.stringify(original));
+ const corrected=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ assert.equal(calls.length,4);
+ assert.ok(calls[3].url.endsWith('/images/generations'));
+ assert.equal(corrected.candidates[0].headline,original.candidates[0].headline);
+ assert.equal(corrected.designVersion,DESIGN_VERSION);
+ assert.ok(!imagePrompt(corrected.candidates[0]).includes(corrected.title));
+});
+
+test('cartoon selection uses the edition date and excludes yesterday even when present in the normal page',()=>{
+ const mixed=news.map(section=>({...section,articles:[...section.articles,section.articles[0].replace('2026/10/05','2026/10/06')]}));
+ const paper={important:news.map((s,i)=>({id:'paper'+i,title:'story '+i,sources:[{title:'story '+i,date:'2026-10-06'}]}))};
+ const html=mixed.flatMap(s=>s.articles).join('\n');
+ const current=eligibleNews(mixed,'2026-10-06',paper,html);
+ assert.equal(current.flatMap(s=>s.articles).length,5);
+ assert.ok(current.flatMap(s=>s.articles).every(line=>line.endsWith('2026/10/06')));
+ assert.throws(()=>eligibleNews(mixed,'2026-10-07',paper,html),/current-edition/);
+});
+test('unsupported factual premises disqualify an otherwise high-scoring cartoon',()=>{
+ const checked=structuredClone(evaluations);
+ checked[0].unsupportedClaims=['Invented request to stop AI development'];
+ checked[1].evidenceConfirmed=false;
+ assert.deepEqual(rankCandidates(exploration.candidates,checked,news).map(c=>c.headline),exploration.candidates.slice(2).map(c=>c.headline));
+});
+
+test('topics must appear in both rendered editions; hidden paper articles and duplicate topics are excluded',()=>{
+ const visible=news.map((section,i)=>({id:'paper'+i,title:'story '+i,sources:[{title:'story '+i,date:'2026-10-05'}]}));
+ const paper={important:visible,others:[]},html=text;
+ assert.equal(eligibleNews(news,'2026-10-05',paper,html).flatMap(s=>s.articles).length,5);
+ const missing=structuredClone(paper);missing.important.pop();
+ assert.throws(()=>eligibleNews(news,'2026-10-05',missing,html),/both editions/);
+ assert.throws(()=>eligibleNews(news,'2026-10-05',paper,html.replace('story 4','missing 4')),/both editions/);
+ const hidden={important:visible.slice(0,4),others:Array.from({length:9},(_,i)=>({id:'extra'+i,title:'other',sources:[]})).concat(visible[4])};
+ assert.equal(paperStoryFor(news[4].articles[0],hidden,'2026-10-05'),undefined);
+ const merged=structuredClone(paper);merged.important[0].sources.push(...merged.important.pop().sources);
+ assert.throws(()=>eligibleNews(news,'2026-10-05',merged,html),/both editions/);
 });
