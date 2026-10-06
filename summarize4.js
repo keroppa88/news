@@ -21,7 +21,7 @@ async function callWithRetry(fn, maxRetries = 5) {
   }
 }
 
-const { normalize, validate, needsTranslation } = require('./news-quality');
+const { normalize, validate, needsTranslation, limitArticles, MEDIA_LIMITS } = require('./news-quality');
 
 // --- セクション解析（順序保持） ---
 function parseOrderedSections(text, markerRegex) {
@@ -341,6 +341,14 @@ async function run() {
     }
   }
 
+  // Enforce media limits before translation, even when Gemini returns the full source list.
+  for (const sec of s2Sections) {
+    const max = MEDIA_LIMITS[sec.name];
+    if (!max) continue;
+    let count = 0;
+    sec.lines = sec.lines.filter(line => !/^\d+\.\s/.test(line) || ++count <= max);
+  }
+
   // Translate after supplementation; map IDs instead of relying on line order.
   const entries = [];
   for (const sec of s2Sections) for (let i = 0; i < sec.lines.length; i++) {
@@ -400,3 +408,4 @@ if (require.main === module) run().catch(error => { console.error(error); proces
 
 
 module.exports = { run };
+

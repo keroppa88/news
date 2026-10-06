@@ -2,7 +2,10 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const { normalize, validate, needsTranslation } = require('./news-quality');
+const path = require('node:path');
+const os = require('node:os');
+const { execFileSync } = require('node:child_process');
+const { normalize, validate, needsTranslation, limitArticles, MEDIA_LIMITS } = require('./news-quality');
 
 function complete() {
   return Object.entries({ '重要ニュース': 10, '経済ニュース': 10, '国内ニュース': 5, '海外ニュース': 5, 'その他ニュース': 5 }).map(([name, count]) => `●${name}●\n` + Array.from({ length: count }, (_, i) => `${i + 1}. 日本語の報道記事${i}（BBC）2099/10/07`).join('\n')).join('\n\n');
@@ -49,4 +52,32 @@ test('invalid translation retries then leaves the previous published input untou
   await assert.rejects(mock.run(), /count mismatch/);
   assert.equal(mock.calls, 2);
   assert.deepEqual(mock.writes, []);
+});
+
+
+test('media counts are capped while all editorial sections are retained', () => {
+ const oversized=complete()+'\n'+Object.keys(MEDIA_LIMITS).map(name=>'●'+name+'●\n'+Array.from({length:186},(_,i)=>`${i+1}. 日本語の媒体記事${i}（日経）2099/10/07`).join('\n')).join('\n');
+ assert.throws(()=>validate(oversized),/more than/);
+ const sections=validate(limitArticles(oversized));
+ for(const [name,max] of Object.entries(MEDIA_LIMITS)) assert.equal(sections[name].length,max);
+ assert.equal(sections['重要ニュース'].length,10);
+ assert.equal(limitArticles(limitArticles(oversized)),limitArticles(oversized));
+});
+
+test('normal-page rebuild includes the saved cartoon once at the bottom', t => {
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'normal-cartoon-'));
+ t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ for(const folder of ['web','cartoon']) fs.mkdirSync(path.join(root,folder));
+ fs.copyFileSync(path.join(__dirname,'web/format.js'),path.join(root,'web/format.js'));
+ fs.copyFileSync(path.join(__dirname,'cartoon/publish.mjs'),path.join(root,'cartoon/publish.mjs'));
+ fs.writeFileSync(path.join(root,'summary2.txt'),complete());
+ fs.writeFileSync(path.join(root,'editorial-cartoon.png'),'fixture');
+ fs.writeFileSync(path.join(root,'editorial-cartoon.json'),JSON.stringify({title:'試験題名',date:'2099-10-07',sourceHash:'hash',size:'816x816'}));
+ for(let i=0;i<2;i++) {
+  execFileSync(process.execPath,[path.join(root,'web/format.js')]);
+  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+  assert.equal((html.match(/EDITORIAL_CARTOON_START/g)||[]).length,1);
+  assert.ok(html.indexOf('EDITORIAL_CARTOON_START')>html.lastIndexOf('class="news-item"'));
+  assert.match(html,/「試験題名」/);
+ }
 });

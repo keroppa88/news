@@ -1,7 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs');
 const path = require('path');
-const { normalize, validate } = require('./news-quality');
+const { normalize, validate, limitArticles } = require('./news-quality');
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -99,7 +99,7 @@ async function run() {
   let summaryText;
   for (let attempt = 1; attempt <= 3; attempt++) {
     const result = await model.generateContent(prompt + (attempt > 1 ? '\n厳守：●コメント(Gemini)●と五つのニュース欄を含む完成リスト全体を出力。重要・経済は各10件、国内・海外・その他は各5件以上。省略は禁止。' : ''));
-    const candidate = normalize(result.response.text().replace(/[【】]/g, ''));
+    const candidate = limitArticles(normalize(result.response.text().replace(/[【】]/g, '')));
     try { validate(candidate, { japanese: false }); summaryText = candidate; break; }
     catch (error) {
       console.error(`Editorial attempt ${attempt}: ${error.message}`);
@@ -121,4 +121,5 @@ async function run() {
 }
 
 if (require.main === module) run().catch(error => { console.error(error); process.exitCode = 1; });
+
 

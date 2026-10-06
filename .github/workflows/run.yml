@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/run.yml'
       - 'web/add_navigation.js'
+      - 'web/format.js'
       - 'web/add_market_strip.js'
       - 'market/**'
       - 'newspaper/**'
@@ -133,9 +134,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           if ! node news-quality.js; then
-            node summarize15.js
-            node summarize2.js
-            node summarize4.js
+            if ! node summarize4.js; then
+              node summarize15.js
+              node summarize2.js
+              node summarize4.js
+            fi
             node web/format.js
           fi
 
@@ -236,4 +239,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 

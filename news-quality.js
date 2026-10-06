@@ -2,6 +2,17 @@ const fs = require('node:fs');
 
 const EDITORIAL_MIN = { '重要ニュース': 10, '経済ニュース': 10, '国内ニュース': 5, '海外ニュース': 5, 'その他ニュース': 5 };
 
+const MEDIA_LIMITS = { 'ロイター': 5, 'ブルームバーグ': 5, 'BBC': 5, 'NYタイムズ': 5, 'WSJ': 5, 'AXIOS': 5, '日経': 5, '時事': 5, '日経・読売・産経・47・みんかぶ': 10, '日経・読売、テクノロジー': 3, 'yahoo': 5, 'AI関連': 5, '2ch': 5 };
+
+function limitArticles(text) {
+  let limit = Infinity, count = 0;
+  return normalize(text).split('\n').filter(line => {
+    const header = line.match(/^●([^●]+)●$/);
+    if (header) { limit = MEDIA_LIMITS[header[1]] ?? Infinity; count = 0; }
+    return !/^\d+\.\s/.test(line) || ++count <= limit;
+  }).join('\n');
+}
+
 function normalize(text) {
   return text.split('\n').map(line => {
     const clean = line.trim().replace(/^#{1,6}\s*/, '').replace(/^\*\*(.*?)\*\*$/, '$1');
@@ -30,6 +41,9 @@ function validate(text, { japanese = true } = {}) {
   for (const [name, min] of Object.entries(EDITORIAL_MIN)) {
     if ((sections[name]?.length || 0) < min) throw new Error(`${name}: fewer than ${min} articles`);
   }
+  for (const [name, max] of Object.entries(MEDIA_LIMITS)) {
+    if ((sections[name]?.length || 0) > max) throw new Error(`${name}: more than ${max} articles`);
+  }
   if (japanese && Object.values(sections).flat().some(needsTranslation)) throw new Error('Untranslated English headlines remain');
   return sections;
 }
@@ -38,4 +52,5 @@ if (require.main === module) {
   try { validate(fs.readFileSync('summary2.txt', 'utf8')); }
   catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { normalize, validate, needsTranslation };
+module.exports = { normalize, validate, needsTranslation, limitArticles, MEDIA_LIMITS };
+
