@@ -148,3 +148,16 @@ test('topics must appear in both rendered editions; hidden paper articles and du
  const merged=structuredClone(paper);merged.important[0].sources.push(...merged.important.pop().sources);
  assert.throws(()=>eligibleNews(news,'2026-10-05',merged,html),/both editions/);
 });
+
+test('text token exhaustion gets one larger-budget retry before any image request',async t=>{
+ const root=fixture(t),calls=[];
+ const fetchImpl=async(url,options)=>{
+  const body=JSON.parse(options.body);calls.push({url,body});
+  if(calls.length===1)return {ok:true,json:async()=>({status:'incomplete',incomplete_details:{reason:'max_output_tokens'}})};
+  return {ok:true,json:async()=>url.endsWith('/responses')?{status:'completed',output:[{content:[{type:'output_text',text:responseText(body)}]}]}:{data:[{b64_json:png().toString('base64')}]}};
+ };
+ await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ assert.equal(calls.length,4);
+ assert.equal(calls[1].body.max_output_tokens,calls[0].body.max_output_tokens*2);
+ assert.ok(calls[3].url.endsWith('/images/generations'));
+});
