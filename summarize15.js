@@ -59,7 +59,7 @@ function validate(output, input) {
   if (output.length > input.length * 1.5) return 'bloated';       // 原文併記レポート化
   if (output.length < input.length * 0.4) return 'truncated';     // 途中で切れた
   if (englishRatio(output) > 0.3) return 'untranslated';          // 英文のまま
-  if (/\*\*原文|^#+ /m.test(output)) return 'report-format';      // レポート形式の混入
+  if (/\*\*原文|^#+ (?:チェック|修正|翻訳)/m.test(output)) return 'report-format';      // レポート形式の混入
   return null;
 }
 
@@ -72,7 +72,7 @@ function repair(output) {
   // マークダウン装飾と説明行を除去
   text = text
     .split('\n')
-    .filter(l => !/^#+ /.test(l.trim()))                 // 「## チェックと修正」等の見出し
+    .filter(l => !/^#+ (?:チェック|修正|翻訳)/.test(l.trim()))                 // 「## チェックと修正」等の見出し
     .filter(l => !/^\*\*(原文|修正)/.test(l.trim()))     // 比較用ラベル
     .filter(l => !/^\*\*以上で/.test(l.trim()))          // 締めの挨拶
     .filter(l => !/^（.*）$/.test(l.trim()))             // 「（〜をここに記載）」等の注釈
@@ -132,3 +132,4 @@ async function run() {
 if (require.main === module) run();
 
 module.exports = { validate, repair, englishRatio };
+

@@ -13,6 +13,11 @@ on:
       - 'paper-newspaper.html'
       - 'config.json'
       - 'assets/**'
+      - 'news-quality.js'
+      - 'news-quality.test.js'
+      - 'summarize2.js'
+      - 'summarize4.js'
+      - 'summarize15.js'
   schedule:
     - cron: '30 22 * * *'
   # Cloudflare Worker（worker/）が毎日 JST 7:30 に送る合図
@@ -51,6 +56,9 @@ jobs:
         run: |
           npm ci
           npx playwright install --with-deps chromium
+
+      - name: Test news quality guards
+        run: node --test news-quality.test.js
 
       - name: Test Rakuten market quote parser
         run: node --test market/rakuten.test.js
@@ -118,6 +126,18 @@ jobs:
         run: node summarize4.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Repair incomplete published news on code updates
+        if: github.event_name == 'push'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if ! node news-quality.js; then
+            node summarize15.js
+            node summarize2.js
+            node summarize4.js
+            node web/format.js
+          fi
 
       - name: Setup Python
         if: github.event_name != 'push'
@@ -216,3 +236,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

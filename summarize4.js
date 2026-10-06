@@ -21,36 +21,7 @@ async function callWithRetry(fn, maxRetries = 5) {
   }
 }
 
-// --- 英文検出：日本語がほぼ無く英単語が含まれる行 ---
-function needsTranslation(line) {
-  if (!line.trim() || line.startsWith('●')) return false;
-
-  // メタ情報を除去（媒体名・日付・番号）
-  const cleaned = line
-    .replace(/[（(][^)）]*[)）]/g, '')
-    .replace(/\d{4}\/\d{2}\/\d{2}/g, '')
-    .replace(/^\d+\.\s*/, '')
-    .replace(/^\*\s*/, '')
-    .trim();
-
-  if (cleaned.length < 5) return false;
-
-  // 日本語文字（ひらがな・カタカナ・漢字）が3文字以上あれば日本語見出し
-  const japaneseChars = (cleaned.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
-  if (japaneseChars >= 3) return false;
-
-  // 2文字以上の英単語を抽出
-  const asciiWords = cleaned.replace(/[^a-zA-Z\s]/g, '').trim().split(/\s+/).filter(w => w.length >= 2);
-  if (asciiWords.length === 0) return false;
-  const avgLen = asciiWords.reduce((s, w) => s + w.length, 0) / asciiWords.length;
-
-  // 日本語ゼロ → 英単語2語以上＋平均語長3超で英文と判定（"Trump Administration" 等）
-  if (japaneseChars === 0 && asciiWords.length >= 2 && avgLen > 3) return true;
-  // 日本語1-2文字 → 英単語3語以上＋平均語長3超で英文と判定
-  if (asciiWords.length >= 3 && avgLen > 3) return true;
-
-  return false;
-}
+const { normalize, validate, needsTranslation } = require('./news-quality');
 
 // --- セクション解析（順序保持） ---
 function parseOrderedSections(text, markerRegex) {
@@ -222,7 +193,7 @@ async function run() {
   const summary1 = fs.readFileSync('summary1.txt', 'utf8');
 
   // セクション解析
-  const s2Sections = parseOrderedSections(summary2, /^●([^●]+)●$/);
+  const s2Sections = parseOrderedSections(normalize(summary2), /^●([^●]+)●$/);
   // summary1の見出しは「●●ロイター●●」「### ロイター」「### ●●ロイター●●」などGeminiによって表記が揺れる
   const s1Sections = parseOrderedSections(summary1, /^(?:#{1,6}\s*(?:\*\*)?(?:●●)?|(?:\*\*)?●●)([^●*]+?)(?:●●)?(?:\*\*)?\s*$/);
 
@@ -238,51 +209,6 @@ async function run() {
   for (const sec of s1Sections) {
     s1Map[sec.name] = sec.lines.filter(l => /^\*\s/.test(l));
   }
-
-  // ===== Step 1: 英文行の検出・翻訳 =====
-  const englishEntries = [];
-  for (let si = 0; si < s2Sections.length; si++) {
-    for (let li = 0; li < s2Sections[si].lines.length; li++) {
-      if (needsTranslation(s2Sections[si].lines[li])) {
-        englishEntries.push({ si, li, line: s2Sections[si].lines[li] });
-      }
-    }
-  }
-
-  if (englishEntries.length > 0) {
-    console.log(`[Step1] ${englishEntries.length}件の英文行を翻訳します...`);
-    englishEntries.forEach(e => console.log(`  -> ${e.line.substring(0, 80)}...`));
-
-    const prompt = `以下のニュース見出しを日本語に翻訳してください。
-- 各行の番号・（媒体名）・日付はそのまま残し、見出し部分のみ翻訳
-- 日本で一般的な固有名詞（AI、BBC、FBI等）は英語のまま可
-- 翻訳結果のみを行ごとに出力。説明不要。
-
-${englishEntries.map(e => e.line).join('\n')}`;
-
-    const result = await callWithRetry(() => model.generateContent(prompt));
-    const translated = result.response.text().trim().split('\n');
-
-    for (let i = 0; i < englishEntries.length; i++) {
-      if (translated[i] && translated[i].trim()) {
-        const { si, li } = englishEntries[i];
-        s2Sections[si].lines[li] = translated[i].trim();
-        console.log(`  翻訳: ${translated[i].trim().substring(0, 60)}...`);
-      }
-    }
-  } else {
-    console.log('[Step1] 英文行なし');
-  }
-
-  // ===== Step 1.5: 翻訳後も日本語になっていない記事行を削除 =====
-  // Geminiが架空のローマ字見出し（例: "tensasī hōritsu no ..."）を作ることがあり、翻訳もできないため
-  let latinCount = 0;
-  for (const sec of s2Sections) {
-    const before = sec.lines.length;
-    sec.lines = sec.lines.filter(l => !(/^\d+\.\s/.test(l) && needsTranslation(l)));
-    latinCount += before - sec.lines.length;
-  }
-  console.log(`[Step1.5] 日本語になっていない記事を${latinCount}件削除`);
 
   // ===== Step 2: 表記フォーマット修正 =====
   let fixCount = 0;
@@ -415,12 +341,45 @@ ${englishEntries.map(e => e.line).join('\n')}`;
     }
   }
 
+  // Translate after supplementation; map IDs instead of relying on line order.
+  const entries = [];
+  for (const sec of s2Sections) for (let i = 0; i < sec.lines.length; i++) {
+    const line = sec.lines[i];
+    if (!/^\d+\.\s/.test(line) || !needsTranslation(line)) continue;
+    const match = line.match(/^(\d+\.\s*)(.*?)([（(][^）)]*[）)]\s*\d{4}\/\d{2}\/\d{2}\s*)$/);
+    if (!match) throw new Error('English headline has invalid metadata');
+    entries.push({ sec, i, prefix: match[1], headline: match[2], suffix: match[3] });
+  }
+  if (entries.length) {
+    console.log(`Translating ${entries.length} headlines after supplementation`);
+    let translated;
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      const prompt = 'ニュース見出しを日本語に翻訳。事実を追加せず、固有名詞は通常の日本語表記。入力の全idを一度ずつ含むJSON配列だけを返す。形式 [{"id":0,"headline":"日本語見出し"}]。\n' + JSON.stringify(entries.map((e, id) => ({ id, headline: e.headline })));
+      const result = await callWithRetry(() => model.generateContent(prompt));
+      try {
+        const rows = JSON.parse(result.response.text().replace(/```(?:json)?/g, '').trim());
+        if (!Array.isArray(rows) || rows.length !== entries.length) throw new Error('Translation count mismatch');
+        const ids = new Set();
+        for (const row of rows) {
+          if (!Number.isInteger(row.id) || row.id < 0 || row.id >= entries.length || ids.has(row.id) || typeof row.headline !== 'string' || !/[\u3040-\u30ff\u4e00-\u9fff]/.test(row.headline) || needsTranslation(row.headline) || /[\r\n]/.test(row.headline)) throw new Error('Invalid translation');
+          ids.add(row.id);
+        }
+        translated = rows; break;
+      } catch (error) { if (attempt === 2) throw error; }
+    }
+    for (const row of translated) {
+      const entry = entries[row.id];
+      entry.sec.lines[entry.i] = entry.prefix + row.headline.trim() + entry.suffix;
+    }
+  }
+
   // ===== 再構築・保存 =====
   const output = s2Sections.filter(sec => !(sec.added && !sec.lines.some(l => /^\d+\.\s/.test(l)))).map(sec => {
     const body = sec.lines.join('\n').trimEnd();
     return sec.header + '\n' + body;
   }).join('\n\n').replace(/[【】]/g, '');
 
+  validate(output);
   fs.writeFileSync('summary2.txt', output);
 
   // warehouse保存
@@ -437,4 +396,7 @@ ${englishEntries.map(e => e.line).join('\n')}`;
   console.log('[完了] summary2.txt を更新しました');
 }
 
-run();
+if (require.main === module) run().catch(error => { console.error(error); process.exitCode = 1; });
+
+
+module.exports = { run };
