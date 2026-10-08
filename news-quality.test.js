@@ -64,20 +64,20 @@ test('media counts are capped while all editorial sections are retained', () => 
  assert.equal(limitArticles(limitArticles(oversized)),limitArticles(oversized));
 });
 
-test('normal-page rebuild includes the saved cartoon once at the bottom', t => {
+test('normal-page rebuild is independent of illustration code and old saved images', t => {
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'normal-cartoon-'));
  t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
- for(const folder of ['web','cartoon']) fs.mkdirSync(path.join(root,folder));
+ for(const folder of ['web']) fs.mkdirSync(path.join(root,folder));
  fs.copyFileSync(path.join(__dirname,'web/format.js'),path.join(root,'web/format.js'));
- fs.copyFileSync(path.join(__dirname,'cartoon/publish.mjs'),path.join(root,'cartoon/publish.mjs'));
  fs.writeFileSync(path.join(root,'summary2.txt'),complete());
  fs.writeFileSync(path.join(root,'editorial-cartoon.png'),'fixture');
  fs.writeFileSync(path.join(root,'editorial-cartoon.json'),JSON.stringify({title:'試験題名',date:'2099-10-07',sourceHash:'hash',size:'816x816'}));
  for(let i=0;i<2;i++) {
   execFileSync(process.execPath,[path.join(root,'web/format.js')]);
   const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-  assert.equal((html.match(/EDITORIAL_CARTOON_START/g)||[]).length,1);
-  assert.ok(html.indexOf('EDITORIAL_CARTOON_START')>html.lastIndexOf('class="news-item"'));
-  assert.match(html,/「試験題名」/);
+  assert.equal((html.match(/EDITORIAL_CARTOON_START/g)||[]).length,0);
+  assert.ok(html.includes('class="news-item"'));
+  assert.equal(fs.readFileSync(path.join(root,'editorial-cartoon.png'),'utf8'),'fixture');
  }
 });
+

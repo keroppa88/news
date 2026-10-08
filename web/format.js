@@ -144,11 +144,10 @@ try {
 `;
 
     fs.writeFileSync(outputPath, html);
-    // Every normal-page rebuild retains the cartoon at the page bottom.
-    require('node:child_process').execFileSync(process.execPath, [path.join(__dirname, '../cartoon/publish.mjs')], { stdio: 'inherit' });
     console.log('Success: Updated HTML with container, category boxes, and text wrapping.');
 } catch (error) {
     console.error('Error:', error.message);
     process.exit(1);
 }
+
 
