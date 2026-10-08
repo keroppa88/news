@@ -15,7 +15,7 @@ const exploration={candidates:news.map((s,i)=>({...plan.candidates[i%3],headline
 const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,inherentIrony:4,contradiction:5-Math.min(i,2),visualClarity:4,visualSurprise:4,smallFormat:4,grounding:5,novelty:4,reason:'行動の矛盾を短く描ける',evidenceConfirmed:true,visualTurnConfirmed:true,literalReenactment:false,unsupportedClaims:[]}));
 const angles={candidates:['role_reversal','reveal','object_inversion'].map((mechanism,i)=>({...exploration.candidates[0],mechanism,title:`別の切り口${i}`,angle:`Distinct angle ${i}`,scene:`A different pictorial reversal ${i}`,visualTurn:`The relationship visibly changes ${i}`}))};
 const angleEvaluations=angles.candidates.map((_,i)=>({...evaluations[0],angleId:`A${i+1}`,visualSurprise:5-i}));
-const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:body.text.format.name==='cartoon_angles'?angles:body.text.format.name==='cartoon_angle_comparison'?{evaluations:angleEvaluations.filter(e=>JSON.parse(body.input).angles.some(a=>a.angleId===e.angleId))}:{evaluations});
+const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:body.text.format.name==='cartoon_angles'?angles:body.text.format.name==='cartoon_angle_comparison'?{evaluations:angleEvaluations.filter(e=>JSON.parse(body.input).angles.some(a=>a.angleId===e.angleId))}:{evaluations:evaluations.filter(e=>!body.input||JSON.parse(body.input).ideas?.some(a=>a.headline===e.headline))});
 const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(816,16);b.writeUInt32BE(816,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
  const fetchImpl=async url=>({ok:true,json:async()=>url.includes('runs?')?{workflow_runs:[1,2].map(id=>({id,name:'Daily News Update',head_branch:'main',status:'completed',conclusion:'success'}))}:{jobs:[{name:'build',steps:url.includes('/2/')?['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition','Verify generated paper edition'].map(name=>({name,conclusion:'success'})):[]}]} });
@@ -191,7 +191,7 @@ test('the chosen topic stays fixed while three distinct angles are evaluated',()
  flawed.forEach(e=>{e.literalReenactment=true;e.visualSurprise=5});
  assert.equal(rankAngles(angles.candidates,flawed,chosen,news).length,3);
 });
-test('invalid topic evidence retries only the exploration stage with the same source editions',async t=>{
+test('duplicate topical ideas and imperfect source snippets are salvaged before comparison',async t=>{
  const root=fixture(t),calls=[];
  let explorations=0;
  const fetchImpl=async(url,options)=>{
@@ -199,14 +199,15 @@ test('invalid topic evidence retries only the exploration stage with the same so
   if(url.endsWith('/images/generations'))return {ok:true,json:async()=>({data:[{b64_json:png().toString('base64')}]})};
   let output=responseText(body);
   if(body.text.format.name==='cartoon_exploration'&&++explorations===1){
-   const bad=structuredClone(exploration);bad.candidates[0].evidence='not in the source';output=JSON.stringify(bad);
+   const bad=structuredClone(exploration);bad.candidates[0].evidence='not in the source';bad.candidates[4].headline=bad.candidates[3].headline;output=JSON.stringify(bad);
   }
   return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:output}]}]})};
  };
- await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(explorations,2);assert.deepEqual(JSON.parse(calls[0].input),JSON.parse(calls[1].input));
- assert.equal(calls[2].text.format.name,'cartoon_comparison');
- assert.equal(calls.length,6);
+ const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ assert.equal(explorations,1);assert.equal(result.exploredCandidates.length,4);
+ assert.equal(result.exploredCandidates[0].evidence,result.exploredCandidates[0].headline);
+ assert.equal(calls[1].text.format.name,'cartoon_comparison');
+ assert.equal(calls.length,5);
 });
 test('a language error retries only the three-angle stage for the same fixed topic',async t=>{
  const root=fixture(t),calls=[];

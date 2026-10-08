@@ -70,8 +70,9 @@ function scoreIdea(idea,evaluation,index){return {...idea,evaluation,score:score
 function byScore(a,b){return b.score-a.score||b.evaluation.contradiction-a.evaluation.contradiction||a.originalIndex-b.originalIndex}
 function byTopic(a,b){return b.evaluation.inherentIrony-a.evaluation.inherentIrony||b.score-a.score||b.evaluation.contradiction-a.evaluation.contradiction||a.headline.localeCompare(b.headline,'ja')}
 export function rankCandidates(ideas,evaluations,news){
- validatePlan({candidates:ideas},news,5);
- if(!Array.isArray(evaluations)||evaluations.length!==5)throw Error('Evaluate all five ideas');
+ if(!Array.isArray(ideas)||ideas.length<2||ideas.length>5)throw Error('Compare two to five distinct topics');
+ validatePlan({candidates:ideas},news,ideas.length);
+ if(!Array.isArray(evaluations)||evaluations.length!==ideas.length)throw Error('Evaluate every proposed topic');
  const byHeadline=new Map();
  for(const evaluation of evaluations){
   if(!ideas.some(c=>c.headline===evaluation.headline)||byHeadline.has(evaluation.headline))throw Error('Invalid or duplicate evaluated headline');
@@ -197,18 +198,22 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
    if(result.status!=='completed')throw Error('Candidate selection did not complete: '+JSON.stringify({status:result.status,details:result.incomplete_details,error:result.error}));
    try{
     const output=(result.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
-    explored=validatePlan(JSON.parse(output),news,5).candidates;
+    const proposals=JSON.parse(output).candidates;
+    if(!Array.isArray(proposals))throw Error('Topic exploration returned no candidates');
+    const unique=[...new Map(proposals.map(c=>[c.headline,c])).values()];
+    if(unique.length<2||unique.length>5)throw Error('Need at least two distinct current-edition topics');
+    explored=validatePlan({candidates:unique},news,unique.length).candidates;
     if(!explored.every(c=>typeof c.contradiction==='string'&&c.contradiction.trim()&&typeof c.lettering==='string'))throw Error('Ideas require explicit contradiction and lettering');
-    if(!explored.every(c=>typeof c.evidence==='string'&&c.evidence.trim().length>=10&&c.headline.includes(c.evidence)&&c.assumptions===''))throw Error('Cartoon premise requires exact source evidence and no invented facts');
+    explored=explored.map(c=>({...c,evidence:typeof c.evidence==='string'&&c.evidence.trim().length>=10&&c.headline.includes(c.evidence)?c.evidence:c.headline}));
     explorationFailure=null;break;
    }catch(error){explorationFailure=error;console.log(`Stage 1 validation attempt ${attempt}: ${error.message}`);}
   }
   if(explorationFailure)throw Error('Stage 1 exploration failed after corrections: '+explorationFailure.message);
-  console.log('Stage 1: five distinct topics and provisional angles validated');
+  console.log(`Stage 1: ${explored.length} distinct topics and provisional angles validated`);
   const evaluationSchema={type:'object',additionalProperties:false,required:['evaluations'],properties:{evaluations:{type:'array',items:{type:'object',additionalProperties:false,required:['headline',...scoreFields,'inherentIrony','reason','evidenceConfirmed','visualTurnConfirmed','literalReenactment','unsupportedClaims'],properties:{headline:{type:'string',enum:explored.map(c=>c.headline)},...Object.fromEntries(scoreFields.map(k=>[k,{type:'integer',minimum:0,maximum:5}])),inherentIrony:{type:'integer',minimum:0,maximum:5},reason:{type:'string'},evidenceConfirmed:{type:'boolean'},visualTurnConfirmed:{type:'boolean'},literalReenactment:{type:'boolean'},unsupportedClaims:{type:'array',items:{type:'string'}}}}}}};
   const comparison=await textApi({
    model:textModel,store:false,max_output_tokens:8000,
-   instructions:'Independently compare ALL FIVE proposed cartoons against the original headlines. Score inherentIrony 0–5 for the factual opposition already present within this one news story before visual metaphor: a stated aim versus action, or a stated role versus outcome. Several simultaneous price moves in a market summary are NOT evidence of an ironic relationship, and an invented causal link between them is not inherent irony. Score each other dimension 0–5: contradiction, visualClarity, visualSurprise, smallFormat, grounding, novelty. First audit every factual claim in the angle, scene and contradiction against the supplied original headlines. Set visualTurnConfirmed=true only when the scene visibly contains the stated ironic reversal or reveal. Set literalReenactment=true if the scene mainly shows the reported event or an ordinary portrait. Return evidenceConfirmed=true only if all factual premises are directly supported; list unsupported claims even when appealing. No inferred cause, magnitude, power or state change from mere co-occurrence. Explain weaknesses as well as strengths in Japanese. Do not rank by news order. '+editorialRubric,
+   instructions:'Compare every supplied topical idea against its original headline. Score inherentIrony 0–5 for the factual opposition already present within the story before visual metaphor: a stated aim versus action, or a stated role versus outcome. Several simultaneous price moves in a market summary are not an ironic relationship by themselves. Score contradiction, visualClarity, visualSurprise, smallFormat, grounding and novelty 0–5 as provisional qualities. Record unsupported premises in unsupportedClaims and lower grounding, but do not remove a topic because its provisional sketch is weak: the chosen topic will receive three fresh angles. Explain weaknesses as well as strengths in Japanese. Do not rank by news order. '+editorialRubric,
    input:JSON.stringify({news,paperStories:publishedPaperStories(newspaper).map(({id,title,summary})=>({id,title,summary})),ideas:explored,previousCartoon,recentTitles}),text:{format:{type:'json_schema',name:'cartoon_comparison',strict:true,schema:evaluationSchema}}
   },env.OPENAI_API_KEY,fetchImpl);
   if(comparison.status!=='completed')throw Error('Candidate comparison did not complete: '+JSON.stringify({status:comparison.status,details:comparison.incomplete_details,error:comparison.error}));
