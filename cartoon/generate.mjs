@@ -277,6 +277,7 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   if(auditFailure)throw Error('Factual audit failed after corrections: '+auditFailure.message);
   attemptedTopics.push({headline:selectedTopic.headline,audits:factAudits,eligibleIds});
   console.log('Stage 4: fact-audited angles',eligibleIds);
+  for(const audit of factAudits)if(!eligibleIds.includes(audit.angleId))console.log('Stage 4 rejection',audit.angleId,JSON.stringify({unsupportedClaims:audit.unsupportedClaims,failedPremises:audit.claims.filter(c=>!c.supported).map(c=>c.claim)}));
   if(!eligibleIds.length)continue;
   // Compare visual quality only for scenes that passed the separate factual audit.
   const angleEvaluationSchema=structuredClone(evaluationSchema);
