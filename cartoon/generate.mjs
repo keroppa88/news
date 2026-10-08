@@ -80,7 +80,7 @@ export function rankCandidates(ideas,evaluations,news){
   byHeadline.set(evaluation.headline,evaluation);
  }
  const ranked=ideas.map((idea,index)=>scoreIdea(idea,byHeadline.get(idea.headline),index)).filter(c=>eligibleEvaluation(c.evaluation)).sort(byTopic);
- if(ranked.length<3)throw Error('Fewer than three grounded, visually satirical ideas; preserve previous cartoon');
+ if(!ranked.length)throw Error('No grounded, visually satirical topic; preserve previous cartoon');
  return ranked.slice(0,3).map(({originalIndex,...candidate})=>candidate);
 }
 export function validateAngles(ideas,headline,news){

@@ -115,7 +115,8 @@ test('irony wins over news order; speculative or merely grave ideas are excluded
  assert.deepEqual(ranked.map(c=>c.headline),[4,3,2].map(i=>exploration.candidates[i].headline));
  const invalid=structuredClone(scores);invalid[4].headline=invalid[3].headline;
  assert.throws(()=>rankCandidates(exploration.candidates,invalid,news),/duplicate/);
- scores[2].grounding=1;assert.throws(()=>rankCandidates(exploration.candidates,scores,news),/Fewer than three/);
+ scores[2].grounding=1;assert.deepEqual(rankCandidates(exploration.candidates,scores,news).map(c=>c.headline),[4,3].map(i=>exploration.candidates[i].headline));
+ scores.forEach(s=>s.evidenceConfirmed=false);assert.throws(()=>rankCandidates(exploration.candidates,scores,news),/No grounded/);
 });
 test('factual irony breaks a topic score tie before article order',()=>{
  const scores=structuredClone(evaluations);
@@ -173,7 +174,7 @@ test('a literal depiction or an unfulfilled visual turn cannot win by headline p
  checked[1].visualTurnConfirmed=false;
  assert.deepEqual(rankCandidates(exploration.candidates,checked,news).map(c=>c.headline),exploration.candidates.slice(2).map(c=>c.headline));
  checked[2].visualSurprise=2;
- assert.throws(()=>rankCandidates(exploration.candidates,checked,news),/Fewer than three/);
+ assert.equal(rankCandidates(exploration.candidates,checked,news).length,2);
  assert.throws(()=>validatePlan({candidates:plan.candidates.map(c=>({...c,visualTurn:''}))},news),/Incomplete/);
 });
 test('the chosen topic stays fixed while three distinct angles are evaluated',()=>{
