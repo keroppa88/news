@@ -5,12 +5,12 @@ import {chromium} from 'playwright';
 const browser=await chromium.launch({headless:true});
 try{
  const page=await browser.newPage({viewport:{width:1280,height:1600}});
- await page.route('http://paper.test/**',async route=>{
+ await page.route('http://localhost/**',async route=>{
   const path=new URL(route.request().url()).pathname.slice(1)||'paper-newspaper.html';
   try{await route.fulfill({body:await fs.readFile(path),contentType:path.endsWith('.json')?'application/json':path.endsWith('.html')?'text/html':path.endsWith('.png')?'image/png':'font/ttf'});}catch{await route.fulfill({status:404,body:''});}
  });
- await page.goto('http://paper.test/paper-newspaper.html');
- await page.waitForSelector('.front-page');
+ await page.goto('http://localhost/paper-newspaper.html');
+ await page.waitForSelector('.front-page').catch(async error=>{console.error('Paper render failed:',await page.locator('#content').textContent());throw error;});
  await page.evaluate(()=>document.fonts.ready);
  await page.emulateMedia({media:'print'});
  await page.evaluate(()=>refit());
