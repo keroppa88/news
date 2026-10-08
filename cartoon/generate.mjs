@@ -113,11 +113,13 @@ export function rankAngles(ideas,evaluations,headline,news,allowedIds=ideas.map(
 }
 export function auditAngles(angles,audits,headline,summary=''){
  if(!Array.isArray(audits)||audits.length!==angles.length)throw Error('Audit every visual angle before comparison');
+ const canonical=s=>String(s).normalize('NFKC').replace(/\s+/g,'');
+ const inSource=quote=>[headline,summary].some(s=>canonical(s).includes(canonical(quote)));
  const allowed=new Set(angles.map(a=>a.angleId)),seen=new Set(),eligible=[];
  for(const audit of audits){
   if(!allowed.has(audit.angleId)||seen.has(audit.angleId))throw Error('Invalid or duplicate factual audit ID');
   seen.add(audit.angleId);
-  if(!Array.isArray(audit.claims)||!audit.claims.length||!audit.claims.every(c=>typeof c.claim==='string'&&c.claim.trim()&&typeof c.evidenceQuote==='string'&&c.evidenceQuote.trim().length>=6&&[headline,summary].some(s=>s.includes(c.evidenceQuote))&&typeof c.supported==='boolean')||!Array.isArray(audit.unsupportedClaims)||!audit.unsupportedClaims.every(c=>typeof c==='string')||typeof audit.grounded!=='boolean')throw Error('Incomplete factual audit or evidence outside this article');
+  if(!Array.isArray(audit.claims)||!audit.claims.length||!audit.claims.every(c=>typeof c.claim==='string'&&c.claim.trim()&&typeof c.evidenceQuote==='string'&&typeof c.supported==='boolean'&&(!c.evidenceQuote.trim()?!c.supported:canonical(c.evidenceQuote).length>=2&&inSource(c.evidenceQuote)))||!Array.isArray(audit.unsupportedClaims)||!audit.unsupportedClaims.every(c=>typeof c==='string')||typeof audit.grounded!=='boolean')throw Error('Incomplete factual audit or evidence outside this article');
   if(audit.grounded&&audit.unsupportedClaims.length===0&&audit.claims.every(c=>c.supported))eligible.push(audit.angleId);
  }
  return eligible;
@@ -246,15 +248,24 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   // Audit factual premises in isolation, before asking which of the surviving drawings is funniest.
   const paperStory=paperStoryFor(selectedTopic.headline,newspaper,newsDate);
   const factSchema={type:'object',additionalProperties:false,required:['audits'],properties:{audits:{type:'array',items:{type:'object',additionalProperties:false,required:['angleId','claims','grounded','unsupportedClaims'],properties:{angleId:{type:'string',enum:angleCandidates.map(c=>c.angleId)},claims:{type:'array',items:{type:'object',additionalProperties:false,required:['claim','evidenceQuote','supported'],properties:{claim:{type:'string'},evidenceQuote:{type:'string'},supported:{type:'boolean'}}}},grounded:{type:'boolean'},unsupportedClaims:{type:'array',items:{type:'string'}}}}}}};
-  const factResponse=await textApi({
+  const factRequest={
    model:textModel,store:false,max_output_tokens:7000,
-   instructions:'Act solely as a skeptical factual editor, not an art critic. For EACH angle, extract every material real-world premise implied by its angle, scene, visualTurn and contradiction, especially a causal link, who controls whom, size of an effect, policy scope, motive, identity, quote or wrongdoing. For each premise give the exact supporting substring of the supplied headline or paper summary as evidenceQuote, and supported=true ONLY if that substring explicitly establishes the complete claim. If unsupported, still quote the closest relevant fragment, mark supported=false and explain in unsupportedClaims. A metaphor of a small euro steering a US stock market asserts that the euro controls US stocks; simultaneous falls do not prove that. A halt to NEW construction does not mean operating centers are shut down. An arbitrary news headline cannot supply unstated intentions. At least one claim per angle; include the central visual premise, not just a harmless headline fact. If any premise is unsupported set grounded=false, regardless of how witty the picture is. Do not assess humor or change the topic.',
+   instructions:'Act solely as a skeptical factual editor, not an art critic. For EACH angle, extract every material real-world premise implied by its angle, scene, visualTurn and contradiction, especially a causal link, who controls whom, size of an effect, policy scope, motive, identity, quote or wrongdoing. For each premise give an exact character-for-character substring of the supplied headline or paper summary as evidenceQuote, and supported=true ONLY if that substring explicitly establishes the complete claim. If unsupported, use an exact closest relevant fragment, or an EMPTY evidenceQuote if no matching phrase exists; set supported=false and explain in unsupportedClaims. Never fabricate or paraphrase an evidenceQuote. A metaphor of a small euro steering a US stock market asserts that the euro controls US stocks; simultaneous falls do not prove that. A halt to NEW construction does not mean operating centers are shut down. An arbitrary news headline cannot supply unstated intentions. At least one claim per angle; include the central visual premise, not just a harmless headline fact. If any premise is unsupported set grounded=false, regardless of how witty the picture is. Do not assess humor or change the topic.',
    input:JSON.stringify({headline:selectedTopic.headline,summary:paperStory.summary||'',angles:angleCandidates.map(({angleId,angle,scene,visualTurn,contradiction})=>({angleId,angle,scene,visualTurn,contradiction}))}),text:{format:{type:'json_schema',name:'cartoon_fact_audit',strict:true,schema:factSchema}}
-  },env.OPENAI_API_KEY,fetchImpl);
-  if(factResponse.status!=='completed')throw Error('Factual audit did not complete');
-  const factText=(factResponse.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
-  factAudits=JSON.parse(factText).audits;
-  const eligibleIds=auditAngles(angleCandidates,factAudits,selectedTopic.headline,paperStory.summary);
+  };
+  let eligibleIds,auditFailure;
+  for(let attempt=1;attempt<=3;attempt++){
+   const request={...factRequest,instructions:factRequest.instructions+(auditFailure?` Correct the format error from your previous audit: ${auditFailure.message}. Keep the SAME topic and angles. Copy evidenceQuote directly from the input, or use an empty string when no phrase exists.`:'')};
+   const factResponse=await textApi(request,env.OPENAI_API_KEY,fetchImpl);
+   if(factResponse.status!=='completed')throw Error('Factual audit did not complete');
+   try{
+    const factText=(factResponse.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
+    factAudits=JSON.parse(factText).audits;
+    eligibleIds=auditAngles(angleCandidates,factAudits,selectedTopic.headline,paperStory.summary);
+    auditFailure=null;break;
+   }catch(error){auditFailure=error;console.log(`Factual audit validation attempt ${attempt}: ${error.message}`);}
+  }
+  if(auditFailure)throw Error('Factual audit failed after corrections: '+auditFailure.message);
   attemptedTopics.push({headline:selectedTopic.headline,audits:factAudits,eligibleIds});
   console.log('Stage 4: fact-audited angles',eligibleIds);
   if(!eligibleIds.length)continue;
