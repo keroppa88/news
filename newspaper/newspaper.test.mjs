@@ -70,8 +70,10 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
           if(${failEdits})return {ok:false,status:500};
           return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({text:'フェルスタッペン、レースで圧倒'})}]}}]})};
         }
-        if(request.generationConfig.responseSchema.properties.stories.items.properties.sourceIds.minItems!==1)throw Error('Missing evidence requirement');
+        if(request.generationConfig.responseSchema.properties.stories.items.properties.sourceIds)throw Error('Source identity must not be model output');
+        if(JSON.parse(request.contents[0].parts[0].text).headlines.length!==1)throw Error('Only one assigned source may enter the model');
         const data=${JSON.stringify(data)};
+        [...data.important,...data.others].forEach(a=>a.sourceIds=['WRONG_MODEL_ID']);
         if(${sourceCount}<32){data.important=data.important.slice(0,${sourceCount});data.others=[]}
         const {section,start,max}=JSON.parse(request.contents[0].parts[0].text).currentTask;
         return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({stories:data[section].slice(start,start+max)})}]}}]})};

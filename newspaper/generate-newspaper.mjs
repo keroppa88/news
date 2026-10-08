@@ -20,9 +20,8 @@ const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
  title:{type:'STRING',description:'簡潔な日本語見出し。18〜26文字を目安に短く。'},summary:{type:'STRING'},category:{type:'STRING'},
- sourceIds:{type:'ARRAY',minItems:1,items:{type:'STRING',description:'入力headlinesに存在するidをそのままコピーする（例 E1）。'}},
  printBody:{type:'OBJECT',properties:{oneLine:{type:'STRING'},twoLines:{type:'STRING'},shortfallReason:{type:'STRING'}},required:['oneLine','twoLines','shortfallReason']}
-},required:['title','summary','category','sourceIds','printBody']};
+},required:['title','summary','category','printBody']};
 let lastError;
 let correction="";
 let previousOutput;
@@ -49,24 +48,26 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
       const offset=section==='important'?0:assigned.important.length;
       for(let start=0;start<assigned[section].length;start+=6){
         const available=current.slice(offset+start,offset+Math.min(start+6,assigned[section].length));
-        const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:available.length,maxItems:available.length,items:articleSchema}},required:['stories']};
-        const instruction='\n記事の選定と順番はプログラムで確定済み。headlinesの各見出しにつき記事を必ず1本、同じ順番で返す。sourceIdsは対応する1件のidだけ。別記事の事実を混ぜない。見出しにない詳細・発言・数字・背景を創作しない。資料が見出しだけならその事実だけを簡潔に伝える。';
+        // Every model call sees one assigned article. Source identity is never model output.
+        const results=await Promise.allSettled(available.map(async (source,index)=>{
+        const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:1,maxItems:1,items:articleSchema}},required:['stories']};
+        const instruction='\n記事の選定と順番はプログラムで確定済み。headlinesの各見出しにつき記事を必ず1本、同じ順番で返す。入力は記事1件だけ。sourceIdsや記事番号は返さない。根拠との紐付けはプログラムが行う。別記事の事実を混ぜない。見出しにない詳細・発言・数字・背景を創作しない。資料が見出しだけならその事実だけを簡潔に伝える。';
         const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${attemptModel}:generateContent`,{
           method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-          body:JSON.stringify({systemInstruction:{parts:[{text:prompt+instruction+(correction?'\n検証エラー: '+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask:{section,start,min:available.length,max:available.length},editorPicks:available.map(a=>a.title)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
+          body:JSON.stringify({systemInstruction:{parts:[{text:prompt+instruction+(correction?'\n検証エラー: '+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:[{title:source.title,media:source.media,date:source.date}],currentTask:{section,start:start+index,min:1,max:1},editorPicks:[source.title]})}]}],generationConfig:{temperature:0.2,maxOutputTokens:4096,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
         });
         if(!response.ok){const e=new Error(`Gemini HTTP ${response.status}`);e.retryable=response.status===429||response.status>=500;throw e;}
         const result=await response.json(),candidate=result.candidates?.[0];
         if(candidate?.finishReason!=='STOP')throw Error('Incomplete newspaper output');
         const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
         const batch=JSON.parse(text);
-        if(!Array.isArray(batch.stories)||batch.stories.length!==available.length)throw Error('Missing assigned paper articles');
-        for(const [i,article] of batch.stories.entries()){
-          if(article.sourceIds?.length!==1||article.sourceIds[0]!==available[i].id)throw Error('Paper evidence does not match the assigned article');
-        }
-        parsed[section].push(...batch.stories);
+        if(!Array.isArray(batch.stories)||batch.stories.length!==1)throw Error('Missing assigned paper article');
         for(const key of Object.keys(usage))usage[key]+=result.usageMetadata?.[key]||0;
-        console.log(`Edited assigned ${section} ${start+1}–${start+batch.stories.length}`);
+        return {...batch.stories[0],sourceIds:[source.id]};
+        }));
+        const failure=results.find(r=>r.status==='rejected');if(failure)throw failure.reason;
+        parsed[section].push(...results.map(r=>r.value));
+        console.log(`Edited assigned ${section} ${start+1}–${start+available.length}`);
       }
     }
     previousOutput=parsed;
