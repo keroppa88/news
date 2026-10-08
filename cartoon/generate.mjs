@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {readConfirmedEdition,verifyPaper,sourceHash as editionHash} from '../newspaper/edition-contract.mjs';
 export const SECTIONS=['重要ニュース','経済ニュース','国内ニュース','海外ニュース','その他ニュース'];
 export const IMAGE_SIZE='816x816';
-export const SELECTION_VERSION='topic-then-three-angles-v5';
+export const SELECTION_VERSION='topic-audit-fallback-v6';
 export const DESIGN_VERSION='square-no-embedded-title-v3';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function readNews(text){
@@ -68,6 +68,7 @@ function validEvaluation(evaluation){
 function eligibleEvaluation(e){return e.evidenceConfirmed===true&&e.visualTurnConfirmed===true&&e.literalReenactment===false&&e.unsupportedClaims.length===0&&e.grounding>=3&&e.contradiction>=2&&e.visualClarity>=2&&e.visualSurprise>=3}
 function scoreIdea(idea,evaluation,index){return {...idea,evaluation,score:scoreFields.reduce((total,k)=>total+evaluation[k]*SCORE_WEIGHTS[k],0),originalIndex:index}}
 function byScore(a,b){return b.score-a.score||b.evaluation.contradiction-a.evaluation.contradiction||a.originalIndex-b.originalIndex}
+function byTopic(a,b){return b.evaluation.inherentIrony-a.evaluation.inherentIrony||b.score-a.score||b.evaluation.contradiction-a.evaluation.contradiction||a.headline.localeCompare(b.headline,'ja')}
 export function rankCandidates(ideas,evaluations,news){
  validatePlan({candidates:ideas},news,5);
  if(!Array.isArray(evaluations)||evaluations.length!==5)throw Error('Evaluate all five ideas');
@@ -75,9 +76,10 @@ export function rankCandidates(ideas,evaluations,news){
  for(const evaluation of evaluations){
   if(!ideas.some(c=>c.headline===evaluation.headline)||byHeadline.has(evaluation.headline))throw Error('Invalid or duplicate evaluated headline');
   validEvaluation(evaluation);
+  if(!Number.isInteger(evaluation.inherentIrony)||evaluation.inherentIrony<0||evaluation.inherentIrony>5)throw Error('Missing factual irony score');
   byHeadline.set(evaluation.headline,evaluation);
  }
- const ranked=ideas.map((idea,index)=>scoreIdea(idea,byHeadline.get(idea.headline),index)).filter(c=>eligibleEvaluation(c.evaluation)).sort(byScore);
+ const ranked=ideas.map((idea,index)=>scoreIdea(idea,byHeadline.get(idea.headline),index)).filter(c=>eligibleEvaluation(c.evaluation)).sort(byTopic);
  if(ranked.length<3)throw Error('Fewer than three grounded, visually satirical ideas; preserve previous cartoon');
  return ranked.slice(0,3).map(({originalIndex,...candidate})=>candidate);
 }
@@ -96,17 +98,29 @@ export function validateAngles(ideas,headline,news){
  if(new Set(ideas.map(a=>a.visualTurn)).size!==3)throw Error('Angles repeat the same visual turn');
  return ideas.map((idea,i)=>({...idea,angleId:`A${i+1}`}));
 }
-export function rankAngles(ideas,evaluations,headline,news){
+export function rankAngles(ideas,evaluations,headline,news,allowedIds=ideas.map((_,i)=>`A${i+1}`)){
  const validated=validateAngles(ideas,headline,news);
- if(!Array.isArray(evaluations)||evaluations.length!==3)throw Error('Evaluate all three angles');
+ if(!Array.isArray(allowedIds)||!allowedIds.length||new Set(allowedIds).size!==allowedIds.length||allowedIds.some(id=>!validated.some(c=>c.angleId===id)))throw Error('Invalid fact-audited angle IDs');
+ if(!Array.isArray(evaluations)||evaluations.length!==allowedIds.length)throw Error('Evaluate all fact-audited angles');
  const byId=new Map();
  for(const e of evaluations){
-  if(!validated.some(c=>c.angleId===e.angleId)||byId.has(e.angleId))throw Error('Invalid or duplicate angle ID');
+  if(!allowedIds.includes(e.angleId)||byId.has(e.angleId))throw Error('Invalid or duplicate angle ID');
   validEvaluation(e);byId.set(e.angleId,e);
  }
- const ranked=validated.map((idea,index)=>scoreIdea(idea,byId.get(idea.angleId),index)).filter(c=>eligibleEvaluation(c.evaluation)).sort(byScore);
+ const ranked=validated.filter(c=>allowedIds.includes(c.angleId)).map((idea,index)=>scoreIdea(idea,byId.get(idea.angleId),index)).filter(c=>eligibleEvaluation(c.evaluation)).sort(byScore);
  if(!ranked.length)throw Error('No grounded visual turn for the selected topic; skip the drawing');
  return ranked.map(({originalIndex,...candidate})=>candidate);
+}
+export function auditAngles(angles,audits,headline,summary=''){
+ if(!Array.isArray(audits)||audits.length!==angles.length)throw Error('Audit every visual angle before comparison');
+ const allowed=new Set(angles.map(a=>a.angleId)),seen=new Set(),eligible=[];
+ for(const audit of audits){
+  if(!allowed.has(audit.angleId)||seen.has(audit.angleId))throw Error('Invalid or duplicate factual audit ID');
+  seen.add(audit.angleId);
+  if(!Array.isArray(audit.claims)||!audit.claims.length||!audit.claims.every(c=>typeof c.claim==='string'&&c.claim.trim()&&typeof c.evidenceQuote==='string'&&c.evidenceQuote.trim().length>=6&&[headline,summary].some(s=>s.includes(c.evidenceQuote))&&typeof c.supported==='boolean')||!Array.isArray(audit.unsupportedClaims)||!audit.unsupportedClaims.every(c=>typeof c==='string')||typeof audit.grounded!=='boolean')throw Error('Incomplete factual audit or evidence outside this article');
+  if(audit.grounded&&audit.unsupportedClaims.length===0&&audit.claims.every(c=>c.supported))eligible.push(audit.angleId);
+ }
+ return eligible;
 }
 const editorialRubric='Prioritize contradictions between words and actions, stated aims and results, or the person funding something and fearing it. News prominence, tragedy, outrage, arrest and denial are not by themselves a satirical contradiction. Require a visible ironic turn beyond acting out the event: a role reversal, an object revealing its opposite function, an inversion of scale or an unexpected consequence made visible. These are alternative mechanisms, not recurring props or required scenes. Describe the apparent/revealed or before/after relationship precisely as visualTurn. Reject a scene that only shows an arrest, an announcement, a sad person beside a market chart or a literal headline. The twist must read in the drawing without its title. Do not make an accused person guilty, dishonest or callous merely because they deny an allegation. Compare how clearly the visual action expresses the irony without explanatory text. Prefer one immediately readable relationship, at most two main figures and one essential prop. Avoid repeated protagonists and stock metaphors from recent cartoons unless the new contradiction is substantially different. Do not invent motives, conduct or allegations absent from the supplied headline. Separate a visual metaphor from factual claims: never invent a stop order, request, rule, refusal, promise, regulator, quoted statement or wrongdoing to manufacture a contradiction. A truncated or ambiguous headline cannot establish its missing conclusion. If a factual premise is not explicitly supported by the supplied news, reject the idea rather than completing it from memory or speculation.';
 
@@ -161,7 +175,7 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   const imageModel=env.CARTOON_IMAGE_MODEL||'gpt-image-2.5-flare';
   const recentTitles=fs.existsSync(path.join(root,'picturewarehohuse'))?fs.readdirSync(path.join(root,'picturewarehohuse')).filter(name=>name.endsWith('.png')).sort().slice(-7):[];
   const previousCartoon=previous?{title:previous.title,angle:previous.candidates?.[0]?.angle,scene:previous.candidates?.[0]?.scene}:null;
-  let plan, explored, evaluations, topicCandidates, angleCandidates, angleEvaluations;
+  let plan, explored, evaluations, topicCandidates, angleCandidates, angleEvaluations, factAudits, attemptedTopics;
   if(previous?.normalSourceHash===normal.sourceHash&&previous?.paperSourceHash===paperSourceHash&&previous?.sourceHash===sourceHash&&previous.size===IMAGE_SIZE&&previous.designVersion!==DESIGN_VERSION&&previous.selectionVersion===SELECTION_VERSION&&previous.candidates?.length&&previous.angleCandidates?.length===3){
     // A drawing-rule correction keeps today's selected subject; no repeat selection calls.
     validateAngles(previous.angleCandidates,previous.sourceHeadline,news);
@@ -171,6 +185,8 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
     topicCandidates=previous.topicCandidates||[];
     angleCandidates=previous.angleCandidates;
     angleEvaluations=previous.angleEvaluations||[];
+    factAudits=previous.factAudits||[];
+    attemptedTopics=previous.attemptedTopics||[];
   }else{
   const selectionSchema=structuredClone(schema);
   selectionSchema.properties.candidates.items.required.push('contradiction','lettering','evidence','assumptions');
@@ -191,17 +207,18 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   console.log('Stage 1: five distinct topics and provisional angles validated');
   if(!explored.every(c=>typeof c.contradiction==='string'&&c.contradiction.trim()&&typeof c.lettering==='string'))throw Error('Ideas require explicit contradiction and lettering');
   if(!explored.every(c=>typeof c.evidence==='string'&&c.evidence.trim().length>=10&&c.headline.includes(c.evidence)&&c.assumptions===''))throw Error('Cartoon premise requires exact source evidence and no invented facts');
-  const evaluationSchema={type:'object',additionalProperties:false,required:['evaluations'],properties:{evaluations:{type:'array',items:{type:'object',additionalProperties:false,required:['headline',...scoreFields,'reason','evidenceConfirmed','visualTurnConfirmed','literalReenactment','unsupportedClaims'],properties:{headline:{type:'string',enum:explored.map(c=>c.headline)},...Object.fromEntries(scoreFields.map(k=>[k,{type:'integer',minimum:0,maximum:5}])),reason:{type:'string'},evidenceConfirmed:{type:'boolean'},visualTurnConfirmed:{type:'boolean'},literalReenactment:{type:'boolean'},unsupportedClaims:{type:'array',items:{type:'string'}}}}}}};
+  const evaluationSchema={type:'object',additionalProperties:false,required:['evaluations'],properties:{evaluations:{type:'array',items:{type:'object',additionalProperties:false,required:['headline',...scoreFields,'inherentIrony','reason','evidenceConfirmed','visualTurnConfirmed','literalReenactment','unsupportedClaims'],properties:{headline:{type:'string',enum:explored.map(c=>c.headline)},...Object.fromEntries(scoreFields.map(k=>[k,{type:'integer',minimum:0,maximum:5}])),inherentIrony:{type:'integer',minimum:0,maximum:5},reason:{type:'string'},evidenceConfirmed:{type:'boolean'},visualTurnConfirmed:{type:'boolean'},literalReenactment:{type:'boolean'},unsupportedClaims:{type:'array',items:{type:'string'}}}}}}};
   const comparison=await textApi({
    model:textModel,store:false,max_output_tokens:8000,
-   instructions:'Independently compare ALL FIVE proposed cartoons against the original headlines. Score each dimension 0–5: contradiction (strength of the factual irony), visualClarity (joke understood without caption), visualSurprise (the pictorial reversal, rather than the event itself, lands as a joke), smallFormat (readable in a 64 mm square), grounding (no added factual assumptions), novelty (different from recent subjects and compositions). First audit every factual claim in the angle, scene and contradiction against the supplied original headlines. Set visualTurnConfirmed=true only when the scene visibly contains the stated ironic reversal or reveal. Set literalReenactment=true if the scene mainly shows the reported event or an ordinary portrait, even if the candidate describes an ambitious visualTurn. A caption cannot rescue a literal scene. Return evidenceConfirmed=true only if all are directly supported; list every unsupported factual premise in unsupportedClaims, even if the visual joke is appealing. Metaphorical drawing is allowed but fabricated real-world orders, statements and actions are not. Do not infer a missing ending of a truncated headline. Explain weaknesses as well as strengths in a concise Japanese reason. A severe news event earns no points merely for importance. Grounding below 3 disqualifies an idea; contradiction or visual clarity below 2 or visual surprise below 3 disqualifies it. A missing visual turn or literal reenactment disqualifies it. The application ranks using weights contradiction 4, visual clarity 3, visual surprise 3, small format 2, grounding 1, novelty 1. '+editorialRubric,
+   instructions:'Independently compare ALL FIVE proposed cartoons against the original headlines. Score inherentIrony 0–5 for the factual opposition already present within this one news story before visual metaphor: a stated aim versus action, or a stated role versus outcome. Several simultaneous price moves in a market summary are NOT evidence of an ironic relationship, and an invented causal link between them is not inherent irony. Score each other dimension 0–5: contradiction, visualClarity, visualSurprise, smallFormat, grounding, novelty. First audit every factual claim in the angle, scene and contradiction against the supplied original headlines. Set visualTurnConfirmed=true only when the scene visibly contains the stated ironic reversal or reveal. Set literalReenactment=true if the scene mainly shows the reported event or an ordinary portrait. Return evidenceConfirmed=true only if all factual premises are directly supported; list unsupported claims even when appealing. No inferred cause, magnitude, power or state change from mere co-occurrence. Explain weaknesses as well as strengths in Japanese. Do not rank by news order. '+editorialRubric,
    input:JSON.stringify({news,paperStories:publishedPaperStories(newspaper).map(({id,title,summary})=>({id,title,summary})),ideas:explored,previousCartoon,recentTitles}),text:{format:{type:'json_schema',name:'cartoon_comparison',strict:true,schema:evaluationSchema}}
   },env.OPENAI_API_KEY,fetchImpl);
   if(comparison.status!=='completed')throw Error('Candidate comparison did not complete: '+JSON.stringify({status:comparison.status,details:comparison.incomplete_details,error:comparison.error}));
   const comparisonText=(comparison.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
   evaluations=JSON.parse(comparisonText).evaluations;
   topicCandidates=rankCandidates(explored,evaluations,news);
-  const selectedTopic=topicCandidates[0];
+  attemptedTopics=[];
+  for(const selectedTopic of topicCandidates){
   console.log('Stage 2: selected one topic',selectedTopic.headline);
   // Stage 3: reconsider the fixed topic from scratch, using three distinct visual mechanisms.
   const angleSchema=structuredClone(selectionSchema);
@@ -226,28 +243,48 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   }
   if(angleFailure)throw Error('Three-angle exploration failed after corrections: '+angleFailure.message);
   console.log('Stage 3: three distinct angles for the fixed topic validated');
-  // Stage 4: evaluate those three scenes independently. An attractive topic does not excuse a literal drawing.
+  // Audit factual premises in isolation, before asking which of the surviving drawings is funniest.
+  const paperStory=paperStoryFor(selectedTopic.headline,newspaper,newsDate);
+  const factSchema={type:'object',additionalProperties:false,required:['audits'],properties:{audits:{type:'array',items:{type:'object',additionalProperties:false,required:['angleId','claims','grounded','unsupportedClaims'],properties:{angleId:{type:'string',enum:angleCandidates.map(c=>c.angleId)},claims:{type:'array',items:{type:'object',additionalProperties:false,required:['claim','evidenceQuote','supported'],properties:{claim:{type:'string'},evidenceQuote:{type:'string'},supported:{type:'boolean'}}}},grounded:{type:'boolean'},unsupportedClaims:{type:'array',items:{type:'string'}}}}}}};
+  const factResponse=await textApi({
+   model:textModel,store:false,max_output_tokens:7000,
+   instructions:'Act solely as a skeptical factual editor, not an art critic. For EACH angle, extract every material real-world premise implied by its angle, scene, visualTurn and contradiction, especially a causal link, who controls whom, size of an effect, policy scope, motive, identity, quote or wrongdoing. For each premise give the exact supporting substring of the supplied headline or paper summary as evidenceQuote, and supported=true ONLY if that substring explicitly establishes the complete claim. If unsupported, still quote the closest relevant fragment, mark supported=false and explain in unsupportedClaims. A metaphor of a small euro steering a US stock market asserts that the euro controls US stocks; simultaneous falls do not prove that. A halt to NEW construction does not mean operating centers are shut down. An arbitrary news headline cannot supply unstated intentions. At least one claim per angle; include the central visual premise, not just a harmless headline fact. If any premise is unsupported set grounded=false, regardless of how witty the picture is. Do not assess humor or change the topic.',
+   input:JSON.stringify({headline:selectedTopic.headline,summary:paperStory.summary||'',angles:angleCandidates.map(({angleId,angle,scene,visualTurn,contradiction})=>({angleId,angle,scene,visualTurn,contradiction}))}),text:{format:{type:'json_schema',name:'cartoon_fact_audit',strict:true,schema:factSchema}}
+  },env.OPENAI_API_KEY,fetchImpl);
+  if(factResponse.status!=='completed')throw Error('Factual audit did not complete');
+  const factText=(factResponse.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
+  factAudits=JSON.parse(factText).audits;
+  const eligibleIds=auditAngles(angleCandidates,factAudits,selectedTopic.headline,paperStory.summary);
+  attemptedTopics.push({headline:selectedTopic.headline,audits:factAudits,eligibleIds});
+  console.log('Stage 4: fact-audited angles',eligibleIds);
+  if(!eligibleIds.length)continue;
+  // Compare visual quality only for scenes that passed the separate factual audit.
   const angleEvaluationSchema=structuredClone(evaluationSchema);
-  angleEvaluationSchema.properties.evaluations.items.required=angleEvaluationSchema.properties.evaluations.items.required.map(field=>field==='headline'?'angleId':field);
+  angleEvaluationSchema.properties.evaluations.items.required=angleEvaluationSchema.properties.evaluations.items.required.filter(field=>field!=='inherentIrony').map(field=>field==='headline'?'angleId':field);
   delete angleEvaluationSchema.properties.evaluations.items.properties.headline;
-  angleEvaluationSchema.properties.evaluations.items.properties.angleId={type:'string',enum:angleCandidates.map(c=>c.angleId)};
+  delete angleEvaluationSchema.properties.evaluations.items.properties.inherentIrony;
+  angleEvaluationSchema.properties.evaluations.items.properties.angleId={type:'string',enum:eligibleIds};
   const angleComparison=await textApi({
    model:textModel,store:false,max_output_tokens:6000,
-   instructions:'Compare exactly THREE alternative drawings of the SAME selected news story. Identify each by angleId. Audit every factual premise against the one original headline. Evaluate contradiction, visualClarity, visualSurprise, smallFormat, grounding and novelty (0–5). visualTurnConfirmed requires the proposed scene itself to show the precise reversal. literalReenactment is true if the image simply restages the reported event, even when its accompanying prose claims a clever twist. List unsupported factual assertions. Reject an ungrounded accusation or unreported badge, identity, order, quote or motive. Prefer a clear, surprising image over an important but literal event. '+editorialRubric,
-   input:JSON.stringify({headline:selectedTopic.headline,angles:angleCandidates}),text:{format:{type:'json_schema',name:'cartoon_angle_comparison',strict:true,schema:angleEvaluationSchema}}
+   instructions:'Compare only the listed fact-audited alternative drawings of the SAME selected news story. Identify each by angleId. Evaluate contradiction, visualClarity, visualSurprise, smallFormat, grounding and novelty (0–5). visualTurnConfirmed requires the proposed scene itself to show the precise reversal. literalReenactment is true if the image simply restages the reported event, even when its prose claims a clever twist. A caption cannot rescue a literal drawing. Prefer a clear, surprising image over an important but literal event. Do not add other candidates. '+editorialRubric,
+   input:JSON.stringify({headline:selectedTopic.headline,angles:angleCandidates.filter(a=>eligibleIds.includes(a.angleId))}),text:{format:{type:'json_schema',name:'cartoon_angle_comparison',strict:true,schema:angleEvaluationSchema}}
   },env.OPENAI_API_KEY,fetchImpl);
   if(angleComparison.status!=='completed')throw Error('Three-angle comparison did not complete');
   const angleComparisonText=(angleComparison.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
   angleEvaluations=JSON.parse(angleComparisonText).evaluations;
-  plan={candidates:rankAngles(angleCandidates,angleEvaluations,selectedTopic.headline,news)};
-  console.log('Stage 4: selected one angle',plan.candidates[0].angleId);
+  try{plan={candidates:rankAngles(angleCandidates,angleEvaluations,selectedTopic.headline,news,eligibleIds)};}
+  catch(error){if(!/No grounded visual turn/.test(error.message))throw error;attemptedTopics.at(-1).reason=error.message;continue;}
+  console.log('Stage 5: selected one angle',plan.candidates[0].angleId);
+  break;
+  }
+  if(!plan)throw Error('No fact-grounded, visually satirical angle across the three candidate topics; preserve previous cartoon');
   }
   console.log('Ranked cartoon ideas:',JSON.stringify(plan.candidates));
   const prompt=imagePrompt(plan.candidates[0]);
   const image=await api('images/generations',{model:imageModel,prompt,n:1,size:IMAGE_SIZE,quality:'high',output_format:'png'},env.OPENAI_API_KEY,fetchImpl);
   if(!image.data?.[0]?.b64_json)throw Error('No generated image returned');
   const bytes=Buffer.from(image.data[0].b64_json,'base64');verifyPng(bytes);
-  const manifest={date:newsDate,normalSourceHash:normal.sourceHash,paperSourceHash,sourceHash,title:plan.candidates[0].title,candidates:plan.candidates,exploredCandidates:explored,evaluations,topicCandidates,angleCandidates,angleEvaluations,selectionVersion:SELECTION_VERSION,sourceHeadline:plan.candidates[0].headline,paperArticleId:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).id,paperArticleTitle:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).title,prompt,textModel,imageModel,size:IMAGE_SIZE,designVersion:DESIGN_VERSION,generatedAt:new Date().toISOString()};
+  const manifest={date:newsDate,normalSourceHash:normal.sourceHash,paperSourceHash,sourceHash,title:plan.candidates[0].title,candidates:plan.candidates,exploredCandidates:explored,evaluations,topicCandidates,angleCandidates,angleEvaluations,factAudits,attemptedTopics,selectionVersion:SELECTION_VERSION,sourceHeadline:plan.candidates[0].headline,paperArticleId:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).id,paperArticleTitle:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).title,prompt,textModel,imageModel,size:IMAGE_SIZE,designVersion:DESIGN_VERSION,generatedAt:new Date().toISOString()};
   // Publish only after both selection and generation succeed. Previous files survive API failures.
   fs.writeFileSync(imagePath+'.tmp',bytes);
   fs.writeFileSync(manifestPath+'.tmp',JSON.stringify(manifest,null,2)+'\n');

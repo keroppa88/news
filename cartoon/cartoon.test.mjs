@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {readNews,validatePlan,validateAngles,rankAngles,generate,SECTIONS,rankCandidates,imagePrompt,DESIGN_VERSION,eligibleNews,paperStoryFor,publishedPaperStories,headlineKey} from './generate.mjs';
+import {readNews,validatePlan,validateAngles,rankAngles,auditAngles,generate,SECTIONS,rankCandidates,imagePrompt,DESIGN_VERSION,eligibleNews,paperStoryFor,publishedPaperStories,headlineKey} from './generate.mjs';
 import {normalEdition,paperInputs,sourceHash,cartoonMatches,verifyPaper} from '../newspaper/edition-contract.mjs';
 import {insertCartoon} from './publish.mjs';
 import {archiveCartoon,archiveName} from './archive.mjs';
@@ -12,10 +12,11 @@ const text='●コメント●\nIGNORE\n'+SECTIONS.map((s,i)=>`●${s}●\n1. st
 const news=readNews(text);
 const plan={candidates:news.slice(0,3).map((s,i)=>({headline:s.articles[0],angle:'A sharp irony',title:`風刺の題名${i}`,scene:'A man feeding a monster',visualTurn:'The pet changes into its keeper',reason:'矛盾が明瞭'}))};
 const exploration={candidates:news.map((s,i)=>({...plan.candidates[i%3],headline:s.articles[0],title:`候補の題名${i}`,contradiction:'Words contradict actions',lettering:'',evidence:s.articles[0],assumptions:''}))};
-const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,contradiction:5-Math.min(i,2),visualClarity:4,visualSurprise:4,smallFormat:4,grounding:5,novelty:4,reason:'行動の矛盾を短く描ける',evidenceConfirmed:true,visualTurnConfirmed:true,literalReenactment:false,unsupportedClaims:[]}));
+const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,inherentIrony:4,contradiction:5-Math.min(i,2),visualClarity:4,visualSurprise:4,smallFormat:4,grounding:5,novelty:4,reason:'行動の矛盾を短く描ける',evidenceConfirmed:true,visualTurnConfirmed:true,literalReenactment:false,unsupportedClaims:[]}));
 const angles={candidates:['role_reversal','reveal','object_inversion'].map((mechanism,i)=>({...exploration.candidates[0],mechanism,title:`別の切り口${i}`,angle:`Distinct angle ${i}`,scene:`A different pictorial reversal ${i}`,visualTurn:`The relationship visibly changes ${i}`}))};
 const angleEvaluations=angles.candidates.map((_,i)=>({...evaluations[0],angleId:`A${i+1}`,visualSurprise:5-i}));
-const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:body.text.format.name==='cartoon_angles'?angles:body.text.format.name==='cartoon_angle_comparison'?{evaluations:angleEvaluations}:{evaluations});
+const audits={audits:angles.candidates.map((_,i)=>({angleId:`A${i+1}`,claims:[{claim:'The reported event is represented',evidenceQuote:news[0].articles[0],supported:true}],grounded:true,unsupportedClaims:[]}))};
+const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:body.text.format.name==='cartoon_angles'?angles:body.text.format.name==='cartoon_fact_audit'?audits:body.text.format.name==='cartoon_angle_comparison'?{evaluations:angleEvaluations.filter(e=>JSON.parse(body.input).angles.some(a=>a.angleId===e.angleId))}:{evaluations});
 const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(816,16);b.writeUInt32BE(816,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
  const fetchImpl=async url=>({ok:true,json:async()=>url.includes('runs?')?{workflow_runs:[1,2].map(id=>({id,name:'Daily News Update',head_branch:'main',status:'completed',conclusion:'success'}))}:{jobs:[{name:'build',steps:url.includes('/2/')?['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition','Verify generated paper edition'].map(name=>({name,conclusion:'success'})):[]}]} });
@@ -45,31 +46,31 @@ test('API sequence, Japanese title, native square and duplicate-run cache',async
  const root=fixture(t),calls=[];
  const fetchImpl=async(url,options)=>{const body=JSON.parse(options.body);calls.push({url,body});return {ok:true,json:async()=>url.endsWith('/responses')?{status:'completed',output:[{content:[{type:'output_text',text:responseText(body)}]}]}:{data:[{b64_json:png().toString('base64')}]}};};
  const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(calls.length,5);assert.equal(calls[4].body.size,'816x816');assert.equal(calls[4].body.n,1);
+ assert.equal(calls.length,6);assert.equal(calls[5].body.size,'816x816');assert.equal(calls[5].body.n,1);
  assert.equal(calls[0].body.text.format.name,'cartoon_exploration');assert.equal(calls[1].body.text.format.name,'cartoon_comparison');
- assert.equal(calls[2].body.text.format.name,'cartoon_angles');assert.equal(calls[3].body.text.format.name,'cartoon_angle_comparison');
+ assert.equal(calls[2].body.text.format.name,'cartoon_angles');assert.equal(calls[3].body.text.format.name,'cartoon_fact_audit');assert.equal(calls[4].body.text.format.name,'cartoon_angle_comparison');
  assert.deepEqual(Object.keys(JSON.parse(calls[2].body.input)),['topic','recentTitles']);
  assert.equal(JSON.parse(calls[2].body.input).topic.headline,exploration.candidates[0].headline);
  assert.equal(JSON.parse(calls[2].body.input).topic.id,'paper0');
- assert.deepEqual(Object.keys(JSON.parse(calls[3].body.input)),['headline','angles']);
- assert.deepEqual(JSON.parse(calls[3].body.input).angles.map(a=>a.headline),Array(3).fill(exploration.candidates[0].headline));
+ assert.deepEqual(Object.keys(JSON.parse(calls[3].body.input)),['headline','summary','angles']);
+ assert.deepEqual(JSON.parse(calls[4].body.input).angles.map(a=>a.headline),Array(3).fill(exploration.candidates[0].headline));
  assert.equal(result.exploredCandidates.length,5);assert.equal(result.candidates.length,3);
- assert.equal(result.title,angles.candidates[0].title);assert.match(calls[4].body.prompt,/No gray fills/);
- assert.match(calls[4].body.prompt,/at most ONE/);
- assert.match(calls[4].body.prompt,/8% of the image height/);
- for(const name of ['Georges Bigot','Charles Wirgman','Charles Keene'])assert.ok(calls[4].body.prompt.includes(name));
- assert.ok(!calls[4].body.prompt.includes(angles.candidates[0].title));
- assert.match(calls[4].body.prompt,/Do not write any Japanese characters/);
- await generate({root,env:{},fetchImpl});assert.equal(calls.length,5);
+ assert.equal(result.title,angles.candidates[0].title);assert.match(calls[5].body.prompt,/No gray fills/);
+ assert.match(calls[5].body.prompt,/at most ONE/);
+ assert.match(calls[5].body.prompt,/8% of the image height/);
+ for(const name of ['Georges Bigot','Charles Wirgman','Charles Keene'])assert.ok(calls[5].body.prompt.includes(name));
+ assert.ok(!calls[5].body.prompt.includes(angles.candidates[0].title));
+ assert.match(calls[5].body.prompt,/Do not write any Japanese characters/);
+ await generate({root,env:{},fetchImpl});assert.equal(calls.length,6);
  const manifestPath=path.join(root,'editorial-cartoon.json');
  const priorSelection=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
  priorSelection.selectionVersion='frozen-normal-paper-edition-v3';
  fs.writeFileSync(manifestPath,JSON.stringify(priorSelection));
  await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(calls.length,10,'A new editorial rule must reselect and reconsider three angles');
+ assert.equal(calls.length,12,'A new editorial rule must reselect and reconsider three angles');
  const old=JSON.parse(fs.readFileSync(manifestPath,'utf8'));old.designVersion='previous-drawing-style';
  fs.writeFileSync(manifestPath,JSON.stringify(old));
- await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});assert.equal(calls.length,11);
+ await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});assert.equal(calls.length,13);
 });
 test('failed image generation preserves previous publication; absent key makes no request',async t=>{
  const root=fixture(t);fs.writeFileSync(path.join(root,'editorial-cartoon.json'),'OLD');fs.writeFileSync(path.join(root,'editorial-cartoon.png'),'OLD_IMAGE');
@@ -116,6 +117,14 @@ test('irony wins over news order; speculative or merely grave ideas are excluded
  assert.throws(()=>rankCandidates(exploration.candidates,invalid,news),/duplicate/);
  scores[2].grounding=1;assert.throws(()=>rankCandidates(exploration.candidates,scores,news),/Fewer than three/);
 });
+test('factual irony breaks a topic score tie before article order',()=>{
+ const scores=structuredClone(evaluations);
+ scores.forEach(e=>{e.inherentIrony=3;e.contradiction=4});
+ scores[2].inherentIrony=5;
+ assert.equal(rankCandidates(exploration.candidates,scores,news)[0].headline,exploration.candidates[2].headline);
+ scores[2].inherentIrony=3;
+ assert.equal(rankCandidates(exploration.candidates,scores,news)[0].headline,[...exploration.candidates.map(c=>c.headline)].sort((a,b)=>a.localeCompare(b,'ja'))[0]);
+});
 test('comparison failure never requests an image or changes saved publication',async t=>{
  const root=fixture(t);fs.writeFileSync(path.join(root,'editorial-cartoon.json'),'OLD');fs.writeFileSync(path.join(root,'editorial-cartoon.png'),'OLD_IMAGE');
  let calls=0;
@@ -135,8 +144,8 @@ test('drawing prompt never receives the Japanese caption and a rule correction r
  original.designVersion='square-minimal-lettering-v1';
  fs.writeFileSync(path.join(root,'editorial-cartoon.json'),JSON.stringify(original));
  const corrected=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(calls.length,6);
- assert.ok(calls[5].url.endsWith('/images/generations'));
+ assert.equal(calls.length,7);
+ assert.ok(calls[6].url.endsWith('/images/generations'));
  assert.equal(corrected.candidates[0].headline,original.candidates[0].headline);
  assert.equal(corrected.designVersion,DESIGN_VERSION);
  assert.ok(!imagePrompt(corrected.candidates[0]).includes(corrected.title));
@@ -181,6 +190,40 @@ test('the chosen topic stays fixed while three distinct angles are evaluated',()
  const literal=structuredClone(angleEvaluations);literal.forEach(e=>{e.literalReenactment=true;e.visualSurprise=5});
  assert.throws(()=>rankAngles(angles.candidates,literal,chosen,news),/No grounded visual turn/);
 });
+test('factual audit rejects invented causation before visual scoring',()=>{
+ const headline=angles.candidates[0].headline;
+ const reviews=structuredClone(audits.audits);
+ reviews[0].claims=[{claim:'One event caused the other',evidenceQuote:headline,supported:false}];
+ reviews[0].grounded=false;reviews[0].unsupportedClaims=['Only concurrent events were reported'];
+ assert.deepEqual(auditAngles(angles.candidates.map((a,i)=>({...a,angleId:`A${i+1}`})),reviews,headline),['A2','A3']);
+ const bad=structuredClone(reviews);bad[1].claims[0].evidenceQuote='Invented quotation';
+ assert.throws(()=>auditAngles(angles.candidates.map((a,i)=>({...a,angleId:`A${i+1}`})),bad,headline),/outside this article/);
+});
+test('all three audited failures restart with the next fixed topic, then compare only approved angles',async t=>{
+ const root=fixture(t),calls=[];
+ const fetchImpl=async(url,options)=>{
+  const body=JSON.parse(options.body);calls.push({url,body});
+  if(url.endsWith('/images/generations'))return {ok:true,json:async()=>({data:[{b64_json:png().toString('base64')}]})};
+  const name=body.text.format.name,selected=JSON.parse(body.input).topic?.headline;
+  let output;
+  if(name==='cartoon_angles'){
+   output=JSON.stringify({candidates:angles.candidates.map(a=>({...a,headline:selected,evidence:selected}))});
+  }else if(name==='cartoon_fact_audit'){
+   const {headline}=JSON.parse(body.input),first=headline===exploration.candidates[0].headline;
+   output=JSON.stringify({audits:audits.audits.map((a,i)=>({...a,claims:[{claim:'Claim under review',evidenceQuote:headline,supported:!first||i===2}],grounded:!first,unsupportedClaims:first?['Unreported causal premise']:[]}))});
+   // The first topic has no passing angle, regardless of the quoted article text.
+   if(first){const parsed=JSON.parse(output);parsed.audits.forEach(a=>a.claims[0].supported=false);output=JSON.stringify(parsed);}
+  }else output=responseText(body);
+  return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:output}]}]})};
+ };
+ const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ assert.equal(result.attemptedTopics.length,2);
+ assert.equal(result.attemptedTopics[0].eligibleIds.length,0);
+ assert.equal(result.sourceHeadline,exploration.candidates[1].headline);
+ assert.deepEqual(calls.map(c=>c.body.text?.format.name||'image'),['cartoon_exploration','cartoon_comparison','cartoon_angles','cartoon_fact_audit','cartoon_angles','cartoon_fact_audit','cartoon_angle_comparison','image']);
+ assert.equal(JSON.parse(calls[4].body.input).topic.headline,result.sourceHeadline);
+ assert.deepEqual(Object.keys(JSON.parse(calls[4].body.input)),['topic','recentTitles']);
+});
 
 test('a language error retries only the three-angle stage for the same fixed topic',async t=>{
  const root=fixture(t),calls=[];
@@ -195,12 +238,13 @@ test('a language error retries only the three-angle stage for the same fixed top
   return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:output}]}]})};
  };
  const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(angleAttempts,2);assert.equal(calls.length,6);
+ assert.equal(angleAttempts,2);assert.equal(calls.length,7);
  assert.deepEqual(JSON.parse(calls[2].body.input),JSON.parse(calls[3].body.input));
  assert.deepEqual(Object.keys(JSON.parse(calls[3].body.input)),['topic','recentTitles']);
  assert.match(calls[3].body.instructions,/previous attempt failed validation/);
  assert.equal(result.sourceHeadline,JSON.parse(calls[3].body.input).topic.headline);
- assert.equal(calls[4].body.text.format.name,'cartoon_angle_comparison');
+ assert.equal(calls[4].body.text.format.name,'cartoon_fact_audit');
+ assert.equal(calls[5].body.text.format.name,'cartoon_angle_comparison');
 });
 
 test('repeated three-angle errors stop before drawing and preserve the saved edition',async t=>{
@@ -241,8 +285,8 @@ test('text token exhaustion gets one larger-budget retry before any image reques
   return {ok:true,json:async()=>url.endsWith('/responses')?{status:'completed',output:[{content:[{type:'output_text',text:responseText(body)}]}]}:{data:[{b64_json:png().toString('base64')}]}};
  };
  await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
- assert.equal(calls.length,6);
+ assert.equal(calls.length,7);
  assert.equal(calls[1].body.max_output_tokens,calls[0].body.max_output_tokens*2);
- assert.ok(calls[5].url.endsWith('/images/generations'));
+ assert.ok(calls[6].url.endsWith('/images/generations'));
 });
 
