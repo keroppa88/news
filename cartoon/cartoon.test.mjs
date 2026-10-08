@@ -182,6 +182,44 @@ test('the chosen topic stays fixed while three distinct angles are evaluated',()
  assert.throws(()=>rankAngles(angles.candidates,literal,chosen,news),/No grounded visual turn/);
 });
 
+test('a language error retries only the three-angle stage for the same fixed topic',async t=>{
+ const root=fixture(t),calls=[];
+ let angleAttempts=0;
+ const fetchImpl=async(url,options)=>{
+  const body=JSON.parse(options.body);calls.push({url,body});
+  if(url.endsWith('/images/generations'))return {ok:true,json:async()=>({data:[{b64_json:png().toString('base64')}]})};
+  let output=responseText(body);
+  if(body.text.format.name==='cartoon_angles'&&++angleAttempts===1){
+   const invalid=structuredClone(angles);invalid.candidates[0].scene='日本語が混じる場面';output=JSON.stringify(invalid);
+  }
+  return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:output}]}]})};
+ };
+ const result=await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ assert.equal(angleAttempts,2);assert.equal(calls.length,6);
+ assert.deepEqual(JSON.parse(calls[2].body.input),JSON.parse(calls[3].body.input));
+ assert.deepEqual(Object.keys(JSON.parse(calls[3].body.input)),['topic','recentTitles']);
+ assert.match(calls[3].body.instructions,/previous attempt failed validation/);
+ assert.equal(result.sourceHeadline,JSON.parse(calls[3].body.input).topic.headline);
+ assert.equal(calls[4].body.text.format.name,'cartoon_angle_comparison');
+});
+
+test('repeated three-angle errors stop before drawing and preserve the saved edition',async t=>{
+ const root=fixture(t),calls=[];
+ fs.writeFileSync(path.join(root,'editorial-cartoon.json'),'OLD');
+ fs.writeFileSync(path.join(root,'editorial-cartoon.png'),'OLD_IMAGE');
+ const invalid=structuredClone(angles);invalid.candidates[0].scene='日本語が混じる場面';
+ const fetchImpl=async(url,options)=>{
+  assert.ok(url.endsWith('/responses'));
+  const body=JSON.parse(options.body);calls.push(body);
+  const output=body.text.format.name==='cartoon_angles'?JSON.stringify(invalid):responseText(body);
+  return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:output}]}]})};
+ };
+ await assert.rejects(generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl}),/Three-angle exploration failed after corrections/);
+ assert.equal(calls.length,5);assert.deepEqual(calls.slice(2).map(c=>JSON.parse(c.input).topic),Array(3).fill(JSON.parse(calls[2].input).topic));
+ assert.equal(fs.readFileSync(path.join(root,'editorial-cartoon.json'),'utf8'),'OLD');
+ assert.equal(fs.readFileSync(path.join(root,'editorial-cartoon.png'),'utf8'),'OLD_IMAGE');
+});
+
 test('topics must appear in both rendered editions; hidden paper articles and duplicate topics are excluded',()=>{
  const visible=news.map((section,i)=>({id:'paper'+i,title:'story '+i,sources:[{title:'story '+i,date:'2026-10-05'}]}));
  const paper={important:visible,others:[]},html=text;

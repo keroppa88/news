@@ -208,14 +208,23 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   angleSchema.properties.candidates.items.properties.headline.enum=[selectedTopic.headline];
   angleSchema.properties.candidates.items.required.push('mechanism');
   angleSchema.properties.candidates.items.properties.mechanism={type:'string',enum:VISUAL_MECHANISMS};
-  const angleResponse=await textApi({
+  const angleRequest={
    model:textModel,store:false,max_output_tokens:8000,
-   instructions:'The topic has already been chosen. Keep its exact headline. Reconsider its satirical angle FROM SCRATCH and propose exactly THREE genuinely different visual turns. Use three DIFFERENT mechanism values from the supplied enum, choosing whichever fit this particular story. Do not merely rewrite the provisional scene from the topic exploration. For each give a short Japanese title, an English angle and drawable scene, the precise visualTurn IN ENGLISH, contradiction, Japanese reason, exact headline evidence, assumptions as the empty string, and necessary lettering (empty if none). The visual turn must happen in the drawing, not only in the explanation. Do not turn an allegation into a finding of guilt. '+editorialRubric,
+   instructions:'The topic has already been chosen. Keep its exact headline. Reconsider its satirical angle FROM SCRATCH and propose exactly THREE genuinely different visual turns. Use three DIFFERENT mechanism values from the supplied enum, choosing whichever fit this particular story. Do not merely rewrite the provisional scene from the topic exploration. Field languages are mandatory: angle, scene, visualTurn and contradiction use English only; headline and evidence copy the Japanese source verbatim; title and reason use Japanese. The English fields must contain no kanji or kana. The drawing prompt uses these English fields directly. The precise visual turn must happen in the drawing, not only in the explanation. Set assumptions to the empty string and lettering to empty unless truly needed. Do not turn an allegation into a finding of guilt. '+editorialRubric,
    input:JSON.stringify({topic:{id:paperStoryFor(selectedTopic.headline,newspaper,newsDate).id,headline:selectedTopic.headline},recentTitles}),text:{format:{type:'json_schema',name:'cartoon_angles',strict:true,schema:angleSchema}}
-  },env.OPENAI_API_KEY,fetchImpl);
-  if(angleResponse.status!=='completed')throw Error('Three-angle exploration did not complete');
-  const angleText=(angleResponse.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
-  angleCandidates=validateAngles(JSON.parse(angleText).candidates,selectedTopic.headline,news);
+  };
+  let angleFailure;
+  for(let attempt=1;attempt<=3;attempt++){
+   const request={...angleRequest,instructions:angleRequest.instructions+(angleFailure?` Your previous attempt failed validation: ${angleFailure.message}. Correct the three angles for the SAME fixed headline. Preserve the required field languages and source evidence. Do not switch the topic.`:'')};
+   const angleResponse=await textApi(request,env.OPENAI_API_KEY,fetchImpl);
+   if(angleResponse.status!=='completed')throw Error('Three-angle exploration did not complete');
+   try{
+    const angleText=(angleResponse.output||[]).flatMap(o=>o.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('');
+    angleCandidates=validateAngles(JSON.parse(angleText).candidates,selectedTopic.headline,news);
+    angleFailure=null;break;
+   }catch(error){angleFailure=error;console.log(`Stage 3 validation attempt ${attempt}: ${error.message}`);}
+  }
+  if(angleFailure)throw Error('Three-angle exploration failed after corrections: '+angleFailure.message);
   console.log('Stage 3: three distinct angles for the fixed topic validated');
   // Stage 4: evaluate those three scenes independently. An attractive topic does not excuse a literal drawing.
   const angleEvaluationSchema=structuredClone(evaluationSchema);
