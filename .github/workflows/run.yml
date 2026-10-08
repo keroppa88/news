@@ -159,7 +159,6 @@ jobs:
         run: python3 generate_wordcloud.py
 
       - name: Generate Web Page
-        if: github.event_name != 'push'
         run: node web/format.js
 
       - name: Add newspaper navigation
@@ -174,9 +173,7 @@ jobs:
         continue-on-error: true
 
       - name: Freeze confirmed normal edition
-        run: |
-          node newspaper/prepare-edition.mjs
-          node cartoon/publish.mjs
+        run: node newspaper/prepare-edition.mjs
 
       # Stage 1 is complete before stage 2. An illustration failure never rewrites either edition.
       - name: Save news and normal web page
