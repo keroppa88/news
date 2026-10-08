@@ -49,9 +49,13 @@ jobs:
       - name: Test editorial cartoon pipeline
         run: node --test cartoon/cartoon.test.mjs
 
+      - name: Install paper verification dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
       - name: Select three ideas and draw the top candidate
         id: generation
-        continue-on-error: true
         run: node cartoon/generate.mjs
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -63,6 +67,11 @@ jobs:
 
       - name: Add half-width cartoon at bottom of normal edition
         run: node cartoon/publish.mjs
+
+      - name: Verify paper after adding the cartoon
+        run: |
+          node cartoon/verify-publication.mjs
+          node newspaper/paper-layout.test.mjs
 
       - name: Save and publish cartoon
         id: saved
@@ -76,6 +85,8 @@ jobs:
           git restore index.html
           git fetch origin main
           git rebase origin/main
+          node newspaper/verify-edition.mjs
+          node cartoon/verify-publication.mjs
           node cartoon/publish.mjs
           git add index.html
           if ! git diff --cached --quiet; then git commit -m 'Place cartoon on latest normal page'; fi
@@ -87,7 +98,7 @@ jobs:
         if: steps.saved.outputs.ready == 'true'
         run: |
           mkdir -p _cartoon_site
-          cp index.html paper-newspaper.html print.html config.json market.json _cartoon_site/
+          cp index.html paper-newspaper.html print.html config.json market.json news-edition.json _cartoon_site/
           cp -R assets _cartoon_site/
           for file in wordcloud.jpg newspaper.json ycomment.json editorial-cartoon.png editorial-cartoon.json; do
             if [ -f "$file" ]; then cp "$file" _cartoon_site/; fi
@@ -108,3 +119,4 @@ jobs:
         run: |
           echo 'Cartoon generation failed. Existing news and the last successful cartoon are preserved.'
           exit 1
+

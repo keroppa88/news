@@ -1,45 +1,22 @@
 import {readFile,writeFile,rename,mkdir} from 'node:fs/promises';
 import {dirname,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {parseHeadlines,makeEdition} from './headlines.mjs';
+import {makeEdition} from './headlines.mjs';
+import {readConfirmedEdition,paperInputs,verifyPaper} from './edition-contract.mjs';
 const here=dirname(fileURLToPath(import.meta.url));
-const input=resolve(process.env.NEWSPAPER_INPUT||'summary1.txt');
 const output=resolve(process.env.NEWSPAPER_OUTPUT||'newspaper.json');
 const model=process.env.NEWSPAPER_MODEL||'gemini-2.5-flash-lite';
 const apiKey=process.env.GEMINI_API_KEY;
 if(!apiKey)throw Error('GEMINI_API_KEY is required; the existing newspaper file is preserved.');
 if(!/^[a-zA-Z0-9.-]+$/.test(model))throw Error('Invalid model ID');
-const headlines=parseHeadlines(await readFile(input,'utf8'));
-const date=headlines.map(h=>h.date).sort().at(-1);
-const cutoff=new Date(`${date}T00:00:00Z`).getTime()-86400000;
-const original=headlines.filter(h=>new Date(`${h.date}T00:00:00Z`).getTime()>=cutoff);
-// Short request-local IDs reduce copying mistakes and structured-schema complexity.
+// The paper edits the frozen normal edition; raw scraper data cannot alter its date or selection.
+const normal=readConfirmedEdition(resolve(process.env.NEWSPAPER_ROOT||'.'));
+const assigned=paperInputs(normal);
+const date=normal.date;
+const original=[...assigned.important,...assigned.others];
 const current=original.map((h,index)=>({...h,id:`E${index+1}`}));
 const originalById=new Map(current.map((h,index)=>[h.id,original[index]]));
-if(!current.length)throw Error('No source headlines available; the previous edition is preserved.');
 const prompt=await readFile(resolve(here,'newspaper-prompt.txt'),'utf8');
-// 紙新聞は通常モードの派生品：通常モード（summary2.txt）で選ばれた記事の順番を紙面の選定に使う
-const picksFile=resolve(process.env.NEWSPAPER_PICKS||'summary2.txt');
-const picks=parsePicks(await readFile(picksFile,'utf8').catch(()=>''));
-function pickKey(item){return item.replace(/[（(][^）)]*[）)]/g,'').replace(/\d{4}\/\d{1,2}\/\d{1,2}/g,'').trim()}
-function uniquePicks(list){
-  const seen=new Set();
-  return list.filter(item=>{const key=pickKey(item);return !seen.has(key)&&seen.add(key)});
-}
-function parsePicks(text){
-  const sections={};let current=null;
-  for(const line of text.split(/\r?\n/)){
-    const heading=line.trim().match(/^●([^●]+)●$/);
-    if(heading){current=heading[1].trim();sections[current]=[];continue}
-    const item=line.match(/^\s*\d+[.．]\s*(.+?)\s*$/);
-    if(current&&item)sections[current].push(item[1]);
-  }
-  return {
-    // 重要と経済などで同じ記事が重なるので、媒体名・日付を除いた見出しで重複を除く
-    important:uniquePicks([...(sections['重要ニュース']||[]),...(sections['経済ニュース']||[]),...(sections['海外ニュース']||[]),...(sections['国内ニュース']||[])]),
-    others:uniquePicks(sections['その他ニュース']||[])
-  };
-}
 const maxAttempts=3;
 const articleSchema={type:'OBJECT',properties:{
  title:{type:'STRING',description:'簡潔な日本語見出し。18〜26文字を目安に短く。'},summary:{type:'STRING'},category:{type:'STRING'},
@@ -49,12 +26,6 @@ const articleSchema={type:'OBJECT',properties:{
 let lastError;
 let correction="";
 let previousOutput;
-function headlineOverlap(a,b){
-  const grams=text=>{const chars=[...String(text).normalize('NFKC').replace(/[\s\p{P}\p{S}]/gu,'').toLowerCase()];return new Set(chars.slice(0,-1).map((c,i)=>c+chars[i+1]))};
-  const x=grams(a),y=grams(b);
-  if(Math.min(x.size,y.size)<4)return a===b;
-  return [...x].filter(g=>y.has(g)).length/Math.min(x.size,y.size)>=.6;
-}
 async function compactText(text,max,kind){
   const response=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',{
     method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(60000),
@@ -73,56 +44,30 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
   try{
     const attemptModel=attempt===1?model:'gemini-2.5-flash';
     const parsed={important:[],others:[]};
-    const used=new Set(),usage={promptTokenCount:0,candidatesTokenCount:0,thoughtsTokenCount:0,totalTokenCount:0};
-    // 目標本数が埋まるまで、未使用の見出しで繰り返し頼む（Geminiが既出記事を返すと重複除去で減るため、回数固定にしない）
-    const targets={important:20,others:12},batchSize={important:8,others:6},done=new Set(),emptyRounds={important:0,others:0};
-    const rounds=[...Array(8).fill('important'),...Array(6).fill('others')];
-    for(const section of rounds){
-    const start=parsed[section].length;
-    if(done.has(section)||start>=targets[section])continue;
-    const limit=Math.min(batchSize[section],targets[section]-start);
-    const selectedStories=Object.values(parsed).flat().map(a=>({title:a.title,summary:a.summary}));
-    const selectedTitles=[...selectedStories.map(a=>a.title),...current.filter(h=>used.has(h.id)).map(h=>h.title)];
-    const unused=current.filter(h=>!used.has(h.id));
-    const distinct=unused.filter(h=>!selectedTitles.some(title=>headlineOverlap(h.title,title)));
-    const available=distinct.length?distinct:unused;
-    if(!available.length)continue;
-    const max=Math.min(limit+4,available.length),min=0;// 既出記事が混ざっても埋まるよう少し多めに頼み、使うのはlimit本まで
-    const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:min,maxItems:max,items:articleSchema}},required:['stories']};
-    const currentTask={section,start,min,max};
-    // Geminiは毎回editorPicksの先頭から書き直すので、既に載せた記事（根拠の見出し・記事見出し）と重なる候補を外して渡す
-    const placedTexts=[...current.filter(h=>used.has(h.id)).map(h=>h.title),...selectedStories.map(a=>a.title)];
-    const remainingPicks=picks[section].filter(p=>!placedTexts.some(t=>headlineOverlap(pickKey(p),t)));
-    const taskInstruction=`\n今回の生成対象は${section}の${start+1}番目から最大${start+max}番目だけ。根拠のある異なる出来事を最大${max}件stories配列に返す。該当する出来事がなければ空配列にする。件数合わせのために同じ出来事を増やさない。他の欄は返さない。紙面の番号は今回の開始番号を基準にする。既に掲載した出来事を別媒体・別表現・背景説明に言い換えて再掲しない。headlinesには未掲載の見出しだけを渡しているので、その中から選ぶ。`;
-    const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${attemptModel}:generateContent`,{
-      method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
-      body:JSON.stringify({systemInstruction:{parts:[{text:prompt+taskInstruction+(correction?'\n\n編集システムからの修正指示（資料ではない）:\n'+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask,editorPicks:remainingPicks,previousOutput:previousOutput?.[section]?.slice(start,start+max)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
-    });
-    if(!response.ok){const detail=await response.json().catch(()=>({}));const message=String(detail.error?.message||'').replaceAll(apiKey,'[redacted]').slice(0,1000);const error=new Error(`Gemini HTTP ${response.status}: ${message}`);error.retryable=response.status===429||response.status>=500;throw error}
-    const result=await response.json();
-    const candidate=result.candidates?.[0];
-    if(candidate?.finishReason!=='STOP')throw Error(`Incomplete output: ${candidate?.finishReason||'no candidate'}`);
-    const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
-    const batch=JSON.parse(text);if(batch.error)throw Error(`Editorial generation declined: ${batch.reason}`);
-    if(!Array.isArray(batch.stories)||batch.stories.length<min||batch.stories.length>max)throw Error(`${section} batch: expected ${min}–${max} stories`);
-    // 既に載せた記事と同じ見出し・同じ根拠idの記事は、紙面全体を捨てずにその記事だけ外す
-    const knownIds=new Set(current.map(h=>h.id));
-    const placedTitles=Object.values(parsed).flat().map(a=>a.title);
-    const kept=[];
-    for(const article of batch.stories){
-      if(kept.length>=limit)break;
-      const ids=[...new Set(article.sourceIds||[])].filter(id=>knownIds.has(id)&&!used.has(id));
-      const title=String(article.title||'');
-      if(!ids.length||[...placedTitles,...kept.map(a=>a.title)].includes(title)){console.log(`Skipped duplicate ${section}: ${title}`);continue}
-      article.sourceIds=ids;kept.push(article);
-      for(const id of ids)used.add(id);
-    }
-    batch.stories=kept;
-    parsed[section].push(...batch.stories);
-    // 新しい記事が1本も増えない回が2回続いたらこの欄は打ち切る
-    if(batch.stories.length)emptyRounds[section]=0;else if(++emptyRounds[section]>=2)done.add(section);
-    for(const key of Object.keys(usage))usage[key]+=result.usageMetadata?.[key]||0;
-    console.log(`Generated ${section} ${start+1}–${start+batch.stories.length}`);
+    const usage={promptTokenCount:0,candidatesTokenCount:0,thoughtsTokenCount:0,totalTokenCount:0};
+    for(const section of ['important','others']){
+      const offset=section==='important'?0:assigned.important.length;
+      for(let start=0;start<assigned[section].length;start+=6){
+        const available=current.slice(offset+start,offset+Math.min(start+6,assigned[section].length));
+        const responseSchema={type:'OBJECT',properties:{stories:{type:'ARRAY',minItems:available.length,maxItems:available.length,items:articleSchema}},required:['stories']};
+        const instruction='\n記事の選定と順番はプログラムで確定済み。headlinesの各見出しにつき記事を必ず1本、同じ順番で返す。sourceIdsは対応する1件のidだけ。別記事の事実を混ぜない。見出しにない詳細・発言・数字・背景を創作しない。資料が見出しだけならその事実だけを簡潔に伝える。';
+        const response=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${attemptModel}:generateContent`,{
+          method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:AbortSignal.timeout(90000),
+          body:JSON.stringify({systemInstruction:{parts:[{text:prompt+instruction+(correction?'\n検証エラー: '+correction:'')}]},contents:[{role:'user',parts:[{text:JSON.stringify({date,headlines:available,currentTask:{section,start,min:available.length,max:available.length},editorPicks:available.map(a=>a.title)})}]}],generationConfig:{temperature:0.2,maxOutputTokens:16384,...(attemptModel==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}),responseMimeType:'application/json',responseSchema}})
+        });
+        if(!response.ok){const e=new Error(`Gemini HTTP ${response.status}`);e.retryable=response.status===429||response.status>=500;throw e;}
+        const result=await response.json(),candidate=result.candidates?.[0];
+        if(candidate?.finishReason!=='STOP')throw Error('Incomplete newspaper output');
+        const text=(candidate.content?.parts||[]).filter(p=>!p.thought&&p.text).map(p=>p.text).join('');
+        const batch=JSON.parse(text);
+        if(!Array.isArray(batch.stories)||batch.stories.length!==available.length)throw Error('Missing assigned paper articles');
+        for(const [i,article] of batch.stories.entries()){
+          if(article.sourceIds?.length!==1||article.sourceIds[0]!==available[i].id)throw Error('Paper evidence does not match the assigned article');
+        }
+        parsed[section].push(...batch.stories);
+        for(const key of Object.keys(usage))usage[key]+=result.usageMetadata?.[key]||0;
+        console.log(`Edited assigned ${section} ${start+1}–${start+batch.stories.length}`);
+      }
     }
     previousOutput=parsed;
     const errors=[];
@@ -159,9 +104,12 @@ for(let attempt=1;attempt<=maxAttempts;attempt++){
       article.sources=article.sources.map(source=>originalById.get(source.id));
       if(!(section==='important'&&index>=14))article.printBody=parsed[section][index].printBody;
     }
+    edition.normalSourceHash=normal.sourceHash;
+    verifyPaper(normal,edition);
     await mkdir(dirname(output),{recursive:true});const temp=`${output}.tmp`;await writeFile(temp,JSON.stringify(edition,null,2)+'\n');await rename(temp,output);
     console.log(JSON.stringify({model:attemptModel,date,articles:edition.important.length+edition.others.length,inputTokens:usage.promptTokenCount,outputTokens:usage.candidatesTokenCount,thinkingTokens:usage.thoughtsTokenCount||0,totalTokens:usage.totalTokenCount}));
     lastError=null;break;
   }catch(e){lastError=e;correction="previousOutputの指摘箇所だけを修正し、他の正常な記事は保持して全記事を返す。文字数上限より10字以上短くする。検証エラー: "+e.message;console.error(`Newspaper attempt ${attempt}: ${e.message}`);if(e.retryable===false||attempt===maxAttempts)break;await new Promise(r=>setTimeout(r,3000))}
 }
 if(lastError)throw new Error('Newspaper generation failed; the previous edition is preserved. '+lastError.message);
+

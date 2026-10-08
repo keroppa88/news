@@ -1,6 +1,8 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-const required=['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition'];
+import {readConfirmedEdition,verifyPaper} from '../newspaper/edition-contract.mjs';
+import fs from 'node:fs';
+const required=['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition','Verify generated paper edition'];
 export async function verifyEdition({env=process.env,fetchImpl=fetch}={}){
   const headers={Authorization:`Bearer ${env.GITHUB_TOKEN}`,Accept:'application/vnd.github+json'};
   const get=async suffix=>{const r=await fetchImpl(`https://api.github.com/repos/${env.GITHUB_REPOSITORY}/actions/${suffix}`,{headers});if(!r.ok)throw Error(`Cannot verify edition: HTTP ${r.status}`);return r.json();};
@@ -19,4 +21,5 @@ export async function verifyEdition({env=process.env,fetchImpl=fetch}={}){
   }
   throw Error('Cartoon skipped: no verified successful normal and paper edition');
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))await verifyEdition();
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){verifyPaper(readConfirmedEdition('.'),JSON.parse(fs.readFileSync('newspaper.json','utf8')));await verifyEdition();}
+

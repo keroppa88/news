@@ -5,11 +5,24 @@ import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {spawnSync} from 'node:child_process';
+import {normalEdition,paperInputs,verifyPaper,sourceHash,cartoonMatches} from './edition-contract.mjs';
 import {parseHeadlines,makeEdition} from './headlines.mjs';
 
 const headlines=Array.from({length:32},(_,i)=>({id:`id${i}`,title:`根拠となる記事見出し${i}`,media:'媒体',date:'2026-09-18'}));
 const article=i=>({title:`検証用の記事見出し${i}`,summary:'提供された見出しに含まれる事実のみを短く伝える。',category:'社会',sourceIds:[`id${i}`]});
 const edition=()=>({important:Array.from({length:20},(_,i)=>article(i)),others:Array.from({length:12},(_,i)=>article(20+i))});
+
+test('same-day edits invalidate old illustrations and a future date cannot define the normal edition',()=>{
+  const text=['重要ニュース','経済ニュース','国内ニュース','海外ニュース','その他ニュース'].map((s,i)=>`●${s}●\n1. 本日確定した記事見出し${i}（媒体）2026/10/08`).join('\n');
+  const normal=normalEdition(text,{now:new Date('2026-10-08T04:00:00Z')}),inputs=paperInputs(normal);
+  const paper={date:normal.date,sourceUpdatedAt:normal.date,normalSourceHash:normal.sourceHash,...Object.fromEntries(Object.entries(inputs).map(([s,items])=>[s,items.map(a=>({id:a.id,sources:[a]}))]))};
+  const cartoon={date:normal.date,normalSourceHash:normal.sourceHash,paperSourceHash:sourceHash(JSON.stringify(paper)),paperArticleId:paper.important[0].id};
+  assert.equal(cartoonMatches(normal,paper,cartoon),true);
+  assert.equal(cartoonMatches(normal,paper,{...cartoon,date:'2026-10-07'}),false);
+  assert.equal(cartoonMatches(normal,paper,{...cartoon,normalSourceHash:'earlier same-day edition'}),false);
+  assert.equal(cartoonMatches(normal,{...paper,generatedAt:'new revision'},cartoon),false);
+  assert.throws(()=>normalEdition(text.replace('2026/10/08','2026/10/12'),{now:new Date('2026-10-08T04:00:00Z')}),/Future date/);
+});
 
 test('section media and inline media are parsed',()=>{
   assert.equal(parseHeadlines('●●媒体●●\n- 根拠となる記事見出し (2026/9/18)\n- 別のニュース見出し（別媒体）2026/9/18').length,2);
@@ -40,8 +53,13 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
   const dir=await mkdtemp(join(tmpdir(),'newspaper-test-'));
   try{
     const input=join(dir,'input.txt'),output=join(dir,'newspaper.json');
-    await writeFile(input,headlines.map((h,i)=>`- 根拠となる記事見出し${i}（媒体）2026/9/18`).join('\n'));
-    const sources=parseHeadlines(await readFile(input,'utf8'));
+    const groups={'重要ニュース':[0,10],'経済ニュース':[10,18],'海外ニュース':[18,19],'国内ニュース':[19,20],'その他ニュース':[20,32]};
+    const confirmed=Object.entries(groups).map(([s,[a,b]])=>'●'+s+'●\n'+headlines.slice(a,b).map((h,i)=>`${i+1}. ${h.title}（媒体）2026/9/18`).join('\n')).join('\n');
+    await writeFile(join(dir,'summary2.txt'),confirmed);
+    const normal=normalEdition(confirmed);
+    await writeFile(join(dir,'news-edition.json'),JSON.stringify(normal));
+    const assigned=paperInputs(normal),sources=[...assigned.important,...assigned.others];
+    await writeFile(input,'ニコニコアニメ 2026/10/12');
     const data=edition();
     [...data.important,...data.others].forEach((a,i)=>{a.sourceIds=[`E${i+1}`];a.printBody={oneLine:a.summary,twoLines:a.summary,shortfallReason:''}});
     const run=(failEdits=false,sourceCount=32)=>spawnSync(process.execPath,['--input-type=module','-e',`
@@ -59,7 +77,7 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
         return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({stories:data[section].slice(start,start+max)})}]}}]})};
       };
       await import(${JSON.stringify(pathToFileURL(resolve('newspaper/generate-newspaper.mjs')).href)});
-    `],{encoding:'utf8',env:{...process.env,GEMINI_API_KEY:'test-only',NEWSPAPER_INPUT:input,NEWSPAPER_OUTPUT:output}});
+    `],{encoding:'utf8',env:{...process.env,GEMINI_API_KEY:'test-only',NEWSPAPER_ROOT:dir,NEWSPAPER_INPUT:input,NEWSPAPER_OUTPUT:output}});
     const success=run();assert.equal(success.status,0,success.stderr);
     let saved=await readFile(output,'utf8');
     assert.equal(JSON.parse(saved).important.length,20);
@@ -77,10 +95,10 @@ test('generator accepts concise bodies, edits oversized text, and preserves data
     assert.ok(JSON.parse(saved).important[0].printBody.oneLine.length<=280);
     const failure=run(true);assert.notEqual(failure.status,0);assert.match(failure.stderr,/Text editing HTTP 500/);
     assert.equal(await readFile(output,'utf8'),saved);
-    await writeFile(input,headlines.slice(0,5).map((h,i)=>`- 根拠となる記事見出し${i}（媒体）2026/9/18`).join('\n'));
-    const shortEdition=run(false,5);assert.equal(shortEdition.status,0,shortEdition.stderr);
-    const shortData=JSON.parse(await readFile(output,'utf8'));
-    assert.equal(shortData.important.length,5);
-    assert.deepEqual(shortData.others,[]);
+    assert.equal(JSON.parse(saved).date,'2026-09-18','future raw event dates cannot change the confirmed edition');
+    const broken=JSON.parse(saved);broken.important[0].sources[0]=sources[20];
+    assert.throws(()=>verifyPaper(normal,broken),/assigned normal/);
+    broken.important.pop();assert.throws(()=>verifyPaper(normal,broken),/Incomplete/);
   }finally{await rm(dir,{recursive:true,force:true})}
 });
+

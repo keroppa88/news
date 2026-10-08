@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {readConfirmedEdition,cartoonMatches} from '../newspaper/edition-contract.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function insertCartoon(html,manifest){
@@ -16,7 +17,9 @@ export function insertCartoon(html,manifest){
 export function publish(root=ROOT){
   const file=path.join(root,'index.html');let manifest=null;
   if(fs.existsSync(path.join(root,'editorial-cartoon.json'))&&fs.existsSync(path.join(root,'editorial-cartoon.png')))manifest=JSON.parse(fs.readFileSync(path.join(root,'editorial-cartoon.json'),'utf8'));
+  if(manifest){try{const normal=readConfirmedEdition(root),paper=JSON.parse(fs.readFileSync(path.join(root,'newspaper.json'),'utf8'));if(!cartoonMatches(normal,paper,manifest))manifest=null;}catch{manifest=null;}}
   fs.writeFileSync(file,insertCartoon(fs.readFileSync(file,'utf8'),manifest));
   console.log(manifest?'Published half-width cartoon at bottom of normal page':'No cartoon available yet');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))publish();
+

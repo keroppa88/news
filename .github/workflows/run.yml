@@ -173,38 +173,40 @@ jobs:
         run: node web/add_market_strip.js --paper-only
         continue-on-error: true
 
-      # Commit the normal news update before starting the optional newspaper edition.
+      - name: Freeze confirmed normal edition
+        run: |
+          node newspaper/prepare-edition.mjs
+          node cartoon/publish.mjs
+
+      # Stage 1 is complete before stage 2. An illustration failure never rewrites either edition.
       - name: Save news and normal web page
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt index.html paper-newspaper.html wordcloud.jpg warehouse/ market.json ycomment.json
+          git add *.csv summary1.txt summary2.txt summary3.txt news-edition.json index.html paper-newspaper.html wordcloud.jpg warehouse/ market.json ycomment.json
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
           git push
 
-      - name: Verify paper cartoon layout
-        run: |
-          if [ -f editorial-cartoon.png ]; then node newspaper/paper-layout.test.mjs; fi
-        continue-on-error: true
-
       - name: Test optional newspaper generation
         id: newspaper_test
         run: node --test newspaper/newspaper.test.mjs
-        continue-on-error: true
 
       - name: Generate optional newspaper edition
         id: newspaper_generation
         if: steps.newspaper_test.outcome == 'success'
         run: node newspaper/generate-newspaper.mjs
-        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSPAPER_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}
 
+      - name: Verify generated paper edition
+        run: |
+          node newspaper/verify-edition.mjs
+          node newspaper/paper-layout.test.mjs
+
       - name: Save newspaper edition
         if: steps.newspaper_generation.outcome == 'success'
-        continue-on-error: true
         run: |
           git add newspaper.json
           git commit -m "Automated update: newspaper edition" || exit 0
@@ -214,7 +216,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
-          cp index.html paper-newspaper.html print.html config.json market.json _site/
+          cp index.html paper-newspaper.html print.html config.json market.json news-edition.json _site/
           cp wordcloud.jpg _site/ 2>/dev/null || true
           cp -R assets _site/
           if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
@@ -239,5 +241,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 

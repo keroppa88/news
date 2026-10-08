@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {readNews,validatePlan,generate,SECTIONS,rankCandidates,imagePrompt,DESIGN_VERSION,eligibleNews,paperStoryFor,publishedPaperStories,headlineKey} from './generate.mjs';
+import {normalEdition,paperInputs,sourceHash,cartoonMatches,verifyPaper} from '../newspaper/edition-contract.mjs';
 import {insertCartoon} from './publish.mjs';
 import {archiveCartoon,archiveName} from './archive.mjs';
 import {verifyEdition} from './check-edition.mjs';
@@ -15,11 +16,19 @@ const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,contra
 const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:{evaluations});
 const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(816,16);b.writeUInt32BE(816,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
- const fetchImpl=async url=>({ok:true,json:async()=>url.includes('runs?')?{workflow_runs:[1,2].map(id=>({id,name:'Daily News Update',head_branch:'main',status:'completed',conclusion:'success'}))}:{jobs:[{name:'build',steps:url.includes('/2/')?['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition'].map(name=>({name,conclusion:'success'})):[]}]} });
+ const fetchImpl=async url=>({ok:true,json:async()=>url.includes('runs?')?{workflow_runs:[1,2].map(id=>({id,name:'Daily News Update',head_branch:'main',status:'completed',conclusion:'success'}))}:{jobs:[{name:'build',steps:url.includes('/2/')?['Save news and normal web page','Generate optional newspaper edition','Save newspaper edition','Verify generated paper edition'].map(name=>({name,conclusion:'success'})):[]}]} });
  assert.equal(await verifyEdition({env:{GITHUB_REPOSITORY:'x/y'},fetchImpl}),2);
  await assert.rejects(verifyEdition({env:{GITHUB_REPOSITORY:'x/y',NEWS_RUN_ID:'1'},fetchImpl}),/no verified/);
 });
-function fixture(t){const root=fs.mkdtempSync(path.join(os.tmpdir(),'cartoon-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));for(const file of ['index.html','paper-newspaper.html'])fs.writeFileSync(path.join(root,file),'<body>'+text+'</body>');fs.writeFileSync(path.join(root,'newspaper.json'),JSON.stringify({sourceUpdatedAt:'2026-10-05',preview:false,important:news.map((s,i)=>({id:'paper'+i,title:'story '+i,sources:[{title:'story '+i, date:'2026-10-05'}]})),others:[]}));fs.writeFileSync(path.join(root,'summary2.txt'),text);return root;}
+function fixture(t){
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'cartoon-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ for(const file of ['index.html','paper-newspaper.html'])fs.writeFileSync(path.join(root,file),'<body>'+text+'</body>');
+ const normal=normalEdition(text),inputs=paperInputs(normal);
+ const paper={date:normal.date,normalSourceHash:normal.sourceHash,sourceUpdatedAt:normal.date,preview:false,...Object.fromEntries(['important','others'].map(s=>[s,inputs[s].map(a=>({id:'paper'+a.title.at(-1),title:a.title,sources:[a]}))]))};
+ fs.writeFileSync(path.join(root,'newspaper.json'),JSON.stringify(paper));
+ fs.writeFileSync(path.join(root,'news-edition.json'),JSON.stringify(normal));
+ fs.writeFileSync(path.join(root,'summary2.txt'),text);return root;
+}
 test('only the five normal sections are used; incomplete input fails',()=>{
  assert.deepEqual(news.map(s=>s.section),SECTIONS);assert.doesNotMatch(JSON.stringify(news),/IGNORE|excluded/);
  assert.throws(()=>readNews(text.replace('●その他ニュース●','●other●')),/complete/);
@@ -161,3 +170,4 @@ test('text token exhaustion gets one larger-budget retry before any image reques
  assert.equal(calls[1].body.max_output_tokens,calls[0].body.max_output_tokens*2);
  assert.ok(calls[3].url.endsWith('/images/generations'));
 });
+

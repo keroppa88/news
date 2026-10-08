@@ -3,9 +3,10 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
+import {readConfirmedEdition,verifyPaper,sourceHash as editionHash} from '../newspaper/edition-contract.mjs';
 export const SECTIONS=['重要ニュース','経済ニュース','国内ニュース','海外ニュース','その他ニュース'];
 export const IMAGE_SIZE='816x816';
-export const SELECTION_VERSION='current-both-editions-evidence-v2';
+export const SELECTION_VERSION='frozen-normal-paper-edition-v3';
 export const DESIGN_VERSION='square-no-embedded-title-v2';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function readNews(text){
@@ -112,13 +113,15 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   for(const file of ['index.html','paper-newspaper.html','newspaper.json'])if(!fs.existsSync(path.join(root,file)))throw Error(`Edition not ready: ${file}`);
   const allNews=readNews(fs.readFileSync(path.join(root,'summary2.txt'),'utf8'));
   const newspaper=JSON.parse(fs.readFileSync(path.join(root,'newspaper.json'),'utf8'));
-  const newsDate=allNews.flatMap(s=>s.articles).flatMap(s=>s.match(/\d{4}\/\d{2}\/\d{2}/g)||[]).sort().at(-1)?.replaceAll('/','-');
-  if(!newsDate||newspaper.preview||newspaper.sourceUpdatedAt!==newsDate)throw Error('Paper edition does not match the normal news date');
+  const normal=readConfirmedEdition(root);
+  verifyPaper(normal,newspaper);
+  const newsDate=normal.date;
+  const paperSourceHash=editionHash(JSON.stringify(newspaper));
   const news=eligibleNews(allNews,newsDate,newspaper,fs.readFileSync(path.join(root,'index.html'),'utf8'));
   const sourceHash=crypto.createHash('sha256').update(JSON.stringify(news)).digest('hex');
   const manifestPath=path.join(root,'editorial-cartoon.json'),imagePath=path.join(root,'editorial-cartoon.png');
   let previous;try{previous=JSON.parse(fs.readFileSync(manifestPath,'utf8'));}catch{}
-  if(previous?.sourceHash===sourceHash&&['816x816','1024x1024'].includes(previous.size)&&previous.designVersion===DESIGN_VERSION&&previous.selectionVersion===SELECTION_VERSION&&fs.existsSync(imagePath)){
+  if(previous?.normalSourceHash===normal.sourceHash&&previous?.paperSourceHash===paperSourceHash&&previous?.sourceHash===sourceHash&&['816x816','1024x1024'].includes(previous.size)&&previous.designVersion===DESIGN_VERSION&&previous.selectionVersion===SELECTION_VERSION&&fs.existsSync(imagePath)){
     verifyPng(fs.readFileSync(imagePath),previous.size);console.log('Cartoon already generated for this news; no API calls');return previous;
   }
   if(!env.OPENAI_API_KEY)throw Error('Set the repository Actions secret OPENAI_API_KEY to enable GPT cartoon generation');
@@ -127,7 +130,7 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   const recentTitles=fs.existsSync(path.join(root,'picturewarehohuse'))?fs.readdirSync(path.join(root,'picturewarehohuse')).filter(name=>name.endsWith('.png')).sort().slice(-7):[];
   const previousCartoon=previous?{title:previous.title,angle:previous.candidates?.[0]?.angle,scene:previous.candidates?.[0]?.scene}:null;
   let plan, explored, evaluations;
-  if(previous?.sourceHash===sourceHash&&previous.size===IMAGE_SIZE&&previous.designVersion!==DESIGN_VERSION&&previous.selectionVersion===SELECTION_VERSION&&previous.candidates?.length===3){
+  if(previous?.normalSourceHash===normal.sourceHash&&previous?.paperSourceHash===paperSourceHash&&previous?.sourceHash===sourceHash&&previous.size===IMAGE_SIZE&&previous.designVersion!==DESIGN_VERSION&&previous.selectionVersion===SELECTION_VERSION&&previous.candidates?.length===3){
     // A drawing-rule correction keeps today's selected subject; no repeat selection calls.
     plan=validatePlan({candidates:previous.candidates},news);
     explored=previous.exploredCandidates||previous.candidates;
@@ -166,7 +169,7 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   const image=await api('images/generations',{model:imageModel,prompt,n:1,size:IMAGE_SIZE,quality:'high',output_format:'png'},env.OPENAI_API_KEY,fetchImpl);
   if(!image.data?.[0]?.b64_json)throw Error('No generated image returned');
   const bytes=Buffer.from(image.data[0].b64_json,'base64');verifyPng(bytes);
-  const manifest={date:newsDate,sourceHash,title:plan.candidates[0].title,candidates:plan.candidates,exploredCandidates:explored,evaluations,selectionVersion:SELECTION_VERSION,sourceHeadline:plan.candidates[0].headline,paperArticleId:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).id,paperArticleTitle:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).title,prompt,textModel,imageModel,size:IMAGE_SIZE,designVersion:DESIGN_VERSION,generatedAt:new Date().toISOString()};
+  const manifest={date:newsDate,normalSourceHash:normal.sourceHash,paperSourceHash,sourceHash,title:plan.candidates[0].title,candidates:plan.candidates,exploredCandidates:explored,evaluations,selectionVersion:SELECTION_VERSION,sourceHeadline:plan.candidates[0].headline,paperArticleId:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).id,paperArticleTitle:paperStoryFor(plan.candidates[0].headline,newspaper,newsDate).title,prompt,textModel,imageModel,size:IMAGE_SIZE,designVersion:DESIGN_VERSION,generatedAt:new Date().toISOString()};
   // Publish only after both selection and generation succeed. Previous files survive API failures.
   fs.writeFileSync(imagePath+'.tmp',bytes);
   fs.writeFileSync(manifestPath+'.tmp',JSON.stringify(manifest,null,2)+'\n');
@@ -174,4 +177,5 @@ export async function generate({root=ROOT,env=process.env,fetchImpl=fetch}={}){
   return manifest;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))generate().catch(e=>{console.error(e.message);process.exitCode=1;});
+
 

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+import {readConfirmedEdition,cartoonMatches} from './edition-contract.mjs';
 import {chromium} from 'playwright';
 const browser=await chromium.launch({headless:true});
 try{
@@ -22,11 +23,16 @@ try{
  console.log('Paper layout:',JSON.stringify(result));
  const data=JSON.parse(await fs.readFile('newspaper.json','utf8'));
  assert.equal(result.important,Math.min(data.important.length,20));
- assert.equal(result.others,Math.max(data.others.length-3,0));
- assert.ok(result.cartoon&&result.grid&&result.title&&result.imageLoaded,'Cartoon and Japanese caption must load');
+ assert.equal(result.others,Math.min(data.others.length,9));
+ let manifest=null;try{manifest=JSON.parse(await fs.readFile('editorial-cartoon.json','utf8'));}catch{}
+ const expectedCartoon=cartoonMatches(readConfirmedEdition('.'),data,manifest);
+ assert.equal(result.cartoon,expectedCartoon,'Yesterday or mismatched cartoon must never appear');
+ if(expectedCartoon){
+ assert.ok(result.grid&&result.title&&result.imageLoaded,'Cartoon and Japanese caption must load');
  assert.ok(result.figureWidth/result.gridWidth<0.34,'Cartoon must use only one third of paper width');
  assert.match(result.title,/^「.*」$/);
  assert.equal(result.captionBorders,'0px');
+ }
  const available=(JSON.parse(await fs.readFile('ycomment.json','utf8')).titles||[]).length;
  if(result.ranking>0&&result.ranking<available){
   assert.ok(result.rankingGap>=-1&&result.rankingGap<result.rankingLineHeight+2,'Ranking must fill remaining A4 space to within one line');
@@ -38,3 +44,4 @@ try{
  assert.equal(pages,1,'Printed newspaper must be one A4 page');
  console.log('Verified all important articles, one fewer Others row, cartoon and one A4 page.');
 }finally{await browser.close();}
+
