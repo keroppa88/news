@@ -221,6 +221,23 @@ test('malformed fact audit retries only that stage with unchanged headline and a
  assert.match(calls[4].instructions,/format error/);
  assert.equal(calls[5].text.format.name,'cartoon_angle_comparison');
 });
+test('invalid topic evidence retries only the exploration stage with the same source editions',async t=>{
+ const root=fixture(t),calls=[];
+ let explorations=0;
+ const fetchImpl=async(url,options)=>{
+  const body=JSON.parse(options.body);calls.push(body);
+  if(url.endsWith('/images/generations'))return {ok:true,json:async()=>({data:[{b64_json:png().toString('base64')}]})};
+  let output=responseText(body);
+  if(body.text.format.name==='cartoon_exploration'&&++explorations===1){
+   const bad=structuredClone(exploration);bad.candidates[0].evidence='not in the source';output=JSON.stringify(bad);
+  }
+  return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:output}]}]})};
+ };
+ await generate({root,env:{OPENAI_API_KEY:'test'},fetchImpl});
+ assert.equal(explorations,2);assert.deepEqual(JSON.parse(calls[0].input),JSON.parse(calls[1].input));
+ assert.equal(calls[2].text.format.name,'cartoon_comparison');
+ assert.equal(calls.length,7);
+});
 test('all three audited failures restart with the next fixed topic, then compare only approved angles',async t=>{
  const root=fixture(t),calls=[];
  const fetchImpl=async(url,options)=>{
