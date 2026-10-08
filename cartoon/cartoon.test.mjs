@@ -175,6 +175,9 @@ test('the chosen topic stays fixed while three distinct angles are evaluated',()
  assert.throws(()=>validateAngles(switched,chosen,news),/changed the selected topic/);
  const repeated=structuredClone(angles.candidates);repeated[2].mechanism=repeated[1].mechanism;
  assert.throws(()=>validateAngles(repeated,chosen,news),/distinct visual mechanisms/);
+ const translated=structuredClone(angles.candidates);translated[2].visualTurn='関係が逆転する';
+ assert.doesNotThrow(()=>validatePlan({candidates:[translated[2]]},news,1));
+ assert.throws(()=>validateAngles(translated,chosen,news),/Final visual turn must be in English/);
  const literal=structuredClone(angleEvaluations);literal.forEach(e=>{e.literalReenactment=true;e.visualSurprise=5});
  assert.throws(()=>rankAngles(angles.candidates,literal,chosen,news),/No grounded visual turn/);
 });
