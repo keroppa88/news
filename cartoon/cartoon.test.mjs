@@ -14,7 +14,7 @@ const plan={candidates:news.slice(0,3).map((s,i)=>({headline:s.articles[0],angle
 const exploration={candidates:news.map((s,i)=>({...plan.candidates[i%3],headline:s.articles[0],title:`候補の題名${i}`,contradiction:'Words contradict actions',lettering:'',evidence:s.articles[0],assumptions:''}))};
 const evaluations=exploration.candidates.map((c,i)=>({headline:c.headline,inherentIrony:4,contradiction:5-Math.min(i,2),visualClarity:4,visualSurprise:4,smallFormat:4,grounding:5,novelty:4,reason:'行動の矛盾を短く描ける',evidenceConfirmed:true,visualTurnConfirmed:true,literalReenactment:false,unsupportedClaims:[]}));
 const angles={candidates:['role_reversal','reveal','object_inversion'].map((mechanism,i)=>({...exploration.candidates[0],mechanism,title:`別の切り口${i}`,angle:`Distinct angle ${i}`,scene:`A different pictorial reversal ${i}`,visualTurn:`The relationship visibly changes ${i}`}))};
-const angleEvaluations=angles.candidates.map((_,i)=>({...evaluations[0],angleId:`A${i+1}`,visualSurprise:5-i}));
+const angleEvaluations=angles.candidates.map((_,i)=>({...evaluations[0],angleId:`A${i+1}`,visualSurprise:5-i,captionClarity:4}));
 const responseText=body=>JSON.stringify(body.text.format.name==='cartoon_exploration'?exploration:body.text.format.name==='cartoon_angles'?angles:body.text.format.name==='cartoon_angle_comparison'?{evaluations:angleEvaluations.filter(e=>JSON.parse(body.input).angles.some(a=>a.angleId===e.angleId))}:{evaluations:evaluations.filter(e=>!body.input||JSON.parse(body.input).ideas?.some(a=>a.headline===e.headline))});
 const png=()=>{const b=Buffer.alloc(33);Buffer.from('89504e470d0a1a0a','hex').copy(b);b.write('IHDR',12);b.writeUInt32BE(816,16);b.writeUInt32BE(816,20);return b;};
 test('completion check ignores incomplete runs and requires both edition steps',async()=>{
@@ -55,8 +55,7 @@ test('API sequence, Japanese title, native square and duplicate-run cache',async
  assert.deepEqual(JSON.parse(calls[3].body.input).angles.map(a=>a.headline),Array(3).fill(exploration.candidates[0].headline));
  assert.equal(result.exploredCandidates.length,5);assert.equal(result.candidates.length,3);
  assert.equal(result.title,angles.candidates[0].title);assert.match(calls[4].body.prompt,/No gray fills/);
- assert.match(calls[4].body.prompt,/at most ONE/);
- assert.match(calls[4].body.prompt,/8% of the image height/);
+ assert.match(calls[4].body.prompt,/NO letters, numbers/);
  for(const name of ['Georges Bigot','Charles Wirgman','Charles Keene'])assert.ok(calls[4].body.prompt.includes(name));
  assert.ok(!calls[4].body.prompt.includes(angles.candidates[0].title));
  assert.match(calls[4].body.prompt,/Do not write any Japanese characters/);
@@ -190,6 +189,15 @@ test('the chosen topic stays fixed while three distinct angles are evaluated',()
  assert.equal(rankAngles(angles.candidates,flawed,chosen,news)[0].angleId,'A2');
  flawed.forEach(e=>{e.literalReenactment=true;e.visualSurprise=5});
  assert.equal(rankAngles(angles.candidates,flawed,chosen,news).length,3);
+});
+test('one necessary label is large and old scene lettering cannot leak into the image prompt',()=>{
+ const candidate={...angles.candidates[0],lettering:'PAUSE',scene:"A clerk presses a stamp labeled 'TEMPORARY PAUSE' beside a billboard reads \"AI Hub\"."};
+ const prompt=imagePrompt(candidate);
+ assert.match(prompt,/Render exactly one text element.*PAUSE/);
+ assert.match(prompt,/15% of the full image height/);
+ assert.doesNotMatch(prompt,/TEMPORARY PAUSE|AI Hub/);
+ assert.doesNotMatch(prompt,/at most ONE speech bubble/);
+ assert.match(imagePrompt({...candidate,lettering:''}),/Render NO letters, numbers/);
 });
 test('duplicate topical ideas and imperfect source snippets are salvaged before comparison',async t=>{
  const root=fixture(t),calls=[];
