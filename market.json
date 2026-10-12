@@ -7,7 +7,7 @@
     "bond": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html",
     "exchange": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
   },
-  "capturedAt": "2026-10-11T22:33:50.210Z",
+  "capturedAt": "2026-10-12T22:32:55.899Z",
   "markets": {
     "nikkei": {
       "value": 69030.92,
@@ -22,31 +22,31 @@
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "dow": {
-      "value": 51654.95,
-      "change": 423.31,
-      "percent": 0.83,
-      "date": "2026/10/09",
+      "value": 51850.55,
+      "change": 195.6,
+      "percent": 0.38,
+      "date": "2026/10/12 16:43",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "sp500": {
-      "percent": 0.59,
-      "date": "2026/10/09",
+      "percent": -0.06,
+      "date": "2026/10/12 16:35",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nasdaq": {
-      "percent": 0.64,
-      "date": "2026/10/09",
+      "percent": -0.44,
+      "date": "2026/10/12 17:15",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nikkeiFutures": {
-      "value": 68970,
-      "date": "2026/10/10",
+      "value": 68380,
+      "date": "2026/10/13 06:00",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/future_top.html"
     },
     "oil": {
-      "value": 91.66,
-      "change": 0.17,
-      "date": "2026/10/09",
+      "value": 93.16,
+      "change": 1.31,
+      "date": "2026/10/12 16:59",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/commodities_top.html"
     },
     "jgb10": {
@@ -62,9 +62,9 @@
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "usdjpy": {
-      "value": 158.3,
-      "change": 0.04,
-      "date": "2026/10/12 07:29",
+      "value": 158.57,
+      "change": 0,
+      "date": "2026/10/13 07:29",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
     }
   }
