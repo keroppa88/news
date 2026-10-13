@@ -7,7 +7,7 @@
     "bond": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html",
     "exchange": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
   },
-  "capturedAt": "2026-10-12T22:32:55.899Z",
+  "capturedAt": "2026-10-13T22:33:01.928Z",
   "markets": {
     "nikkei": {
       "value": 69030.92,
@@ -22,49 +22,49 @@
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "dow": {
-      "value": 51850.55,
-      "change": 195.6,
-      "percent": 0.38,
-      "date": "2026/10/12 16:43",
+      "value": 51670.1,
+      "change": -180.45,
+      "percent": -0.35,
+      "date": "2026/10/13 16:41",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "sp500": {
-      "percent": -0.06,
-      "date": "2026/10/12 16:35",
+      "percent": -0.02,
+      "date": "2026/10/13 16:33",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nasdaq": {
-      "percent": -0.44,
-      "date": "2026/10/12 17:15",
+      "percent": -0.15,
+      "date": "2026/10/13 17:15",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nikkeiFutures": {
-      "value": 68380,
-      "date": "2026/10/13 06:00",
+      "value": 68100,
+      "date": "2026/10/14 06:00",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/future_top.html"
     },
     "oil": {
-      "value": 93.16,
-      "change": 1.31,
-      "date": "2026/10/12 16:59",
+      "value": 94.79,
+      "change": 1.05,
+      "date": "2026/10/13 16:59",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/commodities_top.html"
     },
     "jgb10": {
-      "value": 3.016,
-      "change": 0.002,
-      "date": "2026/10/10",
+      "value": 3.009,
+      "change": 0.003,
+      "date": "2026/10/14 02:25",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "ust10": {
-      "value": 5.242,
-      "change": null,
-      "date": "2026/10/10",
+      "value": 5.215,
+      "change": -0.029,
+      "date": "2026/10/14 05:29",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "usdjpy": {
-      "value": 158.57,
-      "change": 0,
-      "date": "2026/10/13 07:29",
+      "value": 158.35,
+      "change": 0.04,
+      "date": "2026/10/14 07:29",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
     }
   }
