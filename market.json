@@ -7,7 +7,7 @@
     "bond": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html",
     "exchange": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
   },
-  "capturedAt": "2026-10-16T22:32:26.057Z",
+  "capturedAt": "2026-10-17T22:32:14.251Z",
   "markets": {
     "nikkei": {
       "value": 65324.29,
@@ -25,46 +25,46 @@
       "value": 52002.41,
       "change": -175.28,
       "percent": -0.34,
-      "date": "2026/10/16 16:42",
+      "date": "2026/10/16",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "sp500": {
       "percent": -1.09,
-      "date": "2026/10/16 16:42",
+      "date": "2026/10/16",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nasdaq": {
       "percent": -2.14,
-      "date": "2026/10/16 17:15",
+      "date": "2026/10/16",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/index_top.html"
     },
     "nikkeiFutures": {
       "value": 63630,
-      "date": "2026/10/17 06:00",
+      "date": "2026/10/17",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/future_top.html"
     },
     "oil": {
       "value": 101.84,
       "change": 3.87,
-      "date": "2026/10/16 16:59",
+      "date": "2026/10/16",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/commodities_top.html"
     },
     "jgb10": {
       "value": 2.937,
       "change": 0.001,
-      "date": "2026/10/17 02:05",
+      "date": "2026/10/17",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "ust10": {
-      "value": 5.087,
-      "change": 0,
-      "date": "2026/10/17 05:28",
+      "value": 5.081,
+      "change": null,
+      "date": "2026/10/17",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/bond_top.html"
     },
     "usdjpy": {
       "value": 157.99,
       "change": 0,
-      "date": "2026/10/17 05:59",
+      "date": "2026/10/17",
       "sourceUrl": "https://www.rakuten-sec.co.jp/web/market/data/exchange_top.html"
     }
   }
