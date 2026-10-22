@@ -14,5 +14,5 @@ GH_REPO = "keroppa88/news"
 SCHEDULE_ENABLED = "true"
 
 [triggers]
-# UTC 22:30 = 日本時間 7:30（毎日）。run.yml の旧cronと同じ時刻
-crons = ["30 22 * * *"]
+# UTC 21:30 = 日本時間 6:30（毎日）。run.yml の旧cronと同じ時刻
+crons = ["30 21 * * *"]

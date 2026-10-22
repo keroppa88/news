@@ -20,8 +20,8 @@ on:
       - 'summarize4.js'
       - 'summarize15.js'
   schedule:
-    - cron: '30 22 * * *'
-  # Cloudflare Worker（worker/）が毎日 JST 7:30 に送る合図
+    - cron: '30 21 * * *'
+  # Cloudflare Worker（worker/）が毎日 JST 6:30 に送る合図
   repository_dispatch:
     types: [scheduled-news]
 
