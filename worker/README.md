@@ -1,6 +1,6 @@
 # ニュース更新タイマー（Cloudflare Worker）
 
-毎日 日本時間 7:30 に GitHub へ `repository_dispatch`（`scheduled-news`）を送り、
+毎日 日本時間 6:30 に GitHub へ `repository_dispatch`（`scheduled-news`）を送り、
 `.github/workflows/run.yml` を起動する。取得・要約・公開は従来どおり GitHub で行う。
 GitHub の schedule は数時間遅れることがあるため、時刻管理だけを Cloudflare に移す。
 
@@ -18,7 +18,7 @@ GitHub の schedule は数時間遅れることがあるため、時刻管理だ
    npx wrangler secret put GH_TOKEN
    npx wrangler deploy
    ```
-3. 7:30 を避けて切り替える。GitHub の Settings → Secrets and variables → Actions →
+3. 6:30 を避けて切り替える。GitHub の Settings → Secrets and variables → Actions →
    Variables に `CLOUDFLARE_SCHEDULE` = `true` を追加する。
    これで GitHub の schedule 起動だけが止まる。手動の Run workflow は使える。
 4. `wrangler.toml` の `SCHEDULE_ENABLED` を `"true"` に変えて、もう一度 `npx wrangler deploy`。
