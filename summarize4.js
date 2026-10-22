@@ -149,6 +149,20 @@ function oldestAllowedDate() {
   return `${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, '0')}/${String(d.getUTCDate()).padStart(2, '0')}`;
 }
 
+// --- 行末の年をそろえる ---
+// 元データの日付は「10/21 07:30」のように年がないため、Geminiが年を推測して誤る（例: 2025/10/21）。
+// 去年以前の年で、月日が今日までなら、年だけを今年に直す。
+function fixYear(line) {
+  const m = line.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})(\s*)$/);
+  if (!m) return line;
+  const jst = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  const year = jst.getUTCFullYear();
+  const mm = m[2].padStart(2, '0'), dd = m[3].padStart(2, '0');
+  const today = `${String(jst.getUTCMonth() + 1).padStart(2, '0')}/${String(jst.getUTCDate()).padStart(2, '0')}`;
+  if (Number(m[1]) >= year || `${mm}/${dd}` > today) return line;
+  return line.slice(0, m.index) + `${year}/${mm}/${dd}` + m[4];
+}
+
 // --- 古い日付・見出しが空の記事行か ---
 // Geminiは取得できなかった媒体の欄に、指示文の例や古い記事を作ってしまうことがある
 function isStaleOrEmpty(line, oldest) {
@@ -244,8 +258,14 @@ async function run() {
 
   // ===== Step 2.7: 古い日付・見出しが空の記事を削除して番号を振り直す =====
   const oldest = oldestAllowedDate();
-  let staleCount = 0;
+  let staleCount = 0, yearFixCount = 0;
   for (const sec of s2Sections) {
+    sec.lines = sec.lines.map(l => {
+      if (!/^\d+\.\s/.test(l)) return l;
+      const fixed = fixYear(l);
+      if (fixed !== l) yearFixCount++;
+      return fixed;
+    });
     const before = sec.lines.length;
     sec.lines = sec.lines.filter(l => !(/^\d+\.\s/.test(l) && isStaleOrEmpty(l, oldest)));
     staleCount += before - sec.lines.length;
@@ -255,6 +275,7 @@ async function run() {
   for (const name of Object.keys(s1Map)) {
     s1Map[name] = s1Map[name].filter(l => !isStaleOrEmpty(l, oldest));
   }
+  if (yearFixCount) console.log(`[Step2.7] ${yearFixCount}件の年を修正`);
   console.log(`[Step2.7] ${oldest}より古い・見出しが空の記事を${staleCount}件削除`);
 
   // ===== Step 2.8: Geminiが省いた媒体の欄を作り直す（Step 3でsummary1から記事を補充） =====
@@ -407,5 +428,5 @@ async function run() {
 if (require.main === module) run().catch(error => { console.error(error); process.exitCode = 1; });
 
 
-module.exports = { run };
+module.exports = { run, fixYear };
 
