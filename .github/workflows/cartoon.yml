@@ -24,7 +24,8 @@ concurrency:
 
 jobs:
   cartoon:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    # Editorial cartoon generation is paused; all triggers skip this job.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
