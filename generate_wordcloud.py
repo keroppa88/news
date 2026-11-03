@@ -42,8 +42,11 @@ wc = WordCloud(
     height=800,
     background_color="white",
     max_words=150,
-    max_font_size=80,
-    min_font_size=6,
+    # Give the headline words room to fill the 1600px canvas without
+    # shrinking lower-ranked words in direct proportion to their scores.
+    max_font_size=160,
+    min_font_size=10,
+    relative_scaling=0.25,
     colormap="tab10",
     prefer_horizontal=0.85,
 )
