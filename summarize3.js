@@ -35,6 +35,8 @@ function stemOf(word) {
 }
 
 const MAX_PER_STEM = 4; // 同じ語幹のキーワードは上位4個まで
+// AI投資・AI規制・AI開発等は別の話題なので、AIだけ8個まで
+const STEM_LIMITS = { AI: 8 };
 
 // 類似キーワードを集約する。
 // 1) 片方がもう片方を含む場合（AIチップ⊂AIチップメーカー等）は高スコア側に統合
@@ -60,7 +62,7 @@ function aggregate(entries) {
   for (const e of merged) {
     const stem = stemOf(e.word);
     stemCount[stem] = (stemCount[stem] || 0) + 1;
-    if (stemCount[stem] <= MAX_PER_STEM) result.push(e);
+    if (stemCount[stem] <= (STEM_LIMITS[stem] ?? MAX_PER_STEM)) result.push(e);
   }
   return result;
 }
