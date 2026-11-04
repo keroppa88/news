@@ -47,11 +47,13 @@ test('English supplemented from summary1 is translated before writing, metadata 
   validate(mock.files.get('summary2.txt'));
 });
 
-test('invalid translation retries then leaves the previous published input untouched', async () => {
+test('invalid translation retries then drops the English headline and still publishes', async () => {
   const mock = await supplement('[]');
-  await assert.rejects(mock.run(), /count mismatch/);
+  await mock.run();
   assert.equal(mock.calls, 2);
-  assert.deepEqual(mock.writes, []);
+  assert.ok(mock.writes.includes('summary2.txt'));
+  assert.doesNotMatch(mock.files.get('summary2.txt'), /Trump/);
+  validate(mock.files.get('summary2.txt'));
 });
 
 
@@ -64,20 +66,4 @@ test('media counts are capped while all editorial sections are retained', () => 
  assert.equal(limitArticles(limitArticles(oversized)),limitArticles(oversized));
 });
 
-test('normal-page rebuild is independent of illustration code and old saved images', t => {
- const root=fs.mkdtempSync(path.join(os.tmpdir(),'normal-cartoon-'));
- t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
- for(const folder of ['web']) fs.mkdirSync(path.join(root,folder));
- fs.copyFileSync(path.join(__dirname,'web/format.js'),path.join(root,'web/format.js'));
- fs.writeFileSync(path.join(root,'summary2.txt'),complete());
- fs.writeFileSync(path.join(root,'editorial-cartoon.png'),'fixture');
- fs.writeFileSync(path.join(root,'editorial-cartoon.json'),JSON.stringify({title:'試験題名',date:'2099-10-07',sourceHash:'hash',size:'816x816'}));
- for(let i=0;i<2;i++) {
-  execFileSync(process.execPath,[path.join(root,'web/format.js')]);
-  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-  assert.equal((html.match(/EDITORIAL_CARTOON_START/g)||[]).length,0);
-  assert.ok(html.includes('class="news-item"'));
-  assert.equal(fs.readFileSync(path.join(root,'editorial-cartoon.png'),'utf8'),'fixture');
- }
-});
 

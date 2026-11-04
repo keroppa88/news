@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {readConfirmedEdition,cartoonMatches} from './edition-contract.mjs';
 import {chromium} from 'playwright';
 const browser=await chromium.launch({headless:true});
 try{
@@ -15,24 +14,15 @@ try{
  await page.emulateMedia({media:'print'});
  await page.evaluate(()=>refit());
  const result=await page.evaluate(()=>{
-  const paper=document.querySelector('.paper').getBoundingClientRect(),grid=document.querySelector('.important-cartoon-grid'),figure=document.querySelector('.paper-cartoon'),image=figure?.querySelector('img');
+  const paper=document.querySelector('.paper').getBoundingClientRect();
   const rankingBox=document.querySelector('.ycomment'),padding=parseFloat(getComputedStyle(document.querySelector('.paper')).paddingBottom);
   const limit=paper.top+297*(padding/5)-padding;
-  return {rankingGap:limit-rankingBox.getBoundingClientRect().bottom,rankingLineHeight:parseFloat(getComputedStyle(rankingBox).lineHeight),height:paper.height,width:paper.width,important:document.querySelectorAll('.front-page .story,.front-page .headline-only').length,others:document.querySelectorAll('.supplement .story').length,cartoon:!!figure,title:figure?.querySelector('figcaption').textContent,grid:!!grid,imageLoaded:image?.complete&&image.naturalWidth>0,figureWidth:figure?.getBoundingClientRect().width,gridWidth:grid?.getBoundingClientRect().width,captionBorders:figure?getComputedStyle(figure.querySelector('figcaption')).borderTopWidth:null,ranking:document.querySelector('.ycomment')?.children.length-1};
+  return {rankingGap:limit-rankingBox.getBoundingClientRect().bottom,rankingLineHeight:parseFloat(getComputedStyle(rankingBox).lineHeight),height:paper.height,width:paper.width,important:document.querySelectorAll('.front-page .story,.front-page .headline-only').length,others:document.querySelectorAll('.supplement .story').length,ranking:document.querySelector('.ycomment')?.children.length-1};
  });
  console.log('Paper layout:',JSON.stringify(result));
  const data=JSON.parse(await fs.readFile('newspaper.json','utf8'));
  assert.equal(result.important,Math.min(data.important.length,20));
  assert.equal(result.others,Math.min(data.others.length,9));
- let manifest=null;try{manifest=JSON.parse(await fs.readFile('editorial-cartoon.json','utf8'));}catch{}
- const expectedCartoon=cartoonMatches(readConfirmedEdition('.'),data,manifest);
- assert.equal(result.cartoon,expectedCartoon,'Yesterday or mismatched cartoon must never appear');
- if(expectedCartoon){
- assert.ok(result.grid&&result.title&&result.imageLoaded,'Cartoon and Japanese caption must load');
- assert.ok(result.figureWidth/result.gridWidth<0.34,'Cartoon must use only one third of paper width');
- assert.match(result.title,/^「.*」$/);
- assert.equal(result.captionBorders,'0px');
- }
  const available=(JSON.parse(await fs.readFile('ycomment.json','utf8')).titles||[]).length;
  if(result.ranking>0&&result.ranking<available){
   assert.ok(result.rankingGap>=-1&&result.rankingGap<result.rankingLineHeight+2,'Ranking must fill remaining A4 space to within one line');
@@ -42,6 +32,6 @@ try{
  const pdf=await page.pdf({preferCSSPageSize:true});
  const pages=(pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length;
  assert.equal(pages,1,'Printed newspaper must be one A4 page');
- console.log('Verified all important articles, one fewer Others row, cartoon and one A4 page.');
+ console.log('Verified all important articles, one fewer Others row and one A4 page.');
 }finally{await browser.close();}
 

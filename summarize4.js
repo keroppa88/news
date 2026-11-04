@@ -376,7 +376,8 @@ async function run() {
     const line = sec.lines[i];
     if (!/^\d+\.\s/.test(line) || !needsTranslation(line)) continue;
     const match = line.match(/^(\d+\.\s*)(.*?)([（(][^）)]*[）)]\s*\d{4}\/\d{2}\/\d{2}\s*)$/);
-    if (!match) throw new Error('English headline has invalid metadata');
+    // 媒体名・日付の形が崩れた英語見出しは止めずに外す
+    if (!match) { console.log(`  除外(形式不正): ${line.substring(0, 70)}`); sec.lines[i] = null; continue; }
     entries.push({ sec, i, prefix: match[1], headline: match[2], suffix: match[3] });
   }
   if (entries.length) {
@@ -384,8 +385,8 @@ async function run() {
     let translated;
     for (let attempt = 1; attempt <= 2; attempt++) {
       const prompt = 'ニュース見出しを日本語に翻訳。事実を追加せず、固有名詞は通常の日本語表記。入力の全idを一度ずつ含むJSON配列だけを返す。形式 [{"id":0,"headline":"日本語見出し"}]。\n' + JSON.stringify(entries.map((e, id) => ({ id, headline: e.headline })));
-      const result = await callWithRetry(() => model.generateContent(prompt));
       try {
+        const result = await callWithRetry(() => model.generateContent(prompt));
         const rows = JSON.parse(result.response.text().replace(/```(?:json)?/g, '').trim());
         if (!Array.isArray(rows) || rows.length !== entries.length) throw new Error('Translation count mismatch');
         const ids = new Set();
@@ -394,12 +395,23 @@ async function run() {
           ids.add(row.id);
         }
         translated = rows; break;
-      } catch (error) { if (attempt === 2) throw error; }
+      } catch (error) { console.log(`Translation attempt ${attempt} failed: ${error.message}`); }
     }
-    for (const row of translated) {
-      const entry = entries[row.id];
-      entry.sec.lines[entry.i] = entry.prefix + row.headline.trim() + entry.suffix;
+    if (translated) {
+      for (const row of translated) {
+        const entry = entries[row.id];
+        entry.sec.lines[entry.i] = entry.prefix + row.headline.trim() + entry.suffix;
+      }
+    } else {
+      // 翻訳が2回失敗したら英語見出しだけ外して公開へ進む
+      console.log(`Translation failed; removing ${entries.length} English headlines`);
+      for (const e of entries) e.sec.lines[e.i] = null;
     }
+  }
+  // 外した行を詰めて番号を振り直す
+  for (const sec of s2Sections) {
+    let n = 0;
+    sec.lines = sec.lines.filter(l => l !== null).map(l => /^\d+\.\s/.test(l) ? l.replace(/^\d+\./, `${++n}.`) : l);
   }
 
   // ===== 再構築・保存 =====

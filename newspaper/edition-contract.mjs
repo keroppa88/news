@@ -39,10 +39,6 @@ export function verifyPaper(normal,paper){
   }
   return paper;
 }
-export function cartoonMatches(normal,paper,cartoon){
-  try{verifyPaper(normal,paper);}catch{return false;}
-  return !!cartoon&&cartoon.date===normal.date&&cartoon.normalSourceHash===normal.sourceHash&&cartoon.paperSourceHash===sourceHash(JSON.stringify(paper))&&[...paper.important.slice(0,20),...paper.others.slice(0,9)].some(a=>a.id===cartoon.paperArticleId);
-}
 export function readConfirmedEdition(root){
   const text=fs.readFileSync(`${root}/summary2.txt`,'utf8'),normal=JSON.parse(fs.readFileSync(`${root}/news-edition.json`,'utf8'));
   if(normal.sourceHash!==sourceHash(text))throw Error('Normal edition snapshot is stale');

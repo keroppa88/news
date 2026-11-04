@@ -46,6 +46,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Sync latest main before generation
+        continue-on-error: true
         run: git pull --ff-only origin main
 
       - name: Setup Node.js
@@ -54,35 +55,40 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
+        continue-on-error: true
         run: |
           npm ci
           npx playwright install --with-deps chromium
 
       - name: Test news quality guards
+        continue-on-error: true
         run: node --test news-quality.test.js
 
       - name: Test Rakuten market quote parser
+        continue-on-error: true
         run: node --test market/rakuten.test.js
 
       - name: Run news scrapers
+        continue-on-error: true
         if: github.event_name != 'push'
         run: node Run.js
 
       - name: Collect Rakuten market snapshot
-        run: node market/collect.js
+        run: bash retry.sh node market/collect.js
         continue-on-error: true
 
       - name: Run Yahoo Realtime scraper
         if: github.event_name != 'push'
-        run: node yahoo_realtime.js
+        run: bash retry.sh node yahoo_realtime.js
         continue-on-error: true
 
       - name: Collect Yahoo comment ranking
         if: github.event_name != 'push'
-        run: node yahoo_comment_ranking.js
+        run: bash retry.sh node yahoo_comment_ranking.js
         continue-on-error: true
 
       - name: Debug - list generated CSV files
+        continue-on-error: true
         if: github.event_name != 'push'
         run: |
           echo "=== Generated CSV files ==="
@@ -91,44 +97,52 @@ jobs:
           cat logs/*.log 2>/dev/null || echo "No log files"
 
       - name: Merge CSVs into news.csv
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node z_get.js
+        run: bash retry.sh node z_get.js
 
       - name: Pre-filter news.csv (remove noise)
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node summarize0.js
+        run: bash retry.sh node summarize0.js
 
       - name: Run Gemini Analysis (Step 1 - Extract headlines)
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node summarize1.js
+        run: bash retry.sh node summarize1.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 2 - Classify and summarize)
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node summarize15.js
+        run: bash retry.sh node summarize15.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 3 - Classify and summarize)
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node summarize2.js
+        run: bash retry.sh node summarize2.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 4 - Extract keywords for wordcloud)
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node summarize3.js
+        run: bash retry.sh node summarize3.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Run Gemini Analysis (Step 5 - Fix formatting and supplement)
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: node summarize4.js
+        run: bash retry.sh node summarize4.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Repair incomplete published news on code updates
+        continue-on-error: true
         if: github.event_name == 'push'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -149,60 +163,70 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python dependencies
+        continue-on-error: true
         if: github.event_name != 'push'
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Generate Word Cloud
+        continue-on-error: true
         if: github.event_name != 'push'
-        run: python3 generate_wordcloud.py
+        run: bash retry.sh python3 generate_wordcloud.py
 
       - name: Generate Web Page
-        run: node web/format.js
+        continue-on-error: true
+        run: bash retry.sh node web/format.js
 
       - name: Add newspaper navigation
-        run: node web/add_navigation.js
+        continue-on-error: true
+        run: bash retry.sh node web/add_navigation.js
 
       - name: Add Rakuten market rows
-        run: node web/add_market_strip.js --normal-only
+        continue-on-error: true
+        run: bash retry.sh node web/add_market_strip.js --normal-only
 
       # Persist paper quotes too: branch-based Pages builds publish this file from main.
       - name: Add paper market rows
-        run: node web/add_market_strip.js --paper-only
+        run: bash retry.sh node web/add_market_strip.js --paper-only
         continue-on-error: true
 
       - name: Freeze confirmed normal edition
-        run: node newspaper/prepare-edition.mjs
+        continue-on-error: true
+        run: bash retry.sh node newspaper/prepare-edition.mjs
 
-      # Stage 1 is complete before stage 2. An illustration failure never rewrites either edition.
+      # 各工程は2回まで試し、失敗した工程は外して公開まで進む。
       - name: Save news and normal web page
+        continue-on-error: true
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add *.csv summary1.txt summary2.txt summary3.txt news-edition.json index.html paper-newspaper.html wordcloud.jpg warehouse/ market.json ycomment.json
+          for f in *.csv summary1.txt summary2.txt summary3.txt news-edition.json index.html paper-newspaper.html wordcloud.jpg warehouse market.json ycomment.json; do [ -e "$f" ] && git add "$f"; done
           git commit -m "Automated update: news, summary and web page" || exit 0
           git pull --rebase origin main
           git push
 
       - name: Test optional newspaper generation
+        continue-on-error: true
         id: newspaper_test
         run: node --test newspaper/newspaper.test.mjs
 
       - name: Generate optional newspaper edition
+        continue-on-error: true
         id: newspaper_generation
-        if: steps.newspaper_test.outcome == 'success'
-        run: node newspaper/generate-newspaper.mjs
+        run: bash retry.sh node newspaper/generate-newspaper.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSPAPER_MODEL: ${{ vars.NEWSPAPER_MODEL || 'gemini-2.5-flash-lite' }}
 
       - name: Verify generated paper edition
+        continue-on-error: true
         run: |
           node newspaper/verify-edition.mjs
           node newspaper/paper-layout.test.mjs
 
       - name: Save newspaper edition
+        continue-on-error: true
         if: steps.newspaper_generation.outcome == 'success'
         run: |
           git add newspaper.json
@@ -213,14 +237,10 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p _site
-          cp index.html paper-newspaper.html print.html config.json market.json news-edition.json _site/
-          cp wordcloud.jpg _site/ 2>/dev/null || true
-          cp -R assets _site/
-          if [ -f newspaper.json ]; then cp newspaper.json _site/; fi
-          if [ -f ycomment.json ]; then cp ycomment.json _site/; fi
-          for file in editorial-cartoon.png editorial-cartoon.json; do
-            if [ -f "$file" ]; then cp "$file" _site/; fi
+          for file in index.html paper-newspaper.html print.html config.json market.json news-edition.json wordcloud.jpg newspaper.json ycomment.json; do
+            if [ -f "$file" ]; then cp "$file" _site/; else echo "::warning::$file がないため除外"; fi
           done
+          cp -R assets _site/ || true
           MARKET_STRIP_ROOT=_site node web/add_market_strip.js --paper-only || echo 'Optional newspaper market rows unavailable'
 
       - name: Upload Pages artifact

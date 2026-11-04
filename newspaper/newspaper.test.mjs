@@ -5,22 +5,17 @@ import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {spawnSync} from 'node:child_process';
-import {normalEdition,paperInputs,verifyPaper,sourceHash,cartoonMatches} from './edition-contract.mjs';
+import {normalEdition,paperInputs,verifyPaper,sourceHash} from './edition-contract.mjs';
 import {parseHeadlines,makeEdition} from './headlines.mjs';
 
 const headlines=Array.from({length:32},(_,i)=>({id:`id${i}`,title:`根拠となる記事見出し${i}`,media:'媒体',date:'2026-09-18'}));
 const article=i=>({title:`検証用の記事見出し${i}`,summary:'提供された見出しに含まれる事実のみを短く伝える。',category:'社会',sourceIds:[`id${i}`]});
 const edition=()=>({important:Array.from({length:20},(_,i)=>article(i)),others:Array.from({length:12},(_,i)=>article(20+i))});
 
-test('same-day edits invalidate old illustrations and a future date cannot define the normal edition',()=>{
+test('a future date cannot define the normal edition',()=>{
   const text=['重要ニュース','経済ニュース','国内ニュース','海外ニュース','その他ニュース'].map((s,i)=>`●${s}●\n1. 本日確定した記事見出し${i}（媒体）2026/10/08`).join('\n');
-  const normal=normalEdition(text,{now:new Date('2026-10-08T04:00:00Z')}),inputs=paperInputs(normal);
-  const paper={date:normal.date,sourceUpdatedAt:normal.date,normalSourceHash:normal.sourceHash,...Object.fromEntries(Object.entries(inputs).map(([s,items])=>[s,items.map(a=>({id:a.id,sources:[a]}))]))};
-  const cartoon={date:normal.date,normalSourceHash:normal.sourceHash,paperSourceHash:sourceHash(JSON.stringify(paper)),paperArticleId:paper.important[0].id};
-  assert.equal(cartoonMatches(normal,paper,cartoon),true);
-  assert.equal(cartoonMatches(normal,paper,{...cartoon,date:'2026-10-07'}),false);
-  assert.equal(cartoonMatches(normal,paper,{...cartoon,normalSourceHash:'earlier same-day edition'}),false);
-  assert.equal(cartoonMatches(normal,{...paper,generatedAt:'new revision'},cartoon),false);
+  const normal=normalEdition(text,{now:new Date('2026-10-08T04:00:00Z')});
+  assert.ok(paperInputs(normal));
   assert.throws(()=>normalEdition(text.replace('2026/10/08','2026/10/12'),{now:new Date('2026-10-08T04:00:00Z')}),/Future date/);
 });
 
