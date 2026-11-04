@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const MIN_KEYWORDS = 60;
 const MAX_KEYWORDS = 100;
-const MAX_RETRIES = 3;
+const MAX_RETRIES = 5;
 
 // ●AI●（AI専門メディア）セクションを入力から除去をする。
 // AIニュースだらけでワードクラウドが埋まるのを防ぐ。他セクションのAI記事は集計対象のまま。
@@ -90,6 +90,28 @@ function sanitize(raw) {
   return aggregate(entries);
 }
 
+// 複数回分の出力をまとめて洗浄。同じ語は高いスコアを採用し、スコア順に上位MAX_KEYWORDS個
+function sanitizeAll(raw) {
+  const best = new Map();
+  for (const line of raw.replace(/```[a-z]*\n?/gi, '').replace(/```/g, '').split('\n')) {
+    const one = sanitizeLine(line);
+    if (one && (!best.has(one.word) || best.get(one.word) < one.score)) best.set(one.word, one.score);
+  }
+  const entries = [...best].map(([word, score]) => ({ word, score })).sort((a, b) => b.score - a.score);
+  return aggregate(entries).slice(0, MAX_KEYWORDS);
+}
+
+function sanitizeLine(line) {
+  const parts = line.trim().split('\t');
+  if (parts.length !== 2) return null;
+  const word = parts[0].trim();
+  const score = parseInt(parts[1].trim(), 10);
+  if (!word || word.length > 20) return null;
+  if (!Number.isInteger(score) || score < 1 || score > 100) return null;
+  if (/[（）()「」。、]/.test(word)) return null;
+  return { word, score };
+}
+
 async function generate(model, csvData) {
   const prompt = `
     あなたはニュース分析の専門家です。以下のニュースリストを分析して、ワードクラウド用のキーワードと重要度スコアを抽出してください。
@@ -146,11 +168,18 @@ async function run() {
   });
   const csvData = stripAiSection(fs.readFileSync('summary15.txt', 'utf8'));
 
+  // 各回の出力を捨てずに合算する（最後の回だけ使うと、少ない回で上書きされる）
+  let pooled = '';
   let entries = [];
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const raw = await generate(model, csvData);
-    entries = sanitize(raw);
-    console.log(`attempt ${attempt}: ${entries.length} valid keywords`);
+    try {
+      pooled += '\n' + await generate(model, csvData);
+    } catch (e) {
+      console.log(`attempt ${attempt} failed: ${e.message}`);
+      continue;
+    }
+    entries = sanitizeAll(pooled);
+    console.log(`attempt ${attempt}: ${entries.length} valid keywords (合算)`);
     if (entries.length >= MIN_KEYWORDS) break;
     if (attempt < MAX_RETRIES) console.log('  -> below minimum, retrying...');
   }
@@ -179,4 +208,4 @@ async function run() {
 
 if (require.main === module) run();
 
-module.exports = { stripAiSection, sanitize, aggregate };
+module.exports = { stripAiSection, sanitize, sanitizeAll, aggregate };
