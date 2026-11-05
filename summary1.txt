@@ -1,920 +1,778 @@
-## 2026年11月4日 ニュース見出し
+## 2026-11-05 UTC ニュースヘッドライン
 
-### ロイター
-*   NY外為市場＝ドル下落、米中間選挙で民主党圧勝 不透明感後退 (2026/11/05)
-*   米国株式市場＝ダウ1500ドル超高、民主圧勝受け データセンターは安い (2026/11/05)
-*   欧州市場サマリー（4日） (2026/11/05)
-*   ネタニヤフ氏の政敵ら、首相抜きの政権樹立狙う 米議会での民主勝利受け (2026/11/05)
-*   カナダ、米中間選挙後も対米通商方針維持 米高官と近く協議 (2026/11/05)
-*   ECB総裁、気候変動対策呼びかけ COP31首脳会議にらみ (2026/11/05)
-*   マクドナルド7─9月期、米で減収 生活費高騰で外食控え (2026/11/05)
-*   米9月貿易赤字、0.7％減の1050億ドル 輸入は過去最高 (2026/11/05)
-*   アングル：民主党の議会制圧、FRB独立性を強化 ウォーシュ議長に新たな試練 (2026/11/05)
-*   カルシなどの予測市場、米中間選挙結果ほぼ的中 一部波乱も (2026/11/05)
-*   アングル：米中間選挙の民主勝利、市場に新たな波乱 外交・財政リスク警戒 (2026/11/05)
-*   米10月ISM非製造業指数、54.5へ小幅低下 投入価格高止まり (2026/11/05)
-*   米国株式市場・序盤＝大幅高、民主勝利で政策転換懸念後退 データセンター株は下落 (2026/11/04)
-*   米ADP民間雇用、10月は8.6万人増 予想上回る (2026/11/04)
-*   ユーロ圏インフレ率、10月は4.0％で3年ぶり高水準 エネルギー高が影響 (2026/11/04)
-*   スウェーデン中銀が利上げ、23年以来初 追加利上げ示唆 (2026/11/04)
-*   米OCC、銀行のAI利用で監督指針 他のリスクと区別せず (2026/11/04)
-*   英サービスPMI、受注増で10月8カ月ぶり高水準 コスト圧力強まる (2026/11/04)
-*   中国・香港株式市場・大引け＝上昇、中間選挙きっかけに買い優勢 (2026/11/04)
-*   豪SNS禁止法巡る訴訟、政府側は表現の制限小さいと主張 (2026/11/04)
-*   ノボノルディスク、通期見通し上方修正 ウゴービ錠剤が予想超え (2026/11/04)
-*   アングル：米中間選挙、トランプ氏の介入裏目 「推し候補」相次ぎ敗北 (2026/11/04)
-*   アステラス、通期純利益予想を上方修正 市場予想は下回る (2026/11/04)
-*   東芝、キオクシアHD株を一部売却 保有比率10.46％に (2026/11/04)
-*   米中間選挙受け株安、「高い緊張感持ち市場注視」と木原官房長官 (2026/11/04)
-*   日鉄、子会社の大阪製鉄自社株TOBに応募 議決権比率51％に (2026/11/04)
-*   日経平均は3日続落、米中間選の民主勝利で 6万円割れ寸前で下げ縮小 (2026/11/04)
-*   ゆうちょ銀、松井証に20％出資 証券機能取り込み商品拡充目指す (2026/11/04)
-*   ユニクロ、10月国内既存店売上高5.5％減 後半に冬物伸び悩み (2026/11/04)
-*   ロシアで公共料金の値上げラッシュ、家計を圧迫 戦時経済で物価高続く (2026/11/04)
-*   米上院選メーン州、共和穏健派コリンズ氏が敗北宣言 燃料高など逆風 (2026/11/04)
-*   インドネシア当局、株式市場の不正疑いで新たな制裁 市場改革の一環 (2026/11/04)
-*   日本生命、米コアブリッジに追加出資 持ち分比率30％に (2026/11/04)
-*   光電融合デバイス「PEC」、第2世代を今期投入へ＝NTT社長 (2026/11/04)
-*   米中間選挙で民主が両院制覇、共和地盤でも勝利 トランプ氏「結果受け入れ」 (2026/11/04)
-*   中間選挙敗北、イランが一因 民主党法案には拒否権も＝トランプ氏 (2026/11/04)
-*   米アポロ、運用資産残高1.07兆ドル オルタナティブ投資好調 (2026/11/04)
-*   欧州スーパー、冷蔵設備サイバー攻撃で防御対策急ぐ (2026/11/04)
-*   三菱商事、発行済み株式の約6％・1兆円を上限に自社株買い (2026/11/04)
-*   米民主党が上下両院で過半数の見通し：識者はこうみる (2026/11/04)
-*   独ルフトハンザ、通期営業利益見通し下方修正 燃料費高騰で (2026/11/04)
-*   サウジ、第3四半期は840億リヤルの財政赤字 石油収入前年比23％減 (2026/11/04)
-*   韓国とトルコ、原子力・防衛分野で協力拡大へ シノップ原発建設も協議 (2026/11/04)
-*   中国の株式購入融資、申請2000億元超 金利1％に引き下げ (2026/11/04)
-*   アングル：世界市場は既にぜい弱、AIにもひび割れ (2026/11/04)
-*   今後5年間に全世界で投資資金30兆ユーロ不足、サンタンデール試算 (2026/11/04)
-*   IHI、業績・配当予想を上方修正 航空エンジン好調 (2026/11/04)
-*   トランプ氏、中間選挙結果受け入れ意向 「民主党と協力」＝NYT (2026/11/04)
-*   米州知事選、テキサスやオハイオで民主勝利 ジョージアは初の黒人女性知事 (2026/11/04)
-*   三井物産、通期純利益1兆円超へ上方修正 化学品や米州自動車など上振れ (2026/11/04)
-*   米中間選で民主優勢の報道、日経4％安・ドル1円安 AI規制や財政拡張後退を意識 (2026/11/04)
-*   パナソニック台湾工場の火災鎮火、5人負傷・2人不明 (2026/11/04)
+**●●ロイター●●**
+（日本時間 2026/11/06）
+メキシコ中銀、予想外の利下げ 「1回限りの調整」 (ロイター) 2026/11/06
+トランプ氏、ロシア特使と会談 終戦に「欧州全体が関与も」 (ロイター) 2026/11/06
+トランプ氏「今後1─2週間でさまざまな動き」、政権の取り組みに言及 (ロイター) 2026/11/06
+米司法省公民権局トップのディロン氏辞任、中間選挙後初の高官の政権離脱 (ロイター) 2026/11/06
+イラン、カタール経由で米に核関連の提案送付 7条件実現が協議の前提 (ロイター) 2026/11/06
+Record high for S&P, Nasdaq ahead of jobs data (ロイター) 2026/11/06
+ルビオ米国務長官、トランプ政権離脱を検討 進退未定＝報道 (ロイター) 2026/11/06
+仏全土で抗議デモ、公務員ストに合わせ実施 パリなど一部で警察と衝突 (ロイター) 2026/11/06
+ウクライナ、ロシア製油所攻撃を再開 燃料不足深刻化の恐れ (ロイター) 2026/11/06
+欧州市場サマリー（5日） (ロイター) 2026/11/06
+ナスダック調整局面入りへ、終値最高値から10％超安 ＡＩ投資巡り懸念 (ロイター) 2026/11/06
+米コノコフィリップス、7─9月期約2.3倍増益 原油高追い風 (ロイター) 2026/11/06
+米当局、冷蔵・冷凍設備へのサイバー脅威警告 ＦＢＩなどが共同声明 (ロイター) 2026/11/06
+ロシア・ウクライナ代表、メラニア夫人主催の式典に出席 オレシュキ停戦を評価 (ロイター) 2026/11/06
+ＥＣＢ、12月利上げ必要か指標見極めへ＝ラガルド総裁 (ロイター) 2026/11/06
+英開催のＧ２０サミット、プーチン氏は出席せず 制裁理由に＝バーナム首相 (ロイター) 2026/11/06
+欧州の航空会社に爆破予告相次ぐ、今週2度目 27便以上に影響 (ロイター) 2026/11/06
+緩やかな利上げ妥当、インフレなお高水準＝米リッチモンド連銀総裁 (ロイター) 2026/11/06
+米国株式市場・午前＝ナスダック3％超反落、半導体・データセンター株に売り (ロイター) 2026/11/06
+英中銀、3年超ぶり利上げ 紛争継続なら追加引き締めも (ロイター) 2026/11/05
+プーチン氏、ＪＴＩのロシア資産を一時管理下に 大統領令署名 (ロイター) 2026/11/05
+段階的な追加利上げ必要、インフレ目標回帰へ＝米クリーブランド連銀総裁 (ロイター) 2026/11/05
+Britain's 'chippies' under threat from plastic deluge - charity (ロイター) 2026/11/05
+エールフランスＫＬＭ、利益が予想上回る ＫＬＭは大規模再編へ (ロイター) 2026/11/05
+来週のＧ７外相会合、開催地パリに変更 「運営上の理由」 (ロイター) 2026/11/05
+米農産物の購入、相互の関税引き下げ合意が条件＝中国商務省 (ロイター) 2026/11/05
+公的債務とノンバンク拡大、金融政策制約も＝シュナーベルＥＣＢ理事 (ロイター) 2026/11/05
+独鉱工業受注、9月は前月比4.4％増 予想下回る (ロイター) 2026/11/05
+ＡＩ「必ず伸びる」、米中間選の影響はコメントせず＝東エレク子会社 (ロイター) 2026/11/05
+コメルツ銀、ウニクレディトとの統合に前向き 「価値創出を確信」 (ロイター) 2026/11/05
+MASBS.PA (ロイター) 2026/11/05
+ニデック、コミットメントライン契約を更新 6000億円 (ロイター) 2026/11/05
+日経平均は4日続落、ＡＩ関連株売り継続 ＴＯＰＩＸしっかり (ロイター) 2026/11/05
+トランプ政権の移民取り締まりの最中に殺害された2人の献花台に「投票しました」シール 米中間選挙の投票日 (ロイター) 2026/11/05
+ローム、今期純利益予想を450億円に上方修正 ＡＩ需要拡大で (ロイター) 2026/11/05
+太陽誘電、今期純利益を上方修正 情報インフラ向け需要増で (ロイター) 2026/11/05
+東京外為市場・15時＝ドル157円後半に下落、株や金利にらみ 原油動向にも注目 (ロイター) 2026/11/05
+ソニーＧ、上方修正で今期最高益更新へ ゲーム・映画好調で市場予想上回る (ロイター) 2026/11/05
+任天堂、通期予想据え置き 4─9月期はソフト好調で純利益11％増 (ロイター) 2026/11/05
+日鉄、通期純利益見通し4400億円へ上方修正 ＵＳスチールが収益けん引 (ロイター) 2026/11/05
+マイクロソフト、エヌスケールとの計算資源契約拡大見送りと関係筋 米データ拠点 (ロイター) 2026/11/05
+中国でクリーンテク株急伸、米民主党勝利で政策転換に期待 (ロイター) 2026/11/05
+タイ26年成長予想を2.4─2.6％に上げ、製造・輸出好調で＝業界団体 (ロイター) 2026/11/05
+英ＥＶ登録、10月は前年比54％増の4.9万台余 シェア約32％ (ロイター) 2026/11/05
+トヨタ、自社株買い上限を1.3兆円に引き上げ 従来1兆円 (ロイター) 2026/11/05
+ＥＵ、35年までに全新車をゼロエミッション車に切り替えの目標緩和へ (ロイター) 2026/11/05
+豪百貨店デビッド・ジョーンズ、管理手続き入り 創業188年 (ロイター) 2026/11/05
+トヨタ、ＨＶ堅調・原価低減で今期純利益3200億円上振れ 一転して営業増益 (ロイター) 2026/11/05
+インド食品安全局、「エナジードリンク」名称は消費者を「だます」狙い (ロイター) 2026/11/05
+途上国の気候変動適応、先進国の支援額は大幅に不足＝国連 (ロイター) 2026/11/05
+三菱ケミカルＧ、通期予想を上方修正 半導体関連が好調 (ロイター) 2026/11/05
+トヨタ、全社直轄組織「トヨタロボティクス」を新設 事業化加速 (ロイター) 2026/11/05
+米クラフト・ハインツが北米コーヒー事業売却、加工食品などに経営集中 (ロイター) 2026/11/05
+欧州議員、中国ＢＹＤ車の安全保障上の脅威巡る評価を要求 (ロイター) 2026/11/05
+韓国、海軍部隊の活動範囲拡大へ ホルムズ海峡近くまで (ロイター) 2026/11/05
+体操＝ルーマニアのバルボス、2年間の資格停止処分 パリ五輪ゆか銅 (ロイター) 2026/11/05
+東ソー、発行済み株式の3.90％・250億円を上限に自社株買い (ロイター) 2026/11/05
+サンケイＲＥ、対抗提案の意向表明書受領 ＰＥファンドが現買付価格上回る価格検討 (ロイター) 2026/11/05
+中国珠海市、華発集団を全面支援 400億元超供給＝当局者 (ロイター) 2026/11/05
+ＳＢＧによるＡＢＢロボティクス事業買収、中国事業の買収認めず 発改委が通知 (ロイター) 2026/11/05
 
-### ロイター経済
-*   ブラジル中銀が利下げ休止、ルラ大統領再選でインフレ懸念 (2026/11/05)
-*   NY外為市場＝ドル下落、米中間選挙で民主党圧勝 不透明感後退 (2026/11/05)
-*   ロ通販大手オゾン物流拠点で火災、ウクライナのドローン攻撃受け (2026/11/05)
-*   ECB総裁、気候変動対策呼びかけ COP31首脳会議にらみ (2026/11/05)
-*   世界企業、コストや関税巡る短期見通し変わらず 民主が米議会掌握でも (2026/11/05)
-*   アングル：民主党の議会制圧、FRB独立性を強化 ウォーシュ議長に新たな試練 (2026/11/05)
-*   Russia arrests American suspected of espionage (2026/11/05)
-*   France unveils 18 bln euro boost for tourism sector (2026/11/05)
-*   Pompeo says Hong Kong no longer autonomous from China (2026/11/05)
-*   Kim Jong Un reportedly seen in public (2026/11/05)
-*   Trump reverses decision on foreign students (2026/11/05)
-*   WHO pauses hydroxychloroquine trial over safety concerns (2026/11/05)
-*   米10月ISM非製造業指数、54.5へ小幅低下 投入価格高止まり (2026/11/05)
-*   米国株式市場・序盤＝大幅高、民主勝利で政策転換懸念後退 データセンター株は下落 (2026/11/04)
-*   Saudis face business backlash over missing journalist (2026/11/04)
-*   U.S. retail sales inch up in September (2026/11/04)
-*   ユーロ圏インフレ率、10月は4.0％で3年ぶり高水準 エネルギー高が影響 (2026/11/04)
-*   スウェーデン中銀が利上げ、23年以来初 追加利上げ示唆 (2026/11/04)
-*   テンセント、新AI「HY4」公開 サイバー攻撃リスク抑制 (2026/11/04)
-*   アジア株式市場サマリー：引け（4日） (2026/11/04)
-*   英サービスPMI、受注増で10月8カ月ぶり高水準 コスト圧力強まる (2026/11/04)
-*   解説：米中間選挙の注目激戦州はここだ 上院は接戦や法廷闘争などで大勢判明まで数日か (2026/11/04)
-*   アステラス、通期純利益予想を上方修正 市場予想は下回る (2026/11/04)
-*   東芝、キオクシアHD株を一部売却 保有比率10.46％に (2026/11/04)
-*   Trump says will only accept 'great' China trade deal (2026/11/04)
-*   米中間選挙受け株安、「高い緊張感持ち市場注視」と木原官房長官 (2026/11/04)
-*   日経平均は3日続落、米中間選の民主勝利で 6万円割れ寸前で下げ縮小 (2026/11/04)
-*   ゆうちょ銀、松井証に20％出資 証券機能取り込み商品拡充目指す (2026/11/04)
-*   ユニクロ、10月国内既存店売上高5.5％減 後半に冬物伸び悩み (2026/11/04)
-*   サッカースペイン2部テネリフェの選手が死去、試合中に相手GKと衝突 ファンや関係者に衝撃 (2026/11/04)
-*   ロシアで公共料金の値上げラッシュ、家計を圧迫 戦時経済で物価高続く (2026/11/04)
-*   米上院選メーン州、共和穏健派コリンズ氏が敗北宣言 燃料高など逆風 (2026/11/04)
+**●●ブルームバーグ●●**
+（日本時間 2026/11/06）
+著名投資家バーリ氏、米半導体ETFのプット保有分25%売却－残りは保有 (ブルームバーグ) 2026/11/06
+フランス抗議デモに60万人、9月以降で最多-予算案巡り議会は膠着 (Yahoo!ニュース) 2026/11/06
+テック株急落、ルビオ氏が政権離脱検討、JT資産を露管理下に－今朝の5本 (ブルームバーグ) 2026/11/06
+ゴールドマンに問い合わせ電話殺到、米ハイテク株急落－買い手不在 (ブルームバーグ) 2026/11/06
+謎の売り手、データセンター融資5億ドル売却へ－AI投資に逆風 (ブルームバーグ) 2026/11/06
+かんぽ生命、国内未公開株に本格投資へ－数年で1000億円積み増しへ (ブルームバーグ) 2026/11/06
+金融庁、海外の未公開資産で運用する個人向け保険けん制－関係者 (ブルームバーグ) 2026/11/06
+マイクロソフト、ネオクラウドへの熱冷める－データセンター遅延響く (ブルームバーグ) 2026/11/06
+ルビオ米国務長官、政権離脱を検討－中間選挙で共和党大敗受け (ブルームバーグ) 2026/11/06
+ソニー、初代ウォークマン風の有線ヘッドホン発売-レトロ機器人気で (Yahoo!ニュース) 2026/11/06
+米中間選挙結果におののくイスラエル、「最高レベルの緊急事態」 (ブルームバーグ) 2026/11/06
+OpenAI、データセンター事業の推進方法見直し-世論の反発受け (Yahoo!ニュース) 2026/11/06
+ネオクラウド企業株急落、IPOにハードル-中間選挙受け先行き懸念 (Yahoo!ニュース) 2026/11/06
+米テクノロジー株が急落、データセンター規制強化を懸念－半導体株安 (ブルームバーグ) 2026/11/06
+人型ロボットのアジリティー上場、専業で米国初-エヌビディアも出資 (Yahoo!ニュース) 2026/11/06
+リッチモンド連銀バーキン総裁、「段階的な」利上げペースが適切 (ブルームバーグ) 2026/11/06
+クリーブランド連銀総裁、インフレ押し下げに景気抑制的な金利が必要 (Yahoo!ニュース) 2026/11/06
+欧州の航空会社に再び爆破予告相次ぐ－目的地変更や戦闘機護衛も (ブルームバーグ) 2026/11/06
+ナスダック100指数は4%安、米半導体株に売り－ドル157円台に下落 (ブルームバーグ) 2026/11/06
+テスラ株再び急落、米中間選挙後の下げ加速－民主勝利の影響を警戒 (ブルームバーグ) 2026/11/06
+アップル､投資適格債市場に1年ぶり復帰－テック起債ラッシュに加わる (ブルームバーグ) 2026/11/05
+米労働生産性指数、7－9月は3.6%上昇－予想上回り1年ぶりの高い伸び (ブルームバーグ) 2026/11/05
+ロシア、JTの資産を管理下に－プーチン氏が大統領令に署名 (ブルームバーグ) 2026/11/05
+英中銀、高リスクのデータセンター事業巡り市場関係者に聞き取り (ブルームバーグ) 2026/11/05
+ブレント原油、2カ月ぶり安値付近で推移－イラン紛争終結への期待で (ブルームバーグ) 2026/11/05
+トランプ氏が喫した大敗、ウォーシュ議長には金利政策で裁量拡大も (ブルームバーグ) 2026/11/05
+ソニーG、今期営業利益を1兆8700億円に上方修正－映画やゲームが寄与 (ブルームバーグ) 2026/11/05
+メタのユーロ建て債、取引初日に上昇－欧州の社債では過去最大の需要 (ブルームバーグ) 2026/11/05
+台湾の鴻海、10月は46%増収－エヌビディア向けサーバー需要堅調 (ブルームバーグ) 2026/11/05
+マイクロン、台湾メモリー工場の建設を停止－労使対立の長期化懸念で (ブルームバーグ) 2026/11/05
+欧州株が過去最高値を更新、AI関連銘柄からの資金シフトが追い風に (ブルームバーグ) 2026/11/05
+カカクコム、約570万件の個人情報漏えい－アララへの不正アクセスで (ブルームバーグ) 2026/11/05
+ECBのインフレ抑制、各国の健全な財政と規制が不可欠－シュナーベル氏 (ブルームバーグ) 2026/11/05
+トヨタ、｢稼ぐ仕組み｣の変革課題に－大規模還元表明もROE20%なお遠く (ブルームバーグ) 2026/11/05
+防衛費財源「国債発行に頼らず」、有事に備えた財政基盤を－財政審 (ブルームバーグ) 2026/11/05
+香港株、テック銘柄中心に急伸－米中間選挙後の資金シフト寄与 (ブルームバーグ) 2026/11/05
+シンガポール、越境煙害対策を強化－罰金上限10倍に引き上げ (ブルームバーグ) 2026/11/05
+個人向け国債の拡充策、複利型や20年債の導入検討－財務省研究会 (ブルームバーグ) 2026/11/05
+アルファベット傘下のAI創薬アイソモーフィック、7890億円調達で協議 (ブルームバーグ) 2026/11/05
+米中間選挙後、アナリストが注視する株式市場の次の焦点 (ブルームバーグ) 2026/11/05
+中国当局、ソフトバンクGによるロボティクス事業買収を阻止－ABB (ブルームバーグ) 2026/11/05
+中間選挙後のアメリカ経済 〜 隠れたテーマはウォーシュ議長のスタンス (Yahoo!ニュース) 2026/11/05
+ウーバー株上昇、利益・総予約額が市場予想とほぼ一致 (Yahoo!ニュース) 2026/11/05
+米民主党の議会奪還、トランプ政権どう変わる－拒否権や弾劾を解説 (ブルームバーグ) 2026/11/05
+中国の銅市場、需給逼迫が一段と深刻化－買い手が現物確保急ぐ (ブルームバーグ) 2026/11/05
+米国債利回り、10年物で5%「非常に魅力的」－正常な水準とヤルデニ氏 (ブルームバーグ) 2026/11/05
+公明・岡本代表、消費税減税に「景気条項」提案へ－2年後の延長可能に (ブルームバーグ) 2026/11/05
+トヨタが今期営業益計画上方修正､一転増益－3.9兆円、市場予想上回る (ブルームバーグ) 2026/11/05
+トランプ米大統領、中間選挙の敗因は「戦争でなくガソリン価格」と説明 (ブルームバーグ) 2026/11/05
+米国債続伸、民主党圧勝で財政拡張に歯止めとの期待－10年債4.84% (ブルームバーグ) 2026/11/05
+香港活動家の黄之鋒氏、国安法で2件目の有罪判決－収監大幅延長 (ブルームバーグ) 2026/11/05
+マスク氏企業、時価総額20兆円消失－民主党のテキサス躍進で逆風 (ブルームバーグ) 2026/11/05
+米民主党圧勝で株式の物色先に変化、アジア半導体株安・自動車株高 (ブルームバーグ) 2026/11/05
+AIデータセンター減速、テック大手にはむしろ朗報か－明暗分ける公算 (ブルームバーグ) 2026/11/05
+中国、ソフトバンクGのABBロボティクス事業買収を阻止－FT (ブルームバーグ) 2026/11/05
+ダイヤモンドバック、来年も掘削ほぼ横ばいへ-原油高でも慎重姿勢 (Yahoo!ニュース) 2026/11/05
+ソフトバンクG出資のオーペイ、中国当局の照会後に米IPO中止－関係者 (ブルームバーグ) 2026/11/05
+米民主党によるトランプ一家と暗号資産企業の関係の追及始まる＝Bloomberg (Yahoo!ニュース) 2026/11/05
+ニデック会計に10年前から疑義､日本企業の改革限界—空売り投資家 (ブルームバーグ) 2026/11/05
+米欧の防衛関連株が下落、国防予算に不透明感－米中間選挙で民主大勝 (ブルームバーグ) 2026/11/05
 
-### ロイター市場
-*   NY市場サマリー（4日）ダウ1500ドル超高、ドル下落 利回り低下 (2026/11/05)
-*   NY外為市場＝ドル下落、米中間選挙で民主党圧勝 不透明感後退 (2026/11/05)
-*   米国株式市場＝ダウ1500ドル超高、民主圧勝受け データセンターは安い (2026/11/05)
-*   欧州市場サマリー（4日） (2026/11/05)
-*   ECB総裁、気候変動対策呼びかけ COP31首脳会議にらみ (2026/11/05)
-*   マクドナルド7─9月期、米で減収 生活費高騰で外食控え (2026/11/05)
-*   米9月貿易赤字、0.7％減の1050億ドル 輸入は過去最高 (2026/11/05)
-*   アングル：民主党の議会制圧、FRB独立性を強化 ウォーシュ議長に新たな試練 (2026/11/05)
-*   カルシなどの予測市場、米中間選挙結果ほぼ的中 一部波乱も (2026/11/05)
-*   アングル：米中間選挙の民主勝利、市場に新たな波乱 外交・財政リスク警戒 (2026/11/05)
-*   米10月ISM非製造業指数、54.5へ小幅低下 投入価格高止まり (2026/11/05)
-*   米国株式市場・序盤＝大幅高、民主勝利で政策転換懸念後退 データセンター株は下落 (2026/11/04)
-*   Saudis face business backlash over missing journalist (2026/11/04)
-*   U.S. retail sales inch up in September (2026/11/04)
-*   ユーロ圏インフレ率、10月は4.0％で3年ぶり高水準 エネルギー高が影響 (2026/11/04)
-*   スウェーデン中銀が利上げ、23年以来初 追加利上げ示唆 (2026/11/04)
-*   米OCC、銀行のAI利用で監督指針 他のリスクと区別せず (2026/11/04)
-*   アジア株式市場サマリー：引け（4日） (2026/11/04)
-*   英サービスPMI、受注増で10月8カ月ぶり高水準 コスト圧力強まる (2026/11/04)
-*   中国・香港株式市場・大引け＝上昇、中間選挙きっかけに買い優勢 (2026/11/04)
-*   ユーロ圏総合PMI、10月51.7に低下 受注・生産が減速 (2026/11/04)
-*   豪SNS禁止法巡る訴訟、政府側は表現の制限小さいと主張 (2026/11/04)
-*   独BMW、第3四半期減収減益 中国不振 (2026/11/04)
-*   ノボノルディスク、通期見通し上方修正 ウゴービ錠剤が予想超え (2026/11/04)
-*   アステラス、通期純利益予想を上方修正 市場予想は下回る (2026/11/04)
-*   東芝、キオクシアHD株を一部売却 保有比率10.46％に (2026/11/04)
-*   予測市場、米中間選挙で予想外す サウスカロライナで民主勝利 (2026/11/04)
-*   米中間選挙受け株安、「高い緊張感持ち市場注視」と木原官房長官 (2026/11/04)
-*   日鉄、子会社の大阪製鉄自社株TOBに応募 議決権比率51％に (2026/11/04)
-*   日経平均は3日続落、米中間選の民主勝利で 6万円割れ寸前で下げ縮小 (2026/11/04)
-*   ゆうちょ銀、松井証に20％出資 証券機能取り込み商品拡充目指す (2026/11/04)
-*   ユニクロ、10月国内既存店売上高5.5％減 後半に冬物伸び悩み (2026/11/04)
-*   インドネシア当局、株式市場の不正疑いで新たな制裁 市場改革の一環 (2026/11/04)
-*   日本生命、米コアブリッジに追加出資 持ち分比率30％に (2026/11/04)
-*   光電融合デバイス「PEC」、第2世代を今期投入へ＝NTT社長 (2026/11/04)
-*   米中間選挙で民主が両院制覇、共和地盤でも勝利 トランプ氏「結果受け入れ」 (2026/11/04)
-*   米アポロ、運用資産残高1.07兆ドル オルタナティブ投資好調 (2026/11/04)
-*   欧州スーパー、冷蔵設備サイバー攻撃で防御対策急ぐ (2026/11/04)
-*   三菱商事、発行済み株式の約6％・1兆円を上限に自社株買い (2026/11/04)
-*   米民主党が上下両院で過半数の見通し：識者はこうみる (2026/11/04)
-*   独ルフトハンザ、通期営業利益見通し下方修正 燃料費高騰で (2026/11/04)
-*   サウジ、第3四半期は840億リヤルの財政赤字 石油収入前年比23％減 (2026/11/04)
-*   Home resales slump to 9-1/2 year low (2026/11/04)
-*   European shares gain on Trump tariff relief, carmakers shine (2026/11/04)
-*   Breakingviews - COMMENTARY: コラム：バイナンス事件、暗号資産業界の「一体構造」に警鐘 (2026/11/04)
-*   中国の株式購入融資、申請2000億元超 金利1％に引き下げ (2026/11/04)
-*   アングル：世界市場は既にぜい弱、AIにもひび割れ (2026/11/04)
-*   今後5年間に全世界で投資資金30兆ユーロ不足、サンタンデール試算 (2026/11/04)
-*   IHI、業績・配当予想を上方修正 航空エンジン好調 (2026/11/04)
-*   三井化、企業価値向上へJSR株取得も含め検討中＝一部報道で (2026/11/04)
-*   トランプ氏、中間選挙結果受け入れ意向 「民主党と協力」＝NYT (2026/11/04)
-*   Trump congratulated Boris Johnson (2026/11/04)
-*   米州知事選、テキサスやオハイオで民主勝利 ジョージアは初の黒人女性知事 (2026/11/04)
-*   米中間選で民主優勢の報道、日経4％安・ドル1円安 AI規制や財政拡張後退を意識 (2026/11/04)
-*   三井物産、通期純利益1兆円超へ上方修正 化学品や米州自動車など上振れ (2026/11/04)
-*   パナソニック台湾工場の火災鎮火、5人負傷・2人不明 (2026/11/04)
-*   Global stocks: Asian gloom, European relief (2026/11/04)
-*   Turkey's lira hammered as Erdogan seeks more control (2026/11/04)
+**●●BBC●●**
+（UTC）
+Major tech stocks plunge as US midterms add to fears of AI slowdown (BBC) 2026/11/06
+What can Democrats do with control of Congress? We answer your US midterms questions (BBC) 2026/11/06
+California governor commutes sentences for state's 548 death row inmates (BBC) 2026/11/06
+Hoax bomb threats target European airlines and airports for second time in a week (BBC) 2026/11/06
+Bomb hoaxes: Messages reveal how threat was passed on by air traffic control (BBC) 2026/11/06
+Russell Brand found guilty of rape and sexual assault (BBC) 2026/11/06
+Paraguay President Santiago Peña resigns after bank collapse (BBC) 2026/11/06
+Democrat leads by just over 1,000 votes in surprisingly tight Mississippi Senate race (BBC) 2026/11/06
+How America voted in maps and charts (BBC) 2026/11/06
+Five reasons why Republicans lost so badly (BBC) 2026/11/06
+The young politicians with African roots making history in the US midterms (BBC) 2026/11/06
+Excuse my French? The swear words that used to be illegal in Canada (BBC) 2026/11/06
+Why The Worst Person in the World stopped Renate Reinsve from quitting acting (BBC) 2026/11/06
+Europa League & Conference League: Reaction as Sunderland lose to Zagreb and Brighton beat Getafe (BBC) 2026/11/06
+LIVEEuropa League: Celtic claim first Europa League win after late drama against Besiktas (BBC) 2026/11/06
+What new Kane deal means for England and the Premier League record (BBC) 2026/11/06
+Kamada nets late equaliser as Palace hold Hoffenheim (BBC) 2026/11/06
+Bournemouth maintain 100% record with comeback win (BBC) 2026/11/06
+Bomb hoaxes across Europe disrupt flights as two UK airports also receive threats (BBC) 2026/11/06
+Who could be behind hoax bomb threats to European air travel? (BBC) 2026/11/06
+Henry Nowak killer has sentence increased to 25 years (BBC) 2026/11/06
+Farage says he is worried Trump will step up Iran war after midterm 'disaster' (BBC) 2026/11/06
+The Pitt and ER are similar enough for lawsuit to proceed, judge rules (BBC) 2026/11/06
+A bitter end for Ronaldo - the icon who transformed Portugal (BBC) 2026/11/06
+Watch: Police interview Russell Brand in 2025 (BBC) 2026/11/06
+Eight killed in series of shootings in western Turkey (BBC) 2026/11/06
+Inside Mississippi's ballot counting in tight Senate race (BBC) 2026/11/06
+Was an Italian chef really fired over refusal to put pineapple on pizza? (BBC) 2026/11/06
+When to expect Senate results from the tight race in Mississippi (BBC) 2026/11/06
+With Congress flipped, what does Trump do next? (BBC) 2026/11/06
+'Hopefully things get done': Americans react to historic political shift (BBC) 2026/11/06
+Could Democrats in Congress end the war in Iran? (BBC) 2026/11/06
+How voter shifts in Texas helped elect a Democratic senator and governor (BBC) 2026/11/06
+Democrats 'got their wish': Voters react to midterm results (BBC) 2026/11/06
+How can you protect internet newbies from scammers? (BBC) 2026/11/06
+How J Paul Getty became the world's richest man (BBC) 2026/11/06
+Nine images capturing 100 years of LA's most exclusive suburb Bel-Air (BBC) 2026/11/06
+King Charles's grand Scottish estate hidden in plain sight (BBC) 2026/11/06
+'Apparently I am afraid of heights': The Peruvian hotel with a terrifying check-in (BBC) 2026/11/06
+Boebert, billionaires' tax and other midterms races still to watch (BBC) 2026/11/06
+Six dead and others injured in fire at New York City building (BBC) 2026/11/06
+Four investigations Democrats could launch after winning control of Congress (BBC) 2026/11/06
+Vance walks Trump tightrope with scathing election critique blaming Iran war (BBC) 2026/11/06
+Will Atiku Abubakar be on Nigeria's presidential ballot after court ruling? (BBC) 2026/11/06
+Weekly quiz: How did Rice Krispies lose their snap, crackle and pop? (BBC) 2026/11/06
+Melania Trump calls for lasting Ukraine truce as she hosts Russian and Ukrainian officials (BBC) 2026/11/06
+French protests see numbers surge as unions join strikes over high cost of living (BBC) 2026/11/06
+UK interest rates hiked to 4% in first increase in over three years (BBC) 2026/11/06
+Three ways the UK interest rate rise could affect you (BBC) 2026/11/06
+Food, fuel and taxes – can the Democrats actually make life cheaper? (BBC) 2026/11/06
+Kellogg's admits snap, crackle and pop is quieter after uproar over Rice Krispies recipe change (BBC) 2026/11/06
+Elon Musk's millions failed to deliver Republican wins in fierce midterms (BBC) 2026/11/06
+French blood storage impacted by freezer hacks as theories swirl about culprits (BBC) 2026/11/06
+Graduates are managing AI - but are they learning much else? (BBC) 2026/11/06
+Binance says fake job interviews used as part of $6.3bn crypto hack (BBC) 2026/11/06
+'A void that is impossible to fill' - tributes paid at De Miguel funeral (BBC) 2026/11/06
+Sunderland jeered in defeat by Dinamo Zagreb (BBC) 2026/11/06
+Late Duran double downs Besiktas to give Celtic first Europa League win (BBC) 2026/11/06
+Yalcouye goal seals Brighton victory at Getafe (BBC) 2026/11/06
+The people who only need four hours' sleep (BBC) 2026/11/06
+Why average human body temperatures may have fallen (BBC) 2026/11/06
+How to exercise more without trying (BBC) 2026/11/06
+Birdwatching rewires the brain and slows cognitive decline (BBC) 2026/11/06
+Bonnie Tyler's hometown pays tribute with new mural (BBC) 2026/11/06
+Lemmy's hometown to host Motörhead album premiere (BBC) 2026/11/06
+'You've had a wonderful life Tommy, but it's over' - Sir Tom feared he was dying (BBC) 2026/11/06
+Married at First Sight UK cancelled after BBC revealed rape allegations (BBC) 2026/11/06
+Why Germans won't buy a round of beer (BBC) 2026/11/06
+The new trail leading to Ireland's mythical 'Gate to Hell' (BBC) 2026/11/06
+Why are so many Thai restaurants hidden in London pubs? (BBC) 2026/11/06
+When is premium economy worth the extra cost? (BBC) 2026/11/06
+Using a macro lens to photograph spiders and snakes (BBC) 2026/11/06
+Why Mary Shelley's chilling horror story Frankenstein is so misunderstood (BBC) 2026/11/06
+Why the real Christopher Robin resented Winnie-the-Pooh (BBC) 2026/11/06
+The Renaissance woman who was the first female painter of erotic nudes (BBC) 2026/11/06
+'Bold and inventive' Canadian poet Anne Carson wins Nobel Literature Prize (BBC) 2026/11/06
+'What the hell did this?': The orca brothers preying on great white sharks (BBC) 2026/11/06
+Giant eagles once ruled the skies. They snatched human children, and shaped our evolution (BBC) 2026/11/06
+'It's offensively cheap': How solar power is quietly becoming bigger than nuclear (BBC) 2026/11/06
+The immortal jellyfish can beat ageing. It could inspire treatments for diseases of old age (BBC) 2026/11/06
+Watch sea anemones battle for territory in timelapse (BBC) 2026/11/06
+Mysterious carvings found in Queen Charlotte's palace (BBC) 2026/11/06
+The high-tech mission to preserve a 17th-century shipwreck (BBC) 2026/11/06
+The hunt for New York's most authentic pretzel (BBC) 2026/11/06
+The world's top 'cities to watch' in 2026 (BBC) 2026/11/06
+How Italy's guiltiest food ritual went public (BBC) 2026/11/06
+The return of New Orleans' 'deadly’ cocktail (BBC) 2026/11/06
+Why travellers are obsessed with foreign supermarkets (BBC) 2026/11/06
 
-### ブルームバーグ
-*   アームの売上高見通し、投資家の期待に届かず－AI追い風も - Bloomberg (2026/11/05)
-*   バンス氏「敗因は戦争」、トランプ氏の軸足は外交へ－今朝の5本 - Bloomberg (2026/11/05)
-*   クアルコム、スマホ不振を新市場で補う－売上高見通しは予想上回る - Bloomberg (2026/11/05)
-*   SMBC日興､国債や金利スワップの電子取引拡大—赤字の市場部門てこ入れ - Bloomberg (2026/11/05)
-*   アップル、社内AI利用予算を削減－コスト抑制へ上限引き下げ - Bloomberg (2026/11/05)
-*   トランプ氏、外交で大胆な動きへ-中間選挙大敗でレガシー構築意識（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   UBS、ロンドンで約200人削減-クレディ・スイスとの統合完了近い（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   FRBへの政治圧力に歯止め-民主の上院奪還でトランプ氏の人事に壁（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   中国はトランプ氏への信頼維持、「全面惨敗」でリスクも再燃（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   欧州市況株、国債ともに上昇－米中間選挙受けリスク資産買い - Bloomberg.com (2026/11/05)
-*   米民主党、ウォール街にメス－銀行規制や予測市場に厳しい視線 - Bloomberg.com (2026/11/05)
-*   ブレント原油が一時10%安、バレル100ドル下回る－戦争終結に期待 - Bloomberg.com (2026/11/05)
-*   バンス氏、共和党の選挙敗北はイラン戦争と対イスラエル関係が要因（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   歴史的大敗の米共和党、それでも続くトランプ依存－再建への道遠く - Bloomberg.com (2026/11/05)
-*   マクドナルド、7-9月米既存店売上高は微減-客数減を注文額増で補う（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   ジョンソン米下院議長、共和党トップ続投しない意向-中間選挙大敗で（TBS CROSS DIG with Bloomberg） - Yahoo!ニュース (2026/11/05)
-*   ECB、タカ派的姿勢維持する必要ある－次期総裁候補クノット氏 - Bloomberg.com (2026/11/05)
-*   米ISM非製造業指数、10月は3カ月ぶり低水準－コスト圧力継続 - Bloomberg.com (2026/11/05)
-*   米国株と国債が上昇、民主党の大勝を好感－ドルは下落 - Bloomberg (2026/11/05)
-*   米ADP民間雇用者数、10月は8万6000人増－予想上回る - Bloomberg.com (2026/11/04)
-*   米中間選挙、同盟国は歓迎と警戒－トランプ氏に新たな制約 - Bloomberg (2026/11/04)
-*   米中間選挙で民主党が大勝、インフレへの怒りとトランプ疲れが追い風 - Bloomberg (2026/11/04)
-*   ブルームバーグ氏：2026年の中間選挙後、民主党は下院と上院の両方を支配するだろう。 - Vietnam.vn (2026/11/04)
-*   ユーロ圏インフレ率、ECB目標の2倍に加速－追加利上げ観測を後押し - Bloomberg.com (2026/11/04)
-*   テスラとスペースX株下落、米中間選挙で民主党大勝－規制強化を警戒 - Bloomberg (2026/11/04)
-*   中間選挙大敗のトランプ氏、イランへの即時攻撃の計画なし－FT - Bloomberg (2026/11/04)
-*   UBS証券が元ゴールドマン大谷氏採用－日銀出身､チーフエコノミストに - Bloomberg.com (2026/11/04)
-*   大手商社4社が通期予想を上方修正､資源好調続く－自社株買いや増配も - Bloomberg (2026/11/04)
-*   スウェーデン中銀、23年以来の利上げ－エネルギー高受けインフレ抑制 - Bloomberg (2026/11/04)
-*   EUが単一市場の制度見直しへ、中国依存の低減狙う－関係者 - Bloomberg.com (2026/11/04)
-*   台湾証券取引所がブルームバーグと提携、アジア初の事例に 台湾株専用ページが国際端末に登場 - BigGo ファイナンス (2026/11/04)
-*   米系スタートアップ、マレーシアにレアアース精製所－6億ドル投資へ - Bloomberg.com (2026/11/04)
-*   テキサスに「青」の激震、トランプ氏・マスク氏・共和党に手痛い審判 - Bloomberg.com (2026/11/04)
-*   三井化学株が15年ぶり下落率､JSR買収との報道受け－巨額投資に警戒感 - Bloomberg (2026/11/04)
-*   トランプ氏、民主党は「よくやった」－共和党大敗で自身の責任認めず - Bloomberg (2026/11/04)
-*   ブルームバーグ「米中間選挙で民主党が圧勝ならデータセンター建設鈍化…韓国半導体の収益性打撃」 - BigGo ファイナンス (2026/11/04)
-*   米上院､民主党がミシガン州でも議席獲得へ-エルサイード氏の勝利確実 - Bloomberg (2026/11/04)
-*   米中間選挙で民主躍進、AI・暗号資産の「トランプトレード」逆回転 - Bloomberg.com (2026/11/04)
-*   AI巨額投資、資本市場にはなお余力－米金融大手トップが自信 - Bloomberg.com (2026/11/04)
-*   韓国株失速、米国でデータセンター拡張鈍化との懸念－日韓台に試練 - Bloomberg.com (2026/11/04)
-*   三菱商事、1兆円上限の自社株買いー大規模還元で株価上昇に転じる - Bloomberg.com (2026/11/04)
-*   米中間選挙2026、有権者が語る投票を決めた理由 - Bloomberg (2026/11/04)
-*   中国AI各社、エヌビディア製チップ不足で開発に制約－受領は発注の1% - Bloomberg.com (2026/11/04)
-*   トランプ米大統領、中間選挙の結果を受け入れ民主党と協力する－NYT - Bloomberg (2026/11/04)
-*   円に2方向から追い風、米選挙の民主優勢で対ドル急伸－日銀正常化も - Bloomberg (2026/11/04)
-*   米上院、民主党がカンザス州で94年ぶり議席－ハミルトン氏の勝利確実 - Bloomberg (2026/11/04)
-*   円とスイス・フラン、「ブルーウェーブ」で勝ち組に－ドル売り拡大 - Bloomberg (2026/11/04)
-*   豪キャンバ、全社員の22%対象に大規模再編－AIで構造見直し迫られる - Bloomberg.com (2026/11/04)
-*   米国初の黒人女性州知事誕生へ－ボトムズ氏、ジョージア州で勝利確実 - Bloomberg (2026/11/04)
-*   日本株急落、AI規制警戒で売りの「民主党トレード」－早期収束の声も - Bloomberg.com (2026/11/04)
-*   米上院、民主タラリコ候補が激戦州テキサスで勝利確実－DDHQが予測 - Bloomberg (2026/11/04)
-*   アンソロピックIPO、NY市会計監査官が批判－株主権限弱めると懸念 - Bloomberg.com (2026/11/04)
-*   米国債上昇、中間選挙開票序盤で民主党優勢－財政支出抑制に期待 - Bloomberg.com (2026/11/04)
-*   米上院、民主アンドリュース氏がサウスカロライナ州で勝利確実－DDHQ - Bloomberg.com (2026/11/04)
-*   「世界的な不均衡」が市場不安定化の火種に－マネーの逆回転に警戒を - Bloomberg.com (2026/11/04)
-*   北朝鮮、1週間で4回目の兵器実験－選挙結果待つトランプ氏に圧力 - Bloomberg.com (2026/11/04)
-*   米民主党、上院選で共和党から初の議席奪取－ノースカロライナ州 - Bloomberg (2026/11/04)
-*   米アポロ、AI関連投資で守りに転じる－「FOMOは投資戦略ではない」 - Bloomberg (2026/11/04)
-*   閉鎖の危機に瀕している名門「Arkane Studios」の入札にUbisoftが参加か、Bloombergが報告 - doope! (2026/11/04)
-*   テスラとスペースXの株価、一時1.8%下落－米中間選挙の開票結果受け - Bloomberg.com (2026/11/04)
+**●●NYタイムズ●●**
+（UTC）
+Why a Merciless Supreme Court Rebuke on Election Eve Matters (NYタイムズ) 2026/11/06
+Stocks Erase Post-Midterm Elections Rally, Dragged Down by Tech (NYタイムズ) 2026/11/06
+How Colom Changed a Long Shot in Mississippi Into a Race Too Close to Call (NYタイムズ) 2026/11/06
+DOJ Steps Up Leak Investigation on Supreme Court Decision Overturning Roe v. Wade (NYタイムズ) 2026/11/06
+Trump Tried to Undermine the Nation’s Elections. It Didn’t Work. (NYタイムズ) 2026/11/06
+Newsom Commutes the Sentences of California’s 548 Death Row Inmates (NYタイムズ) 2026/11/06
+Tech Billionaires Face Tricky Political Waters After Democratic Midterm Sweep (NYタイムズ) 2026/11/06
+How Melania Trump Became a Dark-Horse Diplomat on Ukraine (NYタイムズ) 2026/11/06
+He Felt Stuck in New York. So He Started Walking to California. (NYタイムズ) 2026/11/06
+Harmeet Dhillon, Leader of Justice Department’s Civil Rights Unit, Resigns (NYタイムズ) 2026/11/06
+Bolsonaro’s Escape From Brazil Was Aided by Milei Adviser at Argentine Airport (NYタイムズ) 2026/11/06
+Lana Nusseibeh’s U.N. Bid Collides With U.A.E.’s Role in Sudan (NYタイムズ) 2026/11/06
+Across the South, Black Voters Help Propel Democratic Wins (NYタイムズ) 2026/11/06
+Russell Brand Is Found Guilty of Rape and Sexual Assault (NYタイムズ) 2026/11/06
+How Did Flávio Bolsonaro Flee Brazil? ‘I’ll Take That to the Grave,’ He Says (NYタイムズ) 2026/11/06
+RFK Jr.’s Appointees to Health Task Force Included Four Allowed to Keep Drug Stocks (NYタイムズ) 2026/11/06
+U.S. Finds Subdued Foreign Meddling Operations in Midterm Elections (NYタイムズ) 2026/11/06
+How Democrats Won Across the South (NYタイムズ) 2026/11/06
+MAGA Finally Gets What It Deserves (NYタイムズ) 2026/11/06
+Infant Bleeding Surged as Parents Rejected Vitamin K Shots, Studies Find (NYタイムズ) 2026/11/06
+Up in the Clouds With the Pope, It’s Still Commercial (NYタイムズ) 2026/11/06
+Justice Alito Will Not Retire From Supreme Court Immediately, Despite Election Outcome (NYタイムズ) 2026/11/06
+The Machine, and the Messaging, That Won Texas for Democrats (NYタイムズ) 2026/11/06
+Elon Musk’s Very Bad Night (NYタイムズ) 2026/11/05
 
-### BBC
-*   トランプ氏、中間選挙敗北の要因にイラン戦争を挙げる - BBC (2026/11/05)
-*   民主党が上院で勝利、50議席を確保 - BBC (2026/11/05)
-*   民主党が下院で勝利 - BBC (2026/11/05)
-*   共和党の敗北の5つの理由 - BBC (2026/11/05)
-*   トランプ氏は共和党員を標的にするが、民主党は「よくやった」と述べる - BBC (2026/11/05)
-*   米中間選挙で知っておくべきことすべて - BBC (2026/11/05)
-*   選挙結果を地図とグラフで見るアメリカの投票状況 - BBC (2026/11/05)
-*   「これは大惨事だ」：激怒した共和党員はトランプ氏に中間選挙敗北を blames - BBC (2026/11/05)
-*   トランプ氏の敗北は国内での権限を制限するが、国外ではおそらく異なるだろう - BBC (2026/11/05)
-*   議会を支配する新たな権力で、民主党ができることとできないこと - BBC (2026/11/05)
-*   アフリカ系ルーツを持つ若い政治家が米中間選挙で歴史を作る - BBC (2026/11/05)
-*   アンソニー・ザーチャー：中間選挙の惨劇はトランプ氏を弱めるが、彼は当面権力を握り続ける - BBC (2026/11/05)
-*   トランプ氏は、党の大敗北の後、議会の民主党員とどのように対処するかについて相反するメッセージを出している - BBC (2026/11/05)
-*   トランプ氏は共和党の敗北について何と言ったか？ - BBC (2026/11/05)
-*   民主党は「願いが叶った」：有権者、中間選挙の結果に反応 - BBC (2026/11/05)
-*   これまでの米中間選挙の重要な瞬間 - BBC (2026/11/05)
-*   米中間選挙の結果が中東に与える意味 - BBC (2026/11/05)
-*   米中間選挙で共和党が敗北した後、トランプ氏の今後は？ - BBC (2026/11/05)
-*   民主党にとって最も驚くべき勝利3つ - BBC (2026/11/05)
-*   ロシアは米中間選挙の結果について何と言っているか - BBC (2026/11/05)
-*   トランプ氏の拒否権警告は民主党にとって何を意味するか？ - BBC (2026/11/05)
-*   ジェームズ・タラリコとジーナ・ヒノジョサがテキサスでBBCに語る - BBC (2026/11/05)
-*   BBC、テキサスから民主党が上院議席を獲得したと報道 - BBC (2026/11/05)
-*   ウクライナ、死傷者を出したロシアの二重爆撃を示すボディカメラ映像を公開 - BBC (2026/11/05)
-*   ゼレンスキー氏、オレシュキ停戦後にメラニア・トランプ氏にウクライナ最高勲章を授与 - BBC (2026/11/05)
-*   米国で殺害されたガーナ人少年の母親、「正義を求める」と葬儀のために渡航 - BBC (2026/11/05)
-*   イスラエル大統領、選挙の膠着状態を経て各党と協議を開始 - BBC (2026/11/05)
-*   イラン首席交渉官、アメリカ国民は「戦争にノー」と投票した - BBC (2026/11/05)
-*   カナダ、ロシアとベラルーシのジュニア大会出場を禁止 - BBC (2026/11/04)
-*   フランスの血液保管が冷凍庫ハッキングの影響を受ける、犯人に関する憶測が飛び交う - BBC (2026/11/04)
-*   チャンピオンズリーグ：マンCがライプツィヒに勝利、アーセナルもプラハで勝利 - BBC (2026/11/04)
-*   ハーランドが決勝点を決め、マンCがRBライプツィヒを僅差で下す - BBC (2026/11/04)
-*   クイトのフェネルバフチェ、リバプールに勝利 - BBC (2026/11/04)
-*   バルベルデがアテネでの逆転劇を劇的なゴールで避ける - BBC (2026/11/04)
-*   「ブルー津波」が米国外交政策にもたらすもの - BBC (2026/11/05)
-*   民主党が米中間選挙で躍進 - BBC (2026/11/05)
-*   中間選挙！米政治における民主党の歴史的な転換（結果、パート2） - BBC (2026/11/05)
-*   ビジネスデイリー：パワープレーヤー：アップルはAIの波に乗り遅れているのか？ - BBC (2026/11/05)
-*   インターフェイス：インスタグラムの90分動画への賭け - BBC (2026/11/05)
-*   目撃者の歴史：ブラジルのマリアナダム災害 - BBC (2026/11/05)
-*   中間選挙！議会の支配権を奪還した民主党（結果、パート1） - BBC (2026/11/05)
-*   ドキュメンタリーポッドキャスト：日本の次の食事は？ - BBC (2026/11/05)
-*   インタビュー：テッサ・クラーク、Olio CEO：食品廃棄物の環境への影響は壊滅的 - BBC (2026/11/05)
-*   ビジネスデイリー：創業者：AIがアプリに取って代わると賭ける起業家 - BBC (2026/11/05)
-*   中間選挙！米国の選挙夜について知っておくべきことすべて - BBC (2026/11/05)
-*   目撃者の歴史：「台風ハイエンを生き延びた」 - BBC (2026/11/05)
-*   ニューヨークマラソンランナー、ゴール2マイル手前で倒れ死亡 - BBC (2026/11/05)
-*   Canva、過去最悪の年を経て大規模な人員削減を発表 - BBC (2026/11/05)
-*   タイタニック号の機関助士の腕時計、約4千ポンドで売却 - BBC (2026/11/05)
-*   ケロッグのライスクリスピー、天候の変化により英国での米粒がなくなる - BBC (2026/11/05)
-*   卒業生はAIを管理しているが、他に多くのことを学んでいるのか？ - BBC (2026/11/05)
-*   キム・カーダシアンが「史上最悪のテレビドラマ」に戻ってきた理由 - BBC (2026/11/05)
-*   ナダル、レアル・マドリードの理事に就任予定 - BBC (2026/11/05)
-*   ポールは、ドゥムベに負ければ「グローブを吊るす」 - BBC (2026/11/05)
-*   民主党は議会でイラン戦争を終結させることができるか？ - BBC (2026/11/05)
-*   テキサス州での有権者の変化が民主党の上院議員と知事の選出に貢献した方法 - BBC (2026/11/05)
-*   民主党は「願いが叶った」：有権者、中間選挙の結果に反応 - BBC (2026/11/05)
-*   米国の選挙における非市民投票はどの程度広まっているか？ - BBC (2026/11/05)
-*   見て：中間選挙での勝利後、候補者が支持者に挨拶 - BBC (2026/11/05)
-*   民主党による上院支配がトランプ氏にとって何を意味するか - BBC (2026/11/05)
-*   サラ・スミス、民主党が下院を制したことについて - BBC (2026/11/05)
-*   「戦う準備はできている」- 上院議員当選者クリス・パパスがニューハンプシャー州での勝利を祝う - BBC (2026/11/05)
-*   ペルーのホテル、恐ろしいチェックイン：明らかに高所恐怖症だ - BBC (2026/11/05)
-*   AIのバブルがあなたの最も深い秘密を暴露する可能性がある - BBC (2026/11/05)
-*   プレミアムエコノミーは追加費用に見合う価値があるのはいつか？ - BBC (2026/11/05)
-*   バードウォッチングは脳を再配線し、認知機能低下を遅らせる - BBC (2026/11/05)
-*   首を健康に保つための5つの簡単な方法 - BBC (2026/11/05)
-*   米中間選挙の結果は、関税緩和を期待するカナダ人にとって「勝利」となる - BBC (2026/11/05)
-*   カンザス州の民主党員が上院議員になったのは、ジュディ・ガーランドが「オズの魔法使い」を撮影していた頃以来 - BBC (2026/11/05)
-*   ジェームズ・タラリコが1988年以来テキサス州上院議席を獲得した初の民主党員となる - BBC (2026/11/05)
-*   左派民主党員アブドゥル・エルサイードがミシガン州で当選し、初のイスラム教徒上院議員となる - BBC (2026/11/05)
-*   バンス氏は、共和党が大きく負けたのはイラン戦争のせいだと述べる：「我々が負けた理由は誰もが知っている」 - BBC (2026/11/05)
-*   コンゴ民主共和国でエボラ出血熱に感染した英国人男性が英国に搬送される - BBC (2026/11/05)
-*   両親と兄弟を殺害した男、過失致死で有罪 - BBC (2026/11/05)
-*   ムガベ氏の息子、高級車密輸疑惑で「暴行」の疑いで逮捕 - BBC (2026/11/05)
-*   北朝鮮、過去最大の63億ドルのBinanceハックの背後にあることを否定 - BBC (2026/11/05)
-*   スクーターからシャンプーまで - ゴミ漁りで何百人もの人々を救う人々 - BBC (2026/11/05)
-*   Binanceユーザー、過去最大の仮想通貨ハック後に36億ドルを引き出す - BBC (2026/11/05)
-*   「後払い」の新しいルールに引っかからないように - BBC (2026/11/05)
-*   イーロン・マスク氏の数百万ドルは、激しい中間選挙での共和党の勝利をもたらすことができなかった - BBC (2026/11/05)
-*   Binance、偽の面接が63億ドルの仮想通貨ハックの一部として使用されたと述べる - BBC (2026/11/05)
-*   英国の食肉業界、欧州スーパーの冷凍庫を標的としたサイバー攻撃により打撃を受ける - BBC (2026/11/05)
-*   Apple、クリスマスの前に折りたたみ式iPhoneの供給が増える時期は不明 - BBC (2026/11/05)
-*   ラグビーユニオンウィークリー：ホームネイションズはどこにいるのか？ - BBC (2026/11/05)
-*   モアザンザスコア：キミ・アントネッリがメルセデスでF1の歴史を作る - BBC (2026/11/05)
-*   フットボールデイリー：ユナイテッドの生命の兆候とアストン・ヴィラはエリートと競えるか？ - BBC (2026/11/05)
-*   ラグビーユニオンウィークリー：イングランドはオーストラリアに負けてもよいか？ - BBC (2026/11/05)
-*   フットボールデイリー：MNC：セリエAのノスタルジアとアストン・ヴィラは「ビッグシックス」から締め出されているか？ - BBC (2026/11/05)
-*   BBCウィメンズ・フットボール・ウィークリー：ロンドン・シティが王者プッシュ、チェルシーのために何がうまくいっているのか？ - BBC (2026/11/05)
-*   F1：チェッカードフラッグ：メキシコシティGPレビュー：キミはどうやったのか？ - BBC (2026/11/05)
-*   フットボールデイリー：リバプールは meek すぎるか？ - BBC (2026/11/05)
-*   ラグビーユニオンウィークリー：ショーン・エドワーズとレッド・ローゼズの今後 - BBC (2026/11/05)
-*   テストマッチスペシャル：マッカラーン、オーストラリアへの帰還について - BBC (2026/11/05)
-*   F1：チェッカードフラッグ：メキシコシティGP予選レビュー：ハミルトンにとっての歴史 - BBC (2026/11/05)
-*   フットボールデイリー：アラン・シアラー：プレミアリーグの得点記録は破られるか？ - BBC (2026/11/05)
-*   LIVは、支援者が撤退した後に終了する予定 - BBC (2026/11/05)
-*   ギョケレスが、無敗のアーセナルがスラヴィアを破る - BBC (2026/11/05)
-*   チャンピオンシップ：ウェストハムがカーディフで3点差から追いつく、ミドルズブラ敗北、ウルブズが逆転勝利 - BBC (2026/11/05)
-*   喪失の島：テネリフェ島、デ・ミゲルの死を処理 - BBC (2026/11/05)
-*   4時間しか眠れない人々 - BBC (2026/11/05)
-*   平均的な人間の体温が低下した可能性のある理由 - BBC (2026/11/05)
-*   努力せずに運動量を増やす方法 - BBC (2026/11/05)
-*   死亡リスクを予測する簡単なフィットネスチェック - BBC (2026/11/05)
-*   「私たちのナンバーワンアルバムは、努力する価値があった」 - BBC (2026/11/05)
-*   何十ものナンバーワンを獲得したドラマーに敬意を表す - BBC (2026/11/05)
-*   英国で最も優れた映画館としてノミネートされた映画館 - BBC (2026/11/05)
-*   セレブリティ・ヘアスタイリスト、ジョン・フリーダ氏が75歳で死去 - BBC (2026/11/05)
-*   ドイツ人がビール一杯を注文しない理由 - BBC (2026/11/05)
-*   アイルランドの神話的な「地獄への扉」につながる新しいトレイル - BBC (2026/11/05)
-*   なぜロンドンのパブにはタイ料理レストランがたくさん隠されているのか？ - BBC (2026/11/05)
-*   イングランドの魔女の国の不気味な風景 - BBC (2026/11/05)
-*   日本の「幸せな脳」のマッピングへの探求 - BBC (2026/11/05)
-*   メアリー・シェリーの冷たいホラーストーリー「フランケンシュタイン」が誤解されている理由 - BBC (2026/11/05)
-*   クリストファー・ロビンが「クマのプーさん」を嫌っていた本当の理由 - BBC (2026/11/05)
-*   「大胆で革新的」なカナダの詩人アン・カーソンがノーベル文学賞を受賞 - BBC (2026/11/05)
-*   「これは何をしたのか？」：ホオジロザメを狩るシャチの兄弟 - BBC (2026/11/05)
-*   巨大なワシはかつて空を支配していた。彼らは人間の子供を奪い、私たちの進化を形作った - BBC (2026/11/05)
-*   「攻撃的に安い」：太陽光発電が静かに原子力よりも大きくなっている方法 - BBC (2026/11/05)
-*   不滅のクラゲは老化に打ち勝つことができる。それは高齢者の病気の治療法を刺激する可能性がある - BBC (2026/11/05)
-*   タイムラプスで領土を争うイソギンチャクを見る - BBC (2026/11/05)
-*   シャーロット女王の宮殿で謎の彫刻が発見される - BBC (2026/11/05)
-*   17世紀の難破船を保存するためのハイテクミッション - BBC (2026/11/05)
-*   ニューヨークで最も本格的なプレッツェルを探す - BBC (2026/11/05)
-*   世界のトップ「注目都市」2026 - BBC (2026/11/05)
-*   イタリアで最も罪深い食の儀式が公開された方法 - BBC (2026/11/05)
-*   ニューオーリンズの「致命的な」カクテルの復活 - BBC (2026/11/05)
-*   旅行者が外国のスーパーマーケットに夢中になっている理由 - BBC (2026/11/05)
-*   BBCのベストをあなたにお届け - BBC (2026/11/05)
-*   BBCニュースレターでニュースと洞察を得る、あなたの受信トレイに直接送信。無料でサインアップ。 - BBC (2026/11/05)
-*   歴史ニュースレター：BBCのユニークなアーカイブを通じて過去を生き生きとさせる、毎週木曜日に受信トレイに届きます。 - BBC (2026/11/05)
-*   ニュースブリーフィングを読む：あらゆるスケジュールに対応したニュース。BBCのトップヘッドラインと専門家による分析で平日を締めくくります。 - BBC (2026/11/05)
-*   ビジネスの世界にサインアップ：取締役会以上のグローバルインサイトで優位に立ち、毎週水曜日に受信トレイに届きます。 - BBC (2026/11/05)
-*   エッセンシャルリストを入手：BBC編集者が厳選した今週のベストストーリー、毎週火曜日と金曜日に受信トレイに届きます。 - BBC (2026/11/05)
-*   英国テレビのベストをストリーミング：無限に楽しい。非常に異なります。BritBoxでウィット、ミステリー、ドラマの世界をお楽しみください。 - BBC (2026/11/05)
-*   ドキュメンタリーを見る：BBCから絶賛された受賞歴のあるドキュメンタリー、歴史、自然、真実の犯罪などをご覧ください。 - BBC (2026/11/05)
-*   BBCアプリをダウンロード：AppleおよびAndroidデバイス用のBBCアプリをダウンロードするにはここをクリックしてください。 - BBC (2026/11/05)
-*   BBCアカウントに登録：今すぐすべてを読む時間がありませんか？BBCアカウントを使用すると、後で記事や動画を保存できます。 - BBC (2026/11/05)
+**●●WSJ●●**
+（日本時間）
+米ロサンゼルス市長選、民主社会主義者ラマン氏が勝利 (WSJ) 2026/11/06
+サウジ、フーシ派の脅威への対応に苦慮 選択肢少なく (WSJ) 2026/11/06
+米ウェンディーズ、トライアンの14億ドル買収案退ける (WSJ) 2026/11/06
+社説米民主党は勝利の意味を読み誤るか (WSJ) 2026/11/05
+イランがゲリラ戦術、ホルムズ海峡の支配回復狙う (WSJ) 2026/11/05
+選挙の夜を「カジノ」に変えた予測市場の参加者たち (WSJ) 2026/11/05
+民主党主導の米議会、トランプ氏の外交政策に与える影響は (WSJ) 2026/11/05
+米国、ドローン戦争への「備えなかった」＝国防総省当局者 (WSJ) 2026/11/05
+「経済」で結束できた米民主党、劇的勝利をつかむ (WSJ) 2026/11/05
+マスク氏の政治的命運、「ブルーウェーブ」に直面 (WSJ) 2026/11/05
+バンス氏、イラン戦争めぐりトランプ氏と決別 中間選挙の大敗で (WSJ) 2026/11/05
+トランプ氏、国防長官の留任巡り側近に相談 (WSJ) 2026/11/05
 
-### 日経
-*   米中間選挙、民主党が上下両院で多数派奪還 トランプ共和党は大敗 (2026/11/05)
-*   NYダウが急伸1500ドル高 敗北認めたトランプ氏好感、テックは明暗 (2026/11/05)
-*   「トランプ時代」終わりの始まり 共和党大敗、軽んじられた若者の怒り (2026/11/05)
-*   追い込まれたトランプ氏 内政行き詰まり、対中ロ朝外交に傾斜リスク (2026/11/05)
-*   三井化学がJSR買収へ 1.3兆円で政府系JICから、半導体材料で成長 (2026/11/05)
-*   バンス氏、中間選挙の大敗「戦争が理由」 対イランでトランプ氏と火種 (2026/11/05)
-*   詐欺メール713万通、アララ配信基盤「乗っ取る」 漏洩の影響広がる (2026/11/05)
-*   NYダウが一時1500ドル高、トランプ氏「民主党と協力」で警戒和らぐ (2026/11/05)
-*   トランプ氏、弾劾訴追に動けば｢民主党は崩壊｣ 選挙大敗から一夜明け (2026/11/05)
-*   三菱UFJと三井住友、ニデック融資枠6000億円 契約更新も期限は1年 (2026/11/05)
+**●●AXIOS●●**
+（UTC）
+Tech stocks tumble as election rattles AI trade (AXIOS) 2026/11/06
+How Democrats swept North Texas (AXIOS) 2026/11/06
+Epstein files back in spotlight after midterms (AXIOS) 2026/11/06
+Newsom moves to empty California's death row as 2028 looms (AXIOS) 2026/11/06
+Democrat locked in Deep South Senate stunner (AXIOS) 2026/11/06
+House GOP campaign chair loses his own race (AXIOS) 2026/11/06
+"The Greatest Show on Earth" is back in Chicago this weekend (AXIOS) 2026/11/06
+Who is Scott Colom, the underdog Democrat stunning Mississippi (AXIOS) 2026/11/06
+OpenAI's new cyber model found ways to attack nearly 1000 Linux flaws (AXIOS) 2026/11/06
+Club West Brewing distribution facility sells to prominent Charlotte developer (AXIOS) 2026/11/06
+What's on Shapiro's agenda for the first 100 days (AXIOS) 2026/11/06
+Who won North Carolina's congressional races (AXIOS) 2026/11/06
+Hanover's drunk raccoon is now funding body cameras (AXIOS) 2026/11/06
+Saudi-backed LIV Golf is dead (AXIOS) 2026/11/06
+Exit polls show young voters swinging back to Democrats after Trump's 2024 gains (AXIOS) 2026/11/06
+Black voters deliver a GOP reckoning (AXIOS) 2026/11/06
+DOJ's Harmeet Dhillon resigns (AXIOS) 2026/11/06
+House Republicans swing from "shock" to fury after elections loss (AXIOS) 2026/11/06
+Scoop: Cory Booker wastes no time hitting the 2028 trail (AXIOS) 2026/11/06
+Take the Axios Austin news quiz! (AXIOS) 2026/11/06
+The Democrats who won with a fraction of their opponents' cash (AXIOS) 2026/11/06
+Democrat Amish Shah wins Arizona's 1st Congressional District (AXIOS) 2026/11/06
+Key Pentagon priorities in peril after Democratic sweep (AXIOS) 2026/11/06
+Inside Victoria Broderick's unlikely congressional win in Tennessee (AXIOS) 2026/11/06
+Now comes the test for Dems: household budget relief (AXIOS) 2026/11/06
+The fatal assumption behind Republicans' redistricting strategy (AXIOS) 2026/11/06
+The unanswered questions for Elon Musk as he sets out to take on Big Wireless (AXIOS) 2026/11/06
+Scalise, Jordan vie to lead House Republicans reeling from midterm rebuke (AXIOS) 2026/11/06
+Vance says the Iran war cost Republicans the midterms (AXIOS) 2026/11/05
+Democrats' big win clouds the permitting picture (AXIOS) 2026/11/05
+Democrats' midterm gains could sideline Electoral College by 2028 (AXIOS) 2026/11/05
+Trump can't pack the Fed board with allies now (AXIOS) 2026/11/05
+Trump: Sen. Sullivan should get votes cast for Alaska's other Sullivan (AXIOS) 2026/11/05
+Valley roadways among the most dangerous in the nation, study says (AXIOS) 2026/11/05
+Exclusive: Nyquis raises $6.3M for granular grid monitoring (AXIOS) 2026/11/05
+Women ride midterm blue wave to historic gains (AXIOS) 2026/11/05
+Utah Sen. John Curtis blames GOP losses on policies he voted for (AXIOS) 2026/11/05
+How Colorado voted on ballot measures (AXIOS) 2026/11/05
+Exclusive: Meta buys AI startup and joins race to own coding in show of outsized ambition (AXIOS) 2026/11/05
+Democrats gain ground in Arkansas Legislature and local government (AXIOS) 2026/11/05
+How to speak at a New Orleans City Council meeting (AXIOS) 2026/11/05
+Elon Musk is set to spend $100B to disrupt wireless in the age of drones and robots (AXIOS) 2026/11/05
+The blue wave fell short of Louisiana, but it's still firing up Democrats (AXIOS) 2026/11/05
+Iran seen as "emerging" space power in U.S. intel report (AXIOS) 2026/11/05
+Space Force activates new special ops command (AXIOS) 2026/11/05
+Why this could be the AI pause that refreshes (AXIOS) 2026/11/05
+Warren County stays red, but hints of purple emerge (AXIOS) 2026/11/05
+Things to do in Metro Detroit this weekend: Nov. 6-8 (AXIOS) 2026/11/05
+Democrats' big challenge on health care costs (AXIOS) 2026/11/05
+Dems' rout opens door to "big test" and a packed 2028 field (AXIOS) 2026/11/05
+How a Democratic Congress could help D.C. — and Janeese Lewis George (AXIOS) 2026/11/05
+Tech giants turn to cash, concessions for AI rebrand after voters pummeled data centers 43-1 (AXIOS) 2026/11/05
+Vance takes a step toward 2028 in MAGA power play (AXIOS) 2026/11/05
+Why Pete Hegseth could fall through "thin ice" (AXIOS) 2026/11/05
+Janeese Lewis George wants "desk audit" to make D.C. government more efficient (AXIOS) 2026/11/05
+75% of Americans could have a Democratic governor (AXIOS) 2026/11/05
+The economic aftershocks of Democrats' big win (AXIOS) 2026/11/05
+Your car's AI assistant could be a privacy nightmare (AXIOS) 2026/11/05
+After big election wins, North Carolina Democrats face a new challenge (AXIOS) 2026/11/05
+Democrats will face a health care stress test (AXIOS) 2026/11/05
 
-### 時事
-*   参政都議「子宮頸がんは風邪」 ボードメンバーを辞任 (2026/11/05)
-*   米中間選挙、共和大敗 民主、上下両院で多数派奪還―トランプ氏の求心力 (2026/11/05)
-*   e-Taxに不審な通信 国税庁、一時停止に (2026/11/05)
-*   バンス副大統領地元で共和敗北 激戦州も次々民主に―米中間選挙 (2026/11/05)
-*   家庭用IoT機器に不正ソフト 製造で仕組まれ、サイバー攻撃「踏み台」 (2026/11/05)
-*   「普通の人々の勝利」 民主党躍進、支持者喜び爆発―米中間選挙 (2026/11/05)
-*   マンホールカード、相次ぐマナー違反 受け取れず怒鳴る客、暴言 発行自治体困惑 (2026/11/05)
-*   イスラエル支援打ち切りへ 年6300億円、投票日に表明―トランプ氏 (2026/11/05)
-*   市場予想上回る大勝 坂本篤秀・三井住友銀行シニアエコノミスト―米中間選挙 (2026/11/05)
+**●●日経●●**
+（日本時間 2026/11/06）
+米ナスダック5%急落、NYダウ1800ドル安 AI株が総崩れ (日経) 2026/11/06
+プーチン氏、JTのロシア法人を「一時管理下に」 大統領令に署名 (日経) 2026/11/06
+米ナスダック一時5%急落、ハイテク株総崩れ NYダウも1800ドル安 (日経) 2026/11/06
+中間選挙後の世界、米中ロが削る日本 それでもプランBはない (日経) 2026/11/06
+個人預金「ペイオフ保護なし」140兆円に 相続で大口化、金融リスクに (日経) 2026/11/05
+日経平均先物が急落、6万円割れ 米半導体株安が波及 (日経) 2026/11/06
+不正アクセス、個人情報「持たない」選択 ゆで太郎は会員制廃止 (日経) 2026/11/05
+米巨大テック、トランプ氏になびいた代償 民主議員「屈服させる」 (日経) 2026/11/06
+「鎮まるトランプ氏」市場好感 米株高・原油急落、AI相場は波乱含み (日経) 2026/11/05
+ルビオ米国務長官が辞任検討か ブルームバーグ報道 (日経) 2026/11/06
 
-### 日経・読売・産経・47・みんかぶ
-*   [みんかぶ/商品債券] イラン国会議長 アメリカ国民は戦争に「ノー」と表明した (2026/11/05)
-*   [産経/政治] 政府、サイバー攻撃主体の公表検討 手法周知で類似被害防止も…外交への影響見極め (2026/11/05)
-*   [産経/政治] 走る広告塔はどれに？和歌山県ご当地ナンバー「八咫烏」など3案公表、あなたの1票で決定 (2026/11/05)
-*   [日経/政治経済] 米財務省、国債発行計画で表現変更 超長期国債の抑制へ布石 (2026/11/05)
-*   [産経/政治] 高市政権発足後初の都道府県議選、茨城で12月告示 自民「公認37＋α」で勢力維持狙う (2026/11/05)
-*   [産経/経済] わかやま市民生協と大阪いずみ生協が来年4月合併 新名称「コープここいろ」で経営効率化 (2026/11/05)
-*   [産経/政治] 衆院憲法審「議論の進め方」協議 自維与党「自衛隊の位置付け」「9条改正」に意欲 (2026/11/05)
-*   [みんかぶ/株式] 恐怖指数警戒感は急低下 (2026/11/05)
-*   [みんかぶ/商品債券] 米10年債利回り低下 米民主党の圧勝で原油急落＝NY債券 (2026/11/05)
-*   [産経/経済] 「リニア新幹線」工事費さらに増額 JR東海検討11兆円から、資材・人件費の高騰続く (2026/11/05)
-*   [みんかぶ/株式] ダウ平均は一時1700ドル超急伸 ナスダックも大幅高 データセンターや防衛関連は下落＝米国株概況 (2026/11/05)
-*   [産経/経済] ＜人事＞TISI (2026/11/05)
-*   [産経/経済] ＜新社長＞TISIは中村氏 (2026/11/05)
-*   [みんかぶ/商品債券] 急反発、米中間選挙で民主党が勝利＝NY金概況 (2026/11/05)
-*   [日経/ビジネス] マクドナルド、米国で客足鈍く 日本・欧州が下支え 7〜9月9%増益 (2026/11/05)
-*   [産経/経済] 520億円の投資、成功の物差しは 数字で測れない「街の価値」 (2026/11/05)
-*   [みんかぶ/商品債券] 大幅続落、米中間選挙を受けてイラン再攻撃リスクが低下＝NY原油概況 (2026/11/05)
-*   [日経/ビジネス] ウーバー「27年末まで新規の買収凍結」 7〜9月増収1割どまり (2026/11/05)
-*   [日経/ビジネス] アステラスの更年期障害薬「フェゾリネタント」、中国で承認申請 (2026/11/05)
-*   [日経/ビジネス] マスク帝国、米民主旋風が逆風に スペースXとテスラ株は急落 (2026/11/05)
-*   [みんかぶ/株式] NY各市場 5時台 ダウ平均は1568ドル高 シカゴ日経平均先物は6万3035円 (2026/11/05)
-*   [日経/政治経済] 高市戦略17分野投資は脱憲法か 複数年度の予算管理、国会はどう監視 (2026/11/05)
-*   [日経/政治経済] 消費減税で物価抑制、福祉給付下押し 児童扶養手当は年8千円抑制試算 (2026/11/05)
-*   [日経/政治経済] 塩崎恭久元厚労相が語る「里親」になった理由 (2026/11/05)
-*   [日経/社会] 終活は「享年100歳」が前提 何を遺し、資産をどう使い切るか (2026/11/05)
-*   [日経/社会] 英語で教育「オンラインインター」、地方の中高で 海外大入学資格も (2026/11/05)
-*   [日経/社会] 秋の鳥取市、明治大学が彩る 創立者・岸本辰雄の顕彰事業相次ぐ (2026/11/05)
-*   [日経/ビジネス] 日本発新興、東南アジアに低温配送網 飲食店に野菜や卵を産地直送 (2026/11/05)
-*   [日経/ビジネス] 丸紅、インドを次の「北米」に 関連事業10倍へ 消費財に戦略投資 (2026/11/05)
-*   [日経/ビジネス] 小田急電鉄、沿線全体で観光強化 酒蔵巡りや英語ツアー商品を開発 (2026/11/05)
-*   [日経/ビジネス] クラフティア、首都圏売上高3割増へ 日本一「トーチタワー」も受注 (2026/11/05)
-*   [日経/ビジネス] 不正アクセス、個人情報「持たない」選択 ゆで太郎は会員制廃止 (2026/11/05)
-*   [日経/ビジネス] マカオ、習氏が旗振る「脱カジノ」の現実味 カジノマネー頼みの皮肉 (2026/11/05)
-*   [日経/マーケット] 日本製鉄、利益の4割超がUSスチール 米中間選挙の結果がリスク要因に (2026/11/05)
-*   [日経/スポーツ] LIVゴルフ、崩壊寸前にかつてない注目集める皮肉 (2026/11/05)
-*   [読売/政治] 合区解消へ 改憲要否議論…参院憲法審 今国会初開催 (2026/11/05)
-*   [読売/政治] ICC分担金 前倒し拠出…政府調整 米制裁 機能不全回避 (2026/11/05)
-*   [読売/政治] 高市首相の一日（4日） (2026/11/05)
-*   [読売/政治] 消費税 衆院審議大詰め 自民が採決日程提案…参院少数 野党に配慮 (2026/11/05)
-*   [読売/政治] ［安保新時代］3文書改定 自維10日初会合 (2026/11/05)
-*   [読売/経済] 大統領令多用 変わらない…米国野村証券シニアエコノミスト 雨宮愛知氏 (2026/11/05)
-*   [読売/経済] 高齢者医療費「3割負担を」…財務省 財政審で主張 (2026/11/05)
-*   [読売/経済] ゆうちょ銀・松井証券 提携 正式発表…株売買求める顧客確保 (2026/11/05)
-*   [読売/経済] 大手5商社 最終益増…9月中間 4社が3月期上方修正 (2026/11/05)
-*   [読売/社会] 川崎市部長 談合容疑…神奈川県警逮捕 工事価格漏らす (2026/11/05)
-*   [読売/社会] 3人殺害 心神耗弱主張…静岡地裁支部初公判 被告 罪認める (2026/11/05)
-*   [読売/社会] ソニーFGに立ち入り…金融庁 子会社生保の不祥事で (2026/11/05)
-*   [読売/社会] サイバー攻撃 中継指令サーバー無効化…警察庁・グーグル 家庭用機器悪用 (2026/11/05)
-*   [読売/社会] 米新聞4社 IT企業提訴…AI企業に記事無断販売 (2026/11/05)
-*   [読売/社会] 公取 大手ITを調査…自治体への取引妨害疑い (2026/11/05)
-*   [読売/社会] 児童作品「AI使用」中傷…福島・喜多方市 HP公開中止 (2026/11/05)
-*   [産経/政治] 高市日誌4日（水） (2026/11/05)
-*   [みんかぶ/株式] 原油は8.29％急落＝NY原油終値 (2026/11/05)
-*   [みんかぶ/株式] NY各市場 4時台 ダウ平均は1547ドル高 ナスダックもプラス圏での推移 (2026/11/05)
-*   [日経/マーケット] ドイツ株4日 反発、2カ月ぶり高値 半導体関連には売り (2026/11/05)
-*   [みんかぶ/株式] NY各市場 3時台 ダウ平均は1524ドル高 ナスダックもプラス圏での推移 (2026/11/05)
-*   [日経/マーケット] ロンドン株4日 反発、幅広い業種で買い優勢 石油株は下落 原油先物が急落 (2026/11/05)
-*   [日経/マーケット] 欧州国債概況4日 独10年債利回り低下、米債高や原油下落受け (2026/11/05)
-*   [みんかぶ/株式] NY各市場 2時台 ダウ平均は1461ドル高 ナスダックも1.8％の大幅高 (2026/11/05)
-*   [日経/マーケット] ロンドン外為4日 ユーロ、対ドルで一時1カ月ぶり高値 英ポンドも高い (2026/11/05)
-*   [日経/社会] 住宅の火災警報器、全体の35%が交換目安 緊急時に作動しない恐れ (2026/11/05)
-*   [日経/マーケット] バイアスのない人口推計を (2026/11/05)
-*   [日経/スポーツ] 5日のスポーツ (2026/11/05)
-*   [日経/スポーツ] プロ野球、球団フロントにも求められる「動く勇気」（権藤博） (2026/11/05)
-*   [日経/マーケット] NYダウが一時1500ドル高、トランプ氏「民主党と協力」で警戒和らぐ (2026/11/05)
-*   [日経/社会] 日本の書道、無形文化遺産に ユネスコ機関が登録勧告 (2026/11/05)
-*   [みんかぶ/株式] NY各市場 1時台 ダウ平均は1327ドル高 ナスダックも1.6％の大幅高 (2026/11/05)
-*   [産経/政治] 小泉防衛相の発信際立つ 生命を守る安保3文書改定に (2026/11/05)
-*   [みんかぶ/商品債券] 米経済指標米週間石油在庫統計 (2026/11/05)
-*   [産経/経済] NY株反発、一時千ドル超高 米中間選挙の不確実性後退、政治混乱への警戒和らぐ (2026/11/05)
-*   [産経/スポーツ] INAC神戸が連勝、1次リーグ突破、アジアへ2―0 サッカー女子ACL (2026/11/05)
-*   [読売/社会] サイバー攻撃で個人情報などの流出が判明した企業・団体の一覧 (2026/11/05)
-*   [47/政治] 市民らのメールアドレス漏えいか 福島市と郡山市 外部流出確認なし (2026/11/05)
-*   [47/政治] 米首都市長選で急進左派が勝利 トランプ大統領と摩擦も (2026/11/05)
-*   [47/政治] ［独自・新潟県議選2027］前上越市副市長の小田基史氏が立候補へ、上越市選挙区 (2026/11/05)
-*   [47/政治] 那覇市申請のメアド8万件流出か 琉銀は9万件、配信停止 沖縄 (2026/11/05)
-*   [47/政治] 叙勲受章者の功績たたえる 県庁で伝達式 (2026/11/05)
-*   [47/政治] 速報ユネスコ無形遺産に「書道」の登録を勧告 (2026/11/05)
-*   [47/政治] ＜釧根ナビ＞保護司担い手、確保難しく 進む高齢化、人口減…根室市充足率６割 再雇用や共働き拡大も背景 (2026/11/05)
-*   [47/政治] ＜揺らぐ「変革」 鶴間市政２年＞上 広域調整力 周辺自治体に募る不信感 (2026/11/05)
-*   [47/政治] 都議が子宮頸がん「風邪の一部」 参政、補選応援演説で不適切発言 (2026/11/05)
-*   [47/政治] 「結果で認めてもらう」 滝川市長選 前田氏5選出馬表明 (2026/11/05)
-*   [47/経済] NY原油大幅続落90ドル割れ 共和党敗北で戦闘終結期待 (2026/11/05)
-*   [47/経済] 為替相場 5日（日本時間 7時） (2026/11/05)
-*   [47/経済] NY株式 4日終値 (2026/11/05)
-*   [47/経済] 速報NY株急反発、1569ドル高 (2026/11/05)
-*   [47/経済] 速報NY原油終値90ドル割れ、2カ月ぶり安値 (2026/11/05)
-*   [47/経済] 5G基地局、全米で整備へ スペースX、2027年に着手 (2026/11/05)
-*   [47/経済] 口腔ケア用品、シートやガーゼで汚れ除去 口内の乾燥防ぎ、清潔に経済トレンド／気になる商品 (2026/11/05)
-*   [47/経済] 三龍社 駅ホームの段差解消機開発 ＪＲ西へ供給、28年度にも (2026/11/05)
-*   [47/経済] 為替相場 5日（日本時間 2時） (2026/11/05)
-*   [47/経済] NY株急騰、1200ドル高 米中間選挙の不確実性後退 (2026/11/05)
-*   [47/社会] 里山に“巨大恐竜”が出現！ 群馬・みなかみ町の「たくみの里」でわらアート展示 (2026/11/05)
-*   [47/社会] 医療機器開発Mecara（東京） 大熊復興拠点に工場新設 「AI瞳孔計測器」生産 ２０２８年２月操業目標 (2026/11/05)
-*   [47/社会] 小説配布で回収瓶飲料の利用促す 資源が循環する文化維持へ (2026/11/05)
-*   [47/社会] ふくしま震災伝承プロジェクト １５歳のバトン 高校生未来へ思い託す 浪江 ＥＶガーデンを見学 (2026/11/05)
-*   [47/社会] 小社会 忍耐と改善 (2026/11/05)
-*   [47/社会] 回線悪用のサーバー無害化 警察庁、米グーグルと連携 (2026/11/05)
-*   [47/社会] 警官の拳銃奪い自らに発砲、重体 休暇中の埼玉県警巡査部長 (2026/11/05)
-*   [47/社会] ユーチューバーが恐喝未遂疑い 28歳男を再逮捕、京都府警 (2026/11/05)
-*   [47/社会] 茨城・常陸大宮市長、栃木県３市町含む周辺首長に「同意得たい」 核ごみ最終処分場選定巡り (2026/11/05)
-*   [47/社会] 富士登山者も個人情報漏れ可能性 山梨県、最大約19万人分 (2026/11/05)
-*   [47/スポーツ] センバツ、21世紀枠奈良県推薦校に郡山 来年1月に出場校選考 (2026/11/05)
-*   [47/スポーツ] 市町村だより 福島 ■まるせい果樹園秋の大運動会 (2026/11/05)
-*   [47/スポーツ] 全国ソフトテニス大会出場 久下さん（須賀川三小）激励 須賀川市 (2026/11/05)
-*   [47/スポーツ] 射撃世界選手権 女子エアライフル 三浦の日本銅 初メダル (2026/11/05)
-*   [47/スポーツ] 高岡一を２年連続推薦 センバツ ２１世紀枠、富山県高野連 (2026/11/05)
-*   [47/スポーツ] INAC連勝、1次リーグを突破 サッカー女子ACL (2026/11/05)
-*   [47/スポーツ] G大阪、鹿島とも引き分け サッカーACLE (2026/11/05)
-*   [47/スポーツ] ヴォル、今季最多得点で圧勝 熊本112－84岩手 バスケBワン (2026/11/05)
-*   [47/スポーツ] ナダルさん、レアル理事に 男子テニス元世界ランキング1位 (2026/11/05)
-*   [47/スポーツ] 本多灯、1年9カ月競技資格停止 競泳の東京五輪銀、ロスは絶望 (2026/11/05)
-*   [日経/スポーツ] サッカー女子ACL、INAC神戸が2連勝 1次リーグ突破 (2026/11/04)
-*   [産経/スポーツ] G大阪、鹿島ともアウェーで引き分け、サッカーACLE東地区1次リーグ (2026/11/04)
-*   [産経/経済] リニア工事費再び増額へ、JR東海、11兆円から 資材・人件費高騰響く 年内にも公表 (2026/11/04)
-*   [日経/スポーツ] バスケ東アジアスーパーリーグ、琉球・A東京は初黒星 (2026/11/04)
-*   [日経/スポーツ] AS代表に比嘉もえ・島田綾乃ら 主将の佐藤友花は選考合宿辞退 (2026/11/04)
-*   [日経/スポーツ] サッカーACLE、ガンバ大阪は浦項とドロー 鹿島も分ける (2026/11/04)
-*   [日経/スポーツ] ナダルさん、レアル・マドリード理事に 男子テニス元世界ランク1位 (2026/11/04)
-*   [読売/経済] モス、ウェブ会員のメールアドレスなど７５１万件が流出…「アララ」サイバー攻撃で (2026/11/04)
-*   [みんかぶ/商品債券] 金は大幅高で始まる＝NY金オープン (2026/11/04)
-*   [みんかぶ/商品債券] 原油は９３ドル台前半に急落＝NY原油オープン (2026/11/04)
-*   [みんかぶ/商品債券] 米１０年債は４．９２％付近に下げて始まる＝NY債券オープン (2026/11/04)
-*   [産経/経済] 米9月貿易赤字0.7％減、3カ月ぶり縮小 コンピューター関連や大豆などの輸出増加 (2026/11/04)
-*   [産経/スポーツ] 東京ガス、JR四国、日本通運が2回戦へ 社会人野球日本選手権 (2026/11/04)
-*   [産経/スポーツ] ナダルさん、レアル・マドリード理事に 男子テニス元世界1位「できる限り貢献したい」 (2026/11/04)
-*   [産経/スポーツ] 琉球、A東京は初黒星 ともに1勝1敗 バスケ東アジアスーパーリーグ (2026/11/04)
-*   [読売/経済] GMO問題受け総務省が要請した「ブロッキング」、NTT島田明社長「ガイドライン整備や法制化が重要」 (2026/11/04)
-*   [日経/社会] 天皇皇后両陛下と愛子さま、ルーヴル美術館展に 東京・国立新美術館 (2026/11/04)
-*   [産経/経済] ソニーFGに立ち入り検査 金融庁、管理実態把握へ 生保子会社が顧客から金銭不適切受領 (2026/11/04)
-*   [産経/経済] H2O売上高予想を下方修正 百貨店事業は堅調も… 消費減税前「買い控え起きてくる」 (2026/11/04)
-*   [産経/スポーツ] 世界選手権AS代表に比嘉もえ、島田綾乃ら アジア大会主将の佐藤友花は合宿辞退で外れる (2026/11/04)
-*   [日経/スポーツ] 巨人育成指名の中3・関蓮太郎、入団を表明 目標は「バレンティン」 (2026/11/04)
-*   [日経/スポーツ] 競泳・本多灯は1年9カ月資格停止 東京五輪銀、ロス絶望 (2026/11/04)
-*   [読売/経済] 無印良品の「MUJI Card」、クレジットカードの「番号全桁」含む会員情報１０９万件漏えいか (2026/11/04)
-*   [日経/マーケット] 三井化学がJSR買収へ 1.3兆円で政府系JICから、半導体材料で成長 (2026/11/04)
-*   [日経/政治経済] 日本郵便の出資先にサイバー攻撃 国際配送の一部停止 (2026/11/04)
-*   [産経/スポーツ] 人身事故で有罪判決の競泳・本多灯、資格停止1年9カ月 ロス五輪への道絶たれる (2026/11/04)
-*   [読売/経済] 総務省、メール配信サービス利用者のメールアドレス７７５件など外部流出…「アララ」不正アクセスで (2026/11/04)
-*   [産経/政治] 参政党の最上佳則東京都議が不適切発言でボードメンバー辞任、子宮頸がんを「風邪の一部」 (2026/11/04)
-*   [日経/社会] 辺野古沖転覆の船の運航団体、一般市民の乗船取りやめ 遺族側に伝達 (2026/11/04)
-*   [産経/政治] 大阪府市「ナンバーワン副首都目指す」 国への提言案の中間報告公表 都構想実現も要点に (2026/11/04)
-*   [産経/スポーツ] 森保監督「なくても仕方ない」 12月30日のサッカー親善試合、アジア杯延期で開催不透明… (2026/11/04)
-*   [産経/社会] 辺野古転覆事故の運航団体、一般市民乗船を中止 遺族側に伝達「危険な海への案内間違い」 (2026/11/04)
-*   [産経/政治] 参院憲法審、今国会で初討議 自民速やかな集約訴えるも「護憲派」野党の壁 (2026/11/04)
-*   [日経/マーケット] 商社4社の27年3月期上振れ、資源追い風 三菱商事は1兆円自社株買い (2026/11/04)
-*   [日経/社会] 29歳男が祖父母ら殺害の罪認める 静岡・菊川の事件で初公判 (2026/11/04)
-*   [日経/社会] 津の住宅火災、4遺体は4〜13歳の子ども (2026/11/04)
-*   [産経/社会] 「KENZO 新宿109」名義の動画配信者の男 恐喝未遂容疑で再逮捕 京都府警 (2026/11/04)
-*   [産経/政治] 消費税国会も大詰め 与野党が6日の首相入り質疑で合意も…委員会採決は折り合わず (2026/11/04)
-*   [みんかぶ/株式] 欧州株 引き続き上げ幅を拡大、米中間選挙結果に対する市場評価が前向きに変化 (2026/11/04)
-*   [産経/スポーツ] ソフトバンク柳田が首の手術、復帰まで2～3カ月 上沢は右肘、復帰まで3～4カ月 (2026/11/04)
-*   [産経/社会] 金属製柱が停車中の路線バス直撃 ガラス割るもけが人なし 大阪・茨木 (2026/11/04)
-*   [読売/経済] 大型魚の漁獲枠が増える太平洋クロマグロ、来年の国内漁獲枠は２段階で提示へ…１月までに一定量を先行配分 (2026/11/04)
-*   [産経/社会] 「人権や尊厳損なう」指摘 高知障害者虐待死で検証委 利用者を裸のまま食事させ放置 (2026/11/04)
-*   [読売/経済] 住友不動産、「分譲住宅」問い合わせた顧客のメールアドレス２０万件流出か…「アララ」不正アクセスの影響 (2026/11/04)
-*   [産経/社会] 30歳の小学校教諭、未成年と性交し懲戒免職 (2026/11/04)
-*   [産経/社会] 強盗致傷罪で男3人を起訴 アジア食料品店で現金奪い客が負傷 福岡地検 (2026/11/04)
-*   [産経/スポーツ] 森保一監督「アジア杯延期で変わったことはない」世界一へ姿勢ぶらさず サッカー日本代表 (2026/11/04)
-*   [産経/社会] 大阪・ミナミのビルで無許可ナイトクラブ営業か ベトナム国籍の男女ら5人逮捕 大阪府警 (2026/11/04)
-*   [産経/社会] 大阪府、アドレス漏洩か アララ不正アクセス影響 暗証番号など入力せぬよう注意呼びかけ (2026/11/04)
-*   [産経/社会] 熊本地震避難者千人下回る 家屋被害8万6000棟超える (2026/11/04)
-*   [産経/社会] 学生らがDJポリスや指紋採取を体験 警視庁神田署が採用イベント (2026/11/04)
-*   [日経/政治経済] 10月のユーロ圏消費者物価、4.0%上昇 4カ月連続で加速 (2026/11/04)
-*   [日経/政治経済] 外為特会剰余金「全額を継続して財源に」 諮問会議で民間議員が提言 (2026/11/04)
-*   [みんかぶ/株式] 欧州株 上げ幅拡大、トランプ時代の終わりの始まりとの声も (2026/11/04)
-*   [日経/政治経済] 武部農相「返金含め適切に対応」 公共事業受注の複数社から献金報道 (2026/11/04)
-*   [日経/政治経済] 26年上半期の日本人出生数、11年ぶりプラス 0.4%増の32万人 (2026/11/04)
-*   [みんかぶ/商品債券] ユーロ圏 １０年債利回り格差 仏１５８ｂｐに縮小、１０/３０以来の水準 (2026/11/04)
-*   [日経/政治経済] 生活保護受けるひとり親の車保有、厚労省が緩和検討 現状は原則不可 (2026/11/04)
-*   [みんかぶ/要人発言] スウェーデン中銀 向こう1年に追加利上げの可能性 (2026/11/04)
-*   [みんかぶ/商品債券] アジア・コモディティ騰落率ランキング＝11/04営業日時点 (2026/11/04)
-*   [読売/社会] 電車内に忘れ物の傘が「アート傘」に…東京芸大の学生がペイントした１００点ズラリ (2026/11/04)
-*   [みんかぶ/要人発言] これから／予定／イベント (2026/11/04)
-*   [読売/社会] とろ～り 食べて (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 民主党の皆さん、おめでとうございます (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 共和党の敗北の一因はイラン戦争にある (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 拒否権は私が持つ最も強力な権限の1つだ (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 選挙結果に驚いた (2026/11/04)
-*   [みんかぶ/要人発言] 民主上院トップのシューマー氏 大統領がいようがいまいが我々は成果を上げる (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 民主党との協力に前向き (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 共和党敗北は投票用紙にわたしの名前が載っていなかったせいだ (2026/11/04)
-*   [みんかぶ/要人発言] トランプ米大統領 選挙結果を受け入れる (2026/11/04)
-*   [読売/政治] 高市首相とトランプ氏の「世界で最も良好な関係」は日本外交最大の資産…森聡・慶大教授インタビュー (2026/11/04)
-*   [読売/政治] ［憲法公布８０年］＜４＞緊急事態「政令」も議論を…関西学院大教授 井上武史氏 (2026/11/04)
-*   [読売/政治] 高市首相の一日（3日） (2026/11/04)
+**●●時事●●**
+（日本時間 2026/11/06）
+ロシア、ＪＴ資産を管理下に 対日圧力強化の一環か (時事) 2026/11/05
+ネタニヤフ氏退陣も、イスラエル総選挙の結果確定 組閣へ協議開始、野党 (時事) 2026/11/05
+「選挙干渉用宇宙レーザー機能せず」 共和大敗でマスク氏ぼやき―米中間 (時事) 2026/11/05
+八代工場の紙生産再開断念へ 熊本地震で被災、拠点は維持の方向―日本製 (時事) 2026/11/05
+ドコモ、最大３０万件の情報流出 不正アクセスで (時事) 2026/11/05
+ヘグセス国防長官に交代説 トランプ氏は否定―米報道 (時事) 2026/11/05
+旭日大綬章はトヨタ会長ら 河野元統幕長瑞大、俳優松坂さん旭小―秋の叙 (時事) 2026/11/05
+ロシア産軽油タンカーが針路変更 米との取引「頓挫」か―英紙 (時事) 2026/11/05
+ＮＹ株急反落、１８００ドル超安 急騰反動とＡＩ懸念 (時事) 2026/11/06
 
-### 日経・読売、テクノロジー
-*   [日経] ウーバー「27年末まで新規の買収凍結」 7〜9月増収1割どまり (2026/11/05)
-*   [日経] マスク帝国、米民主旋風が逆風に スペースXとテスラ株は急落 (2026/11/05)
-*   [日経] 年収600万円では米国に負ける、研究者100人招致狙うも採用1人 阪大 (2026/11/05)
-*   [日経] 農業テック、地域に根付け 埼玉・深谷が市内実証の支援拡充 (2026/11/05)
-*   [日経] 中国・欧卡智舶が追加資金調達 自動操船AIをレジャー船へ拡大展開 (2026/11/05)
-*   [日経] 下水道の腐食リスクを細菌データで予測 東北大学、陥没防止へ新手法 (2026/11/05)
-*   [日経] 詐欺メール713万通、アララ配信基盤「乗っ取る」 漏洩の影響広がる (2026/11/04)
-*   [日経] 中国テンセントやムーンショットAI、サイバー攻撃能力抑制モデル公開 (2026/11/04)
-*   [日経] 岡山をAI先進県に、推進機構が設立イベント 勉強会など活動本格化 (2026/11/04)
-*   [日経] 三井住友FL、企業向けDXで米AI新興と提携 (2026/11/04)
-*   [日経] 欧州スーパーの冷凍庫にサイバー攻撃 食品解凍され廃棄、IoT機器に隙 (2026/11/04)
-*   [日経] 七十七銀行、東北大学発クリーンプラネットに投資 常温核融合を研究 (2026/11/04)
-*   [日経] 米新興Replit、日本に拠点設立 三井住友FLがサービス販売 (2026/11/04)
-*   [日経] 台湾液晶のAUO、TSMCに台中工場を売却 (2026/11/04)
-*   [日経] 商品情報、若年層はインフルエンサーより生成AI信頼 サイバー調査 (2026/11/04)
+**●●日経・読売・産経・47・みんかぶ●●**
+（日本時間 2026/11/06）
+[みんかぶ/商品債券] 米１０年債利回り低下 リスク回避の雰囲気が広がる＝ＮＹ債券 (2026/11/06)
+[産経/政治] 名もなき橋に愛称を…茨城・筑西で「命名権」販売 県内最多865の橋、685は名前なく (2026/11/06)
+[産経/経済] 阪神電鉄が新型車両3000系を公開 来春デビュー、初の座席指定「らくやんシート」導入 (2026/11/06)
+[読売/経済] かんぽ生命「インパクト投資」を1000億円に倍増目標…社会課題解決と収益の二兎追う (2026/11/06)
+[みんかぶ/商品債券] 反発、イランの船舶攻撃は続く＝ＮＹ原油概況 (2026/11/06)
+[みんかぶ/商品債券] 続伸、米国債の利回り低下で押し目買い＝ＮＹ金概況 (2026/11/06)
+[産経/政治] 「花火観賞とヨガ楽しんで」兵庫・稲美町に観光まちづくり協会が発足、7日にイベント開催 (2026/11/06)
+[みんかぶ/株式] ＮＹ各市場 ５時台 ダウ平均は１６４５ドル安 シカゴ日経平均先物は５万８１２５円 (2026/11/06)
+[産経/政治] 高市日誌5日（木） (2026/11/06)
+[日経/政治経済] はしかなど乳幼児ワクチン、厚労省が生産設備更新を補助 安定供給へ (2026/11/06)
+[日経/社会] 内部告発の報復解雇に刑事罰導入 改正法12月施行、企業の体制に課題 (2026/11/06)
+[日経/社会] 南極レーダー使い天気予報の精度改善 極地研など、「大気の川」予測 (2026/11/06)
+[日経/社会] クレカ情報、どこまで漏れたら再発行？ 一部でも詐欺メールには注意 (2026/11/06)
+[日経/ビジネス] 福岡で高まる読書熱、ジュンク堂6年ぶり天神回帰 個性競う書店各社 (2026/11/06)
+[日経/ビジネス] 日本GLPの帖佐社長「運転手不足、物流施設から解決」入居社で共同配送 (2026/11/06)
+[日経/ビジネス] 三菱UFJの新銀行、キャッシュカード廃止の狙いは 動画でクイック解説 (2026/11/06)
+[日経/ビジネス] 「災害なき国」襲う煙害 シンガポール、越境ヘイズに苦慮 (2026/11/06)
+[日経/ビジネス] 日鉄物産・園田社長、鉄スクラップ集荷へ「自社ヤード事業の拡大検討」 (2026/11/06)
+[日経/ビジネス] 電子部品のアラタス社長「オムロンからの独立は成長戦略」 (2026/11/06)
+[日経/ビジネス] 東京ガスの人事部長に聞く新卒採用「自ら学び続ける姿勢が大事」 (2026/11/06)
+[日経/ビジネス] 賢い家電に乗っ取りリスク サイバー攻撃でエアコン停止や盗撮の恐れ (2026/11/06)
+[日経/ビジネス] スペースX出身者、起業の連鎖で広げる宇宙経済圏 (2026/11/06)
+[日経/ビジネス] 東京エレクトロン、装置生産を手作業から自動化へ AIやロボ活用 (2026/11/06)
+[日経/スポーツ] 広島・床田寛樹、FA権行使へ 今季開幕投手 (2026/11/06)
+[日経/スポーツ] 美ノ海、遅咲き沖縄勢初の三役 8日初日の九州場所で地元の星に (2026/11/06)
+[読売/政治] 高市首相の一日（５日） (2026/11/06)
+[読売/政治] 社保改革 年度内に工程表 「負担率」上昇抑止目指す (2026/11/06)
+[読売/政治] 自維、献金規制議論を警戒 国民「優先的に審議」要求 (2026/11/06)
+[読売/政治] 消費税減税 支援金・財源 議論半ば…国民・公明 首相答弁で判断 ６日採決へ (2026/11/06)
+[読売/政治] 自民、９条集中討議 提案 野党、別テーマ主張…衆院憲法審 (2026/11/06)
+[読売/経済] 成長戦略 １６の「重点項目」 政府選定へ…ＡＩや自動運転など (2026/11/06)
+[読売/経済] 英中銀利上げ ３年３か月ぶり (2026/11/06)
+[読売/経済] 利上げペース加速「適切」…日銀９月議事要旨 「経済底堅い」意見 (2026/11/06)
+[読売/経済] 個人向け国債に２０年物 財務省検討…「複利型」の導入も (2026/11/06)
+[読売/経済] 装備品「生産基盤強化を」…財政審部会 防衛力向上へ提言 (2026/11/06)
+[読売/経済] 「実質株主」把握 制度化へ 法制審部会検討…「開示拒否に議決権停止」賛否 (2026/11/06)
+[読売/経済] 物価高 リニア遅れ懸念 値上げの柔軟化 国に要望…ＪＲ東海副社長 (2026/11/06)
+[読売/経済] 人材育成に「教育本部」 トヨタ新設へ…トップ 豊田会長兼務 (2026/11/06)
+[読売/経済] トヨタ 最終益上方修正 ３・５兆円見通し 原価改善、価格改定…２７年３月期 (2026/11/06)
+[読売/社会] 群馬３人死亡 元運転手 ２審も懲役２０年…東京高裁 「飲酒影響で事故」支持 (2026/11/06)
+[読売/社会] ［メディア］災害報道、ＡＩ課題 議論 マスコミ倫理懇始まる (2026/11/06)
+[読売/社会] 「１回でいいから会いたい」 拉致４９年 横田早紀江さん会見 (2026/11/06)
+[日経/マーケット] 米ナスダック一時5%急落、ハイテク株総崩れ NYダウも1700ドル安 (2026/11/06)
+[みんかぶ/株式] 原油は２．７２％高＝ＮＹ原油終値 (2026/11/06)
+[みんかぶ/株式] ＮＹ各市場 ４時台 ダウ平均は１６５５ドル安 ナスダックは５．０％の急落 (2026/11/06)
+[日経/マーケット] 長期金利、3カ月ぶり低さ 10年債入札「弱め」でも売りは限定 (2026/11/06)
+[日経/マーケット] 京都中央信金、4〜9月の投信販売額が最高 (2026/11/06)
+[日経/マーケット] AIトークン、独身の日セールで爆売れ それでも「ツルハシ株」急落のわけ (2026/11/06)
+[日経/社会] 東日本大震災の震源域、「ひずみの蓄積」再開か 東北大学など報告 (2026/11/06)
+[日経/マーケット] 第一三共、抗がん剤躍進で在庫4倍に急増 資金効率低下の死角 (2026/11/06)
+[日経/マーケット] 日経平均、2027年末に7万5000円 アセマネOneの吉沢氏 (2026/11/06)
+[みんかぶ/株式] 金は０．９９％高＝ＮＹ金終値 (2026/11/06)
+[日経/マーケット] ドイツ株5日 反落、米国株の軟調推移が重荷 防衛ラインメタル急落 (2026/11/06)
+[日経/マーケット] ロンドン株5日 反落、取引時間中には最高値上回る場面も (2026/11/06)
+[日経/マーケット] 欧州国債概況5日 英長期金利は横ばい圏、英中銀は利上げ発表 独長期金利は一時2カ月ぶり低水準 (2026/11/06)
+[みんかぶ/株式] ＮＹ各市場 ３時台 ダウ平均は１６６８ドル安 ナスダックは５．３％の急落 (2026/11/06)
+[みんかぶ/株式] ＮＹ各市場 ２時台 ダウ平均は１３２５ドル安 ナスダックは４．５％の急落 (2026/11/06)
+[日経/マーケット] ロンドン外為5日 英ポンド、対ドルで上値重い ユーロは小幅安に転じる (2026/11/06)
+[日経/スポーツ] ラグビー日本、「前高後低」の打開なるか 新国際大会の後半4連戦へ (2026/11/06)
+[日経/スポーツ] 見たくなる、楽しみにさせる監督・松井秀喜の力（三浦知良） (2026/11/06)
+[産経/社会] ハムスター55匹殺した罪で、高校職員に拘禁2年半求刑 被告「犠牲にした命に反省」 (2026/11/06)
+[産経/社会] バイク販売大手レッドバロンの創業者遺族、28億円申告漏れ 名古屋国税局の税務調査 (2026/11/06)
+[読売/社会] サイバー攻撃で個人情報などの流出が判明した企業・団体の一覧 (2026/11/06)
+[みんかぶ/株式] ＮＹ各市場 １時台 ダウ平均は１２３８ドル安 ナスダックは５．１％の急落 シカゴ日経平均先物は６万円割れ (2026/11/06)
+[47/政治] 米ロス市長に民主急進左派 ラマン市議、現職破る (2026/11/06)
+[47/政治] ミャンマー来年4月に補選 親軍政権 (2026/11/06)
+[47/政治] 普天間返還日の明確化を 沖縄知事、政府に要請へ (2026/11/06)
+[47/政治] 速報沖縄知事、普天間返還期日の明確化要請へ (2026/11/06)
+[47/政治] メアド３０００件超流出の可能性 マイナシステム不正アクセス (2026/11/06)
+[47/政治] 神奈川の１０町使用のシステムで不正アクセス アドレス漏えいの可能性 (2026/11/06)
+[47/政治] 「大阪都」毎年500億円黒字か 特別区移行後、IRが後押し (2026/11/06)
+[47/政治] 苫小牧市、メアド最大3561件漏えいか 来庁予約システム利用者分 (2026/11/06)
+[47/政治] サイバー攻撃に官民チーム 企業へ派遣、初動対応支援 (2026/11/06)
+[47/政治] 花巻市､マイナンバーカード予約のメールアドレス約5000人分流出の可能性 個人番号漏えいなし､不正アクセス (2026/11/06)
+[47/経済] NY原油反発、終値90ドル台 中東供給不安で買い優勢 (2026/11/06)
+[47/経済] グーグル、データ拠点新設 米西部、電力供給で配慮 (2026/11/06)
+[47/経済] 電力網費用は事業者負担に 米オープンAIが政策提言 (2026/11/06)
+[47/経済] 為替相場 6日（日本時間 7時） (2026/11/06)
+[47/経済] NY株式 5日終値 (2026/11/06)
+[47/経済] 速報NY株大幅反落、1833ドル安 (2026/11/06)
+[47/経済] 「ひらがじゃん 牌ばーじょん」が人気に マージャン着想の知育商品経済トレンド／ヒットのヒント (2026/11/06)
+[47/経済] NY株、一時1700ドル安 AI規制不安でハイテク売り (2026/11/06)
+[47/経済] 速報NY株、一時1700ドル超安 (2026/11/06)
+[47/経済] 為替相場 6日（日本時間 2時） (2026/11/06)
+[47/社会] 群馬県警が金密輸で初摘発 シンガポールから帰国した容疑の男ら２人逮捕 (2026/11/06)
+[47/社会] 展示用器具整え本格的作品展に対応 JOMOスクエア（群馬・前橋市）リニューアル きょう6日から画家2人による作品展 (2026/11/06)
+[47/社会] 宮崎県内経済８～１０月「緩やかに回復」 財務事務所、判断据え置き (2026/11/06)
+[47/社会] 山裾に帯状の雲や霧 前日の雨と夜間の気温低下で発生 群馬県庁（群馬・前橋市）展望ホール (2026/11/06)
+[47/社会] ８日に感謝祭 エルキューブ八山田 (2026/11/06)
+[47/社会] 「電動爪削り」高齢者けが 事故相次ぐ、注意呼びかけ (2026/11/06)
+[47/社会] ８日に感謝祭 エルキューブ八山田 郡山 (2026/11/06)
+[47/社会] 今冬 気温高く雪少ない 地方気象台が予報示す 県雪害予防協議会 (2026/11/06)
+[47/社会] 栃木県内の熱中症搬送数、過去5年で最少に 異例の気象が影響か (2026/11/06)
+[47/社会] 八代工場の用紙生産断念 日本製紙、熊本地震被災 (2026/11/06)
+[47/スポーツ] 大谷、鈴木が最終候補 シルバースラッガー賞 (2026/11/06)
+[47/スポーツ] 広島床田がFA権行使へ 通算65勝の左投手 (2026/11/06)
+[47/スポーツ] 兄妹でアジア大会へ 吉野晃太朗さん（植田小５年） 文香さん（同１年） スポーツスタッキング 東北勢で初選出 (2026/11/06)
+[47/スポーツ] アジアパラ柔道５２キロ級（全盲）金 半谷選手と園児交流 花束や手作りメダル贈る (2026/11/06)
+[47/スポーツ] 宇都宮ブレックス、プレミア初代王者へ奮起必要 スタートダッシュできず３連敗も (2026/11/06)
+[47/スポーツ] 速報広島の床田投手がFA権行使へ (2026/11/06)
+[47/スポーツ] 記者ノート＝敗戦を成長の糧に (2026/11/06)
+[47/スポーツ] テゲバ、来季のＪ１ライセンス取得へ (2026/11/06)
+[47/スポーツ] ［Ｗリーグ２部・新潟ＢＢラビッツ］11月7日から三菱電機と開幕2連戦！昨季の悔しさバネに勝利目指す (2026/11/06)
+[47/スポーツ] 先発に北原、ディアンズら ラグビーのウェールズ戦 (2026/11/06)
+[日経/スポーツ] 社会人野球、西濃運輸とヤマハが8強 日本選手権 (2026/11/05)
+[日経/スポーツ] サッカーACL2、町田4連勝で決勝Tへ (2026/11/05)
+[日経/スポーツ] 世界トランポリン、森ひかる・松本悠生ら準決勝へ (2026/11/05)
+[産経/経済] 東京海上系ネット損保で漏えいか 契約者氏名や口座番号など74件 (2026/11/05)
+[みんかぶ/商品債券] 金は上昇して始まる＝ＮＹ金オープン (2026/11/05)
+[みんかぶ/商品債券] 原油は８９ドル台に反発＝ＮＹ原油オープン (2026/11/05)
+[みんかぶ/商品債券] 米１０年債は４．９０％付近に上昇して始まる＝ＮＹ債券オープン (2026/11/05)
+[産経/スポーツ] 森ひかるや田中希湖、松本悠生、岸大貴ら準決勝へ 世界トランポリン個人予選 (2026/11/05)
+[産経/社会] 中学1年の男子生徒が急行電車と衝突し死亡 ガラス割れ運転士軽傷 近鉄京都線山田川駅 (2026/11/05)
+[産経/経済] JTロシア事業を暫定管理下に プーチン氏が大統領令に署名 (2026/11/05)
+[産経/経済] アイリスオーヤマ公式通販サイトに不正アクセス 770万人分情報漏えいか (2026/11/05)
+[産経/スポーツ] 北原璃久が先発入り、ディアンズと斎藤直人が共同主将 ラグビーのウェールズ戦 (2026/11/05)
+[産経/経済] 日本製紙、被災した熊本・八代工場での新聞用紙生産断念 拠点機能は維持 (2026/11/05)
+[日経/スポーツ] LIVゴルフ、英企業が477億円投資計画を撤回 米メディア報道 (2026/11/05)
+[日経/社会] 自転車青切符は1万5000件、「ながら運転」が最多 制度導入半年 (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 １２月までに、戦争の行方についてもっと詳しい情報得られること願う (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 我々の行動が遅すぎたとは考えていない (2026/11/05)
+[日経/スポーツ] 佐野航、技術と気迫で欧州CL初得点 ホームで大歓声 (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 過去４８時間のニュースは、今後の見通しに重要な影響を与える (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 イラン戦争をめぐり好材料があれば、インフレ率のピークは５％を幾分か下回る可能性も (2026/11/05)
+[日経/スポーツ] パラクライミング、福岡で国内初のワールドシリーズ開幕 (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 足元の原油価格の下落はポジティブなニュースだ (2026/11/05)
+[日経/社会] 災害や戦後80年の報道議論、広島でマス倫懇全国大会始まる (2026/11/05)
+[産経/経済] ローム業績予想を上方修正 純損益450億円の黒字に、想定を上回る需要続く (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 国内の既存のインフレ圧力は依然として高い (2026/11/05)
+[みんかぶ/要人発言] ベイリー英中銀総裁 イラン戦争の影響を抑える必要がある (2026/11/05)
+[産経/経済] JR西、純利益を上方修正 令和9年3月期予想、鉄道好調と見込む (2026/11/05)
+[日経/政治経済] 日本、ベトナムの小型原子炉導入で協力 首脳会談で合意へ (2026/11/05)
+[産経/経済] 東ガス系、釧路にデータセンター設立へ 2027年3月稼働 将来的に規模拡大も (2026/11/05)
+[産経/スポーツ] 日本サッカー協会の宮本恒靖会長、FIFA現会長を「支持すると言った訳ではない」 (2026/11/05)
+[産経/経済] JPX、スタートアップと投資家をつなぐ企業に3億円出資 非上場株を売買しやすく (2026/11/05)
+[産経/経済] SBGのスイス企業のロボット事業買収計画、中国当局が不許可 (2026/11/05)
+[産経/スポーツ] 高橋彩華が6アンダーで首位発進「日本ツアーもレベルが高いって思ってもらいたい」 (2026/11/05)
+[産経/スポーツ] ロナルド「背番号7を返上する」とメッセージ サッカー・ポルトガル代表引退を表明 (2026/11/05)
+[産経/スポーツ] 都市対抗を制した西濃運輸と2連覇を目指すヤマハが8強 社会人野球日本選手権 (2026/11/05)
+[産経/社会] プルデンシャルの調査報告書を弁護士らが批判 〝格付け〟は下から2番目の「D」が最多 (2026/11/05)
+[みんかぶ/要人発言] 英中銀総裁 今後、長期の連続利上げは避けられないわけではない (2026/11/05)
+[みんかぶ/要人発言] 英中銀 9月以降、物価上昇の2次波及効果のリスクが高まっている (2026/11/05)
+[みんかぶ/要人発言] 英中銀 インフレ率が27年第2四半期に4.9%のピークに達すると予測 (2026/11/05)
+[日経/政治経済] 「防災ゆうストレージ」で情報漏洩疑い、アララ不正アクセスで (2026/11/05)
+[産経/政治] 「津波防災の日」に和歌山県庁で政府本部運営訓練 発災後72時間の対応など確認 (2026/11/05)
+[産経/社会] JAわかやま派遣職員が109万円着服 紀の川市役所で窓口業務担当 (2026/11/05)
+[産経/スポーツ] FIFA会長選に立候補表明した田嶋幸三氏「決断したのは先週」 主な一問一答 (2026/11/05)
+[日経/社会] 野間文芸賞に江國香織さん 出版文化賞に彬子さま (2026/11/05)
+[日経/政治経済] 消防庁の安否確認システムに不正アクセス 情報漏洩は確認されず (2026/11/05)
+[産経/社会] 兵庫・宍粟市で住宅全焼、焼け跡から1人の遺体 住人の妻と連絡とれず (2026/11/05)
+[日経/社会] 滋賀・日野町事件の再審協議、弁護側が検察の証拠開示対応を批判 (2026/11/05)
+[産経/スポーツ] サッカー日本代表の森保一監督年内で勇退へ 27年3月に大岩剛監督初陣 (2026/11/05)
+[日経/社会] 群馬3人死亡事故で再び懲役20年、元運転手の控訴棄却 東京高裁 (2026/11/05)
+[産経/社会] 日野町事件の再審公判、弁護側はアリバイ立証へ 検察側は新たに57点の証拠開示 (2026/11/05)
+[産経/スポーツ] 千葉百音、右足首捻挫から「できる限りのことをやってきた」 フィギュアGP中国杯へ (2026/11/05)
+[読売/社会] 能登地震でビル倒壊、妻子亡くした男性が国とビル所有会社を提訴…「地震ではなくビル倒れたことで亡くなった」 (2026/11/05)
+[産経/社会] 「SNSで中傷」 広陵高元野球部員が提訴 加害者らに損害賠償求める (2026/11/05)
+[読売/社会] 金銭授受疑惑の福岡県議会、「県議会のドン」蔵内勇夫前議長が改めて疑惑否定…実名証言に「受け取っていない」 (2026/11/05)
+[産経/政治] 「内容が不透明」消費減税法案巡り野党は反対姿勢崩さず 与党は6日の衆院通過目指す (2026/11/05)
+[読売/社会] 小学５年男児の父親が教室に押し入り児童２人の頬を平手打ち、子ども同士のトラブルで乗り込んだか…名古屋市 (2026/11/05)
+[産経/スポーツ] 佐藤駿V3へ向けて「SPで感触つかみ、いい演技を」 フィギュア中国杯6日開幕 (2026/11/05)
+[産経/社会] 台風による多摩川浸水、令和9年7月判決 住民や事業者ら、川崎市に5億円請求 (2026/11/05)
+[産経/政治] 米中間選「中国には好機か」作家の門田隆将氏が講演 名古屋「正論」懇話会 (2026/11/05)
+[日経/政治経済] 日本郵便、顧客情報3763件漏洩 委託先に不正アクセス (2026/11/05)
+[産経/社会] 奈良の2遺体、無理心中か 夫婦、ともに窒息死 玄関施錠で室内に争った形跡なし (2026/11/05)
+[読売/社会] 千葉・船橋市の人口、政令市の静岡を上回る…政令市移行は考えず「中核市の権限を最大限に活用」 (2026/11/05)
+[産経/政治] 衆院選挙制度改革で3党が実務者協議 「比例復活」厳格化で参政に打撃 2月衆院選で試算 (2026/11/05)
+[産経/政治] 4特別区で毎年度500億円の黒字 移行後10年間の財政試算が判明 大阪都構想の法定協 (2026/11/05)
+[産経/政治] 衆院憲法審で自民「9条の集中討議」提案 国民民主「合意得られる項目の絞り込みを」 (2026/11/05)
+[産経/政治] 高市首相、EUの欧州EV優遇法案に強い懸念伝達 マクロン仏大統領と電話会談 (2026/11/05)
+[みんかぶ/株式] 欧州株 上げ幅やや縮小、英ＦＴ指数は０．６５％高 (2026/11/05)
+[日経/政治経済] 社会保障の負担率下げへ、全世代会議が再開 高齢者給付の抑制めざす (2026/11/05)
+[日経/政治経済] 浸水域の居住者、50年に436万人削減案 財制審が土地利用規制を提起 (2026/11/05)
+[読売/社会] 時事通信社写真部所属の２０代男性社員、プロ野球４球団の練習球を無断で持ち帰る…フリマサイトで売却 (2026/11/05)
+[日経/政治経済] 過疎地の訪問介護、移動やキャンセル費用を報酬に反映 厚労省検討 (2026/11/05)
+[読売/社会] 新名神６人死亡事故、「ながらスマホ」元運転手に法定刑上限「拘禁刑７年」の判決確定…双方控訴せず (2026/11/05)
+[日経/政治経済] 防衛費「国債発行に頼らず」 財制審、安定財源の確保を提言 (2026/11/05)
+[みんかぶ/商品債券] ユーロ圏 １０年債利回り格差 仏１４８ｂｐに縮小、１０/２０以来の水準 (2026/11/05)
+[みんかぶ/株式] アジア株 総じて上昇、韓国株と台湾株は大幅安 (2026/11/05)
+[日経/政治経済] ガソリン補助縮小「順次解消いい方向」 日商会頭 (2026/11/05)
+[みんかぶ/株式] 香港株 ハンセン指数は３．６７％高の２４７９６．９８で取引終了 (2026/11/05)
+[みんかぶ/商品債券] アジア・コモディティ騰落率ランキング＝11/05営業日時点 (2026/11/05)
+[みんかぶ/商品債券] ＮＹ金 時間外取引 ４１３５ドル付近、本日も堅調 (2026/11/05)
+[みんかぶ/商品債券] ＮＹ原油 時間外取引 続落、一時８６ドル台 (2026/11/05)
+[読売/政治] 米国による制裁で資金繰り悪化のＩＣＣへ、日本からの分担金前倒し拠出で政府調整 (2026/11/05)
+[読売/政治] 合区解消へ 改憲要否議論…参院憲法審 今国会初開催 (2026/11/05)
+[読売/政治] 高市首相の一日（４日） (2026/11/05)
+[読売/政治] 消費税 衆院審議大詰め 自民が採決日程提案…参院少数 野党に配慮 (2026/11/05)
+[読売/政治] ［安保新時代］３文書改定 自維１０日初会合 (2026/11/05)
 
-### NYタイムズ
-*   トランプ氏は敗北したが、危険性は増すばかり - NYタイムズ (2026/11/05)
-*   民主党の議題：トランプ氏とその家族の捜査 - NYタイムズ (2026/11/05)
-*   株式は民主党が議会を制したことで上昇 - NYタイムズ (2026/11/05)
-*   控訴裁判所、マムダニ氏によるピエ・ア・テール税の推進を許可 - NYタイムズ (2026/11/05)
-*   CVS、ドラッグストア事業を分割、より大きければ良いという時代に終止符 - NYタイムズ (2026/11/05)
-*   イーロン・マスク氏が支援した候補者がテキサス州で敗北した後、SpaceXとTeslaの株価は急落 - NYタイムズ (2026/11/05)
-*   トランプ氏は民主党の勝利を望んでいた - NYタイムズ (2026/11/05)
-*   民主党の躍進により、議会はトランプ氏をチェックする権限を再主張する準備が整う - NYタイムズ (2026/11/05)
-*   南西部は干上がっている。最近の洪水はそれを潤すことができるか？ - NYタイムズ (2026/11/05)
-*   バイラル動画が母親の中国食料品店を救うことができるか？ - NYタイムズ (2026/11/05)
-*   ハキーム・ジェフリーズについて知っておくべき5つのこと - NYタイムズ (2026/11/05)
-*   イスラエルの大統領、選挙後の膠着状態を打破する上で重要な役割を果たす可能性がある - NYタイムズ (2026/11/04)
-*   「デューン：パート3」のため、ティモシー・シャラメ、ゼンデイヤ、友人たちが三部作について語る - NYタイムズ (2026/11/04)
+**●●日経・読売、テクノロジー●●**
+（日本時間）
+[日経] 釣り人の魚が一瞬で消えた、ホホジロザメが下から一撃 (2026/11/06)
+[日経] 南極レーダー使い天気予報の精度改善 極地研など、「大気の川」予測 (2026/11/06)
+[日経] スペースX出身者、起業の連鎖で広げる宇宙経済圏 (2026/11/06)
+[読売] ［気候危機 ＣＯＰ３１を前に］＜下＞米欧 石油「容認」へ転換 (2026/11/06)
+[日経] 東日本大震災の震源域、「ひずみの蓄積」再開か 東北大学など報告 (2026/11/06)
+[日経] プリファード、翻訳特化型のLLMを公開 パラメーター数を4種用意 (2026/11/05)
+[日経] 日東紡、半導体用ガラス材料に200億円投資 29年度に生産能力3.6倍 (2026/11/05)
+[日経] AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 (2026/11/05)
+[日経] JX金属、AI半導体向け硫酸銅の生産能力5割増 (2026/11/05)
+[日経] 中国半導体メモリー大手YMTCがIPO計画を延期 ロイター報道 (2026/11/05)
+[日経] 中国テンセントやムーンショットAI、サイバー攻撃能力抑制モデル公開 (2026/11/05)
+[日経] YouTubeの体験型施設 Google、東京・渋谷に期間限定で開設 (2026/11/05)
+[日経] AI時代に羽ばたくユニコーンとなるには (2026/11/05)
+[日経] Google、データセンターの賃料3兆円保証 新興テラウルフの調達支援 (2026/11/05)
+[日経] 英アーム売上高27%増 7〜9月、データセンター向け堅調 (2026/11/05)
+[日経] ウーバー「27年末まで新規の買収凍結」 7〜9月増収1割どまり (2026/11/05)
 
-### WSJ
-*   トランプ氏、国防長官の留任巡り側近に相談 (2026/11/05)
-*   ブルーウェーブ、ウォール街に勝者と敗者もたらす (2026/11/05)
-*   バンス米副大統領、共和党の「敗因は戦争」 (2026/11/05)
-*   国際ニュース/アメリカ-ヨーロッパ-アジア-中東-アフリカ-中南米- WSJ日本版-jp.wsj.com - WSJ.com (2026/11/05)
-*   米中間選挙、データセンター推進派が敗北 (2026/11/05)
-*   米下院議長、少数党院内総務選に立候補せず (2026/11/05)
-*   イラン、米選挙結果を歓迎 軍事行動けん制 (2026/11/04)
-*   米中間選挙2026-WSJ日本版-jp.wsj.com - WSJ.com (2026/11/04)
-*   トランプ氏の調査と政策闘争、 米民主党の新たな政策課題に (2026/11/04)
-*   トランプ支配を粉砕、下された政治的審判 (2026/11/04)
-*   社説トランプ氏に審判下る (2026/11/04)
-*   民主圧勝で米議会奪還、形勢逆転を狙う (2026/11/04)
-*   民主が上下両院を奪還、トランプ氏に厳しい審判 (2026/11/04)
-*   テハーノ歌手、テキサス下院選で勝利 民主が奪還 (2026/11/04)
-*   タラリコ氏が勝利演説、「われわれはテキサスを取り戻した」 (2026/11/04)
-*   民主党、上下両院の多数派奪還 (2026/11/04)
-*   メーン上院選、共和コリンズ氏が敗北認める (2026/11/04)
-*   トランプ大統領、イラン戦争が共和党敗北の一因と認める (2026/11/04)
-*   トランプ氏、必要なら「拒否権を行使」 (2026/11/04)
-*   マスク氏、テキサス州への巨額の賭け実らず (2026/11/04)
-*   ライフ-WSJ日本版-jp.wsj.com - WSJ.com (2026/11/04)
-*   米民主党、上院の過半数を奪還 (2026/11/04)
-*   アイオワ上院選、民主のジョシュ・トゥレック氏が議席獲得 (2026/11/04)
-*   オハイオ州知事選、民主アクトン氏がラマスワミ氏に勝利 (2026/11/04)
-*   カンザス上院選、民主アダム・ハミルトン氏が歴史的勝利 (2026/11/04)
-*   サウスカロライナ上院選、共和党グラム氏が大番狂わせの敗北 (2026/11/04)
-*   トランプ氏、共和党の中間選挙敗北と距離置く構え (2026/11/04)
-*   オハイオ上院選、民主のシェロッド・ブラウン氏が劇的勝利 (2026/11/04)
-*   テキサス上院選、民主タラリコ氏勝利 (2026/11/04)
-*   社説米国の対イスラエル支援終了か？ (2026/11/04)
-*   ジョージア州知事選、民主ボトムズ氏が勝利 初の黒人女性知事に (2026/11/04)
-*   共和党、序盤の敗北で意気消沈 (2026/11/04)
-*   トランプ氏側近、共和党敗北の原因は「イラン戦争」 (2026/11/04)
-*   共和党ストラテジストにパニック広がる、序盤の結果受け (2026/11/04)
-*   米民主党、テキサス州の指標郡で序盤リード (2026/11/04)
-*   ニューハンプシャー上院選、民主パパス氏勝利 (2026/11/04)
-*   ノースカロライナ上院選で民主クーパー氏勝利、議席奪還 (2026/11/04)
-*   ペンシルベニア州知事選、ジョシュ・シャピロ氏が再選 (2026/11/04)
-*   民主オソフ上院議員、ジョージア州で再選 (2026/11/04)
-*   トランプ氏の支持率、2018年中間選挙を下回る (2026/11/04)
-*   米中間選挙、結果はいつ判明するか (2026/11/04)
-*   中東・アフリカ-WSJ日本版-jp.wsj.com - WSJ.com (2026/11/04)
-*   アップル株はAIブームの避難先、割高な「安全料」 (2026/11/04)
-*   中国が新疆で見せる商業的野心、人権侵害批判よそに (2026/11/04)
-*   ハーバード大生でも超過酷な講義 なぜ大人気なのか (2026/11/04)
-*   フィルム型サプリが新たなブーム、グミから乗り換え (2026/11/04)
+**●●yahoo●●**
+（日本時間 2026/11/06）
+6日 全国的に気温高く夏日予想も (Yahoo!ニュース) 2026/11/06
+首相 米大統領と協力していきたい (Yahoo!ニュース) 2026/11/06
+個人向け国債「複利型」導入検討 (Yahoo!ニュース) 2026/11/06
+自転車の青切符 半年で約1.6万件 (Yahoo!ニュース) 2026/11/06
+税の無駄など1445億円 検査院報告 (Yahoo!ニュース) 2026/11/06
+サイバー救援隊を創設へ 政府案 (Yahoo!ニュース) 2026/11/06
+めぐみさん拉致 母「会いたい」 (Yahoo!ニュース) 2026/11/06
+「フレネミー」26年流行語候補に (Yahoo!ニュース) 2026/11/06
+ルビオ国務長官が辞任検討か 報道 (Yahoo!ニュース) 2026/11/06
+露 JT資産を同国企業の管理下に (Yahoo!ニュース) 2026/11/06
+歴史的勝利 喜び広がるテキサス州 (Yahoo!ニュース) 2026/11/06
+米右派動揺「トランプ後」を模索 (Yahoo!ニュース) 2026/11/06
+米共和党 大敗の責任押し付け合い (Yahoo!ニュース) 2026/11/06
+バンス氏 米大統領と距離置く姿勢 (Yahoo!ニュース) 2026/11/06
+米共和党大敗 宣伝頼り示した限界 (Yahoo!ニュース) 2026/11/06
+イラン 大敗のトランプ氏を嘲笑 (Yahoo!ニュース) 2026/11/06
+NYダウ急落 一時1800ドル超安 (Yahoo!ニュース) 2026/11/06
+日本製紙 八代工場の紙生産断念へ (Yahoo!ニュース) 2026/11/06
+内外出版社が事業停止 破産申請へ (Yahoo!ニュース) 2026/11/06
+「ドンキ流トイザらス」が始動 (Yahoo!ニュース) 2026/11/06
+シヤチハタ 化粧品事業に参入へ (Yahoo!ニュース) 2026/11/06
+レッドバロン創業者遺族 申告漏れ (Yahoo!ニュース) 2026/11/06
+サントリー 酒類364品目値上げへ (Yahoo!ニュース) 2026/11/06
+ハリポタ英旗艦店 初日に抗議活動 (Yahoo!ニュース) 2026/11/06
+ZIP!でドラマ復活へ 橋本環奈主演 (Yahoo!ニュース) 2026/11/06
+加藤茶 目標は「茶寿」まで長生き (Yahoo!ニュース) 2026/11/06
+香取慎吾びっくり 49歳で高校生役 (Yahoo!ニュース) 2026/11/06
+東京ロマンチカ 鶴岡雅義さん死去 (Yahoo!ニュース) 2026/11/06
+フジ 全ドラマに生成AI導入へ (Yahoo!ニュース) 2026/11/06
+あいの里シーズン3 なぜ「傑作」 (Yahoo!ニュース) 2026/11/06
+香取慎吾が首相 ポリティカルパン (Yahoo!ニュース) 2026/11/06
+忽滑谷アナ 夫の海外赴任に帯同 (Yahoo!ニュース) 2026/11/06
+通算76勝のSB東浜巨 広島移籍へ (Yahoo!ニュース) 2026/11/06
+田嶋幸三氏 FIFA会長選へ出馬表明 (Yahoo!ニュース) 2026/11/06
+森保一監督 年内での勇退が確実に (Yahoo!ニュース) 2026/11/06
+Cロナウド ポルトガル代表を引退 (Yahoo!ニュース) 2026/11/06
+電撃辞任の岡田氏 JFA会長が言及 (Yahoo!ニュース) 2026/11/06
+西川遥輝 日ハムへの残留を発表 (Yahoo!ニュース) 2026/11/06
+ヤクルト 戸田球場などを売却へ (Yahoo!ニュース) 2026/11/06
+坂倉将吾 カープに「感謝もある」 (Yahoo!ニュース) 2026/11/06
+ドコモ通信障害が復旧 原因を公表 (Yahoo!ニュース) 2026/11/06
+ドコモ オンラインサービス停止 (Yahoo!ニュース) 2026/11/06
+サイバー攻撃 10月は国内4億件超 (Yahoo!ニュース) 2026/11/06
+「e-Tax」の運用を再開 国税庁 (Yahoo!ニュース) 2026/11/06
+AI効果「期待超えた」日本企業9% (Yahoo!ニュース) 2026/11/06
+仏銀行サイバー攻撃 177億円流出 (Yahoo!ニュース) 2026/11/06
+免許証画像漏えい SNS悪用詐欺も (Yahoo!ニュース) 2026/11/06
+無印良品 クレカ番号など流出か (Yahoo!ニュース) 2026/11/06
+東北沖で「ひずみ」蓄積再開 研究 (Yahoo!ニュース) 2026/11/06
+市場で1匹10万円の高級魚 養殖へ (Yahoo!ニュース) 2026/11/06
+ラッコのキラ死ぬ 国内飼育1頭に (Yahoo!ニュース) 2026/11/06
+エボラ巡り新ワクチン治験 WHO (Yahoo!ニュース) 2026/11/06
+養殖カンパチ大量死 26万8000匹 (Yahoo!ニュース) 2026/11/06
+日本の探査機 水星を来春初撮影へ (Yahoo!ニュース) 2026/11/06
+ISSの米宇宙飛行士も中間選挙投票 (Yahoo!ニュース) 2026/11/06
+体臭トラウマ 根っこにあるもの (Yahoo!ニュース) 2026/11/06
+山梨ダルク代表 1.1億円私的流用 (Yahoo!ニュース) 2026/11/06
+能登地震でビル倒壊 遺族が提訴 (Yahoo!ニュース) 2026/11/06
+10月就任の横浜市長が療養 過労か (Yahoo!ニュース) 2026/11/06
+蔵内前議長 条件尽くしの異例会見 (Yahoo!ニュース) 2026/11/06
+伊勢崎3人死亡事故 2審も懲役20年 (Yahoo!ニュース) 2026/11/06
+改姓巡り婚約解消 訴えた女性敗訴 (Yahoo!ニュース) 2026/11/06
+海に新生児らしき遺体 死因が判明 (Yahoo!ニュース) 2026/11/06
+映画監督の榊英雄被告 実刑確定へ (Yahoo!ニュース) 2026/11/06
+そういうことか！ VIVANT タイランの不自然な一言に、えっ！乃木が不可解すぎる依頼→策略仕掛けたか 第２２話に伏線→劉ミンシュエン 最終回冒頭にドンデン返しか (Yahoo!ニュース) 2026/11/06
+「批判を逃れることはできなかった」ドジャース・佐々木朗希に失望の声が殺到している！？ 米メディアが酷評「結局は期待外れの」 (ベースボールチャンネル) 2026/11/06
+下着姿…着替える女性客、整体院で撮影される 従業員の男逮捕、盗撮した疑い 別の女性、施術をする個室でカメラに気付く…交番で相談し発覚 服を着替える女性、動画に写っていた「性欲を満たすため」 (Yahoo!ニュース) 2026/11/06
+「何だこのよすぎる写真は…！」 違和感ゼロ、超納得のフィギュア女子受賞「ぴったりとしか…」「素敵な笑顔すぎる」 (THE ANSWER) 2026/11/06
+「これ程重傷とは…」元サッカー日本代表、激変した顔面に衝撃「ビックリした」緊急搬送＆6時間超えの手術…労い殺到 (THE ANSWER) 2026/11/06
+VIVANT新キャストに「怪しい」とネット騒然 “3文字”に注目も…思わぬ真相で「関係なし？」の声も (Yahoo!ニュース) 2026/11/06
+「引き留められるか」村上宗隆、来季が契約最終年か！？ 35本塁打も三振196の課題「何者なのか正確には分かっていない」 (ベースボールチャンネル) 2026/11/06
+「だからジャイアンツも可能性あるだろうし」今オフFAの目玉 パ・リーグ2位の得点圏打率、高い守備力も光るオリックスの名三塁手の去就を球界OBが考察「日本ハムも三塁手がいないよね」 (CoCoKARAnext) 2026/11/06
+広島ソフトバンク・東浜巨をトレードで獲得 ６日に正式発表へ 森下暢仁＆床田寛樹流出危機で通算７６勝右腕に白羽 (Yahoo!ニュース) 2026/11/06
+中間選挙で惨敗したトランプ率いる共和党…共和党が直視すべき5つの「厳しい現実」 (ニューズウィーク日本版) 2026/11/06
+「無人機の自爆攻撃」で大爆笑 金正恩・ジュエ父娘の余裕ぶり (Yahoo!ニュース) 2026/11/06
+「わらべ」たまえ59歳 がん闘病の“兄”と再会 2ショットのリアル体重も公開「やだ〜泣くよ」「涙が」 (Yahoo!ニュース) 2026/11/06
+「お前には1円でもやるもんか！貯蓄3,500万円・東京在住74歳元大手部長父の憤怒…有名私大卒48歳無職長男が平然と言い放った「親の金で暮らして何が悪い」 (THE GOLD ONLINE（ゴールドオンライン）) 2026/11/06
+《圧巻の投球を披露》58歳・桑田真澄氏が見せた“巨人ユニ姿”に「監督姿を見たい」止まぬ復帰待望論 (週刊女性PRIME) 2026/11/06
+八田與一容疑者の目撃情報…関東で3倍、SNSで8倍に急増 「左右の耳」など身体的特徴を網羅した新ポスター公開 別府ひき逃げ殺傷事件 (Yahoo!ニュース) 2026/11/06
+マクドナルド「470円の新商品」を食べた正直な感想 (Yahoo!ニュース) 2026/11/06
+11月12日〜14日頃から「この時期としては10年に1度程度しか起きないような著しい高温」となる可能性が高まっている…気象庁が「高温に関する早期天候情報」発表関東甲信・北陸・東海・近畿・中国・四国・九州・奄美・沖縄 (Yahoo!ニュース) 2026/11/06
+群がる飢えた農民たち…北朝鮮の食糧事情「国家の収奪」で末期症状 (Yahoo!ニュース) 2026/11/06
+89歳・加山雄三が「若い」 さだまさしの「お元気」報告に反響「若返ってないですか？」 (Yahoo!ニュース) 2026/11/06
+弁当箱を出さない19歳男子。⇒翌日、友人から大笑いされた“母の反撃弁当”に…「逆にすごいｗ」「その手がありましたか」 (ほ・とせなNEWS) 2026/11/06
+日常茶飯事だった「キモい、オカマ」 偏見、トイレ、衣装の壁…氷上で舞うトランス女性が伝えたいこと――田村亮太 (THE ANSWER) 2026/11/06
+韓国で人気爆発…21歳バド日本女子に虜「うまいし綺麗」「話も上手」 インタ映像に相次ぐ絶賛の声 (THE ANSWER) 2026/11/06
+想定利回り年3％と年4.62％で約312万円差 新NISAで月5万円を20年積み立てた試算 (Yahoo!ニュース) 2026/11/06
+アジア1位なのに海外視聴者はわずか3%…｢VIVANT｣の大ヒットが示した日本ドラマの｢成功の逆説｣ (プレジデントオンライン) 2026/11/06
+来春センバツ選出で同県選出有力は、神奈川、兵庫、静岡、岡山、高知！4年ぶりの5県に26年秋高校野球 (高校野球ドットコム) 2026/11/06
+ナイナイ岡村隆史まさかの“ほっそり写真”に「恥ずかしい」1人担当となったANNでトラブル続出もネタに (スポニチアネックス) 2026/11/06
+“異様なほどに気をもむ” 「秋篠宮ご夫妻と佳子さま」公務で宮内庁内に走る独特の緊張感 (Yahoo!ニュース) 2026/11/06
+“県議会のドン”蔵内前議長「選挙には一切出ない」 辞職後初の会見で政界引退表明か “金銭授受”繰り返し否定 (FNNプライムオンライン（フジテレビ系）) 2026/11/06
+スーパーで6貫入りのパック寿司購入→「信じますよ???」 貼られていた「まさかのシール」に「鼻水出た」「本当かなぁ」 (Yahoo!ニュース) 2026/11/06
+元陸自のホワイトハッカーが警鐘日本はなぜサイバー攻撃の“カモ”になったのか 中国型AIが爆発的に流通するなか、世界の攻撃者に注目される「日本企業の対策の遅れ」 (マネーポストWEB) 2026/11/06
+「平気で、公約を反故に」民主改革の会・階猛幹事長の“公約軽視”発言に批判殺到…支持率0.1％、交付金満額受給への不満も噴出 (Yahoo!ニュース) 2026/11/06
+姉は電撃引退した人気女優 ３２歳美人モデルが「イメチェンしました」「めちゃくちゃ美人」改名から１年…奈々未 (Yahoo!ニュース) 2026/11/06
+突然、人生が好転し始める人の特徴・ベスト1 (ダイヤモンド・オンライン) 2026/11/06
+水卜麻美は気象予報士合格 日テレアナの資格ブームを生んだ２人の「先輩男性アナ」 (Yahoo!ニュース) 2026/11/06
+「消費者をバカにしてる」「日本は貧しくなった」の声も…≪ローソンの激安弁当≫あえて自作＆対抗した35歳独身男性の顛末 (東洋経済オンライン) 2026/11/06
+武井壮、「国民の平均年収よりも稼いでるんですか？」とのガチ質問に“回答” (Yahoo!ニュース) 2026/11/06
+新名神高速スマホ脇見で6人死亡 運転手の女（55）の拘禁刑7年が確定 (FNNプライムオンライン（フジテレビ系）) 2026/11/06
+日本に残された「アベノミクスの負の遺産」…国家的損失を生む「大実験」の結末 (クーリエ・ジャポン) 2026/11/06
+“Iカップの超新星”山田あい、魅惑のクイーン降臨 華やかさと妖艶さが交差する (Yahoo!ニュース) 2026/11/06
+ドジャース・大谷翔平がシルバースラッガー賞の最終候補入り 本塁打王シュワーバーと一騎打ち (ベースボールキング) 2026/11/06
+「朝晩冷えてきたから重宝してる」「2着目買いました」 ユニクロの“防風・防水パーカー”が大好評 「着心地も質感もいい」「肌寒い時のバイク通勤にも◎」 (Yahoo!ニュース) 2026/11/06
+iPhoneのヘルスケアが年内に刷新、「ヘルス年齢」も。使えるiPhoneはどれ？ (Yahoo!ニュース) 2026/11/06
+広島　ソフトバンク・東浜巨を無償トレードで獲得！床田＆森下FA行使で不透明な先発陣テコ入れ (スポニチアネックス) 2026/11/06
+「それにしても」「あの真面目な…」吉田羊、不倫目撃後の後ろ姿を公開 ネット「旦那が悪い」「ピッタリフィットなお洋服は着れません」 (中日スポーツ) 2026/11/05
+トランプ氏の敗北から一夜、米誌の“新たな表紙”に衝撃広がる ⇨「強烈な風刺」「TIME誌、仕事が早い」 (BuzzFeed Japan) 2026/11/05
+ソフトバンク一筋76勝の東浜巨が「無償トレード」で移籍へ 支配下枠を空けたいソフトバンクと先発強化を狙う広島の思惑が一致 (西スポWEB OTTO!) 2026/11/06
+鎌田大地が10人クリスタル・パレスを救う90+1分劇的同点弾!! ホッフェンハイム町田浩樹との日本人対決は両者フル出場で1-1ドロー (ゲキサカ) 2026/11/06
+NYダウ急落、一時1800ドル超安 AI先行き懸念で売り拡大 (毎日新聞) 2026/11/06
+ロシア、JT資産を管理下に 対日圧力強化の一環か (時事通信) 2026/11/05
+ルビオ国務長官が辞任検討か 中間選挙での共和党大敗受け ブルームバーグ通信報道 (TBS NEWS DIG Powered by JNN) 2026/11/06
 
-### AXIOS
-*   バンス氏、共和党中間選挙敗北の原因はイラン戦争だと述べる (2026/11/05)
-*   中間選挙における2016年よりも世論調査が大きく外れる (2026/11/05)
-*   LIVゴルフ、BCパートナーズが撤退し、崩壊寸前 (2026/11/05)
-*   ブルー津波がMAGAを破る：大勝した中間選挙からの5つのテイクアウェイ (2026/11/05)
-*   中間選挙の投票用紙は忘れてください。トランプはボールルームに戻る (2026/11/05)
-*   共和党の下院議員は「ショック」から激怒へ (2026/11/05)
-*   スカリース氏、ジョーダン氏が中間選挙での不評で失墜した下院共和党を率いるために競う (2026/11/05)
-*   ハキーム・ジェフリーズ氏の下院議長への立候補届出書を読む (2026/11/05)
-*   民主党はトランプ氏の捜査を誓うが、有権者も別の優先事項を持っている (2026/11/05)
-*   共和党の区割り境界線がブルーウェーブに叩き潰される (2026/11/05)
-*   バンス氏がイラン戦争について投稿した後、原油価格が急落 (2026/11/05)
-*   「投票しました」ステッカーがICE追悼碑で追悼となる (2026/11/05)
-*   民主党の躍進により、国防総省の主要な優先事項が危険にさらされる (2026/11/05)
-*   民主党の中間選挙での利益は、2028年までに選挙人団を脇に追いやる可能性がある (2026/11/05)
-*   女性たちが中間選挙のブルーウェーブに乗って歴史的な利益を上げる (2026/11/05)
-*   独占：MetaがAIスタートアップを買収、コーディングを所有する競争に参加、並外れた野心の兆候を示す (2026/11/05)
-*   スクープ：ハリー・スティーブンス氏、死の脅迫を受けて米国保安官の保護を要求 (2026/11/05)
-*   トランプ氏は、連邦準備制度理事会（FRB）の理事会を同盟国で満たすことができなくなる (2026/11/05)
-*   有権者は3つの憲法改正案に承認のスタンプを押した (2026/11/05)
-*   世界の指導者たちがアメリカの中間選挙の再編について意見を述べる (2026/11/05)
-*   マイク・ジョンソンの出発メッセージを読む (2026/11/05)
-*   DOJ、アラスカ州の選挙捜査で民主党員約20人を標的にしていると報道 (2026/11/05)
-*   共和党の赤い壁が崩壊する (2026/11/05)
-*   これら6人の幹部は、中間選挙で大きな賭けをしている (2026/11/05)
-*   マイク・ジョンソン氏、下院共和党の大敗北を受けてリーダーシップを退く (2026/11/05)
-*   エルサイード氏、初のイスラム教徒米国上院議員となる (2026/11/05)
-*   シカゴ市民、富裕税と銃撃検知システムに賛成票を投じる (2026/11/05)
-*   昨夜のすべてを1000語未満で知っておくべきことすべて (2026/11/04)
-*   ジル・ヘイゼルバッカー氏、OpenAIの最高企業渉外担当者に就任 (2026/11/04)
-*   NBCのスティーブ・コルナキ氏、13時間の選挙夜の旅に出る (2026/11/04)
-*   イーロン・マスク氏は、ドローンとロボットの時代にワイヤレスを破壊するために1000億ドルを費やす予定 (2026/11/04)
-*   「AIはフィニッシャーだ」：AIの新時代が到来した後の数学者の希望の理由 (2026/11/04)
-*   その夢の求人は北朝鮮のハッカーからのものかもしれない (2026/11/04)
-*   民主党がミネソタ州を制し、州議会の全支配権を回復 (2026/11/04)
-*   民主党はエネルギーコストに対処する機会を得る (2026/11/04)
-*   マサチューセッツ州の有権者は、合法的なマリファナと銃規制法を維持し、公記録を追加し、スターターホームの質問が保留中 (2026/11/04)
-*   イリノイ州の2026年米国下院選挙の勝者たちに会う (2026/11/04)
-*   カンザス州知事選は僅差で勝敗が決まらない (2026/11/04)
-*   ホーネッツは、ジョイントベンチャーで旧エピセンターを買収 (2026/11/04)
-*   市場は、不確実性の霧が晴れるときを好む (2026/11/04)
-*   マスク氏は、宇宙レーザージョークで選挙の惨敗を笑い飛ばす (2026/11/04)
-*   Palantirは、その「すごい」要因を失う (2026/11/04)
-*   民主党は医療制度のストレステストに直面するだろう (2026/11/04)
-*   連邦政府の撤退後、各州が投票の安全対策を講じる (2026/11/04)
-*   独占：OpenAIはMicrosoftのGitHubをスタートアップとの契約で標的にする (2026/11/04)
-*   デインズ氏の上院引き継ぎが功を奏する見込み (2026/11/04)
-*   舞台裏：トランプ氏の壊滅 (2026/11/04)
-*   民主党の波がインディアナ州を襲う (2026/11/04)
-*   テューバービル氏、アラバマ州知事選でジョーンズ氏をかわす (2026/11/04)
-*   ハキーム・ジェフリーズ氏は、夢の大部分を実現する (2026/11/04)
-*   「私たちが目撃したのはAIの地震だった」：有権者は投票所でテクノロジーに反乱を起こす (2026/11/04)
-*   2026年中間選挙で歴史を作る勝者たち (2026/11/04)
-*   ジュリアナ・ストラットン氏の勝利が、上院における3人の黒人女性の歴史的な初陣となる (2026/11/04)
-*   DOJ、全50州に1000人の選挙監視員を派遣 (2026/11/04)
-*   下院共和党員は、「悲惨な」中間選挙の敗北について互いを非難する (2026/11/04)
-*   ホワイトハウスの選挙日メッセージ戦略の内部 (2026/11/04)
-*   エネルギーに関する選挙日の視聴内容 (2026/11/04)
-*   バイロン・ドナルド氏、フロリダ州知事選で歴史を作る (2026/11/04)
-*   テキサス州が民主党になった方法 (2026/11/04)
+**●●AI関連●●**
+（日本時間 2026/11/06）
+韓国ハンファオーシャン、ABBと技術協力…海上AIデータセンターの電力安定供給へ (AFPBB News) 2026/11/06
+韓国KTとサムスン電子、高速鉄道の通信切断を約29％削減…AIで基地局の切り替えを改善 (Yahoo!ニュース) 2026/11/06
+NY株式：NYダウは1833.06ドル安、AI進展の遅れを警戒 (株探) 2026/11/06
+ブルーウェーブがAI取引の一部を揺るがしても、株式市場は急騰した（海外） (Yahoo!ニュース) 2026/11/06
+コアウィーブショックは氷山の一角──AI相場が問われ始めた「お金の問題」 (Yahoo!ニュース) 2026/11/06
+エヌビディア、アポロ支援の通信施設を1GWのAI推論拠点に検討 (BigGo ファイナンス) 2026/11/06
+米IREN、第1四半期売上高が予想上回る AIクラウド売上はほぼ3倍に 株価9%高 (BigGo ファイナンス) 2026/11/06
+AIの精度は「教師データ」で決まる――ラベル付けで失敗しないための考え方｜川上貴之 (JIJICO) 2026/11/06
+AIエージェント賠償責任保険は本当に必要か--契約する前に知っておくべきこと (Yahoo!ニュース) 2026/11/06
+「届いた商品が不良品」その写真もAI製--中国ECで起きる返金をめぐるAI対AIの攻防 (Yahoo!ニュース) 2026/11/06
+〔米株式〕ダウ急反落、1833ドル安＝AI先行き懸念と急騰反動（5日）☆差替 (Yahoo!ニュース) 2026/11/06
+WHERE、宇宙とAIで不動産市場開拓 (全国賃貸住宅新聞) 2026/11/06
+アユダンテが広告計測基盤「MATSUBA」にAIツールと接続するためのMCP機能を追加 (Web担当者Forum) 2026/11/06
+米国株動向AI半導体市場における設計と製造の優位性考察：今後5年間を見据えた銘柄選択の視点、ブロードコム［AVGO］VS TSMC［TSM］ (マネクリ) 2026/11/06
+「検索する」から「AIに相談する」へ──米Gapが仕掛けるファッションECの新たな購買体験 (1/3) (MarkeZine) 2026/11/06
+「Opera」ブラウザーでローカルAIを実行可能に--これが画期的な理由とは (ZDNET Japan) 2026/11/06
+「ロボットを買えば省人化」は幻想？ フィジカルAIでも「自動化できない仕事」の正体 (ビジネス+IT) 2026/11/06
+「AIリスクは価値を上回る速さで増大している」 Gartnerが示すCIOの3つの行動 (ITmedia) 2026/11/06
+「ブルー・ツナミ」でAI規制への恐怖が拡大…ナスダック5.5%急落、半導体指数は12%台の下落 (BigGo ファイナンス) 2026/11/06
+米国株式市場＝ナスダック19カ月ぶり大幅安、調整入り確認 ＡＩ規制を懸念 (Reuters) 2026/11/06
+光ファイバー価格が最大5倍超へ、AI投資の物理的な制約とは何か：『ビジネス2.0』の視点 (オルタナティブ・ブログ) 2026/11/06
+CEATEC閉幕 AI実装など社会変革を展示 (科学新聞 The Science News) 2026/11/06
+ＮＹ株急反落、１８００ドル超安＝急騰反動とＡＩ懸念 (時事通信ニュース) 2026/11/06
+ビットコイン一時7.6万ドル割れ、AI関連株急落が波及 清算10億ドル超 (BigGo ファイナンス) 2026/11/06
+「あの件」で話が通じるAI秘書。ChatGPT「dots」の本質は常時稼働ではない (PC Watch) 2026/11/06
+JX金属、AI半導体向け高純度硫酸銅を5割増産 茨城に十数億円投資 (BigGo ファイナンス) 2026/11/06
+プライム会員には追加料金なしの生成AI「Alexa+」日本上陸、アマゾンはなぜChatGPTと同じ月額3000円のAIを家庭に持ち込むのか (Yahoo!ニュース) 2026/11/06
+モノタロウはなぜ日本で初めて経営にAIを取り入れたのか…時価総額1兆円企業はこうして成功した (Yahoo!ニュース) 2026/11/06
+〔米株式〕ダウ急反落、1833ドル安＝急騰反動とAI懸念（5日）(Yahoo!ファイナンス) 2026/11/06
+首相が「大至急」と警告“PHP騒動”は序章だった…人間が10年見落とした欠陥をAIが数分で暴く《ネット社会崩壊》の恐怖 (Yahoo!ニュース) 2026/11/06
+Google、動画生成AI「Gemini Omni 1.2 Flash」正式発表 (Jetstream) 2026/11/06
+米ナスダック5%急落、NYダウ1800ドル安 AI株が総崩れ (日本経済新聞) 2026/11/06
+首相が｢大至急｣と警告""PHP騒動""は序章だった…人間が10年見落とした欠陥をAIが数分で暴く《ネット社会崩壊》の恐怖 (東洋経済オンライン) 2026/11/06
+「AIハイレベル対話」設立 日独首脳会談 先端技術協力を促進 (科学新聞 The Science News) 2026/11/06
+AIは開発者やプログラマーたちに長年にわたって蓄積されてきた技術的負債を返済することを強いている (GIGAZINE) 2026/11/06
+「AIバブル崩壊」が囁かれるなか、それでも「強い」ビッグテックの名前 (現代ビジネス) 2026/11/06
+「壊れたら」「止まったら」にどう備える？東京海上日動「AIロボット保険」、ロボット導入を後押しするか (ビジネスジャーナル) 2026/11/06
+謎の売り手、データセンター融資5億ドル売却へ－AI投資に逆風 (Bloomberg.com) 2026/11/06
+業務用アプリケーションのための独自の小型AIモデル、印Zohoが日本でも展開 (デジタルクロス) 2026/11/06
+第1回 AI自律攻撃の衝撃と「2026年問題」--人間のスピードを超えた脆弱性危機の現実 (ZDNET Japan) 2026/11/06
+AI相場を冷やす民主党の中間選挙勝利、データセンターへの過剰投資にブレーキ、「適温相場」への転機になるか 唐鎌大輔の為替から見る日本ハイパースケーラーの巨額投資と資金調達を見直す契機、金利低下と企業財務の改善も(1/4) (JBpress) 2026/11/06
+旭化成がAI活用のスマートラボ新設、半導体材料の実験数4倍に：研究開発の最前線 (MONOist) 2026/11/06
+「AIよ、安らかに眠れ」…テキサス州で民主党が大勝し、テック業界から怒りが噴出 (Business Insider Japan) 2026/11/06
+｢世界経済は強いは本当か｣AIが支える成長と〈二極化〉…IMF･世銀総会で見えた脆弱さの正体 (東洋経済オンライン) 2026/11/06
+ChatGPT利用者のスマホの使い方はどう変わった？ 行動ログから考えるAI時代の消費者行動 (JBpress) 2026/11/06
+AIで業務の変革支援 エクサフォワード九州（福岡市） 小山貴大社長 (西日本新聞me) 2026/11/06
+NYダウ急落、一時1800ドル超安 AI先行き懸念で売り拡大（毎日新聞） (Yahoo!ニュース) 2026/11/06
+iシェアーズ AI グローバル・イノベーション アクティブ408A：株価・株式情報（夜間PTS含む） (Yahoo!ファイナンス) 2026/11/06
+ビットコイン急落、一時7.6万割れ AI規制懸念で米ナスダック5％超安(CoinPost) (Yahoo!ファイナンス) 2026/11/06
+ビットコイン急落、一時7.6万割れ AI規制懸念で米ナスダック5％超安 (CoinPost) 2026/11/06
+プレスリリース：AI・DXで業界を越えてつながる「異業種大交流会」を初開催。参加者全員に1,000円分の館内チケット進呈＜12/9・10・参加無料＞（PR TIMES） (毎日新聞) 2026/11/06
+フードテックのAGRIST、シンガポールの企業とフィジカルAIを活用した農業課題の解決に向けてMOU締結（PR TIMES） (毎日新聞) 2026/11/06
+米オープンAI、データセンター立地で指針＝強まる逆風、電力負担など明記(時事通信) (Yahoo!ファイナンス) 2026/11/06
+電力網費用は事業者負担に (下野新聞社) 2026/11/06
+電力網費用は事業者負担に 米オープンAIが政策提言（共同通信） (Yahoo!ニュース) 2026/11/06
+ダイナトレック、統合データ、AI分析 取引先変化を迅速把握 (ニッキンONLINE) 2026/11/06
+プレスリリース：STマイクロエレクトロニクス、AIデータセンターとロボティクスでのリアルタイム制御に対応した先進的なマイコンを発表（PR TIMES） (毎日新聞) 2026/11/06
+NYダウ 一時1700ドル超急落 AI・半導体関連を中心に売り注文広がる（TBS NEWS DIG Powered by JNN） (Yahoo!ニュース) 2026/11/06
+NYダウ 一時1700ドル超急落 AI・半導体関連を中心に売り注文広がる (TBS NEWS DIG) 2026/11/06
+チャイナウオッチ 中国視窓：中国でAI制作ドラマが急増 映像産業はデータ駆動型に 李智慧 (週刊エコノミスト Online) 2026/11/06
 
-### ヤフー
-*   関東や伊豆諸島 大雨災害に警戒 (2026/11/05)
-*   「書道」無形文化遺産に登録へ (2026/11/05)
-*   米中間選挙 日本政府は動向注視 (2026/11/05)
-*   高市首相 COP31欠席する見通し (2026/11/05)
-*   特定健診の支援見直し提言 財務省 (2026/11/05)
-*   無痛分娩に対応の施設は6割 調査 (2026/11/05)
-*   米海兵隊員が訓練中に死亡 沖縄 (2026/11/05)
-*   竜王戦でカメムシ出没 僧侶が捕獲 (2026/11/05)
-*   米大統領 民主党に「おめでとう」 (2026/11/05)
-*   米大統領 敗因巡りイラン攻撃言及 (2026/11/05)
-*   米民主党が両院で過半数確実 報道 (2026/11/05)
-*   トランプ氏 選挙結果受け入れ表明 (2026/11/05)
-*   黒人女性が州知事に当選確実 米 (2026/11/05)
-*   米民主党が躍進 支持者は喜び爆発 (2026/11/05)
-*   列車事故で死亡の邦人 20代男女か (2026/11/05)
-*   児童婚増えるガザ 壮絶性暴力訴え (2026/11/05)
-*   米中間選挙 日本経済への影響は (2026/11/05)
-*   リニア工事費 再び増額へ検討 (2026/11/05)
-*   金融庁 ソニーFGに立ち入り検査 (2026/11/05)
-*   UFJ新銀行 キャッシュカードなし (2026/11/05)
-*   キャベツ小売価格 平年の約7割高 (2026/11/05)
-*   ゆうちょ銀 松井証券に20%出資 (2026/11/05)
-*   すし店の休廃業・解散が急増 25年 (2026/11/05)
-*   香川の讃岐うどん店 混雑対応苦慮 (2026/11/05)
-*   高校サッカー応援マネに堀口真帆 (2026/11/05)
-*   劇作家・演出家 芥正彦さん死去 (2026/11/05)
-*   忽滑谷アナ 夫の海外赴任に帯同 (2026/11/05)
-*   日テレ忽滑谷こころアナ 休職発表 (2026/11/05)
-*   ゴジラ-0.0初日興収が実写歴代1位 (2026/11/05)
-*   マッシュル実写映画化 来年に公開 (2026/11/05)
-*   米津「Lemon」MV10億回再生突破 (2026/11/05)
-*   「アンメット」続編決定 来年放送 (2026/11/05)
-*   阪神 25歳右腕ブラロック獲りへ (2026/11/05)
-*   塩貝健人 因縁ブラジル戦で招集外 (2026/11/05)
-*   森保監督 アジア杯の延期に言及 (2026/11/05)
-*   本多灯に連盟処分 ロス五輪絶望的 (2026/11/05)
-*   坂本花織さん「新婚旅行はまだ」 (2026/11/05)
-*   G育成指名の14歳 入団意思を表明 (2026/11/05)
-*   織田翔希 レンジャーズ幹部ら面談 (2026/11/05)
-*   G松井監督 育成指名の中学生言及 (2026/11/05)
-*   e-Taxに不審な通信 緊急メンテ (2026/11/05)
-*   免許証画像漏えい SNS悪用詐欺も (2026/11/05)
-*   無印良品 クレカ番号など流出か (2026/11/05)
-*   1兆円盗難 バイナンスが手口公表 (2026/11/05)
-*   アソビュー 1500万件超の情報流出 (2026/11/05)
-*   GMOのサーバー「設計上の不備」 (2026/11/05)
-*   SNS巡る問題 揺らぐ表現の自由 (2026/11/05)
-*   ダークウェブ 日本人の情報流出増 (2026/11/05)
-*   養殖カンパチ大量死 26万8000匹 (2026/11/05)
-*   日本の探査機 水星を来春初撮影へ (2026/11/05)
-*   ラッコ見学を全面中止 鳥羽水族館 (2026/11/05)
-*   ISSの米宇宙飛行士も中間選挙投票 (2026/11/05)
-*   体臭トラウマ 根っこにあるもの (2026/11/05)
-*   源泉かけ流しでウナギ養殖 岐阜 (2026/11/05)
-*   備蓄緊急要請 不安が広がる心理は (2026/11/05)
-*   10月気温 過去2番目の暑さだった (2026/11/05)
-*   津市の火災 死亡の4人は4～13歳 (2026/11/05)
-*   路上に血を流した女性 搬送も重体 (2026/11/05)
-*   富山交番襲撃 被告母が出廷し謝罪 (2026/11/05)
-*   警官の拳銃奪い自らに発砲 重体 (2026/11/05)
-*   重機が倒れ頭挟まれる 作業員死亡 (2026/11/05)
-*   担任が生徒と「交際」裁判長断罪 (2026/11/05)
-*   男児盗撮疑い逮捕 米から情報提供 (2026/11/05)
-*   珍しい名字「井」さん100人超集合 (2026/11/05)
-*   《カメラが捉えた体長136センチ、体重101キロのオス》放獣したツキノワグマが3日で舞い戻り駆除…秦野市担当者が漏らした本音「なんで戻ってきたのか？」 (2026/11/05)
-*   「美しい！華麗だ！素敵！かわいい！」紀平梨花の報告にファン反応 “りかしん”好成績に労い「身体能力はさすが」「全日本も楽しみ」 (2026/11/05)
-*   追い詰められるトランプ大統領、選挙当日に突如イスラエルへの「軍事援助中止」を発表 (2026/11/05)
-*   亡き父は石ノ森章太郎さん 妻はミスコン女王 芸能一家の親子俳優が共演 縁のある有名フリーアナも登場 (2026/11/05)
-*   丸ごと1尾の鯛→食べていたら、中から…… “妻絶叫”の光景に「えっ何それ」「トラウマレベル」 (2026/11/05)
-*   元サッカー日本代表が顔面骨折 「この壊れた顔が元の顔に戻るのか」 緊急搬送→6時間超の手術…近況報告 (2026/11/05)
-*   「素晴らしい一年を」麻生太郎氏に誕生日カードを送ったら…1カ月後に届いた返信に驚き「え？本物？」「達筆でカッコよすぎ」 (2026/11/05)
-*   堀ちえみ、５９歳の近影が「ますます美しく」新ヘアスタイルでイメチェン「また可愛く」「めっちゃ似合ってるよー」 (2026/11/05)
-*   菊池桃子（58）、9歳年上の元官僚の夫と“結婚7周年”を迎え寄り添い合う夫婦ショットを公開「温かい雰囲気にとても癒やされます」などの反響 (2026/11/05)
-*   「年金増えて、ウハウハです」5年間の繰下げ受給を選んだ74歳夫婦。〈年金月21万円→月30万円〉で一変した老後CFPが解説 (2026/11/05)
-*   GPT-6と性能差があったのはここ！Claude Opus 5.5のほうが凄い「3つのタスク」 (2026/11/05)
-*   「今までありがとう」広島・森下のFA権行使にファン早くも“白旗”？ 「行くならソフトバンクにしてくれ」と要望も (2026/11/05)
-*   帰宅後10分ゴハンナスがくったり、うまみじゅわっ！ しょうがが香る「豚バラとナスのポン酢炒め煮」レシピ (2026/11/05)
-*   ＜VIVANT＞姿見せないシンシーの工作員 「このまま退場？」「もうひと暴れして」と話題 (2026/11/05)
-*   タトゥーが見える姿が話題・浜崎あゆみ（48）、肌見せ衣装での撮影風景に「大変そう！」「平成のアユすぎて最高」などの反響 (2026/11/05)
-*   「金銀100枚あっても詰まない」藤井聡太竜王の“4枚穴熊”が堅すぎる…服部慎一郎七段を跳ね除けた「絶対の形」 (2026/11/05)
-*   《右手に柔らかく光るパールの指輪》佳子さまが園遊会で見せた「振袖×パールリング」の華やぎコーデ 姉・眞子さんが婚約報道直後に見せた“真珠の指輪”との共通点とは (2026/11/05)
-*   「まじかよ」「悲報」ブラジル戦10日前、日本代表の“公式発表”にネット騒然「なんでだよ」「リベンジするチャンスなのに」 (2026/11/05)
-*   「また食べるのね…」サンド伊達、『帰れマンデー』復活も心配の声 売れっ子ゆえ避けにくい“食べる仕事” (2026/11/05)
-*   「ババア」「太りすぎ」泉ピン子“大暴走”で提訴の背景 「世界的大女優」では乗り切れない令和基準 (2026/11/05)
-*   16歳でデビューした人気女性歌手 ふたつの大病を患っていた！病名を初告白...現在中学2年の愛息を支えに闘病徹子の部屋 (2026/11/05)
-*   「ずば抜けて幸運な人」の共通点・ベスト1 (2026/11/05)
-*   「色違いで3枚購入」 ユニクロの“さらっと履けるリネンパンツ”が大好評 「肌ざわりも良い」「骨格ウェーブですが、きれいめに履ける」 (2026/11/05)
-*   65歳以上の無職夫婦孫にいくらまで使える？平均貯蓄額の2520万円のケースで試算すると上限は年約89.1万円 (2026/11/05)
-*   最終回で明らかになるのか…『VIVANT』未回収の謎（1）乃木を支えてきた“もう一人”に残る最大の疑念は？ (2026/11/05)
-*   「先生も児童も実名のまま」「いじめ案件も…」中国SNSに日本の小学校の連絡帳が晒されていた…在日中国人保護者の“ゾッとする無邪気さ” (2026/11/05)
-*   《株価1万円割れの衝撃》キオクシアHD「驚異的な決算」でも止まらぬ株価下落のなぜ？ 市場が見ているのは「今の利益が何年続くか」、注目される平均販売単価の推移 (2026/11/05)
-*   「え？わからない…」朝ドラヒロイン〝雰囲気ガラリ〟最新ショットに「髪を下ろして洋服を着ている石橋静河さん」「わー！お洋服だ」の声 (2026/11/05)
-*   水没した“廃墟ペンション村”の実態 「臭い、虫もすごい」 経営会社が廃業 故障ポンプは10年以上“手つかず” 岡山・瀬戸内市 (2026/11/05)
-*   「逃げない任天堂カッコいい」 新作『ゼルダ』が“2億本超えの怪物”と真っ向勝負のワケ (2026/11/05)
-*   「稼ぎは多いときで、月10万円です」〈貯金4,200万円・年金月20万円〉大企業を定年退職した65歳男性、元エリートが選んだ「驚きの第二の人生」 (2026/11/05)
-*   倒産地域に根ざした訪問看護を続けてきた法人が破産開始決定 過小資本で資金運営に余裕なく負債総額は約3768万円か東京商工リサーチ (2026/11/05)
-*   「細すぎてびびる」浜辺美波、『ゴジラ-0.0』宣伝姿に心配の声も…映画での演技には絶賛続々 (2026/11/05)
-*   トピックス（主要） (2026/11/05)
-*   「顔が全然違う」トラブル報告…〝憔悴〟姿の陣内智則に心配の声「目が笑ってない」「へこんでるからかな？」「大丈夫ですか」 (2026/11/04)
-*   美勇士「施設に入ることを決意」と報告 うつ病パニック障害、障害者手帳公開し「ゆっくり療養できたら」 (2026/11/04)
-*   ９３歳・黒柳徹子、７９歳のベテランタレントを“公開説教”「すぐ、お金のこと言うのダメよ。そういうの本当に」 (2026/11/04)
-*   「その豆腐、通しましたか？」セルフレジ『万引き』疑われた男性 ⇒ 会計後のレシートを見ると…… 投稿に反応さまざま (2026/11/04)
-*   布団で排泄や嘔吐も……結婚16年目、夫の酒癖に限界を迎えた妻 藤本美貴さんが「普通じゃない」と一刀両断 (2026/11/04)
-*   「残クレのなにが悪いんでしょうね」新車のアルファードを購入した世帯年収500万円・35歳夫婦。ショッピングセンターの駐車場で起きた“想定外の悲劇”FPが警鐘 (2026/11/05)
-*   独自リニア工事費再び増額へ JR東海、11兆円から (2026/11/04)
-*   高市首相、COP31欠席へ 温暖化会議、昨年に続き (2026/11/04)
-
-### AI関連
-*   AI相場は不調でも「S&P500が、ケタ外れに上昇する兆しを見せている」と、JPモルガンが強気の指摘（海外） - Yahoo!ニュース (2026/11/05)
-*   鳴門教育大が12/5にオンライン大学院説明会 AI活用や不登校支援のウェビナーも実施 - 教育家庭新聞社 (2026/11/05)
-*   中国にAI競争で敗北するのは許されないが…データセンター建設ラッシュの米国で反対運動が起きる理由(プレジデントオンライン) - Yahoo!ファイナンス (2026/11/05)
-*   Googleが「LLMJacking」の手口を分析、盗んだAIの鍵を月60ドルで転売して1日10万ドル超の被害も - GameBusiness.jp (2026/11/05)
-*   メタの元セキュリティ責任者、AIエージェントに金融サービスの認証情報を渡すのは「正気の沙汰ではない」 - Business Insider Japan (2026/11/05)
-*   UAEが赤じゅうたんを敷き、オープンAIを国の心臓部へ招き入れた - Business Insider Japan (2026/11/05)
-*   英アーム、四半期売上高が予想上回る AI・データセンター需要で - Reuters (2026/11/05)
-*   英アーム、四半期売上高が予想上回る AI・データセンター需要で(ロイター) - Yahoo!ファイナンス (2026/11/05)
-*   AI使い3Dで事故再現 交通規制伴う見分不要に―新システム導入へ予算要求・警視庁 - 時事ドットコム (2026/11/05)
-*   もうGA4の画面操作で迷わない！ 生成AIで始める「会話分析」の3つのアプローチ - Web担当者Forum (2026/11/05)
-*   米中間選挙で民主党圧勝、ダウ3%急騰…AI規制への懸念で半導体指数は6カ月ぶり安値 - BigGo ファイナンス (2026/11/05)
-*   AIとの対話でECサイトの管理・編集を支援。Shopifyが秋のアップデートを発表 - 株式会社マイナビ (2026/11/05)
-*   「iOS 27」の「Safari」でAI機能が利用可能に--タブの自動整理や機能拡張の作成 - Yahoo!ニュース (2026/11/05)
-*   ２億り人の凄腕投資家〉なごちょう氏がズバリ！「生成AIバブル」相場で買うべき隠れ割安3銘柄（集英社オンライン - Yahoo!ニュース (2026/11/05)
-*   福島県喜多方市；児童のポスター作品に「AI使っている」とネット中傷拡散、コンクールHPでの公開中止に - 読売新聞 (2026/11/05)
-*   移民労働者が消えた世界をAIで描くオーストラリアのPRキャンペーン - PR EDGE (2026/11/05)
-*   第4回：AI時代の経営は「全社の知識をつなぐ」意思決定者へ - ZDNET Japan (2026/11/05)
-*   ノーベル賞化学者はAIを使って自然界に存在しない分子をつくる - WIRED.jp (2026/11/05)
-*   AIを増やすほど現場が苦しくなる？ AIOps導入で陥る“AX混同”の罠 - ビジネス+IT (2026/11/05)
-*   中国のAI取引が急減速、政府は株式市場の下落を食い止めようとしている - Business Insider Japan (2026/11/05)
-*   ドアダッシュのCEO、AIエージェントによる注文が数百件に達しただけで「妄想的」にならないよう警告 - Business Insider Japan (2026/11/05)
-*   アイスリーデザインがAitriaに社名変更、AI駆動開発で「人月」ではなく「成果」を売る会社へ|DeveloperZine - CodeZine (2026/11/05)
-*   「Muse」を使っていなくてもAIエージェントが非公開のメッセージにアクセスできる仕組みとは - ZDNET Japan (2026/11/05)
-*   都立校、AI・デジタルのスペシャリスト養成へ 都教委が専門コースの設置検討を本格化 - 産経ニュース (2026/11/05)
-*   韓国KOTRAと韓国データセンター連合会、AIデータセンターの外資誘致で共同戦線…来年3月にガイドブック発刊 - BigGo ファイナンス (2026/11/05)
-*   エヌビディア、CUDA 13.5を公開――Vera Rubinの本番AI向け完全サポートを実現 - BigGo ファイナンス (2026/11/05)
-*   米クラウドストライク、AIの暴走止める「キルスイッチ」の仕組み開発 - 日本経済新聞 (2026/11/05)
-*   米コアウィーブ・ショックも、AI投資ブームは「終わらない」 - 毎日新聞 (2026/11/05)
-*   「マインクラフト」で50体のAIエージェントによる協調動作を試す - ZDNET Japan (2026/11/05)
-*   プラントの平均稼働率90％以上を目指す、出光興産のAIエージェント活用術：人工知能ニュース（1/4 ページ） - MONOist (2026/11/05)
-*   英語論文の執筆をAIで支援、近畿大学が「Paperpal」を4,000ライセンス導入 - こどもとIT (2026/11/05)
-*   楽天が「紙おむつのパッケージ」制作時間を99.6％短縮できた理由。AI時代に「企業ブランド」を守るには - Business Insider Japan (2026/11/05)
-*   AI導入している四国企業は６割余 去年調査から大幅増 - NHKニュース (2026/11/05)
-*   宮崎発「農場まるごとAI任せ」が衝撃…窓も暖房も自動化、農家の仕事はどう変わる？ ｜Seizo Trend - ビジネス+IT (2026/11/05)
-*   日立デジタル新CEOが語る「AI時代の稼ぎ方」。FDEを3倍へ、売上10%増でも人員増は3%という発想 - Business Insider Japan (2026/11/05)
-*   AIインフラ建設、米で急ブレーキ 最大地テキサスで反対派の民主勝利 - 日本経済新聞 (2026/11/05)
-*   レノボが顧客のAI活用を促進する新事業を展開 最短15営業日でシステム構成を提供：製造ITニュース - MONOist (2026/11/05)
-*   GitHub Universe 2026AIエージェント急増に伴うGitインフラ全面刷新の舞台裏と、人とAIが対等に協調する開発の未来 - クラウド Watch (2026/11/05)
-*   AI搭載ヒューマノイドは現場監督になれるのか 譲れない「個人の尊重」、長野市の企業の試行錯誤 - 信濃毎日新聞デジタル (2026/11/05)
-*   「AI規制は必要ない」トランプが規制を事実上撤廃…Anthropicの上場を控え加速するリスクと「危うい賭け」 - 現代ビジネス (2026/11/05)
-*   日本語に対応したiPhoneの「Siri AI」で名刺を文字起こし！ PFUの小型スキャナー「ScanSnap iX110」活用 - INTERNET Watch (2026/11/05)
-*   AI新世紀：家族100％の父とAIで“再会”「似すぎなくてよかった」理由 - 毎日新聞 (2026/11/05)
-*   米中間選挙で民主党が大勝、テキサス州知事選の番狂わせがAI・半導体関連株にもたらす下振れリスク 生成AI事件簿データセンター計画容量の27％が集中するテキサスで政権交代、借り入れ頼みの投資計画に迫る試練(1/5) - JBpress (2026/11/05)
-*   「AIっぽい広告」で逆に印象アップ？ 20代では約7割が企業に好印象SPinno調べ - Web担当者Forum (2026/11/05)
-*   値上げで凌ぐ好決算の陰に潜む減速感 アップル「ターナス新体制」の船出とAI・部材の二重苦 - JBpress (2026/11/05)
-*   文系社員が「AIの作り手」になる時代 ― みずほの配置転換が中小企業に突きつける問い｜萩原京二のコラム - イノベーションズアイ (2026/11/05)
-*   民主党圧勝で高まる〈AI規制への警戒〉は過剰反応なのか？日経平均3000円超一時急落…巨額投資を支える｢循環資金｣の穴 - 東洋経済オンライン (2026/11/05)
-*   医療機器開発Mecara（東京） 大熊復興拠点に工場新設 「AI瞳孔計測器」生産 ２０２８年２月操業目標 - 福島民報デジタル (2026/11/05)
-*   AI、遠州織物の研究成果示す 静岡文化芸術大発表会 - 静岡新聞DIGITAL (2026/11/05)
-*   AISI所長 村上氏、日本ハッカー協会 杉浦氏ほか、荏原製作所、大日本印刷らが集結！AI時代の企業防衛戦略を探る - JBpress (2026/11/05)
-*   アップル、社内AI利用予算を削減－コスト抑制へ上限引き下げ - Bloomberg (2026/11/05)
-*   相次ぐ大規模情報流出、サイバー攻撃にAIが加わると何が変わるのか？ 攻撃の実態と企業が見直すべき対策とは - Yahoo!ニュース (2026/11/05)
-*   eMAXIS Neo AIテクノロジー03311249：基準価格・投資信託情報 - Yahoo!ファイナンス (2026/11/05)
-*   iシェアーズ AI グローバル・イノベーション アクティブ408A：株価・株式情報（夜間PTS含む） - Yahoo!ファイナンス (2026/11/05)
-*   AIで企業とユーザーのつながりはどう変わる？ LINEヤフーが目指す「Business OS」の未来｜LINEヤフー株式会社 - LY Corporation (2026/11/05)
-*   古文書解読にAI活用 歴史や文化、より深い理解へ期待 - 聖教新聞 (2026/11/05)
-*   滋賀県草津市と関経連「フィジカルAI」の社会実装テーマにセミナー AIロボットの課題は？ - 京都新聞デジタル (2026/11/05)
-*   プレスリリース：ブルーテック、「AIエージェントハブ Knowledge Suite+」のSFA機能においてAPI提供を開始（PR TIMES） - 毎日新聞 (2026/11/05)
-*   Basetenのチャーリー・オニール氏、AI研究の損失改善余地は残り15〜20%と指摘、急速なテイクオフに疑問 - BigGo ファイナンス (2026/11/05)
-*   スマート技術で獣害防げ 各地でAIやICT使った対策進む - 日本農業新聞 (2026/11/05)
-
-### 2ch
-*   共和党大敗にバンス副大統領「敗北の理由は戦争だ」…トランプ氏との対立招く可能性も (2026/11/05)
-*   日本の書道、ユネスコ無形遺産へ 筆や墨を用いた手書き表現 (2026/11/05)
-*   USA民主党下院トップが勝利宣言「アメリカ復活の始まり」「国民は過激主義や腐敗にうんざりしている」★3 (2026/11/05)
-*   「ポスト・トランプ」時代へ号砲 場当たり的手法「うんざりだ」 MAGA依存に再考迫る(産経) (2026/11/05)
-*   ♨「サウナで汗かいたまま水風呂」「股間にドライヤー…」スーパー銭湯の《NG行為》に怒りの声続出 (2026/11/05)
-*   株価NYダウが急伸1500ドル高 敗北認めたトランプ氏好感、テックは明暗 (2026/11/05)
-*   トランプ氏、中間選挙敗北で態度一変 民主との「取引」模索か (2026/11/05)
-*   武部氏、公選法違反疑惑また釈明 週刊誌報道、「適切に処理する」 (2026/11/05)
-*   ヘグセス国防長官の交代是非を相談か トランプ大統領、中間選挙大敗で (2026/11/05)
-*   対日イットリウム98%減 中国輸出、レアアース規制 (2026/11/05)
-*   「ローカル駅伝はなくなる運命なのかな。箱根駅伝のみであとは廃れている」九州の駅伝また姿消す「実業団毎日駅伝」63回の歴史に幕 (2026/11/05)
-*   サッカー堀口真帆 高校サッカー応援マネジャー就任 高校最終年で夢実現 リフティング49回は歴代マネ最高記録 (2026/11/05)
-*   合格率“たった4.7%”超難関資格に合格「美人なうえに超秀才」「次元違う」中学→大学院 “全て名門”『元AKB48メンバー』 (2026/11/05)
-*   箱根駅伝でついに登場「1番欲しかった」 初の“白&赤”にファン垂涎「見るだけでワクワク」第103回大会 (2026/11/05)
-*   野球ダルビッシュ有、織田翔希の巨人“拒否”に 「直メジャーはお勧めしない。絶対に日本の球団経由の方がメジャーで…」★3 (2026/11/05)
-*   中央日報逮捕されると「私は韓国人です」…フィリピンで逮捕された日本人の正体 (2026/11/05)
-*   中央日報「コーヒー飲んでいたらゴキブリ」…SNSで炎上した韓国のコーヒーチェーン (2026/11/05)
-*   橋下徹氏トランプ大統領の狙いは「ヤルタ2.0」と大胆持論「中露と新しい秩序を作り歴史に名を残すことを考えている」 (2026/11/05)
-*   安全保障関連3文書「日本が最軍事化を加速」と中国メディア=原潜の導入検討、米専門家も後押し (2026/11/05)
-*   聯合ニュース韓国大手紙の中央日報 ダウ・CJ連合が610億円で買収へ (2026/11/05)
-*   超大型ウナギ、市場創出へ 1尾で2～3人前、価格手頃に (2026/11/05)
-*   三菱UFJ、新銀行でキャッシュカード全廃 サイバー防御へスマホ入出金 (2026/11/05)
-*   ナゾロジー脳は1秒に15回、2つの現実を切り替えている可能性 (2026/11/05)
-*   物理タイムトラベルはなぜ不可能なのか?物理学者がわずか3行の数式で示した「時間旅行を禁じる条件」 (2026/11/05)
-*   福岡市長選挙に13人が立候補…現職・高島宗一郎市長が5選出馬を見送り40年ぶりに新人のみの争い (2026/11/05)
-*   園児が仮装して「南無阿弥陀仏」ハロウィーンを前に仏教の風習でお菓子をおねだり 大分 (2026/11/05)
-*   町山智浩「吉本興業が防衛費増額に……って、吉本は国策漫才で戦争に加担した反省がなく、同じことを繰り返す。税金で。」 (2026/11/05)
-*   外国人差別デマ対策で学者や弁護士が政府に提言 「犯罪流言も差別的言動」 (2026/11/05)
-*   ヘイトつり目ポーズで「中国人?」…ポルトガルの飲食店で人種差別を受けた韓国人旅行者 (2026/11/05)
-*   米国米中間選挙 韓国系のダン・コー氏が連邦下院議員に初当選 (2026/11/05)
-*   漫画タンク控えめな「ガールズ&パンツァー もっとらぶらぶ作戦です!」26巻 (2026/11/05)
-*   漫画御坂美琴が主人公のスピンオフ「とある科学の超電磁砲」完結21巻 (2026/11/05)
-*   トヨタ中間決算きょう発表 北米HV好調、中国は苦戦…今後の展望は (2026/11/05)
-*   第77回全早慶明バレーボール定期戦の詳細が発表! 11/7に開催 (2026/11/05)
-*   箱根駅伝でついに登場「1番欲しかった」 初の“白&赤”にファン垂涎「見るだけでワクワク」第103回大会 (2026/11/05)
-*   株価NYダウが急伸1500ドル高 敗北認めたトランプ氏好感、テックは明暗 (2026/11/05)
-*   中央日報逮捕されると「私は韓国人です」…フィリピンで逮捕された日本人の正体 (2026/11/05)
-*   「ポスト・トランプ」時代へ号砲 場当たり的手法「うんざりだ」 MAGA依存に再考迫る(産経) (2026/11/05)
-*   ヘグセス国防長官の交代是非を相談か トランプ大統領、中間選挙大敗で (2026/11/05)
-*   安全保障関連3文書「日本が最軍事化を加速」と中国メディア=原潜の導入検討、米専門家も後押し (2026/11/05)
-*   日本の書道、ユネスコ無形遺産へ 筆や墨を用いた手書き表現 (2026/11/05)
-*   中央日報「コーヒー飲んでいたらゴキブリ」…SNSで炎上した韓国のコーヒーチェーン (2026/11/05)
-*   黒人の赤ちゃんに「移民は帰れ」の牙 SNS騒動が暴く日本の危うさ (2026/11/05)
-*   対日イットリウム98%減 中国輸出、レアアース規制 (2026/11/05)
-*   高市首相、COP31欠席へ 温暖化会議、昨年に続き (2026/11/05)
-*   アメリカ中間選挙民主党、上下両院の“多数派奪還” 民主党・急進派のエルサイード氏が勝利確実 ★5 (2026/11/05)
+**●●2ch●●**
+（日本時間 2026/11/06）
+株価米ナスダック5%急落、NYダウ1800ドル安 AI株が総崩れ (2ch) 2026/11/06
+速報株価が急落する事態に トランプ米大統領「中間選挙で民主党が勝てば、1929年型の大恐慌が起こる」 ★2 (2ch) 2026/11/06
+ロシア、JT資産を管理下に 対日圧力強化の一環か (2ch) 2026/11/06
+撮り鉄「絶対におやめください」沿線で一部撮影者が…貨物鉄道会社が注意喚起した“迷惑行為”に「マナーを守って」の声 (2ch) 2026/11/06
+《信用できるか》高市内閣支持率JNN64.9%、時事通信42.4%に疑問の声続出…元NHK担当者明かす世論調査の裏側 (2ch) 2026/11/06
+話題「おでんで白米」は、あり?なし? 「おでんだけ食べたい」派と「ご飯ぶっ込む」派で意見割れる (2ch) 2026/11/06
+「一橋を蹴って早稲田、九大より上智」独自データが映す驚きの大学受験最新動向「受験志向」における地殻変動とは (2ch) 2026/11/06
+キオクシア、「一生一緒にキオクシア」と話題も株価乱高下 (2ch) 2026/11/06
+「男性の名字」にしなかったため婚約解消 元恋人を訴えた女性が敗訴 東京地裁 ★2 (2ch) 2026/11/06
+トランプ米大統領「イラン攻撃はやらなければならなかったし、これからも続けていく」「イランの核保有阻止する」 (2ch) 2026/11/06
+芸能カズレーザー、昭和のタバコ文化を振り返る 「マジでどこでも吸えましたもんね」「映画館とか、めっちゃ煙たかった」 (2ch) 2026/11/06
+中年男性が若いスーパー店員にほのかな恋心を抱く漫画「レジスタ!」に言及 (日刊ゲンダイ) ★2 (2ch) 2026/11/06
+野球日本ハム、レイエスと4年63億円で契約延長へ 年俸15億円超え 「歴史的」大型契約で残留… NPB史上最大クラスか★2 (2ch) 2026/11/06
+「新聞を読むのが習慣」が47.1%、高齢者が高い傾向…なぜ月ぎめで新聞を取るのか、その理由をさぐる(2026年度版) (2ch) 2026/11/06
+広島 ソフトバンク・東浜巨を無償トレードで獲得!床田&森下FA行使で不透明な先発陣テコ入れ (2ch) 2026/11/06
+特別扱いの声までなぜこの日本人K-POPアイドルは謝罪に追い込まれない? aespa・ジゼルの投稿が物議 (2ch) 2026/11/06
+キムチ女 韓男虫結婚100組のうち9組が多文化夫婦…とりわけ増えた「韓男日女」カップル (2ch) 2026/11/06
+韓国ソウルの人気国語講師、授業動画の拡散で容姿に中傷…本人がSNSで反論 (2ch) 2026/11/06
+中央日報エベレスト近くでのヘリコプター衝突事故…朝日か交信の問題の可能性 (2ch) 2026/11/06
+米オラクル、中国テンセントへのAI半導体リース契約(1兆1000億円)破棄 トランプ政権の圧力か FT報道 (2ch) 2026/11/06
+ペーパーミル金を払えば著者に…IEEE、一日で論文1417本撤回 (2ch) 2026/11/06
+時速80km超で飛び、壁に衝突しても壊れない。スイス工科大が開発した「柔らかいドローン」の驚くべき性能 (2ch) 2026/11/06
+店舗ブルーゾーンHD傘下のクックマート、浜松市に新店大店立地法速報 (2ch) 2026/11/06
+トラックの荷物、下ろすのは誰の仕事? 2027年の新ルールに食品卸業界が懸念 (2ch) 2026/11/06
+米ニューメキシコ州で初の先住民女性知事が誕生――彼女のイメージに見るウクライナとのつながりとは (2ch) 2026/11/06
+米国コリアンの士官学校生徒、妊娠した彼女を気絶させて膣と口に堕胎薬押し込む (2ch) 2026/11/06
+町山智浩「吉本興業が防衛費増額に……って、吉本は国策漫才で戦争に加担した反省がなく、同じことを繰り返す。税金で。」 (2ch) 2026/11/06
+外国人差別デマ対策で学者や弁護士が政府に提言 「犯罪流言も差別的言動」 (2ch) 2026/11/06
+熊本八代工場の紙生産再開断念へ 熊本地震で被災、拠点は維持の方向 日本製紙 (2ch) 2026/11/06
+西郷隆盛そっくりさんコンテスト 生後8カ月の赤ちゃんがグランプリ 大勢の観客の前で堂々鹿児島 (2ch) 2026/11/06
+上北ふたご『わんぷり』猫屋敷まゆ/キュアリリアン誕生日イラスト描き大反響 (2ch) 2026/11/06
+漫画タンク控えめな「ガールズ&パンツァー もっとらぶらぶ作戦です!」26巻 (2ch) 2026/11/06
+米ニューメキシコ州で初の先住民女性知事が誕生――彼女のイメージに見るウクライナとのつながりとは (mezha.net) 2026/11/05
+速報株価が急落する事態に トランプ米大統領「中間選挙で民主党が勝てば、1929年型の大恐慌が起こる」 (2ch) 2026/11/06
+高市総理「これからもトランプ大統領と協力していきたい」 (2ch) 2026/11/06
+速報ロシア大統領はJT資産の接収を命じた (2ch) 2026/11/06
