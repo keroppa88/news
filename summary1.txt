@@ -1,589 +1,585 @@
-## 2026年11月15日 ニュース記事見出し
+## 2026年11月16日（UTC） ニュースヘッドライン
 
 ### ●●ロイター●●
-- カンザス州知事選、民主党が勝利（11/16）
-- アラスカ州知事選、民主が98年以来の勝利へ（11/16）
-- メガスピード、アリス・フアン氏は昨年退社と発表（11/16）
-- エヌビディア後任CEO、社外から選ぶべきとベセント米財務長官（11/16）
-- エストニア、ロシア国境閉鎖へ（11/16）
-- ジェンスン・フアン氏、エヌビディアCEO復帰を側近と協議（11/16）
-- 韓国の税理士試験、生成AIによる不正を自白（11/15）
-- フィギュア＝世界王者マリニン優勝、山本は7位（11/15）
-- Boeing tops Airbus in orders（11/15）
-- SpaceX's Starship aces first return to Texas（11/15）
-- Migrant caravan marches through Mexico amid Trump tariff threat（11/15）
-- Pope Leo rides in helicopter cockpit with Peruvian Air Force pilots（11/15）
-- Holy Guacamole! Shortage on Super Bowl（11/15）
-- Johnson's brother quits as election campaign kicks off（11/15）
-- Run faster, jump higher: World Athletics raises the bar for LA 2028（11/15）
-- Stock investors are in denial: economist（11/15）
-- Protesters clash with police near Philippines ASEAN summit over Trump visit（11/15）
-- Pope Leo returns to remote Peru town he served as bishop（11/15）
-- Global oil braces for turmoil from U.S. crackdown on Venezuela（11/15）
-- Ford and VW team up（11/15）
-- Like oceans rising: green protests sweep the globe（11/15）
-- Breakingviews TV: Apple on air（11/15）
-- コラム：世界の製薬大手、次世代肥満症治療薬の開発で中国に照準（11/15）
-- NBA＝ヒート4連勝（11/15）
-- サッカー＝スペイン代表監督、「スペインに人種差別はない」（11/15）
-- ウクライナ大統領、米スペースXの通信制限を批判（11/15）
-- サッカー＝欧州NLでスウェーデン昇格決める（11/15）
-- フィギュア＝GP2連勝目指す中井が女子SP首位（11/15）
-- よい意味での物価上昇になるよう持っていく必要＝城内経財相（11/15）
-- テニス＝アンドレエワとスビトリナが決勝進出（11/15）
-- ラグビー＝日本はイングランドに大敗（11/15）
-- ノボの経口肥満治療薬「ウゴービ」（11/15）
-- サッカー＝ポルトガル、ロナルド代表引退後初戦でデンマークに大敗（11/15）
-- ゴルフ＝吉田優利が首位と2差の3位に浮上（11/15）
-- スペースX「スターシップ」、発射塔のアームで初回収に成功（11/15）
-- サッカー＝国際親善試合で日本がブラジルに競り勝つ（11/15）
-- 野球＝日本が豪州に七回コールド勝ちで決勝進出（11/15）
-- U.S. Senate confirms Haspel to be first woman CIA director（11/15）
-- 米航空便、15日夜に正常化へ（11/15）
-- アングル：AI電力不足で中古タービン市場過熱（11/15）
+（日本時間 2026/11/17）
+
+*   米、中国の先端ＡＩ半導体アクセスを一段と制限 トランプ氏訪中前に (11/17 00:11) (ロイター)
+*   米金融大手でシステム障害報告、第三者関与の兆候なしと報道 (11/17 04:37) (ロイター)
+*   プーチン氏、金正恩氏がＡＰＥＣで訪中なら会談も＝報道官 (11/17 05:15) (ロイター)
+*   クリーブランド連銀総裁、小幅な利上げ選好 インフレ圧力強まるも＝報道 (11/17 05:42) (ロイター)
+*   米国株式市場＝大幅安、ＡＩ懸念で エヌビディア決算に注目 (11/17 06:39) (ロイター)
+*   トランプ・メディア、転換社債で10億ドル返済迫られる恐れ 株価過去最低圏 (11/17 06:42) (ロイター)
+*   ＮＹ外為市場＝ドル指数1年7カ月ぶり高値、円は介入警戒水準 (11/17 07:04) (ロイター)
+*   ＮＹ市場サマリー（16日）株大幅安、ドル指数1年7カ月ぶり高値 利回り低下 (11/17 07:10) (ロイター)
 
 ### ●●ブルームバーグ●●
-- エヌビディア、台湾当局に働きかけ－半導体密輸巡る社員訴追に異議（11/16）
-- ピクテが日本株買い増す、米中間選挙後に分散投資加速－銀行など選好（11/16）
-- フアン氏復帰検討か、イラン攻撃、ウクライナ交渉で新展開－今朝の5本（11/16）
-- カンザスシティー連銀総裁、FRBになお課題-インフレ「間違った方向」（11/16）
-- ジェンスン・フアン氏、エヌビディアCEOへの復帰を側近らと協議－FT（11/16）
-- 米国で空の混乱続く、15日も1600便超欠航-全米運航停止の影響残る（11/16）
-- AI敵視から融和へ、ディズニーが路線変更－テーマパークからアニメ（11/16）
-- ベッセント氏､エヌビディア経営陣は「抜本刷新」必要－前CEO解任受け（11/16）
-- フアン氏なきエヌビディア、後継問題が映す「カリスマCEO依存」の危うさ（11/16）
-- エヌビディア問題、中国スパイ活動の世界的な広がり浮き彫りに（11/16）
-- 米国で韓国発「Kビューティー」ブーム、ウォール街も注目－ETF登場（11/16）
-- 今週の株式＝AI銘柄中心に不安定（11/16）
-- シリコンバレー動揺、ジェンスン・フアン氏解任で創業者支配巡り議論（11/15）
-- イラン、バーレーンを数週間ぶりに攻撃－米国との戦闘終結になお含み（11/15）
-- 国防総省、欧州からの部隊撤退計画を見直し（11/15）
-- マイアミ空港でパナマ機とUPS貨物機が接触（11/15）
-- ビットコインじり安から下げ加速、疲弊するトレーダー－下値を模索（11/15）
-- GTA6オンラインの開始時期は本編の約1年後（11/15）
-- エヌビディア騒動で脚光、米社債6%利回りの魅力－株優位に揺らぎ（11/15）
-- サッチャー改革と決別できるか 英バーナム首相が挑む「新たな国家の形」（11/15）
-- 72年目のゴジラ、戦争と核の記憶を映し出す（11/15）
-- 焦点英追加利上げ、10月のインフレ指標が後押しする可能性（11/15）
+（日本時間 2026/11/17）
+
+*   半導体アクセス制限、FRBのAI検証、米朝首脳会談か－今朝の5本 (06:04)
+*   米クリーブランド連銀総裁、小幅利上げ支持－必要なら大幅引き上げも (05:43)
+*   JPモルガン、一部取引の処理に遅れ－「技術的な問題」に対応 (05:32)
+*   アルトマン氏、フアン氏不在でも「AI業界は大丈夫」-需要の強さ指摘 (04:07)
+*   欧州市況株下落、AI懸念でハイテク売り－米利上げ観測でユーロ安 (03:20)
+*   カナダ中銀のマックレム総裁、2027年6月に退任－激動の経済下で指揮 (02:47)
+*   際立つ「エヌビディア効果」、イスラエル経済成長の半分を占める (02:39)
+*   ウォーシュFRB議長、AIの米経済への影響で複数シナリオ－雇用減少も (02:31)
+*   ブラックロック、株式リスクを追加－AI関連投資も組み替え (02:12)
+*   米国、外国人労働者を雇用する企業への規則厳格化へ-労働省が提案 (02:07)
+*   原油は下落、ブレント93ドル台－中東緊張でも供給過剰感を意識 (01:40)
+*   IPOなど一部取引、2027年始めに先送りの動き－BofAモイニハンCEO (00:50)
+*   トランプ米大統領、北朝鮮の金総書記と中国で会談する可能性を示唆 (00:12)
+*   トランプ氏、フアン氏のエヌビディアCEO復帰求める意見に賛意 (00:02)
+*   ラトニック・ベッセント両長官、トランプ氏と大統領専用機でアジアへ (23:54)
+*   米国、先端AI半導体への遠隔アクセスを制限－輸出規制の迂回防止 (23:12)
+*   モルガン・スタンレー、世界の株式を「最大限のオーバーウエート」に (22:17)
+*   高市首相が正念場の外交ウイークへ－「米中ロ」前にかすむ存在感 (21:48)
+*   AIエージェント、銀行の取り付け騒ぎ加速させる恐れ－FRBバー理事 (19:58)
+*   AIと高水準の債務、金融安定を脅かす恐れ－ECB副総裁が警戒感 (19:48)
 
 ### ●●BBC●●
-- ゼレンスキー氏、米国とマスク氏にStarlink制限解除を要請（11/16）
-- イラン、バーレーンにある米軍基地をドローン攻撃（11/16）
-- 中国に渡ったとされるNvidiaの元幹部、2025年に退社（11/16）
-- 英、ブランド事件後に同意年齢の引き下げを議論へ（11/16）
-- 教皇レオ、ペルー旅行中にヘリコプターのコックピットに搭乗（11/16）
-- チェコ、公共メディアへの資金提供変更計画に反対デモ（11/16）
-- 米国で数千便のフライトがキャンセルまたは遅延（11/16）
--Clothing factories shut in Bangladesh as workers strike over pay
--Scotland hang on for scrappy win over Australia - reaction & as it happened
--My mother told me I would die if I sought treatment for Ebola - I am proof you can survive
--Beauty advent calendars can cost hundreds but are they value for money?
--New Orleans port files $1m lawsuit over 'miracle on the Mississippi' tanker collision
--Three men sentenced to death in Jordan over fatal church mass shooting
--How telecoms upgrade work sparked US flight chaos
--Judo champion shakes up French presidential race with surprise candidacy
--'Rock 'n' roll swagger': 10 images capturing the chaos of '90s Brit culture
--'I am melting, help me': The website that transformed drug research
--The mission to save the ancient residents of Crete's beaches
--A visit to Pegasus Bridge, the site of a daring D-Day raid
--The medical secrets of a 5,300-year-old mummy
--Japan's AI robots are preparing for life on the Moon
--Can China repeat its EV success with robotaxis?
--Watch: Cruise ship overturns after collision with tanker in New Orleans
--How Mississippi's new senator won in Trump's heartland - and what he will do next
--'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth
--'Hundreds and hundreds of bones': In a hidden Alpine cave, a mountaineer discovers an Ice Age cave bear graveyard
--Seven travel trends that will define 2027
--Judge blocks Trump closure of 'Trash Island' Washington DC golf course on Sunday
--Fifth Canadian soldier dies from injuries caused by large fire at military base
--Copper wire upgrade behind US flight suspension, transport secretary says
--'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision
--Police ban protests near 10 schools and five universities in Paris
--South Korea's top scorer in tax accountancy exam admits cheating
--Israel kills Hamas commander in strike on Gaza camp, officials say
--Star-studded MacGowan tribute album gave grieving wife purpose
--How the Jensen Huang scandal created a headache for business-friendly Singapore
--Heat pumps: How much heat does your home really need?
--Global Microsoft outage affecting tens of thousands of users
--What we know as Nvidia CEO Jensen Huang resigns over affair allegations
--Even Grand Theft Auto's original creators haven't been able to play GTA 6
--Are we too reliant on big tech companies?
--Microsoft outage 'stark reminder' of how much we rely on tech
--Watch: How a server outage took down Microsoft Teams and Outlook
--Tearful McIlroy dedicates record-equalling win to ill dad
--Ronaldinho makes comeback in Ravenna win
--Townsend hails Scotland's defence in Australia 'arm wrestle'
--'We were inseparable': How imaginary friends help us in real life
--The people who only need four hours' sleep
--Why average human body temperatures may have fallen
--How to exercise more without trying
--Mansion featured in Rivals drops price by £1.5m after failing to sell
--Book swap scheme aims to inspire young readers
--Billie Piper to star in new horror set on 'outskirts of old Welsh iron town'
--How Kent may have inspired Orwell's Animal Farm
--Champagne, crocs and no roads: Inside Australia's wildest luxury escape
--Why is there so much kissing in Spain?
--'Unlike anything else in the country': Exploring the UK's surreal ‘Alps’
--Where to get the best fish and chips in London
--Inside one of Europe's biggest technology events
--Why the latest mega-hit ACOTAR romantasy is dividing readers
--'Baffling but brilliant' post-apocalyptic novel The End of Everything wins Booker Prize
--Why filming The Worst Person in the World stopped Renate Reinsve from quitting acting
--Why Mary Shelley's chilling horror story Frankenstein is so misunderstood
--Clouds are abandoning this Costa Rican cloud forest, transforming life inside it
--See how China finally slowed its ballooning emissions right down
--Saffron is the world's most expensive spice. Now this 'red gold' is in crisis in Kashmir
--'What the hell did this?': The orca brothers preying on great white sharks
--Using a macro lens to photograph spiders and snakes
--Watch sea anemones battle for territory in timelapse
--Mysterious carvings found in Queen Charlotte's palace
--The high-tech mission to preserve a 17th-century shipwreck
--Why are so many Thai restaurants hidden in London pubs?
--The world's top 'cities to watch' in 2026
--How Italy's guiltiest food ritual went public
--The return of New Orleans' 'deadly’ cocktail
+（UTC）
+
+*   Customers report service outages at major US banks (3 hrs ago)
+*   Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex CEO (10 mins ago)
+*   Robert Pattinson says being cast as new James Bond is 'honour of a lifetime' (3 hrs ago)
+*   Five EU countries announce migrant deportation centre in Rwanda (6 hrs ago)
+*   Pope Leo hit by flying rosary while waving to crowds in Peru (1 hr ago)
+*   Crimea Kerch Bridge hit in a huge Ukrainian drone attack (26 mins)
+*   Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history' (2 hrs ago)
+*   Russia's mega-rich are already imagining a future after Putin (22 hrs ago)
+*   'You're going to win the war': Harry praises war veterans on surprise Ukraine visit (13 hrs ago)
+*   'I'd throw up in the car park': How school anxiety is harming children's futures (17 hrs ago)
+*   Mexican drug lord Miguel Ángel Félix Gallardo dies age 80 (19 hrs ago)
+*   Raye, Rosalía and Dolly Parton recognised in Grammy nominations (8 hrs ago)
+*   Homophobia on the rise in football - what is your club doing about it? (N/A)
+*   US flights returning to normal levels after weekend of disruption (N/A)
+*   Houthi rebel advance in Yemen may further destabilise global economy (N/A)
+*   Estonia to close Russia border crossings after attempted drone factory arson attack (N/A)
+*   GTA 6 hacker pleads guilty after release from secure hospital (21 hrs ago)
+*   Even Grand Theft Auto's original creators haven't been able to play GTA 6 (N/A)
+*   Are we too reliant on big tech companies? (N/A)
+*   Microsoft outage 'stark reminder' of how much we rely on tech (N/A)
 
 ### ●●NYタイムズ●●
-- Democrats in Array: 8 Takeaways From a Big Democratic Gathering in Denver（11/16）
-- Flight Delays and Cancellations Persist as System Recovers From Ground Stop（11/16）
-- Nvidia Fallout Looms Over Trump-Xi Meeting（11/16）
-- Saudi-Backed Forces Retreat in Yemen, Leaving Key Strait in Houthi Control（11/16）
-- At Sotheby’s, Risk-Taking Left a $180 Million van Gogh in the Lurch（11/16）
-- Megaspeed Says Alice Huang Left Company in August 2025（11/16）
-- How Jeffrey Epstein Grew His Sex-Trafficking Ring（11/16）
-- Chris Van Hollen Says His Majority Leader Challenge to Chuck Schumer Is Gaining Support（11/16）
-- Israel Kidnapped Iranian Generals in Hunt for Ron Arad（11/16）
-- Sean Duffy Offers New Details on How One Fix Spiraled Into Nationwide Ground Stop（11/16）
-- The Flaw at the Heart of Anthropic’s I.P.O.（11/16）
-- Iran Attacks Bahrain for the Second Time in Days（11/16）
-- The Big Questions About Jeffrey Epstein: What The Times Has Learned（11/15）
-- How Jensen Huang’s Secret Led to His Downfall at Nvidia（11/15）
-- Defeating MAGA Is Only Half Done（11/15）
-- Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business（11/15）
+（UTC）
+
+*   Raye, Rosalía and Ella Langley Top a Women-Led 2027 Grammys Field (07:25)
+*   Chase Bank Transactions Disrupted by ‘Technical Issue’ Amid Outage Reports (07:12)
+*   Robert Pattinson Named as the Next James Bond (07:10)
+*   Why Robert Pattinson Could Be a Great James Bond (07:03)
+*   There’s a New James Bond, Again. How Did the Last Ones Fare? (06:54)
+*   Grammy Nominations 2027: See the Full List (06:42)
+*   Measles Is Sickening More Pregnant Women and Newborns, Alarming Doctors (06:35)
+*   Bessent Takes Hawkish Turn in White House Debate on China (06:25)
+*   Trump Administration Moves to Close A.I. Chip Loophole Ahead of China Trip (06:07)
+*   Challenging Consensus, Scientist Says Epstein Autopsy Photos Show Homicide (05:08)
+*   Supreme Court Rejects Trump Bid to Revive University Research Cuts (04:19)
+*   Elon Musk Dreams of Merging Tesla and SpaceX in Move Toward Tech Supremacy (03:57)
+*   The Financial Bubble Cycles Are Getting Worse (03:45)
+*   One Overlooked Reason the Democrats May Have Won the Midterms (03:41)
+*   Trump Says He’s Open to Reinstatement of Jensen Huang as Nvidia Chief (02:48)
+*   Elon Musk Wants to Merge Tesla and SpaceX. Their Businesses Already Overlap. (02:45)
+*   The Blue Wave Lifted Democrats. But Not All Progressives Rose as High. (01:44)
+*   2027 Grammy Snubs and Surprises: Madonna, Noah Kahan, Audrey Hobert and More (01:17)
+*   This Cancer Kills Children in a Year. Research Has Been Stalled for a Year. (00:03)
 
 ### ●●WSJ●●
-- エヌビディア次期CEO、米財務長官が社外からの起用要求（11/16）
-- 転売で稼ぐ「エルメスファンド」 高リターンの裏にリスクも（11/16）
-- イラン、バーレーンを攻撃 紛争激化の中（11/15）
-- トランプ氏とフアン氏、こうして二人は「盟友」となった（11/15）
-- 米航空障害の原因、アーカンソー州のルーターと特定（11/15）
-- 米当局「イランは最大2500発のミサイル保有」、トランプ氏主張と相違（11/15）
-- スペースX、ロケット宇宙船「スターシップ」回収に成功（11/15）
-- 米の航空管制問題、原因は銅線の交換作業＝運輸長官（11/15）
+（日本時間 2026/11/17）
+
+*   米国で増える20代の起業、新卒レベルの職を選ばない訳 (07:01)
+*   エヌビディア取締役会、フアン氏のCEO復帰を検討せず (06:06)
+*   FRB、AIによる米経済への影響を検証 (03:54)
+*   米商務省、半導体輸出の規制強化へ (02:38)
+*   トランプ氏、金正恩氏との会談の可能性に言及 (00:57)
+*   エヌビディア前CEOが築いた中国「AI裏口ルート」 (16:02) (11/16)
+*   フィリピン訪問のトランプ氏、対中緊張拡大の同盟国と連携確認 (15:25) (11/16)
+*   トランプ政権、エヌビディアをAI「国家代表企業」に指定へ (13:59) (11/16)
+*   フアン氏の復帰求める動き、シリコンバレーで広がる (13:42) (11/16)
+*   エヌビディア「白紙小切手」終焉、AI経済に無制限の支援 (13:33) (11/16)
+*   オピニオントランプ氏とフアン氏に共通の悲劇的欠陥 (13:32) (11/16)
+*   バリュー株ファンド、中身はAI株だらけ (11:59) (11/16)
+*   高級品業界で議論の「値下げ戦略」、ルイ・ヴィトンの選択とは (11:00) (11/16)
+*   EVへの乗り換え、WSJ読者から学ぶ7つの教訓 (08:48) (11/16)
+*   米出発便停止の影響続く、欠航は3日目に突入 (07:50) (11/16)
 
 ### ●●AXIOS●●
-- Metro legal director says changing the charter related to council size requires voter approval（11/16）
-- Mayor Johnson denies pressuring his CFO to present false information（11/16）
-- Bessent questions did Nvidia "goose" earnings with suspect China chip sales（11/16）
-- PPS unveils new plan to close 10 schools by 2028（11/16）
-- Trump's border crackdown faces a new blue wall of governors and House members（11/16）
-- U2, Wu-Tang Clan and Phil Collins highlight 2026 Rock Hall ceremony（11/16）
-- Crashed Mississippi River cruise ship will take weeks to remove（11/15）
-- FAA back at "full operations" after Friday outage, Transportation Sec. says（11/15）
-- How Nvidia's scandal knocked thousands off your 401(k)（11/15）
-- Space data centers could end stargazing as we know it（11/15）
-- Gen Z shatters America's political orthodoxies（11/15）
-- Your state's favorite Thanksgiving side dish, according to Doordash（11/15）
-- State antitrust challenges complicate media mergers（11/15）
-- Wholesale food prices are on the rise（11/15）
-- AI's four colliding crises（11/15）
-- MAGA turns on Lutnick amid China spy scandal（11/15）
-- U.S. loses measles elimination status（11/15）
-- Pfizer lands $1.5B, Rezera bails on IPO, Delix funding（11/15）
-- Mercor land $750M, Vanta makes a cyber deal（11/15）
-- $500M for Torus and Agile, $300M for Path Robotics, $130M for Mavria（11/15）
-- Cinven's exits, Papa Gino's new backer, Norwest's $4B fund（11/15）
-- Genesee & Wyoming's breakup, Mitsui's chipmaking deal, Path Robotics' Series E（11/15）
-- Bon Secours ups Surgery Partners offer, $160M for Laza Medical（11/15）
-- FAA ends hours-long nationwide ground stop（11/15）
+（UTC）
+
+*   Democrats sue to block Senate leader from taking seat (07:04)
+*   Ex-Tesla engineers turn viral robot into tree-cutting startup (06:51)
+*   Jefferies opens with deals and a bet on British biotech (06:50)
+*   Scoop: Endurance Energy raising $150M for offshore geothermal (06:50)
+*   Fewer international students, billions at stake (06:39)
+*   Shaq talks Dunkman, Indy soul food and Pacers fans (06:11)
+*   Gram Parsons' Rock Hall induction caps star-studded celebration (05:58)
+*   Where to take hot yoga in Charlotte, from someone who's tried 5 studios (05:58)
+*   Colo. Democrats don't have a blank check after 2026 wins, poll finds (05:32)
+*   $30M animal adoption center breaks ground in Charlotte this week (05:28)
+*   Pittsburgh makes its pitch for a new space academy (05:13)
+*   Hopkins returns to normal after nationwide FAA ground stop (04:52)
+*   Raleigh's housing reforms have brought down rents, study finds (04:45)
+*   Houston's Grammy noms: From Beyoncé to Don Toliver (04:44)
+*   Dems' Denver victory party previews 2028 battles (04:33)
+*   What we know about what caused the FAA's nationwide ground stop (04:32)
+*   SCOTUS gives DEI a boost after national assault (04:31)
+*   Glendale's long-delayed Mattel theme park to expand, add Barbie Hotel (04:14)
+*   Some Dems' 2028 strategy: Make America Nice Again (04:12)
+*   New litmus test for 2028 Dems: Refuse AI campaign cash and pass regulations in year one. (03:59)
+*   The Jefferson Hotel is restricting holiday visitors this year (03:16)
+*   Fed warns of growing financial risks from AI boom (02:57)
+*   Mayor Johnson denies pressuring his CFO to present false information (02:54)
+*   Fed's Warsh sees risk of stock bust if AI boom disappoints (02:18)
+*   Exclusive: White House requires signoff before agency staffers testify to Congress (02:14)
+*   "One wants to be friendly with China, and one wants to have a blow up with China." (02:14)
+*   Chesterfield redraws school boundaries as population booms (01:43)
+*   "Britain is back in business when it comes to AI," U.K. minister Kanishka Narayan tells Axios. (01:24)
+*   Campaign to bring back Jensen Huang as Nvidia CEO gains steam with Trump support (01:08)
+*   U.S. attorney targets another Democrat over congressional investigtions (01:06)
+*   The one thing that may have doomed Jensen Huang (00:37)
+*   San Diego City Council to decide whether to boot Flock (23:46) (11/16)
+*   Prop. 37 could help some San Diegans buy a home (23:46) (11/16)
+*   SF approves first new gay bathhouse since AIDS-era closures (23:40) (11/16)
+*   Portland votes to cut fuel storage by 20% due to earthquake risk (23:34) (11/16)
+*   Seattle area ranks No. 4 for growth in millionaire renters (23:32) (11/16)
+*   Bessent questions did Nvidia "goose" earnings with suspect China chip sales (23:32) (11/16)
+*   "No sane person questions whether AI works" — but an AI bubble appears ready to pop. (23:14) (11/16)
+*   Bird flu is spreading in Washington. Here's how to keep your pets safe (23:12) (11/16)
+*   Colorado's youth vote flexes its muscle in the 2026 election (22:55) (11/16)
+*   East Aurora keeps growing without basic amenities (22:54) (11/16)
+*   Trump's border crackdown faces a new blue wall of governors and House members (22:45) (11/16)
+*   Exclusive: Knit Health raises $35M Series A to guide patient referrals with AI (22:32) (11/16)
+*   Inside the plans to turn the Ellis Building into a boutique hotel (22:31) (11/16)
+*   How to help Mesa families in need this Thanksgiving (22:28) (11/16)
+*   Colorado Springs Utilities wants a $61.5M rate hike (22:22) (11/16)
+*   Diesel dips below $6 per gallon for the first time in months (22:20) (11/16)
+*   Where in the Valley is this? (22:18) (11/16)
+*   A look at why inflation in Phoenix is so bad (22:18) (11/16)
+*   Minneapolis mayor faces pivotal data center choice (21:51) (11/16)
+*   A Midtown chef runs his Lebanese restaurant in his daughter's memory (21:46) (11/16)
+*   McKinney National Airport's commercial flights take off (21:46) (11/16)
+*   Midwest holiday budgets rank last in the country this year (21:36) (11/16)
+*   Exclusive: Scrub Capital closes $11.4M health tech fund (21:34) (11/16)
+*   Exclusive: TestDynamics raises $9M to expand medical imaging AI evaluation platform (21:34) (11/16)
+*   Short-term fostering offers way to help Northwest Arkansas children (21:34) (11/16)
+*   Waymo cars map Chicago while AV bill stalls (21:28) (11/16)
+*   Iowa football faces growing heat risks as seasons start earlier (21:23) (11/16)
 
 ### ●●日経●●
-- 筒抜けのスマホ位置情報、自衛隊304施設で流出（11/16）
-- 「俺はクソ野郎だ」NVIDIAファン氏辞任内幕（11/16）
-- 男性育休「名ばかり取得」にメス（11/15）
-- 日系コンテナ船ONE、3年ぶりに紅海要衝通過（11/15）
-- アンソロピック「220兆円」上場へ（11/16）
-- 大東建託が国産木材使用倍増へ（11/15）
-- アンソロピックIPO、19日まで国内募集（11/15）
-- 米中ロ「現代版ヤルタ」で探る秩序（11/15）
-- 春秋（11月16日）賢明な破局論（11/16）
-- NVIDIA問題、イスラエル財政に影（11/15）
+（日本時間 2026/11/17）
+
+*   Google、最先端AIモデルを日本政府に先行提供 サイバー防御を支援 (18:06)
+*   NVIDIAファン氏復帰の奇策、OpenAI再現狙う トランプ氏「構わない」 (06:18)
+*   日本の消費「コロナ前」下回る 四半世紀で1割増どまり、米欧と格差 (02:00)
+*   「資産運用しないなら別れるかな」 投資は結婚の新条件、生活を一変 (02:00)
+*   最先端スパコン「富岳」に不正アクセス 企業の最新技術流出の懸念 (13:37) (11/16)
+*   個人向け社債最大の3.2兆円、ソフトバンクGや楽天 金利上昇が呼び水 (14:30) (11/16)
+*   和牛が最高値 経営難で畜産家2割減、海外人気で国内不足強まる (13:00) (11/16)
+*   大手銀行「預金増えぬ時代」に備え 社債調達5割増、融資は選別 (05:00) (11/16)
+*   春秋（11月17日）鼎の足 (00:00) (11/17)
 
 ### ●●時事●●
-- 「NATO加盟と引き換えにドンバス撤退を」 米から打診とゼレンスキー（11/16）
-- 松山市長に中野泰誠氏初当選（11/16）
-- ドイツのメルツ首相「サプライズやめて」 ウクライナ巡りトランプ氏に（11/16）
-- 福岡市長選が再選挙に（11/16）
-- 「菓子爆弾」食べ男性死亡 インド（11/16）
-- 不要な相続土地の活用促進 国庫帰属制度見直しへ（11/16）
-- 愛媛知事に中村氏５選（11/15）
-- 日本、韓国下し３連覇（11/15）
-- 米「パックス・シリカ」に抗議（11/15）
+（日本時間 2026/11/17）
+
+*   米大統領、フアン氏復帰「異議ない」 エヌビディア前ＣＥＯ (11/17 07:03)
+*   トランプ氏「正恩氏と会談するかも」 「習主席次第」、ロシアも同調 (11/17 06:55)
+*   「メキシコのゴッドファーザー」死亡 麻薬カルテルの原型確立 (11/17 06:49)
+*   給付イメージ、年収上限４５０万円 支援金３０００万人対象で―片山財務 (11/17 06:34)
+*   中野区で女性刺され死亡 強殺未遂容疑、男逮捕―警視庁 (11/17 06:30)
+*   元「ジャングルポケット」斉藤慎二被告に実刑 性的暴行、懲役４年―東京 (11/17 05:48)
+*   米中ロ「世界平和」協議 「反ファシズム」と日本けん制か―３首脳会談 (11/17 05:40)
+*   女性働く飲食店の客か 逮捕の男、自ら１１０番も―中野強殺・警視庁 (11/17 05:35)
+*   ロシア報道官、日ロ首脳会談「否定せず」 邦人記者の解放要求も (11/17 05:28)
 
 ### ●●日経・読売・産経・47・みんかぶ●●
-- ｢AI需要衰えない｣ 搬送システムのローツェ社長､半導体から見た景気（日経/政治経済/11/16）
-- 大学の理系転換を考える 「教養人」輩出こそ課題（日経/社会/11/16）
-- スーパー銭湯で窃盗続発 合鍵でロッカー解錠（日経/社会/11/16）
-- 近畿大学を変えた｢序列｣への怒り（日経/社会/11/16）
-- 「会社でちくわ」交流ツールに（日経/ビジネス/11/16）
-- 三河みりんのカクテル、飲んでみりん？（日経/ビジネス/11/16）
-- 東京海上日動、スマホで従業員向け身体機能測定（日経/ビジネス/11/16）
-- 名古屋・大須にウイスキーファン集う（日経/ビジネス/11/16）
-- アイシン系の音響器具ブランドTAOCに熱い支持（日経/ビジネス/11/16）
-- 東邦ガスが宇都宮でシャインマスカット栽培（日経/ビジネス/11/16）
-- 職場で広がる「共通言語」づくり（日経/ビジネス/11/16）
-- 名古屋駅のフード出店に新風（日経/ビジネス/11/16）
-- 愛知・豊川の宇都宮工業、金属加工で猫向け住設や推し活グッズを製造（日経/ビジネス/11/16）
-- 米エヌビディアのCEO「後任は社外から」（産経/経済/11/16）
-- 「郷に従わぬ」集団、規制必要だ（産経/政治/11/16）
-- 福岡市長選、再選挙へ（産経/政治/11/16）
-- 米スペースX、大型宇宙船の回収に初成功（産経/経済/11/16）
-- 岩手・大船渡市長に現職・渕上清氏が再選（産経/政治/11/16）
-- 卓球世界ツアー、橋本帆乃香が優勝（日経/スポーツ/11/16）
-- 松山市長選で元愛媛県議の中野泰誠氏が初当選（産経/政治/11/16）
-- スピードスケートW杯、日本が男子団体2位（日経/スポーツ/11/16）
-- 中村氏、知事５選（47/政治/11/16）
-- 福岡市長選、神野元基氏は再選挙「必ず出る」（47/政治/11/16）
-- 松山市長に中野氏 接戦（47/政治/11/16）
-- 福岡市長選、佐々木彩乃氏「再出馬は協議して決める」（47/政治/11/16）
-- 福岡市長選、吉富景子氏は再選挙出馬について「参政党の判断待つ」（47/政治/11/16）
-- 福岡市長選、稲富修二氏は再出馬「前向きに考える」（47/政治/11/16）
-- 福岡市長選、最多得票陣営は落胆（47/政治/11/16）
-- 福岡市長選、新村優氏が再選挙に出馬の意向（47/政治/11/16）
-- 福岡市長選、再選挙へ（47/政治/11/16）
-- 福岡市長選、調崇史氏は再選挙への立候補の態度保留（47/政治/11/16）
-- 「CEO後任は社外から」 エヌビディアで米財務長官（47/経済/11/16）
-- 速報エヌビディアCEOは社外からと米財務長官（47/経済/11/16）
-- 独自架空請求、売上金に計上か タマホームの火災保険不正（47/経済/11/16）
-- 速報タマホーム、保険架空請求を売上金に計上か（47/経済/11/16）
-- 関税引き下げへ米中協議 「貿易委員会」が初会合（47/経済/11/16）
-- マイクロソフトの障害が全面復旧（47/経済/11/16）
-- トヨタ入門用カートで大会（47/経済/11/16）
-- 速報米中が関税引き下げへ「貿易委員会」初会合（47/経済/11/16）
-- 新観光列車「赤い星」を報道公開（47/経済/11/16）
-- WRX、マニュアル車復活（47/経済/11/16）
-- 熊本市長に大西氏4選（47/社会/11/16）
-- 深い朱色、琉球王国時代を再現 首里城正殿内部を報道公開（47/社会/11/16）
-- 三重県立高教員、みだらな行為か（47/社会/11/16）
-- スピッツドラマー崎山さん重傷か（47/社会/11/16）
-- 速報「スピッツ」ドラマーが交通事故で入院（47/社会/11/16）
-- ハンズ渋谷店、営業終了（47/社会/11/16）
-- 国際車いすマラソン、大分で熱戦（47/社会/11/16）
-- 両陛下、海づくり大会出席（47/社会/11/16）
-- 京都・西京高、生け花甲子園優勝（47/社会/11/16）
-- 被災地の特産かんきつ類、収穫へ（47/社会/11/16）
-- ＜速報＞米2勝目へ吉田優利は25時7分スタート（47/スポーツ/11/16）
-- アジアプロ野球、日本が3連覇（47/スポーツ/11/16）
-- アジアプロ野球、日本が3連覇！MVPは宗山（47/スポーツ/11/16）
-- 東京SRが名古屋D破る バスケBプレミア（47/スポーツ/11/16）
-- 速報野球日本が3大会連続優勝（47/スポーツ/11/16）
-- 愛媛中学駅伝 女子は北郷が初優勝（47/スポーツ/11/16）
-- 四国高校駅伝 女子は今治北が四国枠獲得（47/スポーツ/11/16）
-- 大相撲九州場所8日目（47/スポーツ/11/16）
-- 空砲10本、３試合連続無得点 ＦＣ今治３連敗（47/スポーツ/11/16）
-- 九州学院、逆転で4連覇 熊本西に8－7（47/スポーツ/11/16）
-- 相原史郎、男子回転で自己最高の14位（産経/スポーツ/11/15）
-- 東京・小金井市長選、現職の白井亨氏が再選（産経/政治/11/15）
-- 三重の教員、3万円で少女にみだらな行為か（産経/社会/11/15）
-- プロ野球日本盤石のV3（日経/スポーツ/11/15）
-- 高橋宏斗、大一番でエースの投球（産経/スポーツ/11/15）
-- 東京SRが名古屋D破り12勝目（産経/スポーツ/11/15）
-- 正木が宗山が…若き「侍」が長打力発揮（産経/スポーツ/11/15）
-- 日本、韓国下し無敗で3連覇（産経/スポーツ/11/15）
-- 東京・新宿区長選、現職の吉住健一氏が4選（産経/政治/11/15）
-- 決勝は西川と正木が一発（産経/スポーツ/11/15）
-- 東京・品川区長選、現職の森沢恭子氏が再選（産経/政治/11/15）
-- バスケBプレミア、東京SRが12勝目（日経/スポーツ/11/15）
-- 山形・長井市長に遠藤氏初当選（産経/政治/11/15）
-- 日本、韓国下し無敗で3連覇（産経/スポーツ/11/15）
-- スピッツのドラマー、崎山龍男さん重傷か（産経/社会/11/15）
-- 柏レイソル、ルヴァン杯準決勝へ（日経/スポーツ/11/15）
-- 全国高校サッカー選手権、48校出そろう（日経/スポーツ/11/15）
-- 巨漢・金峰山、圧力で一気（日経/スポーツ/11/15）
-- 研究成果を還元、収益の再投資も 大学発ベンチャーが経営の柱に（産経/経済/11/15）
-- 「21世紀のヤルタ会談」に向き合う高市首相（産経/政治/11/15）
-- 山陰道でトラックや乗用車など11台絡む事故（産経/社会/11/15）
-- 大学発ベンチャー急増6220社（産経/経済/11/15）
-- 男性育休「名ばかり取得」にメス（日経/政治経済/11/15）
-- 消費減税「効果小さい」6割、内閣支持は横ばい（産経/政治/11/15）
-- 男子団体追い抜きで日本2位（産経/スポーツ/11/15）
-- 田嶋幸三氏、FIFA会長とあいさつ（日経/スポーツ/11/15）
-- 卓球Tリーグ、琉球が静岡に快勝（日経/スポーツ/11/15）
-- 中日・大島、4000万円減の2000万円で契約更改（産経/スポーツ/11/15）
-- ブラジル撃破のサッカー日本代表、控え組ら調整（産経/スポーツ/11/15）
-- 令和初「中日の大関対決」（産経/スポーツ/11/15）
-- ハンズ渋谷店、48年余りの営業に幕（産経/経済/11/15）
-- 日系コンテナ船ONE、3年ぶりに紅海要衝通過（日経/マーケット/11/15）
-- 都市部マンション短期売買、利益に課税強化を検討（産経/経済/11/15）
-- 政府、戦略17分野の女性人材育成（日経/政治経済/11/15）
-- 子宮頸がん死50年に4割増（日経/社会/11/15）
-- 天皇皇后両陛下、大阪で海づくり大会出席（日経/社会/11/15）
-- 大学の7割がAI指針策定（日経/社会/11/15）
-- 病院のサイバー対策、外部ネットワーク接続の安全強化（日経/政治経済/11/15）
-- 奈良小1殺害事件 17日で発生から22年（産経/社会/11/15）
-- 国民・玉木氏、29年度からの住民税減税確約なら賛成も（産経/政治/11/15）
-- 航空会社のロゴもない「真っ白な航空機」、話題に（読売/社会/11/15）
-- 大阪3歳死亡 児童相談所接触せず（産経/社会/11/15）
-- 公然わいせつ疑いで米兵逮捕、沖縄県警（日経/社会/11/15）
-- 大阪・枚方の女児死亡、逮捕の母「前から夫が暴行」（日経/社会/11/15）
-- 島根原発異常想定で訓練（産経/社会/11/15）
-- 高知・津野町の農村歌舞伎、9年ぶり上演（日経/社会/11/15）
-- 愛知・小牧の住宅に強盗、82歳女性重傷（日経/社会/11/15）
-- きょう市長選挙投開票の福岡市、公式HPで閲覧障害（読売/社会/11/15）
-- 同志社会見に事故時の校長の姿なく（産経/社会/11/15）
-- 義手や義足つくる「義肢装具士」もなり手不足（読売/社会/11/15）
-- 自宅トイレで出産した乳児を殺害した疑い、２６歳の母親を殺人容疑で再逮捕（読売/社会/11/15）
-- 豊田通商、「脱炭素への貢献」を事業収益に計上（日経/マーケット/11/15）
-- 神社前で露天商の車が夫婦に衝突（読売/社会/11/15）
-- 綱紀粛正中の米軍で同日に２件目の摘発（読売/社会/11/15）
-- 出産した女児の首をタオルで絞め殺害（産経/社会/11/15）
-- 愛知・小牧の住宅に男らが押し入り（読売/社会/11/15）
-- 飲酒し路上で居眠り（産経/社会/11/15）
-- 酒飲むとひょう変の妻に「どれが本当の姿なのか」（読売/社会/11/15）
-- 農業と食の伝統「復活」へ（産経/経済/11/15）
-- 鳥インフル4万羽殺処分完了（産経/社会/11/15）
-- アンソロピックIPO、19日まで国内募集（日経/マーケット/11/15）
-- 「一回きりの人生」と８年続けた教師から熱波師へ（読売/社会/11/15）
-- 外食「おひとりさま」2．7兆円市場の熾烈な争奪戦（産経/経済/11/15）
-- ナノ材料と印刷 唯一無二の技術で世界の製造業の変革に挑戦（産経/経済/11/15）
-- ＪＲ北海道の豪華列車「赤い星」お披露目（読売/経済/11/15）
-- 中国人民銀行、人民元高抑え景気防衛（日経/マーケット/11/15）
-- 大麻所持容疑で現行犯逮捕された７５歳男（読売/社会/11/15）
-- ｢メタボ健診必要？｣ 医療費削減効果に疑問（日経/政治経済/11/15）
-- iDeCo加入率1割に満たず（日経/政治経済/11/15）
-- 金利の上がる世界「バブル抑制を」（日経/政治経済/11/15）
-- 高市首相の一日（１４日）（読売/政治/11/15）
-- 介護報酬を段階引き上げ（日経/政治経済/11/15）
+（日本時間 2026/11/17）
+
+*   [みんかぶ/商品債券] 米１０年債利回りが低下 本日はリスク回避の雰囲気が広がる＝ＮＹ債券 (06:40)
+*   [みんかぶ/株式] 恐怖指数警戒感は大幅高 (06:38)
+*   [みんかぶ/株式] ダウ、ナスダックとも大幅安 エヌビディア決算とアンソロピック上場への反応に警戒＝米国株概況 (06:33)
+*   [みんかぶ/商品債券] 続落、世界の需給バランスは一時的に改善か＝ＮＹ原油概況 (05:48)
+*   [みんかぶ/商品債券] 反落、米利上げ見通しや株安で＝ＮＹ金概況 (05:29)
+*   [みんかぶ/株式] ＮＹ各市場 ５時台 ダウ平均は７２７ドル安 シカゴ日経平均先物は５万９４９５円 (05:11)
+*   [産経/スポーツ] 四季の郷公園にアイススケートリンク12月12日開業 1月24日は織田信成さんの教室も (05:00)
+*   [日経/ビジネス] アンソロピックのすべて AIの新たな旗手、平均38歳「創業者セブン」 (05:00)
+*   [日経/ビジネス] 営業に配置転換「私は必要ない？」 SHIFT、突破口はAI導入で伴走 (05:00)
+*   [日経/ビジネス] 地場スーパー、イオン九州流で再生 効率化と地域色を両立 (05:00)
+*   [日経/ビジネス] ハンズ閉店の渋谷に残るロフト 「顔」失う街で若者呼び込み (05:00)
+*   [日経/マーケット] 不倫行為などでトップが辞任した企業、1年後の株価に明暗 (05:00)
+*   [日経/マーケット] 韓国で広がる「株式依存」 損失でも売買やめられず、医師に相談 (05:00)
+*   [読売/政治] 高市首相の一日（１６日） (05:00)
+*   [読売/政治] 定数減法案 きょう審議入り 与野党合意 「４５」取り下げへ (05:00)
+*   [読売/経済] 証券大手４社増益 ９月中間決算 個人向け部門好調 (05:00)
+*   [読売/経済] ホンダ ＣＯ２「ゼロ」工場 設備電化、太陽光を活用 (05:00)
+*   [読売/社会] 愛知強盗 「闇バイトに誘われた」 中学生ら逮捕 少年の１人供述 (05:00)
+*   [読売/社会] 「高度専門職」不正取得 在留資格審査の穴突く (05:00)
+*   [読売/社会] ［追悼抄］「東京の１日」若者ら熱中…庄司薫（本名・福田章二）さん 伝説の青春小説「赤頭巾ちゃん気をつけて」の作家 ４月５日、老衰で死去、８８歳 (05:00)
+*   [みんかぶ/株式] 原油は３．２１％安＝ＮＹ原油終値 (04:58)
+*   [日経/マーケット] 円安阻んだリスクオフ AI株動揺が促す円キャリー取引解消 (04:30)
+*   [みんかぶ/株式] ＮＹ各市場 ４時台 ダウ平均は６６０ドル安 ナスダックは２．３％の大幅安 (04:14)
+*   [みんかぶ/株式] 金は０．８６％安＝ＮＹ金終値 (04:01)
+*   [日経/マーケット] TOKIUMが25日上場、黒崎代表「AIエージェント使い経理業務丸投げ」 (04:00)
+*   [日経/マーケット] ドイツ株16日 続落、AI・半導体関連に売り (03:37)
+*   [みんかぶ/株式] ＮＹ各市場 ３時台 ダウ平均は５３０ドル安 ナスダックは２．２％の大幅安 (03:19)
+*   [日経/マーケット] ロンドン株16日 小幅反落、鉱業に売り 銅先物など値下がりで (03:08)
+*   [日経/社会] 東京・中野で女性刺され死亡 逮捕の男「雑に扱われて腹が立った」 (02:59)
+*   [日経/マーケット] 欧州国債概況16日 独10年債利回り、横ばい圏 英長期金利は小幅上昇 (02:52)
+*   [みんかぶ/株式] ＮＹ各市場 ２時台 ダウ平均は４１１ドル安 ナスダックは１．７％の大幅安 (02:17)
+*   [日経/社会] 近畿大学、出遅れた起業家育成 267社創出も未完のユニコーン誕生 (02:00)
+*   [日経/社会] 共同親権、離婚後の父母の子育て関与促す 養育費・面会取り決め率上昇 (02:00)
+*   [日経/社会] 金ネックレス？実は希少金属タンタル 比重近く偽装、各地で被害 (02:00)
+*   [日経/マーケット] マクロ政策は細心の注意を (02:00)
+*   [日経/スポーツ] 親友でありライバル、薪谷翠さんの背中を追った現役時代（塚田真希） (02:00)
+*   [産経/社会] 「悲しみや喪失感消えることない」奈良小1女児殺害事件から22年 楓ちゃんの父親が手記 (02:00)
+*   [日経/マーケット] ロンドン外為16日 ユーロ、対ドルで一時1.1ドル割れ FRB議長の講演待ちで様子見も (01:56)
+*   [日経/社会] メキシコ麻薬カルテルの「ゴッドファーザー」獄死 密輸を組織化 (01:24)
+*   [みんかぶ/株式] ＮＹ各市場 １時台 ダウ平均は３３１ドル安 ナスダックは１．７％の大幅安 (01:23)
+*   [日経/スポーツ] UEFA、FIFA会長選に仏会長擁立 インファンティノ氏再選反対 (01:09)
+*   [日経/社会] 横田めぐみさん弟の拓也さん「拉致は日常奪う」 中学生に講演 (00:43)
+*   [産経/政治] 高市早苗首相、フィリピン大統領と会談し、脱炭素枠組み発展や経済強靱化へ協力確認 (00:29)
+*   [産経/社会] 「雑に扱われ腹が立った」 女性が首刺され死亡 30代の男を強盗殺人未遂容疑で逮捕 (00:11)
+*   [47/政治] ＜社説＞知事再選2年／混乱の収束へ責任直視を (00:00)
+*   [47/政治] 福岡誠志三次市長、3選目指し立候補の意向固める 2027年4月の市長選 (00:00)
+*   [47/政治] 石油調達で新枠組み提唱へ 高市首相、ASEAN連携を強化 (00:00)
+*   [47/政治] 有識者、防衛財源の確保を要請 安保3文書議事要旨、増税言及も (00:00)
+*   [47/政治] 速報有識者会議で防衛財源の確保求める意見 (00:00)
+*   [47/政治] 浜松市長選への態度「年内には判断」 中野祐介市長 (00:00)
+*   [47/政治] 立候補の理由は？ 重視する政策は？ 22日投開票、上天草市長選 立候補の両氏にインタビュー (00:00)
+*   [47/政治] 経済強靱化へ協力確認 日フィリピン首脳会談 (00:00)
+*   [47/政治] 尾道市長選に新人で元中国運輸局長の多門勝良氏が立候補表明 表明は2人目 (00:00)
+*   [47/政治] 葬祭業社長の船橋氏が正式出馬表明／青森市長選 (00:00)
+*   [47/経済] 為替相場 17日（日本時間 7時） (00:00)
+*   [47/経済] NY株大幅反落739ドル安 先行き懸念でハイテク売り (00:00)
+*   [47/経済] NY原油続落、終値85ドル台 2カ月半ぶり安値 (00:00)
+*   [47/経済] NY株式 16日終値 (00:00)
+*   [47/経済] 速報NY株大幅反落、739ドル安 (00:00)
+*   [47/経済] エヌビディアへ復帰に理解を示す 前CEO去就でトランプ米大統領 (00:00)
+*   [47/経済] AI進展の経済影響分析に着手 米FRB議長、複数事態を想定 (00:00)
+*   [47/経済] 為替相場 17日（日本時間 2時） (00:00)
+*   [47/経済] 欧州連合が日本製鋼板に関税 反ダンピング (00:00)
+*   [47/経済] NY株、反落 (00:00)
+*   [47/社会] 釜石出身・小井土文哉さん、地元で被災ピアノ演奏 聴衆包み込む柔らかな音 (00:00)
+*   [47/社会] 赤や黄に彩られた渓谷美が訪れた人を魅了 高津戸峡（群馬・みどり市）で紅葉が見頃 (00:00)
+*   [47/社会] 不登校の子、母親22％退職 父の30倍、負担に偏り (00:00)
+*   [47/社会] 冬本番前に暖房チェック 古い灯油を使うと危険 (00:00)
+*   [47/社会] 第３８回ふくしま駅伝 選手 古里の誇り懸け 県民 声援送り後押し ８区 ペース配分誤り来年の雪辱期す 富岡・新妻選手 (00:00)
+*   [47/社会] 第３８回ふくしま駅伝 地元の誇り胸に駆ける いわき・相双の選手ら躍動 ８区 避難の母の故郷「来年も代表に」 富岡の新妻選手 (00:00)
+*   [47/社会] 路上で刺されたか女性死亡 強殺未遂疑い男逮捕、東京・中野 (00:00)
+*   [47/社会] 千葉・柏市議を書類送検 同僚にわいせつ行為疑い (00:00)
+*   [47/社会] 速報「雑に扱われ腹が立った」と逮捕の男 (00:00)
+*   [47/社会] 米オスプレイは「配備撤回を」 沖縄・宜野湾市長、知事は容認 (00:00)
+*   [47/スポーツ] プロ野球・元オリックスのドラ1、元オイシックス新潟の吉田一将は今…37歳でパチンコ店のホール勤務と両立、衰えない情熱と向上心 (00:00)
+*   [47/スポーツ] 第３８回ふくしま駅伝 地元の誇り胸に駆ける いわき・相双の選手ら躍動 ９区 サッカー練習合間縫い準備 楢葉の沖永選手 (00:00)
+*   [47/スポーツ] 金沢競馬のズッシーノ引退 脚を故障、１０８連敗の７歳牡馬 (00:00)
+*   [47/スポーツ] 富山グラウジーズ接戦落とす 琉球に９６―１０２ (00:00)
+*   [47/スポーツ] 朝乃山４連勝、白星先行 新小結・美ノ海を寄り切る (00:00)
+*   [47/スポーツ] 欧州連盟がフランス会長を擁立 FIFA会長選 (00:00)
+*   [47/スポーツ] バスケ広島が14勝目 りそなBリーグプレミア (00:00)
+*   [47/スポーツ] Ｂリーグプレミア川崎が「神奈川ダービー」制し２連勝 ９５－６６で横浜ＢＣ下す、ボンズ２６得点 (00:00)
+*   [47/スポーツ] 詳報全国高校サッカー 佐野日大は初戦で米子北（鳥取）と対戦 「早く戦いたい」 (00:00)
+*   [47/スポーツ] ルカク、ベルギー代表引退を表明 「心残りはない」 (00:00)
+*   [日経/スポーツ] フィギュア選手への中傷非難 ISU「演技と成果称賛されるべき」 (23:32) (11/16)
+*   [日経/スポーツ] 工藤公康監督「選手の変化見られた」 中日、秋季キャンプ打ち上げ (23:16) (11/16)
+*   [産経/社会] 千葉・柏の村越誠市議を書類送検 女性議員にわいせつか「太ももなでたことは覚えている」 (23:14) (11/16)
+*   [みんかぶ/商品債券] 金は下落して始まる＝ＮＹ金オープン (23:07) (11/16)
+*   [みんかぶ/商品債券] 原油は下落して始まる＝ＮＹ原油オープン (23:05) (11/16)
+*   [日経/スポーツ] ストイコビッチ氏、山東監督に サッカー中国スーパーリーグ (23:02) (11/16)
+*   [みんかぶ/商品債券] 米１０年債は５．１３％付近で始まる＝ＮＹ債券オープン (23:02) (11/16)
+*   [日経/スポーツ] バスケBプレミア、広島14勝目 A東京は15勝目 (22:45) (11/16)
+*   [日経/スポーツ] 森保一監督、最後の指揮も「勝ちにこだわる」 パラグアイ戦17日 (22:37) (11/16)
+*   [日経/社会] 交番襲撃差し戻し審が結審 弁護側「最大で懲役30年」 (22:27) (11/16)
+*   [日経/スポーツ] FWルカク、ベルギー代表引退 サッカーワールドカップ4大会出場 (22:24) (11/16)
+*   [日経/スポーツ] 中日ドラフト1位・宮原廉「開幕ローテ目標」 入団合意 (21:59) (11/16)
+*   [産経/スポーツ] ルカク、サッカーベルギー代表引退表明 歴代最多94得点 日本を逆転の18年W杯も出場 (21:56) (11/16)
+*   [みんかぶ/株式] 欧州株 米株先物に警戒感、ナスダックは１．４９％安 (21:47) (11/16)
+*   [産経/社会] 東京・中野の路上で女性が刺された事件で逃げた男を確保 警視庁、事情知るとみて捜査進める (21:19) (11/16)
+*   [産経/政治] 高市政権の対中姿勢、内閣支持層7割「評価」 公明、立民、共産支持層は「評価せず」大勢 (21:18) (11/16)
+*   [産経/社会] 寛永行幸四百年祭の不適切事務問題で実行委員長が謝罪「ガバナンスが最大の要因」 (21:17) (11/16)
+*   [みんかぶ/要人発言] 根強いドル買いの動き、ウォーシュ米ＦＲＢ議長講演を控えて＝ロンドン為替概況 (21:15) (11/16)
+*   [産経/経済] 際立つ個人消費の弱さ AIブームにも思わぬ死角 日銀の利上げ路線にも影響か (21:14) (11/16)
+*   [産経/スポーツ] 球場や街でファンと交流、選手が飲食店で店長も DeNAが22日まで感謝イベント開催 (21:12) (11/16)
+*   [産経/社会] 神戸6歳男児暴行死「主犯」とされた叔父「暴力と洗脳で家族支配」と指摘 初公判では否認 (21:10) (11/16)
+*   [産経/政治] 消費税減税審議 「小出し」答弁の政府、全体像求める公明 着地点はどこに (21:07) (11/16)
+*   [読売/社会] 静岡・菊川で祖父母と叔母の３人殺害、元自衛官に死刑求刑「殺害される理由がない人に対する無差別的な計画殺人」 (21:04) (11/16)
+*   [読売/社会] 元「ｅｇｇ」専属モデルを殴って殺害した疑い、内縁の夫を逮捕…「記憶にない」と容疑否認 (21:01) (11/16)
+*   [産経/社会] 東京・中野の路上で女性が首を刺され重体 病院に搬送 犯人は逃走中、警視庁行方追う (20:46) (11/16)
+*   [産経/政治] 衆院議員定数削減法案、17日審議入り 「圧倒的に与党が多い」 野党は充実審議要求 (20:36) (11/16)
+*   [産経/政治] 自民・麻生太郎副総裁「威圧しても効き目がない状況を」 経済的威圧強める中国念頭に (20:32) (11/16)
+*   [産経/スポーツ] 「ゾンビたばこ」巡り広島戦力外の3選手が球団に要請書 代理人「名誉回復が大きな目的」 (20:30) (11/16)
+*   [産経/政治] 片岡仁左衛門さんら10人出演 来年4月に香川・琴平町「こんぴら歌舞伎」 (20:30) (11/16)
+*   [日経/社会] 熊本地震の経済被害1兆円、土木学会が推計 住宅などインフラ関連 (20:26) (11/16)
+*   [みんかぶ/要人発言] バーFRB理事 ＡＩが金融システムにもたらす多角的なリスクについて警告 (20:19) (11/16)
+*   [読売/社会] 硫黄島の南で「新たな陸地」２ｋｍ確認、海底火山噴火し形成…海上保安庁 (20:06) (11/16)
+*   [産経/スポーツ] 「今日だけは勝ちたかった」熱海富士、恩人の命日に豊昇龍破る 自己最速9日目で勝ち越し (20:03) (11/16)
+*   [読売/社会] 石沢良昭さん死去、８９歳…アンコール遺跡群研究の日本での第一人者・元上智大学長 (20:00) (11/16)
+*   [産経/政治] 道路標識の不備が3600カ所 岐阜県警、不適切な取り締まりも (20:00) (11/16)
+*   [読売/政治] 茂木外相、パレスチナのムスタファ首相に「２国家解決」に向けた取り組み支援と連携伝える…電話会談 (19:48) (11/16)
+*   [みんかぶ/要人発言] バーＦＲＢ理事 ＡＩリスクに関する発言のなかで、金融政策や経済見通しについては言及せず (19:41) (11/16)
+*   [産経/経済] 東海第2原発の設備内で火災認定 管理区域外、けが人や放射性物質の漏洩はなし (19:38) (11/16)
+*   [みんかぶ/要人発言] ブイチッチECB副総裁 2027年の追加利上げを織り込むことは不合理とは思えない (19:32) (11/16)
+*   [産経/経済] 近鉄、特別車両料金の一部値上げへ 来年3月、しまかぜは最大1040円 ひのとりなども (19:30) (11/16)
+*   [産経/スポーツ] 「勝ちにこだわる」森保監督、最後の指揮へ サッカー日本代表が17日にパラグアイ戦 (19:29) (11/16)
+*   [産経/政治] 市営住宅の家賃滞納、計1億円超え 管理体制検討 三重・伊賀 (19:24) (11/16)
+*   [産経/スポーツ] 春高京都決勝21日 男子は昨季全国覇者の東山と北嵯峨、女子は王者京都橘と北嵯峨が対決 (19:23) (11/16)
+*   [日経/社会] 富士山の課題解決、山梨・静岡で連携 官民組織を設立 (19:20) (11/16)
+*   [産経/スポーツ] ストイコビッチ氏、サッカー中国スーパーリーグ山東の新監督に Jリーグ名古屋でも活躍 (19:15) (11/16)
+*   [日経/政治経済] 生保協会、代理店に「社保逃れ」是正呼びかけ 政府の通達受け (19:07) (11/16)
+*   [日経/社会] 京都・亀岡の鳥インフルエンザ、殺処分完了 採卵鶏18万羽 (19:07) (11/16)
+*   [産経/スポーツ] 横綱大の里勝ち越し、豊昇龍5敗目 熱海富士勝ち越し 1敗に4人 大相撲九州場所9日目 (19:01) (11/16)
+*   [産経/経済] 高松競輪場の余剰地にホテル開業 星野リゾート、28年秋に香川県へ初進出 (19:00) (11/16)
+*   [産経/経済] ニデック、半期報告書を期限内に提出できず 決算の訂正作業が長期化、期限を1カ月延長 (18:56) (11/16)
+*   [産経/経済] イオンがカット野菜新工場 生産から供給まで一気通貫 スーパー各社に広がる「SPA」 (18:48) (11/16)
+*   [産経/スポーツ] 工藤公康新監督「変わっていく姿見るの楽しみ」と総括 中日、秋季キャンプ打ち上げ (18:42) (11/16)
+*   [みんかぶ/商品債券] ユーロ圏 １０年債利回り格差 仏１５６ｂｐ、１１月６日以来の拡大水準 (18:36) (11/16)
+*   [日経/政治経済] 経産省、アジアの原発導入を支援 アジア開発銀行と覚書 (18:30) (11/16)
+*   [産経/経済] JR東海が京都駅前に「マリオット」ブランドのホテル開業 関西で2軒目、収益源多様化へ (18:30) (11/16)
+*   [日経/政治経済] 人口戦略、知事会が特区の創設求める 労使や地方団体からヒアリング (18:28) (11/16)
+*   [産経/経済] エア・ウォーター黒字転換、26年9月中間 不適切会計の対応費用で通期見通しは下方修正 (18:20) (11/16)
+*   [産経/経済] NTTドコモ、高速通信サービスの完全復旧を発表、約6時間にわたり障害 今月3度目 (18:17) (11/16)
+*   [日経/政治経済] ドラッグロス調査「不定期から毎年度へ」 上野厚労相、創薬支援強化 (18:06) (11/16)
+*   [日経/政治経済] SNSでの課金や加害、新たなリスクに こども家庭庁が対策検討へ (18:04) (11/16)
 
 ### ●●日経・読売、テクノロジー●●
-- 米ニューヨークの新興AI50社を調査 金融や医療機関と強く連携（日経/11/16）
-- パソナ、部下の「自信」をAIが数値化（日経/11/15）
-- スペースX、ロケット宇宙船のキャッチ成功（日経/11/15）
-- 小泉防衛相「データを日本守る力に」（日経/11/15）
-- プラズマが波で自身を加熱する過程を実証（日経/11/15）
-- 日本地震学会の学術総会、熊本への関心高く（日経/11/15）
-- AIの果実「労働者にも還元を」（日経/11/15）
-- 「ファンと共に去りぬ」の現実味 AIデータセンター過熱投資に一穴（日経/11/15）
-- スペースX創業社員ミューラー氏「真の宇宙時代、これから」（日経/11/15）
-- ［あすへの考］ＡＩ脅威論 楽観・悲観相半ば（読売/11/15）
-- NVIDIA17日決算、ファン氏辞任の衝撃（日経/11/15）
-- クマ被害減らすには森づくりから（日経/11/15）
-- 宇宙に「ト音記号」、ブラックホールの活動などで形成か（日経/11/15）
-- テスラ、ロボタクシー「サイバーキャブ」の個人販売開始（日経/11/15）
+（日本時間 2026/11/17）
+
+*   [日経] Amazon、通信衛星の主力ロケット打ち上げ失敗 対スペースXに暗雲 (05:33)
+*   [日経] メタのAI責任者に聞く 「Muse」の狙いと今後 (05:00)
+*   [日経] アンソロピックのすべて AIの新たな旗手、平均38歳「創業者セブン」 (05:00)
+*   [日経] 宇宙探査機ボイジャー1号、地球から「1光日」到達へ 最遠の259億キロ (05:00)
+*   [日経] 福島の研究機構エフレイ、発足4年目で施設着工へ 成果報告にも力 (05:00)
+*   [読売] ＣＯＰ合意草案 電化率「３５％に引き上げ」 ３５年までに 家庭・企業エネ消費 (05:00)
+*   [日経] AIが全自動サイバー攻撃、Googleが観測 無料ツールを悪用 (04:15)
+*   [日経] 北陸先端大が金沢で社会人大学院 東京校舎で実績、最短1年で博士号 (04:00)
+*   [日経] TOKIUMが25日上場、黒崎代表「AIエージェント使い経理業務丸投げ」 (04:00)
+*   [日経] 富岳にサイバー攻撃 「機密の塊」スパコンも標的の時代 (02:00)
+*   [日経] 米ブラックストーン系、アマゾンのデータセンター取得 8000億円規模 (01:12)
+*   [日経] 最先端スパコン「富岳」に不正アクセス 企業の最新技術流出の懸念 (00:39)
+*   [日経] 観測衛星「SOLAR-C」、31年度に計画延期 イプシロン開発遅れ影響 (19:21) (11/16)
+*   [日経] 富岳とは 創薬や新素材開発支える国産スパコン (18:55) (11/16)
+*   [日経] 韓国、AI生成の曲が初の音楽チャート1位に K-POPアイドルを抜く (18:36) (11/16)
+*   [読売] ［先端人］「特殊ペプチド」新薬開発期待 国内外で臨床試験進む…東京大教授 菅裕明氏 (05:00) (11/16)
+*   [読売] ［サイエンス Ｒｅｐｏｒｔ］噴火予測へ観測研究加速…ドローンで火山ガス調査 素粒子使いマグマ可視化 (05:00) (11/16)
 
 ### ●●ヤフー●●
-- 松ぼっくりは子孫繁栄の器官!? 公園という身近な森の歩き方（11/16）
-- 福岡市長選挙 確実（11/16）
-- 原潜の保有「反対」52% 読売調査（11/16）
-- 消費減税「効果小さい」63% 共同（11/16）
-- 週後半 日本海側で暴風・大雪恐れ（11/16）
-- 首相APEC出席へ 焦点は日中関係（11/16）
-- 生活保護費改定 物価高の反映焦点（11/16）
-- 防衛省AI活用の基本方針 見直しへ（11/16）
-- 横田さん拉致49年 北側の真相不明（11/16）
-- 政府広報の夫婦漫才に疑問の声（11/16）
-- 米中露が会談へ 日本は蚊帳の外か（11/16）
-- 米の「中国脅威論」どう生まれた（11/16）
-- ウのNATO加盟で東部撤退 米打診（11/16）
-- エストニア ロシアとの国境閉鎖へ（11/16）
-- 仏のデモおさまらず みえぬ打開策（11/16）
-- 「中国の元スパイ」語る 接近手口（11/16）
-- MS障害 インド政府機関混乱なし（11/16）
-- 独プールで4人搬送 MS障害影響（11/16）
-- フアン氏がNVIDIA復帰協議 報道（11/16）
-- NVIDIAフアン氏復帰を 署名広がる（11/16）
-- タマホーム 架空請求を売上計上か（11/16）
-- 月収2万円と年金5万円 70代の現実（11/16）
-- スガキヤ20年ぶり関東に進出 狙い（11/16）
-- 高級レストランにタイパの波 なぜ（11/16）
-- 東京で「臭い豚骨」がブーム 背景（11/16）
-- 子どもの間で「宝石集め」ブーム（11/16）
-- 岡田准一が音楽番組初MC 日テレ（11/15）
-- スピッツ 事故受け今後の活動言及（11/15）
-- ミセス大森インフル 長野公演延期（11/15）
-- 河内大和 始球式ワンバンで絶叫（11/15）
-- 映画VIVANT 新キャラに石黒賢（11/15）
-- 武田真治 第1子早産振り返り反省（11/15）
-- 松丸亮吾チーム脱出ゲーム世界3位（11/15）
-- やす子 子ども食堂運営にやりがい（11/15）
-- 46歳ロナウジーニョ 公式戦に出場（11/15）
-- オリ OB後藤駿太氏コーチ招へい（11/15）
-- アジアCS 侍Jが韓国破り3連覇（11/15）
-- 侍J宗山塁が大会MVP 正木苦笑い（11/15）
-- 侍J「正宗コンビ」軸に大会12HR（11/15）
-- まさか 駅伝タスキ渡し失格の背景（11/15）
-- 駅伝 タスキ渡しで失格ハプニング（11/15）
-- 衝撃 J内定の帝京渡辺が4人抜き弾（11/15）
-- 検事の取り調べ AIでチェックへ（11/15）
-- AIエージェント普及 問われる対応（11/15）
-- Netflixが値上げ 最安は990円に（11/15）
-- AI悪用攻撃拠点か 世界で千台発見（11/15）
-- マイクロソフトの障害 全面復旧（11/15）
-- MS 障害原因は過去の増強作業（11/15）
-- マイクロソフト 大規模障害を謝罪（11/15）
-- マネックス証券 免許証画像流出か（11/15）
-- 妻が酒でひょう変 限界感じた夫（11/15）
-- おじさん構文 AIの学会で発表の訳（11/15）
-- 死んだンゴ 投稿者命日に寄付急増（11/15）
-- SpaceX 宇宙船空中回収に初成功（11/15）
-- ヒ素含む古書 22年以降100点超（11/15）
-- 867gで生まれた女性 母の話に涙（11/15）
-- 1.5℃目標もう無理? COPの意義は（11/15）
-- 病気で90cmの14歳 一緒に泣いた母（11/15）
-- 福岡市長選 再選挙の見通し（11/15）
-- 大阪3歳死亡 児童相談所接触せず（11/15）
-- 特急と衝突し車火災 遺体を発見（11/15）
-- 愛媛知事選 現職中村氏が5選確実（11/15）
-- 走行中の車から転落 女性が重傷（11/15）
-- ラヴ上等「あっすん」容疑者逮捕（11/15）
-- スピッツ﨑山さん重傷 治療に専念（11/15）
-- スピッツ﨑山さん 交通事故で搬送（11/15）
-- 「私と結婚して下さいませんか」黒田清子さんが36歳で皇室を離れるまで（11/16）
-- 黒島結菜、事実婚を選んだ理由（11/16）
-- 「状況認識ができない」金正恩の”退行”（11/16）
-- 「隣にいたら最悪」「さすがに叫びすぎ」大相撲、繰り返される女性の“異様”な声に困惑（11/16）
-- 「完全に戻ってる！」中森明菜 60代のビジュアル衝撃（11/16）
-- 「印象わっるい」敗戦ブラジル10番、退場前にまさかの行動（11/16）
-- 俳優の夫は突然他界…朝ドラヒロインが「生まれてきて本当に良かった」息子や愛犬と67歳誕生会（11/16）
-- 「え…やばい、国宝級やん」朝ドラ『ばけばけ』終了から半年、主演女優の激変ドレス姿に衝撃の声（11/16）
-- 武豊Vレースの3連単的中→プレゼンターで現れた人気女性タレントに仰天（11/16）
-- ミセス大森元貴、病名発表「症状が悪化したため…」一部公演延期（11/16）
-- 習近平はプーチンが頭を下げるのを待っている…欧州で売れず､頼みの中国にまで足元を見られるロシア企業の惨状（11/16）
-- 黒木啓司に「こんな声、こんな顔だったっけ…」（11/16）
-- ＡＰＦバレエ出身・勝連ひな乃 明かした〝しなやかボディ〟の課題（11/16）
-- 米中ロ首脳会談を前に「プーチン大統領」を焦らせる最前線の惨状（11/16）
-- 妻・夏目三久さんが子ども2人を連れて…有吉弘行「勝てないというか頭が下がる」（11/16）
-- 映画『VIVANT』大物俳優が参戦決定（11/16）
-- 「鬼レンチャン」別人級タレントが「整形疑惑」に言及（11/16）
-- 朝ドラ『ブラッサム』撮影“一時中断”の「異常事態」（11/16）
-- 「もっと早く買えばよかった」 モンベルの“防風アウター”が大人気（11/16）
-- やす子運営子ども食堂の公式X、一部の決めつけ投稿に不快感（11/16）
-- キャバクラ店で出会った客と交際→「関係を断ちたい」警察に相談も…山林から遺体発見（11/16）
-- “背中タトゥー”話題の30歳元アイドル女優、体のフォルム際立つ“ぴっとり”透けスリットドレス姿披露（11/16）
-- 渋野日向子、準シード死守で来季米女子アツー６年目へ（11/16）
-- 「リピ買い2回目」 ワークマンの“1900円防水スニーカー”が大人気（11/16）
-- 玉ねぎ画像のように切っていない？捨てる部分が減る“意外な切り方”とは？（11/16）
-- 藤川監督の下で開花！？阪神、来季のブレイク候補（2）（11/16）
-- 高木豊さん、横浜・織田翔希の巨人指名あいさつ欠席に「嫌な印象残していいことなんてない」（11/16）
-- 《“見知らぬ女”が7歳男児を突き飛ばし、2歳女児にも…》ショッピングモールで突然の暴行（11/16）
-- ロッテ1位指名を“事前拒否”（11/16）
-- 藤井聡太六冠が「3回読み返した」メールとは？（11/16）
-- 「スピッツ」ドラム・﨑山龍男さんが重傷（11/16）
-- 来月60歳の江角マキコさん、現在にファン衝撃（11/16）
-- 17歳の少女にみだらな行為をした疑いで三重県の高校の教員を逮捕（11/16）
-- 「オールスター級の選手を加える」ドジャース、球界衝撃の超大型トレードの噂が加速している！？（11/16）
-- “10キロ減公表”本田望結、ほっそり近影に「痩せすぎ」の声も（11/16）
-- 「ロシア勢に8点…有頂天よ」18歳中井亜美に海外識者も賛辞止まず（11/16）
-- 22歳・松生理乃が自己ベスト211.63点で暫定首位（11/16）
-- 「60歳になるので給料を減らします」年収960万円・勤続38年、会社に忠誠を誓った課長の深い落胆（11/16）
-- 「中国経済はもうダメです」…3億2000万人に広がる「霊活就業」って何？（11/16）
-- 為替相場 16日（日本時間 7時）（11/16）
-- 冬のボーナスどこに貯金する？（11/16）
+（日本時間 2026/11/17）
+
+*   AI時代に、あえて現場へ　私たちが会議室を出た理由 (N/A)
+*   政府 19日の米中ロ首脳会談を注視 (N/A)
+*   コカイン摘発 過去最多更新ペース (N/A)
+*   日韓首脳 17日にフィリピンで会談 (N/A)
+*   原潜の保有「反対」52% 読売調査 (N/A)
+*   立憲 党職員への「退職勧奨」検討 (N/A)
+*   今週後半ほど気温低く 冬の空気に (N/A)
+*   文科相のパーティー 会費は9万円 (N/A)
+*   どう思う 夫婦のセパレート帰省 (N/A)
+*   トランプ大統領 アジア歴訪へ出発 (N/A)
+*   3カ国会談巡り中国「戦勝国」強調 (N/A)
+*   エストニア ロシアとの国境閉鎖へ (N/A)
+*   中国スパイ 諜報の傾向とパターン (N/A)
+*   AIカンニングに韓国政府が危機感 (N/A)
+*   MS障害 インド政府機関混乱なし (N/A)
+*   独プールで4人搬送 MS障害影響 (N/A)
+*   エボラ アフリカ中部で今なお猛威 (N/A)
+*   NY株大幅反落 ハイテク株に売り (N/A)
+*   フアン氏がNVIDIA復帰協議 報道 (N/A)
+*   フアン氏復帰求める署名 16万人超 (N/A)
+*   タイムズカーの会員数 1.4万人減 (N/A)
+*   マンション短期売買 課税強化検討 (N/A)
+*   いきステに復活の兆し 改革の成果 (N/A)
+*   コンテナホテル8年で145店舗 背景 (N/A)
+*   若者に広がる投資熱 その実態は (N/A)
+*   長濱ねる「ハボウの轍」出演決定 (N/A)
+*   グラミー新設賞 LiSAら候補入り (N/A)
+*   高橋一生が公演中に負傷 舞台中止 (N/A)
+*   漫画ひらやすみ 連載5年半に幕 (N/A)
+*   中田乃愛さん死去 テレ東など追悼 (N/A)
+*   俳優・中田乃愛さんが死去 23歳 (N/A)
+*   日テレ・徳島えりかアナが退社へ (N/A)
+*   TOBE 年内でISSEIとの契約終了 (N/A)
+*   FWルカク ベルギー代表引退表明 (N/A)
+*   矢野ら カープに謝罪求める要請書 (N/A)
+*   戦力外の矢野雅哉ら 球団に要請書 (N/A)
+*   ゴルフの年間女王 次々と米進出 (N/A)
+*   横綱・豊昇龍まさかの5敗目 9日目 (N/A)
+*   カバディの観客増 アジア大会効果 (N/A)
+*   今季世界最高V 中井亜美がガッツ (N/A)
+*   46歳ロナウジーニョ 公式戦に出場 (N/A)
+*   卵サンドつかむ客動画炎上 店説明 (N/A)
+*   ドコモ「5G SA」で障害 完全復旧 (N/A)
+*   富岳に不正アクセス 理研が明かす (N/A)
+*   サイバー攻撃 AI「自律化」が脅威 (N/A)
+*   ウが露ネット関連施設攻撃 狙いは (N/A)
+*   AIに思考丸投げ 16歳「今後怖い」 (N/A)
+*   AI敵視から融和へ Disney路線変更 (N/A)
+*   検事の取り調べ AIでチェックへ (N/A)
+*   はやぶさ2に不具合 目的地を変更 (N/A)
+*   喫煙率なぜ地域差 北日本上位独占 (N/A)
+*   尖圭コンジローマ 男性患者が増加 (N/A)
+*   中国に隕石落下 ハンターが殺到 (N/A)
+*   妻が酒でひょう変 限界感じた夫 (N/A)
+*   おじさん構文 AIの学会で発表の訳 (N/A)
+*   死んだンゴ 投稿者命日に寄付急増 (N/A)
+*   SpaceX 宇宙船空中回収に初成功 (N/A)
+*   中野死亡 男は女性が勤める店の客 (N/A)
+*   中野区で女性が刺され死亡 男逮捕 (N/A)
+*   元ジャンポケ斉藤被告 実刑判決 (N/A)
+*   判決不服 斉藤慎二被告が控訴 (N/A)
+*   元eggモデル殺害 過去に警察沙汰 (N/A)
+*   元モデル死亡 男は「自傷」と説明 (N/A)
+*   3歳死亡 枚方市長「悔やまれる」 (N/A)
+*   X-GUNさがね・まさひろ氏市議に (N/A)
+*   「底なし下落」の北朝鮮通貨、庶民から悲鳴…金正恩はなすすべもなく (06:05) (11/17)
+*   父は市村正親７７歳　イケメン長男が「かっこいい」「篠原涼子さんの面影を感じる」金髪イメチェンの市村優汰 (07:22) (11/17)
+*   「今変なヤジ飛ばした奴誰だ！」「下品すぎてドン引き」大相撲九州場所、横綱・豊昇龍戦での残念なマナー違反に批判殺到 (05:00) (11/17)
+*   「アホバカふざけるな、なめるな」レベルの罵詈雑言が　石破前首相ら造反4人に高市首相の怒りが収まらず「消費税解散」の観測まで (05:50) (11/17)
+*   79歳目前の森進一　80歳に見えない由紀さおり　超豪華11月生まれ集合　68歳の岩崎宏美は37歳息子と2ショットも (07:21) (11/17)
+*   「もっと認知されるべき」　フィギュア松生理乃、逆転3位なのに…「勿体なさすぎる」理由とは (06:33) (11/17)
+*   元ジャンポケ斉藤被告が懲役４年判決に、まばたき増え、一礼忘れ、足元ヨタヨタ…動揺も即日控訴 (06:55) (11/17)
+*   芸能一家のお兄ちゃん俳優、舞台期間中に女優母が他界　悲しみよりも葬儀の手続き、喪主の苦労徹子の部屋 (06:50) (11/17)
+*   「本当に麻央さんかと」市川團十郎の15歳長女、清楚な装い＆大人びた表情に驚き (07:00) (11/17)
+*   大谷翔平を苦しめた「故障の連鎖」…13年間追い続けた記者が見た、二刀流の限界と球団の責任 (06:50) (11/17)
+*   「あんなクレイジーな賭け方は見たことがない」水原一平受刑者のギャンブル依存の実態を違法賭博の胴元が明かす　「大谷が知らないというのは理解しがたい」と考える理由は (06:59) (11/17)
+*   水卜麻美アナ、本番25分前の早朝“７文字”投稿に心配の声「大丈夫？」「えっ」 (07:08) (11/17)
+*   「VIVANTが日曜劇場に帰ってくる！」　新情報解禁→ネット歓喜 (07:20) (11/17)
+*   《所有する4万本のソフトを売っても支払えない…》『ザ・ノンフィクション』ゲーム芸人フジタ…離婚調停での“高額請求”をめぐる泥沼 (07:13) (11/17)
+*   がん寛解も喉に異変→「手術しなければ声は出ない」診断　個性派俳優と2度の結婚・離婚→22歳下元俳優と結婚の女優 (07:10) (11/17)
+*   日本代表・森保一監督、ラストマッチ最後の練習中止に「私らしい」 (06:00) (11/17)
+*   大根1本、一瞬で消える！切って袋で漬けるだけ、箸が止まらない“冬の作りおき”とは？ (07:01) (11/17)
+*   50歳でカナダ留学から5年…光浦靖子の最新姿！シルバーヘアで雰囲気ガラリ「かわいい」55歳 (06:42) (11/17)
+*   幻に終わった柳田悠岐の「広島移籍」 「FA行使」を真剣検討した理由と「ゾンビたばこ」騒動 (06:03) (11/17)
+*   日本メーカーは｢おじさん｣を粗末に扱いすぎ…50代技術者が中国企業への転職を決意した｢お金｣以外の理由 (07:15) (11/17)
+*   意識不明…0歳ぐらいの乳児が重体、乗っていた軽トラが衝突　深夜の国道交差点、右折中に乗用車と　頭を強く打った男児　両親とみられる2人も軽傷 (07:24) (11/17)
+*   武井壮私見「くだらないことばかりニュースにしてないでこういう有益なものを大きく報じるべき」 (06:47) (11/17)
+*   渋野日向子、59ラウンドで「1768パット」　単純計算で約35打減らせる？ 数字が示す復活への鍵 (07:00) (11/17)
+*   「本当に麻央さんかと」市川團十郎の15歳長女、清楚な装い＆大人びた表情に驚き (07:00) (11/17)
+*   「日本女子すごすぎ」フィギュアGP驚異のV→V→V→V…18歳中井亜美からバトン「また麻央さまが…」 (05:13) (11/17)
+*   〈“あげぽよ”元eggモデル殺害〉「川端かなこでい続けることに疲れた」事務所との契約解除、銀座のクラブ勤務、そしてタトゥーを入れた最後の交際相手…36歳ギャルの悲劇 (06:30) (11/17)
+*   超偏食の自閉症児→初めて「食べてみたい」と言ったのは…「HIKAKINさんへの絶大な信頼が力を与えてくれた」 (07:00) (11/17)
+*   「育ててあげたんだから当然でしょ」年金月25万円で暮らす70代夫婦、42歳“自慢のエリート娘”に援助を迫った結果…突きつけられた〈衝撃の一言〉CFPの助言 (07:00) (11/17)
+*   「ノーブレーキで追突され…」黄金世代・植竹希望が交通事故で負傷　救急搬送された当時の状況を明かす (06:30) (11/17)
+*   「365日、緊張感が…」“ピリつかせ”話題の中日・工藤公康監督、《2男3女》子供達が徹底した驚愕の“家庭内ルール”〈長男は朝ドラ俳優〉 (06:12) (11/17)
+*   「りくりゅう」三浦璃来、透け感ドレス×ヒールで...いつもと雰囲気変わってドキっ　「大人っぽくてかわいい」 (07:00) (11/17)
+*   人から嫌われる口グセ・ワースト1 (06:21) (11/17)
+*   紺野あさ美、“顔の手術”を実施　約2年放置した“違和感”の正体に驚き「えー何これ！」 (07:02) (11/17)
+*   「AIかと思った」巨人ファン仰天の“現実世界”　奇跡の1枚にファン感激「豪華すぎん？」 (06:30) (11/17)
+*   50代から筋トレを始めてボディコンテストに挑戦！グランプリに輝く　「呼吸法でウエストのくびれづくり」を目指す (06:40) (11/17)
+*   ミス日本の安井南、グラビアで大きな桃尻！剣術と筋トレで鍛えベストスタイルに (05:50) (11/17)
+*   卵かけご飯に「5g」加えてみて！醤油をかけずに味が決まる簡単でおいしい食べ方朝ごはんに (06:15) (11/17)
+*   「言語化」が流行語候補になった2026年、日本人がひそかに失ったものとは？ (06:51) (11/17)
+*   「地獄の6月にしてやる」鉄パイプで殴打され激しい虐待ののち命を落とした6歳児　主犯とされる叔父は暴力で家族を支配「逆らえなかった」母親が拘置所で語った悔恨と5通の手紙 神戸6歳児虐待死事件（前編） (06:01) (11/17)
+*   『紅白歌合戦』白組から演歌歌手が消えた背景　テレビの影響力低下が演歌界にもたらした変化 #エキスパートトピ (05:01) (11/17)
+*   活動休止中のぺえ、スタッフがＸ更新し現況報告「現在入院加療中ではございますが…」 (06:46) (11/17)
 
 ### ●●AI関連●●
-- サイボウズ、AIをチームの一員として業務に組み込むkintoneの新機能「プロセスAIエージェント」を提供（11/16）
-- ESET、サイバーセキュリティ特化型のAIモデル「ESET NeoCortex」を発表（11/16）
-- 図解サイバー攻撃「自律化」が脅威に＝AIエージェント悪用、防御後手（11/16）
-- サイバー攻撃「自律化」が脅威に AIエージェント悪用、防御後手（11/16）
-- 生成AI時代のビジネス思考力：生成AI時代のファシリテーションと集合知（11/16）
-- 私は健康？歩行データをAI解析 豊田合成、足裏から挑む予防医療（11/16）
-- AIチャットボットにも広告が登場。その効果と課題が見えてきた（11/16）
-- AI導入の次に来る課題--日本企業のインフラは準備できているか前編（11/16）
-- AIの安全確保に向け 事業者はリスク情報を国に報告 法規制検討（11/16）
-- トラックはＡＩに乗っ取られるか 運送現場も変化に対応を（11/16）
-- パワポをAIで動画教材に、順天堂大学が「Sylavids」を導入（11/16）
-- 生成AI時代の組織変革を表彰する「GenAI HR Awards 2026」開催（11/16）
-- ロナウジーニョの妙技「AIより凄いのでは？」（11/16）
-- 「消費者調査」はAIに置き換わる？──ヨーロッパの5億人を再現する「合成人口」とは（11/16）
-- 東芝、経営危機からの再興を経てAI前提の事業と組織への転換を急ぐ（11/16）
-- 「AI投資には“良い投資”と“悪い投資”がある」、ガートナーが指摘（11/16）
-- AI相場崩壊を覚悟すべき理由(1/2)（11/16）
-- AIでの自社の評価を可視化 AI検索分析サービス「KaleidoTrack」登場（11/16）
-- 第2回：企業AIのデータ基盤に何が求められるのか--コントロールとガバナンス（11/16）
-- AI時代、なぜ専門知識だけでは不十分？（11/16）
-- 制限なしで使えるNSFW AI画像ジェネレーターの検索と比較（11/16）
-- 性格をカスタマイズできるプライバシー配慮のあるAIガールフレンドアプリ（11/16）
-- 性格をカスタマイズできるプライバシー機能付きのアニメ風AIガールフレンドアプリ（11/16）
-- 性格をカスタマイズできるプライバシー配慮のあるAIボーイフレンドアプリ（11/16）
-- 性格をカスタマイズできるプライバシー機能付きのAIガールフレンドアプリの紹介（11/16）
-- 性格をカスタマイズできるプライバシー機能付きのAI彼氏アプリと使い方ガイド（11/16）
-- 性格をカスタマイズできるプライバシー機能付きアニメ少女AIアプリ（11/16）
-- 無料NSFW画像を動画にするAI高速・HD動画生成（11/16）
-- ロールプレイをカスタマイズできるプライバシー対応のポルノAIチャットサービス（11/16）
-- ロールプレイをカスタマイズできるAIガールフレンドチャットボットとプライバシー対策を比較（11/16）
-- ロールプレイをカスタマイズできプライバシー保護のあるAI NSFWチャットを探す（11/16）
-- プライバシーと安全機能が備わったCharacter.AIの成人向け代替サービスを探す（11/16）
-- プライバシーと安全機能がある生成AIによるポルノコンテンツの情報（11/16）
-- プライバシーと安全機能があるゲイ向けAIポルノコンテンツやサービスを探す（11/16）
-- プライバシー保護と安全機能を備えたAIミルフ系サービス一覧（11/16）
-- PC・モバイル向けAIポルノ生成アプリ・トップリスト（11/16）
-- キャラをカスタマイズできるプライバシー設定付きの顔射ジェネレーター（AI画像生成）（11/16）
-- キャラクターを自由にカスタマイズできるプライバシー保護付きAI女性キャラジェネレーターオンライン（11/16）
-- キャラクターをカスタマイズでき、プライバシー設定がある成人向けAI画像生成サービス（11/16）
-- キャラクターをカスタマイズできプライバシー設定のあるAIポルノ動画生成ツールを探す（11/16）
-- キャラクターをカスタマイズでき、プライバシー設定があるNSFW AIジェネレーター（11/16）
-- キャラクターをカスタマイズでき、プライバシー設定があるAIポルノジェネレーター（11/16）
-- カスタマイズ可能なロールプレイとプライバシー機能があるAIセクスティングサービス（11/16）
-- カスタマイズ可能なキャラクターとプライバシー機能付きのAIヘンタイジェネレーターオンライン（11/16）
-- 機能・料金・プライバシーを比較したおすすめのAIセックスチャットサービス（11/16）
-- 機能・料金・プライバシー比較で選ぶおすすめの成人向けAIチャットサービス（11/16）
-- 機能・料金・プライバシー比較で選ぶおすすめのAIガールフレンドサービス（11/16）
-- HentAI（AI生成アダルトコンテンツ）：おすすめツール＆代替アプリ（11/16）
-- ヘンタイAIアートジェネレーター、キャラカスタムとプライバシー設定対応のオンラインサービス（11/16）
-- 購入ガイド：リアルなAIサービスの比較・選択方法（11/16）
-- ゲイ向けのAIポルノ生成サービス、プライバシーと安全対策を比較する情報（11/16）
-- ゲイ向けAIポルノサイト完全ガイド（11/16）
-- ゲイAIポルノの作り方：最高のツール、ワークフロー＆ヒント（11/16）
-- 高品質なビジュアルを生成できる無料AIポルノアプリ（11/16）
-- 高品質なアダルトコンテンツを生成できる無料のAIポルノ生成サイト（11/16）
-- 高品質なアダルト画像を生成できる、おすすめのAIポルノ生成ツール（11/16）
-- 高品質アダルトを提供する無料AIポルノジェネレーターサイト（11/16）
-- エロチャットボット（成人向けAI）一覧、役割プレイ設定とプライバシー管理機能付きのサービス（11/16）
-- 動画生成AI - 無料でテキストから動画を生成（11/16）
-- 動画生成AIでアニメーション制作を手軽に（11/16）
+（日本時間 2026/11/17）
+
+*   優秀でも「協調性に欠ける社員」は解雇…AI企業CEOが語る、組織を成長させる人材の条件（海外） (07:15)
+*   FRBはAIによる成長、労働市場への影響検証のタスクフォース立ち上げ＝ウォーシュ議長｜FX・為替ニュース (07:15)
+*   「ジェンスン・ファンの存在は重要だった」。エヌビディアCEO辞任を受け、投資家はAI関連銘柄全体を懸念している（海外） (07:13)
+*   スタディポケット、教育向け生成AIの新製品を12月1日に発表（こどもとIT） (07:11)
+*   韓国の建設機械メーカー、牛舎でAI建機を実証…ふん尿運搬から床清掃まで自律作業（KOREA WAVE） (07:09)
+*   核管理にもAI対話 米中ロに活用論、実効性が課題 史上初の首脳会談（時事通信） (07:09)
+*   AI半導体の投資先はエヌビディア以外へ、部品不足と増産速度が株主利益を左右 (07:09)
+*   動画完成後に来る差し戻し 薬機法・景表法をAIが検出（FINDERS） (07:06)
+*   AI導入の次に来る課題--日本企業のインフラは準備できているか後編 (07:06)
+*   検索から「AI相談」へ変わる購買行動。LINEヤフーが発表した「Agent i」「AIモード」「新広告面」など2026年最新 (07:05)
+*   イベント速報「Shopify」キーマン3人が語る『AI時代のコマース成長をどう作るか』 (07:02)
+*   BMS、AIと機械学習を活用して創出した標的蛋白質分解誘導薬を鎌状赤血球症に対して開発中 (07:01)
+*   PFNとSEMIFIVE、AI推論向け次世代半導体 MN-Core L2000シリーズ の開発で協業 (07:00)
+*   中国初のAI制作による長編劇場映画 細かな描写、興行収入は？ [AIの時代] (07:00)
+*   AIを使っただけでは業績は伸びない 利益を生む人材を分ける「目的定義力」 (07:00)
+*   ベトナム発AIスタートアップ、日本市場に参入へ--独自AIモデルで共同開発を提案 (07:00)
+*   トレードウェブ、国債トレーダー向けAIアシスタント導入へ－対象拡大 (06:57)
+*   ＡＩ導入、金融政策に影響＝生産性期待もリスク警戒―米ＦＲＢ議長 (06:52)
+*   ドワンゴ川上量生さん、ジブリ鈴木敏夫さん 対極的な2人のAI論 (06:50)
+*   規制前に買え。中国AI企業がフアン騒動でエヌビディアに殺到する (06:45)
+*   日立、AIデータセンターの安定稼働と冷却電力低減に向けた実証設備「大みかデータセンターラボ」を構築（クラウド Watch） (06:41)
+*   第5部 新聞社の苦闘（6）朝日新聞㊥「AI全振り」宣言アテンション、プリーズ！：ニュース (06:41)
+*   米国株式市場＝大幅安、ＡＩ懸念で エヌビディア決算に注目 (06:39)
+*   米国株式市場＝大幅安、ＡＩ懸念で エヌビディア決算に注目 (06:38)
+*   キングス・トラストとOpenAI、英国の若者2万5000人にAIスキルを教える100万ポンド（約2.1億円）の取り組みを開始 (06:35)
+*   NYダウ、大幅反落し739ドル安 AI関連銘柄の売り膨らむ (06:33)
+*   「鉄腕アトム」「ドラえもん」となぜ友達になれるのか――日本のアニメとゲームからAIとの未来を考察する #三宅陽一郎 (06:30)
+*   「回答するAI」から「現実の課題を解決するAI」へ、ダッソーが掲げる産業AI戦略：メカ設計ニュース (06:30)
+*   AIは「諸刃の剣」COP31で持続可能な電力利用約束、日本見送り（朝日新聞） (06:30)
+*   アップル、AIエージェントの全ディスクアクセス要求を受けMacのプライバシー設定を分割へ (06:25)
+*   AIと人間、これからの経営を考える 知的凌駕体であるAIは「人間失業」も惹起する存在​​（文春オンライン） (06:24)
+*   本日の材料と銘柄トランプ政権、エヌビディアをAI「国家代表企業」に(フィスコ) (06:21)
+*   情報資産とAIで利益を生むECへＷ２ 鴨下氏「メディアコマースで集客から接客・継続購入まで支援」（日本ネット経済新聞） (06:18)
+*   AI導入、金融政策に影響 生産性期待もリスク警戒 米FRB議長（時事通信） (06:16)
+*   レゾナックが増収増益、好調なAI向け材料とは：材料技術 (06:15)
+*   半導体アクセス制限、FRBのAI検証、米朝首脳会談か－今朝の5本 (06:04)
+*   「AIで。（顔写真は）イメージです」物議醸した兵庫・尼崎市議補欠選挙のポスター 直撃取材にキーパーソンが認める 選管は「政治活動の自由あり指摘できない」 専門家「技術の発展と公選法のいたちごっこ続く」（関西テレビ） (06:04)
+*   AI時代こそ、自分の声で語る「伝わる英語」 (06:02)
+*   トランプ大敗が空前のAIバブル崩壊の引き金となる「これだけの根拠」 (06:02)
+*   コールセンターでAIと協調挑戦する企業・日本生命保険 (06:01)
+*   桐蔭中等教生成ＡＩ活用のグランドデザイン策定、各教科で具体例を収集＝中学受験特集 (06:01)
+*   「AI相場の終焉」でオルカンも危ない？米国株・巨大テックへの偏重は本当に「分散不足」なのか (06:00)
+*   漏洩個人情報は2億6000万人分、AIが増幅する悪意にどこまで耐えられるか、効率優先の社会に迫られる設計思想の転換 個人情報の流出から社会インフラへの攻撃まで、資本効率の論理だけでは守れないデジタル社会の安全(1/4) (06:00)
+*   アンソロピック上場を前に、ハワード・マークス氏が警鐘。「AIの進歩の速さ」こそがOpenAIとアンソロピックのリスクだ (06:00)
+*   5年後の計画より「1カ月後の手札」、生成AIで変わるビジネスパーソンのキャリア戦略と捨てるべき「こだわり」 (06:00)
+*   AI時代の幸せとは？ 川辺健太郎氏と朝日新聞の角田社長らの答え (06:00)
+*   AI自律走行ロボ、北九州市で公道実証 橋梁など老朽インフラの点検自動化目指す (06:00)
+*   OpenAI、AI生成の児童性的虐待画像に対応する画像分類器を公開 通報窓口にはAI関連報告が急増 (05:55)
+*   米加州がオープンＡＩ提訴、ハギングフェイスなどへのサイバー攻撃巡り（ロイター） (05:45)
+*   米加州がオープンＡＩ提訴、ハギングフェイスなどへのサイバー攻撃巡り (05:41)
+*   ガスナー氏、NvidiaではなくAnthropicに50億ドルを投じる…「AIインフラの時代は終わった」 (05:29)
+*   フィリップ・イソラ AI ブリーフ (05:25)
+*   アップル、Siri AIの無料利用に上限設定 iCloud+プランで1日の上限を引き上げ (05:25)
+*   FBIとAWSが警鐘：AIエージェントが産業規模でサイバー攻撃を自動化 (05:25)
+*   AI進展の経済影響分析に着手 米FRB議長、複数事態を想定 (05:24)
+*   ＡＩ進展の経済影響分析に着手 (05:23)
+*   「確率的オウム」を飼いならせるか？生成AI社会に求められる倫理的創造性のあり方（Wedge（ウェッジ）） (05:04)
+*   営業に配置転換「私は必要ない？」 SHIFT、突破口はAI導入で伴走 (05:00)
+*   アンソロピックのすべて AIの新たな旗手、平均38歳「創業者セブン」 (05:00)
+*   気候変動対策へ「ＡＩ活用を」 ＣＯＰ３１、８０超の国・企業が賛同 (05:00)
 
 ### ●●2ch●●
-- 宿題ぐらい「自力でやらないと」…でも勉強はチャッピー頼み、思考丸投げ「自分の今後怖い」（11/16）
-- 消費減税、効果小さい63% 財源、支援金説明必要85%－共同通信世論調査 ★2（11/16）
-- 速報キオクシア、「1株8500円」に暴落! SNSは「借金確定で吐き気と動悸」★3（11/16）
-- 安倍晋三元首相の銅像建立 東郷神社で除幕式（11/16）
-- 自動車スバルが「WRX STIスポーツR」を発表（11/16）
-- iDeCo加入率1割に満たず NISAより仕組み難解（11/16）
-- 米、ウクライナにNATO加盟提案か 東部ドンバス割譲と引き換え ★2（11/16）
-- 自民も共産も相乗りした品川区長 圧倒的強さの先に「都知事選」の声（11/16）
-- 再選挙の福岡市長選、各候補者どうする?（11/16）
-- ブラジル国籍の男5人が関与ほのめかす…未明の住宅に複数の男が押し入り（11/16）
-- 芸能女優・黒島結菜、人気俳優と事実婚&出産 世間の反応に「やっぱ事実婚、なんだ」（11/16）
-- 芸能小泉今日子、クマ被害対策でドングリの木3000本植樹 「口だけではダメ」★2（11/16）
-- 音楽スピッツのドラム・﨑山龍男、交通事故で救急搬送 （11/16）
-- セルジオ越後ブラジルに勝ったけどそれで世界の強豪に肩を並べたと思ったら大間違い（11/16）
-- テレビ橋下徹氏「ファッション保守が日本を滅ぼす」（11/16）
-- PRESIDEN｢日本の独り勝ち｣がまた一つ終わった…何十年もかけて築いた｢中欧のマンガ市場｣を狙う韓国の｢本気度｣ ★2（11/16）
-- 日経新聞フィリピンとオーストラリアが防衛協定（11/16）
-- ハンギョレ韓国、青年労働者の46%が「非正規職」（11/16）
-- 中共メディア中国でウイスキー投資熱が再燃（11/16）
-- CGTN東京裁判開廷80周年（11/16）
-- 男性育休「名ばかり取得」にメス（11/16）
-- 「こっちのpayでよくない?」 JR東日本が新コード決済「teppay」スタート（11/16）
-- 中道改革連合への政党交付金「納得できない」が7割超（11/16）
-- ﾐｭｰｼﾞｼｬﾝ RIOT GRRRL⋯ が代は 千代に八千代に 続いてたまるか革命だーーッッッッッッッ（11/16）
-- ドイツマイクロソフトの障害で警告届かず、遊園地のプールで塩素ガス発生（11/16）
-- インドネシア噛まれたらどうするのか…生きたニシキヘビをすべり台にして遊ぶ子どもたち（11/16）
-- 東京ハンズ渋谷店、営業48年で閉店（11/16）
-- 出口調査愛媛県知事選&松山市長選 16年ぶりの新松山市長は組織力か草の根か（11/16）
-- 「人工知能学会」で「おじさん構文」の研究発表（11/16）
-- スペースXの「スターシップ」、発射塔へのピンポイント着陸に成功（11/16）
-- 『おぼっちゃまくん』35年ぶりに日本で新作放送!（11/16）
-- 野球侍ジャパン、韓国に快勝し優勝! 大会3連覇（11/16）
-- 速報キオクシア、「1株8501円」に暴落!（11/16）
-- 日経新聞フィリピンとオーストラリアが防衛協定（11/16）
-- 自民も共産も相乗りした品川区長（11/16）
-- 野球侍ジャパン、韓国に快勝し優勝! 大会3連覇（11/16）
-- 宿題ぐらい「自力でやらないと」…でも勉強はチャッピー頼み、思考丸投げ「自分の今後怖い」（11/16）
-- ハンギョレ韓国、青年労働者の46%が「非正規職」（11/16）
-- 福岡市長選再選挙は立候補に制限なし（11/16）
-- CGTN東京裁判開廷80周年（11/16）
-- 再選挙の福岡市長選、各候補者どうする?（11/16）
-- 中共メディア中国でウイスキー投資熱が再燃（11/16）
-- 韓国「今日、除隊した息子が乗っています」…父が車に横断幕（11/16）
-- 野球侍ジャパン、韓国に快勝し優勝! 大会3連覇（11/16）
+（日本時間 2026/11/17）
+
+*   「仕方ない」「どう考えてもおかしい」生活保護費の見直し“1年前倒し”にネット賛否…国民年金満額より多い支給額に広がる不公平感★2 (07:30)
+*   GDP速報値は年率0.1%マイナス 4期ぶりのマイナス成長 個人消費は低調 ★5 (N/A)
+*   所有1年以内で税率52%も マンション転売、課税強化へ 政府・与党 (07:14)
+*   トランプ氏、エヌビディアCEOの復帰容認 女性のスパイ疑惑認めず (07:13)
+*   「示されぬ」不満が影響? 支持広がらぬ高市政権の消費減税法案 (07:01)
+*   東京中野強殺、女性働く飲食店の客か…清武一則容疑者(39)、自ら110番「バッグは他の人に盗まれないように持って行っただけ」 (N/A)
+*   「夫婦漫才」政府広報に批判…「女性蔑視そのもの」、野党は中止や撤回迫る (N/A)
+*   米当局、ホンダの米国販売車103万台を調査 エンジン再起動せず (07:09)
+*   「社長=文系」は思い込み? 社長の4割が理系出身、「工学部」が法学部を上回る意外な実態 (N/A)
+*   北九州「人骨のようなものがあります」肝試しで立ち入り禁止のトンネルに侵入した少年2人が発見、人骨かどうか警察が鑑定 (N/A)
+*   映画『007』7代目ジェームズ・ボンドは「ロバート・パティンソン」に正式決定 (07:11)
+*   サッカー日本代表・森保監督 ブラジル撃破で続投を願う声が続々… 「退任する必要あるの?」「変える理由は何?」「続投希望」 (N/A)
+*   女子野球巨人・女子チームの7人が退団 発足から5年目、創設時のメンバーが0人に (N/A)
+*   芸能元ジャンポケ・斉藤慎二被告、懲役4年の実刑判決に即日控訴… 大久保佳代子「よっぽど有罪を受け入れられない何かが」 (N/A)
+*   六大学野球東大野球部、卒部生33人の進路発表 メガバンクや大手コンサル、医学部編入も (07:04)
+*   MBC南日本放送強盗傷害疑い中共人の男(37)緊急逮捕 コンビニ駐車場で女性首絞め車や現金入りバッグ奪った疑い (07:24)
+*   「アホバカふざけるな、なめるな」レベルの罵詈雑言が　石破前首相ら造反4人に高市首相の怒りが収まらず「消費税解散」の観測まで (05:50) (11/17)
+*   Money1韓国･李在明がASEAN、APEC首脳会議に出発 ⇒ 焦点はトランプ大統領に接触できるか。 (06:59)
+*   うる星やつら表紙原画、米競売で約859万円…韓国メディアが伝える日本漫画の人気 (N/A)
+*   教授韓国の人気スイーツ店を中共が丸パクリ?=韓国ネット「そもそもフルーツ大福の元祖は…」 (N/A)
+*   総資産は約4000億円 糸山英太郎元代議士が「『集団結婚詐欺』に遭った」と怒りの告発 仲介したのは現役議員で… (N/A)
+*   経済ひろゆき「高市内閣、円安・物価高から“国民の生活や事業を守る“というのは諦めたのかな?」 (N/A)
+*   惑星探査はやぶさ2、目的地を変更 エンジン不具合、新たな小惑星へ (N/A)
+*   セキュリティスパコン「富岳」に不正アクセス 理研が明らかに (N/A)
+*   内閣広報官 「高市首相「コアラ事件」の内幕…」報道を火消し…根拠なき「噂」や「伝聞」が独り歩きと主張 (N/A)
+*   ﾐｭｰｼﾞｼｬﾝ RIOT GRRRL⋯ が代は 千代に八千代に 続いてたまるか革命だーーッッッッッッッ (N/A)
+*   「メキシコのゴッドファーザー」死亡 麻薬カルテルの原型確立 (N/A)
+*   東京フィル公演中に指揮者プレトニョフ氏倒れ、観客の医師が救助 16日は公演予定 (07:24)
+*   XーGUN・さがね正裕が舞鶴市議選当選 相方の西尾氏も三郷市議で議員コンビ誕生 (N/A)
+*   東京ハンズ渋谷店、営業48年で閉店 客ら惜しむ「渋谷が変わる寂しさ」 (N/A)
+*   鳥山明さんの仕事場解体が浮き彫りに 「現代の文化財」を守れない日本の限界 (N/A)
+*   『おぼっちゃまくん』35年ぶりに日本で新作放送! あの“伝説のセリフ”を封印、新たな挨拶を小林よしのりが考えた理由 (N/A)
+*   東京フィル公演中に指揮者プレトニョフ氏倒れ、観客の医師が救助 16日は公演予定 (18:10) (11/16)
+*   MBC南日本放送強盗傷害疑い中共人の男(37)緊急逮捕 コンビニ駐車場で女性首絞め車や現金入りバッグ奪った疑い (07:24)
+*   サッカー最新FIFAランキング1位〜100位。サッカー日本代表の順位は?(2026年11月17日付) (07:24)
+*   Money1韓国･李在明がASEAN、APEC首脳会議に出発 ⇒ 焦点はトランプ大統領に接触できるか。 (07:18)
+*   所有1年以内で税率52%も マンション転売、課税強化へ 政府・与党 (07:14)
+*   トランプ氏、エヌビディアCEOの復帰容認 女性のスパイ疑惑認めず (07:13)
+*   米当局、ホンダの米国販売車103万台を調査 エンジン再起動せず (07:09)
+*   六大学野球東大野球部、卒部生33人の進路発表 メガバンクや大手コンサル、医学部編入も (07:04)
+*   「示されぬ」不満が影響? 支持広がらぬ高市政権の消費減税法案 (07:01)
+*   産経新聞自民・麻生太郎副総裁「威圧しても効き目がない状況を」 経済的威圧強める中国念頭に (06:59)
+*   GDP速報値は年率0.1%マイナス 4期ぶりのマイナス成長 個人消費は低調 ★4 (N/A)
+*   アメリカと中国、両国が戦争を防ぐ覚書の協議 首脳会談前 (N/A)
+*   GDP速報値は年率0.1%マイナス 4期ぶりのマイナス成長 個人消費は低調 ★3 (N/A)
+*   「仕方ない」「どう考えてもおかしい」生活保護費の見直し“1年前倒し”にネット賛否…国民年金満額より多い支給額に広がる不公平感 (N/A)
+*   中国、3カ国首脳会談で「大国関係の安定促進を議論」 米中露が第二次大戦の戦勝国と強調 (N/A)
